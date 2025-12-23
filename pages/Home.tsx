@@ -410,7 +410,7 @@ const Home: React.FC = () => {
               {/* Step 1 */}
               <div className="group">
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="/assets/tracking_1.png" alt="Precision Locking" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <img src="AI-Tracking/image0.webp" alt="Precision Locking" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                       <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">Status: Tracking</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">1. Precision Locking</h4>
@@ -420,7 +420,7 @@ const Home: React.FC = () => {
               {/* Step 2 */}
               <div className="group">
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="/assets/tracking_2.png" alt="Complex Background" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <img src="AI-Tracking/image1.webp" alt="Complex Background" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                       <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">Status: Stable</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">2. Clutter Rejection</h4>
@@ -430,7 +430,7 @@ const Home: React.FC = () => {
               {/* Step 3 */}
               <div className="group">
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="/assets/tracking_3.png" alt="Long Range" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <img src="AI-Tracking/image2.webp" alt="Long Range" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                       <div className="absolute top-2 left-2 bg-[#00ff00] text-black text-[10px] px-2 py-1 font-mono uppercase">Status: Locked</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">3. Long Range Stability</h4>
