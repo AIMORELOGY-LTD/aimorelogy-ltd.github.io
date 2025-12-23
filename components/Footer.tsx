@@ -49,8 +49,8 @@ const SocialLink: React.FC<SocialLinkProps> = ({ icon, label, qrCode, qrClassNam
       </div>
       
       {/* QR Code Popup */}
-      {qrCode && (
-        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 hidden group-hover:block z-50 animate-fadeIn">
+      {qrCode && isHovered && (
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 z-50 animate-fadeIn">
             <div className="bg-white p-2 rounded-sm shadow-xl border border-gray-100">
                 <img src={qrCode} alt={`${label} QR`} className={qrClassName || "w-auto h-auto object-contain"} />
             </div>
@@ -252,15 +252,15 @@ ${message}`;
                  <SocialLink 
                    icon={<WeComIcon />} 
                    label="WeCom" 
-                   qrCode="Social-Media/wecom.webp" 
-                   qrClassName="w-auto h-auto object-contain"
+                   qrCode="./Social-Media/wecom.webp" 
+                   qrClassName="w-auto h-auto max-w-[360px] max-h-[360px] object-contain"
                    hoverColor="#3875F6" 
                  />
                  <SocialLink 
                    icon={<WeChatIcon />} 
                    label="Official Account" 
-                   qrCode="Social-Media/gzh.webp" 
-                   qrClassName="w-auto h-auto object-contain"
+                   qrCode="./Social-Media/gzh.webp" 
+                   qrClassName="w-auto h-auto max-w-[360px] max-h-[360px] object-contain"
                    hoverColor="#07C160" 
                  />
               </div>
