@@ -328,7 +328,7 @@ const Home: React.FC = () => {
                {/* Fixed Image Container: Larger mobile height, no hover scale, no shadow */}
                <div className="relative w-full h-64 md:h-auto md:aspect-video bg-gray-50 rounded-sm border border-gray-200 flex items-center justify-center overflow-hidden">
                  <img 
-                    src="https://images.unsplash.com/photo-1608543884814-c78274191026?q=80&w=1000&auto=format&fit=crop" 
+                    src="AFC-V1-Temp.webp" 
                     alt="AFC-V1 Flight Controller" 
                     className="w-full h-full object-cover" 
                  />
@@ -408,9 +408,9 @@ const Home: React.FC = () => {
           {/* 3-Step Visualization Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {/* Step 1 */}
-              <div className="group">
+              <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="AI-Tracking/image0.webp" alt="Precision Locking" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <img src="AI-TRACKING/image0.webp" alt="Precision Locking" className="w-full h-full object-cover" />
                       <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">Status: Tracking</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">1. Precision Locking</h4>
@@ -418,9 +418,9 @@ const Home: React.FC = () => {
               </div>
 
               {/* Step 2 */}
-              <div className="group">
+              <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="AI-Tracking/image1.webp" alt="Complex Background" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <img src="AI-TRACKING/image1.webp" alt="Complex Background" className="w-full h-full object-cover" />
                       <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">Status: Stable</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">2. Clutter Rejection</h4>
@@ -428,9 +428,9 @@ const Home: React.FC = () => {
               </div>
 
               {/* Step 3 */}
-              <div className="group">
+              <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="AI-Tracking/image2.webp" alt="Long Range" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <img src="AI-TRACKING/image2.webp" alt="Long Range" className="w-full h-full object-cover" />
                       <div className="absolute top-2 left-2 bg-[#00ff00] text-black text-[10px] px-2 py-1 font-mono uppercase">Status: Locked</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">3. Long Range Stability</h4>

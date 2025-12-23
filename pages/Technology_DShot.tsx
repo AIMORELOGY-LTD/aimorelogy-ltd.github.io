@@ -66,6 +66,7 @@ const Technology_DShot: React.FC = () => {
                      src="DSHOT-WAVE.webp" 
                      alt="DShot Protocol Timing Diagram" 
                      className="w-full h-auto object-contain max-h-[300px]" 
+                     style={{ filter: 'invert(1) brightness(1.05)' }}
                   />
               </div>
            </div>
