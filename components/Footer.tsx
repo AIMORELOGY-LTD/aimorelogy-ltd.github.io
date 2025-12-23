@@ -28,35 +28,64 @@ const WeComIcon = () => (
 interface SocialLinkProps {
   icon: React.ReactNode;
   label: string;
-  qrCode: string;
+  qrCode?: string;
+  qrClassName?: string;
+  href?: string;
   hoverColor: string;
+  enableHoverColor?: boolean;
 }
 
-const SocialLink: React.FC<SocialLinkProps> = ({ icon, label, qrCode, hoverColor }) => {
+const SocialLink: React.FC<SocialLinkProps> = ({ icon, label, qrCode, qrClassName, href, hoverColor, enableHoverColor = true }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const showHoverColor = enableHoverColor && isHovered;
 
-  return (
-    <div 
-      className="relative group cursor-pointer"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+  const content = (
+    <>
       <div 
         className="text-white transition-colors duration-300" 
-        style={{ color: isHovered ? hoverColor : 'white' }}
+        style={{ color: showHoverColor ? hoverColor : 'white' }}
       >
         {icon}
       </div>
       
       {/* QR Code Popup */}
-      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 hidden group-hover:block z-50 animate-fadeIn">
-          <div className="bg-white p-2 rounded-sm shadow-xl border border-gray-100">
-              <img src={qrCode} alt={`${label} QR`} className="w-24 h-24 object-contain" />
-              <div className="text-center text-[10px] text-gray-500 font-bold mt-2 whitespace-nowrap uppercase tracking-wider">{label}</div>
-          </div>
-          {/* Triangle Arrow */}
-          <div className="w-3 h-3 bg-white transform rotate-45 absolute -bottom-1.5 left-1/2 -translate-x-1/2 border-r border-b border-gray-100"></div>
-      </div>
+      {qrCode && (
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 hidden group-hover:block z-50 animate-fadeIn">
+            <div className="bg-white p-2 rounded-sm shadow-xl border border-gray-100">
+                <img src={qrCode} alt={`${label} QR`} className={qrClassName || "w-24 h-24 object-contain"} />
+                <div className="text-center text-[10px] text-gray-500 font-bold mt-2 whitespace-nowrap uppercase tracking-wider">{label}</div>
+            </div>
+            {/* Triangle Arrow */}
+            <div className="w-3 h-3 bg-white transform rotate-45 absolute -bottom-1.5 left-1/2 -translate-x-1/2 border-r border-b border-gray-100"></div>
+        </div>
+      )}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        className="relative group cursor-pointer"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={label}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div
+      className="relative group cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label={label}
+    >
+      {content}
     </div>
   );
 };
@@ -217,19 +246,22 @@ ${message}`;
                  <SocialLink 
                    icon={<WhatsAppIcon />} 
                    label="WhatsApp" 
-                   qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/8617606654980" 
-                   hoverColor="#25D366" 
+                   href="https://wa.me/8618933063380"
+                   hoverColor="#25D366"
+                   enableHoverColor={false}
                  />
                  <SocialLink 
                    icon={<WeComIcon />} 
                    label="WeCom" 
-                   qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://work.weixin.qq.com/ca/cawcde32e032128711" 
+                   qrCode="Social-Media/wecom.webp" 
+                   qrClassName="w-auto h-auto object-contain"
                    hoverColor="#3875F6" 
                  />
                  <SocialLink 
                    icon={<WeChatIcon />} 
                    label="Official Account" 
-                   qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://weixin.qq.com/r/E3VzcBnE7sNyrdcy921q" 
+                   qrCode="Social-Media/gzh.webp" 
+                   qrClassName="w-20 h-20 object-contain"
                    hoverColor="#07C160" 
                  />
               </div>
