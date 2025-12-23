@@ -206,7 +206,7 @@ ${message}`;
               {/* Brand Logo */}
               <div className="flex items-center gap-2">
                  <img
-                   src="/aimorelogy-logo-small.svg"
+                   src="aimorelogy-logo-small.svg"
                    alt="AIMORELOGY"
                    className="h-8 w-auto filter brightness-0 invert"
                  />

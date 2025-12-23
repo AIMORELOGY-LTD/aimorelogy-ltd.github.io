@@ -63,7 +63,7 @@ const Technology_DShot: React.FC = () => {
               {/* Visualization: Static Diagram (Direct Image) */}
               <div className="lg:w-1/2 w-full flex justify-center">
                   <img 
-                     src="/DSHOT-WAVE.webp" 
+                     src="DSHOT-WAVE.webp" 
                      alt="DShot Protocol Timing Diagram" 
                      className="w-full h-auto object-contain max-h-[300px]" 
                   />
