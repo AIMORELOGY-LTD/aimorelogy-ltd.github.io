@@ -498,7 +498,7 @@ const Home: React.FC = () => {
                 {/* DSHOT VISUALIZATION - DIRECT IMAGE */}
                 <div className="w-full flex justify-center lg:justify-end">
                      <img 
-                       src="/assets/dshot_diagram.png" 
+                       src="DSHOT-WAVE.webp" 
                        alt="DShot Signal Diagram" 
                        className="w-full h-auto object-contain max-w-2xl" 
                      />
