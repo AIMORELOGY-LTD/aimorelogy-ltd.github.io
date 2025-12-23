@@ -52,7 +52,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ icon, label, qrCode, qrClassNam
       {qrCode && (
         <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 hidden group-hover:block z-50 animate-fadeIn">
             <div className="bg-white p-2 rounded-sm shadow-xl border border-gray-100">
-                <img src={qrCode} alt={`${label} QR`} className={qrClassName || "w-40 h-40 object-contain"} />
+                <img src={qrCode} alt={`${label} QR`} className={qrClassName || "w-[400px] h-[400px] object-contain"} />
             </div>
             {/* Triangle Arrow */}
             <div className="w-3 h-3 bg-white transform rotate-45 absolute -bottom-1.5 left-1/2 -translate-x-1/2 border-r border-b border-gray-100"></div>
@@ -253,14 +253,14 @@ ${message}`;
                    icon={<WeComIcon />} 
                    label="WeCom" 
                    qrCode="Social-Media/wecom.webp" 
-                   qrClassName="w-44 h-44 object-contain"
+                   qrClassName="w-[400px] h-[400px] object-contain"
                    hoverColor="#3875F6" 
                  />
                  <SocialLink 
                    icon={<WeChatIcon />} 
                    label="Official Account" 
                    qrCode="Social-Media/gzh.webp" 
-                   qrClassName="w-36 h-36 object-contain"
+                   qrClassName="w-[400px] h-[400px] object-contain"
                    hoverColor="#07C160" 
                  />
               </div>
