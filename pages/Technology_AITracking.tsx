@@ -55,7 +55,7 @@ const Technology_AITracking: React.FC = () => {
               <div className="lg:w-1/2 flex justify-center">
                    <div className="relative w-full aspect-video bg-gray-900 rounded-sm overflow-hidden border border-gray-200 shadow-2xl group">
                        <img 
-                         src="/assets/tracking_2.png" 
+                         src="AI-Tracking/image1.webp" 
                          alt="AI Tracking HUD" 
                          className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
                        />
@@ -166,7 +166,7 @@ const Technology_AITracking: React.FC = () => {
                   {/* Step 1 */}
                   <div className="bg-white p-2 border border-gray-200 shadow-sm">
                       <div className="relative aspect-video bg-gray-200 mb-4 overflow-hidden">
-                          <img src="/assets/tracking_1.png" alt="Tracking Active" className="w-full h-full object-cover" />
+                          <img src="AI-Tracking/image0.webp" alt="Tracking Active" className="w-full h-full object-cover" />
                           <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono">STATUS: TRACKING</div>
                       </div>
                       <h4 className="font-bold text-gray-900 uppercase text-center mb-2">1. Precision Locking</h4>
@@ -180,7 +180,7 @@ const Technology_AITracking: React.FC = () => {
                           <ChevronRight size={32} />
                        </div>
                       <div className="relative aspect-video bg-gray-200 mb-4 overflow-hidden">
-                          <img src="/assets/tracking_2.png" alt="Complex Scene" className="w-full h-full object-cover" />
+                          <img src="AI-Tracking/image1.webp" alt="Complex Scene" className="w-full h-full object-cover" />
                           <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono">STATUS: STABLE</div>
                       </div>
                       <h4 className="font-bold text-gray-900 uppercase text-center mb-2">2. Clutter Rejection</h4>
@@ -194,7 +194,7 @@ const Technology_AITracking: React.FC = () => {
                           <ChevronRight size={32} />
                        </div>
                       <div className="relative aspect-video bg-gray-200 mb-4 overflow-hidden">
-                          <img src="/assets/tracking_3.png" alt="Long Range" className="w-full h-full object-cover" />
+                          <img src="AI-Tracking/image2.webp" alt="Long Range" className="w-full h-full object-cover" />
                           <div className="absolute top-2 left-2 bg-[#00ff00] text-black text-[10px] px-2 py-1 font-mono">STATUS: LOCKED</div>
                       </div>
                       <h4 className="font-bold text-gray-900 uppercase text-center mb-2">3. Long Range Stability</h4>
