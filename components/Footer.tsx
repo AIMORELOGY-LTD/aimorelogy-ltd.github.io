@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Send, Phone, MapPin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { RoutePath } from '../types';
+import { useTranslation } from 'react-i18next';
+import { useLang, withLang } from '../i18n-routing';
 
 // --- Custom Social Icons ---
 
@@ -90,6 +92,8 @@ const SocialLink: React.FC<SocialLinkProps> = ({ icon, label, qrCode, qrClassNam
 };
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+  const lang = useLang();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -135,9 +139,9 @@ ${message}`;
             {/* Contact Info Column */}
             <div className="lg:w-1/3 space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-white uppercase mb-4">Get in Touch</h3>
+                <h3 className="text-2xl font-bold text-white uppercase mb-4">{t('footer.getInTouch')}</h3>
                 <p className="text-sm leading-relaxed text-gray-400">
-                  Discuss your solution needs with our engineering team. We provide turnkey services for UAVs and Edge AI.
+                  {t('footer.getInTouchDesc')}
                 </p>
               </div>
 
@@ -145,7 +149,7 @@ ${message}`;
                  <div className="flex items-start gap-3">
                    <div className="bg-[#4f4398] p-2 rounded-sm text-white"><Mail size={16} /></div>
                    <div>
-                      <p className="text-white font-bold">Sales & Support</p>
+                      <p className="text-white font-bold">{t('footer.salesSupport')}</p>
                       <a href="mailto:sales@aimorelogy.com" className="block text-sm hover:text-[#4f4398] transition-colors">sales@aimorelogy.com</a>
                       <a href="mailto:supports@aimorelogy.com" className="block text-sm hover:text-[#4f4398] transition-colors">supports@aimorelogy.com</a>
                    </div>
@@ -154,8 +158,8 @@ ${message}`;
                  <div className="flex items-start gap-3">
                    <div className="bg-[#4f4398] p-2 rounded-sm text-white"><MapPin size={16} /></div>
                    <div>
-                      <p className="text-white font-bold">Shenzhen HQ</p>
-                      <p className="text-sm text-gray-500">T2-A 603-12, Langjun Square, Bao'an</p>
+                      <p className="text-white font-bold">{t('footer.shenzhen')}</p>
+                      <p className="text-sm text-gray-500">{t('footer.address')}</p>
                    </div>
                  </div>
               </div>
@@ -167,7 +171,7 @@ ${message}`;
                  <input 
                    type="text" 
                    name="name"
-                   placeholder="Full Name"
+                   placeholder={t('footer.form.fullName')}
                    value={formData.name}
                    onChange={handleChange}
                    required
@@ -176,7 +180,7 @@ ${message}`;
                  <input 
                    type="email" 
                    name="email"
-                   placeholder="Email Address"
+                   placeholder={t('footer.form.email')}
                    value={formData.email}
                    onChange={handleChange}
                    required
@@ -185,7 +189,7 @@ ${message}`;
                  <textarea 
                    name="message"
                    rows={3}
-                   placeholder="How can we help you?"
+                   placeholder={t('footer.form.message')}
                    value={formData.message}
                    onChange={handleChange}
                    required
@@ -194,7 +198,7 @@ ${message}`;
                  
                  <div className="md:col-span-2">
                    <button type="submit" className="bg-white text-[#111] font-bold uppercase px-8 py-3 hover:bg-gray-200 transition-colors flex items-center gap-2 text-xs tracking-wider">
-                     Send Message <Send size={14} />
+                     {t('footer.form.send')} <Send size={14} />
                    </button>
                  </div>
               </form>
@@ -208,9 +212,9 @@ ${message}`;
       <div className="bg-[#111] border-t border-gray-800">
         <div className="container mx-auto px-6 py-8">
            <ul className="flex flex-col md:flex-row flex-wrap gap-x-8 gap-y-4 text-sm font-bold text-white uppercase tracking-wide">
-              <li><Link to={RoutePath.ABOUT} className="hover:text-[#4f4398] transition-colors">Company Overview</Link></li>
-              <li><Link to={RoutePath.CONTACT} className="hover:text-[#4f4398] transition-colors">Contact AIMORELOGY</Link></li>
-              <li><Link to={RoutePath.CAREERS} className="hover:text-[#4f4398] transition-colors">Careers</Link></li>
+              <li><Link to={withLang(lang, RoutePath.ABOUT)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.company')}</Link></li>
+              <li><Link to={withLang(lang, RoutePath.CONTACT)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.contact')}</Link></li>
+              <li><Link to={withLang(lang, RoutePath.CAREERS)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.careers')}</Link></li>
            </ul>
         </div>
       </div>
@@ -221,11 +225,11 @@ ${message}`;
            
            {/* Left: Legal Links */}
            <div className="flex flex-col md:flex-row gap-4 md:gap-0 text-xs text-gray-500">
-              <span className="md:pr-4 md:border-r border-gray-700">© AIMORELOGY Limited</span>
+              <span className="md:pr-4 md:border-r border-gray-700">{t('footer.legal.copyright')}</span>
               <div className="flex flex-wrap gap-4 md:gap-0">
-                <Link to={RoutePath.TERMS} className="md:px-4 md:border-r border-gray-700 hover:text-white transition-colors">Terms of Use</Link>
-                <Link to={RoutePath.COOKIES} className="md:px-4 md:border-r border-gray-700 hover:text-white transition-colors">Cookies</Link>
-                <Link to={RoutePath.PRIVACY} className="md:pl-4 hover:text-white transition-colors">Privacy</Link>
+                <Link to={withLang(lang, RoutePath.TERMS)} className="md:px-4 md:border-r border-gray-700 hover:text-white transition-colors">{t('footer.legal.terms')}</Link>
+                <Link to={withLang(lang, RoutePath.COOKIES)} className="md:px-4 md:border-r border-gray-700 hover:text-white transition-colors">{t('footer.legal.cookies')}</Link>
+                <Link to={withLang(lang, RoutePath.PRIVACY)} className="md:pl-4 hover:text-white transition-colors">{t('footer.legal.privacy')}</Link>
               </div>
            </div>
 
@@ -271,7 +275,7 @@ ${message}`;
         {/* Disclaimer Text */}
         <div className="container mx-auto px-6 mt-6">
            <p className="text-[10px] text-gray-600 leading-relaxed max-w-4xl">
-             AIMORELOGY technologies may require enabled hardware, software or service activation. // No product or component can be absolutely secure. // Your costs and results may vary. // Performance varies by use, configuration, and other factors. // See our complete legal Notices and Disclaimers. // AIMORELOGY is committed to respecting human rights and avoiding causing or contributing to adverse impacts on human rights.
+             {t('footer.disclaimer')}
            </p>
         </div>
       </div>

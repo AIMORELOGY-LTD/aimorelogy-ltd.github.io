@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, ChevronDown, ChevronUp, Search } from 'lucide-react';
 import { RoutePath } from '../types';
+import { useTranslation } from 'react-i18next';
+import { useLang, withLang } from '../i18n-routing';
 
 // --- Data Types ---
 
@@ -52,105 +54,9 @@ interface MenuItem {
 
 // --- Menu Data Configuration ---
 
-const MENU_DATA: MenuItem[] = [
-  {
-    title: 'Products',
-    type: 'sidebar',
-    path: '#', // Removed specific route link
-    brands: [
-      {
-        name: 'Flight Controller',
-        categories: [
-          {
-            title: 'All-In-One FC',
-            items: [
-              {
-                model: 'AFC-V1',
-                description: 'The ultimate answer for the next generation of UAV brains.',
-                to: '#' // Disabled link
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: 'Solutions',
-    type: 'simple',
-    simpleItems: [
-        { 
-            label: 'Cloud AI Camera', 
-            to: RoutePath.SOLUTION_AI_CAMERA
-        },
-        { 
-            label: 'Autonomous Inspection', 
-            to: RoutePath.SOLUTION_DEMO
-        }
-    ]
-  },
-  {
-    title: 'Core Components',
-    type: 'sidebar',
-    brands: [
-      {
-        name: 'SOPHGO',
-        categories: [
-          {
-            title: 'Intelligent Vision',
-            items: [
-              { 
-                model: 'BM1688', 
-                description: '16T Edge AI, 8-Core ARM, Highly Integrated SoC.', 
-                to: '/products/sophgo/bm1688' 
-              },
-              { 
-                model: 'CV186AH', 
-                description: '7.2T High-End Vision Processor (4K/8MP).', 
-                to: '/products/sophgo/cv186ah' 
-              },
-              { 
-                model: 'CV184', 
-                description: '1.5T Mid-Range Edge Vision (RISC-V + ARM).', 
-                to: '/products/sophgo/cv184' 
-              },
-              { 
-                model: 'CV181 / CV180', 
-                description: 'Consumer RISC-V AIoT SoC (0.2T - 1.0T).', 
-                to: '/products/sophgo/cv181' 
-              }
-            ]
-          }
-        ]
-      },
-      {
-        name: 'Espressif',
-        categories: [
-          {
-            title: 'Xtensa Processor',
-            items: [
-              {
-                model: 'ESP32S3N16R8',
-                description: 'Dual-core Xtensa 32-bit LX7, 240MHz.',
-                to: '/products/espressif/esp32s3'
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: 'Support',
-    type: 'simple',
-    simpleItems: [
-      { label: 'Contact Us', to: RoutePath.CONTACT },
-      { label: 'Documents', to: '#' }
-    ]
-  }
-];
-
 const Header: React.FC = () => {
+  const { t } = useTranslation();
+  const lang = useLang();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
@@ -164,7 +70,107 @@ const Header: React.FC = () => {
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
 
   const location = useLocation();
-  const isHome = location.pathname === RoutePath.HOME;
+  const isHome = location.pathname === `/${lang}` || location.pathname === `/${lang}/`;
+  const basePath = location.pathname.replace(/^\/(en|zh|ru)/, '') || '/';
+  const buildLangPath = (targetLang: typeof lang) => withLang(targetLang, basePath);
+
+  const MENU_DATA: MenuItem[] = [
+    {
+      title: t('header.menu.productsTitle'),
+      type: 'sidebar',
+      path: '#',
+      brands: [
+        {
+          name: t('header.menu.products.flightController'),
+          categories: [
+            {
+              title: t('header.menu.products.allInOne'),
+              items: [
+                {
+                  model: 'AFC-V1',
+                  description: t('header.menu.products.afcDesc'),
+                  to: '#'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: t('header.menu.solutions'),
+      type: 'simple',
+      simpleItems: [
+        { 
+          label: t('header.menu.cloudAiCamera'), 
+          to: withLang(lang, RoutePath.SOLUTION_AI_CAMERA)
+        },
+        { 
+          label: t('header.menu.autonomousInspection'), 
+          to: withLang(lang, RoutePath.SOLUTION_DEMO)
+        }
+      ]
+    },
+    {
+      title: t('header.menu.coreComponents'),
+      type: 'sidebar',
+      brands: [
+        {
+          name: 'SOPHGO',
+          categories: [
+            {
+              title: t('header.menu.intelligentVision'),
+              items: [
+                { 
+                  model: 'BM1688', 
+                  description: t('header.menu.sophgo.bm1688'), 
+                  to: withLang(lang, '/products/sophgo/bm1688') 
+                },
+                { 
+                  model: 'CV186AH', 
+                  description: t('header.menu.sophgo.cv186ah'), 
+                  to: withLang(lang, '/products/sophgo/cv186ah') 
+                },
+                { 
+                  model: 'CV184', 
+                  description: t('header.menu.sophgo.cv184'), 
+                  to: withLang(lang, '/products/sophgo/cv184') 
+                },
+                { 
+                  model: 'CV181 / CV180', 
+                  description: t('header.menu.sophgo.cv181'), 
+                  to: withLang(lang, '/products/sophgo/cv181') 
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: 'Espressif',
+          categories: [
+            {
+              title: t('header.menu.xtensa'),
+              items: [
+                {
+                  model: 'ESP32S3N16R8',
+                  description: t('header.menu.espressif.esp32'),
+                  to: withLang(lang, '/products/espressif/esp32s3')
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: t('header.menu.support'),
+      type: 'simple',
+      simpleItems: [
+        { label: t('header.menu.contactUs'), to: withLang(lang, RoutePath.CONTACT) },
+        { label: t('header.menu.documents'), to: '#' }
+      ]
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -338,10 +344,10 @@ const Header: React.FC = () => {
                    <div className="bg-gray-50 p-6 border border-gray-100">
                      {/* Removed Promo Title 'Enterprise Support' for cleaner look */}
                      <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-                       Need assistance with integration or technical specifications? Our engineering team is ready to help.
+                       {t('header.promo')}
                      </p>
-                     <Link to={RoutePath.CONTACT} className="text-xs font-bold text-[#4f4398] uppercase hover:underline">
-                       Contact Support
+                     <Link to={withLang(lang, RoutePath.CONTACT)} className="text-xs font-bold text-[#4f4398] uppercase hover:underline">
+                       {t('header.contactSupport')}
                      </Link>
                    </div>
                 </div>
@@ -351,7 +357,7 @@ const Header: React.FC = () => {
           {/* 4. EMPTY LAYOUT */}
           {item.type === 'empty' && (
             <div className="flex flex-col items-center justify-center py-12 text-center opacity-50">
-               <h3 className="text-lg font-bold text-gray-900 uppercase">Coming Soon</h3>
+               <h3 className="text-lg font-bold text-gray-900 uppercase">{t('header.comingSoon')}</h3>
             </div>
           )}
           
@@ -368,7 +374,7 @@ const Header: React.FC = () => {
       {/* Full Width Container */}
       <div className="w-full px-6 md:px-8 h-[72px] flex items-center">
         {/* Logo Area - Left */}
-        <Link to={RoutePath.HOME} className="flex items-center gap-2 z-50 mr-12 shrink-0">
+        <Link to={withLang(lang, RoutePath.HOME)} className="flex items-center gap-2 z-50 mr-12 shrink-0">
             <img
               src="aimorelogy-logo-small.svg"
               alt="AIMORELOGY"
@@ -406,7 +412,7 @@ const Header: React.FC = () => {
         {/* Icons & Actions Area - Far Right */}
         <div className={`hidden lg:flex items-center gap-6 ml-auto pl-6 h-8 ${isTransparent ? 'border-l border-white/20' : 'border-l border-gray-100'}`}>
            {/* Search Icon */}
-           <button className={`${iconColorClass} hover:text-[#4f4398] transition-colors`} aria-label="Search">
+           <button className={`${iconColorClass} hover:text-[#4f4398] transition-colors`} aria-label={t('header.search')}>
              <Search size={20} />
            </button>
 
@@ -417,7 +423,7 @@ const Header: React.FC = () => {
              <button 
                onClick={() => setLangMenuOpen(!langMenuOpen)}
                className={`flex items-center gap-1 ${iconColorClass} hover:text-[#4f4398] transition-colors`}
-               aria-label="Language"
+               aria-label={t('header.language')}
              >
                <Globe size={20} />
              </button>
@@ -425,9 +431,27 @@ const Header: React.FC = () => {
              {/* Dropdown */}
              {langMenuOpen && (
                <div className="absolute top-full right-0 mt-6 w-32 bg-white shadow-xl border border-gray-100 py-2 rounded-sm z-50">
-                 <button className="block w-full text-left px-4 py-2 text-sm text-[#4f4398] font-bold bg-gray-50">English</button>
-                 <button className="block w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]">中文</button>
-                 <button className="block w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]">Русский</button>
+                 <Link
+                   to={buildLangPath('en')}
+                   onClick={() => setLangMenuOpen(false)}
+                   className={`block w-full text-left px-4 py-2 text-sm ${lang === 'en' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
+                 >
+                   {t('header.lang.en')}
+                 </Link>
+                 <Link
+                   to={buildLangPath('zh')}
+                   onClick={() => setLangMenuOpen(false)}
+                   className={`block w-full text-left px-4 py-2 text-sm ${lang === 'zh' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
+                 >
+                   {t('header.lang.zh')}
+                 </Link>
+                 <Link
+                   to={buildLangPath('ru')}
+                   onClick={() => setLangMenuOpen(false)}
+                   className={`block w-full text-left px-4 py-2 text-sm ${lang === 'ru' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
+                 >
+                   {t('header.lang.ru')}
+                 </Link>
                </div>
              )}
            </div>
@@ -542,10 +566,35 @@ const Header: React.FC = () => {
         
         {/* Mobile Footer Area - Fixed to Bottom */}
         <div className="p-6 border-t border-gray-100 bg-white shrink-0">
+           {langMenuOpen && (
+             <div className="mb-4 border border-gray-100 bg-gray-50">
+               <Link
+                 to={buildLangPath('en')}
+                 onClick={() => setLangMenuOpen(false)}
+                 className={`block px-4 py-2 text-sm ${lang === 'en' ? 'text-[#4f4398] font-bold bg-white' : 'text-gray-600 hover:text-[#4f4398]'}`}
+               >
+                 {t('header.lang.en')}
+               </Link>
+               <Link
+                 to={buildLangPath('zh')}
+                 onClick={() => setLangMenuOpen(false)}
+                 className={`block px-4 py-2 text-sm ${lang === 'zh' ? 'text-[#4f4398] font-bold bg-white' : 'text-gray-600 hover:text-[#4f4398]'}`}
+               >
+                 {t('header.lang.zh')}
+               </Link>
+               <Link
+                 to={buildLangPath('ru')}
+                 onClick={() => setLangMenuOpen(false)}
+                 className={`block px-4 py-2 text-sm ${lang === 'ru' ? 'text-[#4f4398] font-bold bg-white' : 'text-gray-600 hover:text-[#4f4398]'}`}
+               >
+                 {t('header.lang.ru')}
+               </Link>
+             </div>
+           )}
            <div className="flex justify-center items-center gap-12">
               <button className="flex flex-col items-center justify-center gap-2 text-gray-600 hover:text-[#4f4398] transition-colors">
                 <Search size={24} strokeWidth={1.5} />
-                <span className="text-xs font-medium">Search</span>
+                <span className="text-xs font-medium">{t('header.search')}</span>
               </button>
               {/* User Icon Removed from Mobile */}
               <button 
@@ -553,7 +602,7 @@ const Header: React.FC = () => {
                 className="flex flex-col items-center justify-center gap-2 text-gray-600 hover:text-[#4f4398] transition-colors"
               >
                 <Globe size={24} strokeWidth={1.5} />
-                <span className="text-xs font-medium">Language</span>
+                <span className="text-xs font-medium">{t('header.language')}</span>
               </button>
            </div>
         </div>

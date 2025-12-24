@@ -2,6 +2,8 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, Layers, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLang, withLang } from '../i18n-routing';
 
 interface Feature {
   title: string;
@@ -46,6 +48,8 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
   ctaTitle,
   ctaText
 }) => {
+  const { t } = useTranslation();
+  const lang = useLang();
   return (
     <div className="bg-white min-h-screen">
       {/* 1. Hero Section */}
@@ -68,7 +72,7 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
               {subtitle}
             </p>
             <button className="bg-[#4f4398] text-white px-8 py-3 font-bold uppercase hover:bg-[#6a5cc2] transition-colors">
-              Request Demo
+              {t('solution.requestDemo')}
             </button>
           </div>
         </div>
@@ -79,7 +83,7 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <span className="text-[#4f4398] font-bold uppercase tracking-widest text-sm mb-2 block">Solution Overview</span>
+              <span className="text-[#4f4398] font-bold uppercase tracking-widest text-sm mb-2 block">{t('solution.overview')}</span>
               <h2 className="text-4xl font-black text-gray-900 uppercase mb-6">{overviewTitle}</h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6 whitespace-pre-line">
                 {overviewContent}
@@ -120,7 +124,7 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
       {/* 4. Features Grid */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-black text-gray-900 uppercase mb-16 text-center">Key Capabilities</h2>
+          <h2 className="text-3xl font-black text-gray-900 uppercase mb-16 text-center">{t('solution.capabilities')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, idx) => (
               <div key={idx} className="bg-white p-8 border border-gray-200 hover:border-[#4f4398] transition-all group shadow-sm">
@@ -143,9 +147,9 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
-            <h2 className="text-3xl font-black text-gray-900 uppercase">Industry Applications</h2>
-            <Link to="/contact" className="hidden md:flex items-center gap-2 text-[#4f4398] font-bold uppercase text-sm hover:gap-3 transition-all">
-              Discuss Your Use Case <ArrowRight size={16} />
+            <h2 className="text-3xl font-black text-gray-900 uppercase">{t('solution.applications')}</h2>
+            <Link to={withLang(lang, '/contact')} className="hidden md:flex items-center gap-2 text-[#4f4398] font-bold uppercase text-sm hover:gap-3 transition-all">
+              {t('solution.discuss')} <ArrowRight size={16} />
             </Link>
           </div>
           
@@ -172,11 +176,11 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
            <h2 className="text-3xl md:text-4xl font-black text-white uppercase mb-6">{ctaTitle}</h2>
            <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">{ctaText}</p>
            <div className="flex flex-col md:flex-row gap-4 justify-center">
-             <Link to="/contact" className="bg-[#4f4398] text-white px-10 py-4 font-bold uppercase hover:bg-[#6a5cc2] transition-colors">
-               Contact Sales
+             <Link to={withLang(lang, '/contact')} className="bg-[#4f4398] text-white px-10 py-4 font-bold uppercase hover:bg-[#6a5cc2] transition-colors">
+               {t('common.contactSales')}
              </Link>
              <button className="bg-transparent border border-gray-600 text-white px-10 py-4 font-bold uppercase hover:border-white transition-colors">
-               Download Whitepaper
+               {t('solution.download')}
              </button>
            </div>
         </div>

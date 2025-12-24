@@ -1,0 +1,874 @@
+{
+  "common": {
+    "home": "Home",
+    "technology": "Technology",
+    "comingSoon": "Coming Soon",
+    "contactSales": "Contact Sales",
+    "solutions": "Solutions"
+  },
+  "header": {
+    "menu": {
+      "productsTitle": "Products",
+      "products": {
+        "flightController": "Flight Controller",
+        "allInOne": "All-In-One FC",
+        "afcDesc": "The ultimate answer for the next generation of UAV brains."
+      },
+      "solutions": "Solutions",
+      "cloudAiCamera": "Cloud AI Camera",
+      "autonomousInspection": "Autonomous Inspection",
+      "coreComponents": "Core Components",
+      "intelligentVision": "Intelligent Vision",
+      "xtensa": "Xtensa Processor",
+      "sophgo": {
+        "bm1688": "16T Edge AI, 8-Core ARM, Highly Integrated SoC.",
+        "cv186ah": "7.2T High-End Vision Processor (4K/8MP).",
+        "cv184": "1.5T Mid-Range Edge Vision (RISC-V + ARM).",
+        "cv181": "Consumer RISC-V AIoT SoC (0.2T - 1.0T)."
+      },
+      "espressif": {
+        "esp32": "Dual-core Xtensa 32-bit LX7, 240MHz."
+      },
+      "support": "Support",
+      "contactUs": "Contact Us",
+      "documents": "Documents"
+    },
+    "search": "Search",
+    "language": "Language",
+    "lang": {
+      "en": "English",
+      "zh": "????",
+      "ru": "???????"
+    },
+    "promo": "Need assistance with integration or technical specifications? Our engineering team is ready to help.",
+    "contactSupport": "Contact Support",
+    "comingSoon": "Coming Soon"
+  },
+  "footer": {
+    "getInTouch": "Get in Touch",
+    "getInTouchDesc": "Discuss your solution needs with our engineering team. We provide turnkey services for UAVs and Edge AI.",
+    "salesSupport": "Sales & Support",
+    "shenzhen": "Shenzhen HQ",
+    "address": "T2-A 603-12, Langjun Square, Bao'an",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "message": "How can we help you?",
+      "send": "Send Message"
+    },
+    "links": {
+      "company": "Company Overview",
+      "contact": "Contact AIMORELOGY",
+      "careers": "Careers"
+    },
+    "legal": {
+      "copyright": "? AIMORELOGY Limited",
+      "terms": "Terms of Use",
+      "cookies": "Cookies",
+      "privacy": "Privacy"
+    },
+    "disclaimer": "AIMORELOGY technologies may require enabled hardware, software or service activation. // No product or component can be absolutely secure. // Your costs and results may vary. // Performance varies by use, configuration, and other factors. // See our complete legal Notices and Disclaimers. // AIMORELOGY is committed to respecting human rights and avoiding causing or contributing to adverse impacts on human rights."
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "category": "New Release",
+          "title": "AFC-V1 Launching Soon",
+          "description": "The ultimate all-in-one flight controller integrating vision, video link, and control. Redefining the future of UAVs.",
+          "navTitle": "AFC-V1",
+          "navDesc": "Next Gen Flight Controller.",
+          "buttonText": "Coming Soon"
+        },
+        "1": {
+          "category": "Algorithms",
+          "title": "Self-Developed AI Tracking",
+          "description": "Proprietary visual tracking algorithms delivering <5ms latency for robust target following in complex environments.",
+          "navTitle": "AI Tracking",
+          "navDesc": "High-performance vision algorithms.",
+          "buttonText": "Technology Preview"
+        },
+        "2": {
+          "category": "Framework",
+          "title": "Universal Adaptive DShot",
+          "description": "DMA-Free, Bi-directional DShot 300/150 support on any chip platform. Dynamic error elimination for perfect stability.",
+          "navTitle": "Adaptive DShot",
+          "navDesc": "Universal Control Framework.",
+          "buttonText": "View Specs"
+        }
+      }
+    },
+    "afc": {
+      "kicker": "All-in-One AI Flight Controller",
+      "tagline": "\"Vision. Video Link. Control.\"",
+      "subtagline": "The ultimate answer for the next generation of UAV brains.",
+      "features": {
+        "0": {
+          "title": "1.5 TOPS Edge AI",
+          "desc": "Local execution of complex detection models with zero latency."
+        },
+        "1": {
+          "title": "10KM Video Link",
+          "desc": "HD transmission with high-power Wi-Fi module optimizations."
+        },
+        "2": {
+          "title": "8MP Ultra-HD ISP",
+          "desc": "Up to 8M@30FPS processing. Native support for Starlight and Global Shutter sensors."
+        },
+        "3": {
+          "title": "45% Smaller",
+          "desc": "Redefining size and power. Highly integrated industrial design."
+        }
+      }
+    },
+    "tracking": {
+      "kicker": "Proprietary Algorithm",
+      "title": "AI Tracking",
+      "tagline": "\"Ultra-low latency. Unmatched Robustness.\"",
+      "status": {
+        "tracking": "Status: Tracking",
+        "stable": "Status: Stable",
+        "locked": "Status: Locked"
+      },
+      "steps": {
+        "0": {
+          "title": "1. Precision Locking",
+          "desc": "Instant target acquisition near architectural features."
+        },
+        "1": {
+          "title": "2. Clutter Rejection",
+          "desc": "Robust tracking amidst complex environments and parked vehicles."
+        },
+        "2": {
+          "title": "3. Long Range Stability",
+          "desc": "Consistent lock-on for distant targets with low pixel density."
+        }
+      },
+      "cta": "Explore Algorithm"
+    },
+    "dshot": {
+      "kicker": "Universal Framework",
+      "title": "Adaptive DShot",
+      "subtitle": "DMA-Free. Bi-directional. Adaptive. Bring professional DShot 300/150 support to any MCU platform.",
+      "features": {
+        "0": {
+          "title": "Any Chip Platform",
+          "desc": "No DMA or specific hardware Timer required. Portable to RISC-V, ARM, and more."
+        },
+        "1": {
+          "title": "Self-Adaptive Tuning",
+          "desc": "Dynamic error elimination calibrates output frequency for perfect stability."
+        },
+        "2": {
+          "title": "Mainstream Support",
+          "desc": "Perfect compatibility with BLHeli_32, BLHeli_S, and AM32 ESCs."
+        }
+      },
+      "cta": "View Specifications"
+    },
+    "industryNews": "Industry News",
+    "partners": "Strategic Partners"
+  },
+  "blog": {
+    "kicker": "Nexus Blog",
+    "titleLine1": "Technology",
+    "titleLine2": "Insights",
+    "subtitle": "Deep dives into AI, graphics, and the future of computing.",
+    "loadMore": "Load More Stories",
+    "readStory": "Read Story"
+  },
+  "careers": {
+    "metaTitle": "Careers | AIMORELOGY",
+    "hero": {
+      "kicker": "Join Our Team",
+      "titleLine1": "Careers at",
+      "titleLine2": "AIMORELOGY",
+      "subtitle": "Build the future of autonomous flight and edge intelligence with us."
+    },
+    "openPositions": "Open Positions",
+    "locations": {
+      "shenzhen": "Shenzhen",
+      "shenzhenTag": "Global Headquarters",
+      "hongkong": "Hong Kong",
+      "hongkongTag": "Overseas Business Dept"
+    },
+    "none": "No open positions available.",
+    "shenzhenNote": "Check back later for R&D opportunities.",
+    "hongkongNote": "Check back later for Operations opportunities.",
+    "ctaText": "Don't see a role that fits? We are always looking for talent.",
+    "ctaLink": "Contact Us for General Inquiry"
+  },
+  "contact": {
+    "metaTitle": "Contact | AIMORELOGY",
+    "title": "Contact Us",
+    "subtitle": "Have questions about our enterprise solutions? Reach out to our dedicated team via phone, WeChat, WhatsApp, or email.",
+    "salesSupport": "Sales & Support",
+    "channels": "Mobile / WeChat / WhatsApp",
+    "corporateEmail": "Corporate Email",
+    "locations": {
+      "shenzhen": {
+        "title": "HQ (Shenzhen)",
+        "company": "AIMORELOGY Technology Co., Ltd.",
+        "address": "Room 603-12, Zone A, Building T2, Langjun Square, Bao'an, Shenzhen"
+      },
+      "hk": {
+        "title": "Hong Kong",
+        "company": "AIMORELOGY LIMITED",
+        "addressLine1": "Room H2 4/F, Century Industrial Centre,",
+        "addressLine2": "33-35 Au Pui Wan Street Fotan,",
+        "addressLine3": "Sha Tin, Hong Kong"
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone (Optional)",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "about": {
+    "metaTitle": "About | AIMORELOGY",
+    "hero": {
+      "kicker": "Corporate Profile",
+      "titleLine1": "About",
+      "titleLine2": "AIMORELOGY",
+      "subtitle": "Pioneering the next generation of intelligent flight control systems and AI-driven autonomous solutions for the industrial world."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "p1": "AIMORELOGY is a technology leader dedicated to revolutionizing the UAV and robotics industry. We specialize in advanced edge AI computing, high-definition video transmission, and autonomous flight control algorithms.",
+      "p2": "By integrating vision, control, and communication into powerful, compact units like the CV184XH series, we enable industrial partners to build smarter, safer, and more efficient autonomous systems."
+    },
+    "partners": {
+      "title": "Partners"
+    },
+    "leadership": {
+      "title": "Leadership",
+      "name": "Ke Yiran",
+      "role": "Founder & CEO",
+      "tags": [
+        "// SYSTEM ARCHITECT",
+        "// OPEN SOURCE ADVOCATE",
+        "// PRODUCT STRATEGIST"
+      ],
+      "bio": {
+        "intro": "Ke Yiran is the Founder and CEO of AIMORELOGY, bringing extensive cross-domain experience ranging from underlying hardware to intelligent system algorithms.",
+        "backgroundTitle": "Background",
+        "background": "Before founding the company, he was deeply involved in the open-source hardware and RISC-V ecosystem, recognized as one of the early builders of the domestic RISC-V community.",
+        "trackTitle": "Track Record",
+        "track": "Led the design, productization, and global promotion of the Milk-V Duo, Mars, and Pioneer series, achieving remarkable success in overseas crowdfunding.",
+        "p1": "His extensive background in chips and underlying systems has fostered deep technical thinking, product execution capabilities, and a natural resonance with developer culture. He believes the value of technology lies not just in performance metrics, but in enabling more people to \"truly use it, touch it, and change it.\"",
+        "p2": "Post-2025, he has shifted his focus from system architecture to intelligent UAVs and AI systems. Founding AIMORELOGY, he focuses on UAV flight control, visual perception, edge AI inference, and intelligent mission systems.",
+        "footer": "Ke Yiran remains an engineer at heart: personally reviewing system architectures, participating in flight control link design, and prioritizing underlying reliability and real-world user scenarios."
+      },
+      "philosophy": {
+        "title": "Philosophy",
+        "items": [
+          {
+            "title": "Reality First",
+            "desc": "Technology must be usable in reality, not just in demonstrations."
+          },
+          {
+            "title": "Human Centric",
+            "desc": "Innovation should improve the relationship between humans and technology."
+          },
+          {
+            "title": "Simplicity",
+            "desc": "Complex systems must be presented with a simple, reliable experience."
+          },
+          {
+            "title": "Trust",
+            "desc": "Every product must possess \"trustworthy\" stability and security."
+          }
+        ]
+      }
+    },
+    "locations": {
+      "title": "Global Presence",
+      "companyName": "Company Name",
+      "address": "Address",
+      "contacts": "Key Contacts",
+      "shenzhen": {
+        "title": "Shenzhen",
+        "tag": "Global Headquarters",
+        "company": "Shenzhen AIMORELOGY Technology Co., Ltd.",
+        "addressLine1": "Room 603-12, Zone A, Building T2, Langjun Square,",
+        "addressLine2": "Tiezai Road, Xixiang Street, Bao'an District, Shenzhen",
+        "contactName": "Yiran Ke"
+      },
+      "hk": {
+        "title": "Hong Kong",
+        "tag": "Overseas Business Dept",
+        "company": "AIMORELOGY LIMITED",
+        "addressLine1": "Room H2 4/F, Century Industrial Centre,",
+        "addressLine2": "33-35 Au Pui Wan Street Fotan,",
+        "addressLine3": "Sha Tin, Hong Kong",
+        "contactName": "Jeff Xie"
+      }
+    },
+    "cta": {
+      "title": "Ready to Innovate?",
+      "subtitle": "Contact our sales team today to discuss how our AI solutions can accelerate your business.",
+      "email": "Email Us Now"
+    }
+  },
+  "aiTracking": {
+    "metaTitle": "Self-Developed AI Tracking | AIMORELOGY",
+    "breadcrumb": "AI Tracking Algorithm",
+    "hero": {
+      "kicker": "Core Technology",
+      "badge": "PROPRIETARY ALGORITHM",
+      "titleLine1": "Hyper-Fast",
+      "titleLine2": "Visual Tracking",
+      "subtitle": "Robust Single-Object Tracking (SOT) with Re-ID capability for complex environments.",
+      "desc": "Optimized for low-power edge detection platforms. Achieving 2ms-5ms inference latency on standard embedded NPU hardware while maintaining lock-on robustness during occlusion.",
+      "cta": "Get Algorithm SDK",
+      "imageAlt": "AI Tracking Banner"
+    },
+    "performance": {
+      "title": "Performance Data",
+      "desc": "Our algorithm is heavily optimized for INT8 quantization on RISC-V and ARM-based TPU platforms. It delivers industrial-grade real-time performance even on entry-level chips.",
+      "testTitle": "Test Conditions",
+      "test": {
+        "input": "Input Size",
+        "quant": "Quantization",
+        "batch": "Batch Size"
+      },
+      "table": {
+        "platform": "Platform (Computing Power)",
+        "latency": "Inference Speed (Latency)",
+        "ultraFast": "Ultra-Fast"
+      }
+    },
+    "capabilities": {
+      "title": "Robust Real-World Tracking",
+      "subtitle": "Our proprietary algorithm maintains consistent lock-on from initial acquisition to long-range tracking, filtering out complex background clutter and static obstacles in real-time.",
+      "steps": {
+        "0": {
+          "alt": "Tracking Active",
+          "status": "STATUS: TRACKING",
+          "title": "1. Precision Locking",
+          "desc": "Instant target acquisition near architectural features."
+        },
+        "1": {
+          "alt": "Complex Scene",
+          "status": "STATUS: STABLE",
+          "title": "2. Clutter Rejection",
+          "desc": "Robust tracking amidst complex environments and parked vehicles."
+        },
+        "2": {
+          "alt": "Long Range",
+          "status": "STATUS: LOCKED",
+          "title": "3. Long Range Stability",
+          "desc": "Consistent lock-on for distant targets with low pixel density."
+        }
+      }
+    },
+    "features": {
+      "0": {
+        "title": "Ultra-Low Latency",
+        "desc": "<5ms processing time ensures direct closed-loop control for UAVs without jitter or oscillation."
+      },
+      "1": {
+        "title": "Lightweight Model",
+        "desc": "Highly optimized INT8 quantization allows deployment on cost-effective chips like CV181x."
+      },
+      "2": {
+        "title": "Robust Re-ID",
+        "desc": "Maintains target identity even after total occlusion, preventing \"target drift\" to background objects."
+      },
+      "3": {
+        "title": "Multi-Scale Input",
+        "desc": "Supports 128x128 for speed and 256x256 for precision, adaptable to different sensor resolutions."
+      }
+    },
+    "cta": {
+      "title": "Integrate AI Tracking Today",
+      "subtitle": "Available as a software SDK for CV18xx series chips or pre-flashed on our AFC-V1 Flight Controller.",
+      "primary": "Request Evaluation",
+      "secondary": "View Hardware"
+    }
+  },
+  "dshot": {
+    "metaTitle": "Adaptive DShot Control Protocol | AIMORELOGY",
+    "breadcrumb": "Adaptive DShot",
+    "hero": {
+      "badge": "Adaptive DShot",
+      "titleLine1": "Universal",
+      "titleLine2": "DShot Control",
+      "subtitle": "DMA-free, bi-directional DShot 300/150 that adapts to any MCU with stable timing and low jitter.",
+      "stats": {
+        "0": "Zero DMA Required",
+        "1": {
+          "value": "300/150",
+          "unit": "k",
+          "label": "Bi-directional Modes"
+        }
+      },
+      "imageAlt": "Adaptive DShot Signal Diagram"
+    },
+    "core": {
+      "title": "Core Innovations",
+      "subtitle": "AIMORELOGY Adaptive DShot brings professional-grade ESC control to any chip platform without special hardware.",
+      "cards": {
+        "0": {
+          "title": "Universal Portability",
+          "desc": "Runs on RISC-V, ARM, and Xtensa without DMA or hardware timers."
+        },
+        "1": {
+          "title": "Self-Adaptive Timing",
+          "desc": "Auto-calibrates output frequency to eliminate timing drift and errors."
+        },
+        "2": {
+          "title": "Bi-directional Telemetry",
+          "desc": "Reliable ESC feedback for RPM, temperature, and fault status."
+        },
+        "3": {
+          "title": "Production Ready",
+          "desc": "Validated across BLHeli_32, BLHeli_S, and AM32."
+        }
+      }
+    },
+    "comparison": {
+      "title": "Protocol Comparison",
+      "headers": {
+        "feature": "Feature",
+        "pwm": "PWM",
+        "hardware": "Hardware DShot",
+        "adaptive": "Adaptive DShot"
+      },
+      "rows": {
+        "0": {
+          "feature": "Hardware Requirements",
+          "pwm": "Timer PWM",
+          "hardware": "DMA + Timer",
+          "adaptive": "Software-only"
+        },
+        "1": {
+          "feature": "Bi-directional",
+          "pwm": "No",
+          "hardware": "Limited",
+          "adaptive": "Full Telemetry"
+        },
+        "2": {
+          "feature": "Noise Immunity",
+          "pwm": "Low",
+          "hardware": "Medium",
+          "adaptive": "High"
+        },
+        "3": {
+          "feature": "Portability",
+          "pwm": "Low",
+          "hardware": "Medium",
+          "adaptive": "Any MCU"
+        }
+      }
+    },
+    "deepDive": {
+      "steps": {
+        "0": {
+          "title": "Signal Encoding",
+          "desc": "24-bit packets with CRC guard ensure command integrity."
+        },
+        "1": {
+          "title": "Adaptive Sampling",
+          "desc": "Dynamic edge detection aligns with ESC timing without DMA."
+        },
+        "2": {
+          "title": "Error Correction",
+          "desc": "Self-tuning to compensate clock drift and cable noise."
+        }
+      },
+      "title": "Why Adaptive DShot Matters",
+      "p1": "Traditional DShot relies on strict timing and DMA access. On many MCUs this either costs precious hardware timers or makes bi-directional telemetry unreliable.",
+      "p2": "Adaptive DShot removes those constraints by combining software timing, smart sampling, and self-calibration so the protocol stays stable across chips and environments.",
+      "bullets": {
+        "0": "No special peripherals required",
+        "1": "Stable control across long wires and noisy ESCs",
+        "2": "Scales from hobby-grade to industrial UAVs"
+      }
+    },
+    "cta": {
+      "title": "Ready to Integrate Adaptive DShot?",
+      "subtitle": "Contact us for reference firmware, SDK access, and integration support.",
+      "primary": "Contact Sales"
+    }
+  },
+  "solution": {
+    "requestDemo": "Request Demo",
+    "overview": "Overview",
+    "capabilities": "Capabilities",
+    "applications": "Applications",
+    "discuss": "Discuss Your Project",
+    "download": "Download Brochure"
+  },
+  "solutionDemo": {
+    "title": "Autonomous Inspection",
+    "subtitle": "AI-driven UAV inspection for energy and industrial assets.",
+    "overview": {
+      "title": "Automated Field Operations",
+      "content": "Plan routes, capture 4K imagery, and detect anomalies in real time. Our inspection stack pairs edge inference with cloud analytics to shorten maintenance cycles and reduce risk."
+    },
+    "stats": {
+      "0": "Detection Accuracy",
+      "1": "False Alarms",
+      "2": "Max Resolution",
+      "3": "Uptime"
+    },
+    "features": {
+      "0": {
+        "title": "Multi-Spectral Scan",
+        "desc": "RGB and thermal pipelines reveal defects invisible to the naked eye."
+      },
+      "1": {
+        "title": "Instant Alerts",
+        "desc": "On-device inference triggers real-time notifications and evidence clips."
+      },
+      "2": {
+        "title": "Compliance-Ready Reports",
+        "desc": "Auto-generated PDFs with defect maps, timestamps, and metadata."
+      },
+      "3": {
+        "title": "Autonomous Missions",
+        "desc": "Waypoint-based patrols with dynamic obstacle avoidance."
+      },
+      "4": {
+        "title": "Cloud Analytics",
+        "desc": "Fleet dashboards for trend analysis and asset health scoring."
+      },
+      "5": {
+        "title": "Long-Range Link",
+        "desc": "Stable HD video and telemetry across large inspection areas."
+      }
+    },
+    "apps": {
+      "0": "Solar Farms",
+      "1": "Wind Turbines",
+      "2": "Industrial Sites"
+    },
+    "cta": {
+      "title": "Deploy Inspection at Scale",
+      "text": "Talk with our team to customize workflows, integrate sensors, and deploy missions safely."
+    }
+  },
+  "aiCamera": {
+    "metaTitle": "Cloud AI Camera Solution | AIMORELOGY",
+    "breadcrumb": "Cloud AI Camera",
+    "hero": {
+      "kicker": "Solution",
+      "badge": "EDGE + CLOUD",
+      "titleLine1": "Cloud AI",
+      "titleLine2": "Camera Platform",
+      "desc": "An end-to-end smart camera stack combining edge inference with cloud orchestration for real-time monitoring and scalable deployment.",
+      "cta": "Request Demo",
+      "ready": "SDK ready for CV18xx platforms.",
+      "uiVersion": "UI VERSION 1.0",
+      "imageAlt": "Cloud AI Camera Interface",
+      "overlay": "Live Detection",
+      "chipLabel": "Reference Chip"
+    },
+    "value": {
+      "0": {
+        "title": "Cloud Management",
+        "desc": "Centralized device provisioning, model deployment, and fleet monitoring."
+      },
+      "1": {
+        "title": "Scalable Fleet",
+        "desc": "Operate hundreds of cameras with unified policies and OTA updates."
+      },
+      "2": {
+        "title": "Vision-first Hardware",
+        "desc": "Optimized SoC and ISP pipeline for always-on intelligence."
+      }
+    },
+    "specs": {
+      "title": "Hardware Specifications",
+      "subtitle": "Integrated SoC platform optimized for always-on vision.",
+      "items": {
+        "0": {
+          "label": "Chip"
+        },
+        "1": {
+          "label": "AI Performance",
+          "value": "1.5 TOPS INT8"
+        },
+        "2": {
+          "label": "ISP",
+          "value": "8MP @ 30FPS"
+        },
+        "3": {
+          "label": "Video",
+          "value": "H.265/H.264"
+        },
+        "4": {
+          "label": "Connectivity",
+          "value": "Wi-Fi / Ethernet / LTE"
+        }
+      },
+      "diagram": "System Block Diagram",
+      "sip": "System-in-Package",
+      "blocks": {
+        "0": {
+          "title": "Sensors",
+          "bus": "MIPI"
+        },
+        "1": {
+          "title": "Storage",
+          "bus": "SDIO"
+        },
+        "2": {
+          "title": "Wireless"
+        },
+        "3": {
+          "title": "Ethernet"
+        },
+        "4": {
+          "title": "USB",
+          "bus": "USB2.0"
+        },
+        "5": {
+          "title": "Power",
+          "bus": "PMIC"
+        }
+      }
+    },
+    "software": {
+      "title": "Software & Cloud Stack",
+      "cloudTitle": "Cloud Platform",
+      "cloudItems": [
+        "Fleet Management",
+        "Model Deployment",
+        "Analytics Dashboard",
+        "OTA Updates"
+      ],
+      "deviceTitle": "Edge Device",
+      "appTitle": "Applications",
+      "appTags": [
+        "Detection",
+        "Tracking",
+        "Counting",
+        "Alerting"
+      ],
+      "hal": "HAL / Drivers",
+      "os": "Linux OS"
+    },
+    "capabilities": {
+      "title": "Core Capabilities",
+      "items": {
+        "0": {
+          "title": "Event Messaging",
+          "desc": "MQTT/WebSocket alerts with configurable thresholds."
+        },
+        "1": {
+          "title": "Image Intelligence",
+          "desc": "Real-time detection, tracking, and re-ID pipelines."
+        },
+        "2": {
+          "title": "Global Access",
+          "desc": "Secure remote viewing with role-based access."
+        },
+        "3": {
+          "title": "Multi-stream Video",
+          "desc": "RTSP/HTTP streaming for monitoring and storage."
+        },
+        "4": {
+          "title": "Low Latency",
+          "desc": "Edge inference under 30ms for responsive control."
+        },
+        "5": {
+          "title": "Security",
+          "desc": "Secure boot, signed firmware, and encrypted transport."
+        }
+      }
+    },
+    "cta": {
+      "title": "Build with Cloud AI Camera",
+      "subtitle": "Get a full reference design, SDK, and cloud integration kit.",
+      "secondary": "View CV184 Platform"
+    }
+  },
+  "products": {
+    "common": {
+      "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
+      "notFound": "Product Not Found",
+      "returnHome": "Return Home",
+      "requestQuote": "Request Quote",
+      "productOverview": "Product Overview",
+      "keyHighlights": "Key Highlights",
+      "technicalSpecs": "Technical Specifications",
+      "specCategory": "Category",
+      "specParameter": "Parameter",
+      "specValue": "Value",
+      "applications": "Applications",
+      "ctaTitle": "Develop Your Solution with {{name}}",
+      "ctaText": "We offer professional system integration and turnkey solutions based on the {{name}} platform. Accelerate your product launch with our engineering expertise.",
+      "ctaButton": "Get Solution Proposal",
+      "series": "{{series}} Series"
+    },
+    "afcComingSoon": {
+      "metaTitle": "Coming Soon | AFC-V1",
+      "badge": "Development in Progress",
+      "title": "Coming Soon",
+      "subtitle": "AFC-V1",
+      "desc": "The ultimate all-in-one flight controller integrating Vision, Video Link, and Control is on the horizon.",
+      "tagline": "Redefining the future of UAV brains.",
+      "returnHome": "Return to Home",
+      "contactSales": "Contact Sales for Specs"
+    }
+  },
+  "legal": {
+    "lastUpdated": "Last Updated: {{date}}"
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy | AIMORELOGY",
+    "title": "Privacy Policy",
+    "intro": {
+      "p1": "AIMORELOGY LIMITED and its affiliates (\"AIMORELOGY\", \"we\", \"us\", or \"our\") are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our products and services.",
+      "p2": "Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site."
+    },
+    "sections": {
+      "collection": {
+        "title": "1. Collection of Your Information",
+        "p1": "We may collect information about you in a variety of ways. The information we may collect on the Site includes:",
+        "items": {
+          "0": {
+            "title": "Personal Data",
+            "desc": "Personally identifiable information, such as your name, shipping address, email address, and telephone number, that you voluntarily give to us when you register with the Site or when you choose to participate in various activities related to the Site."
+          },
+          "1": {
+            "title": "Derivative Data",
+            "desc": "Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site."
+          }
+        }
+      },
+      "use": {
+        "title": "2. Use of Your Information",
+        "p1": "Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:",
+        "items": {
+          "0": "Create and manage your account.",
+          "1": "Process your orders and deliver products (e.g., CV184XH Flight Controllers).",
+          "2": "Email you regarding your account or order.",
+          "3": "Respond to product and customer service requests.",
+          "4": "Compile anonymous statistical data and analysis for use internally.",
+          "5": "Send you a newsletter (if you have opted in)."
+        }
+      },
+      "disclosure": {
+        "title": "3. Disclosure of Your Information",
+        "p1": "We may share information we have collected about you in certain situations. Your information may be disclosed as follows:",
+        "items": {
+          "0": {
+            "title": "By Law or to Protect Rights",
+            "desc": "If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others."
+          },
+          "1": {
+            "title": "Third-Party Service Providers",
+            "desc": "We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance."
+          }
+        }
+      },
+      "security": {
+        "title": "4. Security of Your Information",
+        "p1": "We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse."
+      },
+      "contact": {
+        "title": "5. Contact Us",
+        "p1": "If you have questions or comments about this Privacy Policy, please contact us at:"
+      }
+    },
+    "contact": {
+      "company": "AIMORELOGY LIMITED",
+      "addressLine1": "Room H2 4/F, Century Industrial Centre",
+      "addressLine2": "33-35 Au Pui Wan Street Fotan, Sha Tin, Hong Kong",
+      "emailLabel": "Email",
+      "email": "info@aimorelogy.com"
+    }
+  },
+  "terms": {
+    "metaTitle": "Terms of Service | AIMORELOGY",
+    "title": "Terms of Service",
+    "intro": "These Terms of Service (\"Terms\") govern your use of the website operated by AIMORELOGY LIMITED (\"Company,\" \"we,\" or \"us\") and the purchase of our products and services. By accessing or using our website, you agree to be bound by these Terms.",
+    "sections": {
+      "license": {
+        "title": "1. Use License",
+        "p1": "Permission is granted to temporarily download one copy of the materials (information or software) on AIMORELOGY's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:",
+        "items": {
+          "0": "Modify or copy the materials;",
+          "1": "Use the materials for any commercial purpose, or for any public display (commercial or non-commercial);",
+          "2": "Attempt to decompile or reverse engineer any software contained on AIMORELOGY's website;",
+          "3": "Remove any copyright or other proprietary notations from the materials; or",
+          "4": "Transfer the materials to another person or \"mirror\" the materials on any other server."
+        }
+      },
+      "disclaimer": {
+        "title": "2. Disclaimer",
+        "p1": "The materials on AIMORELOGY's website are provided on an 'as is' basis. AIMORELOGY makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+      },
+      "limitations": {
+        "title": "3. Limitations",
+        "p1": "In no event shall AIMORELOGY or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on AIMORELOGY's website, even if AIMORELOGY or an authorized representative has been notified orally or in writing of the possibility of such damage."
+      },
+      "usage": {
+        "title": "4. Product Usage & Safety",
+        "p1": "Our products, including Flight Controllers and Edge AI modules, are designed for industrial and professional use.",
+        "items": {
+          "0": "You agree to use our products in compliance with all applicable local laws and aviation regulations.",
+          "1": "AIMORELOGY is not responsible for any damage, injury, or legal liability resulting from the misuse, improper installation, or modification of our hardware or software.",
+          "2": "Users are responsible for ensuring that any autonomous systems deployed using our technology are operated safely."
+        }
+      },
+      "law": {
+        "title": "5. Governing Law",
+        "p1": "These terms and conditions are governed by and construed in accordance with the laws of Hong Kong SAR and you irrevocably submit to the exclusive jurisdiction of the courts in that location."
+      },
+      "changes": {
+        "title": "6. Changes to Terms",
+        "p1": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms."
+      }
+    }
+  },
+  "cookies": {
+    "metaTitle": "Cookie Policy | AIMORELOGY",
+    "title": "Cookie Policy",
+    "intro": "This Cookie Policy explains what cookies are, how AIMORELOGY uses cookies on our website, and your choices regarding cookies.",
+    "sections": {
+      "what": {
+        "title": "1. What Are Cookies?",
+        "p1": "Cookies are small text files that are sent to your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you."
+      },
+      "use": {
+        "title": "2. How We Use Cookies",
+        "p1": "When you use and access the Service, we may place a number of cookies files in your web browser. We use cookies for the following purposes:",
+        "items": {
+          "0": {
+            "title": "Essential Cookies",
+            "desc": "To enable certain functions of the Service, such as authentication and security."
+          },
+          "1": {
+            "title": "Analytics Cookies",
+            "desc": "To provide analytics and understand how our website is used (e.g., Google Analytics)."
+          },
+          "2": {
+            "title": "Preference Cookies",
+            "desc": "To store your preferences, such as language settings."
+          }
+        }
+      },
+      "third": {
+        "title": "3. Third-Party Cookies",
+        "p1": "In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on."
+      },
+      "choices": {
+        "title": "4. Your Choices",
+        "p1": "If you'd like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.",
+        "p2": "Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly."
+      }
+    },
+    "help": {
+      "title": "Browser Help Pages:"
+    }
+  }
+}

@@ -3,8 +3,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, ChevronLeft, Cpu, Wifi, Activity, Eye, Zap, Sliders, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BlogCard from '../components/BlogCard';
+import { RoutePath, BlogPost } from '../types';
 import { BLOG_POSTS } from '../constants';
-import { RoutePath } from '../types';
+import { useTranslation } from 'react-i18next';
+import { useLang, withLang } from '../i18n-routing';
 
 interface SlideData {
   id: number;
@@ -157,11 +159,13 @@ const PartnerLogo = ({ name, image, sizeClass }: { name: string, image: string, 
 };
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
+  const lang = useLang();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideDuration = 5000;
   
   // Use BLOG_POSTS directly for the carousel
-  const carouselPosts = BLOG_POSTS;
+  const carouselPosts = t('blog.posts', { returnObjects: true, defaultValue: BLOG_POSTS }) as BlogPost[];
 
   const PARTNERS = [
     {
@@ -182,35 +186,35 @@ const Home: React.FC = () => {
   const slides: SlideData[] = [
     {
       id: 0,
-      category: 'New Release',
-      title: 'AFC-V1 Launching Soon',
-      description: 'The ultimate all-in-one flight controller integrating vision, video link, and control. Redefining the future of UAVs.',
-      navTitle: 'AFC-V1',
-      navDesc: 'Next Gen Flight Controller.',
-      buttonText: 'Coming Soon',
+      category: t('home.hero.slides.0.category'),
+      title: t('home.hero.slides.0.title'),
+      description: t('home.hero.slides.0.description'),
+      navTitle: t('home.hero.slides.0.navTitle'),
+      navDesc: t('home.hero.slides.0.navDesc'),
+      buttonText: t('home.hero.slides.0.buttonText'),
       link: '#', 
       bgImage: 'https://images.unsplash.com/photo-1608543884814-c78274191026?q=80&w=2000&auto=format&fit=crop'
     },
     {
       id: 1,
-      category: 'Algorithms',
-      title: 'Self-Developed AI Tracking',
-      description: 'Proprietary visual tracking algorithms delivering <5ms latency for robust target following in complex environments.',
-      navTitle: 'AI Tracking',
-      navDesc: 'High-performance vision algorithms.',
-      buttonText: 'Technology Preview',
-      link: RoutePath.TECHNOLOGY_AI_TRACKING,
+      category: t('home.hero.slides.1.category'),
+      title: t('home.hero.slides.1.title'),
+      description: t('home.hero.slides.1.description'),
+      navTitle: t('home.hero.slides.1.navTitle'),
+      navDesc: t('home.hero.slides.1.navDesc'),
+      buttonText: t('home.hero.slides.1.buttonText'),
+      link: withLang(lang, RoutePath.TECHNOLOGY_AI_TRACKING),
       bgImage: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop'
     },
     {
       id: 2,
-      category: 'Framework',
-      title: 'Universal Adaptive DShot',
-      description: 'DMA-Free, Bi-directional DShot 300/150 support on any chip platform. Dynamic error elimination for perfect stability.',
-      navTitle: 'Adaptive DShot',
-      navDesc: 'Universal Control Framework.',
-      buttonText: 'View Specs',
-      link: RoutePath.TECHNOLOGY_DSHOT,
+      category: t('home.hero.slides.2.category'),
+      title: t('home.hero.slides.2.title'),
+      description: t('home.hero.slides.2.description'),
+      navTitle: t('home.hero.slides.2.navTitle'),
+      navDesc: t('home.hero.slides.2.navDesc'),
+      buttonText: t('home.hero.slides.2.buttonText'),
+      link: withLang(lang, RoutePath.TECHNOLOGY_DSHOT),
       bgImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop'
     }
   ];
@@ -333,46 +337,46 @@ const Home: React.FC = () => {
                     className="w-full h-full object-cover" 
                  />
                  <div className="absolute top-4 right-4 bg-[#4f4398] text-white text-xs font-bold px-3 py-1 uppercase shadow-md z-20">
-                   Coming Soon
+                   {t('common.comingSoon')}
                  </div>
                </div>
              </div>
              <div className="lg:w-1/2">
-                <h4 className="text-[#4f4398] font-bold uppercase tracking-widest mb-2">All-in-One AI Flight Controller</h4>
+                <h4 className="text-[#4f4398] font-bold uppercase tracking-widest mb-2">{t('home.afc.kicker')}</h4>
                 <h2 className="text-5xl font-black text-gray-900 mb-6 uppercase leading-none">AFC-V1</h2>
                 <p className="text-xl text-gray-600 mb-8 font-light border-l-4 border-[#4f4398] pl-6">
-                  "Vision. Video Link. Control."
+                  {t('home.afc.tagline')}
                   <br/>
-                  <span className="text-sm mt-2 block text-gray-500">The ultimate answer for the next generation of UAV brains.</span>
+                  <span className="text-sm mt-2 block text-gray-500">{t('home.afc.subtagline')}</span>
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                    <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
                       <div className="flex items-center gap-3 mb-2">
                         <Cpu className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">1.5 TOPS Edge AI</h5>
+                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.0.title')}</h5>
                       </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">Local execution of complex detection models with zero latency.</p>
+                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.0.desc')}</p>
                    </div>
                    <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
                       <div className="flex items-center gap-3 mb-2">
                         <Wifi className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">10KM Video Link</h5>
+                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.1.title')}</h5>
                       </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">HD transmission with high-power Wi-Fi module optimizations.</p>
+                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.1.desc')}</p>
                    </div>
                    <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
                       <div className="flex items-center gap-3 mb-2">
                         <Eye className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">8MP Ultra-HD ISP</h5>
+                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.2.title')}</h5>
                       </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">Up to 8M@30FPS processing. Native support for Starlight and Global Shutter sensors.</p>
+                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.2.desc')}</p>
                    </div>
                    <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
                       <div className="flex items-center gap-3 mb-2">
                         <Activity className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">45% Smaller</h5>
+                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.3.title')}</h5>
                       </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">Redefining size and power. Highly integrated industrial design.</p>
+                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.3.desc')}</p>
                    </div>
                 </div>
                 <div className="flex gap-4">
@@ -380,13 +384,13 @@ const Home: React.FC = () => {
                     disabled
                     className="bg-gray-400 text-white px-8 py-3 font-bold text-sm uppercase cursor-not-allowed flex items-center justify-center border border-transparent"
                   >
-                    Coming Soon
+                    {t('common.comingSoon')}
                   </button>
                   <Link 
-                    to={RoutePath.CONTACT} 
+                    to={withLang(lang, RoutePath.CONTACT)} 
                     className="bg-transparent border border-gray-300 text-gray-900 px-8 py-3 font-bold text-sm uppercase hover:border-gray-900 transition-colors flex items-center justify-center text-center"
                   >
-                    Contact Sales
+                    {t('common.contactSales')}
                   </Link>
                 </div>
              </div>
@@ -398,10 +402,10 @@ const Home: React.FC = () => {
       <section className="bg-white text-gray-900 py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
-             <h4 className="text-[#4f4398] font-bold uppercase tracking-widest mb-3">Proprietary Algorithm</h4>
-             <h2 className="text-5xl font-black text-gray-900 mb-6 uppercase leading-none">AI Tracking</h2>
+             <h4 className="text-[#4f4398] font-bold uppercase tracking-widest mb-3">{t('home.tracking.kicker')}</h4>
+             <h2 className="text-5xl font-black text-gray-900 mb-6 uppercase leading-none">{t('home.tracking.title')}</h2>
              <p className="text-xl text-gray-600 font-light mt-4">
-               "Ultra-low latency. Unmatched Robustness."
+               {t('home.tracking.tagline')}
              </p>
           </div>
 
@@ -411,39 +415,39 @@ const Home: React.FC = () => {
               <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
                       <img src="AI-TRACKING/image0.webp" alt="Precision Locking" className="w-full h-full object-cover" />
-                      <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">Status: Tracking</div>
+                      <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">{t('home.tracking.status.tracking')}</div>
                   </div>
-                  <h4 className="font-bold text-gray-900 uppercase text-center mb-2">1. Precision Locking</h4>
-                  <p className="text-xs text-gray-500 text-center leading-relaxed px-4">Instant target acquisition near architectural features.</p>
+                  <h4 className="font-bold text-gray-900 uppercase text-center mb-2">{t('home.tracking.steps.0.title')}</h4>
+                  <p className="text-xs text-gray-500 text-center leading-relaxed px-4">{t('home.tracking.steps.0.desc')}</p>
               </div>
 
               {/* Step 2 */}
               <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
                       <img src="AI-TRACKING/image1.webp" alt="Complex Background" className="w-full h-full object-cover" />
-                      <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">Status: Stable</div>
+                      <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">{t('home.tracking.status.stable')}</div>
                   </div>
-                  <h4 className="font-bold text-gray-900 uppercase text-center mb-2">2. Clutter Rejection</h4>
-                  <p className="text-xs text-gray-500 text-center leading-relaxed px-4">Robust tracking amidst complex environments and parked vehicles.</p>
+                  <h4 className="font-bold text-gray-900 uppercase text-center mb-2">{t('home.tracking.steps.1.title')}</h4>
+                  <p className="text-xs text-gray-500 text-center leading-relaxed px-4">{t('home.tracking.steps.1.desc')}</p>
               </div>
 
               {/* Step 3 */}
               <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
                       <img src="AI-TRACKING/image2.webp" alt="Long Range" className="w-full h-full object-cover" />
-                      <div className="absolute top-2 left-2 bg-[#00ff00] text-black text-[10px] px-2 py-1 font-mono uppercase">Status: Locked</div>
+                      <div className="absolute top-2 left-2 bg-[#00ff00] text-black text-[10px] px-2 py-1 font-mono uppercase">{t('home.tracking.status.locked')}</div>
                   </div>
-                  <h4 className="font-bold text-gray-900 uppercase text-center mb-2">3. Long Range Stability</h4>
-                  <p className="text-xs text-gray-500 text-center leading-relaxed px-4">Consistent lock-on for distant targets with low pixel density.</p>
+                  <h4 className="font-bold text-gray-900 uppercase text-center mb-2">{t('home.tracking.steps.2.title')}</h4>
+                  <p className="text-xs text-gray-500 text-center leading-relaxed px-4">{t('home.tracking.steps.2.desc')}</p>
               </div>
           </div>
 
           <div className="text-center">
              <Link 
-                to={RoutePath.TECHNOLOGY_AI_TRACKING} 
+                to={withLang(lang, RoutePath.TECHNOLOGY_AI_TRACKING)} 
                 className="inline-block bg-[#4f4398] text-white px-10 py-4 font-bold text-sm uppercase hover:bg-[#3e3479] transition-colors shadow-sm"
              >
-                Explore Algorithm
+                {t('home.tracking.cta')}
              </Link>
           </div>
         </div>
@@ -454,42 +458,42 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-                <h4 className="text-[#4f4398] font-bold uppercase tracking-widest mb-3">Universal Framework</h4>
+                <h4 className="text-[#4f4398] font-bold uppercase tracking-widest mb-3">{t('home.dshot.kicker')}</h4>
                 <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 uppercase leading-none">
-                  Adaptive DShot
+                  {t('home.dshot.title')}
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                  DMA-Free. Bi-directional. Adaptive. Bring professional DShot 300/150 support to any MCU platform.
+                  {t('home.dshot.subtitle')}
                 </p>
                 <div className="flex flex-col gap-4">
                     <div className="flex items-start gap-4">
                        <Cpu className="text-[#4f4398] shrink-0 mt-1" size={20} />
                        <div>
-                         <h4 className="font-bold text-gray-900 uppercase text-sm">Any Chip Platform</h4>
-                         <p className="text-sm text-gray-600">No DMA or specific hardware Timer required. Portable to RISC-V, ARM, and more.</p>
+                         <h4 className="font-bold text-gray-900 uppercase text-sm">{t('home.dshot.features.0.title')}</h4>
+                         <p className="text-sm text-gray-600">{t('home.dshot.features.0.desc')}</p>
                        </div>
                     </div>
                     <div className="flex items-start gap-4">
                        <Sliders className="text-[#4f4398] shrink-0 mt-1" size={20} />
                        <div>
-                         <h4 className="font-bold text-gray-900 uppercase text-sm">Self-Adaptive Tuning</h4>
-                         <p className="text-sm text-gray-600">Dynamic error elimination calibrates output frequency for perfect stability.</p>
+                         <h4 className="font-bold text-gray-900 uppercase text-sm">{t('home.dshot.features.1.title')}</h4>
+                         <p className="text-sm text-gray-600">{t('home.dshot.features.1.desc')}</p>
                        </div>
                     </div>
                     <div className="flex items-start gap-4">
                        <CheckCircle className="text-[#4f4398] shrink-0 mt-1" size={20} />
                        <div>
-                         <h4 className="font-bold text-gray-900 uppercase text-sm">Mainstream Support</h4>
-                         <p className="text-sm text-gray-600">Perfect compatibility with BLHeli_32, BLHeli_S, and AM32 ESCs.</p>
+                         <h4 className="font-bold text-gray-900 uppercase text-sm">{t('home.dshot.features.2.title')}</h4>
+                         <p className="text-sm text-gray-600">{t('home.dshot.features.2.desc')}</p>
                        </div>
                     </div>
                 </div>
                 <div className="mt-10">
                    <Link 
-                      to={RoutePath.TECHNOLOGY_DSHOT}
+                      to={withLang(lang, RoutePath.TECHNOLOGY_DSHOT)}
                       className="inline-flex items-center gap-2 text-[#4f4398] font-bold uppercase text-sm hover:gap-3 transition-all"
                    >
-                     View Specifications <ChevronRight size={16} />
+                     {t('home.dshot.cta')} <ChevronRight size={16} />
                    </Link>
                 </div>
             </div>
@@ -509,7 +513,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Industry News */}
-      <CarouselSection title="Industry News">
+      <CarouselSection title={t('home.industryNews')}>
         {carouselPosts.map((post, idx) => (
           <div key={`news-${idx}`} className="flex-none w-[85vw] md:w-[350px] lg:w-[400px] h-full snap-start">
              <BlogCard post={post} hideImage={true} />
@@ -521,7 +525,7 @@ const Home: React.FC = () => {
       <div className="bg-gray-50 py-24 border-t border-gray-100">
            <div className="container mx-auto px-6">
                <div className="text-center mb-12">
-                   <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em]">Strategic Partners</h2>
+                  <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em]">{t('home.partners')}</h2>
                </div>
                
                <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">

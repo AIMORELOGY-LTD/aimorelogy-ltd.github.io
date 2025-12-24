@@ -3,6 +3,8 @@ import React from 'react';
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { BlogPost, RoutePath } from '../types';
+import { useTranslation } from 'react-i18next';
+import { useLang, withLang } from '../i18n-routing';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -10,6 +12,8 @@ interface BlogCardProps {
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ post, hideImage = false }) => {
+  const { t } = useTranslation();
+  const lang = useLang();
   return (
     <div className="group bg-white flex flex-col h-full border border-gray-200 hover:shadow-xl hover:border-[#4f4398] transition-all duration-300">
       {!hideImage && (
@@ -34,8 +38,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, hideImage = false }) => {
           {post.excerpt}
         </p>
         
-        <Link to={RoutePath.BLOG} className="inline-block text-gray-900 font-bold text-sm uppercase hover:text-[#4f4398] transition-colors underline decoration-[#4f4398] decoration-2 underline-offset-4">
-          Read Story
+        <Link to={withLang(lang, RoutePath.BLOG)} className="inline-block text-gray-900 font-bold text-sm uppercase hover:text-[#4f4398] transition-colors underline decoration-[#4f4398] decoration-2 underline-offset-4">
+          {t('blog.readStory')}
         </Link>
       </div>
     </div>
