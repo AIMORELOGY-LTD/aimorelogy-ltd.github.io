@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { RoutePath } from '../types';
 import { useTranslation } from 'react-i18next';
 import { useLang, withLang } from '../i18n-routing';
+import { sendContactEmail } from '../utils/emailjs';
 
 // --- Custom Social Icons ---
 
@@ -102,30 +103,54 @@ const Footer: React.FC = () => {
     phone: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const { name, email, company, jobTitle, phone, message } = formData;
-    
-    // Construct email body
-    const body = `Name: ${name}
-Email: ${email}
-Company: ${company}
-Job Title: ${jobTitle}
-Phone: ${phone}
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-Message:
-${message}`;
+    if (!isValidEmail) {
+      setStatus('error');
+      setErrorMessage(t('footer.form.invalidEmail'));
+      return;
+    }
 
-    const subject = `Contact Request from ${name} - ${company}`;
-    
-    // Open mail client
-    window.location.href = `mailto:info@aimorelogy.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus('sending');
+    setErrorMessage('');
+
+    const result = await sendContactEmail({
+      name,
+      email,
+      company,
+      jobTitle,
+      phone,
+      message,
+      source: 'footer',
+      lang
+    });
+
+    if (!result.ok) {
+      setStatus('error');
+      setErrorMessage(result.error === 'missing_endpoint' ? t('footer.form.missingEndpoint') : t('footer.form.error'));
+      return;
+    }
+
+    setStatus('success');
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      jobTitle: '',
+      phone: '',
+      message: ''
+    });
   };
 
   return (
@@ -197,9 +222,19 @@ ${message}`;
                  ></textarea>
                  
                  <div className="md:col-span-2">
-                   <button type="submit" className="bg-white text-[#111] font-bold uppercase px-8 py-3 hover:bg-gray-200 transition-colors flex items-center gap-2 text-xs tracking-wider">
-                     {t('footer.form.send')} <Send size={14} />
+                   <button
+                     type="submit"
+                     disabled={status === 'sending'}
+                     className="bg-white text-[#111] font-bold uppercase px-8 py-3 hover:bg-gray-200 transition-colors flex items-center gap-2 text-xs tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
+                   >
+                     {status === 'sending' ? t('footer.form.sending') : t('footer.form.send')} <Send size={14} />
                    </button>
+                   {status === 'success' && (
+                     <p className="mt-3 text-xs text-[#76b900] font-bold uppercase">{t('footer.form.success')}</p>
+                   )}
+                   {status === 'error' && (
+                     <p className="mt-3 text-xs text-red-400 font-bold uppercase">{errorMessage || t('footer.form.error')}</p>
+                   )}
                  </div>
               </form>
             </div>

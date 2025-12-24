@@ -37,8 +37,8 @@
     "language": "语言",
     "lang": {
       "en": "英语",
-      "zh": "简体中文",
-      "ru": "Русский"
+      "zh": "????",
+      "ru": "??????"
     },
     "promo": "需要集成或技术规格方面的帮助吗？",
     "contactSupport": "我们的工程团队随时准备提供帮助。",
@@ -46,7 +46,7 @@
   },
   "footer": {
     "getInTouch": "联系我们",
-    "getInTouchDesc": "与我们的工程团队讨论您的解决方案需求。",
+    "getInTouchDesc": "Discuss your solution needs with our engineering team. We provide turnkey services for UAVs and Edge AI.",
     "salesSupport": "销售与支持",
     "shenzhen": "深圳HQ",
     "address": "宝安区郎君广场T2-A 603-12",
@@ -62,12 +62,12 @@
       "careers": "职业机会"
     },
     "legal": {
-      "copyright": "© AIMORELOGY Limited",
+      "copyright": "？ ",
       "terms": "__PH0__ 有限公司",
       "cookies": "曲奇饼",
       "privacy": "隐私"
     },
-    "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务激活。 "
+    "disclaimer": "AIMORELOGY technologies may require enabled hardware, software or service activation. // No product or component can be absolutely secure. // Your costs and results may vary. // Performance varies by use, configuration, and other factors. // See our complete legal Notices and Disclaimers. // AIMORELOGY is committed to respecting human rights and avoiding causing or contributing to adverse impacts on human rights."
   },
   "home": {
     "hero": {
@@ -91,7 +91,7 @@
         "2": {
           "category": "框架",
           "title": "通用自适应 DShot",
-          "description": "DMA-免费、双向 DShot 300/150 支持任何芯片平台。",
+          "description": "DMA-Free, Bi-directional DShot 300/150 support on any chip platform. Dynamic error elimination for perfect stability.",
           "navTitle": "自适应动态拍摄",
           "navDesc": "通用控制框架。",
           "buttonText": "查看规格"
@@ -149,7 +149,7 @@
     "dshot": {
       "kicker": "通用框架",
       "title": "自适应动态拍摄",
-      "subtitle": "DMA-免费。",
+      "subtitle": "DMA-Free. Bi-directional. Adaptive. Bring professional DShot 300/150 support to any MCU platform.",
       "features": {
         "0": {
           "title": "任何芯片平台",
@@ -178,7 +178,7 @@
     "readStory": "Read Story"
   },
   "careers": {
-    "metaTitle": "职业生涯 | ",
+    "metaTitle": "Careers | AIMORELOGY",
     "hero": {
       "kicker": "加入我们的团队",
       "titleLine1": "职业机会",
@@ -200,8 +200,8 @@
   },
   "contact": {
     "metaTitle": "联系我们 | ",
-    "title": "联系我们",
-    "subtitle": "对我们的企业解决方案有疑问吗？",
+    "title": "__PH0__",
+    "subtitle": "Have questions about our enterprise solutions? Reach out to our dedicated team via phone, WeChat, WhatsApp, or email.",
     "salesSupport": "销售与支持",
     "channels": "手机/微信/WhatsApp",
     "corporateEmail": "企业邮箱",
@@ -232,7 +232,7 @@
   "about": {
     "metaTitle": "关于 | ",
     "hero": {
-      "kicker": "公司简介",
+      "kicker": "__PH0__",
       "titleLine1": "关于",
       "titleLine2": "AIMORELOGY",
       "subtitle": "开创工业界下一代智能飞行控制系统和 AI- 驱动的自主解决方案。"
@@ -250,9 +250,9 @@
       "name": "柯怡然",
       "role": "创始人 & CEO",
       "tags": [
-        "// 系统架构师",
-        "// 开源倡导者",
-        "// 产品战略"
+        "// SYSTEM ARCHITECT",
+        "// OPEN SOURCE ADVOCATE",
+        "// PRODUCT STRATEGIST"
       ],
       "bio": {
         "intro": "柯怡然是AIMORELOGY的创始人和CEO，带来了从底层硬件到智能系统算法的丰富跨领域经验。",
@@ -260,8 +260,8 @@
         "background": "在创立公司之前，他深度参与开源硬件和RISC-V生态系统，被公认为国内RISC-V社区的早期建设者之一。",
         "trackTitle": "业绩记录",
         "track": "主导了Milk-V Duo、Mars、Pioneer系列的设计、产品化和全球推广，在海外众筹取得了显著成功。",
-        "p1": "他在芯片和底层系统方面的丰富背景培养了深厚的技术思维、产品执行能力以及与开发者文化的天然共鸣。",
-        "p2": "在2025之后，他将重点从系统架构转向智能无人机和AI系统。",
+        "p1": "His extensive background in chips and underlying systems has fostered deep technical thinking, product execution capabilities, and a natural resonance with developer culture. He believes the value of technology lies not just in performance metrics, but in enabling more people to \"truly use it, touch it, and change it.\"",
+        "p2": "Post-2025, he has shifted his focus from system architecture to intelligent UAVs and AI systems. Founding AIMORELOGY, he focuses on UAV flight control, visual perception, edge AI inference, and intelligent mission systems.",
         "footer": "柯怡然本质上仍然是一名工程师：亲自审查系统架构，参与飞控链路设计，并优先考虑底层可靠性和实际用户场景。"
       },
       "philosophy": {
@@ -316,11 +316,11 @@
     }
   },
   "aiTracking": {
-    "metaTitle": "自主开发AI追踪| ",
+    "metaTitle": "Self-Developed AI Tracking | AIMORELOGY",
     "breadcrumb": "AI 追踪算法",
     "hero": {
       "kicker": "核心技术",
-      "badge": "专有算法",
+      "badge": "PROPRIETARY ALGORITHM",
       "titleLine1": "超快",
       "titleLine2": "视觉追踪",
       "subtitle": "鲁棒的单目标跟踪 (SOT) 具有适用于复杂环境的 Re-ID 功能。",
@@ -330,7 +330,7 @@
     },
     "performance": {
       "title": "性能数据",
-      "desc": "我们的算法针对基于 RISC-V 和 ARM- 的 TPU 平台上的 INT8 量化进行了深度优化。",
+      "desc": "Our algorithm is heavily optimized for INT8 quantization on RISC-V and ARM-based TPU platforms. It delivers industrial-grade real-time performance even on entry-level chips.",
       "testTitle": "测试条件",
       "test": {
         "input": "输入尺寸",
@@ -349,19 +349,19 @@
       "steps": {
         "0": {
           "alt": "追踪活动",
-          "status": "状态：跟踪",
+          "status": "STATUS：TRACKING",
           "title": "1. 精密锁紧",
           "desc": "即时目标获取靠近建筑特征。"
         },
         "1": {
           "alt": "复杂场景",
-          "status": "状态：稳定",
+          "status": "STATUS：STABLE",
           "title": "2. 杂波抑制",
           "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
         },
         "2": {
           "alt": "远程",
-          "status": "状态：锁定",
+          "status": "STATUS：LOCKED",
           "title": "3. 远距离稳定性",
           "desc": "对低像素密度的远距离目标进行一致锁定。"
         }
@@ -393,7 +393,7 @@
     }
   },
   "dshot": {
-    "metaTitle": "自适应 DShot 控制协议 | ",
+    "metaTitle": "Adaptive DShot Control Protocol | AIMORELOGY",
     "breadcrumb": "自适应动态拍摄",
     "hero": {
       "badge": "自适应动态拍摄",
@@ -555,7 +555,7 @@
     }
   },
   "aiCamera": {
-    "metaTitle": "云AI相机解决方案| ",
+    "metaTitle": "Cloud AI Camera Solution | AIMORELOGY",
     "breadcrumb": "云AI相机",
     "hero": {
       "kicker": "解决方案",
@@ -653,7 +653,7 @@
         "警报"
       ],
       "hal": "HAL / 驱动程序",
-      "os": "Linux 系统"
+      "os": "Linux OS"
     },
     "capabilities": {
       "title": "核心能力",
@@ -692,7 +692,7 @@
   },
   "products": {
     "common": {
-      "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
+      "metaTitle": "{{name}} {{tagline}} | ",
       "notFound": "__PH2__",
       "returnHome": "回家",
       "requestQuote": "请求报价",
@@ -717,500 +717,6 @@
       "tagline": "重新定义 UAV 大脑的未来。",
       "returnHome": "返回首页",
       "contactSales": "联系销售人员了解规格"
-    },
-    "sophgo": {
-      "bm1688": {
-        "id": "bm1688",
-        "name": "BM1688",
-        "series": "TPU",
-        "tagline": "高度集成边缘 AI SOC",
-        "description": "高集成度 SoC，采用 8- 核心 ARM 架构与强大的 TPU 相结合。",
-        "longDescription": [
-          "BM1688 是一款高度集成的片上系统 (SoC)，旨在为紧凑型边缘设备带来服务器级 AI 性能。",
-          "BM1688 的一个突出特点是其全面的视觉处理能力。",
-          "BM1688 支持双屏幕、多个传感器输入以及丰富的接口（包括 CAN BUS 和 USB3），用途广泛，足以用于机器人、智能 NVR 和高级工业平板电脑。"
-        ],
-        "highlights": [
-          "16 TOPS INT8 算力",
-          "8-核心 ARM CA53 @ 1.6GHz",
-          "用于全景视图的硬连线 Dewarp + 缝合引擎",
-          "支持 LLM 和 VLM（例如 ChatGLM2、Llama2）"
-        ],
-        "detailedFeatures": [
-          {
-            "title": "硬连线视觉引擎",
-            "description": "用于扭曲校正（鱼眼校正）和拼接（全景视图）的专用硬件块，减少 CPU/TPU 负载。"
-          },
-          {
-            "title": "生成 AI 支持",
-            "description": "针对在本地运行流行的 LLM 和生成 AI 模型的量化版本进行了优化。"
-          },
-          {
-            "title": "高带宽内存",
-            "description": "支持LPDDR4/4x，带宽利用率高，保证数据顺利流向NPU。"
-          }
-        ],
-        "specs": [
-          {
-            "category": "处理器",
-            "key": "CPU",
-            "value": "8x ARM 皮质-A53 @ 1.6GHz"
-          },
-          {
-            "category": "TPU",
-            "key": "表现",
-            "value": "16 TOPS INT8"
-          },
-          {
-            "category": "记忆",
-            "key": "支持",
-            "value": "LPDDR4/4x 2x32 位"
-          },
-          {
-            "category": "ISP",
-            "key": "解决",
-            "value": "2x 8Mp30 / 16x 2Mp30 解码"
-          },
-          {
-            "category": "连接性",
-            "key": "I/O",
-            "value": "USB3.0、PCIe、SATA、CAN FD"
-          }
-        ],
-        "applications": [
-          {
-            "title": "智能相机",
-            "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "机器人技术",
-            "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "边缘计算盒",
-            "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "无人机",
-            "image": "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80&w=400"
-          }
-        ],
-        "faqs": [
-          {
-            "question": "BM1688 可以运行 Llama 2 吗？",
-            "answer": "是的，BM1688 支持高效运行 Llama 2 的量化版本 (INT4/INT8) 和其他类似大小的 LLM。"
-          },
-          {
-            "question": "支持多摄像头输入吗？",
-            "answer": "是的，它支持广泛的 MIPI 输入，并具有专用的 ISP 能够处理环视应用的多个流。"
-          }
-        ]
-      },
-      "cv186ah": {
-        "id": "cv186ah",
-        "name": "CV186AH",
-        "series": "VISION",
-        "tagline": "高端智能视觉处理器",
-        "description": "适用于专业安全和智能边缘应用的顶级 SoC。",
-        "longDescription": [
-          "CV186AH是Vision系列的旗舰产品，专为高端智能视频应用而设计。",
-          "CV186AH 专为下一代智能相机和机器人量身定制，支持高达 4K 的分辨率处理和先进的 ISP 功能，例如 360- 度全景拼接和扭曲校正。",
-          "CV186AH具有硬件级安​​全性和工业级可靠性，确保关键部署中安全稳定运行。"
-        ],
-        "highlights": [
-          "7.2 TOPS @ INT8 / 4T （深度学习）",
-          "6-核心 ARM 皮质-A53 @ 1.6GHz",
-          "支持360°全景拼接和扭曲校正",
-          "双眼深度计算"
-        ],
-        "detailedFeatures": [
-          {
-            "title": "高性能计算",
-            "description": "6-核心架构加上7.2 TOPS AI确保顺利处理4K流和重型AI模型。"
-          },
-          {
-            "title": "先进的视觉",
-            "description": "集成深度计算引擎和拼接硬件，用于沉浸式视觉应用。"
-          }
-        ],
-        "specs": [
-          {
-            "category": "TPU",
-            "key": "力量",
-            "value": "7.2 TOPS"
-          },
-          {
-            "category": "CPU",
-            "key": "核心",
-            "value": "6x A53 @ 1.6GHz"
-          },
-          {
-            "category": "ISP",
-            "key": "最大限度",
-            "value": "4K 分辨率"
-          },
-          {
-            "category": "过程",
-            "key": "包裹",
-            "value": "BGA"
-          }
-        ],
-        "applications": [
-          {
-            "title": "高端多镜头IPC",
-            "image": "https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "机器人平台",
-            "image": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "双目深度相机",
-            "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "无人机避障",
-            "image": "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=400"
-          }
-        ],
-        "faqs": []
-      },
-      "cv184": {
-        "id": "cv184",
-        "name": "CV184",
-        "series": "VISION",
-        "tagline": "中端边缘视觉 SoC",
-        "description": "消费者和 SMB 智能相机的平衡性能。",
-        "longDescription": [
-          "CV184 在中距离视觉应用的性能和功效之间实现了完美平衡。",
-          "CV184 与 CV181 系列引脚兼容，允许制造商轻松扩展其产品线，而无需重新设计硬件。"
-        ],
-        "highlights": [
-          "1.5 TOPS @ INT8",
-          "双核（ARM A53 + RISC-V C906）",
-          "支持 4K 编码",
-          "与 CV181 系列引脚兼容"
-        ],
-        "detailedFeatures": [
-          {
-            "title": "4K 编码",
-            "description": "以 4K 分辨率进行高效 H.265/H.264 编码可确保高质量的视频存储和流媒体。"
-          },
-          {
-            "title": "无缝升级",
-            "description": "与 CV181 的硬件兼容性简化了产品路线图升级。"
-          }
-        ],
-        "specs": [
-          {
-            "category": "TPU",
-            "key": "力量",
-            "value": "1.5 TOPS"
-          },
-          {
-            "category": "CPU",
-            "key": "基本的",
-            "value": "A53 @ 1.1GHz"
-          },
-          {
-            "category": "编码",
-            "key": "视频",
-            "value": "H.265/H.264 4K"
-          },
-          {
-            "category": "记忆",
-            "key": "啜饮",
-            "value": "512Mb - 4Gb DDR"
-          }
-        ],
-        "applications": [
-          {
-            "title": "4K IPC",
-            "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "无人机",
-            "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "边缘大型模型机器人",
-            "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "访问控制",
-            "image": "https://images.unsplash.com/photo-1555449767-e92592a8385e?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "扫描笔",
-            "image": "https://images.unsplash.com/photo-1456735190827-d1261f7add50?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "行车记录仪",
-            "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "超HD夜视仪",
-            "image": "https://images.unsplash.com/photo-1510253687831-0f982d7862fc?auto=format&fit=crop&q=80&w=400"
-          }
-        ],
-        "faqs": []
-      },
-      "cv181": {
-        "id": "cv181",
-        "name": "CV181",
-        "series": "VISION",
-        "tagline": "RISC-V 消费者视觉 SoC",
-        "description": "适用于大规模消费者 AIoT 部署的经济高效的解决方案。",
-        "longDescription": [
-          "CV181是一款专为大众消费AIoT市场量身定制的高效SoC。",
-          "通过支持 5MP ISP 和极低的功耗，CV181 使电池供电的设备能够运行更长时间，同时保持智能功能。"
-        ],
-        "highlights": [
-          "0.5 ~ 1.0 TOPS @ INT8",
-          "双核（A53 + C906）",
-          "支持5M像素ISP",
-          "低功耗"
-        ],
-        "detailedFeatures": [
-          {
-            "title": "电池友好",
-            "description": "针对低功耗进行架构优化，非常适合无线摄像头和门铃。"
-          },
-          {
-            "title": "成本效益",
-            "description": "高集成度降低了大众市场消费电子产品的 BOM 成本。"
-          }
-        ],
-        "specs": [
-          {
-            "category": "TPU",
-            "key": "AI",
-            "value": "0.5 - 1.0 TOPS"
-          },
-          {
-            "category": "ISP",
-            "key": "资源",
-            "value": "5MP @ 30fps"
-          },
-          {
-            "category": "包裹",
-            "key": "类型",
-            "value": "QFN / BGA"
-          }
-        ],
-        "applications": [
-          {
-            "title": "智能家居",
-            "image": "https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "人脸识别闸机",
-            "image": "https://images.unsplash.com/photo-1563720223521-47963b6528d2?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "扫描笔",
-            "image": "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "流媒体后视镜",
-            "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "校园相机",
-            "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "HD 夜视仪",
-            "image": "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?auto=format&fit=crop&q=80&w=400"
-          }
-        ],
-        "faqs": []
-      },
-      "cv180": {
-        "id": "cv180",
-        "name": "CV180",
-        "series": "VISION",
-        "tagline": "入门级 RISC-V 视觉 SoC",
-        "description": "最方便使用的智能视觉芯片，非常适合电池供电设备和基本 AIoT 节点。",
-        "longDescription": [
-          "CV180 是 Vision 系列的入门级冠军，建立在纯 RISC-V C906 核心之上。",
-          "CV180 采用成本优化的 QFN 封装，可实现超紧凑 PCB 设计。"
-        ],
-        "highlights": [
-          "0.2 TOPS @ INT8",
-          "单核 RISC-V C906 @ 1.0GHz",
-          "超低功耗",
-          "QFN 封装（成本优化）"
-        ],
-        "detailedFeatures": [
-          {
-            "title": "纯RISC-V",
-            "description": "高效的单核 C906 实现可简化嵌入式开发。"
-          },
-          {
-            "title": "超紧凑型",
-            "description": "小尺寸 QFN 封装可实现微小的设备外形尺寸。"
-          }
-        ],
-        "specs": [
-          {
-            "category": "TPU",
-            "key": "AI",
-            "value": "0.2 TOPS"
-          },
-          {
-            "category": "CPU",
-            "key": "核",
-            "value": "RISC-V C906"
-          },
-          {
-            "category": "视频",
-            "key": "恩克",
-            "value": "5MP / 4MP"
-          }
-        ],
-        "applications": [
-          {
-            "title": "首页 IPC",
-            "image": "https://images.unsplash.com/photo-1599388168270-4f59cb03597c?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "智能门铃",
-            "image": "https://images.unsplash.com/photo-1593142959928-8671404c0df6?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "猫眼门锁",
-            "image": "https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "行车记录仪",
-            "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "婴儿监视器",
-            "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "儿童相机",
-            "image": "https://images.unsplash.com/photo-1519638831568-d9897f54ed69?auto=format&fit=crop&q=80&w=400"
-          }
-        ],
-        "faqs": []
-      }
-    },
-    "espressif": {
-      "esp32s3": {
-        "id": "esp32s3",
-        "name": "ESP32-S3-WROOM-1",
-        "series": "WROOM",
-        "tagline": "2.4 GHz Wi-Fi 和蓝牙 5 (LE) 模块",
-        "description": "一款功能强大的通用 Wi-Fi + 蓝牙 LE MCU 模块，围绕 ESP32-S3 系列 SoC 构建，具有 AI 加速和丰富的外设。",
-        "longDescription": [
-          "ESP32-S3-WROOM-1 和 ESP32-S3-WROOM-1U 是两个功能强大的通用 Wi-Fi + 蓝牙 LE MCU 模块，围绕 ESP32-S3 系列 SoC 构建。",
-          "除了丰富的外设之外，SoC 提供的神经网络计算和信号处理工作负载加速功能使该模块成为与 AI 和人工智能物联网 (AIoT) 相关的各种应用场景的理想选择，例如唤醒词检测、语音命令识别、人脸检测和识别、智能家居、智能家电、智能控制面板和智能扬声器。",
-          "ESP32-S3-WROOM-1 配有 PCB 天线。 "
-        ],
-        "highlights": [
-          "Xtensa® 双核 32- 位 LX7 @ 240 MHz",
-          "AI 神经网络加速",
-          "2.4 GHz Wi-Fi (802.11b/g/n) 和蓝牙 5 (LE)",
-          "丰富的外设：36 GPIO、SPI、LCD、摄像头、USB-OTG"
-        ],
-        "specs": [
-          {
-            "category": "处理器",
-            "key": "CPU",
-            "value": "双核 Xtensa® LX7 高达 240 MHz"
-          },
-          {
-            "category": "AI",
-            "key": "加速",
-            "value": "用于 NN 和信号处理的向量指令"
-          },
-          {
-            "category": "无线的",
-            "key": "无线上网",
-            "value": "802.11b/g/n，高达 150 Mbps"
-          },
-          {
-            "category": "无线的",
-            "key": "蓝牙",
-            "value": "蓝牙 5、蓝牙网状网络"
-          },
-          {
-            "category": "记忆",
-            "key": "闪光",
-            "value": "最多 16 MB 四倍 SPI"
-          },
-          {
-            "category": "记忆",
-            "key": "PSRAM",
-            "value": "最多 16 MB （可选）"
-          },
-          {
-            "category": "界面",
-            "key": "GPIO",
-            "value": "36 GPIO"
-          },
-          {
-            "category": "界面",
-            "key": "USB",
-            "value": "全速 USB 2.0 OTG"
-          },
-          {
-            "category": "力量",
-            "key": "供应",
-            "value": "3.0 ~ 3.6 V"
-          },
-          {
-            "category": "环境",
-            "key": "温度",
-            "value": "-40 ~ 85 °C (可选105 °C)"
-          }
-        ],
-        "applications": [
-          {
-            "title": "智能家居",
-            "image": "https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "工业自动化",
-            "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "卫生保健",
-            "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400"
-          },
-          {
-            "title": "语音识别",
-            "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=400"
-          }
-        ],
-        "detailedFeatures": [
-          {
-            "title": "AI 和 DSP 加速度",
-            "description": "Xtensa LX7 微处理器支持向量指令，为神经网络计算和信号处理提供加速。"
-          },
-          {
-            "title": "全面的连接性",
-            "description": "集成 2.4 GHz Wi-Fi 和蓝牙 5 (LE)，具有长距离支持，确保物联网设备的可靠通信。"
-          },
-          {
-            "title": "丰富的周边套装",
-            "description": "包括 SPI、I2S、I2C、PWM、RMT、ADC、UART、SD/MMC 主机、TWAI (ISO 11898-1) 和全速 USB 2.0 OTG 接口。"
-          }
-        ],
-        "faqs": [
-          {
-            "question": "工作温度范围是多少？",
-            "answer": "标准版本的工作温度为 –40 ~ 85 °C。 "
-          },
-          {
-            "question": "WROOM-1 和 1U 有什么区别？",
-            "answer": "ESP32-S3-WROOM-1 使用板载 PCB 天线，而 WROOM-1U 具有用于外部天线的连接器。"
-          }
-        ]
-      }
     }
   },
   "legal": {
@@ -1218,7 +724,7 @@
   },
   "privacy": {
     "metaTitle": "隐私政策 | ",
-    "title": "隐私政策",
+    "title": "__PH0__",
     "intro": {
       "p1": "AIMORELOGY LIMITED 及其附属公司（“AIMORELOGY”、“我们”、“我们”或“我们的”）致力于保护您的隐私。",
       "p2": "本隐私政策解释了当您访问我们的网站或使用我们的产品和服务时，我们如何收集、使用、披露和保护您的信息。"
@@ -1240,7 +746,7 @@
       },
       "use": {
         "title": "2. 您的信息的使用",
-        "p1": "掌握有关您的准确信息使我们能够为您提供流畅、高效和定制的体验。",
+        "p1": "Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:",
         "items": {
           "0": "创建并管理您的帐户。",
           "1": "处理您的订单并交付产品（例如 CV184XH 飞行控制器）。",
@@ -1252,7 +758,7 @@
       },
       "disclosure": {
         "title": "3. 披露您的信息",
-        "p1": "在某些情况下，我们可能会分享我们收集的有关您的信息。",
+        "p1": "We may share information we have collected about you in certain situations. Your information may be disclosed as follows:",
         "items": {
           "0": {
             "title": "依据法律或保护权利",
@@ -1283,12 +789,12 @@
   },
   "terms": {
     "metaTitle": "服务条款 | ",
-    "title": "服务条款",
-    "intro": "这些服务条款（“条款”）管辖您对 AIMORELOGY LIMITED（“公司”、“我们”或“我们”）运营的网站的使用以及对我们产品和服务的购买。",
+    "title": "__PH0__",
+    "intro": "These Terms of Service (\"Terms\") govern your use of the website operated by AIMORELOGY LIMITED (\"Company,\" \"we,\" or \"us\") and the purchase of our products and services. By accessing or using our website, you agree to be bound by these Terms.",
     "sections": {
       "license": {
         "title": "1. 使用许可",
-        "p1": "允许临时下载 AIMORELOGY 网站上的材料（信息或软件）的一份副本，仅供个人、非商业性临时查看。",
+        "p1": "Permission is granted to temporarily download one copy of the materials (information or software) on AIMORELOGY's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:",
         "items": {
           "0": "修改或者复制材料；",
           "1": "将这些材料用于任何商业目的或任何公开展示（商业或非商业）；",
@@ -1299,7 +805,7 @@
       },
       "disclaimer": {
         "title": "2. 免责声明",
-        "p1": "AIMORELOGY 网站上的材料按“原样”提供。 "
+        "p1": "The materials on AIMORELOGY's website are provided on an 'as is' basis. AIMORELOGY makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
       },
       "limitations": {
         "title": "3. 局限性",
@@ -1320,22 +826,22 @@
       },
       "changes": {
         "title": "6. 条款变更",
-        "p1": "我们保留自行决定随时修改或替换这些条款的权利。"
+        "p1": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms."
       }
     }
   },
   "cookies": {
     "metaTitle": "Cookie 政策 | ",
-    "title": "Cookie 政策",
+    "title": "__PH0__",
     "intro": "本 Cookie 政策解释了什么是 Cookie、AIMORELOGY 如何在我们的网站上使用 Cookie，以及您对 Cookie 的选择。",
     "sections": {
       "what": {
         "title": "1. 什么是 Cookie？",
-        "p1": "Cookie 是由您访问的网站发送到您的网络浏览器的小文本文件。 "
+        "p1": "Cookies are small text files that are sent to your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you."
       },
       "use": {
         "title": "2. 我们如何使用 Cookie",
-        "p1": "当您使用和访问服务时，我们可能会在您的网络浏览器中放置一些 cookie 文件。",
+        "p1": "When you use and access the Service, we may place a number of cookies files in your web browser. We use cookies for the following purposes:",
         "items": {
           "0": {
             "title": "基本饼干",

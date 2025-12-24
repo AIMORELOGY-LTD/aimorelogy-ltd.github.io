@@ -54,7 +54,12 @@
       "fullName": "Full Name",
       "email": "Email Address",
       "message": "How can we help you?",
-      "send": "Send Message"
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent. We'll reply soon.",
+      "error": "Failed to send. Please try again.",
+      "invalidEmail": "Please enter a valid email.",
+      "missingEndpoint": "Form service is not configured."
     },
     "links": {
       "company": "Company Overview",
@@ -226,7 +231,13 @@
       "email": "Email Address",
       "phone": "Phone (Optional)",
       "message": "Message",
-      "send": "Send Message"
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent. We'll reply soon.",
+      "error": "Failed to send. Please try again.",
+      "invalidEmail": "Please enter a valid email.",
+      "required": "Please fill in all required fields.",
+      "missingEndpoint": "Form service is not configured."
     }
   },
   "about": {
