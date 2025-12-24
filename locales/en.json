@@ -37,8 +37,8 @@
     "language": "Language",
     "lang": {
       "en": "English",
-      "zh": "????",
-      "ru": "???????"
+      "zh": "简体中文",
+      "ru": "Русский"
     },
     "promo": "Need assistance with integration or technical specifications? Our engineering team is ready to help.",
     "contactSupport": "Contact Support",
@@ -62,7 +62,7 @@
       "careers": "Careers"
     },
     "legal": {
-      "copyright": "? AIMORELOGY Limited",
+      "copyright": "© AIMORELOGY Limited",
       "terms": "Terms of Use",
       "cookies": "Cookies",
       "privacy": "Privacy"

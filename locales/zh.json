@@ -1,916 +1,925 @@
 {
   "common": {
-    "home": "首页",
+    "home": "家",
     "technology": "技术",
     "comingSoon": "即将推出",
-    "contactSales": "联系销售",
-    "solutions": "????"
+    "contactSales": "联系销售人员",
+    "solutions": "解决方案"
   },
   "header": {
     "menu": {
       "productsTitle": "产品",
       "products": {
-        "flightController": "飞控",
-        "allInOne": "一体化飞控",
-        "afcDesc": "新一代无人机大脑的终极答案。"
+        "flightController": "飞行控制器",
+        "allInOne": "多合一 FC",
+        "afcDesc": "下一代 UAV 大脑的最终答案。"
       },
       "solutions": "解决方案",
-      "cloudAiCamera": "云端 AI 摄像机",
-      "autonomousInspection": "自主巡检",
-      "coreComponents": "核心部件",
+      "cloudAiCamera": "云AI相机",
+      "autonomousInspection": "自主检验",
+      "coreComponents": "核心组件",
       "intelligentVision": "智能视觉",
-      "xtensa": "Xtensa 处理器",
+      "xtensa": "Xtensa处理器",
       "sophgo": {
-        "bm1688": "16T 边缘 AI，8 核 ARM，高度集成 SoC。",
-        "cv186ah": "7.2T 高端视觉处理器（4K/8MP）。",
-        "cv184": "1.5T 中端边缘视觉（RISC-V + ARM）。",
-        "cv181": "消费级 RISC-V AIoT SoC（0.2T - 1.0T）。"
+        "bm1688": "16T Edge AI、8-Core ARM，高度集成的 SoC。",
+        "cv186ah": "7.2T 高端视觉处理器 (4K/8MP)。",
+        "cv184": "1.5T 中距离边缘视觉 (RISC-V + ARM)。",
+        "cv181": "消费者 RISC-V AIoT SoC (0.2T - 1.0T)。"
       },
       "espressif": {
-        "esp32": "双核 Xtensa 32 位 LX7，240MHz。"
+        "esp32": "双核 Xtensa 32- 位 LX7，240MHz。"
       },
       "support": "支持",
       "contactUs": "联系我们",
-      "documents": "文档"
+      "documents": "文件"
     },
     "search": "搜索",
     "language": "语言",
     "lang": {
-      "en": "English",
+      "en": "英语",
       "zh": "简体中文",
       "ru": "Русский"
     },
-    "promo": "需要集成或技术规格支持？我们的工程团队随时为您提供帮助。",
-    "contactSupport": "联系支持",
+    "promo": "需要集成或技术规格方面的帮助吗？",
+    "contactSupport": "我们的工程团队随时准备提供帮助。",
     "comingSoon": "即将推出"
   },
   "footer": {
     "getInTouch": "联系我们",
-    "getInTouchDesc": "与我们的工程团队讨论解决方案需求。我们为无人机与边缘 AI 提供交付服务。",
+    "getInTouchDesc": "与我们的工程团队讨论您的解决方案需求。",
     "salesSupport": "销售与支持",
-    "shenzhen": "深圳总部",
-    "address": "朗俊广场 T2-A 603-12",
+    "shenzhen": "深圳HQ",
+    "address": "宝安区郎君广场T2-A 603-12",
     "form": {
       "fullName": "姓名",
-      "email": "邮箱",
-      "message": "我们如何帮助您？",
+      "email": "电子邮件",
+      "message": "我们能为您提供什么帮助？",
       "send": "发送消息"
     },
     "links": {
       "company": "公司概况",
-      "contact": "联系 AIMORELOGY",
-      "careers": "加入我们"
+      "contact": "联系方式 AIMORELOGY",
+      "careers": "职业机会"
     },
     "legal": {
-      "copyright": "? AIMORELOGY Limited",
-      "terms": "使用条款",
-      "cookies": "Cookies",
+      "copyright": "© AIMORELOGY Limited",
+      "terms": "__PH0__ 有限公司",
+      "cookies": "曲奇饼",
       "privacy": "隐私"
     },
-    "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务。// 没有任何产品或组件是绝对安全的。// 成本与结果可能因人而异。// 性能取决于使用方式、配置和其他因素。// 请参阅完整的法律声明与免责声明。// AIMORELOGY 致力于尊重人权，避免造成或促成不利影响。"
+    "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务激活。 "
   },
   "home": {
     "hero": {
       "slides": {
         "0": {
-          "category": "新品发布",
-          "title": "AFC-V1 即将上线",
-          "description": "集成视觉、视频链路与控制的一体化飞控，重新定义无人机未来。",
+          "category": "新发布",
+          "title": "AFC-V1 即将推出",
+          "description": "集视觉、视频链接、控制于一体的终极一体化飞行控制器。",
           "navTitle": "AFC-V1",
-          "navDesc": "下一代飞控。",
+          "navDesc": "重新定义无人机的未来。",
           "buttonText": "即将推出"
         },
         "1": {
           "category": "算法",
-          "title": "自研 AI 目标跟踪",
-          "description": "专有视觉跟踪算法，实现 <5ms 低延迟，在复杂环境中稳健跟随。",
-          "navTitle": "AI 跟踪",
+          "title": "自主开发AI追踪",
+          "description": "专有的视觉跟踪算法可提供 <5 毫秒的延迟，在复杂环境中实现强大的目标跟踪。",
+          "navTitle": "AI 追踪",
           "navDesc": "高性能视觉算法。",
           "buttonText": "技术预览"
         },
         "2": {
           "category": "框架",
           "title": "通用自适应 DShot",
-          "description": "DMA-Free、双向 DShot 300/150，适配任意芯片平台，动态误差消除，稳定可靠。",
-          "navTitle": "自适应 DShot",
+          "description": "DMA-免费、双向 DShot 300/150 支持任何芯片平台。",
+          "navTitle": "自适应动态拍摄",
           "navDesc": "通用控制框架。",
           "buttonText": "查看规格"
         }
       }
     },
     "afc": {
-      "kicker": "一体化 AI 飞控",
-      "tagline": "\"视觉·图传·控制\"",
-      "subtagline": "新一代无人机大脑的终极答案。",
+      "kicker": "一体化AI飞行控制器",
+      "tagline": "“视觉。视频链接。控制。”",
+      "subtagline": "下一代 UAV 大脑的最终答案。",
       "features": {
         "0": {
           "title": "1.5 TOPS 边缘 AI",
-          "desc": "本地执行复杂检测模型，零延迟。"
+          "desc": "以零延迟本地执行复杂的检测模型。"
         },
         "1": {
-          "title": "10KM 图传链路",
-          "desc": "??? Wi-Fi ?????????"
+          "title": "10KM 视频链接",
+          "desc": "HD 传输与高功率 Wi-Fi 模块优化。"
         },
         "2": {
-          "title": "8MP 超清 ISP",
-          "desc": "最高 8M@30FPS，原生支持星光与全局快门。"
+          "title": "8MP 超 HD ISP",
+          "desc": "最多 8M@30FPS 处理。"
         },
         "3": {
-          "title": "缩小 45%",
-          "desc": "高度集成工业设计，体积更小、功耗更低。"
+          "title": "对星光和全局快门传感器的本机支持。",
+          "desc": "重新定义尺寸和功率。"
         }
       }
     },
     "tracking": {
-      "kicker": "专有算法",
-      "title": "AI 跟踪",
-      "tagline": "\"超低延迟，极致鲁棒\"",
+      "kicker": "高度集成的工业设计。",
+      "title": "AI 追踪",
+      "tagline": "“超低延迟。无与伦比的稳健性。”",
       "status": {
-        "tracking": "状态：跟踪",
+        "tracking": "状态：追踪",
         "stable": "状态：稳定",
-        "locked": "状态：锁定"
+        "locked": "状态：已锁定"
       },
       "steps": {
         "0": {
-          "title": "1. 精准锁定",
-          "desc": "在建筑边缘等场景快速捕获目标。"
+          "title": "1. 精密锁紧",
+          "desc": "即时目标获取靠近建筑特征。"
         },
         "1": {
           "title": "2. 杂波抑制",
-          "desc": "在复杂背景与车辆场景中稳定跟踪。"
+          "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
         },
         "2": {
-          "title": "3. 远距稳定",
-          "desc": "低像素密度条件下持续稳定锁定。"
+          "title": "3. 远距离稳定性",
+          "desc": "对低像素密度的远距离目标进行一致锁定。"
         }
       },
-      "cta": "了解算法"
+      "cta": "探索算法"
     },
     "dshot": {
       "kicker": "通用框架",
-      "title": "自适应 DShot",
-      "subtitle": "DMA-Free、双向、自适应。为任意 MCU 提供专业级 DShot 300/150 支持。",
+      "title": "自适应动态拍摄",
+      "subtitle": "DMA-免费。",
       "features": {
         "0": {
-          "title": "任意芯片平台",
-          "desc": "无需 DMA 或特定定时器，兼容 RISC-V、ARM 等。"
+          "title": "任何芯片平台",
+          "desc": "不需要 DMA 或特定硬件定时器。"
         },
         "1": {
-          "title": "自适应调参",
-          "desc": "动态误差消除，输出频率自动校准。"
+          "title": "可移植到 __PH1__、__PH2__ 等。",
+          "desc": "动态误差消除可校准输出频率以实现完美的稳定性。"
         },
         "2": {
-          "title": "主流兼容",
-          "desc": "完美兼容 BLHeli_32、BLHeli_S、AM32。"
+          "title": "主流支持",
+          "desc": "完美兼容BLHeli_32、BLHeli_S、AM32电调。"
         }
       },
       "cta": "查看规格"
     },
-    "industryNews": "行业动态",
+    "industryNews": "行业新闻",
     "partners": "战略合作伙伴"
   },
   "blog": {
-    "kicker": "Nexus 博客",
-    "titleLine1": "技术",
-    "titleLine2": "洞察",
-    "subtitle": "深度解析 AI、图形计算与未来算力。",
-    "loadMore": "加载更多",
-    "readStory": "阅读详情"
+    "kicker": "Nexus Blog",
+    "titleLine1": "Technology",
+    "titleLine2": "Insights",
+    "subtitle": "Deep dives into AI, graphics, and the future of computing.",
+    "loadMore": "Load More Stories",
+    "readStory": "Read Story"
   },
   "careers": {
-    "metaTitle": "加入我们 | AIMORELOGY",
+    "metaTitle": "职业生涯 | ",
     "hero": {
-      "kicker": "加入团队",
-      "titleLine1": "加入",
+      "kicker": "加入我们的团队",
+      "titleLine1": "职业机会",
       "titleLine2": "AIMORELOGY",
-      "subtitle": "与我们一起打造自主飞行与边缘智能的未来。"
+      "subtitle": "与我们一起构建自主飞行和边缘智能的未来。"
     },
-    "openPositions": "开放职位",
+    "openPositions": "未平仓头寸",
     "locations": {
       "shenzhen": "深圳",
       "shenzhenTag": "全球总部",
       "hongkong": "香港",
-      "hongkongTag": "海外业务部门"
+      "hongkongTag": "海外事业部"
     },
-    "none": "暂无开放职位。",
-    "shenzhenNote": "研发岗位请稍后查看。",
-    "hongkongNote": "运营岗位请稍后查看。",
-    "ctaText": "没有找到合适职位？我们一直在寻找优秀人才。",
-    "ctaLink": "联系进行咨询"
+    "none": "没有可用的空缺职位。",
+    "shenzhenNote": "稍后回来查看研发机会。",
+    "hongkongNote": "稍后回来查看运营机会。",
+    "ctaText": "没有看到合适的角色？",
+    "ctaLink": "我们一直在寻找人才。"
   },
   "contact": {
-    "metaTitle": "联系我们 | AIMORELOGY",
+    "metaTitle": "联系我们 | ",
     "title": "联系我们",
-    "subtitle": "关于企业方案有疑问？欢迎通过电话、微信、WhatsApp 或邮件与我们联系。",
+    "subtitle": "对我们的企业解决方案有疑问吗？",
     "salesSupport": "销售与支持",
-    "channels": "手机 / 微信 / WhatsApp",
+    "channels": "手机/微信/WhatsApp",
     "corporateEmail": "企业邮箱",
     "locations": {
       "shenzhen": {
-        "title": "总部（深圳）",
-        "company": "AIMORELOGY 科技有限公司",
-        "address": "深圳市宝安区朗俊广场 T2 A 座 603-12"
+        "title": "HQ（深圳）",
+        "company": "AIMORELOGY科技有限公司",
+        "address": "深圳市宝安区郎君广场T2栋A区603-12室"
       },
       "hk": {
         "title": "香港",
         "company": "AIMORELOGY LIMITED",
-        "addressLine1": "Room H2 4/F, Century Industrial Centre,",
-        "addressLine2": "33-35 Au Pui Wan Street Fotan,",
-        "addressLine3": "Sha Tin, Hong Kong"
+        "addressLine1": "世纪工业中心H2 4/F室",
+        "addressLine2": "33-35 坳背湾街火炭",
+        "addressLine3": "香港沙田"
       }
     },
     "form": {
       "title": "给我们留言",
       "firstName": "名",
       "lastName": "姓",
-      "email": "邮箱",
+      "email": "电子邮件",
       "phone": "电话（可选）",
-      "message": "留言",
-      "send": "发送"
+      "message": "信息",
+      "send": "发送消息"
     }
   },
   "about": {
-    "metaTitle": "关于我们 | AIMORELOGY",
+    "metaTitle": "关于 | ",
     "hero": {
       "kicker": "公司简介",
       "titleLine1": "关于",
       "titleLine2": "AIMORELOGY",
-      "subtitle": "面向工业世界，开创新一代智能飞控与 AI 自主系统。"
+      "subtitle": "开创工业界下一代智能飞行控制系统和 AI- 驱动的自主解决方案。"
     },
     "mission": {
       "title": "我们的使命",
-      "p1": "AIMORELOGY 专注于无人机与机器人产业创新，深耕边缘 AI 计算、高清视频传输与自主飞行控制算法。",
-      "p2": "通过将视觉、控制与通信集成到小型高性能单元（如 CV184XH 系列），帮助工业伙伴打造更智能、更安全、更高效的自治系统。"
+      "p1": "AIMORELOGY 是一家致力于革新 UAV 和机器人行业的技术领导者。",
+      "p2": "我们专注于先进的边缘__PH2__计算、高清视频传输和自主飞行控制算法。"
     },
     "partners": {
       "title": "合作伙伴"
     },
     "leadership": {
-      "title": "管理团队",
-      "name": "柯一然",
+      "title": "领导",
+      "name": "柯怡然",
       "role": "创始人 & CEO",
       "tags": [
-        "// 系统架构",
-        "// 开源倡导",
+        "// 系统架构师",
+        "// 开源倡导者",
         "// 产品战略"
       ],
       "bio": {
-        "intro": "柯一然是 AIMORELOGY 创始人兼 CEO，具备从底层硬件到智能算法的跨域经验。",
+        "intro": "柯怡然是AIMORELOGY的创始人和CEO，带来了从底层硬件到智能系统算法的丰富跨领域经验。",
         "backgroundTitle": "背景",
-        "background": "曾深度参与开源硬件与 RISC-V 生态，是国内 RISC-V 社区早期建设者之一。",
-        "trackTitle": "成绩",
-        "track": "主导 Milk-V Duo、Mars、Pioneer 系列的设计、产品化与全球推广，并在海外众筹取得成功。",
-        "p1": "其在芯片与底层系统方面的经验，塑造了深厚的技术思考与产品落地能力，并与开发者文化高度契合。他认为技术的价值不只是指标，更在于让更多人真正使用、触达并改变世界。",
-        "p2": "2025 年后，他将重心转向智能无人机与 AI 系统，创立 AIMORELOGY，专注飞控、视觉感知、边缘 AI 推理与智能任务系统。",
-        "footer": "柯一然始终保持工程师心态：亲自审视系统架构，参与链路设计，强调底层可靠性与真实场景。"
+        "background": "在创立公司之前，他深度参与开源硬件和RISC-V生态系统，被公认为国内RISC-V社区的早期建设者之一。",
+        "trackTitle": "业绩记录",
+        "track": "主导了Milk-V Duo、Mars、Pioneer系列的设计、产品化和全球推广，在海外众筹取得了显著成功。",
+        "p1": "他在芯片和底层系统方面的丰富背景培养了深厚的技术思维、产品执行能力以及与开发者文化的天然共鸣。",
+        "p2": "在2025之后，他将重点从系统架构转向智能无人机和AI系统。",
+        "footer": "柯怡然本质上仍然是一名工程师：亲自审查系统架构，参与飞控链路设计，并优先考虑底层可靠性和实际用户场景。"
       },
       "philosophy": {
-        "title": "理念",
+        "title": "哲学",
         "items": [
           {
-            "title": "现实优先",
-            "desc": "技术必须可用，而非仅用于演示。"
+            "title": "现实第一",
+            "desc": "技术必须在现实中可用，而不仅仅是在演示中。"
           },
           {
             "title": "以人为本",
-            "desc": "创新应改善人机关系。"
+            "desc": "创新应该改善人与技术之间的关系。"
           },
           {
-            "title": "简洁可靠",
-            "desc": "复杂系统应呈现简单可靠的体验。"
+            "title": "简单",
+            "desc": "复杂的系统必须提供简单、可靠的体验。"
           },
           {
-            "title": "信任",
-            "desc": "每个产品都应具备可信的稳定性与安全性。"
+            "title": "相信",
+            "desc": "每一个产品都必须具备“值得信赖”的稳定性和安全性。"
           }
         ]
       }
     },
     "locations": {
-      "title": "全球布局",
+      "title": "全球影响力",
       "companyName": "公司名称",
       "address": "地址",
-      "contacts": "关键联系人",
+      "contacts": "主要联系人",
       "shenzhen": {
         "title": "深圳",
         "tag": "全球总部",
-        "company": "深圳 AIMORELOGY 科技有限公司",
-        "addressLine1": "朗俊广场 T2 A 座 603-12",
-        "addressLine2": "深圳市宝安区铁仔路",
-        "contactName": "柯一然"
+        "company": "深圳市AIMORELOGY科技有限公司",
+        "addressLine1": "郎君广场T2号楼A区603-12室",
+        "addressLine2": "深圳市宝安区西乡街道铁仔路",
+        "contactName": "柯怡然"
       },
       "hk": {
         "title": "香港",
-        "tag": "海外业务部门",
+        "tag": "海外事业部",
         "company": "AIMORELOGY LIMITED",
-        "addressLine1": "Room H2 4/F, Century Industrial Centre,",
-        "addressLine2": "33-35 Au Pui Wan Street Fotan,",
-        "addressLine3": "Sha Tin, Hong Kong",
+        "addressLine1": "世纪工业中心H2 4/F室",
+        "addressLine2": "33-35 坳背湾街火炭",
+        "addressLine3": "香港沙田",
         "contactName": "谢杰夫"
       }
     },
     "cta": {
-      "title": "准备创新了吗？",
-      "subtitle": "联系销售团队，讨论我们的 AI 方案如何加速业务。",
-      "email": "立即邮件联系"
+      "title": "准备好创新了吗？",
+      "subtitle": "请立即联系我们的销售团队，讨论我们的 AI 解决方案如何加速您的业务发展。",
+      "email": "立即给我们发电子邮件"
     }
   },
   "aiTracking": {
-    "metaTitle": "自研 AI 跟踪 | AIMORELOGY",
-    "breadcrumb": "AI 跟踪算法",
+    "metaTitle": "自主开发AI追踪| ",
+    "breadcrumb": "AI 追踪算法",
     "hero": {
       "kicker": "核心技术",
-      "badge": "自研算法",
-      "titleLine1": "极速",
-      "titleLine2": "视觉跟踪",
-      "subtitle": "稳健的单目标跟踪（SOT）与 Re-ID 能力，适应复杂环境。",
-      "desc": "面向低功耗边缘平台优化，在嵌入式 NPU 上实现 2ms-5ms 推理延迟，并在遮挡中保持锁定。",
-      "cta": "获取算法 SDK",
+      "badge": "专有算法",
+      "titleLine1": "超快",
+      "titleLine2": "视觉追踪",
+      "subtitle": "鲁棒的单目标跟踪 (SOT) 具有适用于复杂环境的 Re-ID 功能。",
+      "desc": "针对低功耗边缘检测平台进行了优化。",
+      "cta": "在标准嵌入式 SDK 硬件上实现 2ms-5ms 推理延迟，同时在遮挡期间保持锁定鲁棒性。",
       "imageAlt": "AI 跟踪横幅"
     },
     "performance": {
       "title": "性能数据",
-      "desc": "算法针对 RISC-V 与 ARM 平台的 INT8 量化高度优化，即便入门芯片也能达到工业级实时表现。",
+      "desc": "我们的算法针对基于 RISC-V 和 ARM- 的 TPU 平台上的 INT8 量化进行了深度优化。",
       "testTitle": "测试条件",
       "test": {
         "input": "输入尺寸",
         "quant": "量化",
-        "batch": "批量"
+        "batch": "批量大小"
       },
       "table": {
         "platform": "平台（算力）",
-        "latency": "推理延迟",
-        "ultraFast": "超高速"
+        "latency": "推理速度（延迟）",
+        "ultraFast": "超快"
       }
     },
     "capabilities": {
-      "title": "真实场景鲁棒跟踪",
-      "subtitle": "从初始捕获到远距跟踪，算法持续锁定目标，实时过滤复杂背景与静态障碍。",
+      "title": "强大的现实世界跟踪",
+      "subtitle": "我们的专有算法从初始采集到远程跟踪保持一致的锁定，实时滤除复杂的背景杂波和静态障碍物。",
       "steps": {
         "0": {
-          "alt": "跟踪中",
+          "alt": "追踪活动",
           "status": "状态：跟踪",
-          "title": "1. 精准锁定",
-          "desc": "在建筑边缘等场景快速捕获目标。"
+          "title": "1. 精密锁紧",
+          "desc": "即时目标获取靠近建筑特征。"
         },
         "1": {
           "alt": "复杂场景",
           "status": "状态：稳定",
           "title": "2. 杂波抑制",
-          "desc": "在复杂环境与车辆背景中稳定跟踪。"
+          "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
         },
         "2": {
-          "alt": "远距离",
+          "alt": "远程",
           "status": "状态：锁定",
-          "title": "3. 远距稳定",
-          "desc": "低像素密度下依旧稳定锁定。"
+          "title": "3. 远距离稳定性",
+          "desc": "对低像素密度的远距离目标进行一致锁定。"
         }
       }
     },
     "features": {
       "0": {
         "title": "超低延迟",
-        "desc": "<5ms 处理时间保证无人机闭环控制稳定无抖动。"
+        "desc": "<5ms 处理时间确保无人机直接闭环控制，无抖动或振荡。"
       },
       "1": {
-        "title": "轻量模型",
-        "desc": "INT8 优化支持 CV181x 等低成本芯片部署。"
+        "title": "轻量级型号",
+        "desc": "高度优化的 INT8 量化允许部署在 CV181x 等经济高效的芯片上。"
       },
       "2": {
-        "title": "稳健 Re-ID",
-        "desc": "完全遮挡后仍保持目标身份，避免漂移。"
+        "title": "鲁棒Re-ID",
+        "desc": "即使在完全遮挡后也能保持目标身份，防止“目标漂移”到背景物体。"
       },
       "3": {
         "title": "多尺度输入",
-        "desc": "支持 128x128 极速与 256x256 高精度。"
+        "desc": "支持速度128x128，精度256x256，适应不同传感器分辨率。"
       }
     },
     "cta": {
       "title": "立即集成 AI 跟踪",
-      "subtitle": "提供 CV18xx 系列软件 SDK 或 AFC-V1 预装版本。",
-      "primary": "申请评估",
+      "subtitle": "作为 CV18xx 系列芯片的软件 SDK 提供，或预闪存在我们的 AFC-V1 飞行控制器上。",
+      "primary": "请求评估",
       "secondary": "查看硬件"
     }
   },
   "dshot": {
-    "metaTitle": "??? DShot ???? | AIMORELOGY",
-    "breadcrumb": "??? DShot",
+    "metaTitle": "自适应 DShot 控制协议 | ",
+    "breadcrumb": "自适应动态拍摄",
     "hero": {
-      "badge": "??? DShot",
-      "titleLine1": "??",
-      "titleLine2": "DShot ??",
-      "subtitle": "DMA-Free??? DShot 300/150????? MCU???????????",
+      "badge": "自适应动态拍摄",
+      "titleLine1": "普遍的",
+      "titleLine2": "拍摄控制",
+      "subtitle": "DMA-免费，双向DShot 300/150，适应任何MCU，定时稳定，抖动低。",
       "stats": {
-        "0": "?? DMA",
+        "0": "需要零 DMA",
         "1": {
           "value": "300/150",
           "unit": "k",
-          "label": "????"
+          "label": "双向模式"
         }
       },
-      "imageAlt": "??? DShot ?????"
+      "imageAlt": "自适应 Dshot 信号图"
     },
     "core": {
-      "title": "????",
-      "subtitle": "AIMORELOGY ??? DShot ???????????? ESC ??????????",
+      "title": "核心创新",
+      "subtitle": "AIMORELOGY Adaptive DShot 为任何芯片平台带来专业级 ESC 控制，无需特殊硬件。",
       "cards": {
         "0": {
-          "title": "?????",
-          "desc": "?? DMA ????????? RISC-V?ARM?Xtensa?"
+          "title": "通用便携性",
+          "desc": "在 RISC-V、ARM 和 Xtensa 上运行，无需 DMA 或硬件定时器。"
         },
         "1": {
-          "title": "?????",
-          "desc": "???????????????????"
+          "title": "自适应定时",
+          "desc": "自动校准输出频率以消除时序漂移和错误。"
         },
         "2": {
-          "title": "????",
-          "desc": "???? ESC ???????????"
+          "title": "双向遥测",
+          "desc": "针对 RPM、温度和故障状态提供可靠的 ESC 反馈。"
         },
         "3": {
-          "title": "????",
-          "desc": "?? BLHeli_32?BLHeli_S?AM32 ????"
+          "title": "生产就绪",
+          "desc": "已在 BLHeli_32、BLHeli_S 和 AM32 上进行验证。"
         }
       }
     },
     "comparison": {
-      "title": "????",
+      "title": "协议比较",
       "headers": {
-        "feature": "??",
+        "feature": "特征",
         "pwm": "PWM",
-        "hardware": "?? DShot",
-        "adaptive": "??? DShot"
+        "hardware": "硬件数码相机",
+        "adaptive": "自适应动态拍摄"
       },
       "rows": {
         "0": {
-          "feature": "????",
-          "pwm": "??? PWM",
-          "hardware": "DMA + ???",
-          "adaptive": "???"
+          "feature": "硬件要求",
+          "pwm": "定时器 PWM",
+          "hardware": "DMA + 定时器",
+          "adaptive": "纯软件"
         },
         "1": {
-          "feature": "??",
-          "pwm": "?",
-          "hardware": "??",
-          "adaptive": "????"
+          "feature": "双向",
+          "pwm": "不",
+          "hardware": "有限的",
+          "adaptive": "全面遥测"
         },
         "2": {
-          "feature": "???",
-          "pwm": "?",
-          "hardware": "?",
-          "adaptive": "?"
+          "feature": "抗噪性",
+          "pwm": "低的",
+          "hardware": "中等的",
+          "adaptive": "高的"
         },
         "3": {
-          "feature": "????",
-          "pwm": "?",
-          "hardware": "?",
-          "adaptive": "?? MCU"
+          "feature": "可移植性",
+          "pwm": "低的",
+          "hardware": "中等的",
+          "adaptive": "任意 MCU"
         }
       }
     },
     "deepDive": {
       "steps": {
         "0": {
-          "title": "????",
-          "desc": "24 ???? + CRC ???????????"
+          "title": "信号编码",
+          "desc": "带有 CRC 保护的 24- 位数据包可确保命令完整性。"
         },
         "1": {
-          "title": "?????",
-          "desc": "????????? DMA ???????"
+          "title": "自适应采样",
+          "desc": "动态边缘检测与 ESC 时序对齐，无需 DMA。"
         },
         "2": {
-          "title": "????",
-          "desc": "????????????????"
+          "title": "纠错",
+          "desc": "自调谐可补偿时钟漂移和电缆噪声。"
         }
       },
-      "title": "???????? DShot",
-      "p1": "?? DShot ??????? DMA ?????? MCU ???????????????????",
-      "p2": "??? DShot ????????????????????????????????",
+      "title": "为什么自适应 DShot 很重要",
+      "p1": "传统的 DShot 依赖于严格的计时和 DMA 访问。",
+      "p2": "在许多 MCU 上，这要么花费宝贵的硬件定时器，要么使双向遥测变得不可靠。",
       "bullets": {
-        "0": "??????",
-        "1": "???????????",
-        "2": "????????????"
+        "0": "无需特殊外围设备",
+        "1": "在长电线和嘈杂的 ESC 中实现稳定控制",
+        "2": "从业余爱好级无人机到工业级无人机"
       }
     },
     "cta": {
-      "title": "??????? DShot?",
-      "subtitle": "???????????SDK ??????",
-      "primary": "????"
+      "title": "准备好集成 Adaptive DShot 了吗？",
+      "subtitle": "请联系我们获取参考固件、SDK 访问权限和集成支持。",
+      "primary": "联系销售人员"
     }
   },
   "solution": {
-    "requestDemo": "????",
-    "overview": "??",
-    "capabilities": "??",
-    "applications": "????",
-    "discuss": "????",
-    "download": "????"
+    "requestDemo": "请求演示",
+    "overview": "概述",
+    "capabilities": "能力",
+    "applications": "应用领域",
+    "discuss": "讨论你的项目",
+    "download": "下载手册"
   },
   "solutionDemo": {
-    "title": "????",
-    "subtitle": "?????????? AI ??????????",
+    "title": "自主检验",
+    "subtitle": "AI- 驱动 UAV 能源和工业资产检查。",
     "overview": {
-      "title": "???????",
-      "content": "??????? 4K ?????????????????????????????????"
+      "title": "自动化现场操作",
+      "content": "规划路线、捕获 4K 图像并实时检测异常情况。"
     },
     "stats": {
-      "0": "?????",
-      "1": "???",
-      "2": "?????",
-      "3": "????"
+      "0": "我们的检查堆栈将边缘推理与云分析结合起来，以缩短维护周期并降低风险。",
+      "1": "误报",
+      "2": "最大分辨率",
+      "3": "正常运行时间"
     },
     "features": {
       "0": {
-        "title": "?????",
-        "desc": "RGB ???????????????????"
+        "title": "多光谱扫描",
+        "desc": "RGB 和热管道揭示了肉眼看不见的缺陷。"
       },
       "1": {
-        "title": "????",
-        "desc": "????????????????"
+        "title": "即时警报",
+        "desc": "设备上的推理会触发实时通知和证据剪辑。"
       },
       "2": {
-        "title": "????",
-        "desc": "???????????????????"
+        "title": "合规就绪报告",
+        "desc": "自动生成的 PDF 包含缺陷图、时间戳和元数据。"
       },
       "3": {
-        "title": "????",
-        "desc": "?????????????"
+        "title": "自主任务",
+        "desc": "基于航点的巡逻具有动态避障功能。"
       },
       "4": {
-        "title": "????",
-        "desc": "?????????????"
+        "title": "云分析",
+        "desc": "用于趋势分析和资产健康评分的车队仪表板。"
       },
       "5": {
-        "title": "?????",
-        "desc": "?????????????????"
+        "title": "远程链接",
+        "desc": "跨大型检查区域稳定的 HD 视频和遥测。"
       }
     },
     "apps": {
-      "0": "????",
-      "1": "????",
-      "2": "????"
+      "0": "太阳能发电场",
+      "1": "风力涡轮机",
+      "2": "工业用地"
     },
     "cta": {
-      "title": "???????",
-      "text": "???????????????????????"
+      "title": "大规模部署检查",
+      "text": "与我们的团队讨论定制工作流程、集成传感器并安全地部署任务。"
     }
   },
   "aiCamera": {
-    "metaTitle": "?? AI ????? | AIMORELOGY",
-    "breadcrumb": "?? AI ???",
+    "metaTitle": "云AI相机解决方案| ",
+    "breadcrumb": "云AI相机",
     "hero": {
-      "kicker": "????",
+      "kicker": "解决方案",
       "badge": "EDGE + CLOUD",
-      "titleLine1": "?? AI",
-      "titleLine2": "?????",
-      "desc": "??????????????????????????????????",
-      "cta": "????",
-      "ready": "??? CV18xx ?? SDK?",
-      "uiVersion": "???? 1.0",
-      "imageAlt": "?? AI ?????",
-      "overlay": "????",
-      "chipLabel": "????"
+      "titleLine1": "云 AI",
+      "titleLine2": "相机平台",
+      "desc": "端到端智能相机堆栈将边缘推理与云编排相结合，以实现实时监控和可扩展部署。",
+      "cta": "请求演示",
+      "ready": "SDK 已准备好用于 CV18xx 平台。",
+      "uiVersion": "UI VERSION 1.0",
+      "imageAlt": "云AI相机接口",
+      "overlay": "活体检测",
+      "chipLabel": "参考芯片"
     },
     "value": {
       "0": {
-        "title": "????",
-        "desc": "??????????????????"
+        "title": "云端管理",
+        "desc": "集中设备配置、模型部署和车队监控。"
       },
       "1": {
-        "title": "?????",
-        "desc": "????? OTA ??????????"
+        "title": "可扩展的机队",
+        "desc": "使用统一的策略和 OTA 更新来操作数百个摄像机。"
       },
       "2": {
-        "title": "??????",
-        "desc": "????????? SoC ? ISP?"
+        "title": "视觉优先硬件",
+        "desc": "优化的 SoC 和 ISP 管道可实现始终在线的智能。"
       }
     },
     "specs": {
-      "title": "????",
-      "subtitle": "???????????? SoC ???",
+      "title": "硬件规格",
+      "subtitle": "针对始终在线视觉进行优化的集成 SoC 平台。",
       "items": {
         "0": {
-          "label": "??"
+          "label": "芯片"
         },
         "1": {
-          "label": "AI ??",
+          "label": "AI 性能",
           "value": "1.5 TOPS INT8"
         },
         "2": {
           "label": "ISP",
-          "value": "8MP @ 30FPS"
+          "value": "8MP@30FPS"
         },
         "3": {
-          "label": "??",
+          "label": "视频",
           "value": "H.265/H.264"
         },
         "4": {
-          "label": "??",
-          "value": "Wi-Fi / ??? / LTE"
+          "label": "连接性",
+          "value": "Wi-Fi / 以太网 / LTE"
         }
       },
-      "diagram": "????",
-      "sip": "?????",
+      "diagram": "系统框图",
+      "sip": "系统级封装",
       "blocks": {
         "0": {
-          "title": "???",
+          "title": "传感器",
           "bus": "MIPI"
         },
         "1": {
-          "title": "??",
+          "title": "贮存",
           "bus": "SDIO"
         },
         "2": {
-          "title": "??"
+          "title": "无线的"
         },
         "3": {
-          "title": "???"
+          "title": "以太网"
         },
         "4": {
           "title": "USB",
           "bus": "USB2.0"
         },
         "5": {
-          "title": "??",
+          "title": "力量",
           "bus": "PMIC"
         }
       }
     },
     "software": {
-      "title": "??????",
-      "cloudTitle": "???",
+      "title": "软件和云堆栈",
+      "cloudTitle": "云平台",
       "cloudItems": [
-        "????",
-        "????",
-        "????",
-        "OTA ??"
+        "车队管理",
+        "模型部署",
+        "分析仪表板",
+        "OTA 更新"
       ],
-      "deviceTitle": "????",
-      "appTitle": "??",
+      "deviceTitle": "边缘设备",
+      "appTitle": "应用领域",
       "appTags": [
-        "??",
-        "??",
-        "??",
-        "??"
+        "检测",
+        "追踪",
+        "计数",
+        "警报"
       ],
-      "hal": "HAL / ??",
-      "os": "Linux ??"
+      "hal": "HAL / 驱动程序",
+      "os": "Linux 系统"
     },
     "capabilities": {
-      "title": "????",
+      "title": "核心能力",
       "items": {
         "0": {
-          "title": "????",
-          "desc": "MQTT/WebSocket ????????"
+          "title": "事件消息传递",
+          "desc": "MQTT/WebSocket 警报具有可配置的阈值。"
         },
         "1": {
-          "title": "????",
-          "desc": "???????? Re-ID?"
+          "title": "图像智能",
+          "desc": "实时检测、跟踪和重新ID管道。"
         },
         "2": {
-          "title": "????",
-          "desc": "????????????"
+          "title": "全球访问",
+          "desc": "通过基于角色的访问确保远程查看的安全。"
         },
         "3": {
-          "title": "????",
-          "desc": "RTSP/HTTP ??????????"
+          "title": "多流视频",
+          "desc": "RTSP/HTTP 用于监控和存储的流式传输。"
         },
         "4": {
-          "title": "???",
-          "desc": "???? <30ms???????"
+          "title": "低延迟",
+          "desc": "边缘推断时间低于 30 毫秒，可实现响应式控制。"
         },
         "5": {
-          "title": "????",
-          "desc": "???????????????"
+          "title": "安全",
+          "desc": "安全启动、签名固件和加密传输。"
         }
       }
     },
     "cta": {
-      "title": "???? AI ???",
-      "subtitle": "?????????SDK ????????",
-      "secondary": "?? CV184 ??"
+      "title": "使用云 AI 相机构建",
+      "subtitle": "获取完整的参考设计、SDK 和云集成套件。",
+      "secondary": "查看CV184平台"
     }
   },
   "products": {
     "common": {
       "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
-      "notFound": "?????",
-      "returnHome": "????",
-      "requestQuote": "????",
-      "productOverview": "????",
-      "keyHighlights": "????",
-      "technicalSpecs": "????",
-      "specCategory": "??",
-      "specParameter": "??",
-      "specValue": "??",
-      "applications": "????",
-      "ctaTitle": "?? {{name}} ??????",
-      "ctaText": "?????? {{name}} ??????????????????",
-      "ctaButton": "??????",
-      "series": "{{series}} ??"
+      "notFound": "__PH2__",
+      "returnHome": "回家",
+      "requestQuote": "请求报价",
+      "productOverview": "产品概述",
+      "keyHighlights": "主要亮点",
+      "technicalSpecs": "技术规格",
+      "specCategory": "类别",
+      "specParameter": "范围",
+      "specValue": "价值",
+      "applications": "应用领域",
+      "ctaTitle": "使用 {{name}} 开发您的解决方案",
+      "ctaText": "We offer professional system integration and turnkey solutions based on the {{name}} platform. Accelerate your product launch with our engineering expertise.",
+      "ctaButton": "获取解决方案建议",
+      "series": "{{series}}系列"
     },
     "afcComingSoon": {
-      "metaTitle": "???? | AFC-V1",
-      "badge": "???",
-      "title": "????",
+      "metaTitle": "即将推出 | ",
+      "badge": "__PH0__",
+      "title": "即将推出",
       "subtitle": "AFC-V1",
-      "desc": "?????????????????????",
-      "tagline": "???????????",
-      "returnHome": "????",
-      "contactSales": "????????"
+      "desc": "集视觉、视频链路和控制于一体的终极一体化飞行控制器即将面世。",
+      "tagline": "重新定义 UAV 大脑的未来。",
+      "returnHome": "返回首页",
+      "contactSales": "联系销售人员了解规格"
     },
     "sophgo": {
       "bm1688": {
-        "tagline": "??????? AI SoC",
-        "description": "??? SoC?8 ? ARM ????? TPU ???",
+        "id": "bm1688",
+        "name": "BM1688",
+        "series": "TPU",
+        "tagline": "高度集成边缘 AI SOC",
+        "description": "高集成度 SoC，采用 8- 核心 ARM 架构与强大的 TPU 相结合。",
         "longDescription": [
-          "BM1688 ??????????????SoC????????? AI ??????????????? 8 ? ARM Cortex-A53?1.6GHz?? 16 TOPS?INT8?TPU??????? AI ???????????",
-          "BM1688 ?????????????????? Dewarp ? Stitching ??????????????????????????????????? ChatGLM2?Llama2 ?????LLM/VLM??",
-          "???????????????? CAN BUS?USB3 ????????????????? NVR ?????????"
+          "BM1688 是一款高度集成的片上系统 (SoC)，旨在为紧凑型边缘设备带来服务器级 AI 性能。",
+          "BM1688 的一个突出特点是其全面的视觉处理能力。",
+          "BM1688 支持双屏幕、多个传感器输入以及丰富的接口（包括 CAN BUS 和 USB3），用途广泛，足以用于机器人、智能 NVR 和高级工业平板电脑。"
         ],
         "highlights": [
-          "16 TOPS INT8 ??",
-          "8 ? ARM Cortex-A53 @ 1.6GHz",
-          "?? Dewarp + Stitch ?????????",
-          "?? LLM ? VLM?? ChatGLM2?Llama2?"
+          "16 TOPS INT8 算力",
+          "8-核心 ARM CA53 @ 1.6GHz",
+          "用于全景视图的硬连线 Dewarp + 缝合引擎",
+          "支持 LLM 和 VLM（例如 ChatGLM2、Llama2）"
         ],
         "detailedFeatures": [
           {
-            "title": "??????",
-            "description": "Dewarp ? Stitching ??????? CPU/TPU ???"
+            "title": "硬连线视觉引擎",
+            "description": "用于扭曲校正（鱼眼校正）和拼接（全景视图）的专用硬件块，减少 CPU/TPU 负载。"
           },
           {
-            "title": "??? AI ??",
-            "description": "????????? LLM ???????"
+            "title": "生成 AI 支持",
+            "description": "针对在本地运行流行的 LLM 和生成 AI 模型的量化版本进行了优化。"
           },
           {
-            "title": "?????",
-            "description": "?? LPDDR4/4x????????? NPU?"
+            "title": "高带宽内存",
+            "description": "支持LPDDR4/4x，带宽利用率高，保证数据顺利流向NPU。"
           }
         ],
         "specs": [
           {
-            "category": "???",
+            "category": "处理器",
             "key": "CPU",
-            "value": "8x ARM Cortex-A53 @ 1.6GHz"
+            "value": "8x ARM 皮质-A53 @ 1.6GHz"
           },
           {
             "category": "TPU",
-            "key": "??",
+            "key": "表现",
             "value": "16 TOPS INT8"
           },
           {
-            "category": "??",
-            "key": "??",
-            "value": "LPDDR4/4x 2x32bit"
+            "category": "记忆",
+            "key": "支持",
+            "value": "LPDDR4/4x 2x32 位"
           },
           {
             "category": "ISP",
-            "key": "???",
-            "value": "2x 8Mp30 / 16x 2Mp30 Decode"
+            "key": "解决",
+            "value": "2x 8Mp30 / 16x 2Mp30 解码"
           },
           {
-            "category": "??",
+            "category": "连接性",
             "key": "I/O",
-            "value": "USB3.0, PCIe, SATA, CAN FD"
+            "value": "USB3.0、PCIe、SATA、CAN FD"
           }
         ],
         "applications": [
           {
-            "title": "?????",
+            "title": "智能相机",
             "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "???",
+            "title": "机器人技术",
             "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "?????",
+            "title": "边缘计算盒",
             "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "???",
+            "title": "无人机",
             "image": "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80&w=400"
           }
         ],
         "faqs": [
           {
-            "question": "BM1688 ???? Llama 2 ??",
-            "answer": "???BM1688 ?????? Llama 2 ????INT4/INT8????"
+            "question": "BM1688 可以运行 Llama 2 吗？",
+            "answer": "是的，BM1688 支持高效运行 Llama 2 的量化版本 (INT4/INT8) 和其他类似大小的 LLM。"
           },
           {
-            "question": "????????????",
-            "answer": "???????? MIPI ??? ISP???????????"
+            "question": "支持多摄像头输入吗？",
+            "answer": "是的，它支持广泛的 MIPI 输入，并具有专用的 ISP 能够处理环视应用的多个流。"
           }
         ]
       },
       "cv186ah": {
-        "tagline": "?????????",
-        "description": "???????????????? SoC?",
+        "id": "cv186ah",
+        "name": "CV186AH",
+        "series": "VISION",
+        "tagline": "高端智能视觉处理器",
+        "description": "适用于专业安全和智能边缘应用的顶级 SoC。",
         "longDescription": [
-          "CV186AH ? Vision ??????????????????? 6 ? ARM Cortex-A53 ? 7.2 TOPS TPU??????????????????????",
-          "?? 4K ??? 360? ??????????? ISP ??????????????????????????????????????????",
-          "??????????????????????????"
+          "CV186AH是Vision系列的旗舰产品，专为高端智能视频应用而设计。",
+          "CV186AH 专为下一代智能相机和机器人量身定制，支持高达 4K 的分辨率处理和先进的 ISP 功能，例如 360- 度全景拼接和扭曲校正。",
+          "CV186AH具有硬件级安​​全性和工业级可靠性，确保关键部署中安全稳定运行。"
         ],
         "highlights": [
-          "7.2 TOPS @ INT8 / 4T??????",
-          "6 ? ARM Cortex-A53 @ 1.6GHz",
-          "?? 360? ????????",
-          "??????"
+          "7.2 TOPS @ INT8 / 4T （深度学习）",
+          "6-核心 ARM 皮质-A53 @ 1.6GHz",
+          "支持360°全景拼接和扭曲校正",
+          "双眼深度计算"
         ],
         "detailedFeatures": [
           {
-            "title": "?????",
-            "description": "6 ? + 7.2 TOPS AI??? 4K ????????"
+            "title": "高性能计算",
+            "description": "6-核心架构加上7.2 TOPS AI确保顺利处理4K流和重型AI模型。"
           },
           {
-            "title": "????",
-            "description": "????????????????????"
+            "title": "先进的视觉",
+            "description": "集成深度计算引擎和拼接硬件，用于沉浸式视觉应用。"
           }
         ],
         "specs": [
           {
             "category": "TPU",
-            "key": "??",
+            "key": "力量",
             "value": "7.2 TOPS"
           },
           {
             "category": "CPU",
-            "key": "??",
+            "key": "核心",
             "value": "6x A53 @ 1.6GHz"
           },
           {
             "category": "ISP",
-            "key": "??",
-            "value": "4K ???"
+            "key": "最大限度",
+            "value": "4K 分辨率"
           },
           {
-            "category": "??",
-            "key": "??",
+            "category": "过程",
+            "key": "包裹",
             "value": "BGA"
           }
         ],
         "applications": [
           {
-            "title": "????? IPC",
+            "title": "高端多镜头IPC",
             "image": "https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "?????",
+            "title": "机器人平台",
             "image": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "??????",
+            "title": "双目深度相机",
             "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "?????",
+            "title": "无人机避障",
             "image": "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=400"
           }
         ],
         "faqs": []
       },
       "cv184": {
-        "tagline": "?????? SoC",
-        "description": "?????????????????????",
+        "id": "cv184",
+        "name": "CV184",
+        "series": "VISION",
+        "tagline": "中端边缘视觉 SoC",
+        "description": "消费者和 SMB 智能相机的平衡性能。",
         "longDescription": [
-          "CV184 ??????????????? ARM Cortex-A53 + RISC-V C906 ??? 1.5 TOPS TPU??? 4K ???????????",
-          "? CV181 ????????????????? ISP ????????????????????????"
+          "CV184 在中距离视觉应用的性能和功效之间实现了完美平衡。",
+          "CV184 与 CV181 系列引脚兼容，允许制造商轻松扩展其产品线，而无需重新设计硬件。"
         ],
         "highlights": [
           "1.5 TOPS @ INT8",
-          "???ARM A53 + RISC-V C906?",
-          "?? 4K ??",
-          "? CV181 ??????"
+          "双核（ARM A53 + RISC-V C906）",
+          "支持 4K 编码",
+          "与 CV181 系列引脚兼容"
         ],
         "detailedFeatures": [
           {
-            "title": "4K ??",
-            "description": "?? H.265/H.264 4K ?????????????"
+            "title": "4K 编码",
+            "description": "以 4K 分辨率进行高效 H.265/H.264 编码可确保高质量的视频存储和流媒体。"
           },
           {
-            "title": "????",
-            "description": "? CV181 ??????????"
+            "title": "无缝升级",
+            "description": "与 CV181 的硬件兼容性简化了产品路线图升级。"
           }
         ],
         "specs": [
           {
             "category": "TPU",
-            "key": "??",
+            "key": "力量",
             "value": "1.5 TOPS"
           },
           {
             "category": "CPU",
-            "key": "??",
+            "key": "基本的",
             "value": "A53 @ 1.1GHz"
           },
           {
-            "category": "??",
-            "key": "??",
+            "category": "编码",
+            "key": "视频",
             "value": "H.265/H.264 4K"
           },
           {
-            "category": "??",
-            "key": "SiP",
+            "category": "记忆",
+            "key": "啜饮",
             "value": "512Mb - 4Gb DDR"
           }
         ],
@@ -920,53 +929,56 @@
             "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "???",
+            "title": "无人机",
             "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????????",
+            "title": "边缘大型模型机器人",
             "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "访问控制",
             "image": "https://images.unsplash.com/photo-1555449767-e92592a8385e?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "???",
+            "title": "扫描笔",
             "image": "https://images.unsplash.com/photo-1456735190827-d1261f7add50?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "?????",
+            "title": "行车记录仪",
             "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "超HD夜视仪",
             "image": "https://images.unsplash.com/photo-1510253687831-0f982d7862fc?auto=format&fit=crop&q=80&w=400"
           }
         ],
         "faqs": []
       },
       "cv181": {
-        "tagline": "RISC-V ????? SoC",
-        "description": "???????? AIoT ??????????",
+        "id": "cv181",
+        "name": "CV181",
+        "series": "VISION",
+        "tagline": "RISC-V 消费者视觉 SoC",
+        "description": "适用于大规模消费者 AIoT 部署的经济高效的解决方案。",
         "longDescription": [
-          "CV181 ????? AIoT ????? ARM A53 + RISC-V C906 ??????? 0.5~1.0 TOPS AI ??????????????????????",
-          "?? 5MP ISP ????????????????????????????????"
+          "CV181是一款专为大众消费AIoT市场量身定制的高效SoC。",
+          "通过支持 5MP ISP 和极低的功耗，CV181 使电池供电的设备能够运行更长时间，同时保持智能功能。"
         ],
         "highlights": [
           "0.5 ~ 1.0 TOPS @ INT8",
-          "???A53 + C906?",
-          "?? 5M ?? ISP",
-          "???"
+          "双核（A53 + C906）",
+          "支持5M像素ISP",
+          "低功耗"
         ],
         "detailedFeatures": [
           {
-            "title": "????",
-            "description": "????????????????"
+            "title": "电池友好",
+            "description": "针对低功耗进行架构优化，非常适合无线摄像头和门铃。"
           },
           {
-            "title": "????",
-            "description": "????? BOM ???"
+            "title": "成本效益",
+            "description": "高集成度降低了大众市场消费电子产品的 BOM 成本。"
           }
         ],
         "specs": [
@@ -977,64 +989,67 @@
           },
           {
             "category": "ISP",
-            "key": "???",
+            "key": "资源",
             "value": "5MP @ 30fps"
           },
           {
-            "category": "??",
-            "key": "??",
+            "category": "包裹",
+            "key": "类型",
             "value": "QFN / BGA"
           }
         ],
         "applications": [
           {
-            "title": "????",
+            "title": "智能家居",
             "image": "https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "??????",
+            "title": "人脸识别闸机",
             "image": "https://images.unsplash.com/photo-1563720223521-47963b6528d2?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "???",
+            "title": "扫描笔",
             "image": "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "??????",
+            "title": "流媒体后视镜",
             "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "?????",
+            "title": "校园相机",
             "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "HD 夜视仪",
             "image": "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?auto=format&fit=crop&q=80&w=400"
           }
         ],
         "faqs": []
       },
       "cv180": {
-        "tagline": "??? RISC-V ?? SoC",
-        "description": "???????????????????? AIoT ???",
+        "id": "cv180",
+        "name": "CV180",
+        "series": "VISION",
+        "tagline": "入门级 RISC-V 视觉 SoC",
+        "description": "最方便使用的智能视觉芯片，非常适合电池供电设备和基本 AIoT 节点。",
         "longDescription": [
-          "CV180 ? Vision ????????? RISC-V C906???????????????0.2 TOPS AI ?????????????",
-          "????? QFN ??????????????????????????????????"
+          "CV180 是 Vision 系列的入门级冠军，建立在纯 RISC-V C906 核心之上。",
+          "CV180 采用成本优化的 QFN 封装，可实现超紧凑 PCB 设计。"
         ],
         "highlights": [
           "0.2 TOPS @ INT8",
-          "?? RISC-V C906 @ 1.0GHz",
-          "????",
-          "QFN ????????"
+          "单核 RISC-V C906 @ 1.0GHz",
+          "超低功耗",
+          "QFN 封装（成本优化）"
         ],
         "detailedFeatures": [
           {
-            "title": "? RISC-V",
-            "description": "???? C906?????????"
+            "title": "纯RISC-V",
+            "description": "高效的单核 C906 实现可简化嵌入式开发。"
           },
           {
-            "title": "???",
-            "description": "?? QFN ?????????"
+            "title": "超紧凑型",
+            "description": "小尺寸 QFN 封装可实现微小的设备外形尺寸。"
           }
         ],
         "specs": [
@@ -1045,38 +1060,38 @@
           },
           {
             "category": "CPU",
-            "key": "??",
+            "key": "核",
             "value": "RISC-V C906"
           },
           {
-            "category": "??",
-            "key": "??",
+            "category": "视频",
+            "key": "恩克",
             "value": "5MP / 4MP"
           }
         ],
         "applications": [
           {
-            "title": "?? IPC",
+            "title": "首页 IPC",
             "image": "https://images.unsplash.com/photo-1599388168270-4f59cb03597c?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "智能门铃",
             "image": "https://images.unsplash.com/photo-1593142959928-8671404c0df6?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "猫眼门锁",
             "image": "https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "?????",
+            "title": "行车记录仪",
             "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "婴儿监视器",
             "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "儿童相机",
             "image": "https://images.unsplash.com/photo-1519638831568-d9897f54ed69?auto=format&fit=crop&q=80&w=400"
           }
         ],
@@ -1085,266 +1100,269 @@
     },
     "espressif": {
       "esp32s3": {
-        "tagline": "2.4 GHz Wi-Fi ? Bluetooth 5 (LE) ??",
-        "description": "?? ESP32-S3 ???? Wi-Fi + BLE MCU ????? AI ????????",
+        "id": "esp32s3",
+        "name": "ESP32-S3-WROOM-1",
+        "series": "WROOM",
+        "tagline": "2.4 GHz Wi-Fi 和蓝牙 5 (LE) 模块",
+        "description": "一款功能强大的通用 Wi-Fi + 蓝牙 LE MCU 模块，围绕 ESP32-S3 系列 SoC 构建，具有 AI 加速和丰富的外设。",
         "longDescription": [
-          "ESP32-S3-WROOM-1 ? ESP32-S3-WROOM-1U ??? ESP32-S3 SoC ??? Wi-Fi + BLE MCU ???????? 32 ? Xtensa LX7??? 240 MHz?",
-          "????? AI/DSP ??????? AIoT ??????????????????????????????????????",
-          "ESP32-S3-WROOM-1 ?? PCB ???1U ????????? 16 MB Quad SPI Flash ??? PSRAM????????????"
+          "ESP32-S3-WROOM-1 和 ESP32-S3-WROOM-1U 是两个功能强大的通用 Wi-Fi + 蓝牙 LE MCU 模块，围绕 ESP32-S3 系列 SoC 构建。",
+          "除了丰富的外设之外，SoC 提供的神经网络计算和信号处理工作负载加速功能使该模块成为与 AI 和人工智能物联网 (AIoT) 相关的各种应用场景的理想选择，例如唤醒词检测、语音命令识别、人脸检测和识别、智能家居、智能家电、智能控制面板和智能扬声器。",
+          "ESP32-S3-WROOM-1 配有 PCB 天线。 "
         ],
         "highlights": [
-          "Xtensa ?? 32-bit LX7 @ 240 MHz",
-          "???????????",
-          "2.4 GHz Wi-Fi (802.11b/g/n) ? Bluetooth 5 (LE)",
-          "?????36 GPIO?SPI?LCD?Camera?USB-OTG"
+          "Xtensa® 双核 32- 位 LX7 @ 240 MHz",
+          "AI 神经网络加速",
+          "2.4 GHz Wi-Fi (802.11b/g/n) 和蓝牙 5 (LE)",
+          "丰富的外设：36 GPIO、SPI、LCD、摄像头、USB-OTG"
         ],
         "specs": [
           {
-            "category": "???",
+            "category": "处理器",
             "key": "CPU",
-            "value": "?? Xtensa LX7 ?? 240 MHz"
+            "value": "双核 Xtensa® LX7 高达 240 MHz"
           },
           {
             "category": "AI",
-            "key": "??",
-            "value": "?????? NN ?????"
+            "key": "加速",
+            "value": "用于 NN 和信号处理的向量指令"
           },
           {
-            "category": "??",
-            "key": "Wi-Fi",
-            "value": "802.11b/g/n??? 150 Mbps"
+            "category": "无线的",
+            "key": "无线上网",
+            "value": "802.11b/g/n，高达 150 Mbps"
           },
           {
-            "category": "??",
-            "key": "Bluetooth",
-            "value": "Bluetooth 5, Bluetooth Mesh"
+            "category": "无线的",
+            "key": "蓝牙",
+            "value": "蓝牙 5、蓝牙网状网络"
           },
           {
-            "category": "??",
-            "key": "Flash",
-            "value": "?? 16 MB Quad SPI"
+            "category": "记忆",
+            "key": "闪光",
+            "value": "最多 16 MB 四倍 SPI"
           },
           {
-            "category": "??",
+            "category": "记忆",
             "key": "PSRAM",
-            "value": "?? 16 MB????"
+            "value": "最多 16 MB （可选）"
           },
           {
-            "category": "??",
+            "category": "界面",
             "key": "GPIO",
-            "value": "36 GPIOs"
+            "value": "36 GPIO"
           },
           {
-            "category": "??",
+            "category": "界面",
             "key": "USB",
-            "value": "Full-speed USB 2.0 OTG"
+            "value": "全速 USB 2.0 OTG"
           },
           {
-            "category": "??",
-            "key": "??",
+            "category": "力量",
+            "key": "供应",
             "value": "3.0 ~ 3.6 V"
           },
           {
-            "category": "??",
-            "key": "??",
-            "value": "-40 ~ 85 C??? 105 C?"
+            "category": "环境",
+            "key": "温度",
+            "value": "-40 ~ 85 °C (可选105 °C)"
           }
         ],
         "applications": [
           {
-            "title": "????",
+            "title": "智能家居",
             "image": "https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "?????",
+            "title": "工业自动化",
             "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "卫生保健",
             "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400"
           },
           {
-            "title": "????",
+            "title": "语音识别",
             "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=400"
           }
         ],
         "detailedFeatures": [
           {
-            "title": "AI ? DSP ??",
-            "description": "Xtensa LX7 ???????????????????"
+            "title": "AI 和 DSP 加速度",
+            "description": "Xtensa LX7 微处理器支持向量指令，为神经网络计算和信号处理提供加速。"
           },
           {
-            "title": "????",
-            "description": "?? 2.4 GHz Wi-Fi ? Bluetooth 5 (LE)?????????"
+            "title": "全面的连接性",
+            "description": "集成 2.4 GHz Wi-Fi 和蓝牙 5 (LE)，具有长距离支持，确保物联网设备的可靠通信。"
           },
           {
-            "title": "????",
-            "description": "?? SPI?I2S?I2C?PWM?RMT?ADC?UART?SD/MMC?TWAI ? USB 2.0 OTG?"
+            "title": "丰富的周边套装",
+            "description": "包括 SPI、I2S、I2C、PWM、RMT、ADC、UART、SD/MMC 主机、TWAI (ISO 11898-1) 和全速 USB 2.0 OTG 接口。"
           }
         ],
         "faqs": [
           {
-            "question": "??????????",
-            "answer": "????? -40 ~ 85 C?H4 ???? 105 C?"
+            "question": "工作温度范围是多少？",
+            "answer": "标准版本的工作温度为 –40 ~ 85 °C。 "
           },
           {
-            "question": "WROOM-1 ? 1U ?????",
-            "answer": "WROOM-1 ???? PCB ???1U ?????????"
+            "question": "WROOM-1 和 1U 有什么区别？",
+            "answer": "ESP32-S3-WROOM-1 使用板载 PCB 天线，而 WROOM-1U 具有用于外部天线的连接器。"
           }
         ]
       }
     }
   },
   "legal": {
-    "lastUpdated": "?????{{date}}"
+    "lastUpdated": "最后更新：{{date}}"
   },
   "privacy": {
-    "metaTitle": "???? | AIMORELOGY",
-    "title": "????",
+    "metaTitle": "隐私政策 | ",
+    "title": "隐私政策",
     "intro": {
-      "p1": "AIMORELOGY LIMITED ????????AIMORELOGY????????????????????????????????????????????????????????",
-      "p2": "????????????????????????????"
+      "p1": "AIMORELOGY LIMITED 及其附属公司（“AIMORELOGY”、“我们”、“我们”或“我们的”）致力于保护您的隐私。",
+      "p2": "本隐私政策解释了当您访问我们的网站或使用我们的产品和服务时，我们如何收集、使用、披露和保护您的信息。"
     },
     "sections": {
       "collection": {
-        "title": "1. ????",
-        "p1": "????????????????????",
+        "title": "1. 收集您的信息",
+        "p1": "我们可能会通过多种方式收集有关您的信息。",
         "items": {
           "0": {
-            "title": "????",
-            "desc": "??????????????????????????????????????????"
+            "title": "我们可能在网站上收集的信息包括：",
+            "desc": "您在本网站注册或选择参加与本网站相关的各种活动时自愿向我们提供的个人身份信息，例如您的姓名、送货地址、电子邮件地址和电话号码。"
           },
           "1": {
-            "title": "????",
-            "desc": "??????????????????? IP ??????????????????????????"
+            "title": "衍生数据",
+            "desc": "当您访问本网站时，我们的服务器自动收集的信息，例如您的 IP 地址、您的浏览器类型、您的操作系统、您的访问时间以及您在访问本网站之前和之后直接查看的页面。"
           }
         }
       },
       "use": {
-        "title": "2. ????",
-        "p1": "??????????????????????????????",
+        "title": "2. 您的信息的使用",
+        "p1": "掌握有关您的准确信息使我们能够为您提供流畅、高效和定制的体验。",
         "items": {
-          "0": "????????",
-          "1": "??????????? CV184XH ????",
-          "2": "????????????",
-          "3": "??????????",
-          "4": "????????????",
-          "5": "???????????????"
+          "0": "创建并管理您的帐户。",
+          "1": "处理您的订单并交付产品（例如 CV184XH 飞行控制器）。",
+          "2": "向您发送有关您的帐户或订单的电子邮件。",
+          "3": "响应产品和客户服务请求。",
+          "4": "编制匿名统计数据和分析以供内部使用。",
+          "5": "向您发送新闻通讯（如果您选择加入）。"
         }
       },
       "disclosure": {
-        "title": "3. ????",
-        "p1": "????????????????????",
+        "title": "3. 披露您的信息",
+        "p1": "在某些情况下，我们可能会分享我们收集的有关您的信息。",
         "items": {
           "0": {
-            "title": "?????????",
-            "desc": "?????????????????????????????????"
+            "title": "依据法律或保护权利",
+            "desc": "如果我们认为为了响应法律程序、调查或纠正潜在的违反我们政策的行为或保护他人的权利、财产和安全，有必要发布有关您的信息。"
           },
           "1": {
-            "title": "????????",
-            "desc": "??????????????????????????????????????????"
+            "title": "第三方服务提供商",
+            "desc": "我们可能会与为我们或代表我们提供服务的第三方共享您的信息，包括支付处理、数据分析、电子邮件发送、托管服务、客户服务和营销协助。"
           }
         }
       },
       "security": {
-        "title": "4. ????",
-        "p1": "?????????????????????????????????????????"
+        "title": "4. 您的信息安全",
+        "p1": "我们使用管理、技术和物理安全措施来帮助保护您的个人信息。"
       },
       "contact": {
-        "title": "5. ????",
-        "p1": "???????????????"
+        "title": "虽然我们已采取合理措施来保护您提供给我们的个人信息，但请注意，尽管我们付出了努力，但没有任何安全措施是完美或坚不可摧的，也无法保证任何数据传输方法不会被拦截或其他类型的滥用。",
+        "p1": "如果您对本隐私政策有疑问或意见，请通过以下方式联系我们："
       }
     },
     "contact": {
       "company": "AIMORELOGY LIMITED",
-      "addressLine1": "Room H2 4/F, Century Industrial Centre",
-      "addressLine2": "33-35 Au Pui Wan Street Fotan, Sha Tin, Hong Kong",
-      "emailLabel": "??",
+      "addressLine1": "世纪工业中心H2 4/F室",
+      "addressLine2": "33-35 香港沙田火炭坳背湾街",
+      "emailLabel": "电子邮件",
       "email": "info@aimorelogy.com"
     }
   },
   "terms": {
-    "metaTitle": "???? | AIMORELOGY",
-    "title": "????",
-    "intro": "????????????????? AIMORELOGY LIMITED????????????????????????????????????????????",
+    "metaTitle": "服务条款 | ",
+    "title": "服务条款",
+    "intro": "这些服务条款（“条款”）管辖您对 AIMORELOGY LIMITED（“公司”、“我们”或“我们”）运营的网站的使用以及对我们产品和服务的购买。",
     "sections": {
       "license": {
-        "title": "1. ????",
-        "p1": "???????????????????????????????????????????????",
+        "title": "1. 使用许可",
+        "p1": "允许临时下载 AIMORELOGY 网站上的材料（信息或软件）的一份副本，仅供个人、非商业性临时查看。",
         "items": {
-          "0": "????????",
-          "1": "??????????????",
-          "2": "?????????????",
-          "3": "????????????",
-          "4": "???????????????"
+          "0": "修改或者复制材料；",
+          "1": "将这些材料用于任何商业目的或任何公开展示（商业或非商业）；",
+          "2": "尝试对 AIMORELOGY 网站上包含的任何软件进行反编译或逆向工程；",
+          "3": "删除材料中的任何版权或其他专有符号；",
+          "4": "或者"
         }
       },
       "disclaimer": {
-        "title": "2. ????",
-        "p1": "????????????AIMORELOGY ????????????????????????????????"
+        "title": "2. 免责声明",
+        "p1": "AIMORELOGY 网站上的材料按“原样”提供。 "
       },
       "limitations": {
-        "title": "3. ????",
-        "p1": "???????????????????????????????????AIMORELOGY ???????????????"
+        "title": "3. 局限性",
+        "p1": "在任何情况下，AIMORELOGY 或其供应商均不对因使用或无法使用 AIMORELOGY 网站上的材料而造成的任何损害（包括但不限于数据或利润损失或由于业务中断而造成的损害）承担责任，即使 AIMORELOGY 或授权代表已被口头或书面通知发生此类损害的可能性。"
       },
       "usage": {
-        "title": "4. ???????",
-        "p1": "???????????? AI ?????????????",
+        "title": "4. 产品使用与安全",
+        "p1": "我们的产品，包括飞行控制器和 Edge AI 模块，专为工业和专业用途而设计。",
         "items": {
-          "0": "?????????????????",
-          "1": "??????????????????????????",
-          "2": "??????????????????????"
+          "0": "您同意按照所有适用的当地法律和航空法规使用我们的产品。",
+          "1": "AIMORELOGY 对因误用、不正确安装或修改我们的硬件或软件而造成的任何损害、伤害或法律责任不承担任何责任。",
+          "2": "用户有责任确保使用我们技术部署的任何自主系统都能安全运行。"
         }
       },
       "law": {
-        "title": "5. ????",
-        "p1": "?????????????????????"
+        "title": "5. 适用法律",
+        "p1": "这些条款和条件受香港 SAR 法律管辖并按其解释，并且您不可撤销地服从该地区法院的专属管辖权。"
       },
       "changes": {
-        "title": "6. ????",
-        "p1": "???????????????????????????"
+        "title": "6. 条款变更",
+        "p1": "我们保留自行决定随时修改或替换这些条款的权利。"
       }
     }
   },
   "cookies": {
-    "metaTitle": "Cookie ?? | AIMORELOGY",
-    "title": "Cookie ??",
-    "intro": "? Cookie ??????? Cookie??????? Cookie ???????",
+    "metaTitle": "Cookie 政策 | ",
+    "title": "Cookie 政策",
+    "intro": "本 Cookie 政策解释了什么是 Cookie、AIMORELOGY 如何在我们的网站上使用 Cookie，以及您对 Cookie 的选择。",
     "sections": {
       "what": {
-        "title": "1. ??? Cookie?",
-        "p1": "Cookie ???????????????????????????????"
+        "title": "1. 什么是 Cookie？",
+        "p1": "Cookie 是由您访问的网站发送到您的网络浏览器的小文本文件。 "
       },
       "use": {
-        "title": "2. Cookie ???",
-        "p1": "??????????????????? Cookie????",
+        "title": "2. 我们如何使用 Cookie",
+        "p1": "当您使用和访问服务时，我们可能会在您的网络浏览器中放置一些 cookie 文件。",
         "items": {
           "0": {
-            "title": "??? Cookie",
-            "desc": "?????????????"
+            "title": "基本饼干",
+            "desc": "启用服务的某些功能，例如身份验证和安全性。"
           },
           "1": {
-            "title": "??? Cookie",
-            "desc": "??????????????? Google Analytics??"
+            "title": "分析 Cookie",
+            "desc": "提供分析并了解我们网站的使用方式（例如 Google Analytics）。"
           },
           "2": {
-            "title": "?? Cookie",
-            "desc": "????????????"
+            "title": "偏好 Cookie",
+            "desc": "存储您的首选项，例如语言设置。"
           }
         }
       },
       "third": {
-        "title": "3. ??? Cookie",
-        "p1": "????????? Cookie ?????????????"
+        "title": "3. 第三方 Cookie",
+        "p1": "除了我们自己的 cookie 之外，我们还可能使用各种第三方 cookie 来报告服务的使用统计数据、在服务上或通过服务投放广告等。"
       },
       "choices": {
-        "title": "4. ????",
-        "p1": "??????? Cookie????????????",
-        "p2": "????? Cookie ????????????"
+        "title": "4. 你的选择",
+        "p1": "如果您想删除 cookie 或指示您的网络浏览器删除或拒绝 cookie，请访问您的网络浏览器的帮助页面。",
+        "p2": "但请注意，如果您删除 Cookie 或拒绝接受它们，您可能无法使用我们提供的所有功能，您可能无法存储您的首选项，并且我们的某些页面可能无法正常显示。"
       }
     },
     "help": {
-      "title": "????????"
+      "title": "浏览器帮助页面："
     }
   }
 }
