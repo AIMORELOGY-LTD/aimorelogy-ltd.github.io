@@ -143,7 +143,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       ],
       applications: [
         { title: '4K IPC', image: '/4K IPC.webp' },
-        { title: 'Drone', image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=400' },
+        { title: 'Drones', image: '/Drones.webp' },
         { title: 'Edge Large Model Robot', image: '/Edge Large Model Robot.webp' },
         { title: 'Access Control', image: '/Access Control.webp' },
         { title: 'Scanning Pen', image: '/Scanning Pen.webp' },
