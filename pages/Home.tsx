@@ -332,7 +332,7 @@ const Home: React.FC = () => {
                {/* Fixed Image Container: Larger mobile height, no hover scale, no shadow */}
                <div className="relative w-full h-64 md:h-auto md:aspect-video bg-gray-50 rounded-sm border border-gray-200 flex items-center justify-center overflow-hidden">
                  <img 
-                    src="AFC-V1-Temp.webp" 
+                    src="/AFC-V1-Temp.webp" 
                     alt="AFC-V1 Flight Controller" 
                     className="w-full h-full object-cover" 
                  />
@@ -414,7 +414,7 @@ const Home: React.FC = () => {
               {/* Step 1 */}
               <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="AI-TRACKING/image0.webp" alt="Precision Locking" className="w-full h-full object-cover" />
+                      <img src="/AI-TRACKING/image0.webp" alt="Precision Locking" className="w-full h-full object-cover" />
                       <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">{t('home.tracking.status.tracking')}</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">{t('home.tracking.steps.0.title')}</h4>
@@ -424,7 +424,7 @@ const Home: React.FC = () => {
               {/* Step 2 */}
               <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="AI-TRACKING/image1.webp" alt="Complex Background" className="w-full h-full object-cover" />
+                      <img src="/AI-TRACKING/image1.webp" alt="Complex Background" className="w-full h-full object-cover" />
                       <div className="absolute top-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 font-mono uppercase">{t('home.tracking.status.stable')}</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">{t('home.tracking.steps.1.title')}</h4>
@@ -434,7 +434,7 @@ const Home: React.FC = () => {
               {/* Step 3 */}
               <div>
                   <div className="relative aspect-video bg-gray-100 mb-6 overflow-hidden border border-gray-200 shadow-sm">
-                      <img src="AI-TRACKING/image2.webp" alt="Long Range" className="w-full h-full object-cover" />
+                      <img src="/AI-TRACKING/image2.webp" alt="Long Range" className="w-full h-full object-cover" />
                       <div className="absolute top-2 left-2 bg-[#00ff00] text-black text-[10px] px-2 py-1 font-mono uppercase">{t('home.tracking.status.locked')}</div>
                   </div>
                   <h4 className="font-bold text-gray-900 uppercase text-center mb-2">{t('home.tracking.steps.2.title')}</h4>
@@ -502,7 +502,7 @@ const Home: React.FC = () => {
                 {/* DSHOT VISUALIZATION - DIRECT IMAGE */}
                 <div className="w-full flex justify-center lg:justify-end">
                      <img 
-                       src="DSHOT-WAVE.webp" 
+                       src="/DSHOT-WAVE.webp" 
                        alt="DShot Signal Diagram" 
                        className="w-full h-auto object-contain max-w-2xl" 
                      />

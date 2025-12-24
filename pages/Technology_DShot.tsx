@@ -67,7 +67,7 @@ const Technology_DShot: React.FC = () => {
               {/* Visualization: Static Diagram (Direct Image) */}
               <div className="lg:w-1/2 w-full flex justify-center">
                   <img 
-                     src="DSHOT-WAVE.webp" 
+                     src="/DSHOT-WAVE.webp" 
                      alt={t('dshot.hero.imageAlt')} 
                      className="w-full h-auto object-contain max-h-[300px]" 
                      style={{ filter: 'invert(1) brightness(1.05)' }}

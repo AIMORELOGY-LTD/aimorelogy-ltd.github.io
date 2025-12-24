@@ -37,8 +37,8 @@
     "language": "语言",
     "lang": {
       "en": "英语",
-      "zh": "????",
-      "ru": "??????"
+      "zh": "简体中文",
+      "ru": "Русский"
     },
     "promo": "需要集成或技术规格方面的帮助吗？",
     "contactSupport": "我们的工程团队随时准备提供帮助。",
@@ -46,7 +46,7 @@
   },
   "footer": {
     "getInTouch": "联系我们",
-    "getInTouchDesc": "Discuss your solution needs with our engineering team. We provide turnkey services for UAVs and Edge AI.",
+    "getInTouchDesc": "与我们的工程团队讨论解决方案需求。我们为无人机与边缘 AI 提供交付服务。",
     "salesSupport": "销售与支持",
     "shenzhen": "深圳HQ",
     "address": "宝安区郎君广场T2-A 603-12",
@@ -67,7 +67,7 @@
       "cookies": "曲奇饼",
       "privacy": "隐私"
     },
-    "disclaimer": "AIMORELOGY technologies may require enabled hardware, software or service activation. // No product or component can be absolutely secure. // Your costs and results may vary. // Performance varies by use, configuration, and other factors. // See our complete legal Notices and Disclaimers. // AIMORELOGY is committed to respecting human rights and avoiding causing or contributing to adverse impacts on human rights."
+    "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务。// 没有任何产品或组件是绝对安全的。// 成本与结果可能因人而异。// 性能取决于使用方式、配置和其他因素。// 请参阅完整的法律声明与免责声明。// AIMORELOGY 致力于尊重人权，避免造成或促成不利影响。"
   },
   "home": {
     "hero": {
@@ -91,7 +91,7 @@
         "2": {
           "category": "框架",
           "title": "通用自适应 DShot",
-          "description": "DMA-Free, Bi-directional DShot 300/150 support on any chip platform. Dynamic error elimination for perfect stability.",
+          "description": "DMA-Free、双向 DShot 300/150，适配任意芯片平台，动态误差消除，稳定可靠。",
           "navTitle": "自适应动态拍摄",
           "navDesc": "通用控制框架。",
           "buttonText": "查看规格"
@@ -149,7 +149,7 @@
     "dshot": {
       "kicker": "通用框架",
       "title": "自适应动态拍摄",
-      "subtitle": "DMA-Free. Bi-directional. Adaptive. Bring professional DShot 300/150 support to any MCU platform.",
+      "subtitle": "DMA-Free。双向。自适应。为任意 MCU 提供专业级 DShot 300/150 支持。",
       "features": {
         "0": {
           "title": "任何芯片平台",
@@ -178,7 +178,7 @@
     "readStory": "Read Story"
   },
   "careers": {
-    "metaTitle": "Careers | AIMORELOGY",
+    "metaTitle": "加入我们 | AIMORELOGY",
     "hero": {
       "kicker": "加入我们的团队",
       "titleLine1": "职业机会",
@@ -201,7 +201,7 @@
   "contact": {
     "metaTitle": "联系我们 | ",
     "title": "__PH0__",
-    "subtitle": "Have questions about our enterprise solutions? Reach out to our dedicated team via phone, WeChat, WhatsApp, or email.",
+    "subtitle": "关于企业方案有疑问？欢迎通过电话、微信、WhatsApp 或邮件与我们联系。",
     "salesSupport": "销售与支持",
     "channels": "手机/微信/WhatsApp",
     "corporateEmail": "企业邮箱",
@@ -250,9 +250,9 @@
       "name": "柯怡然",
       "role": "创始人 & CEO",
       "tags": [
-        "// SYSTEM ARCHITECT",
-        "// OPEN SOURCE ADVOCATE",
-        "// PRODUCT STRATEGIST"
+        "// 系统架构",
+        "// 开源倡导",
+        "// 产品战略"
       ],
       "bio": {
         "intro": "柯怡然是AIMORELOGY的创始人和CEO，带来了从底层硬件到智能系统算法的丰富跨领域经验。",
@@ -260,8 +260,8 @@
         "background": "在创立公司之前，他深度参与开源硬件和RISC-V生态系统，被公认为国内RISC-V社区的早期建设者之一。",
         "trackTitle": "业绩记录",
         "track": "主导了Milk-V Duo、Mars、Pioneer系列的设计、产品化和全球推广，在海外众筹取得了显著成功。",
-        "p1": "His extensive background in chips and underlying systems has fostered deep technical thinking, product execution capabilities, and a natural resonance with developer culture. He believes the value of technology lies not just in performance metrics, but in enabling more people to \"truly use it, touch it, and change it.\"",
-        "p2": "Post-2025, he has shifted his focus from system architecture to intelligent UAVs and AI systems. Founding AIMORELOGY, he focuses on UAV flight control, visual perception, edge AI inference, and intelligent mission systems.",
+        "p1": "其在芯片与底层系统方面的经验，塑造了深厚的技术思考与产品落地能力，并与开发者文化高度契合。他认为技术的价值不只是指标，更在于让更多人真正使用、触达并改变世界。",
+        "p2": "2025 年后，他将重心转向智能无人机与 AI 系统，创立 AIMORELOGY，专注飞控、视觉感知、边缘 AI 推理与智能任务系统。",
         "footer": "柯怡然本质上仍然是一名工程师：亲自审查系统架构，参与飞控链路设计，并优先考虑底层可靠性和实际用户场景。"
       },
       "philosophy": {
@@ -316,11 +316,11 @@
     }
   },
   "aiTracking": {
-    "metaTitle": "Self-Developed AI Tracking | AIMORELOGY",
+    "metaTitle": "自研 AI 跟踪 | AIMORELOGY",
     "breadcrumb": "AI 追踪算法",
     "hero": {
       "kicker": "核心技术",
-      "badge": "PROPRIETARY ALGORITHM",
+      "badge": "自研算法",
       "titleLine1": "超快",
       "titleLine2": "视觉追踪",
       "subtitle": "鲁棒的单目标跟踪 (SOT) 具有适用于复杂环境的 Re-ID 功能。",
@@ -330,7 +330,7 @@
     },
     "performance": {
       "title": "性能数据",
-      "desc": "Our algorithm is heavily optimized for INT8 quantization on RISC-V and ARM-based TPU platforms. It delivers industrial-grade real-time performance even on entry-level chips.",
+      "desc": "算法针对 RISC-V 与 ARM 平台的 INT8 量化高度优化，即便入门芯片也能达到工业级实时表现。",
       "testTitle": "测试条件",
       "test": {
         "input": "输入尺寸",
@@ -349,19 +349,19 @@
       "steps": {
         "0": {
           "alt": "追踪活动",
-          "status": "STATUS：TRACKING",
+          "status": "状态：跟踪",
           "title": "1. 精密锁紧",
           "desc": "即时目标获取靠近建筑特征。"
         },
         "1": {
           "alt": "复杂场景",
-          "status": "STATUS：STABLE",
+          "status": "状态：稳定",
           "title": "2. 杂波抑制",
           "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
         },
         "2": {
           "alt": "远程",
-          "status": "STATUS：LOCKED",
+          "status": "状态：锁定",
           "title": "3. 远距离稳定性",
           "desc": "对低像素密度的远距离目标进行一致锁定。"
         }
@@ -393,7 +393,7 @@
     }
   },
   "dshot": {
-    "metaTitle": "Adaptive DShot Control Protocol | AIMORELOGY",
+    "metaTitle": "自适应 DShot 控制协议 | AIMORELOGY",
     "breadcrumb": "自适应动态拍摄",
     "hero": {
       "badge": "自适应动态拍摄",
@@ -555,17 +555,17 @@
     }
   },
   "aiCamera": {
-    "metaTitle": "Cloud AI Camera Solution | AIMORELOGY",
+    "metaTitle": "云端 AI 摄像机方案 | AIMORELOGY",
     "breadcrumb": "云AI相机",
     "hero": {
       "kicker": "解决方案",
-      "badge": "EDGE + CLOUD",
+      "badge": "边缘 + 云端",
       "titleLine1": "云 AI",
       "titleLine2": "相机平台",
       "desc": "端到端智能相机堆栈将边缘推理与云编排相结合，以实现实时监控和可扩展部署。",
       "cta": "请求演示",
       "ready": "SDK 已准备好用于 CV18xx 平台。",
-      "uiVersion": "UI VERSION 1.0",
+      "uiVersion": "UI 版本 1.0",
       "imageAlt": "云AI相机接口",
       "overlay": "活体检测",
       "chipLabel": "参考芯片"
@@ -597,7 +597,7 @@
         },
         "2": {
           "label": "ISP",
-          "value": "8MP@30FPS"
+          "value": "8MP @ 30FPS"
         },
         "3": {
           "label": "视频",
@@ -653,7 +653,7 @@
         "警报"
       ],
       "hal": "HAL / 驱动程序",
-      "os": "Linux OS"
+      "os": "Linux 系统"
     },
     "capabilities": {
       "title": "核心能力",
@@ -746,7 +746,7 @@
       },
       "use": {
         "title": "2. 您的信息的使用",
-        "p1": "Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:",
+        "p1": "准确的信息可以帮助我们为您提供顺畅、高效、个性化的体验。具体而言，我们可能使用通过网站收集的信息用于：",
         "items": {
           "0": "创建并管理您的帐户。",
           "1": "处理您的订单并交付产品（例如 CV184XH 飞行控制器）。",
@@ -758,7 +758,7 @@
       },
       "disclosure": {
         "title": "3. 披露您的信息",
-        "p1": "We may share information we have collected about you in certain situations. Your information may be disclosed as follows:",
+        "p1": "我们可能在以下情况下共享您的信息，包括：",
         "items": {
           "0": {
             "title": "依据法律或保护权利",
@@ -790,11 +790,11 @@
   "terms": {
     "metaTitle": "服务条款 | ",
     "title": "__PH0__",
-    "intro": "These Terms of Service (\"Terms\") govern your use of the website operated by AIMORELOGY LIMITED (\"Company,\" \"we,\" or \"us\") and the purchase of our products and services. By accessing or using our website, you agree to be bound by these Terms.",
+    "intro": "本服务条款（“条款”）调整您对 AIMORELOGY LIMITED（“公司”，“我们”）网站及产品与服务的使用。访问或使用本网站即表示您同意受本条款约束。",
     "sections": {
       "license": {
         "title": "1. 使用许可",
-        "p1": "Permission is granted to temporarily download one copy of the materials (information or software) on AIMORELOGY's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:",
+        "p1": "允许您暂时下载并使用 AIMORELOGY 网站上的材料（信息或软件），仅限于个人、非商业、暂时浏览。这是一个许可，而非所有权转让，在该许可下，您不得：",
         "items": {
           "0": "修改或者复制材料；",
           "1": "将这些材料用于任何商业目的或任何公开展示（商业或非商业）；",
@@ -805,7 +805,7 @@
       },
       "disclaimer": {
         "title": "2. 免责声明",
-        "p1": "The materials on AIMORELOGY's website are provided on an 'as is' basis. AIMORELOGY makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+        "p1": "AIMORELOGY 网站上的材料按“现状”提供。AIMORELOGY 不作任何明示或默示保证，并特此声明不承担任何保证，包括（但不限于）适销性、适用于特定用途或不侵犯等默示保证或条件。"
       },
       "limitations": {
         "title": "3. 局限性",
@@ -826,7 +826,7 @@
       },
       "changes": {
         "title": "6. 条款变更",
-        "p1": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms."
+        "p1": "我们保留随时修改本条款的权利。修订生效后，继续使用本服务即表示您接受修订后的条款。"
       }
     }
   },
@@ -837,11 +837,11 @@
     "sections": {
       "what": {
         "title": "1. 什么是 Cookie？",
-        "p1": "Cookies are small text files that are sent to your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you."
+        "p1": "Cookie 是由您访问的网站发送到您浏览器的小型文本文件。Cookie 文件会存储在您的浏览器中，使服务或第三方能够识别您以便优化后续访问。"
       },
       "use": {
         "title": "2. 我们如何使用 Cookie",
-        "p1": "When you use and access the Service, we may place a number of cookies files in your web browser. We use cookies for the following purposes:",
+        "p1": "我们可能在您使用本服务时在您的浏览器中存放若干 Cookie，目的如下：",
         "items": {
           "0": {
             "title": "基本饼干",

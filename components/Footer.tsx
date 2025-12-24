@@ -291,14 +291,14 @@ const Footer: React.FC = () => {
                  <SocialLink 
                    icon={<WeComIcon />} 
                    label="WeCom" 
-                   qrCode="./Social-Media/wecom.webp" 
+                   qrCode="/Social-Media/wecom.webp" 
                    qrClassName="w-auto h-auto max-w-[360px] max-h-[360px] object-contain"
                    hoverColor="#3875F6" 
                  />
                  <SocialLink 
                    icon={<WeChatIcon />} 
                    label="Official Account" 
-                   qrCode="./Social-Media/gzh.webp" 
+                   qrCode="/Social-Media/gzh.webp" 
                    qrClassName="w-auto h-auto max-w-[360px] max-h-[360px] object-contain"
                    hoverColor="#07C160" 
                  />
