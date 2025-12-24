@@ -32,12 +32,6 @@ const ProductDetail_Espressif: React.FC = () => {
     window.scrollTo(0, 0);
   }, [modelId]);
 
-  useEffect(() => {
-    if (localizedProduct) {
-      document.title = t('products.common.metaTitle', { name: localizedProduct.name, tagline: localizedProduct.tagline });
-    }
-  }, [localizedProduct, t]);
-
   const localizedProduct = React.useMemo(() => {
     if (!product) return null;
     const baseKey = `products.espressif.${product.id}`;
@@ -55,6 +49,12 @@ const ProductDetail_Espressif: React.FC = () => {
       faqs: getArray('faqs', product.faqs)
     };
   }, [product, t]);
+
+  useEffect(() => {
+    if (localizedProduct) {
+      document.title = t('products.common.metaTitle', { name: localizedProduct.name, tagline: localizedProduct.tagline });
+    }
+  }, [localizedProduct, t]);
 
   if (!localizedProduct) {
     return (
