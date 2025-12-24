@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aimorelogy-ltd.github.io/sitemap.xml
+Host: aimorelogy-ltd.github.io

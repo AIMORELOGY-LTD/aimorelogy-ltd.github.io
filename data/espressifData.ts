@@ -32,7 +32,7 @@ export const ESPRESSIF_CHIPS: Record<string, ChipData> = {
       { category: 'Environment', key: 'Temp', value: '-40 ~ 85 °C (Optional 105 °C)' }
     ],
     applications: [
-      { title: 'Smart Home', image: 'https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400' },
+      { title: 'Smart Home', image: '/Smart Home.webp' },
       { title: 'Industrial Automation', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400' },
       { title: 'Health Care', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400' },
       { title: 'Speech Recognition', image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=400' }

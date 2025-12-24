@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate, useNavigate, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useParams } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import ProductDetail_AFC from './pages/ProductDetail_AFC';
@@ -34,6 +34,7 @@ const LanguageRoutes: React.FC = () => {
     if (i18n.language !== normalized) {
       i18n.changeLanguage(normalized);
     }
+    document.documentElement.lang = normalized;
     saveLang(normalized);
   }, [lang, navigate]);
 

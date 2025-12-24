@@ -68,10 +68,10 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Connectivity', key: 'I/O', value: 'USB3.0, PCIe, SATA, CAN FD' }
       ],
       applications: [
-        { title: 'Smart Cameras', image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Robotics', image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Edge Computing Boxes', image: 'https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Drones', image: 'https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80&w=400' }
+        { title: 'Smart Cameras', image: '/Smart Cameras.webp' },
+        { title: 'Robotics', image: '/Robotics.webp' },
+        { title: 'Edge Computing Boxes', image: '/Edge Computing Boxes.webp' },
+        { title: 'Drones', image: '/Drones.webp' }
       ],
       faqs: [
           { question: "Can BM1688 run Llama 2?", answer: "Yes, BM1688 supports running quantized versions (INT4/INT8) of Llama 2 and other similar sized LLMs efficiently." },
@@ -108,10 +108,10 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Process', key: 'Package', value: 'BGA' }
       ],
       applications: [
-        { title: 'High-end Multi-lens IPC', image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Robot Platform', image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Binocular Depth Camera', image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Drone Obstacle Avoidance', image: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=400' }
+        { title: 'High-end Multi-lens IPC', image: '/High-end Multi-lens IPC.webp' },
+        { title: 'Robot Platform', image: '/Robot Platform.webp' },
+        { title: 'Binocular Depth Camera', image: '/Binocular Depth Camera.webp' },
+        { title: 'Drone & Gimbal Applications', image: '/Drone & Gimbal Applications.webp' }
       ],
       faqs: []
     },
@@ -142,13 +142,13 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Memory', key: 'SiP', value: '512Mb - 4Gb DDR' }
       ],
       applications: [
-        { title: '4K IPC', image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400' },
+        { title: '4K IPC', image: '/4K IPC.webp' },
         { title: 'Drone', image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Edge Large Model Robot', image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Access Control', image: 'https://images.unsplash.com/photo-1555449767-e92592a8385e?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Scanning Pen', image: 'https://images.unsplash.com/photo-1456735190827-d1261f7add50?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Dash Cam', image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Ultra-HD Night Vision', image: 'https://images.unsplash.com/photo-1510253687831-0f982d7862fc?auto=format&fit=crop&q=80&w=400' }
+        { title: 'Edge Large Model Robot', image: '/Edge Large Model Robot.webp' },
+        { title: 'Access Control', image: '/Access Control.webp' },
+        { title: 'Scanning Pen', image: '/Scanning Pen.webp' },
+        { title: 'Dash Cam', image: '/Dash Cam.webp' },
+        { title: 'HD Night Vision', image: '/HD Night Vision.webp' }
       ],
       faqs: []
     },
@@ -178,12 +178,12 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Package', key: 'Type', value: 'QFN / BGA' }
       ],
       applications: [
-        { title: 'Smart Home', image: 'https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Face Recognition Gate', image: 'https://images.unsplash.com/photo-1563720223521-47963b6528d2?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Scanning Pen', image: 'https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Streaming Rearview Mirror', image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Campus Camera', image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=400' },
-        { title: 'HD Night Vision', image: 'https://images.unsplash.com/photo-1504386106331-3e4e71712b38?auto=format&fit=crop&q=80&w=400' }
+        { title: 'Smart Home', image: '/Smart Home.webp' },
+        { title: 'Access Control', image: '/Access Control.webp' },
+        { title: 'Scanning Pen', image: '/Scanning Pen.webp' },
+        { title: 'Streaming Rearview Mirror', image: '/Streaming Rearview Mirror.webp' },
+        { title: 'Campus Camera', image: '/Campus Camera.webp' },
+        { title: 'HD Night Vision', image: '/HD Night Vision.webp' }
       ],
       faqs: []
     },
@@ -213,12 +213,12 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Video', key: 'Enc', value: '5MP / 4MP' }
       ],
       applications: [
-        { title: 'Home IPC', image: 'https://images.unsplash.com/photo-1599388168270-4f59cb03597c?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Smart Doorbell', image: 'https://images.unsplash.com/photo-1593142959928-8671404c0df6?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Cat-eye Door Lock', image: 'https://images.unsplash.com/photo-1558002038-109177381792?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Dash Cam', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Baby Monitor', image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=400' },
-        { title: 'Kids Camera', image: 'https://images.unsplash.com/photo-1519638831568-d9897f54ed69?auto=format&fit=crop&q=80&w=400' }
+        { title: 'Home IPC', image: '/Home IPC.webp' },
+        { title: 'Smart Doorbell', image: '/Smart Doorbell.webp' },
+        { title: 'Cat-eye Door Lock', image: '/Cat-eye Door Lock.webp' },
+        { title: 'Dash Cam', image: '/Dash Cam.webp' },
+        { title: 'Baby Monitor', image: '/Baby Monitor.webp' },
+        { title: 'Kids Camera', image: '/Kids Camera.webp' }
       ],
       faqs: []
     }
