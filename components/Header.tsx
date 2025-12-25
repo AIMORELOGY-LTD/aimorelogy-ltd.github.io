@@ -376,7 +376,7 @@ const Header: React.FC = () => {
         {/* Logo Area - Left */}
         <Link to={withLang(lang, RoutePath.HOME)} className="flex items-center gap-2 z-50 mr-12 shrink-0">
             <img
-              src="aimorelogy-logo-small.svg"
+              src="/aimorelogy-logo-small.svg"
               alt="AIMORELOGY"
               className={`h-8 w-auto ${isTransparent ? 'filter brightness-0 invert' : ''}`}
             />
