@@ -18,7 +18,7 @@
       "cloudAiCamera": "Cloud AI Camera",
       "autonomousInspection": "Autonomous Inspection",
       "coreComponents": "Core Components",
-      "intelligentVision": "Intelligent Vision",
+      "intelligentVision": "Deep Learning Vision Processors",
       "xtensa": "Xtensa Processor",
       "sophgo": {
         "bm1688": "16T Edge AI, 8-Core ARM, Highly Integrated SoC.",
