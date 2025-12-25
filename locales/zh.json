@@ -12,7 +12,7 @@
       "products": {
         "flightController": "飞行控制器",
         "allInOne": "多合一 FC",
-        "afcDesc": "下一代 UAV 大脑的最终答案。"
+        "afcDesc": "下一代 FPV 飞控的最终答案。"
       },
       "solutions": "解决方案",
       "cloudAiCamera": "云AI相机",
@@ -158,7 +158,7 @@
           "desc": "不需要 DMA 或特定硬件定时器。"
         },
         "1": {
-          "title": "可移植到 __PH1__、__PH2__ 等。",
+          "title": "自适应协调",
           "desc": "动态误差消除可校准输出频率以实现完美的稳定性。"
         },
         "2": {
@@ -246,8 +246,8 @@
     },
     "mission": {
       "title": "我们的使命",
-      "p1": "AIMORELOGY 是一家致力于革新 UAV 和机器人行业的技术领导者。",
-      "p2": "我们专注于先进的边缘__PH2__计算、高清视频传输和自主飞行控制算法。"
+      "p1": "AIMORELOGY是一家致力于革新无人机和机器人行业的科技领先企业。我们专注于先进的边缘人工智能计算、高清视频传输和自主飞行控制算法。",
+      "p2": "我通过将视觉、控制和通信集成到像 CV184XH 系列这样功能强大、结构紧凑的单元中，我们能够帮助工业合作伙伴构建更智能、更安全、更高效的自主系统。"
     },
     "partners": {
       "title": "合作伙伴"
@@ -518,7 +518,7 @@
     "metaTitle": "自主巡检 | AIMORELOGY",
     "metaDescription": "面向 FPV/无人机 的自主巡检方案，覆盖能源与工业场景。",
     "title": "自主检验",
-    "subtitle": "AI- 驱动 UAV 能源和工业资产检查。",
+    "subtitle": "AI- 驱动 UAV/FPV 进行能源和工业巡检。",
     "overview": {
       "title": "自动化现场操作",
       "content": "规划路线、捕获 4K 图像并实时检测异常情况。"
@@ -705,7 +705,7 @@
   "products": {
     "common": {
       "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
-      "notFound": "__PH2__",
+      "notFound": "404",
       "returnHome": "返回主页",
       "requestQuote": "请求报价",
       "productOverview": "产品概述",
@@ -751,11 +751,11 @@
     "afcComingSoon": {
       "metaTitle": "即将推出 | AIMORELOGY",
       "metaDescription": "AIMORELOGY AFC-V1 一体化 FPV/无人机 飞行控制器，融合视觉、图传与控制。",
-      "badge": "__PH0__",
+      "badge": "深圳市爱谋科技有限公司",
       "title": "即将推出",
       "subtitle": "AFC-V1",
       "desc": "集视觉、视频链路和控制于一体的终极一体化飞行控制器即将面世。",
-      "tagline": "重新定义 UAV 大脑的未来。",
+      "tagline": "重新定义 FPV 飞控的未来。",
       "returnHome": "返回首页",
       "contactSales": "联系销售人员了解规格"
     }
@@ -766,7 +766,7 @@
   "privacy": {
     "metaTitle": "隐私政策 | AIMORELOGY",
     "metaDescription": "了解 AIMORELOGY 如何收集、使用并保护您的信息。",
-    "title": "__PH0__",
+    "title": "隐私政策 | AIMORELOGY",
     "intro": {
       "p1": "AIMORELOGY LIMITED 及其附属公司（“AIMORELOGY”、“我们”、“我们”或“我们的”）致力于保护您的隐私。",
       "p2": "本隐私政策解释了当您访问我们的网站或使用我们的产品和服务时，我们如何收集、使用、披露和保护您的信息。"
@@ -832,7 +832,7 @@
   "terms": {
     "metaTitle": "服务条款 | AIMORELOGY",
     "metaDescription": "查看 AIMORELOGY 网站与产品的使用条款。",
-    "title": "__PH0__",
+    "title": "服务条款 | AIMORELOGY",
     "intro": "本服务条款（“条款”）调整您对 AIMORELOGY LIMITED（“公司”，“我们”）网站及产品与服务的使用。访问或使用本网站即表示您同意受本条款约束。",
     "sections": {
       "license": {
@@ -876,7 +876,7 @@
   "cookies": {
     "metaTitle": "Cookie 政策 | AIMORELOGY",
     "metaDescription": "了解 AIMORELOGY 如何使用 Cookie 以及如何管理偏好。",
-    "title": "__PH0__",
+    "title": "Cookie 政策 | AIMORELOGY",
     "intro": "本 Cookie 政策解释了什么是 Cookie、AIMORELOGY 如何在我们的网站上使用 Cookie，以及您对 Cookie 的选择。",
     "sections": {
       "what": {
