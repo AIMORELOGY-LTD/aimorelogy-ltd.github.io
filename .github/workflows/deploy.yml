@@ -45,3 +45,54 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Submit IndexNow
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          
+          key = "bd2a90d519a347e19e2af9dbe2a5f5c7"
+          host = "https://aimorelogy.com"
+          sitemap_url = f"{host}/sitemap.xml"
+          
+          try:
+              with urllib.request.urlopen(sitemap_url, timeout=20) as resp:
+                  xml_data = resp.read()
+          except Exception as exc:
+              print("IndexNow: failed to fetch sitemap:", exc)
+              raise SystemExit(0)
+          
+          root = ET.fromstring(xml_data)
+          ns = {"ns": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = []
+          for url in root.findall("ns:url", ns):
+              loc = url.find("ns:loc", ns)
+              if loc is not None and loc.text:
+                  urls.append(loc.text.strip())
+          
+          if not urls:
+              print("IndexNow: no URLs found in sitemap.")
+              raise SystemExit(0)
+          
+          payload = {
+              "host": "aimorelogy.com",
+              "key": key,
+              "urlList": urls
+          }
+          
+          data = json.dumps(payload).encode("utf-8")
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=data,
+              headers={"Content-Type": "application/json; charset=utf-8"}
+          )
+          
+          try:
+              with urllib.request.urlopen(req, timeout=20) as resp:
+                  print("IndexNow status:", resp.status)
+                  print(resp.read().decode("utf-8"))
+          except Exception as exc:
+              print("IndexNow: submit failed:", exc)
+              raise SystemExit(0)
+          PY
