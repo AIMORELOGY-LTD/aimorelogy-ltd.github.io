@@ -102,8 +102,8 @@
     },
     "afc": {
       "kicker": "一体化AI飞行控制器",
-      "tagline": "“视觉。视频链接。控制。”",
-      "subtagline": "下一代 UAV 大脑的最终答案。",
+      "tagline": "“视觉 + 图传 + 飞控。”",
+      "subtagline": "下一代 FPV 飞控的最终答案。",
       "features": {
         "0": {
           "title": "1.5 TOPS 边缘 AI",
@@ -190,7 +190,7 @@
       "titleLine2": "AIMORELOGY",
       "subtitle": "与我们一起构建自主飞行和边缘智能的未来。"
     },
-    "openPositions": "未平仓头寸",
+    "openPositions": "开放职位",
     "locations": {
       "shenzhen": "深圳",
       "shenzhenTag": "全球总部",
@@ -214,7 +214,7 @@
     "locations": {
       "shenzhen": {
         "title": "HQ（深圳）",
-        "company": "AIMORELOGY科技有限公司",
+        "company": "深圳市爱谋科技有限公司",
         "address": "深圳市宝安区西乡街道朗骏广场T2栋A区603-12室"
       },
       "hk": {
@@ -239,7 +239,7 @@
     "metaTitle": "关于 | AIMORELOGY",
     "metaDescription": "AIMORELOGY 专注 FPV/无人机 飞控、边缘 AI 视觉芯片与跟踪算法，服务无人机与云台系统。",
     "hero": {
-      "kicker": "",
+      "kicker": "深圳市爱谋科技有限公司",
       "titleLine1": "关于",
       "titleLine2": "AIMORELOGY",
       "subtitle": "开创工业界下一代智能飞行控制系统和 AI- 驱动的自主解决方案。"
@@ -301,7 +301,7 @@
       "shenzhen": {
         "title": "深圳",
         "tag": "全球总部",
-        "company": "深圳市AIMORELOGY科技有限公司",
+        "company": "深圳市爱谋科技有限公司",
         "addressLine1": "朗骏广场T2号楼A区603-12室",
         "addressLine2": "深圳市宝安区西乡街道铁仔路",
         "contactName": "柯一冉"
