@@ -1,6 +1,6 @@
 {
   "common": {
-    "home": "家",
+    "home": "主页",
     "technology": "技术",
     "comingSoon": "即将推出",
     "contactSales": "联系销售人员",
@@ -29,7 +29,7 @@
       "espressif": {
         "esp32": "双核 Xtensa 32- 位 LX7，240MHz。"
       },
-      "support": "支持",
+      "support": "技术支持",
       "contactUs": "联系我们",
       "documents": "文件"
     },
@@ -48,8 +48,8 @@
     "getInTouch": "联系我们",
     "getInTouchDesc": "与我们的工程团队讨论解决方案需求。我们为无人机与边缘 AI 提供交付服务。",
     "salesSupport": "销售与支持",
-    "shenzhen": "深圳HQ",
-    "address": "宝安区郎君广场T2-A 603-12",
+    "shenzhen": "深圳总部",
+    "address": "深圳市宝安区西乡街道朗骏广场T2-A 603-12",
     "form": {
       "fullName": "姓名",
       "email": "电子邮件",
@@ -62,10 +62,10 @@
       "careers": "职业机会"
     },
     "legal": {
-      "copyright": "？ ",
-      "terms": "__PH0__ 有限公司",
-      "cookies": "曲奇饼",
-      "privacy": "隐私"
+      "copyright": "深圳市爱谋科技有限公司",
+      "terms": "网站条款",
+      "cookies": "Cookies",
+      "privacy": "关于隐私"
     },
     "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务。// 没有任何产品或组件是绝对安全的。// 成本与结果可能因人而异。// 性能取决于使用方式、配置和其他因素。// 请参阅完整的法律声明与免责声明。// AIMORELOGY 致力于尊重人权，避免造成或促成不利影响。"
   },
@@ -206,7 +206,7 @@
   "contact": {
     "metaTitle": "联系我们 | AIMORELOGY",
     "metaDescription": "联系 AIMORELOGY 获取 FPV/无人机 飞控、边缘 AI 视觉与系统集成服务。",
-    "title": "__PH0__",
+    "title": "深圳市爱谋科技有限公司",
     "subtitle": "关于企业方案有疑问？欢迎通过电话、微信、WhatsApp 或邮件与我们联系。",
     "salesSupport": "销售与支持",
     "channels": "手机/微信/WhatsApp",
@@ -215,7 +215,7 @@
       "shenzhen": {
         "title": "HQ（深圳）",
         "company": "AIMORELOGY科技有限公司",
-        "address": "深圳市宝安区郎君广场T2栋A区603-12室"
+        "address": "深圳市宝安区西乡街道朗骏广场T2栋A区603-12室"
       },
       "hk": {
         "title": "香港",
@@ -239,7 +239,7 @@
     "metaTitle": "关于 | AIMORELOGY",
     "metaDescription": "AIMORELOGY 专注 FPV/无人机 飞控、边缘 AI 视觉芯片与跟踪算法，服务无人机与云台系统。",
     "hero": {
-      "kicker": "__PH0__",
+      "kicker": "",
       "titleLine1": "关于",
       "titleLine2": "AIMORELOGY",
       "subtitle": "开创工业界下一代智能飞行控制系统和 AI- 驱动的自主解决方案。"
@@ -254,7 +254,7 @@
     },
     "leadership": {
       "title": "领导",
-      "name": "柯怡然",
+      "name": "柯一冉",
       "role": "创始人 & CEO",
       "tags": [
         "// 系统架构",
@@ -262,17 +262,17 @@
         "// 产品战略"
       ],
       "bio": {
-        "intro": "柯怡然是AIMORELOGY的创始人和CEO，带来了从底层硬件到智能系统算法的丰富跨领域经验。",
+        "intro": "柯一冉是AIMORELOGY的创始人和CEO，带来了从底层硬件到智能系统算法的丰富跨领域经验。",
         "backgroundTitle": "背景",
         "background": "在创立公司之前，他深度参与开源硬件和RISC-V生态系统，被公认为国内RISC-V社区的早期建设者之一。",
         "trackTitle": "业绩记录",
         "track": "主导了Milk-V Duo、Mars、Pioneer系列的设计、产品化和全球推广，在海外众筹取得了显著成功。",
         "p1": "其在芯片与底层系统方面的经验，塑造了深厚的技术思考与产品落地能力，并与开发者文化高度契合。他认为技术的价值不只是指标，更在于让更多人真正使用、触达并改变世界。",
         "p2": "2025 年后，他将重心转向智能无人机与 AI 系统，创立 AIMORELOGY，专注飞控、视觉感知、边缘 AI 推理与智能任务系统。",
-        "footer": "柯怡然本质上仍然是一名工程师：亲自审查系统架构，参与飞控链路设计，并优先考虑底层可靠性和实际用户场景。"
+        "footer": "柯一冉本质上仍然是一名工程师：亲自审查系统架构，参与飞控链路设计，并优先考虑底层可靠性和实际用户场景。"
       },
       "philosophy": {
-        "title": "哲学",
+        "title": "理念",
         "items": [
           {
             "title": "现实第一",
@@ -302,9 +302,9 @@
         "title": "深圳",
         "tag": "全球总部",
         "company": "深圳市AIMORELOGY科技有限公司",
-        "addressLine1": "郎君广场T2号楼A区603-12室",
+        "addressLine1": "朗骏广场T2号楼A区603-12室",
         "addressLine2": "深圳市宝安区西乡街道铁仔路",
-        "contactName": "柯怡然"
+        "contactName": "柯一冉"
       },
       "hk": {
         "title": "香港",
@@ -313,7 +313,7 @@
         "addressLine1": "世纪工业中心H2 4/F室",
         "addressLine2": "33-35 坳背湾街火炭",
         "addressLine3": "香港沙田",
-        "contactName": "谢杰夫"
+        "contactName": "谢旭涵"
       }
     },
     "cta": {
@@ -706,7 +706,7 @@
     "common": {
       "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
       "notFound": "__PH2__",
-      "returnHome": "回家",
+      "returnHome": "返回主页",
       "requestQuote": "请求报价",
       "productOverview": "产品概述",
       "keyHighlights": "主要亮点",
