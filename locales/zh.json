@@ -18,7 +18,7 @@
       "cloudAiCamera": "云AI相机",
       "autonomousInspection": "自主检验",
       "coreComponents": "核心组件",
-      "intelligentVision": "智能视觉",
+      "intelligentVision": "深度学习视觉处理器",
       "xtensa": "Xtensa处理器",
       "sophgo": {
         "bm1688": "16T Edge AI、8-Core ARM，高度集成的 SoC。",
