@@ -70,8 +70,8 @@
     "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务。// 没有任何产品或组件是绝对安全的。// 成本与结果可能因人而异。// 性能取决于使用方式、配置和其他因素。// 请参阅完整的法律声明与免责声明。// AIMORELOGY 致力于尊重人权，避免造成或促成不利影响。"
   },
   "home": {
-    "metaTitle": "AIMORELOGY | FPV/无人机 飞行控制与边缘视觉",
-    "metaDescription": "AIMORELOGY 提供 FPV/无人机 飞控、边缘 AI 视觉芯片、AI 跟踪与自适应 DShot 控制框架，面向无人机与云台系统。",
+    "metaTitle": "爱谋科技 AIMORELOGY | FPV/无人机 飞行控制与边缘视觉",
+    "metaDescription": "爱谋科技 AIMORELOGY 提供 FPV/无人机 飞控、边缘 AI 视觉芯片、AI 跟踪与自适应 DShot 控制框架，面向无人机与云台系统。同时提供定制化SOLUTION服务与系统集成。爱谋科技（AIMORELOGY）是算能（SOPHGO）、RT-Thread、RISC-V 的合作伙伴。",
     "hero": {
       "slides": {
         "0": {
