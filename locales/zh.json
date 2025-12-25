@@ -70,6 +70,8 @@
     "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务。// 没有任何产品或组件是绝对安全的。// 成本与结果可能因人而异。// 性能取决于使用方式、配置和其他因素。// 请参阅完整的法律声明与免责声明。// AIMORELOGY 致力于尊重人权，避免造成或促成不利影响。"
   },
   "home": {
+    "metaTitle": "AIMORELOGY | FPV/无人机 飞行控制与边缘视觉",
+    "metaDescription": "AIMORELOGY 提供 FPV/无人机 飞控、边缘 AI 视觉芯片、AI 跟踪与自适应 DShot 控制框架，面向无人机与云台系统。",
     "hero": {
       "slides": {
         "0": {
@@ -170,6 +172,8 @@
     "partners": "战略合作伙伴"
   },
   "blog": {
+    "metaTitle": "博客 | AIMORELOGY",
+    "metaDescription": "AIMORELOGY 关于 FPV/无人机 飞控、边缘 AI 视觉与自主系统的洞察。",
     "kicker": "Nexus Blog",
     "titleLine1": "Technology",
     "titleLine2": "Insights",
@@ -179,6 +183,7 @@
   },
   "careers": {
     "metaTitle": "加入我们 | AIMORELOGY",
+    "metaDescription": "加入 AIMORELOGY，共同打造 FPV/无人机 飞控、边缘 AI 视觉与自主飞行技术。",
     "hero": {
       "kicker": "加入我们的团队",
       "titleLine1": "职业机会",
@@ -199,7 +204,8 @@
     "ctaLink": "我们一直在寻找人才。"
   },
   "contact": {
-    "metaTitle": "联系我们 | ",
+    "metaTitle": "联系我们 | AIMORELOGY",
+    "metaDescription": "联系 AIMORELOGY 获取 FPV/无人机 飞控、边缘 AI 视觉与系统集成服务。",
     "title": "__PH0__",
     "subtitle": "关于企业方案有疑问？欢迎通过电话、微信、WhatsApp 或邮件与我们联系。",
     "salesSupport": "销售与支持",
@@ -230,7 +236,8 @@
     }
   },
   "about": {
-    "metaTitle": "关于 | ",
+    "metaTitle": "关于 | AIMORELOGY",
+    "metaDescription": "AIMORELOGY 专注 FPV/无人机 飞控、边缘 AI 视觉芯片与跟踪算法，服务无人机与云台系统。",
     "hero": {
       "kicker": "__PH0__",
       "titleLine1": "关于",
@@ -317,6 +324,7 @@
   },
   "aiTracking": {
     "metaTitle": "自研 AI 跟踪 | AIMORELOGY",
+    "metaDescription": "面向 FPV/无人机 的低时延视觉跟踪与云台稳定，支持复杂场景目标锁定。",
     "breadcrumb": "AI 追踪算法",
     "hero": {
       "kicker": "核心技术",
@@ -394,6 +402,7 @@
   },
   "dshot": {
     "metaTitle": "自适应 DShot 控制协议 | AIMORELOGY",
+    "metaDescription": "面向 FPV/无人机 ESC 的自适应 DShot 控制协议，双向通信、稳定输出、无需 DMA。",
     "breadcrumb": "自适应动态拍摄",
     "hero": {
       "badge": "自适应动态拍摄",
@@ -506,6 +515,8 @@
     "download": "下载手册"
   },
   "solutionDemo": {
+    "metaTitle": "自主巡检 | AIMORELOGY",
+    "metaDescription": "面向 FPV/无人机 的自主巡检方案，覆盖能源与工业场景。",
     "title": "自主检验",
     "subtitle": "AI- 驱动 UAV 能源和工业资产检查。",
     "overview": {
@@ -556,6 +567,7 @@
   },
   "aiCamera": {
     "metaTitle": "云端 AI 摄像机方案 | AIMORELOGY",
+    "metaDescription": "云端 AI 摄像机方案，结合边缘 AI 与云平台，实现远程监控与规模化部署。",
     "breadcrumb": "云AI相机",
     "hero": {
       "kicker": "解决方案",
@@ -692,7 +704,7 @@
   },
   "products": {
     "common": {
-      "metaTitle": "{{name}} {{tagline}} | ",
+      "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
       "notFound": "__PH2__",
       "returnHome": "回家",
       "requestQuote": "请求报价",
@@ -708,8 +720,37 @@
       "ctaButton": "获取解决方案建议",
       "series": "{{series}}系列"
     },
+    "sophgo": {
+      "bm1688": {
+        "metaTitle": "SOPHGO BM1688 TPU 边缘AI SoC | AIMORELOGY",
+        "metaDescription": "SOPHGO BM1688 集成 8 核 ARM 与 16 TOPS TPU，支持全景拼接、FPV/无人机 视觉与云台跟踪的边缘 AI 推理。"
+      },
+      "cv186ah": {
+        "metaTitle": "SOPHGO CV186AH 视觉AI SoC | AIMORELOGY",
+        "metaDescription": "SOPHGO CV186AH 提供 7.2 TOPS 视觉处理能力，支持 4K 多路分析、深度计算与 FPV/无人机 障碍物感知。"
+      },
+      "cv184": {
+        "metaTitle": "SOPHGO CV184 边缘视觉 SoC | AIMORELOGY",
+        "metaDescription": "SOPHGO CV184 1.5 TOPS 双核 SoC，支持 4K 编码，适用于 FPV/无人机 视觉、门禁与边缘 AI 摄像机。"
+      },
+      "cv181": {
+        "metaTitle": "SOPHGO CV181 RISC-V 视觉 SoC | AIMORELOGY",
+        "metaDescription": "SOPHGO CV181 0.5-1.0 TOPS 低功耗 AI，适合轻量级 FPV/无人机 传感、智能家居与门禁视觉。"
+      },
+      "cv180": {
+        "metaTitle": "SOPHGO CV180 入门级 RISC-V 视觉 SoC | AIMORELOGY",
+        "metaDescription": "SOPHGO CV180 0.2 TOPS RISC-V 视觉 SoC，适用于微型 FPV/无人机 成像与电池设备。"
+      }
+    },
+    "espressif": {
+      "esp32s3": {
+        "metaTitle": "Espressif ESP32-S3-WROOM-1 Wi-Fi/蓝牙 模组 | AIMORELOGY",
+        "metaDescription": "ESP32-S3-WROOM-1 双核 Wi-Fi + Bluetooth LE 模组，支持 AI 加速，适用于智能家居、语音与边缘 AI 设备。"
+      }
+    },
     "afcComingSoon": {
-      "metaTitle": "即将推出 | ",
+      "metaTitle": "即将推出 | AIMORELOGY",
+      "metaDescription": "AIMORELOGY AFC-V1 一体化 FPV/无人机 飞行控制器，融合视觉、图传与控制。",
       "badge": "__PH0__",
       "title": "即将推出",
       "subtitle": "AFC-V1",
@@ -723,7 +764,8 @@
     "lastUpdated": "最后更新：{{date}}"
   },
   "privacy": {
-    "metaTitle": "隐私政策 | ",
+    "metaTitle": "隐私政策 | AIMORELOGY",
+    "metaDescription": "了解 AIMORELOGY 如何收集、使用并保护您的信息。",
     "title": "__PH0__",
     "intro": {
       "p1": "AIMORELOGY LIMITED 及其附属公司（“AIMORELOGY”、“我们”、“我们”或“我们的”）致力于保护您的隐私。",
@@ -788,7 +830,8 @@
     }
   },
   "terms": {
-    "metaTitle": "服务条款 | ",
+    "metaTitle": "服务条款 | AIMORELOGY",
+    "metaDescription": "查看 AIMORELOGY 网站与产品的使用条款。",
     "title": "__PH0__",
     "intro": "本服务条款（“条款”）调整您对 AIMORELOGY LIMITED（“公司”，“我们”）网站及产品与服务的使用。访问或使用本网站即表示您同意受本条款约束。",
     "sections": {
@@ -831,7 +874,8 @@
     }
   },
   "cookies": {
-    "metaTitle": "Cookie 政策 | ",
+    "metaTitle": "Cookie 政策 | AIMORELOGY",
+    "metaDescription": "了解 AIMORELOGY 如何使用 Cookie 以及如何管理偏好。",
     "title": "__PH0__",
     "intro": "本 Cookie 政策解释了什么是 Cookie、AIMORELOGY 如何在我们的网站上使用 Cookie，以及您对 Cookie 的选择。",
     "sections": {

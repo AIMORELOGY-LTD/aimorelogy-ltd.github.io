@@ -4,6 +4,7 @@ import { ChevronRight, Target, Zap, Layers, RefreshCcw, Activity } from 'lucide-
 import { RoutePath } from '../types';
 import { useTranslation } from 'react-i18next';
 import { useLang, withLang } from '../i18n-routing';
+import Seo from '../components/Seo';
 
 const Technology_AITracking: React.FC = () => {
   const { t } = useTranslation();
@@ -11,11 +12,25 @@ const Technology_AITracking: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = t('aiTracking.metaTitle');
-  }, [t]);
+  }, []);
+  const seoTitle = t('aiTracking.metaTitle');
+  const seoDescription = t('aiTracking.metaDescription');
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: seoTitle,
+    description: seoDescription
+  };
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        image="/AI-TRACKING/TRACK-AI.webp"
+        type="article"
+        jsonLd={jsonLd}
+      />
       
       {/* 1. HERO SECTION */}
       <section className="pt-16 pb-12 bg-gray-50 border-b border-gray-200">

@@ -3,12 +3,16 @@ import BlogCard from '../components/BlogCard';
 import { useTranslation } from 'react-i18next';
 import { BlogPost } from '../types';
 import { BLOG_POSTS } from '../constants';
+import Seo from '../components/Seo';
 
 const Blog: React.FC = () => {
   const { t } = useTranslation();
   const posts = t('blog.posts', { returnObjects: true, defaultValue: BLOG_POSTS }) as BlogPost[];
+  const seoTitle = t('blog.metaTitle');
+  const seoDescription = t('blog.metaDescription');
   return (
     <div className="bg-white min-h-screen py-20">
+      <Seo title={seoTitle} description={seoDescription} />
       {/* Hero Header for Blog */}
       <div className="container mx-auto px-6 mb-20">
         <div className="bg-gray-100 border border-gray-200 p-12 md:p-20 relative overflow-hidden rounded-sm">

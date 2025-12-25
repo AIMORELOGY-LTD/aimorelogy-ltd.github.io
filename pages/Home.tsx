@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, ChevronLeft, Cpu, Wifi, Activity, Eye, Zap, Sliders, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BlogCard from '../components/BlogCard';
+import Seo from '../components/Seo';
 import { RoutePath, BlogPost } from '../types';
 import { BLOG_POSTS } from '../constants';
 import { useTranslation } from 'react-i18next';
@@ -163,6 +164,8 @@ const Home: React.FC = () => {
   const lang = useLang();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideDuration = 5000;
+  const seoTitle = t('home.metaTitle');
+  const seoDescription = t('home.metaDescription');
   
   // Use BLOG_POSTS directly for the carousel
   const carouselPosts = t('blog.posts', { returnObjects: true, defaultValue: BLOG_POSTS }) as BlogPost[];
@@ -232,6 +235,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-white">
+      <Seo title={seoTitle} description={seoDescription} />
       
       {/* Hero Carousel Section - Full Screen (h-screen) */}
       <section className="relative h-screen overflow-hidden bg-gray-900">

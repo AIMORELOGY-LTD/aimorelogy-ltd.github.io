@@ -1,175 +1,184 @@
 {
   "common": {
-    "home": "Дом",
-    "technology": "Технология",
-    "comingSoon": "Вскоре",
-    "contactSales": "Свяжитесь с отделом продаж",
-    "solutions": "Решения"
+    "home": "Home",
+    "technology": "Technology",
+    "comingSoon": "Coming Soon",
+    "contactSales": "Contact Sales",
+    "solutions": "Solutions"
   },
   "header": {
     "menu": {
-      "productsTitle": "Продукты",
+      "productsTitle": "Products",
       "products": {
-        "flightController": "Контроллер полета",
-        "allInOne": "Многофункциональное устройство FC",
-        "afcDesc": "Окончательный ответ для следующего поколения мозгов UAV."
+        "flightController": "Flight Controller",
+        "allInOne": "All-In-One FC",
+        "afcDesc": "The ultimate answer for the next generation of UAV brains."
       },
-      "solutions": "Решения",
-      "cloudAiCamera": "Облачная камера AI",
-      "autonomousInspection": "Автономная инспекция",
-      "coreComponents": "Основные компоненты",
-      "intelligentVision": "Интеллектуальное видение",
-      "xtensa": "Процессор Xtensa",
+      "solutions": "Solutions",
+      "cloudAiCamera": "Cloud AI Camera",
+      "autonomousInspection": "Autonomous Inspection",
+      "coreComponents": "Core Components",
+      "intelligentVision": "Intelligent Vision",
+      "xtensa": "Xtensa Processor",
       "sophgo": {
-        "bm1688": "16T Edge AI, 8-Core ARM, высокоинтегрированная SoC.",
-        "cv186ah": "7.2T Высокопроизводительный процессор машинного зрения (4K/8MP).",
-        "cv184": "1.5T Краевое зрение среднего радиуса действия (RISC-V + ARM).",
-        "cv181": "Потребительская RISC-V AIoT SoC (0.2T – 1.0T)."
+        "bm1688": "16T Edge AI, 8-Core ARM, Highly Integrated SoC.",
+        "cv186ah": "7.2T High-End Vision Processor (4K/8MP).",
+        "cv184": "1.5T Mid-Range Edge Vision (RISC-V + ARM).",
+        "cv181": "Consumer RISC-V AIoT SoC (0.2T - 1.0T)."
       },
       "espressif": {
-        "esp32": "Двухъядерный процессор Xtensa 32-bit LX7, 240 МГц."
+        "esp32": "Dual-core Xtensa 32-bit LX7, 240MHz."
       },
-      "support": "Поддерживать",
-      "contactUs": "Связаться с нами",
-      "documents": "Документы"
+      "support": "Support",
+      "contactUs": "Contact Us",
+      "documents": "Documents"
     },
-    "search": "Поиск",
-    "language": "Язык",
+    "search": "Search",
+    "language": "Language",
     "lang": {
-      "en": "Английский",
-      "zh": "简体中文",
-      "ru": "Русский"
+      "en": "English",
+      "zh": "????",
+      "ru": "???????"
     },
-    "promo": "Нужна помощь с интеграцией или техническими спецификациями? ",
-    "contactSupport": "Наша инженерная команда готова помочь.",
-    "comingSoon": "Вскоре"
+    "promo": "Need assistance with integration or technical specifications? Our engineering team is ready to help.",
+    "contactSupport": "Contact Support",
+    "comingSoon": "Coming Soon"
   },
   "footer": {
-    "getInTouch": "Свяжитесь с нами",
-    "getInTouchDesc": "Обсудите ваши задачи с нашей инженерной командой. Мы поставляем готовые решения для БПЛА и Edge AI.",
-    "salesSupport": "Продажи и поддержка",
-    "shenzhen": "Шэньчжэнь HQ",
-    "address": "T2-A 603-12, площадь Ланцзюнь, Баоань",
+    "getInTouch": "Get in Touch",
+    "getInTouchDesc": "Discuss your solution needs with our engineering team. We provide turnkey services for UAVs and Edge AI.",
+    "salesSupport": "Sales & Support",
+    "shenzhen": "Shenzhen HQ",
+    "address": "T2-A 603-12, Langjun Square, Bao'an",
     "form": {
-      "fullName": "Полное имя",
-      "email": "Адрес электронной почты",
-      "message": "Как мы можем вам помочь?",
-      "send": "Отправить сообщение"
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "message": "How can we help you?",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent. We'll reply soon.",
+      "error": "Failed to send. Please try again.",
+      "invalidEmail": "Please enter a valid email.",
+      "missingEndpoint": "Form service is not configured."
     },
     "links": {
-      "company": "Обзор компании",
-      "contact": "Свяжитесь с AIMORELOGY",
-      "careers": "Карьера"
+      "company": "Company Overview",
+      "contact": "Contact AIMORELOGY",
+      "careers": "Careers"
     },
     "legal": {
-      "copyright": "? ",
-      "terms": "__PH0__ Ограничено",
-      "cookies": "Файлы cookie",
-      "privacy": "Конфиденциальность"
+      "copyright": "© AIMORELOGY Limited",
+      "terms": "Terms of Use",
+      "cookies": "Cookies",
+      "privacy": "Privacy"
     },
-    "disclaimer": "AIMORELOGY технологии могут требовать активации оборудования, программного обеспечения или сервисов. // Ни один продукт или компонент не может быть абсолютно безопасным. // Затраты и результаты могут отличаться. // Производительность зависит от условий использования, конфигурации и других факторов. // См. полные правовые уведомления и отказы от ответственности. // AIMORELOGY придерживается принципов уважения прав человека и не допускает негативных влияний."
+    "disclaimer": "AIMORELOGY technologies may require enabled hardware, software or service activation. // No product or component can be absolutely secure. // Your costs and results may vary. // Performance varies by use, configuration, and other factors. // See our complete legal Notices and Disclaimers. // AIMORELOGY is committed to respecting human rights and avoiding causing or contributing to adverse impacts on human rights."
   },
   "home": {
+    "metaTitle": "AIMORELOGY | FPV/???? ???????? ??????????? ? edge vision",
+    "metaDescription": "AIMORELOGY ????????????? FPV/???? ???????? ???????????, edge AI vision, AI tracking ? adaptive DShot ??? ?????? ? ????????.",
     "hero": {
       "slides": {
         "0": {
-          "category": "Новый выпуск",
-          "title": "AFC-V1 Скоро запуск",
-          "description": "Совершенный универсальный контроллер полета, объединяющий видение, видеосвязь и управление. ",
+          "category": "New Release",
+          "title": "AFC-V1 Launching Soon",
+          "description": "The ultimate all-in-one flight controller integrating vision, video link, and control. Redefining the future of UAVs.",
           "navTitle": "AFC-V1",
-          "navDesc": "Переосмысление будущего БПЛА.",
-          "buttonText": "Вскоре"
+          "navDesc": "Next Gen Flight Controller.",
+          "buttonText": "Coming Soon"
         },
         "1": {
-          "category": "Алгоритмы",
-          "title": "Самостоятельная разработка AI отслеживания",
-          "description": "Собственные алгоритмы визуального отслеживания с задержкой <5 мс для надежного отслеживания цели в сложных условиях.",
-          "navTitle": "AI Отслеживание",
-          "navDesc": "Высокопроизводительные алгоритмы машинного зрения.",
-          "buttonText": "Обзор технологий"
+          "category": "Algorithms",
+          "title": "Self-Developed AI Tracking",
+          "description": "Proprietary visual tracking algorithms delivering <5ms latency for robust target following in complex environments.",
+          "navTitle": "AI Tracking",
+          "navDesc": "High-performance vision algorithms.",
+          "buttonText": "Technology Preview"
         },
         "2": {
-          "category": "Рамки",
-          "title": "Универсальный адаптивный DShot",
-          "description": "DMA-Free, двухнаправленный DShot 300/150 для любой платформы. Динамическое устранение ошибок для идеальной стабильности.",
-          "navTitle": "Адаптивный DShot",
-          "navDesc": "Универсальная система контроля.",
-          "buttonText": "Посмотреть характеристики"
+          "category": "Framework",
+          "title": "Universal Adaptive DShot",
+          "description": "DMA-Free, Bi-directional DShot 300/150 support on any chip platform. Dynamic error elimination for perfect stability.",
+          "navTitle": "Adaptive DShot",
+          "navDesc": "Universal Control Framework.",
+          "buttonText": "View Specs"
         }
       }
     },
     "afc": {
-      "kicker": "Универсальный контроллер полета AI",
-      "tagline": "«Видение. Видеосвязь. Управление».",
-      "subtagline": "Окончательный ответ для следующего поколения мозгов UAV.",
+      "kicker": "All-in-One AI Flight Controller",
+      "tagline": "\"Vision. Video Link. Control.\"",
+      "subtagline": "The ultimate answer for the next generation of UAV brains.",
       "features": {
         "0": {
-          "title": "1.5 TOPS Край AI",
-          "desc": "Локальное выполнение сложных моделей обнаружения с нулевой задержкой."
+          "title": "1.5 TOPS Edge AI",
+          "desc": "Local execution of complex detection models with zero latency."
         },
         "1": {
-          "title": "10KM Ссылка на видео",
-          "desc": "HD передача с оптимизацией мощного модуля Wi-Fi."
+          "title": "10KM Video Link",
+          "desc": "HD transmission with high-power Wi-Fi module optimizations."
         },
         "2": {
-          "title": "8MP Ультра-HD ISP",
-          "desc": "Обработка до 8M@30FPS. "
+          "title": "8MP Ultra-HD ISP",
+          "desc": "Up to 8M@30FPS processing. Native support for Starlight and Global Shutter sensors."
         },
         "3": {
-          "title": "Встроенная поддержка датчиков Starlight и Global Shutter.",
-          "desc": "Новое определение размера и мощности. "
+          "title": "45% Smaller",
+          "desc": "Redefining size and power. Highly integrated industrial design."
         }
       }
     },
     "tracking": {
-      "kicker": "Высокоинтегрированный промышленный дизайн.",
-      "title": "AI Отслеживание",
-      "tagline": "«Сверхмалая задержка. Непревзойденная надежность».",
+      "kicker": "Proprietary Algorithm",
+      "title": "AI Tracking",
+      "tagline": "\"Ultra-low latency. Unmatched Robustness.\"",
       "status": {
-        "tracking": "Статус: Отслеживание",
-        "stable": "Статус: Стабильный",
-        "locked": "Статус: Заблокировано"
+        "tracking": "Status: Tracking",
+        "stable": "Status: Stable",
+        "locked": "Status: Locked"
       },
       "steps": {
         "0": {
-          "title": "1. Точная фиксация",
-          "desc": "Мгновенное обнаружение цели вблизи архитектурных особенностей."
+          "title": "1. Precision Locking",
+          "desc": "Instant target acquisition near architectural features."
         },
         "1": {
-          "title": "2. Неприятие беспорядка",
-          "desc": "Надежное отслеживание в сложных условиях и припаркованных транспортных средствах."
+          "title": "2. Clutter Rejection",
+          "desc": "Robust tracking amidst complex environments and parked vehicles."
         },
         "2": {
-          "title": "3. Стабильность на дальних дистанциях",
-          "desc": "Постоянное обнаружение удаленных целей с низкой плотностью пикселей."
+          "title": "3. Long Range Stability",
+          "desc": "Consistent lock-on for distant targets with low pixel density."
         }
       },
-      "cta": "Исследуйте алгоритм"
+      "cta": "Explore Algorithm"
     },
     "dshot": {
-      "kicker": "Универсальная структура",
-      "title": "Адаптивный DShot",
-      "subtitle": "DMA-Free. Двухнаправленный. Адаптивный. Профессиональная поддержка DShot 300/150 для любой MCU-платформы.",
+      "kicker": "Universal Framework",
+      "title": "Adaptive DShot",
+      "subtitle": "DMA-Free. Bi-directional. Adaptive. Bring professional DShot 300/150 support to any MCU platform.",
       "features": {
         "0": {
-          "title": "Любая чип-платформа",
-          "desc": "Никакого DMA или специального аппаратного таймера не требуется. "
+          "title": "Any Chip Platform",
+          "desc": "No DMA or specific hardware Timer required. Portable to RISC-V, ARM, and more."
         },
         "1": {
-          "title": "Переносимость на __PH1__, __PH2__ и другие.",
-          "desc": "Динамическое устранение ошибок калибрует выходную частоту для обеспечения идеальной стабильности."
+          "title": "Self-Adaptive Tuning",
+          "desc": "Dynamic error elimination calibrates output frequency for perfect stability."
         },
         "2": {
-          "title": "Основная поддержка",
-          "desc": "Идеальная совместимость с регуляторами скорости BLHeli_32, BLHeli_S и AM32."
+          "title": "Mainstream Support",
+          "desc": "Perfect compatibility with BLHeli_32, BLHeli_S, and AM32 ESCs."
         }
       },
-      "cta": "Посмотреть характеристики"
+      "cta": "View Specifications"
     },
-    "industryNews": "Новости отрасли",
-    "partners": "Стратегические партнеры"
+    "industryNews": "Industry News",
+    "partners": "Strategic Partners"
   },
   "blog": {
+    "metaTitle": "???? | AIMORELOGY",
+    "metaDescription": "??????? AIMORELOGY ? FPV/???? ?????????? ???????, edge AI vision ? ?????????? ????????.",
     "kicker": "Nexus Blog",
     "titleLine1": "Technology",
     "titleLine2": "Insights",
@@ -178,421 +187,435 @@
     "readStory": "Read Story"
   },
   "careers": {
-    "metaTitle": "Карьера | AIMORELOGY",
+    "metaTitle": "Careers | AIMORELOGY",
+    "metaDescription": "??????????????? ? AIMORELOGY ? ?????????? FPV/???? ?????????? ?????????? ??????? ? edge AI vision.",
     "hero": {
-      "kicker": "Присоединяйтесь к нашей команде",
-      "titleLine1": "Карьера в",
+      "kicker": "Join Our Team",
+      "titleLine1": "Careers at",
       "titleLine2": "AIMORELOGY",
-      "subtitle": "Постройте вместе с нами будущее автономного полета и периферийного интеллекта."
+      "subtitle": "Build the future of autonomous flight and edge intelligence with us."
     },
-    "openPositions": "Открытые позиции",
+    "openPositions": "Open Positions",
     "locations": {
-      "shenzhen": "Шэньчжэнь",
-      "shenzhenTag": "Глобальная штаб-квартира",
-      "hongkong": "Гонконг",
-      "hongkongTag": "Отдел зарубежного бизнеса"
+      "shenzhen": "Shenzhen",
+      "shenzhenTag": "Global Headquarters",
+      "hongkong": "Hong Kong",
+      "hongkongTag": "Overseas Business Dept"
     },
-    "none": "Открытых позиций нет.",
-    "shenzhenNote": "Зайдите позже, чтобы узнать о возможностях исследований и разработок.",
-    "hongkongNote": "Зайдите позже, чтобы узнать о возможностях для отдела эксплуатации.",
-    "ctaText": "Не видите подходящей роли? ",
-    "ctaLink": "Мы всегда ищем таланты."
+    "none": "No open positions available.",
+    "shenzhenNote": "Check back later for R&D opportunities.",
+    "hongkongNote": "Check back later for Operations opportunities.",
+    "ctaText": "Don't see a role that fits? We are always looking for talent.",
+    "ctaLink": "Contact Us for General Inquiry"
   },
   "contact": {
-    "metaTitle": "Контакт | ",
-    "title": "__PH0__",
-    "subtitle": "Есть вопросы по нашим корпоративным решениям? Свяжитесь с нашей командой по телефону, WeChat, WhatsApp или по электронной почте.",
-    "salesSupport": "Продажи и поддержка",
-    "channels": "Мобильная версия / WeChat / WhatsApp",
-    "corporateEmail": "Корпоративная электронная почта",
+    "metaTitle": "??????? | AIMORELOGY",
+    "metaDescription": "????????? ? AIMORELOGY ?? FPV/???? ???????? ????????????, edge AI vision ? ????????? ??????????.",
+    "title": "????????? ? ????",
+    "subtitle": "Have questions about our enterprise solutions? Reach out to our dedicated team via phone, WeChat, WhatsApp, or email.",
+    "salesSupport": "Sales & Support",
+    "channels": "Mobile / WeChat / WhatsApp",
+    "corporateEmail": "Corporate Email",
     "locations": {
       "shenzhen": {
-        "title": "HQ (Шэньчжэнь)",
-        "company": "AIMORELOGY Технологическая компания, ООО",
-        "address": "Комната 603-12, зона A, здание T2, площадь Ланцзюнь, Баоань, Шэньчжэнь"
+        "title": "HQ (Shenzhen)",
+        "company": "AIMORELOGY Technology Co., Ltd.",
+        "address": "Room 603-12, Zone A, Building T2, Langjun Square, Bao'an, Shenzhen"
       },
       "hk": {
-        "title": "Гонконг",
+        "title": "Hong Kong",
         "company": "AIMORELOGY LIMITED",
-        "addressLine1": "Комната H2 4/F, Индустриальный центр Century,",
-        "addressLine2": "33-35 Улица Ау Пуй Ван Фотан,",
-        "addressLine3": "Ша Тин, Гонконг"
+        "addressLine1": "Room H2 4/F, Century Industrial Centre,",
+        "addressLine2": "33-35 Au Pui Wan Street Fotan,",
+        "addressLine3": "Sha Tin, Hong Kong"
       }
     },
     "form": {
-      "title": "Отправьте нам сообщение",
-      "firstName": "Имя",
-      "lastName": "Фамилия",
-      "email": "Адрес электронной почты",
-      "phone": "Телефон (необязательно)",
-      "message": "Сообщение",
-      "send": "Отправить сообщение"
+      "title": "Send us a message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone (Optional)",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent. We'll reply soon.",
+      "error": "Failed to send. Please try again.",
+      "invalidEmail": "Please enter a valid email.",
+      "required": "Please fill in all required fields.",
+      "missingEndpoint": "Form service is not configured."
     }
   },
   "about": {
-    "metaTitle": "О компании | ",
+    "metaTitle": "? ???????? | AIMORELOGY",
+    "metaDescription": "AIMORELOGY ??????? FPV/???? ???????? ???????????, edge AI vision ? ??????? ??? ?????? ? ????????.",
     "hero": {
-      "kicker": "__PH0__",
-      "titleLine1": "О",
+      "kicker": "Corporate Profile",
+      "titleLine1": "About",
       "titleLine2": "AIMORELOGY",
-      "subtitle": "Новаторство следующего поколения интеллектуальных систем управления полетом и автономных решений на базе AI- для промышленного мира."
+      "subtitle": "Pioneering the next generation of intelligent flight control systems and AI-driven autonomous solutions for the industrial world."
     },
     "mission": {
-      "title": "Наша миссия",
-      "p1": "AIMORELOGY — технологический лидер, стремящийся произвести революцию в UAV и индустрии робототехники. ",
-      "p2": "Мы специализируемся на передовых периферийных вычислениях __PH2__, передаче видео высокой четкости и алгоритмах автономного управления полетом."
+      "title": "Our Mission",
+      "p1": "AIMORELOGY is a technology leader dedicated to revolutionizing the UAV and robotics industry. We specialize in advanced edge AI computing, high-definition video transmission, and autonomous flight control algorithms.",
+      "p2": "By integrating vision, control, and communication into powerful, compact units like the CV184XH series, we enable industrial partners to build smarter, safer, and more efficient autonomous systems."
     },
     "partners": {
-      "title": "Партнеры"
+      "title": "Partners"
     },
     "leadership": {
-      "title": "Лидерство",
-      "name": "Ке Иран",
-      "role": "Основатель и CEO",
+      "title": "Leadership",
+      "name": "Ke Yiran",
+      "role": "Founder & CEO",
       "tags": [
-        "// СИСТЕМНЫЙ АРХИТЕКТОР",
-        "// СТОРОННИК OPEN SOURCE",
-        "// СТРАТЕГ ПРОДУКТА"
+        "// SYSTEM ARCHITECT",
+        "// OPEN SOURCE ADVOCATE",
+        "// PRODUCT STRATEGIST"
       ],
       "bio": {
-        "intro": "Ке Иран — основатель и CEO компании AIMORELOGY, обладающий обширным междоменным опытом, начиная от базового оборудования и заканчивая интеллектуальными системными алгоритмами.",
-        "backgroundTitle": "Фон",
-        "background": "До основания компании он активно участвовал в разработке аппаратного обеспечения с открытым исходным кодом и экосистеме RISC-V и был признан одним из первых создателей отечественного сообщества RISC-V.",
-        "trackTitle": "Послужной список",
-        "track": "Руководил разработкой, производством и глобальным продвижением серий Milk-V Duo, Mars и Pioneer, добившись замечательных успехов в зарубежном краудфандинге.",
-        "p1": "Обширный опыт в области чипов и базовых систем сформировал глубокое техническое мышление и сильную исполнительную компетенцию. Он считает, что ценность технологии не только в метриках, но и в том, чтобы больше людей могли действительно пользоваться технологией, касаться ее и менять мир.",
-        "p2": "После 2025 года он сместил фокус на интеллектуальные БПЛА и AI-системы. Основав AIMORELOGY, он сосредоточился на полетных контроллерах, визуальном восприятии, инференсе на периферии и интеллектуальных миссиях.",
-        "footer": "Ке Йиран в душе остается инженером: лично проверяет архитектуру систем, участвует в проектировании каналов управления полетом и определяет приоритеты базовой надежности и реальных пользовательских сценариев."
+        "intro": "Ke Yiran is the Founder and CEO of AIMORELOGY, bringing extensive cross-domain experience ranging from underlying hardware to intelligent system algorithms.",
+        "backgroundTitle": "Background",
+        "background": "Before founding the company, he was deeply involved in the open-source hardware and RISC-V ecosystem, recognized as one of the early builders of the domestic RISC-V community.",
+        "trackTitle": "Track Record",
+        "track": "Led the design, productization, and global promotion of the Milk-V Duo, Mars, and Pioneer series, achieving remarkable success in overseas crowdfunding.",
+        "p1": "His extensive background in chips and underlying systems has fostered deep technical thinking, product execution capabilities, and a natural resonance with developer culture. He believes the value of technology lies not just in performance metrics, but in enabling more people to \"truly use it, touch it, and change it.\"",
+        "p2": "Post-2025, he has shifted his focus from system architecture to intelligent UAVs and AI systems. Founding AIMORELOGY, he focuses on UAV flight control, visual perception, edge AI inference, and intelligent mission systems.",
+        "footer": "Ke Yiran remains an engineer at heart: personally reviewing system architectures, participating in flight control link design, and prioritizing underlying reliability and real-world user scenarios."
       },
       "philosophy": {
-        "title": "Философия",
+        "title": "Philosophy",
         "items": [
           {
-            "title": "Реальность прежде всего",
-            "desc": "Технология должна быть применима в реальности, а не только в демонстрациях."
+            "title": "Reality First",
+            "desc": "Technology must be usable in reality, not just in demonstrations."
           },
           {
-            "title": "Человекоориентированный",
-            "desc": "Инновации должны улучшить отношения между людьми и технологиями."
+            "title": "Human Centric",
+            "desc": "Innovation should improve the relationship between humans and technology."
           },
           {
-            "title": "Простота",
-            "desc": "Сложные системы должны быть представлены простым и надежным способом."
+            "title": "Simplicity",
+            "desc": "Complex systems must be presented with a simple, reliable experience."
           },
           {
-            "title": "Доверять",
-            "desc": "Каждый продукт должен обладать «надежной» стабильностью и безопасностью."
+            "title": "Trust",
+            "desc": "Every product must possess \"trustworthy\" stability and security."
           }
         ]
       }
     },
     "locations": {
-      "title": "Глобальное присутствие",
-      "companyName": "Название компании",
-      "address": "Адрес",
-      "contacts": "Ключевые контакты",
+      "title": "Global Presence",
+      "companyName": "Company Name",
+      "address": "Address",
+      "contacts": "Key Contacts",
       "shenzhen": {
-        "title": "Шэньчжэнь",
-        "tag": "Глобальная штаб-квартира",
-        "company": "Шэньчжэнь AIMORELOGY Technology Co., Ltd.",
-        "addressLine1": "Комната 603-12, зона A, здание T2, площадь Ланцзюнь,",
-        "addressLine2": "Дорога Тиезай, улица Сисян, район Баоань, Шэньчжэнь",
-        "contactName": "Йиран Ке"
+        "title": "Shenzhen",
+        "tag": "Global Headquarters",
+        "company": "Shenzhen AIMORELOGY Technology Co., Ltd.",
+        "addressLine1": "Room 603-12, Zone A, Building T2, Langjun Square,",
+        "addressLine2": "Tiezai Road, Xixiang Street, Bao'an District, Shenzhen",
+        "contactName": "Yiran Ke"
       },
       "hk": {
-        "title": "Гонконг",
-        "tag": "Отдел зарубежного бизнеса",
+        "title": "Hong Kong",
+        "tag": "Overseas Business Dept",
         "company": "AIMORELOGY LIMITED",
-        "addressLine1": "Комната H2 4/F, Индустриальный центр Century,",
-        "addressLine2": "33-35 Улица Ау Пуй Ван Фотан,",
-        "addressLine3": "Ша Тин, Гонконг",
-        "contactName": "Джефф Се"
+        "addressLine1": "Room H2 4/F, Century Industrial Centre,",
+        "addressLine2": "33-35 Au Pui Wan Street Fotan,",
+        "addressLine3": "Sha Tin, Hong Kong",
+        "contactName": "Jeff Xie"
       }
     },
     "cta": {
-      "title": "Готовы к инновациям?",
-      "subtitle": "Свяжитесь с нашим отделом продаж сегодня, чтобы обсудить, как наши решения AI могут ускорить ваш бизнес.",
-      "email": "Напишите нам сейчас"
+      "title": "Ready to Innovate?",
+      "subtitle": "Contact our sales team today to discuss how our AI solutions can accelerate your business.",
+      "email": "Email Us Now"
     }
   },
   "aiTracking": {
-    "metaTitle": "Собственный алгоритм AI Tracking | AIMORELOGY",
-    "breadcrumb": "AI Алгоритм отслеживания",
+    "metaTitle": "Self-Developed AI Tracking | AIMORELOGY",
+    "metaDescription": "?????? ???????? ??????????? ???????? ??? FPV/???? ??????, ???????????? ??????? ? ??????????? ?????????????.",
+    "breadcrumb": "AI Tracking Algorithm",
     "hero": {
-      "kicker": "Основная технология",
-      "badge": "СОБСТВЕННЫЙ АЛГОРИТМ",
-      "titleLine1": "Сверхбыстрый",
-      "titleLine2": "Визуальное отслеживание",
-      "subtitle": "Надежное отслеживание отдельных объектов (SOT) с возможностью Re-ID для сложных сред.",
-      "desc": "Оптимизирован для маломощных платформ обнаружения границ. ",
-      "cta": "Достижение задержки вывода 2–5 мс на стандартном встроенном оборудовании SDK при сохранении устойчивости фиксации во время окклюзии.",
-      "imageAlt": "AI Баннер отслеживания"
+      "kicker": "Core Technology",
+      "badge": "PROPRIETARY ALGORITHM",
+      "titleLine1": "Hyper-Fast",
+      "titleLine2": "Visual Tracking",
+      "subtitle": "Robust Single-Object Tracking (SOT) with Re-ID capability for complex environments.",
+      "desc": "Optimized for low-power edge detection platforms. Achieving 2ms-5ms inference latency on standard embedded NPU hardware while maintaining lock-on robustness during occlusion.",
+      "cta": "Get Algorithm SDK",
+      "imageAlt": "AI Tracking Banner"
     },
     "performance": {
-      "title": "Данные о производительности",
-      "desc": "Алгоритм глубоко оптимизирован под INT8 для TPU на базе RISC-V и ARM. Он обеспечивает промышленную реальновременную производительность даже на входном уровне чипов.",
-      "testTitle": "Условия испытаний",
+      "title": "Performance Data",
+      "desc": "Our algorithm is heavily optimized for INT8 quantization on RISC-V and ARM-based TPU platforms. It delivers industrial-grade real-time performance even on entry-level chips.",
+      "testTitle": "Test Conditions",
       "test": {
-        "input": "Размер ввода",
-        "quant": "Квантование",
-        "batch": "Размер партии"
+        "input": "Input Size",
+        "quant": "Quantization",
+        "batch": "Batch Size"
       },
       "table": {
-        "platform": "Платформа (вычислительная мощность)",
-        "latency": "Скорость вывода (задержка)",
-        "ultraFast": "Ультра-быстрый"
+        "platform": "Platform (Computing Power)",
+        "latency": "Inference Speed (Latency)",
+        "ultraFast": "Ultra-Fast"
       }
     },
     "capabilities": {
-      "title": "Надежное отслеживание в реальном мире",
-      "subtitle": "Наш запатентованный алгоритм обеспечивает постоянную фиксацию от первоначального обнаружения до отслеживания на большом расстоянии, фильтруя сложные фоновые помехи и статические препятствия в режиме реального времени.",
+      "title": "Robust Real-World Tracking",
+      "subtitle": "Our proprietary algorithm maintains consistent lock-on from initial acquisition to long-range tracking, filtering out complex background clutter and static obstacles in real-time.",
       "steps": {
         "0": {
-          "alt": "Отслеживание активно",
-          "status": "СТАТУС: ОТСЛЕЖИВАНИЕ",
-          "title": "1. Точная фиксация",
-          "desc": "Мгновенное обнаружение цели вблизи архитектурных особенностей."
+          "alt": "Tracking Active",
+          "status": "STATUS: TRACKING",
+          "title": "1. Precision Locking",
+          "desc": "Instant target acquisition near architectural features."
         },
         "1": {
-          "alt": "Сложная сцена",
-          "status": "СТАТУС: СТАБИЛЬНО",
-          "title": "2. Неприятие беспорядка",
-          "desc": "Надежное отслеживание в сложных условиях и припаркованных транспортных средствах."
+          "alt": "Complex Scene",
+          "status": "STATUS: STABLE",
+          "title": "2. Clutter Rejection",
+          "desc": "Robust tracking amidst complex environments and parked vehicles."
         },
         "2": {
-          "alt": "Дальняя дистанция",
-          "status": "СТАТУС: ЗАФИКСИРОВАНО",
-          "title": "3. Стабильность на дальних дистанциях",
-          "desc": "Постоянное обнаружение удаленных целей с низкой плотностью пикселей."
+          "alt": "Long Range",
+          "status": "STATUS: LOCKED",
+          "title": "3. Long Range Stability",
+          "desc": "Consistent lock-on for distant targets with low pixel density."
         }
       }
     },
     "features": {
       "0": {
-        "title": "Сверхнизкая задержка",
-        "desc": "Время обработки <5 мс обеспечивает прямое управление с обратной связью для БПЛА без дрожания или колебаний."
+        "title": "Ultra-Low Latency",
+        "desc": "<5ms processing time ensures direct closed-loop control for UAVs without jitter or oscillation."
       },
       "1": {
-        "title": "Легкая модель",
-        "desc": "Высоко оптимизированное квантование INT8 позволяет использовать его на экономичных чипах, таких как CV181x."
+        "title": "Lightweight Model",
+        "desc": "Highly optimized INT8 quantization allows deployment on cost-effective chips like CV181x."
       },
       "2": {
-        "title": "Прочный Re-ID",
-        "desc": "Сохраняет идентичность цели даже после полной окклюзии, предотвращая «смещение цели» к фоновым объектам."
+        "title": "Robust Re-ID",
+        "desc": "Maintains target identity even after total occlusion, preventing \"target drift\" to background objects."
       },
       "3": {
-        "title": "Многомасштабный вход",
-        "desc": "Поддерживает разрешение 128x128 для скорости и 256x256 для точности, адаптируясь к различным разрешениям сенсора."
+        "title": "Multi-Scale Input",
+        "desc": "Supports 128x128 for speed and 256x256 for precision, adaptable to different sensor resolutions."
       }
     },
     "cta": {
-      "title": "Интегрируйте отслеживание AI сегодня",
-      "subtitle": "Доступно в виде программного обеспечения SDK для чипов серии CV18xx или предварительно прошитого на нашем полетном контроллере AFC-V1.",
-      "primary": "Запросить оценку",
-      "secondary": "Посмотреть оборудование"
+      "title": "Integrate AI Tracking Today",
+      "subtitle": "Available as a software SDK for CV18xx series chips or pre-flashed on our AFC-V1 Flight Controller.",
+      "primary": "Request Evaluation",
+      "secondary": "View Hardware"
     }
   },
   "dshot": {
-    "metaTitle": "Протокол управления Adaptive DShot | AIMORELOGY",
-    "breadcrumb": "Адаптивный DShot",
+    "metaTitle": "Adaptive DShot Control Protocol | AIMORELOGY",
+    "metaDescription": "Adaptive DShot ???????? ??? FPV/???? ESC: ???????????? ?????, ?????????? ???????, ??? DMA.",
+    "breadcrumb": "Adaptive DShot",
     "hero": {
-      "badge": "Адаптивный DShot",
-      "titleLine1": "Универсальный",
-      "titleLine2": "Контроль выстрела",
-      "subtitle": "DMA-бесплатный двунаправленный DShot 300/150, который адаптируется к любому MCU со стабильной синхронизацией и низким уровнем джиттера.",
+      "badge": "Adaptive DShot",
+      "titleLine1": "Universal",
+      "titleLine2": "DShot Control",
+      "subtitle": "DMA-free, bi-directional DShot 300/150 that adapts to any MCU with stable timing and low jitter.",
       "stats": {
-        "0": "Нулевой DMA Требуется",
+        "0": "Zero DMA Required",
         "1": {
           "value": "300/150",
-          "unit": "к",
-          "label": "Двунаправленные режимы"
+          "unit": "k",
+          "label": "Bi-directional Modes"
         }
       },
-      "imageAlt": "Адаптивная диаграмма сигналов DShot"
+      "imageAlt": "Adaptive DShot Signal Diagram"
     },
     "core": {
-      "title": "Основные инновации",
-      "subtitle": "AIMORELOGY Adaptive DShot обеспечивает управление ESC профессионального уровня на любой платформе микросхем без специального оборудования.",
+      "title": "Core Innovations",
+      "subtitle": "AIMORELOGY Adaptive DShot brings professional-grade ESC control to any chip platform without special hardware.",
       "cards": {
         "0": {
-          "title": "Универсальная портативность",
-          "desc": "Работает на RISC-V, ARM и Xtensa без DMA или аппаратных таймеров."
+          "title": "Universal Portability",
+          "desc": "Runs on RISC-V, ARM, and Xtensa without DMA or hardware timers."
         },
         "1": {
-          "title": "Самоадаптирующееся время",
-          "desc": "Автоматически калибрует выходную частоту для устранения дрейфа синхронизации и ошибок."
+          "title": "Self-Adaptive Timing",
+          "desc": "Auto-calibrates output frequency to eliminate timing drift and errors."
         },
         "2": {
-          "title": "Двунаправленная телеметрия",
-          "desc": "Надежная обратная связь ESC для RPM, температуры и состояния неисправности."
+          "title": "Bi-directional Telemetry",
+          "desc": "Reliable ESC feedback for RPM, temperature, and fault status."
         },
         "3": {
-          "title": "Производство готово",
-          "desc": "Проверено для BLHeli_32, BLHeli_S и AM32."
+          "title": "Production Ready",
+          "desc": "Validated across BLHeli_32, BLHeli_S, and AM32."
         }
       }
     },
     "comparison": {
-      "title": "Сравнение протоколов",
+      "title": "Protocol Comparison",
       "headers": {
-        "feature": "Особенность",
+        "feature": "Feature",
         "pwm": "PWM",
-        "hardware": "Аппаратное обеспечение",
-        "adaptive": "Адаптивный DShot"
+        "hardware": "Hardware DShot",
+        "adaptive": "Adaptive DShot"
       },
       "rows": {
         "0": {
-          "feature": "Требования к оборудованию",
-          "pwm": "Таймер PWM",
-          "hardware": "DMA + Таймер",
-          "adaptive": "Только программное обеспечение"
+          "feature": "Hardware Requirements",
+          "pwm": "Timer PWM",
+          "hardware": "DMA + Timer",
+          "adaptive": "Software-only"
         },
         "1": {
-          "feature": "Двунаправленный",
-          "pwm": "Нет",
-          "hardware": "Ограниченный",
-          "adaptive": "Полная телеметрия"
+          "feature": "Bi-directional",
+          "pwm": "No",
+          "hardware": "Limited",
+          "adaptive": "Full Telemetry"
         },
         "2": {
-          "feature": "Шумоустойчивость",
-          "pwm": "Низкий",
-          "hardware": "Середина",
-          "adaptive": "Высокий"
+          "feature": "Noise Immunity",
+          "pwm": "Low",
+          "hardware": "Medium",
+          "adaptive": "High"
         },
         "3": {
-          "feature": "Портативность",
-          "pwm": "Низкий",
-          "hardware": "Середина",
-          "adaptive": "Любой MCU"
+          "feature": "Portability",
+          "pwm": "Low",
+          "hardware": "Medium",
+          "adaptive": "Any MCU"
         }
       }
     },
     "deepDive": {
       "steps": {
         "0": {
-          "title": "Кодирование сигнала",
-          "desc": "Пакеты 24-bit с защитой CRC обеспечивают целостность команд."
+          "title": "Signal Encoding",
+          "desc": "24-bit packets with CRC guard ensure command integrity."
         },
         "1": {
-          "title": "Адаптивная выборка",
-          "desc": "Динамическое обнаружение границ соответствует синхронизации ESC без DMA."
+          "title": "Adaptive Sampling",
+          "desc": "Dynamic edge detection aligns with ESC timing without DMA."
         },
         "2": {
-          "title": "Исправление ошибок",
-          "desc": "Самонастройка для компенсации дрейфа тактового сигнала и шума кабеля."
+          "title": "Error Correction",
+          "desc": "Self-tuning to compensate clock drift and cable noise."
         }
       },
-      "title": "Почему адаптивный DShot имеет значение",
-      "p1": "Традиционный DShot опирается на строгий тайминг и доступ DMA. ",
-      "p2": "На многих микроконтроллерах это либо требует затрат драгоценных аппаратных таймеров, либо делает двунаправленную телеметрию ненадежной.",
+      "title": "Why Adaptive DShot Matters",
+      "p1": "Traditional DShot relies on strict timing and DMA access. On many MCUs this either costs precious hardware timers or makes bi-directional telemetry unreliable.",
+      "p2": "Adaptive DShot removes those constraints by combining software timing, smart sampling, and self-calibration so the protocol stays stable across chips and environments.",
       "bullets": {
-        "0": "Никаких специальных периферийных устройств не требуется",
-        "1": "Стабильное управление при длинных проводах и шумных регуляторах скорости.",
-        "2": "Масштабируется от любительского уровня до промышленных БПЛА"
+        "0": "No special peripherals required",
+        "1": "Stable control across long wires and noisy ESCs",
+        "2": "Scales from hobby-grade to industrial UAVs"
       }
     },
     "cta": {
-      "title": "Готовы интегрировать Adaptive DShot?",
-      "subtitle": "Свяжитесь с нами для получения эталонного встроенного ПО, доступа к SDK и поддержки интеграции.",
-      "primary": "Свяжитесь с отделом продаж"
+      "title": "Ready to Integrate Adaptive DShot?",
+      "subtitle": "Contact us for reference firmware, SDK access, and integration support.",
+      "primary": "Contact Sales"
     }
   },
   "solution": {
-    "requestDemo": "Запросить демо",
-    "overview": "Обзор",
-    "capabilities": "Возможности",
-    "applications": "Приложения",
-    "discuss": "Обсудите свой проект",
-    "download": "Скачать брошюру"
+    "requestDemo": "Request Demo",
+    "overview": "Overview",
+    "capabilities": "Capabilities",
+    "applications": "Applications",
+    "discuss": "Discuss Your Project",
+    "download": "Download Brochure"
   },
   "solutionDemo": {
-    "title": "Автономная инспекция",
-    "subtitle": "AI-проверка UAV энергетических и промышленных объектов.",
+    "metaTitle": "?????????? ????????? | AIMORELOGY",
+    "metaDescription": "?????????? ????????? ??? FPV/???? ?????? ? ?????????? ? ??????????????.",
+    "title": "Autonomous Inspection",
+    "subtitle": "AI-driven UAV inspection for energy and industrial assets.",
     "overview": {
-      "title": "Автоматизированные полевые операции",
-      "content": "Планируйте маршруты, делайте снимки 4K и обнаруживайте аномалии в режиме реального времени. "
+      "title": "Automated Field Operations",
+      "content": "Plan routes, capture 4K imagery, and detect anomalies in real time. Our inspection stack pairs edge inference with cloud analytics to shorten maintenance cycles and reduce risk."
     },
     "stats": {
-      "0": "Наш стек инспекций сочетает в себе анализ периферийных данных с облачной аналитикой, что позволяет сократить циклы обслуживания и снизить риски.",
-      "1": "Ложные тревоги",
-      "2": "Максимальное разрешение",
-      "3": "Время работы"
+      "0": "Detection Accuracy",
+      "1": "False Alarms",
+      "2": "Max Resolution",
+      "3": "Uptime"
     },
     "features": {
       "0": {
-        "title": "Мультиспектральное сканирование",
-        "desc": "RGB и тепловые трубопроводы выявляют дефекты, невидимые невооруженным глазом."
+        "title": "Multi-Spectral Scan",
+        "desc": "RGB and thermal pipelines reveal defects invisible to the naked eye."
       },
       "1": {
-        "title": "Мгновенные оповещения",
-        "desc": "Выводы на устройстве запускают уведомления в реальном времени и видеоролики с доказательствами."
+        "title": "Instant Alerts",
+        "desc": "On-device inference triggers real-time notifications and evidence clips."
       },
       "2": {
-        "title": "Отчеты, готовые к обеспечению соответствия",
-        "desc": "Автоматически создаваемые PDF-файлы с картами дефектов, временными метками и метаданными."
+        "title": "Compliance-Ready Reports",
+        "desc": "Auto-generated PDFs with defect maps, timestamps, and metadata."
       },
       "3": {
-        "title": "Автономные миссии",
-        "desc": "Патрули на основе путевых точек с динамическим обходом препятствий."
+        "title": "Autonomous Missions",
+        "desc": "Waypoint-based patrols with dynamic obstacle avoidance."
       },
       "4": {
-        "title": "Облачная аналитика",
-        "desc": "Информационные панели автопарка для анализа тенденций и оценки состояния активов."
+        "title": "Cloud Analytics",
+        "desc": "Fleet dashboards for trend analysis and asset health scoring."
       },
       "5": {
-        "title": "Дальняя связь",
-        "desc": "Стабильное видео и телеметрия HD на больших площадях проверки."
+        "title": "Long-Range Link",
+        "desc": "Stable HD video and telemetry across large inspection areas."
       }
     },
     "apps": {
-      "0": "Солнечные фермы",
-      "1": "Ветровые турбины",
-      "2": "Промышленные объекты"
+      "0": "Solar Farms",
+      "1": "Wind Turbines",
+      "2": "Industrial Sites"
     },
     "cta": {
-      "title": "Развертывание инспекции в масштабе",
-      "text": "Поговорите с нашей командой, чтобы настроить рабочие процессы, интегрировать датчики и безопасно развернуть миссии."
+      "title": "Deploy Inspection at Scale",
+      "text": "Talk with our team to customize workflows, integrate sensors, and deploy missions safely."
     }
   },
   "aiCamera": {
-    "metaTitle": "Решение Cloud AI Camera | AIMORELOGY",
-    "breadcrumb": "Облачная камера AI",
+    "metaTitle": "Cloud AI Camera Solution | AIMORELOGY",
+    "metaDescription": "???????? AI???????: edge AI ?? ?????????? ? ???????? ?????????? ??? ?????????? ?????????????.",
+    "breadcrumb": "Cloud AI Camera",
     "hero": {
-      "kicker": "Решение",
+      "kicker": "Solution",
       "badge": "EDGE + CLOUD",
-      "titleLine1": "Облако AI",
-      "titleLine2": "Платформа камеры",
-      "desc": "Комплексный стек интеллектуальных камер, сочетающий в себе анализ границ и облачную оркестрацию для мониторинга в реальном времени и масштабируемого развертывания.",
-      "cta": "Запросить демо",
-      "ready": "SDK готов для платформ CV18xx.",
+      "titleLine1": "Cloud AI",
+      "titleLine2": "Camera Platform",
+      "desc": "An end-to-end smart camera stack combining edge inference with cloud orchestration for real-time monitoring and scalable deployment.",
+      "cta": "Request Demo",
+      "ready": "SDK ready for CV18xx platforms.",
       "uiVersion": "UI VERSION 1.0",
-      "imageAlt": "Облачный интерфейс камеры AI",
-      "overlay": "Живое обнаружение",
-      "chipLabel": "Эталонный чип"
+      "imageAlt": "Cloud AI Camera Interface",
+      "overlay": "Live Detection",
+      "chipLabel": "Reference Chip"
     },
     "value": {
       "0": {
-        "title": "Облачное управление",
-        "desc": "Централизованное предоставление устройств, развертывание моделей и мониторинг парка."
+        "title": "Cloud Management",
+        "desc": "Centralized device provisioning, model deployment, and fleet monitoring."
       },
       "1": {
-        "title": "Масштабируемый парк",
-        "desc": "Управляйте сотнями камер с помощью единых политик и обновлений OTA."
+        "title": "Scalable Fleet",
+        "desc": "Operate hundreds of cameras with unified policies and OTA updates."
       },
       "2": {
-        "title": "Аппаратное обеспечение, ориентированное на видение",
-        "desc": "Оптимизированный SoC и конвейер ISP для постоянной аналитики."
+        "title": "Vision-first Hardware",
+        "desc": "Optimized SoC and ISP pipeline for always-on intelligence."
       }
     },
     "specs": {
-      "title": "Технические характеристики оборудования",
-      "subtitle": "Интегрированная платформа SoC, оптимизированная для постоянного обзора.",
+      "title": "Hardware Specifications",
+      "subtitle": "Integrated SoC platform optimized for always-on vision.",
       "items": {
         "0": {
-          "label": "Чип"
+          "label": "Chip"
         },
         "1": {
-          "label": "AI Производительность",
+          "label": "AI Performance",
           "value": "1.5 TOPS INT8"
         },
         "2": {
@@ -600,275 +623,307 @@
           "value": "8MP @ 30FPS"
         },
         "3": {
-          "label": "Видео",
+          "label": "Video",
           "value": "H.265/H.264"
         },
         "4": {
-          "label": "Возможности подключения",
+          "label": "Connectivity",
           "value": "Wi-Fi / Ethernet / LTE"
         }
       },
-      "diagram": "Блок-схема системы",
-      "sip": "Система в пакете",
+      "diagram": "System Block Diagram",
+      "sip": "System-in-Package",
       "blocks": {
         "0": {
-          "title": "Датчики",
+          "title": "Sensors",
           "bus": "MIPI"
         },
         "1": {
-          "title": "Хранилище",
+          "title": "Storage",
           "bus": "SDIO"
         },
         "2": {
-          "title": "Беспроводная связь"
+          "title": "Wireless"
         },
         "3": {
-          "title": "Сеть"
+          "title": "Ethernet"
         },
         "4": {
           "title": "USB",
           "bus": "USB2.0"
         },
         "5": {
-          "title": "Власть",
+          "title": "Power",
           "bus": "PMIC"
         }
       }
     },
     "software": {
-      "title": "Программное обеспечение и облачный стек",
-      "cloudTitle": "Облачная платформа",
+      "title": "Software & Cloud Stack",
+      "cloudTitle": "Cloud Platform",
       "cloudItems": [
-        "Управление автопарком",
-        "Развертывание модели",
-        "Аналитическая панель",
-        "OTA Обновления"
+        "Fleet Management",
+        "Model Deployment",
+        "Analytics Dashboard",
+        "OTA Updates"
       ],
-      "deviceTitle": "Периферийное устройство",
-      "appTitle": "Приложения",
+      "deviceTitle": "Edge Device",
+      "appTitle": "Applications",
       "appTags": [
-        "Обнаружение",
-        "Отслеживание",
-        "Подсчет",
-        "Оповещение"
+        "Detection",
+        "Tracking",
+        "Counting",
+        "Alerting"
       ],
-      "hal": "HAL / Драйверы",
-      "os": "Линукс OS"
+      "hal": "HAL / Drivers",
+      "os": "Linux OS"
     },
     "capabilities": {
-      "title": "Основные возможности",
+      "title": "Core Capabilities",
       "items": {
         "0": {
-          "title": "Сообщения о событиях",
-          "desc": "MQTT/WebSocket оповещения с настраиваемыми пороговыми значениями."
+          "title": "Event Messaging",
+          "desc": "MQTT/WebSocket alerts with configurable thresholds."
         },
         "1": {
-          "title": "Разведка изображений",
-          "desc": "Обнаружение, отслеживание и повторное использование конвейеров ID в режиме реального времени."
+          "title": "Image Intelligence",
+          "desc": "Real-time detection, tracking, and re-ID pipelines."
         },
         "2": {
-          "title": "Глобальный доступ",
-          "desc": "Безопасный удаленный просмотр с доступом на основе ролей."
+          "title": "Global Access",
+          "desc": "Secure remote viewing with role-based access."
         },
         "3": {
-          "title": "Многопотоковое видео",
-          "desc": "RTSP/HTTP потоковая передача для мониторинга и хранения."
+          "title": "Multi-stream Video",
+          "desc": "RTSP/HTTP streaming for monitoring and storage."
         },
         "4": {
-          "title": "Низкая задержка",
-          "desc": "Вывод фронта менее 30 мс для оперативного управления."
+          "title": "Low Latency",
+          "desc": "Edge inference under 30ms for responsive control."
         },
         "5": {
-          "title": "Безопасность",
-          "desc": "Безопасная загрузка, подписанная прошивка и зашифрованная передача."
+          "title": "Security",
+          "desc": "Secure boot, signed firmware, and encrypted transport."
         }
       }
     },
     "cta": {
-      "title": "Создавайте с помощью облачной камеры AI",
-      "subtitle": "Получите полный эталонный проект SDK и комплект для интеграции с облаком.",
-      "secondary": "Посмотреть платформу CV184"
+      "title": "Build with Cloud AI Camera",
+      "subtitle": "Get a full reference design, SDK, and cloud integration kit.",
+      "secondary": "View CV184 Platform"
     }
   },
   "products": {
     "common": {
-      "metaTitle": "{{name}} {{tagline}} | ",
-      "notFound": "__PH2__",
-      "returnHome": "Вернуться домой",
-      "requestQuote": "Запросить цену",
-      "productOverview": "Обзор продукта",
-      "keyHighlights": "Ключевые моменты",
-      "technicalSpecs": "Технические характеристики",
-      "specCategory": "Категория",
-      "specParameter": "Параметр",
-      "specValue": "Ценить",
-      "applications": "Приложения",
-      "ctaTitle": "Разработайте свое решение с помощью {{name}}",
+      "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
+      "notFound": "Product Not Found",
+      "returnHome": "Return Home",
+      "requestQuote": "Request Quote",
+      "productOverview": "Product Overview",
+      "keyHighlights": "Key Highlights",
+      "technicalSpecs": "Technical Specifications",
+      "specCategory": "Category",
+      "specParameter": "Parameter",
+      "specValue": "Value",
+      "applications": "Applications",
+      "ctaTitle": "Develop Your Solution with {{name}}",
       "ctaText": "We offer professional system integration and turnkey solutions based on the {{name}} platform. Accelerate your product launch with our engineering expertise.",
-      "ctaButton": "Получить предложение по решению",
-      "series": "{{series}} Серия"
+      "ctaButton": "Get Solution Proposal",
+      "series": "{{series}} Series"
     },
     "afcComingSoon": {
-      "metaTitle": "Скоро | ",
-      "badge": "__PH0__",
-      "title": "Вскоре",
+      "metaTitle": "????? | AIMORELOGY",
+      "metaDescription": "AIMORELOGY AFC-V1 ? ??????????????? FPV/???? ???????? ?????????? ? vision, video link ? control.",
+      "badge": "Development in Progress",
+      "title": "Coming Soon",
       "subtitle": "AFC-V1",
-      "desc": "На горизонте уже не за горами появится совершенный универсальный контроллер полета, объединяющий Vision, Video Link и Control.",
-      "tagline": "Переосмысление будущего мозга UAV.",
-      "returnHome": "Вернуться домой",
-      "contactSales": "Свяжитесь с отделом продаж для получения спецификаций"
+      "desc": "The ultimate all-in-one flight controller integrating Vision, Video Link, and Control is on the horizon.",
+      "tagline": "Redefining the future of UAV brains.",
+      "returnHome": "Return to Home",
+      "contactSales": "Contact Sales for Specs"
+    },
+    "sophgo": {
+      "bm1688": {
+        "metaTitle": "SOPHGO BM1688 TPU edge AI SoC ??? FPV/???? | AIMORELOGY",
+        "metaDescription": "SOPHGO BM1688 ?????????? 8-??????? ARM ? 16 TOPS TPU ??? FPV/???? vision, ?????????? ?????? ? ???????? ???????."
+      },
+      "cv186ah": {
+        "metaTitle": "SOPHGO CV186AH vision AI SoC ??? FPV/???? | AIMORELOGY",
+        "metaDescription": "SOPHGO CV186AH ???????????? 7.2 TOPS ??? 4K ?????????, ??????? ? ?????????????? ???????????? ? FPV/???? ? ????????."
+      },
+      "cv184": {
+        "metaTitle": "SOPHGO CV184 edge vision SoC ??? FPV/???? | AIMORELOGY",
+        "metaDescription": "SOPHGO CV184 ? 1.5 TOPS dual-core SoC ? 4K ???????????? ??? FPV/???? vision, ???????? ??????? ? edge AI ?????."
+      },
+      "cv181": {
+        "metaTitle": "SOPHGO CV181 RISC-V vision SoC ??? FPV/???? | AIMORELOGY",
+        "metaDescription": "SOPHGO CV181 ?????????? 0.5-1.0 TOPS AI ??? ?????? FPV/???? ????????, ?????? ???? ? ???????? ???????."
+      },
+      "cv180": {
+        "metaTitle": "SOPHGO CV180 RISC-V vision SoC ??? micro FPV/???? | AIMORELOGY",
+        "metaDescription": "SOPHGO CV180 ? 0.2 TOPS RISC-V vision SoC ??? micro FPV/???? imaging ? ????????????????? ?????????."
+      }
+    },
+    "espressif": {
+      "esp32s3": {
+        "metaTitle": "Espressif ESP32-S3-WROOM-1 Wi-Fi/Bluetooth ?????? | AIMORELOGY",
+        "metaDescription": "ESP32-S3-WROOM-1 ? dual-core Wi-Fi + Bluetooth LE ?????? ? AI ?????????? ??? smart home, ?????? ? edge AI ?????????."
+      }
     }
   },
   "legal": {
-    "lastUpdated": "Последнее обновление: {{date}}"
+    "lastUpdated": "Last Updated: {{date}}"
   },
   "privacy": {
-    "metaTitle": "Политика конфиденциальности | ",
-    "title": "__PH0__",
+    "metaTitle": "???????? ?????????????????? | AIMORELOGY",
+    "metaDescription": "??? AIMORELOGY ????????, ?????????? ? ???????? ???? ??????????.",
+    "title": "Privacy Policy",
     "intro": {
-      "p1": "AIMORELOGY LIMITED и ее аффилированные лица («AIMORELOGY», «мы», «нас» или «наши») обязуются защищать вашу конфиденциальность. ",
-      "p2": "В настоящей Политике конфиденциальности объясняется, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы посещаете наш веб-сайт или используете наши продукты и услуги."
+      "p1": "AIMORELOGY LIMITED and its affiliates (\"AIMORELOGY\", \"we\", \"us\", or \"our\") are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our products and services.",
+      "p2": "Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site."
     },
     "sections": {
       "collection": {
-        "title": "1. Сбор вашей информации",
-        "p1": "Мы можем собирать информацию о вас различными способами. ",
+        "title": "1. Collection of Your Information",
+        "p1": "We may collect information about you in a variety of ways. The information we may collect on the Site includes:",
         "items": {
           "0": {
-            "title": "Информация, которую мы можем собирать на Сайте, включает в себя:",
-            "desc": "Личная информация, такая как ваше имя, адрес доставки, адрес электронной почты и номер телефона, которую вы добровольно предоставляете нам при регистрации на Сайте или когда вы решаете участвовать в различных мероприятиях, связанных с Сайтом."
+            "title": "Personal Data",
+            "desc": "Personally identifiable information, such as your name, shipping address, email address, and telephone number, that you voluntarily give to us when you register with the Site or when you choose to participate in various activities related to the Site."
           },
           "1": {
-            "title": "Производные данные",
-            "desc": "Информация, которую наши серверы автоматически собирают, когда вы заходите на Сайт, например, ваш адрес IP, тип вашего браузера, ваша операционная система, время вашего доступа и страницы, которые вы просматривали непосредственно до и после доступа к Сайту."
+            "title": "Derivative Data",
+            "desc": "Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site."
           }
         }
       },
       "use": {
-        "title": "2. Использование вашей информации",
-        "p1": "Точная информация позволяет нам обеспечить комфортный и персонализированный опыт. В частности, мы можем использовать собранную информацию для:",
+        "title": "2. Use of Your Information",
+        "p1": "Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:",
         "items": {
-          "0": "Создайте свою учетную запись и управляйте ею.",
-          "1": "Обрабатывайте ваши заказы и доставляйте продукцию (например, полетные контроллеры CV184XH).",
-          "2": "Отправьте электронное письмо по поводу вашего аккаунта или заказа.",
-          "3": "Отвечать на запросы по продуктам и обслуживанию клиентов.",
-          "4": "Собирать анонимные статистические данные и анализ для внутреннего использования.",
-          "5": "Отправить вам информационный бюллетень (если вы согласились)."
+          "0": "Create and manage your account.",
+          "1": "Process your orders and deliver products (e.g., CV184XH Flight Controllers).",
+          "2": "Email you regarding your account or order.",
+          "3": "Respond to product and customer service requests.",
+          "4": "Compile anonymous statistical data and analysis for use internally.",
+          "5": "Send you a newsletter (if you have opted in)."
         }
       },
       "disclosure": {
-        "title": "3. Раскрытие вашей информации",
-        "p1": "Мы можем передавать информацию в определенных случаях, в том числе:",
+        "title": "3. Disclosure of Your Information",
+        "p1": "We may share information we have collected about you in certain situations. Your information may be disclosed as follows:",
         "items": {
           "0": {
-            "title": "По закону или для защиты прав",
-            "desc": "Если мы считаем, что раскрытие информации о вас необходимо для реагирования на судебный процесс, для расследования или устранения потенциальных нарушений нашей политики или для защиты прав, собственности и безопасности других лиц."
+            "title": "By Law or to Protect Rights",
+            "desc": "If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others."
           },
           "1": {
-            "title": "Сторонние поставщики услуг",
-            "desc": "Мы можем передавать вашу информацию третьим лицам, которые предоставляют услуги для нас или от нашего имени, включая обработку платежей, анализ данных, доставку электронной почты, услуги хостинга, обслуживание клиентов и маркетинговую помощь."
+            "title": "Third-Party Service Providers",
+            "desc": "We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance."
           }
         }
       },
       "security": {
-        "title": "4. Безопасность вашей информации",
-        "p1": "Мы используем административные, технические и физические меры безопасности, чтобы защитить вашу личную информацию. "
+        "title": "4. Security of Your Information",
+        "p1": "We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse."
       },
       "contact": {
-        "title": "Несмотря на то, что мы предприняли разумные шаги для защиты личной информации, которую вы нам предоставляете, имейте в виду, что, несмотря на наши усилия, никакие меры безопасности не являются совершенными или непроницаемыми, и ни один метод передачи данных не может быть гарантирован от любого перехвата или другого типа неправомерного использования.",
-        "p1": "Если у вас есть вопросы или комментарии по поводу настоящей Политики конфиденциальности, свяжитесь с нами по адресу:"
+        "title": "5. Contact Us",
+        "p1": "If you have questions or comments about this Privacy Policy, please contact us at:"
       }
     },
     "contact": {
       "company": "AIMORELOGY LIMITED",
-      "addressLine1": "Комната H2 4/F, Индустриальный центр Century",
-      "addressLine2": "33-35 Улица Ау Пуй Ван Фотан, Ша Тин, Гонконг",
-      "emailLabel": "Электронная почта",
+      "addressLine1": "Room H2 4/F, Century Industrial Centre",
+      "addressLine2": "33-35 Au Pui Wan Street Fotan, Sha Tin, Hong Kong",
+      "emailLabel": "Email",
       "email": "info@aimorelogy.com"
     }
   },
   "terms": {
-    "metaTitle": "Условия обслуживания | ",
-    "title": "__PH0__",
-    "intro": "Настоящие Условия оказания услуг (“Условия”) регулируют использование веб-сайта AIMORELOGY LIMITED (“Компания”) и покупку наших продуктов и услуг. Используя веб-сайт, вы соглашаетесь с настоящими Условиями.",
+    "metaTitle": "??????? ???????????? | AIMORELOGY",
+    "metaDescription": "??????? ????????????? ????? ? ????????? AIMORELOGY.",
+    "title": "Terms of Service",
+    "intro": "These Terms of Service (\"Terms\") govern your use of the website operated by AIMORELOGY LIMITED (\"Company,\" \"we,\" or \"us\") and the purchase of our products and services. By accessing or using our website, you agree to be bound by these Terms.",
     "sections": {
       "license": {
-        "title": "1. Используйте лицензию",
-        "p1": "Разрешается временно скачать одну копию материалов (информации или программного обеспечения) на сайте AIMORELOGY для личного, некоммерческого и временного просмотра. Это лицензия, а не передача прав, и в рамках этой лицензии вы не имеете права:",
+        "title": "1. Use License",
+        "p1": "Permission is granted to temporarily download one copy of the materials (information or software) on AIMORELOGY's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:",
         "items": {
-          "0": "Изменять или копировать материалы;",
-          "1": "Использовать материалы в любых коммерческих целях или для любого публичного показа (коммерческого или некоммерческого);",
-          "2": "Пытаться декомпилировать или реконструировать любое программное обеспечение, содержащееся на веб-сайте AIMORELOGY;",
-          "3": "Удалить из материалов любые пометки об авторских правах и других правах собственности; ",
-          "4": "или"
+          "0": "Modify or copy the materials;",
+          "1": "Use the materials for any commercial purpose, or for any public display (commercial or non-commercial);",
+          "2": "Attempt to decompile or reverse engineer any software contained on AIMORELOGY's website;",
+          "3": "Remove any copyright or other proprietary notations from the materials; or",
+          "4": "Transfer the materials to another person or \"mirror\" the materials on any other server."
         }
       },
       "disclaimer": {
-        "title": "2. Отказ от ответственности",
-        "p1": "Материалы на сайте AIMORELOGY предоставляются «как есть». AIMORELOGY не дает никаких гарантий, явных или подразумеваемых, и отказывается от всех других гарантий, включая, в том числе, гарантии коммерческой пригодности, пригодности для определенной цели или ненарушения прав."
+        "title": "2. Disclaimer",
+        "p1": "The materials on AIMORELOGY's website are provided on an 'as is' basis. AIMORELOGY makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
       },
       "limitations": {
-        "title": "3. Ограничения",
-        "p1": "Ни при каких обстоятельствах AIMORELOGY или его поставщики не несут ответственности за какой-либо ущерб (включая, помимо прочего, ущерб из-за потери данных или прибыли или из-за перерыва в деятельности), возникший в результате использования или невозможности использования материалов на веб-сайте AIMORELOGY, даже если AIMORELOGY или его уполномоченный представитель были уведомлены устно или письменно о возможности такого ущерба."
+        "title": "3. Limitations",
+        "p1": "In no event shall AIMORELOGY or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on AIMORELOGY's website, even if AIMORELOGY or an authorized representative has been notified orally or in writing of the possibility of such damage."
       },
       "usage": {
-        "title": "4. Использование и безопасность продукта",
-        "p1": "Наши продукты, в том числе полетные контроллеры и модули Edge AI, предназначены для промышленного и профессионального использования.",
+        "title": "4. Product Usage & Safety",
+        "p1": "Our products, including Flight Controllers and Edge AI modules, are designed for industrial and professional use.",
         "items": {
-          "0": "Вы соглашаетесь использовать наши продукты в соответствии со всеми применимыми местными законами и авиационными правилами.",
-          "1": "AIMORELOGY не несет ответственности за любой ущерб, травмы или юридическую ответственность, возникшие в результате неправильного использования, неправильной установки или модификации нашего оборудования или программного обеспечения.",
-          "2": "Пользователи несут ответственность за обеспечение безопасной работы любых автономных систем, развернутых с использованием нашей технологии."
+          "0": "You agree to use our products in compliance with all applicable local laws and aviation regulations.",
+          "1": "AIMORELOGY is not responsible for any damage, injury, or legal liability resulting from the misuse, improper installation, or modification of our hardware or software.",
+          "2": "Users are responsible for ensuring that any autonomous systems deployed using our technology are operated safely."
         }
       },
       "law": {
-        "title": "5. Применимое право",
-        "p1": "Настоящие условия регулируются и толкуются в соответствии с законодательством Гонконга SAR, и вы безоговорочно подчиняетесь исключительной юрисдикции судов этого места."
+        "title": "5. Governing Law",
+        "p1": "These terms and conditions are governed by and construed in accordance with the laws of Hong Kong SAR and you irrevocably submit to the exclusive jurisdiction of the courts in that location."
       },
       "changes": {
-        "title": "6. Изменения в Условиях",
-        "p1": "Мы оставляем за собой право изменять эти Условия в любое время. Продолжая использовать сервис после внесения изменений, вы соглашаетесь с обновленными Условиями."
+        "title": "6. Changes to Terms",
+        "p1": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms."
       }
     }
   },
   "cookies": {
-    "metaTitle": "Политика использования файлов cookie | ",
-    "title": "__PH0__",
-    "intro": "В настоящей Политике использования файлов cookie объясняется, что такое файлы cookie, как AIMORELOGY использует файлы cookie на нашем веб-сайте и ваш выбор в отношении файлов cookie.",
+    "metaTitle": "???????? ????????????? ?????? cookie | AIMORELOGY",
+    "metaDescription": "??? AIMORELOGY ?????????? cookie ? ??? ????????? ??????????????.",
+    "title": "Cookie Policy",
+    "intro": "This Cookie Policy explains what cookies are, how AIMORELOGY uses cookies on our website, and your choices regarding cookies.",
     "sections": {
       "what": {
-        "title": "1. Что такое файлы cookie?",
-        "p1": "Файлы cookie — это небольшие текстовые файлы, которые отправляются в ваш браузер с сайта, который вы посещаете. Файл cookie сохраняется в вашем браузере и позволяет сервису или третьей стороне распознавать ваши посещения."
+        "title": "1. What Are Cookies?",
+        "p1": "Cookies are small text files that are sent to your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you."
       },
       "use": {
-        "title": "2. Как мы используем файлы cookie",
-        "p1": "При использовании сервиса мы можем размещать в вашем браузере несколько файлов cookie для следующих целей:",
+        "title": "2. How We Use Cookies",
+        "p1": "When you use and access the Service, we may place a number of cookies files in your web browser. We use cookies for the following purposes:",
         "items": {
           "0": {
-            "title": "Основные файлы cookie",
-            "desc": "Для включения определенных функций Сервиса, таких как аутентификация и безопасность."
+            "title": "Essential Cookies",
+            "desc": "To enable certain functions of the Service, such as authentication and security."
           },
           "1": {
-            "title": "Аналитические файлы cookie",
-            "desc": "Чтобы предоставить аналитику и понять, как используется наш веб-сайт (например, Google Analytics)."
+            "title": "Analytics Cookies",
+            "desc": "To provide analytics and understand how our website is used (e.g., Google Analytics)."
           },
           "2": {
-            "title": "Предпочтительные файлы cookie",
-            "desc": "Для сохранения ваших предпочтений, например языковых настроек."
+            "title": "Preference Cookies",
+            "desc": "To store your preferences, such as language settings."
           }
         }
       },
       "third": {
-        "title": "3. Сторонние файлы cookie",
-        "p1": "В дополнение к нашим собственным файлам cookie мы также можем использовать различные файлы cookie третьих лиц для составления статистики использования Сервиса, доставки рекламы в Сервис и через него и т. д."
+        "title": "3. Third-Party Cookies",
+        "p1": "In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on."
       },
       "choices": {
-        "title": "4. Ваш выбор",
-        "p1": "Если вы хотите удалить файлы cookie или указать своему веб-браузеру удалить или отказаться от файлов cookie, посетите страницы справки вашего веб-браузера.",
-        "p2": "Однако обратите внимание, что если вы удалите файлы cookie или откажетесь их принять, вы не сможете использовать все предлагаемые нами функции, вы не сможете сохранить свои предпочтения, а некоторые наши страницы могут отображаться некорректно."
+        "title": "4. Your Choices",
+        "p1": "If you'd like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.",
+        "p2": "Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly."
       }
     },
     "help": {
-      "title": "Страницы справки браузера:"
+      "title": "Browser Help Pages:"
     }
   }
 }

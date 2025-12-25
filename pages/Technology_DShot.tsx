@@ -4,6 +4,7 @@ import { ChevronRight, Zap, Activity, Cpu, Sliders, Layers, CheckCircle } from '
 import { RoutePath } from '../types';
 import { useTranslation } from 'react-i18next';
 import { useLang, withLang } from '../i18n-routing';
+import Seo from '../components/Seo';
 
 const Technology_DShot: React.FC = () => {
   const { t } = useTranslation();
@@ -11,11 +12,25 @@ const Technology_DShot: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = t('dshot.metaTitle');
-  }, [t]);
+  }, []);
+  const seoTitle = t('dshot.metaTitle');
+  const seoDescription = t('dshot.metaDescription');
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: seoTitle,
+    description: seoDescription
+  };
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        image="/DSHOT-WAVE.webp"
+        type="article"
+        jsonLd={jsonLd}
+      />
       
       {/* 1. HERO SECTION (Dark Tech Theme) */}
       <section className="bg-[#050505] text-white pt-24 pb-20 border-b border-gray-900 overflow-hidden relative">

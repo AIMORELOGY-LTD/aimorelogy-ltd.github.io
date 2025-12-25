@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MapPin, User, Building2, Mail, Quote } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import Seo from '../components/Seo';
 
 const PartnerLogo = ({ name, image }: { name: string, image: string }) => {
   const [error, setError] = useState(false);
@@ -26,10 +27,8 @@ const PartnerLogo = ({ name, image }: { name: string, image: string }) => {
 
 const About: React.FC = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    document.title = t('about.metaTitle');
-  }, [t]);
+  const seoTitle = t('about.metaTitle');
+  const seoDescription = t('about.metaDescription');
 
   const PARTNERS = [
     {
@@ -48,6 +47,7 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen">
+       <Seo title={seoTitle} description={seoDescription} />
        {/* Hero Section */}
        <div className="bg-[#111] text-white py-24 relative overflow-hidden">
           {/* Abstract Background */}

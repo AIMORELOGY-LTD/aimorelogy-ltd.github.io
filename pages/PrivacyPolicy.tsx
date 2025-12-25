@@ -1,17 +1,20 @@
 
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import Seo from '../components/Seo';
 
 const PrivacyPolicy: React.FC = () => {
   const { t } = useTranslation();
+  const seoTitle = t('privacy.metaTitle');
+  const seoDescription = t('privacy.metaDescription');
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = t('privacy.metaTitle');
-  }, [t]);
+  }, []);
 
   return (
     <div className="bg-white min-h-screen py-20">
+      <Seo title={seoTitle} description={seoDescription} />
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="mb-12 border-b border-gray-100 pb-8">
           <h1 className="text-4xl font-black text-gray-900 uppercase mb-4">{t('privacy.title')}</h1>

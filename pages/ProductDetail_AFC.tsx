@@ -5,17 +5,33 @@ import { ArrowLeft, Mail } from 'lucide-react';
 import { RoutePath } from '../types';
 import { useLang, withLang } from '../i18n-routing';
 import { useTranslation } from 'react-i18next';
+import Seo from '../components/Seo';
 
 const ProductDetail_AFC: React.FC = () => {
   const lang = useLang();
   const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = t('products.afcComingSoon.metaTitle');
-  }, [t]);
+  }, []);
+  const seoTitle = t('products.afcComingSoon.metaTitle');
+  const seoDescription = t('products.afcComingSoon.metaDescription');
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'AIMORELOGY AFC-V1',
+    description: seoDescription,
+    brand: { '@type': 'Brand', name: 'AIMORELOGY' }
+  };
 
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans flex flex-col">
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        image="/AFC-V1-Temp.webp"
+        type="product"
+        jsonLd={jsonLd}
+      />
       <div className="flex-grow flex items-center justify-center relative overflow-hidden pt-16">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" 

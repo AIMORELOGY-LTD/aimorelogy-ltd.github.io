@@ -17,20 +17,23 @@ import {
 import { RoutePath } from '../types';
 import { useTranslation } from 'react-i18next';
 import { useLang, withLang } from '../i18n-routing';
+import Seo from '../components/Seo';
 
 const SolutionDetail_AICamera: React.FC = () => {
   const { t } = useTranslation();
   const lang = useLang();
   const cloudItems = t('aiCamera.software.cloudItems', { returnObjects: true }) as string[];
   const appTags = t('aiCamera.software.appTags', { returnObjects: true }) as string[];
+  const seoTitle = t('aiCamera.metaTitle');
+  const seoDescription = t('aiCamera.metaDescription');
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = t('aiCamera.metaTitle');
-  }, [t]);
+  }, []);
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans">
+      <Seo title={seoTitle} description={seoDescription} />
       {/* 1. HERO SECTION */}
       <section className="pt-24 pb-16 bg-gray-50 border-b border-gray-200">
         <div className="container mx-auto px-6">

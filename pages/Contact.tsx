@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { sendContactEmail } from '../utils/emailjs';
 import { useLang } from '../i18n-routing';
+import Seo from '../components/Seo';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -16,10 +17,8 @@ const Contact: React.FC = () => {
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-
-  useEffect(() => {
-    document.title = t('contact.metaTitle');
-  }, [t]);
+  const seoTitle = t('contact.metaTitle');
+  const seoDescription = t('contact.metaDescription');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -73,6 +72,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen py-20">
+      <Seo title={seoTitle} description={seoDescription} />
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-2xl">
           

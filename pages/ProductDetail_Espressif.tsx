@@ -15,6 +15,7 @@ import { ChipData } from '../data/sophgoData';
 import { RoutePath } from '../types';
 import { useLang, withLang } from '../i18n-routing';
 import { useTranslation } from 'react-i18next';
+import Seo from '../components/Seo';
 
 const ProductDetail_Espressif: React.FC = () => {
   const lang = useLang();
@@ -46,14 +47,28 @@ const ProductDetail_Espressif: React.FC = () => {
       specs: getArray('specs', product.specs),
       applications: getArray('applications', product.applications),
       detailedFeatures: getArray('detailedFeatures', product.detailedFeatures),
-      faqs: getArray('faqs', product.faqs)
+      faqs: getArray('faqs', product.faqs),
+      metaTitle: t(`${baseKey}.metaTitle`, { defaultValue: product.metaTitle }),
+      metaDescription: t(`${baseKey}.metaDescription`, { defaultValue: product.metaDescription })
     };
   }, [product, t]);
 
-  useEffect(() => {
-    if (localizedProduct) {
-      document.title = t('products.common.metaTitle', { name: localizedProduct.name, tagline: localizedProduct.tagline });
-    }
+  const seo = React.useMemo(() => {
+    if (!localizedProduct) return null;
+    const metaTitle = localizedProduct.metaTitle
+      || t('products.common.metaTitle', { name: localizedProduct.name, tagline: localizedProduct.tagline });
+    const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
+    const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: `Espressif ${localizedProduct.name}`,
+      description: metaDescription,
+      brand: { '@type': 'Brand', name: 'Espressif' },
+      manufacturer: 'Espressif',
+      sku: localizedProduct.name
+    };
+    return { metaTitle, metaDescription, image, jsonLd };
   }, [localizedProduct, t]);
 
   if (!localizedProduct) {
@@ -67,6 +82,15 @@ const ProductDetail_Espressif: React.FC = () => {
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
+      {seo && (
+        <Seo
+          title={seo.metaTitle}
+          description={seo.metaDescription}
+          image={seo.image}
+          type="product"
+          jsonLd={seo.jsonLd}
+        />
+      )}
       
       {/* 1. HERO SECTION (White Theme) */}
       <section className="pt-16 pb-12 bg-gray-50 border-b border-gray-200">

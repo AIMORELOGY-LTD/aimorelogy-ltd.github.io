@@ -5,17 +5,20 @@ import { Link } from 'react-router-dom';
 import { RoutePath } from '../types';
 import { useTranslation } from 'react-i18next';
 import { useLang, withLang } from '../i18n-routing';
+import Seo from '../components/Seo';
 
 const Careers: React.FC = () => {
   const { t } = useTranslation();
   const lang = useLang();
+  const seoTitle = t('careers.metaTitle');
+  const seoDescription = t('careers.metaDescription');
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = t('careers.metaTitle');
-  }, [t]);
+  }, []);
 
   return (
     <div className="bg-white min-h-screen flex flex-col font-sans text-gray-900">
+      <Seo title={seoTitle} description={seoDescription} />
       {/* Hero Section */}
       <section className="bg-[#111] text-white py-24 relative overflow-hidden">
          <div className="absolute inset-0 bg-gradient-to-r from-black via-[#111] to-transparent z-10"></div>
