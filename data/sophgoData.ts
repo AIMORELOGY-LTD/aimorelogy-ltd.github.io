@@ -189,9 +189,31 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
           ]
         },
         {
+          id: "tpu-acceleration",
+          title: "TPU Edge AI Engine",
+          description: "Self-developed TPU acceleration balances INT8 throughput with BF16 mixed precision to keep edge models responsive and power efficient.",
+          stats: [
+            { label: "Performance", value: "1.0-1.5 TOPS @ INT8" },
+            { label: "Precision", value: "BF16 mixed precision" },
+            { label: "Models", value: "OpenCLIP + model library" },
+            { label: "Use Cases", value: "Detection, retrieval, zero-shot" }
+          ],
+          bullets: [
+            "OpenCLIP enables image-text matching, object detection, and scenario tuning.",
+            "Built-in models cover face/person/helmet/gesture/cat-dog/license plate.",
+            "Optimized for edge deployment with fast boot and low power."
+          ]
+        },
+        {
           id: "isp-v4",
           title: "ISP V4.0 Imaging Pipeline",
           description: "Self-developed 4K ISP V4.0 improves low-light performance and wide dynamic range for clearer imaging.",
+          stats: [
+            { label: "Pipeline", value: "4K ISP V4.0" },
+            { label: "Noise Reduction", value: "MCTF 3DNR" },
+            { label: "Dynamic Range", value: "DRC/HDR" },
+            { label: "Clarity", value: "PFR + EE" }
+          ],
           bullets: [
             "MCTF-based 3DNR reduces temporal and spatial noise with less smearing.",
             "Color noise suppression removes low-frequency chroma artifacts with clean edges.",

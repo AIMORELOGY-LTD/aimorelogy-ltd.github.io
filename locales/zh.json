@@ -789,9 +789,31 @@
             ]
           },
           {
+            "id": "tpu-acceleration",
+            "title": "TPU 边缘 AI 引擎",
+            "description": "自研 TPU 在 INT8 吞吐与 BF16 混合精度之间取得平衡，适配低功耗边缘模型。",
+            "stats": [
+              { "label": "性能", "value": "1.0~1.5 TOPS @ INT8" },
+              { "label": "精度", "value": "BF16 混合精度" },
+              { "label": "模型", "value": "OpenCLIP + 模型库" },
+              { "label": "场景", "value": "检测、检索、zero-shot" }
+            ],
+            "bullets": [
+              "OpenCLIP 支持图文匹配、目标检测与场景微调。",
+              "内置模型覆盖人脸/人形/安全帽/手势/猫狗/车牌。",
+              "针对边缘部署优化，快速启动、低功耗。"
+            ]
+          },
+          {
             "id": "isp-v4",
             "title": "ISP V4.0 影像管线",
             "description": "自研 4K ISP V4.0 强化低照与宽动态表现，成像更清晰。",
+            "stats": [
+              { "label": "管线", "value": "4K ISP V4.0" },
+              { "label": "降噪", "value": "MCTF 3DNR" },
+              { "label": "动态范围", "value": "DRC/HDR" },
+              { "label": "清晰度", "value": "PFR + EE" }
+            ],
             "bullets": [
               "MCTF 3DNR 降低时域与空域噪声，拖影更少。",
               "色噪消除减少低频色噪，边缘无溢色。",
