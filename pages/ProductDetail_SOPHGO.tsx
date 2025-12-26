@@ -262,7 +262,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                   </div>
                   <div className="lg:col-span-12">
                     <div className="mt-8 border border-gray-200 bg-white rounded-sm overflow-hidden">
-                      <img src="/CV/cv184-arch.webp" alt="CV184x architecture diagram" className="w-full h-auto" loading="lazy" />
+                      <img src="/CV/CV184-ARCH.svg" alt="CV184x architecture diagram" className="w-full h-auto" loading="lazy" />
                     </div>
                   </div>
                 </div>
