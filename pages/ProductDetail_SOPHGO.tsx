@@ -9,7 +9,7 @@ import {
   ChevronRight,
   Activity
 } from 'lucide-react';
-import { SOPHGO_CHIPS, ChipData, ChipDetailSection } from '../data/sophgoData';
+import { SOPHGO_CHIPS, ChipData } from '../data/sophgoData';
 import { RoutePath } from '../types';
 import { useLang, withLang } from '../i18n-routing';
 import { useTranslation } from 'react-i18next';
@@ -72,21 +72,16 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
   const isCv184 = localizedProduct?.id === 'cv184';
   const cv184DetailSections = localizedProduct?.detailSections || [];
-  const cv184SectionMap = React.useMemo(() => {
-    const map: Record<string, ChipDetailSection> = {};
-    cv184DetailSections.forEach((section) => {
-      if (section.id) {
-        map[section.id] = section;
-      }
-    });
-    return map;
-  }, [cv184DetailSections]);
-  const cv184CoreSection = cv184SectionMap['core-architecture'];
-  const cv184TpuSection = cv184SectionMap['tpu-acceleration'];
-  const cv184IspSection = cv184SectionMap['isp-v4'];
-  const cv184RemainingSections = cv184DetailSections.filter(
-    (section) => !['core-architecture', 'tpu-acceleration', 'isp-v4'].includes(section.id)
-  );
+  const cv184MediaMap: Record<string, { src: string; alt: string }> = {
+    'tpu-acceleration': {
+      src: '/CV/cvitek.webp',
+      alt: 'TPU acceleration visual'
+    },
+    'isp-v4': {
+      src: '/CV/2.webp',
+      alt: 'ISP V4.0 imaging visual'
+    }
+  };
 
   if (!localizedProduct) {
     return (
@@ -228,127 +223,34 @@ const ProductDetail_SOPHGO: React.FC = () => {
       {/* CV184x Deep Dive Sections */}
       {isCv184 && cv184DetailSections.length > 0 && (
         <>
-          {cv184CoreSection && (
-            <section className="py-16 bg-white">
-              <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                  <div className="lg:col-span-1">
-                    <h3 className="text-2xl md:text-3xl font-black uppercase text-gray-900 mb-4">{cv184CoreSection.title}</h3>
-                    {cv184CoreSection.description && (
-                      <p className="text-gray-600 leading-relaxed">{cv184CoreSection.description}</p>
-                    )}
-                  </div>
-                  {cv184CoreSection.stats && cv184CoreSection.stats.length > 0 && (
-                    <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {cv184CoreSection.stats.map((stat, statIdx) => (
-                        <div key={statIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
-                          <div className="text-xs uppercase tracking-wider text-gray-500 font-bold">{stat.label}</div>
-                          <div className="text-lg font-semibold text-gray-900 mt-2">{stat.value}</div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </section>
-          )}
-
-          {(cv184TpuSection || cv184IspSection) && (
-            <section className="py-20 bg-gray-50 border-y border-gray-200">
-              <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {cv184TpuSection && (
-                    <div className="relative overflow-hidden border border-gray-200 bg-[#0b0b0d] text-white rounded-sm">
-                      <img src="/CV/cvitek.webp" alt={`${cv184TpuSection.title} visual`} className="absolute inset-0 w-full h-full object-cover opacity-35" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/60 to-black/30" />
-                      <div className="relative p-8 md:p-10">
-                        <h3 className="text-2xl md:text-3xl font-black uppercase mb-4">{cv184TpuSection.title}</h3>
-                        {cv184TpuSection.description && (
-                          <p className="text-gray-200 leading-relaxed">{cv184TpuSection.description}</p>
-                        )}
-                        {cv184TpuSection.stats && cv184TpuSection.stats.length > 0 && (
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                            {cv184TpuSection.stats.map((stat, statIdx) => (
-                              <div key={statIdx} className="border border-white/15 bg-white/10 p-4 rounded-sm">
-                                <div className="text-[10px] uppercase tracking-widest text-white/60 font-bold">{stat.label}</div>
-                                <div className="text-sm font-semibold text-white mt-2">{stat.value}</div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        {cv184TpuSection.bullets && cv184TpuSection.bullets.length > 0 && (
-                          <ul className="space-y-3 mt-6">
-                            {cv184TpuSection.bullets.map((bullet, bulletIdx) => (
-                              <li key={bulletIdx} className="flex gap-3 text-sm text-gray-200 leading-relaxed">
-                                <CheckCircle size={16} className="text-[#76b900] shrink-0 mt-0.5" />
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+          {cv184DetailSections.map((section, idx) => {
+            const media = section.id ? cv184MediaMap[section.id] : undefined;
+            const sectionTone = idx % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+            const sectionBorder = idx === 0 ? 'border-y' : 'border-b';
+            const sectionNumber = String(idx + 1).padStart(2, '0');
+            return (
+              <section key={section.id || idx} className={`py-16 ${sectionTone} ${sectionBorder} border-gray-200`}>
+                <div className="container mx-auto px-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    <div className="lg:col-span-4">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="text-4xl font-black text-gray-200">{sectionNumber}</div>
+                        <div className="h-px flex-1 bg-gray-200"></div>
                       </div>
-                    </div>
-                  )}
-
-                  {cv184IspSection && (
-                    <div className="relative overflow-hidden border border-gray-200 bg-[#0b0b0d] text-white rounded-sm">
-                      <img src="/CV/2.webp" alt={`${cv184IspSection.title} visual`} className="absolute inset-0 w-full h-full object-cover opacity-35" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/60 to-black/30" />
-                      <div className="relative p-8 md:p-10">
-                        <h3 className="text-2xl md:text-3xl font-black uppercase mb-4">{cv184IspSection.title}</h3>
-                        {cv184IspSection.description && (
-                          <p className="text-gray-200 leading-relaxed">{cv184IspSection.description}</p>
-                        )}
-                        {cv184IspSection.stats && cv184IspSection.stats.length > 0 && (
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                            {cv184IspSection.stats.map((stat, statIdx) => (
-                              <div key={statIdx} className="border border-white/15 bg-white/10 p-4 rounded-sm">
-                                <div className="text-[10px] uppercase tracking-widest text-white/60 font-bold">{stat.label}</div>
-                                <div className="text-sm font-semibold text-white mt-2">{stat.value}</div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        {cv184IspSection.bullets && cv184IspSection.bullets.length > 0 && (
-                          <ul className="space-y-3 mt-6">
-                            {cv184IspSection.bullets.map((bullet, bulletIdx) => (
-                              <li key={bulletIdx} className="flex gap-3 text-sm text-gray-200 leading-relaxed">
-                                <CheckCircle size={16} className="text-[#5f51b0] shrink-0 mt-0.5" />
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </section>
-          )}
-
-          {cv184RemainingSections.length > 0 && (
-            <section className="py-20 bg-white">
-              <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {cv184RemainingSections.map((section, idx) => (
-                    <div
-                      key={section.id || idx}
-                      className={`border border-gray-200 bg-gray-50 p-8 md:p-10 rounded-sm shadow-sm ${section.table ? 'lg:col-span-2' : ''}`}
-                    >
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-[#4f4398]">
-                          <Cpu size={20} />
-                        </div>
-                        <h3 className="text-xl md:text-2xl font-black uppercase text-gray-900">{section.title}</h3>
-                      </div>
-
+                      <h3 className="text-2xl md:text-3xl font-black uppercase text-gray-900 mb-4">{section.title}</h3>
                       {section.description && (
-                        <p className="text-gray-600 mb-6 leading-relaxed">{section.description}</p>
+                        <p className="text-gray-600 leading-relaxed">{section.description}</p>
+                      )}
+                    </div>
+                    <div className="lg:col-span-8 space-y-6">
+                      {media && (
+                        <div className="border border-gray-200 bg-white rounded-sm overflow-hidden">
+                          <img src={media.src} alt={media.alt} className="w-full h-auto" loading="lazy" />
+                        </div>
                       )}
 
                       {section.stats && section.stats.length > 0 && (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           {section.stats.map((stat, statIdx) => (
                             <div key={statIdx} className="border border-gray-200 bg-white p-4 rounded-sm">
                               <div className="text-xs uppercase tracking-wider text-gray-500 font-bold">{stat.label}</div>
@@ -359,19 +261,19 @@ const ProductDetail_SOPHGO: React.FC = () => {
                       )}
 
                       {section.bullets && section.bullets.length > 0 && (
-                        <ul className="space-y-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {section.bullets.map((bullet, bulletIdx) => (
-                            <li key={bulletIdx} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
+                            <div key={bulletIdx} className="flex gap-3 border border-gray-200 bg-white p-4 rounded-sm text-sm text-gray-700 leading-relaxed">
                               <CheckCircle size={16} className="text-[#76b900] shrink-0 mt-0.5" />
                               <span>{bullet}</span>
-                            </li>
+                            </div>
                           ))}
-                        </ul>
+                        </div>
                       )}
 
                       {section.table && (
-                        <div className="mt-6">
-                          <div className="overflow-x-auto border border-gray-200 bg-white">
+                        <div className="border border-gray-200 bg-white">
+                          <div className="overflow-x-auto">
                             <table className="w-full text-left border-collapse">
                               <thead>
                                 <tr>
@@ -394,16 +296,16 @@ const ProductDetail_SOPHGO: React.FC = () => {
                             </table>
                           </div>
                           {section.table.note && (
-                            <p className="text-xs text-gray-500 mt-3 leading-relaxed">{section.table.note}</p>
+                            <p className="text-xs text-gray-500 px-4 py-3 border-t border-gray-100 leading-relaxed">{section.table.note}</p>
                           )}
                         </div>
                       )}
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </div>
-            </section>
-          )}
+              </section>
+            );
+          })}
         </>
       )}
 
