@@ -9,7 +9,7 @@ import {
   ChevronRight,
   Activity
 } from 'lucide-react';
-import { SOPHGO_CHIPS, ChipData } from '../data/sophgoData';
+import { SOPHGO_CHIPS, ChipData, ChipDetailSection } from '../data/sophgoData';
 import { RoutePath } from '../types';
 import { useLang, withLang } from '../i18n-routing';
 import { useTranslation } from 'react-i18next';
@@ -72,6 +72,20 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
   const isCv184 = localizedProduct?.id === 'cv184';
   const cv184DetailSections = localizedProduct?.detailSections || [];
+  const cv184SectionMap = cv184DetailSections.reduce((acc, section) => {
+    if (section.id) {
+      acc[section.id] = section;
+    }
+    return acc;
+  }, {} as Record<string, ChipDetailSection>);
+  const cv184CoreSection = cv184SectionMap['core-architecture'];
+  const cv184IspSection = cv184SectionMap['isp-v4'];
+  const cv184TpuSection = cv184SectionMap['tpu-acceleration'];
+  const cv184OpenclipSection = cv184SectionMap['openclip-ai'];
+  const cv184EncodingSection = cv184SectionMap['intra4-encoding'];
+  const cv184IoSection = cv184SectionMap['io-peripherals'];
+  const cv184VariantSection = cv184SectionMap['variant-comparison'];
+  const cv184SdkSection = cv184SectionMap['sdk-compatibility'];
   const cv184MediaMap: Record<string, { src: string; alt: string }> = {
     'tpu-acceleration': {
       src: '/CV/cvitek.webp',
@@ -223,89 +237,290 @@ const ProductDetail_SOPHGO: React.FC = () => {
       {/* CV184x Deep Dive Sections */}
       {isCv184 && cv184DetailSections.length > 0 && (
         <>
-          {cv184DetailSections.map((section, idx) => {
-            const media = section.id ? cv184MediaMap[section.id] : undefined;
-            const sectionTone = idx % 2 === 0 ? 'bg-white' : 'bg-gray-50';
-            const sectionBorder = idx === 0 ? 'border-y' : 'border-b';
-            const sectionNumber = String(idx + 1).padStart(2, '0');
-            return (
-              <section key={section.id || idx} className={`py-16 ${sectionTone} ${sectionBorder} border-gray-200`}>
-                <div className="container mx-auto px-6">
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                    <div className="lg:col-span-4">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="text-4xl font-black text-gray-200">{sectionNumber}</div>
-                        <div className="h-px flex-1 bg-gray-200"></div>
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-black uppercase text-gray-900 mb-4">{section.title}</h3>
-                      {section.description && (
-                        <p className="text-gray-600 leading-relaxed">{section.description}</p>
-                      )}
-                    </div>
-                    <div className="lg:col-span-8 space-y-6">
-                      {media && (
-                        <div className="border border-gray-200 bg-white rounded-sm overflow-hidden">
-                          <img src={media.src} alt={media.alt} className="w-full h-auto" loading="lazy" />
-                        </div>
-                      )}
-
-                      {section.stats && section.stats.length > 0 && (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          {section.stats.map((stat, statIdx) => (
-                            <div key={statIdx} className="border border-gray-200 bg-white p-4 rounded-sm">
-                              <div className="text-xs uppercase tracking-wider text-gray-500 font-bold">{stat.label}</div>
-                              <div className="text-sm font-semibold text-gray-900 mt-2">{stat.value}</div>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-
-                      {section.bullets && section.bullets.length > 0 && (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          {section.bullets.map((bullet, bulletIdx) => (
-                            <div key={bulletIdx} className="flex gap-3 border border-gray-200 bg-white p-4 rounded-sm text-sm text-gray-700 leading-relaxed">
-                              <CheckCircle size={16} className="text-[#76b900] shrink-0 mt-0.5" />
-                              <span>{bullet}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-
-                      {section.table && (
-                        <div className="border border-gray-200 bg-white">
-                          <div className="overflow-x-auto">
-                            <table className="w-full text-left border-collapse">
-                              <thead>
-                                <tr>
-                                  {section.table.headers.map((header, headerIdx) => (
-                                    <th key={headerIdx} className="p-3 bg-gray-100 text-xs font-bold uppercase tracking-wider text-gray-500">
-                                      {header}
-                                    </th>
-                                  ))}
-                                </tr>
-                              </thead>
-                              <tbody className="divide-y divide-gray-100">
-                                {section.table.rows.map((row, rowIdx) => (
-                                  <tr key={rowIdx} className="hover:bg-gray-50 transition-colors">
-                                    {row.map((cell, cellIdx) => (
-                                      <td key={cellIdx} className="p-3 text-sm text-gray-700">{cell}</td>
-                                    ))}
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
+          {cv184CoreSection && (
+            <section className="py-20 bg-white border-y border-gray-200">
+              <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                  <div className="lg:col-span-4">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">01</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184CoreSection.title}</h3>
+                    {cv184CoreSection.description && (
+                      <p className="text-gray-600 leading-relaxed">{cv184CoreSection.description}</p>
+                    )}
+                  </div>
+                  <div className="lg:col-span-8">
+                    {cv184CoreSection.stats && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {cv184CoreSection.stats.map((stat, statIdx) => (
+                          <div key={statIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
+                            <div className="text-xs uppercase tracking-wider text-gray-500 font-bold">{stat.label}</div>
+                            <div className="text-lg font-semibold text-gray-900 mt-2">{stat.value}</div>
                           </div>
-                          {section.table.note && (
-                            <p className="text-xs text-gray-500 px-4 py-3 border-t border-gray-100 leading-relaxed">{section.table.note}</p>
-                          )}
-                        </div>
-                      )}
-                    </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
-              </section>
-            );
-          })}
+              </div>
+            </section>
+          )}
+
+          {cv184IspSection && (
+            <section className="py-20 bg-gray-50 border-b border-gray-200">
+              <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                  <div className="lg:col-span-5">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">02</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184IspSection.title}</h3>
+                    {cv184IspSection.description && (
+                      <p className="text-gray-600 leading-relaxed mb-6">{cv184IspSection.description}</p>
+                    )}
+                    {cv184IspSection.stats && (
+                      <div className="flex flex-wrap gap-2">
+                        {cv184IspSection.stats.map((stat, statIdx) => (
+                          <div key={statIdx} className="px-3 py-2 border border-gray-200 bg-white text-xs uppercase tracking-wider text-gray-600 font-semibold">
+                            {stat.label}: {stat.value}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div className="lg:col-span-7">
+                    {cv184IspSection.bullets && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {cv184IspSection.bullets.map((bullet, bulletIdx) => (
+                          <div key={bulletIdx} className="border border-gray-200 bg-white p-5 rounded-sm shadow-sm">
+                            <div className="flex items-start gap-3">
+                              <CheckCircle size={18} className="text-[#4f4398] shrink-0 mt-0.5" />
+                              <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {cv184MediaMap['isp-v4'] && (
+                    <div className="lg:col-span-12">
+                      <div className="mt-8 border border-gray-200 bg-white rounded-sm overflow-hidden">
+                        <img src={cv184MediaMap['isp-v4'].src} alt={cv184MediaMap['isp-v4'].alt} className="w-full h-auto" loading="lazy" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {cv184TpuSection && (
+            <section className="py-20 bg-white border-b border-gray-200">
+              <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                  <div className="lg:col-span-5">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">03</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184TpuSection.title}</h3>
+                    {cv184TpuSection.description && (
+                      <p className="text-gray-600 leading-relaxed mb-6">{cv184TpuSection.description}</p>
+                    )}
+                    {cv184TpuSection.stats && (
+                      <div className="space-y-4">
+                        {cv184TpuSection.stats.map((stat, statIdx) => (
+                          <div key={statIdx}>
+                            <div className="flex items-center justify-between text-xs uppercase tracking-wider text-gray-500 font-bold">
+                              <span>{stat.label}</span>
+                              <span className="text-gray-900">{stat.value}</span>
+                            </div>
+                            <div className="mt-2 h-2 bg-gray-200">
+                              <div
+                                className="h-2 bg-[#4f4398]"
+                                style={{ width: `${92 - statIdx * 12}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div className="lg:col-span-7">
+                    {cv184TpuSection.bullets && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {cv184TpuSection.bullets.map((bullet, bulletIdx) => (
+                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
+                            <div className="flex items-start gap-3">
+                              <CheckCircle size={18} className="text-[#76b900] shrink-0 mt-0.5" />
+                              <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {cv184MediaMap['tpu-acceleration'] && (
+                    <div className="lg:col-span-12">
+                      <div className="mt-8 border border-gray-200 bg-white rounded-sm overflow-hidden">
+                        <img src={cv184MediaMap['tpu-acceleration'].src} alt={cv184MediaMap['tpu-acceleration'].alt} className="w-full h-auto" loading="lazy" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {cv184OpenclipSection && (
+            <section className="py-20 bg-gray-50 border-b border-gray-200">
+              <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                  <div className="lg:col-span-4">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">04</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184OpenclipSection.title}</h3>
+                    {cv184OpenclipSection.description && (
+                      <p className="text-gray-600 leading-relaxed">{cv184OpenclipSection.description}</p>
+                    )}
+                  </div>
+                  <div className="lg:col-span-8">
+                    {cv184OpenclipSection.bullets && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {cv184OpenclipSection.bullets.map((bullet, bulletIdx) => (
+                          <div key={bulletIdx} className="border border-gray-200 bg-white p-6 rounded-sm shadow-sm">
+                            <div className="text-xs uppercase tracking-widest text-[#4f4398] font-bold mb-2">Capability</div>
+                            <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {cv184EncodingSection && (
+            <section className="py-20 bg-[#0f111a] text-white border-b border-gray-900">
+              <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                  <div className="lg:col-span-5">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#9aa4ff] font-bold mb-3">05</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase mb-4">{cv184EncodingSection.title}</h3>
+                    {cv184EncodingSection.description && (
+                      <p className="text-gray-300 leading-relaxed">{cv184EncodingSection.description}</p>
+                    )}
+                  </div>
+                  <div className="lg:col-span-7">
+                    {cv184EncodingSection.bullets && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {cv184EncodingSection.bullets.map((bullet, bulletIdx) => (
+                          <div key={bulletIdx} className="border border-white/10 bg-white/5 p-5 rounded-sm">
+                            <div className="flex items-start gap-3">
+                              <CheckCircle size={18} className="text-[#9aa4ff] shrink-0 mt-0.5" />
+                              <p className="text-sm text-gray-200 leading-relaxed">{bullet}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {cv184IoSection && (
+            <section className="py-20 bg-white border-b border-gray-200">
+              <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                  <div className="lg:col-span-4">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">06</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184IoSection.title}</h3>
+                    {cv184IoSection.description && (
+                      <p className="text-gray-600 leading-relaxed">{cv184IoSection.description}</p>
+                    )}
+                  </div>
+                  <div className="lg:col-span-8">
+                    {cv184IoSection.bullets && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {cv184IoSection.bullets.map((bullet, bulletIdx) => (
+                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
+                            <div className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">I/O</div>
+                            <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {cv184VariantSection && (
+            <section className="py-20 bg-gray-50 border-b border-gray-200">
+              <div className="container mx-auto px-6">
+                <div className="flex items-center justify-between mb-8">
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">07</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184VariantSection.title}</h3>
+                  </div>
+                </div>
+                {cv184VariantSection.description && (
+                  <p className="text-gray-600 leading-relaxed mb-6 max-w-3xl">{cv184VariantSection.description}</p>
+                )}
+                {cv184VariantSection.table && (
+                  <div className="border border-gray-200 bg-white">
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left border-collapse">
+                        <thead>
+                          <tr>
+                            {cv184VariantSection.table.headers.map((header, headerIdx) => (
+                              <th key={headerIdx} className="p-3 bg-gray-100 text-xs font-bold uppercase tracking-wider text-gray-500">
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                          {cv184VariantSection.table.rows.map((row, rowIdx) => (
+                            <tr key={rowIdx} className="hover:bg-gray-50 transition-colors">
+                              {row.map((cell, cellIdx) => (
+                                <td key={cellIdx} className="p-3 text-sm text-gray-700">{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {cv184VariantSection.table.note && (
+                      <p className="text-xs text-gray-500 px-4 py-3 border-t border-gray-100 leading-relaxed">{cv184VariantSection.table.note}</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {cv184SdkSection && (
+            <section className="py-20 bg-white border-b border-gray-200">
+              <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                  <div className="lg:col-span-4">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">08</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184SdkSection.title}</h3>
+                  </div>
+                  <div className="lg:col-span-8">
+                    {cv184SdkSection.bullets && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {cv184SdkSection.bullets.map((bullet, bulletIdx) => (
+                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
+                            <div className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">SDK</div>
+                            <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
         </>
       )}
 
