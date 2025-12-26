@@ -123,29 +123,49 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       id: 'cv184',
       name: 'CV184',
       series: 'VISION',
-      tagline: 'Edge Vision SoC for FPV/UAV Vision & Smart Security',
-      metaTitle: 'SOPHGO CV184 Edge Vision SoC for FPV/UAV Vision & Smart Security | AIMORELOGY',
-      metaDescription: 'SOPHGO CV184 is a 1.5 TOPS dual-core SoC with 4K encoding for FPV/UAV vision, access control, and edge AI cameras.',
-      description: 'Balanced performance for consumer and SMB smart cameras.',
+      tagline: 'CV184x Edge Vision SoC with ISP V4.0 & Intra4 Encoding',
+      metaTitle: 'SOPHGO CV184x Edge Vision SoC with ISP V4.0 & Intra4 | AIMORELOGY',
+      metaDescription: 'SOPHGO CV184x integrates dual-core ARM + RISC-V, ISP V4.0, and a 1.0-1.5 TOPS TPU for FPV/UAV vision, low-light imaging, and intelligent encoding.',
+      description: 'Dual-core vision SoC with ISP V4.0, self-developed TPU, and advanced H.265/H.264/MJPEG encoding.',
       longDescription: [
-          "The CV184 strikes a perfect balance between performance and power efficiency for mid-range vision applications. It features a dual-core architecture combining ARM Cortex-A53 and RISC-V C906, alongside a 1.5 TOPS TPU. This configuration is optimized for 4K smart cameras, offering high-resolution encoding (H.265/H.264) and intelligent analytics like human detection and intrusion alerts.",
-          "Pin-to-pin compatible with the CV181 series, the CV184 allows manufacturers to scale their product lines easily without redesigning the hardware. Its enhanced ISP ensures superior image quality even in low-light conditions, making it a favorite for consumer security and dashboard cameras."
+          "The CV184x series targets consumer, carrier, and professional security markets. It integrates a dual-core CPU (ARM Cortex-A53 + RISC-V C906, up to 1.1GHz/800MHz) with a self-developed TPU delivering 1.0-1.5 TOPS @ INT8 and BF16 mixed precision. Integrated DDR3 SiP options (512Mb/1Gb/2Gb/4Gb), fast boot, and low power operation make it suitable for compact edge devices.",
+          "CV184x uses a self-developed 4K ISP V4.0 pipeline to improve image quality. It includes starlight-grade noise reduction, low smear, digital wide dynamic range (DRC/HDR), dehaze, and lens distortion correction. MCTF-based 3DNR, edge enhancement (EE), and PFR purple-fringe removal improve clarity in low-light and backlit scenes.",
+          "For multimodal AI, CV184x is compatible with OpenCLIP, enabling object detection, image-text matching (retrieval), zero-shot inference, and scenario fine-tuning. The built-in model library covers face/person/helmet detection, gesture recognition, cat/dog recognition, and license plate recognition to reduce false alarms.",
+          "The self-developed encoder supports H.265/H.264/MJPEG with intelligent encoding and Intra4 mode for better low-bitrate detail. It supports up to 8MP@30FPS plus 720P@30FPS (4:3 or 16:9), with 2x MIPI CSI inputs and 1x MIPI DSI output plus BT656/BT601/BT1120/8080 and RGB/LVDS outputs depending on the variant.",
+          "The CV184x family includes CV1841C, CV1842C-P, CV1842H-P, and CV1843H-P variants with QFN/BGA packages and model-dependent I/O. CV184x is pin-to-pin compatible with the CV181 series and shares SDK, ISP settings, TPU development tools, and reference solutions for easy migration."
       ],
       highlights: [
-        '1.5 TOPS @ INT8',
-        'Dual Core (ARM A53 + RISC-V C906)',
-        'Supports 4K Encoding',
-        'Pin-to-Pin compatible with CV181 series'
+        'Dual-core CPU: Cortex-A53 + RISC-V C906 (up to 1.1GHz/800MHz)',
+        'Self-developed TPU: 1.0-1.5 TOPS @ INT8 with BF16 mixed precision',
+        '4K ISP V4.0: MCTF 3DNR, DRC/HDR, PFR, EE, 3A, dehaze, lens correction',
+        'Intelligent encoding with Intra4; H.265/H.264/MJPEG, 8MP@30FPS + 720P@30FPS',
+        'OpenCLIP multimodal support: object detection, image-text matching, zero-shot inference',
+        'Integrated DDR3 SiP options: 512Mb / 1Gb / 2Gb / 4Gb',
+        '2x MIPI CSI + 1x MIPI DSI; rich display outputs by variant',
+        'Rich peripherals: USB2.0, SD3.0, UART, PWM, GPIO, I2C, SPI, RTC',
+        'Fast boot, low power, and secure boot'
       ],
       detailedFeatures: [
-          { title: "4K Encoding", description: "Efficient H.265/H.264 encoding at 4K resolution ensures high-quality video storage and streaming." },
-          { title: "Seamless Upgrade", description: "Hardware compatibility with CV181 simplifies product roadmap upgrades." }
+          { title: "4K ISP V4.0 Imaging Engine", description: "MCTF 3DNR, DRC/HDR, PFR, EE, 3A, dehaze, and lens distortion correction for clearer low-light and backlit scenes." },
+          { title: "Intra4 Intelligent Encoding", description: "Smaller block encoding improves detail retention at low bitrates while reducing prediction errors." },
+          { title: "OpenCLIP Multimodal + Model Library", description: "Supports object detection, image-text matching, zero-shot inference, and face/person/helmet/gesture/cat-dog/license-plate recognition." },
+          { title: "Self-Developed TPU", description: "1.0-1.5 TOPS INT8 TPU with BF16 mixed precision for more demanding models." },
+          { title: "CV181 Compatibility", description: "Pin-to-pin hardware compatibility plus shared SDK, ISP settings, TPU tools, and reference solutions." },
+          { title: "Flexible CV184x Variants", description: "QFN/BGA packages and DDR3 SiP options (512Mb/1Gb/2Gb/4Gb) with model-dependent I/O." }
       ],
       specs: [
-        { category: 'TPU', key: 'Power', value: '1.5 TOPS' },
-        { category: 'CPU', key: 'Primary', value: 'A53 @ 1.1GHz' },
-        { category: 'Encoding', key: 'Video', value: 'H.265/H.264 4K' },
-        { category: 'Memory', key: 'SiP', value: '512Mb - 4Gb DDR' }
+        { category: 'Processor', key: 'CPU', value: 'Dual-core ARM Cortex-A53 + RISC-V C906 (up to 1.1GHz/800MHz; CV1841C 1.0GHz/600MHz)' },
+        { category: 'TPU', key: 'Performance', value: '1.0-1.5 TOPS @ INT8, BF16 mixed precision' },
+        { category: 'ISP', key: 'Pipeline', value: '4K ISP V4.0 with 3DNR (MCTF), DRC/HDR, PFR, EE, 3A, dehaze, lens correction' },
+        { category: 'Encoding', key: 'Codecs', value: 'H.265/H.264/MJPEG, Intra4 mode, intelligent encoding' },
+        { category: 'Encoding', key: 'Max', value: '8MP@30FPS + 720P@30FPS (4:3 or 16:9)' },
+        { category: 'Video I/O', key: 'Input', value: '2x MIPI CSI (lane configs depend on model)' },
+        { category: 'Video I/O', key: 'Output', value: 'MIPI DSI (2L/4L), BT656/BT601/BT1120/8080, RGB666/RGB888, LVDS (model-dependent)' },
+        { category: 'Memory', key: 'DDR3 SiP', value: '512Mb / 1Gb / 2Gb / 4Gb (by variant)' },
+        { category: 'Interfaces', key: 'Peripherals', value: 'USB2.0, SD3.0, UART, PWM, GPIO, I2C, SPI, RTC' },
+        { category: 'Ethernet', key: 'MAC/PHY', value: '10/100 MAC PHY; RMII supported on select variants' },
+        { category: 'Audio', key: 'I/O', value: 'ADC / DAC / I2S' },
+        { category: 'Security', key: 'Boot', value: 'Secure boot' }
       ],
       applications: [
         { title: '4K IPC', image: '/4K IPC.webp' },
@@ -156,7 +176,12 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { title: 'Dash Cam', image: '/Dash Cam.webp' },
         { title: 'HD Night Vision', image: '/HD Night Vision.webp' }
       ],
-      faqs: []
+      faqs: [
+        { question: "What AI performance does CV184x deliver?", answer: "CV184x integrates a self-developed TPU delivering 1.0-1.5 TOPS at INT8, with BF16 mixed precision support." },
+        { question: "Does CV184x support OpenCLIP and multimodal tasks?", answer: "Yes. CV184x supports OpenCLIP for object detection, image-text matching, zero-shot inference, and scene fine-tuning." },
+        { question: "What video encoding is supported?", answer: "The self-developed encoder supports H.265/H.264/MJPEG with Intra4 mode, up to 8MP@30FPS plus 720P@30FPS." },
+        { question: "Is CV184x compatible with CV181?", answer: "Yes. CV184x is pin-to-pin compatible with CV181 and shares SDK, ISP settings, and TPU development tools." }
+      ]
     },
     'cv181': {
       id: 'cv181',

@@ -127,17 +127,17 @@ const Header: React.FC = () => {
                   to: withLang(lang, '/products/sophgo/bm1688') 
                 },
                 { 
-                  model: 'CV186AH', 
+                  model: 'CV186x', 
                   description: t('header.menu.sophgo.cv186ah'), 
                   to: withLang(lang, '/products/sophgo/cv186ah') 
                 },
                 { 
-                  model: 'CV184', 
+                  model: 'CV184x', 
                   description: t('header.menu.sophgo.cv184'), 
                   to: withLang(lang, '/products/sophgo/cv184') 
                 },
                 { 
-                  model: 'CV181 / CV180', 
+                  model: 'CV181x / CV180x', 
                   description: t('header.menu.sophgo.cv181'), 
                   to: withLang(lang, '/products/sophgo/cv181') 
                 }
