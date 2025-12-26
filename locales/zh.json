@@ -23,7 +23,7 @@
       "sophgo": {
         "bm1688": "16T Edge AI、8-Core ARM，高度集成的 SoC。",
         "cv186ah": "7.2T 高端视觉处理器 (4K/8MP)。",
-        "cv184": "1.5T 中距离边缘视觉 (RISC-V + ARM)。",
+        "cv184": "1.5T åæ ¸è§è§ SoCï¼éæ ISP 4.0ã",
         "cv181": "消费者 RISC-V AIoT SoC (0.2T - 1.0T)。"
       },
       "espressif": {

@@ -23,7 +23,7 @@
       "sophgo": {
         "bm1688": "16T Edge AI, 8-Core ARM, Highly Integrated SoC.",
         "cv186ah": "7.2T High-End Vision Processor (4K/8MP).",
-        "cv184": "1.5T Mid-Range Edge Vision (RISC-V + ARM).",
+        "cv184": "1.5T Dual-Core Vision SoC with ISP 4.0.",
         "cv181": "Consumer RISC-V AIoT SoC (0.2T - 1.0T)."
       },
       "espressif": {
