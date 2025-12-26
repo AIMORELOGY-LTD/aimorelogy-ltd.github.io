@@ -106,6 +106,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
     );
   }
 
+  const cv184IoSpecs = isCv184 ? localizedProduct.specs.slice(5, 11) : [];
+  const cv184EncodingSpecs = isCv184 ? localizedProduct.specs.slice(3, 5) : [];
+
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
       {seo && (
@@ -234,67 +237,65 @@ const ProductDetail_SOPHGO: React.FC = () => {
           </div>
       </section>
 
-      {/* CV184x Deep Dive Sections */}
+      {/* CV184x Deep Dive Sections */
       {isCv184 && cv184DetailSections.length > 0 && (
         <>
           {cv184CoreSection && (
-            <section className="py-20 bg-white border-y border-gray-200">
+            <section className="py-24 bg-white border-y border-gray-200">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                  <div className="lg:col-span-4">
-                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">01</div>
-                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184CoreSection.title}</h3>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                  <div className="lg:col-span-5">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-4">01</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184CoreSection.title}</h3>
                     {cv184CoreSection.description && (
                       <p className="text-gray-600 leading-relaxed">{cv184CoreSection.description}</p>
                     )}
                   </div>
-                  <div className="lg:col-span-8">
+                  <div className="lg:col-span-7">
                     {cv184CoreSection.stats && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {cv184CoreSection.stats.map((stat, statIdx) => (
-                          <div key={statIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
+                          <div key={statIdx} className="border border-gray-200 bg-gray-50 p-6 rounded-sm">
                             <div className="text-xs uppercase tracking-wider text-gray-500 font-bold">{stat.label}</div>
-                            <div className="text-lg font-semibold text-gray-900 mt-2">{stat.value}</div>
+                            <div className="text-lg font-semibold text-gray-900 mt-3">{stat.value}</div>
                           </div>
                         ))}
                       </div>
                     )}
                   </div>
-                  <div className="lg:col-span-12">
-                    <div className="mt-8 border border-gray-200 bg-white rounded-sm overflow-hidden">
-                      <img src="/CV/CV184-ARCH.svg" alt="CV184x architecture diagram" className="w-full h-auto" loading="lazy" />
-                    </div>
-                  </div>
+                </div>
+                <div className="mt-12 border border-gray-200 bg-white rounded-sm overflow-hidden">
+                  <img src="/CV/CV184-ARCH.svg" alt="CV184x architecture diagram" className="w-full h-auto" loading="lazy" />
                 </div>
               </div>
             </section>
           )}
 
           {cv184IspSection && (
-            <section className="py-20 bg-gray-50 border-b border-gray-200">
+            <section className="py-24 bg-gray-50 border-b border-gray-200">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                  <div className="lg:col-span-5">
-                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">02</div>
-                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184IspSection.title}</h3>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                  <div className="lg:col-span-4">
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-4">02</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184IspSection.title}</h3>
                     {cv184IspSection.description && (
                       <p className="text-gray-600 leading-relaxed mb-6">{cv184IspSection.description}</p>
                     )}
                     {cv184IspSection.stats && (
-                      <div className="flex flex-wrap gap-2">
+                      <div className="grid grid-cols-2 gap-3">
                         {cv184IspSection.stats.map((stat, statIdx) => (
-                          <div key={statIdx} className="px-3 py-2 border border-gray-200 bg-white text-xs uppercase tracking-wider text-gray-600 font-semibold">
+                          <div key={statIdx} className="border border-gray-200 bg-white px-3 py-3 text-xs uppercase tracking-wider text-gray-600 font-semibold">
                             {stat.label}: {stat.value}
                           </div>
                         ))}
                       </div>
                     )}
                   </div>
-                  <div className="lg:col-span-7">
+                  <div className="lg:col-span-8">
                     {cv184IspSection.bullets && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {cv184IspSection.bullets.map((bullet, bulletIdx) => (
-                          <div key={bulletIdx} className="border border-gray-200 bg-white p-5 rounded-sm shadow-sm">
+                          <div key={bulletIdx} className="border border-gray-200 bg-white p-6 rounded-sm shadow-sm">
                             <div className="flex items-start gap-3">
                               <CheckCircle size={18} className="text-[#4f4398] shrink-0 mt-0.5" />
                               <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
@@ -304,30 +305,28 @@ const ProductDetail_SOPHGO: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  {cv184MediaMap['isp-v4'] && (
-                    <div className="lg:col-span-12">
-                      <div className="mt-8 border border-gray-200 bg-white rounded-sm overflow-hidden">
-                        <img src={cv184MediaMap['isp-v4'].src} alt={cv184MediaMap['isp-v4'].alt} className="w-full h-auto" loading="lazy" />
-                      </div>
-                    </div>
-                  )}
                 </div>
+                {cv184MediaMap['isp-v4'] && (
+                  <div className="mt-12 border border-gray-200 bg-white rounded-sm overflow-hidden">
+                    <img src={cv184MediaMap['isp-v4'].src} alt={cv184MediaMap['isp-v4'].alt} className="w-full h-auto" loading="lazy" />
+                  </div>
+                )}
               </div>
             </section>
           )}
 
           {cv184TpuSection && (
-            <section className="py-20 bg-white border-b border-gray-200">
+            <section className="py-24 bg-white border-b border-gray-200">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                   <div className="lg:col-span-5">
-                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">03</div>
-                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184TpuSection.title}</h3>
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-4">03</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184TpuSection.title}</h3>
                     {cv184TpuSection.description && (
                       <p className="text-gray-600 leading-relaxed mb-6">{cv184TpuSection.description}</p>
                     )}
                     {cv184TpuSection.stats && (
-                      <div className="space-y-4">
+                      <div className="space-y-5">
                         {cv184TpuSection.stats.map((stat, statIdx) => (
                           <div key={statIdx}>
                             <div className="flex items-center justify-between text-xs uppercase tracking-wider text-gray-500 font-bold">
@@ -337,7 +336,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                             <div className="mt-2 h-2 bg-gray-200">
                               <div
                                 className="h-2 bg-[#4f4398]"
-                                style={{ width: `${92 - statIdx * 12}%` }}
+                                style={{ width: `${90 - statIdx * 10}%` }}
                               ></div>
                             </div>
                           </div>
@@ -349,7 +348,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                     {cv184TpuSection.bullets && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {cv184TpuSection.bullets.map((bullet, bulletIdx) => (
-                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
+                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-6 rounded-sm">
                             <div className="flex items-start gap-3">
                               <CheckCircle size={18} className="text-[#76b900] shrink-0 mt-0.5" />
                               <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
@@ -359,25 +358,23 @@ const ProductDetail_SOPHGO: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  {cv184MediaMap['tpu-acceleration'] && (
-                    <div className="lg:col-span-12">
-                      <div className="mt-8 border border-gray-200 bg-white rounded-sm overflow-hidden">
-                        <img src={cv184MediaMap['tpu-acceleration'].src} alt={cv184MediaMap['tpu-acceleration'].alt} className="w-full h-auto" loading="lazy" />
-                      </div>
-                    </div>
-                  )}
                 </div>
+                {cv184MediaMap['tpu-acceleration'] && (
+                  <div className="mt-12 border border-gray-200 bg-white rounded-sm overflow-hidden">
+                    <img src={cv184MediaMap['tpu-acceleration'].src} alt={cv184MediaMap['tpu-acceleration'].alt} className="w-full h-auto" loading="lazy" />
+                  </div>
+                )}
               </div>
             </section>
           )}
 
           {cv184OpenclipSection && (
-            <section className="py-20 bg-gray-50 border-b border-gray-200">
+            <section className="py-24 bg-gray-50 border-b border-gray-200">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                   <div className="lg:col-span-4">
-                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">04</div>
-                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184OpenclipSection.title}</h3>
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-4">04</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184OpenclipSection.title}</h3>
                     {cv184OpenclipSection.description && (
                       <p className="text-gray-600 leading-relaxed">{cv184OpenclipSection.description}</p>
                     )}
@@ -387,7 +384,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {cv184OpenclipSection.bullets.map((bullet, bulletIdx) => (
                           <div key={bulletIdx} className="border border-gray-200 bg-white p-6 rounded-sm shadow-sm">
-                            <div className="text-xs uppercase tracking-widest text-[#4f4398] font-bold mb-2">Capability</div>
                             <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
                           </div>
                         ))}
@@ -400,21 +396,34 @@ const ProductDetail_SOPHGO: React.FC = () => {
           )}
 
           {cv184EncodingSection && (
-            <section className="py-20 bg-[#0f111a] text-white border-b border-gray-900">
+            <section className="py-24 bg-[#0f111a] text-white border-b border-gray-900">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                   <div className="lg:col-span-5">
-                    <div className="text-xs uppercase tracking-[0.3em] text-[#9aa4ff] font-bold mb-3">05</div>
-                    <h3 className="text-3xl md:text-4xl font-black uppercase mb-4">{cv184EncodingSection.title}</h3>
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#9aa4ff] font-bold mb-4">05</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase mb-5">{cv184EncodingSection.title}</h3>
                     {cv184EncodingSection.description && (
-                      <p className="text-gray-300 leading-relaxed">{cv184EncodingSection.description}</p>
+                      <p className="text-gray-300 leading-relaxed mb-6">{cv184EncodingSection.description}</p>
+                    )}
+                    {cv184EncodingSpecs.length > 0 && (
+                      <div className="border border-white/10 bg-white/5">
+                        <div className="grid grid-cols-1">
+                          {cv184EncodingSpecs.map((spec, idx) => (
+                            <div key={idx} className="px-4 py-3 border-b border-white/10 last:border-b-0">
+                              <div className="text-xs uppercase tracking-wider text-white/60">{spec.category}</div>
+                              <div className="text-sm font-semibold mt-2">{spec.key}</div>
+                              <div className="text-xs text-white/70 mt-1">{spec.value}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     )}
                   </div>
                   <div className="lg:col-span-7">
                     {cv184EncodingSection.bullets && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {cv184EncodingSection.bullets.map((bullet, bulletIdx) => (
-                          <div key={bulletIdx} className="border border-white/10 bg-white/5 p-5 rounded-sm">
+                          <div key={bulletIdx} className="border border-white/10 bg-white/5 p-6 rounded-sm">
                             <div className="flex items-start gap-3">
                               <CheckCircle size={18} className="text-[#9aa4ff] shrink-0 mt-0.5" />
                               <p className="text-sm text-gray-200 leading-relaxed">{bullet}</p>
@@ -430,25 +439,48 @@ const ProductDetail_SOPHGO: React.FC = () => {
           )}
 
           {cv184IoSection && (
-            <section className="py-20 bg-white border-b border-gray-200">
+            <section className="py-24 bg-white border-b border-gray-200">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                   <div className="lg:col-span-4">
-                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">06</div>
-                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184IoSection.title}</h3>
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-4">06</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184IoSection.title}</h3>
                     {cv184IoSection.description && (
                       <p className="text-gray-600 leading-relaxed">{cv184IoSection.description}</p>
                     )}
                   </div>
-                  <div className="lg:col-span-8">
+                  <div className="lg:col-span-8 space-y-6">
                     {cv184IoSection.bullets && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {cv184IoSection.bullets.map((bullet, bulletIdx) => (
-                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
-                            <div className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">I/O</div>
+                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-6 rounded-sm">
                             <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
                           </div>
                         ))}
+                      </div>
+                    )}
+                    {cv184IoSpecs.length > 0 && (
+                      <div className="border border-gray-200 bg-white">
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-left border-collapse">
+                            <thead>
+                              <tr>
+                                <th className="p-3 bg-gray-100 text-xs font-bold uppercase tracking-wider text-gray-500">{t('products.common.specCategory')}</th>
+                                <th className="p-3 bg-gray-100 text-xs font-bold uppercase tracking-wider text-gray-500">{t('products.common.specParameter')}</th>
+                                <th className="p-3 bg-gray-100 text-xs font-bold uppercase tracking-wider text-gray-500">{t('products.common.specValue')}</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-100">
+                              {cv184IoSpecs.map((spec, idx) => (
+                                <tr key={idx} className="hover:bg-gray-50 transition-colors">
+                                  <td className="p-3 text-xs font-bold text-[#4f4398] uppercase">{spec.category}</td>
+                                  <td className="p-3 text-sm font-medium text-gray-900">{spec.key}</td>
+                                  <td className="p-3 text-sm text-gray-600">{spec.value}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -458,7 +490,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
           )}
 
           {cv184VariantSection && (
-            <section className="py-20 bg-gray-50 border-b border-gray-200">
+            <section className="py-24 bg-gray-50 border-b border-gray-200">
               <div className="container mx-auto px-6">
                 <div className="flex items-center justify-between mb-8">
                   <div>
@@ -503,19 +535,19 @@ const ProductDetail_SOPHGO: React.FC = () => {
           )}
 
           {cv184SdkSection && (
-            <section className="py-20 bg-white border-b border-gray-200">
+            <section className="py-24 bg-white border-b border-gray-200">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                   <div className="lg:col-span-4">
-                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-3">08</div>
-                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184SdkSection.title}</h3>
+                    <div className="text-xs uppercase tracking-[0.3em] text-[#4f4398] font-bold mb-4">08</div>
+                    <h3 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184SdkSection.title}</h3>
                   </div>
                   <div className="lg:col-span-8">
                     {cv184SdkSection.bullets && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {cv184SdkSection.bullets.map((bullet, bulletIdx) => (
-                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-5 rounded-sm">
-                            <div className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">SDK</div>
+                          <div key={bulletIdx} className="border border-gray-200 bg-gray-50 p-6 rounded-sm">
+                            <div className="text-3xl font-black text-gray-200 mb-4">{String(bulletIdx + 1).padStart(2, '0')}</div>
                             <p className="text-sm text-gray-700 leading-relaxed">{bullet}</p>
                           </div>
                         ))}
