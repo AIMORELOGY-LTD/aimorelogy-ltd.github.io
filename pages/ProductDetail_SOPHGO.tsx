@@ -237,7 +237,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
           </div>
       </section>
 
-      {/* CV184x Deep Dive Sections */}
       {isCv184 && cv184DetailSections.length > 0 && (
         <>
           {cv184CoreSection && (
