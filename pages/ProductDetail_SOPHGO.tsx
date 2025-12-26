@@ -70,17 +70,8 @@ const ProductDetail_SOPHGO: React.FC = () => {
     return { metaTitle, metaDescription, image, jsonLd };
   }, [localizedProduct, t]);
 
-  if (!localizedProduct) {
-    return (
-      <div className="min-h-screen bg-white flex flex-col items-center justify-center text-gray-900">
-        <h1 className="text-4xl font-black mb-4 uppercase">{t('products.common.notFound')}</h1>
-        <Link to={withLang(lang, RoutePath.HOME)} className="text-[#4f4398] font-bold hover:underline">{t('products.common.returnHome')}</Link>
-      </div>
-    );
-  }
-
-  const isCv184 = localizedProduct.id === 'cv184';
-  const cv184DetailSections = localizedProduct.detailSections || [];
+  const isCv184 = localizedProduct?.id === 'cv184';
+  const cv184DetailSections = localizedProduct?.detailSections || [];
   const cv184SectionMap = React.useMemo(() => {
     const map: Record<string, ChipDetailSection> = {};
     cv184DetailSections.forEach((section) => {
@@ -96,6 +87,15 @@ const ProductDetail_SOPHGO: React.FC = () => {
   const cv184RemainingSections = cv184DetailSections.filter(
     (section) => !['core-architecture', 'tpu-acceleration', 'isp-v4'].includes(section.id)
   );
+
+  if (!localizedProduct) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center text-gray-900">
+        <h1 className="text-4xl font-black mb-4 uppercase">{t('products.common.notFound')}</h1>
+        <Link to={withLang(lang, RoutePath.HOME)} className="text-[#4f4398] font-bold hover:underline">{t('products.common.returnHome')}</Link>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
