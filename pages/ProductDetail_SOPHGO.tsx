@@ -46,6 +46,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
       applications: getArray('applications', product.applications),
       detailedFeatures: getArray('detailedFeatures', product.detailedFeatures),
       faqs: getArray('faqs', product.faqs),
+      detailSections: getArray('detailSections', product.detailSections || []),
       metaTitle: t(`${baseKey}.metaTitle`, { defaultValue: product.metaTitle }),
       metaDescription: t(`${baseKey}.metaDescription`, { defaultValue: product.metaDescription })
     };
@@ -77,6 +78,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
       </div>
     );
   }
+
+  const isCv184 = localizedProduct.id === 'cv184';
+  const cv184DetailSections = localizedProduct.detailSections || [];
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
@@ -188,7 +192,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               </div>
 
               {/* Detailed Features Grid */}
-              {localizedProduct.detailedFeatures && localizedProduct.detailedFeatures.length > 0 && (
+              {!isCv184 && localizedProduct.detailedFeatures && localizedProduct.detailedFeatures.length > 0 && (
                   <div className="mt-20">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                           {localizedProduct.detailedFeatures.map((feat, idx) => (
@@ -205,6 +209,80 @@ const ProductDetail_SOPHGO: React.FC = () => {
               )}
           </div>
       </section>
+
+      {/* CV184x Deep Dive Sections */}
+      {isCv184 && cv184DetailSections.length > 0 && (
+          <section className="py-20 bg-gray-50 border-y border-gray-200">
+              <div className="container mx-auto px-6 space-y-10">
+                  {cv184DetailSections.map((section, idx) => (
+                      <div key={section.id || idx} className="bg-white border border-gray-200 shadow-sm p-8 md:p-10 rounded-sm">
+                          <div className="flex items-center gap-3 mb-4">
+                              <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-[#4f4398]">
+                                  <Cpu size={20} />
+                              </div>
+                              <h3 className="text-xl md:text-2xl font-black uppercase text-gray-900">{section.title}</h3>
+                          </div>
+
+                          {section.description && (
+                              <p className="text-gray-600 mb-6 leading-relaxed">{section.description}</p>
+                          )}
+
+                          {section.stats && section.stats.length > 0 && (
+                              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                                  {section.stats.map((stat, statIdx) => (
+                                      <div key={statIdx} className="border border-gray-100 bg-gray-50 p-4 rounded-sm">
+                                          <div className="text-xs uppercase tracking-wider text-gray-500 font-bold">{stat.label}</div>
+                                          <div className="text-sm font-semibold text-gray-900 mt-2">{stat.value}</div>
+                                      </div>
+                                  ))}
+                              </div>
+                          )}
+
+                          {section.bullets && section.bullets.length > 0 && (
+                              <ul className="space-y-3">
+                                  {section.bullets.map((bullet, bulletIdx) => (
+                                      <li key={bulletIdx} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
+                                          <CheckCircle size={16} className="text-[#76b900] shrink-0 mt-0.5" />
+                                          <span>{bullet}</span>
+                                      </li>
+                                  ))}
+                              </ul>
+                          )}
+
+                          {section.table && (
+                              <div className="mt-6">
+                                  <div className="overflow-x-auto border border-gray-100">
+                                      <table className="w-full text-left border-collapse">
+                                          <thead>
+                                              <tr>
+                                                  {section.table.headers.map((header, headerIdx) => (
+                                                      <th key={headerIdx} className="p-3 bg-gray-100 text-xs font-bold uppercase tracking-wider text-gray-500">
+                                                          {header}
+                                                      </th>
+                                                  ))}
+                                              </tr>
+                                          </thead>
+                                          <tbody className="divide-y divide-gray-100">
+                                              {section.table.rows.map((row, rowIdx) => (
+                                                  <tr key={rowIdx} className="hover:bg-gray-50 transition-colors">
+                                                      {row.map((cell, cellIdx) => (
+                                                          <td key={cellIdx} className="p-3 text-sm text-gray-700">{cell}</td>
+                                                      ))}
+                                                  </tr>
+                                              ))}
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                  {section.table.note && (
+                                      <p className="text-xs text-gray-500 mt-3 leading-relaxed">{section.table.note}</p>
+                                  )}
+                              </div>
+                          )}
+                      </div>
+                  ))}
+              </div>
+          </section>
+      )}
 
       {/* 3. SPECIFICATIONS TABLE */}
       <section className="py-20 bg-gray-50 border-y border-gray-200">

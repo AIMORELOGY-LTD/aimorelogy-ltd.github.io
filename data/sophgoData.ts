@@ -19,6 +19,26 @@ export interface ChipFAQ {
     question: string;
     answer: string;
 }
+
+export interface ChipDetailStat {
+    label: string;
+    value: string;
+}
+
+export interface ChipDetailTable {
+    headers: string[];
+    rows: string[][];
+    note?: string;
+}
+
+export interface ChipDetailSection {
+    id: string;
+    title: string;
+    description?: string;
+    bullets?: string[];
+    stats?: ChipDetailStat[];
+    table?: ChipDetailTable;
+}
   
 export interface ChipData {
     id: string;
@@ -32,6 +52,7 @@ export interface ChipData {
     applications: ChipApplication[];
     detailedFeatures: ChipFeature[]; // For the features section
     faqs: ChipFAQ[]; // For the FAQ section
+    detailSections?: ChipDetailSection[];
     metaTitle?: string;
     metaDescription?: string;
 }
@@ -152,6 +173,93 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
           { title: "Self-Developed TPU", description: "1.0-1.5 TOPS INT8 TPU with BF16 mixed precision for more demanding models." },
           { title: "CV181 Compatibility", description: "Pin-to-pin hardware compatibility plus shared SDK, ISP settings, TPU tools, and reference solutions." },
           { title: "Flexible CV184x Variants", description: "QFN/BGA packages and DDR3 SiP options (512Mb/1Gb/2Gb/4Gb) with model-dependent I/O." }
+      ],
+      detailSections: [
+        {
+          id: "core-architecture",
+          title: "Core Architecture",
+          description: "Dual-core ARM Cortex-A53 + RISC-V C906 with a self-developed TPU and 4K ISP V4.0, tuned for fast boot and low power edge vision.",
+          stats: [
+            { label: "CPU", value: "Dual-core ARM Cortex-A53 + RISC-V C906 (up to 1.1GHz/800MHz)" },
+            { label: "TPU", value: "1.0-1.5 TOPS @ INT8, BF16 mixed precision" },
+            { label: "ISP", value: "Self-developed 4K ISP V4.0" },
+            { label: "Encode", value: "H.265/H.264/MJPEG + Intra4" },
+            { label: "Max Video", value: "8MP@30FPS + 720P@30FPS (4:3/16:9)" },
+            { label: "Memory", value: "DDR3 SiP 512Mb/1Gb/2Gb/4Gb" }
+          ]
+        },
+        {
+          id: "isp-v4",
+          title: "ISP V4.0 Imaging Pipeline",
+          description: "Self-developed 4K ISP V4.0 improves low-light performance and wide dynamic range for clearer imaging.",
+          bullets: [
+            "MCTF-based 3DNR reduces temporal and spatial noise with less smearing.",
+            "Color noise suppression removes low-frequency chroma artifacts with clean edges.",
+            "DRC/HDR boosts shadow detail while preventing highlight overexposure.",
+            "Edge enhancement expands detection bands with flexible fine/coarse tuning.",
+            "PFR removes purple fringes with minimal color loss.",
+            "3A, dehaze, and lens distortion correction improve overall stability."
+          ]
+        },
+        {
+          id: "intra4-encoding",
+          title: "Intra4 Intelligent Encoding",
+          description: "Self-developed encoding engine supports H.265/H.264/MJPEG with intelligent encoding.",
+          bullets: [
+            "Intra4 small-block mode retains texture and detail at low bitrates.",
+            "Handles complex motion scenes with clearer image quality.",
+            "Smaller blocks improve local prediction and reduce encoding error.",
+            "Supports 8MP@30FPS + 720P@30FPS output."
+          ]
+        },
+        {
+          id: "openclip-ai",
+          title: "OpenCLIP Multimodal AI",
+          description: "Compatible with OpenCLIP multimodal models and a built-in model library for real deployments.",
+          bullets: [
+            "Object detection and image-text matching (retrieval).",
+            "Zero-shot inference and scenario fine-tuning.",
+            "Face/person/helmet detection, gesture recognition, cat/dog detection, license plate recognition."
+          ]
+        },
+        {
+          id: "io-peripherals",
+          title: "I/O and Peripherals",
+          description: "Flexible video input/output and a rich peripheral set for cameras and edge devices.",
+          bullets: [
+            "2x MIPI CSI inputs and 1x MIPI DSI output.",
+            "Video input options include MIPI 2L+1L or 4L, and MIPI 2L+2L + DVP (model-dependent).",
+            "Display outputs: BT656/BT601/BT1120/8080, RGB666/RGB888, LVDS (model-dependent).",
+            "USB 2.0, SD 3.0, UART, PWM, GPIO, I2C, SPI, RTC.",
+            "Audio: ADC/DAC/I2S. Ethernet: 10/100 MAC PHY with RMII on select variants.",
+            "Fast boot, low power, and secure boot support."
+          ]
+        },
+        {
+          id: "variant-comparison",
+          title: "CV184x Variant Comparison",
+          description: "Model options with DDR3 SiP and package choices.",
+          table: {
+            headers: ["Model", "CPU", "DDR3 SiP", "TPU", "Package"],
+            rows: [
+              ["CV1841C", "CA53 1.0GHz + C906 600MHz", "1Gb", "INT8 ~1.0 TOPS", "QFN-88 9x9"],
+              ["CV1842C-P", "CA53 1.1GHz + C906 800MHz", "2Gb", "INT8 ~1.5 TOPS", "BGA 10x10"],
+              ["CV1842H-P", "CA53 1.1GHz + C906 800MHz", "2Gb", "INT8 ~1.5 TOPS", "BGA 10x10"],
+              ["CV1843H-P", "CA53 1.1GHz + C906 800MHz", "4Gb", "INT8 ~1.5 TOPS", "BGA 10x10"]
+            ],
+            note: "Video input/output options vary by model. Typical inputs include MIPI 2L+1L or 4L, and MIPI 2L+2L + DVP. Outputs include MIPI DSI (2L/4L), BT656/BT601/BT1120/8080, RGB666/RGB888, and LVDS."
+          }
+        },
+        {
+          id: "sdk-compatibility",
+          title: "SDK and Compatibility",
+          bullets: [
+            "Pin-to-pin compatible with the CV181 series for quick migration.",
+            "Shared SDK, ISP settings, TPU development tools, and reference solutions.",
+            "Supports mainstream AI frameworks with a toolchain for fast commercialization.",
+            "Turnkey solutions available for selected scenarios."
+          ]
+        }
       ],
       specs: [
         { category: 'Processor', key: 'CPU', value: 'Dual-core ARM Cortex-A53 + RISC-V C906 (up to 1.1GHz/800MHz; CV1841C 1.0GHz/600MHz)' },
