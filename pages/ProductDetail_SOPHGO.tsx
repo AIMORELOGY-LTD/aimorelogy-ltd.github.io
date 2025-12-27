@@ -191,19 +191,15 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
       {isCv184 && (
         <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
-
           .cv184-shell {
             --accent: #4f4398;
             --accent-strong: #2f2567;
             --muted: #6b6b76;
             --line: rgba(15, 15, 24, 0.12);
-            font-family: 'IBM Plex Sans', sans-serif;
           }
 
           .cv184-shell .cv184-display {
-            font-family: 'Bricolage Grotesque', sans-serif;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
           }
 
           .cv184-shell .cv184-kicker {
@@ -255,16 +251,10 @@ const ProductDetail_SOPHGO: React.FC = () => {
             background: linear-gradient(90deg, var(--accent), transparent);
           }
 
-          .cv184-shell .cv184-number {
-            position: absolute;
-            top: -1.5rem;
-            right: 0;
-            font-family: 'Bricolage Grotesque', sans-serif;
-            font-weight: 800;
-            font-size: clamp(3rem, 10vw, 7rem);
-            letter-spacing: -0.04em;
-            color: rgba(79, 67, 152, 0.08);
-            pointer-events: none;
+          .cv184-shell p,
+          .cv184-shell li {
+            text-align: justify;
+            text-justify: inter-word;
           }
 
           .cv184-shell .cv184-frame {
@@ -437,7 +427,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
             <div className="space-y-16">
               {cv184CoreSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">01</span>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-4">
                       <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">Core Architecture</div>
@@ -466,7 +455,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
               {cv184TpuSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">02</span>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-4">
                       <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">TPU Acceleration</div>
@@ -510,7 +498,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
               {cv184IspSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">03</span>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-4">
                       <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">Imaging Stack</div>
@@ -548,7 +535,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
               {cv184OpenclipSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">04</span>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-4">
                       <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">Multimodal AI</div>
@@ -574,7 +560,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
               {cv184EncodingSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">05</span>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-4">
                       <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">Video Engine</div>
@@ -611,7 +596,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
               {cv184IoSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">06</span>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-4">
                       <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">I/O Ecosystem</div>
@@ -659,7 +643,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
               {cv184VariantSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">07</span>
                   <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">CV184x Lineup</div>
                   <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184VariantSection.title}</h3>
                   {cv184VariantSection.description && (
@@ -697,7 +680,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
               {cv184SdkSection && (
                 <div className="cv184-section">
-                  <span className="cv184-number">08</span>
                   <div className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3">SDK + Compatibility</div>
                   <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-5">{cv184SdkSection.title}</h3>
                   {cv184SdkSection.bullets && (
