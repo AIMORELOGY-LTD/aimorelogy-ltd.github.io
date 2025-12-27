@@ -184,6 +184,21 @@ const ProductDetail_SOPHGO: React.FC = () => {
         </div>
       </section>
 
+      {isCv184 && cv184MediaMap['tpu-acceleration'] && (
+        <section className="py-10 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="rounded-[32px] overflow-hidden border border-gray-200 bg-white shadow-[0_30px_70px_rgba(15,23,42,0.08)]">
+              <img
+                src={cv184MediaMap['tpu-acceleration'].src}
+                alt={cv184MediaMap['tpu-acceleration'].alt}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* 2. PRODUCT OVERVIEW (SEO Rich Text) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
@@ -393,11 +408,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
                       )}
                     </div>
                   </div>
-                  {cv184MediaMap['tpu-acceleration'] && (
-                    <div className="mt-10 rounded-2xl border border-gray-200 bg-white overflow-hidden">
-                      <img src={cv184MediaMap['tpu-acceleration'].src} alt={cv184MediaMap['tpu-acceleration'].alt} className="w-full h-auto" loading="lazy" />
-                    </div>
-                  )}
                 </div>
               )}
 
