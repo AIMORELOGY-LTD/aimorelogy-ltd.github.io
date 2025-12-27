@@ -340,9 +340,14 @@ const ProductDetail_SOPHGO: React.FC = () => {
               {cv184HeroStats.length > 0 && (
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
                   {cv184HeroStats.map((stat, statIdx) => (
-                    <div key={statIdx} className="cv184-card rounded-sm p-8 text-center group">
-                      <div className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold mb-4 group-hover:text-[#4f4398] transition-colors">{stat.label}</div>
-                      <div className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">{stat.value}</div>
+                    <div key={statIdx} className="cv184-card rounded-sm p-6 flex flex-col items-start text-left group h-full">
+                      <div className="flex items-center gap-2 mb-4">
+                         <div className="w-4 h-[2px] bg-[#4f4398] opacity-50"></div>
+                         <div className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold group-hover:text-[#4f4398] transition-colors">{stat.label}</div>
+                      </div>
+                      <div className="text-xl md:text-2xl font-black text-gray-900 tracking-tight leading-snug">
+                        {stat.value}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -396,9 +401,12 @@ const ProductDetail_SOPHGO: React.FC = () => {
                     {cv184TpuSection.stats && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                         {cv184TpuSection.stats.map((stat, statIdx) => (
-                          <div key={statIdx} className="cv184-card rounded-sm p-6 flex flex-col justify-center">
-                            <div className="text-[10px] uppercase tracking-[0.25em] text-gray-400 mb-2 font-bold">{stat.label}</div>
-                            <div className="text-2xl font-black text-gray-900">{stat.value}</div>
+                          <div key={statIdx} className="cv184-card rounded-sm p-5 flex flex-col justify-center items-start">
+                            <div className="flex items-center gap-2 mb-2">
+                               <div className="w-3 h-[1px] bg-gray-300"></div>
+                               <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">{stat.label}</div>
+                            </div>
+                            <div className="text-lg font-black text-gray-900 leading-tight">{stat.value}</div>
                           </div>
                         ))}
                       </div>
@@ -406,9 +414,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
                     {cv184TpuSection.bullets && (
                       <div className="grid grid-cols-1 gap-4">
                         {cv184TpuSection.bullets.map((bullet, bulletIdx) => (
-                          <div key={bulletIdx} className="cv184-card rounded-sm p-6 flex items-start gap-4 hover:border-[#4f4398]">
-                             <div className="w-1.5 h-1.5 bg-[#4f4398] mt-2.5 flex-shrink-0 rounded-[1px]"></div>
-                             <div className="text-base text-gray-700 leading-relaxed font-medium">{bullet}</div>
+                          <div key={bulletIdx} className="cv184-card rounded-sm p-5 flex items-start gap-4 hover:border-[#4f4398]">
+                             <div className="w-1.5 h-1.5 bg-[#4f4398] mt-2 flex-shrink-0 rounded-[1px]"></div>
+                             <div className="text-sm text-gray-700 leading-relaxed font-medium">{bullet}</div>
                           </div>
                         ))}
                       </div>
@@ -443,9 +451,12 @@ const ProductDetail_SOPHGO: React.FC = () => {
                     {cv184IspSection.stats && (
                       <div className="grid grid-cols-2 gap-4 mb-10">
                         {cv184IspSection.stats.map((stat, statIdx) => (
-                          <div key={statIdx} className="cv184-card rounded-sm p-5 bg-white">
-                            <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2 font-bold">{stat.label}</div>
-                            <div className="text-lg font-black text-gray-900">{stat.value}</div>
+                          <div key={statIdx} className="cv184-card rounded-sm p-5 bg-white flex flex-col items-start">
+                            <div className="flex items-center gap-2 mb-2">
+                               <div className="w-3 h-[1px] bg-gray-300"></div>
+                               <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">{stat.label}</div>
+                            </div>
+                            <div className="text-base font-black text-gray-900 leading-tight">{stat.value}</div>
                           </div>
                         ))}
                       </div>
@@ -484,9 +495,12 @@ const ProductDetail_SOPHGO: React.FC = () => {
                 {cv184SecondaryStats.length > 0 && (
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                     {cv184SecondaryStats.map((stat, statIdx) => (
-                      <div key={statIdx} className="cv184-card rounded-sm p-6 text-center">
-                        <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold mb-2">{stat.label}</div>
-                        <div className="text-xl font-black text-gray-900">{stat.value}</div>
+                      <div key={statIdx} className="cv184-card rounded-sm p-5 flex flex-col items-start">
+                        <div className="flex items-center gap-2 mb-2">
+                           <div className="w-3 h-[1px] bg-gray-300"></div>
+                           <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">{stat.label}</div>
+                        </div>
+                        <div className="text-base font-black text-gray-900 leading-tight">{stat.value}</div>
                       </div>
                     ))}
                   </div>
