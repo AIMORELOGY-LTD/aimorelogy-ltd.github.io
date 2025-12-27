@@ -53,23 +53,28 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
   const seo = React.useMemo(() => {
     if (!localizedProduct) return null;
-    const metaTitle = localizedProduct.metaTitle
-      || t('products.common.metaTitle', { name: localizedProduct.name, tagline: localizedProduct.tagline });
+    const displayName = localizedProduct.id === 'cv184' ? 'CV184x' : localizedProduct.name;
+    const metaTitleRaw = localizedProduct.metaTitle
+      || t('products.common.metaTitle', { name: displayName, tagline: localizedProduct.tagline });
+    const metaTitle = localizedProduct.id === 'cv184'
+      ? metaTitleRaw.replace(/CV184\b/g, 'CV184x')
+      : metaTitleRaw;
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
-      name: `SOPHGO ${localizedProduct.name}`,
+      name: `SOPHGO ${displayName}`,
       description: metaDescription,
       brand: { '@type': 'Brand', name: 'SOPHGO' },
       manufacturer: 'SOPHGO',
-      sku: localizedProduct.name
+      sku: displayName
     };
     return { metaTitle, metaDescription, image, jsonLd };
   }, [localizedProduct, t]);
 
   const isCv184 = localizedProduct?.id === 'cv184';
+  const displayName = isCv184 ? 'CV184x' : localizedProduct?.name || '';
   const cv184DetailSections = localizedProduct?.detailSections || [];
   const cv184SectionMap = cv184DetailSections.reduce((acc, section) => {
     if (section.id) {
@@ -129,7 +134,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <ChevronRight size={12} />
               <span className="text-gray-500">{t('header.menu.coreComponents')}</span>
               <ChevronRight size={12} />
-              <span className="text-[#4f4398]">SOPHGO {localizedProduct.name}</span>
+              <span className="text-[#4f4398]">SOPHGO {displayName}</span>
            </div>
 
            <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -140,7 +145,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                   </div>
                   
                   <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter uppercase mb-4 leading-none">
-                    {localizedProduct.name}
+                    {displayName}
                   </h1>
                   
                   <h2 className="text-2xl text-[#4f4398] font-bold mb-6 leading-tight">
@@ -173,7 +178,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                           </div>
                           <div className="relative z-10 text-center">
                               <div className="text-gray-500 text-xs font-mono mb-1">SOPHGO</div>
-                              <div className="text-white text-4xl font-black tracking-widest">{localizedProduct.name}</div>
+                              <div className="text-white text-4xl font-black tracking-widest">{displayName}</div>
                           </div>
                           {/* Pins */}
                           <div className="absolute top-2 left-2 w-2 h-2 rounded-full bg-[#d4af37]"></div>
@@ -295,7 +300,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
       {isCv184 && cv184MediaMap['tpu-acceleration'] && (
         <section className="py-14 bg-white cv184-shell relative">
-          <div className="cv184-grid" aria-hidden="true"></div>
           <div className="container mx-auto px-6 relative">
             <div className="cv184-frame">
               <img
@@ -307,7 +311,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
             </div>
             <div className="mt-4 flex items-center justify-between text-[10px] uppercase tracking-[0.35em] text-gray-500">
               <span>TPU</span>
-              <span>{localizedProduct.name}</span>
+              <span>{displayName}</span>
             </div>
           </div>
         </section>
@@ -316,7 +320,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
       {/* 2. PRODUCT OVERVIEW (SEO Rich Text) */}
       {isCv184 ? (
         <section className="py-24 bg-white cv184-shell relative">
-          <div className="cv184-grid" aria-hidden="true"></div>
           <div className="container mx-auto px-6 relative">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-7">
@@ -422,10 +425,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
       {isCv184 && cv184DetailSections.length > 0 && (
         <section className="py-24 bg-white cv184-shell relative">
-          <div className="cv184-grid opacity-40" aria-hidden="true"></div>
           <div className="container mx-auto px-6 relative">
             <div className="max-w-3xl mb-16">
-              <div className="cv184-kicker mb-3">SOPHGO {localizedProduct.name}</div>
+              <div className="cv184-kicker mb-3">SOPHGO {displayName}</div>
               <h2 className="cv184-display text-4xl md:text-5xl font-black uppercase text-gray-900 mb-6 leading-none">
                 {localizedProduct.tagline}
               </h2>
@@ -717,14 +719,13 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
       {/* 3. SPECIFICATIONS TABLE */}
       <section className={`py-20 bg-white ${isCv184 ? 'cv184-shell relative' : ''}`}>
-        {isCv184 && <div className="cv184-grid opacity-30" aria-hidden="true"></div>}
         <div className="container mx-auto px-6 relative">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
             <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase">
               {t('products.common.technicalSpecs')}
             </h3>
             <div className="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold">
-              {localizedProduct.name}
+              {displayName}
             </div>
           </div>
           <div className="overflow-x-auto border-t border-gray-200">
@@ -781,10 +782,10 @@ const ProductDetail_SOPHGO: React.FC = () => {
       <section className="bg-[#111] py-16 text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-black text-white uppercase mb-4">
-            {t('products.common.ctaTitle', { name: localizedProduct.name })}
+            {t('products.common.ctaTitle', { name: displayName })}
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            {t('products.common.ctaText', { name: localizedProduct.name })}
+            {t('products.common.ctaText', { name: displayName })}
           </p>
           <Link
             to={withLang(lang, RoutePath.CONTACT)}
