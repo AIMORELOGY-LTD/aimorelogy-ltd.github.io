@@ -128,6 +128,8 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
   const cv184IoSpecs = isCv184 ? localizedProduct.specs.slice(5, 11) : [];
   const cv184EncodingSpecs = isCv184 ? localizedProduct.specs.slice(3, 5) : [];
+  const cv184HeroStats = cv184CoreSection?.stats ? cv184CoreSection.stats.slice(0, 3) : [];
+  const cv184SecondaryStats = cv184CoreSection?.stats ? cv184CoreSection.stats.slice(3) : [];
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
@@ -287,9 +289,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
             <div className="container mx-auto px-6">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-5">
-                  <div className="cv184-kicker mb-3">
-                    {t('products.common.productOverview')}
-                  </div>
+                  <div className="cv184-kicker mb-3">SOPHGO {displayName}</div>
                   <h3 className="cv184-display text-4xl md:text-5xl font-black uppercase text-gray-900 leading-tight">
                     {localizedProduct.tagline}
                   </h3>
@@ -308,6 +308,17 @@ const ProductDetail_SOPHGO: React.FC = () => {
                 </div>
               </div>
 
+              {cv184HeroStats.length > 0 && (
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {cv184HeroStats.map((stat, statIdx) => (
+                    <div key={statIdx} className="cv184-card bg-white p-6">
+                      <div className="text-xs uppercase tracking-[0.35em] text-gray-400">{stat.label}</div>
+                      <div className="mt-3 text-3xl font-black text-gray-900">{stat.value}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <div className="mt-12">
                 <div className="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold mb-5">
                   {t('products.common.keyHighlights')}
@@ -316,11 +327,11 @@ const ProductDetail_SOPHGO: React.FC = () => {
                   {localizedProduct.highlights.map((highlight, idx) => {
                     const Icon = highlightIcons[idx % highlightIcons.length];
                     return (
-                      <div key={idx} className="cv184-card bg-white p-5 flex items-start gap-4">
+                      <div key={idx} className="cv184-card bg-white p-6 flex items-start gap-4">
                         <div className="w-10 h-10 bg-gray-50 flex items-center justify-center">
                           <Icon size={20} className="text-[#4f4398]" />
                         </div>
-                        <div className="text-sm font-semibold text-gray-800 leading-relaxed">
+                        <div className="text-sm font-semibold text-gray-800 leading-relaxed text-left">
                           {highlight}
                         </div>
                       </div>
@@ -329,9 +340,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
                 </div>
               </div>
 
-              {cv184CoreSection?.stats && cv184CoreSection.stats.length > 0 && (
+              {cv184SecondaryStats.length > 0 && (
                 <div className="mt-14 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
-                  {cv184CoreSection.stats.map((stat, statIdx) => (
+                  {cv184SecondaryStats.map((stat, statIdx) => (
                     <div key={statIdx} className="cv184-card bg-white p-4">
                       <div className="text-xs uppercase tracking-widest text-gray-500">{stat.label}</div>
                       <div className="mt-2 text-xl font-black text-gray-900">{stat.value}</div>
@@ -345,11 +356,13 @@ const ProductDetail_SOPHGO: React.FC = () => {
           {localizedProduct.detailedFeatures && localizedProduct.detailedFeatures.length > 0 && (
             <section className="py-20 bg-white cv184-shell">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
                   {localizedProduct.detailedFeatures.map((feat, idx) => {
                     const Icon = highlightIcons[idx % highlightIcons.length];
+                    const isWide = idx === 0 || idx === 3;
+                    const colSpan = isWide ? 'lg:col-span-4' : 'lg:col-span-2';
                     return (
-                      <div key={idx} className="cv184-card bg-white p-6">
+                      <div key={idx} className={`cv184-card bg-white p-6 ${colSpan}`}>
                         <div className="w-12 h-12 bg-gray-50 flex items-center justify-center mb-5">
                           <Icon size={22} className="text-[#4f4398]" />
                         </div>
@@ -368,7 +381,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                   <div className="lg:col-span-5">
-                    <div className="cv184-kicker mb-3">{cv184TpuSection.title}</div>
+                    <div className="cv184-kicker mb-3">INTELLIGENCE LAYER</div>
                     <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">
                       {cv184TpuSection.title}
                     </h3>
@@ -396,7 +409,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                     )}
                   </div>
                   <div className="lg:col-span-7">
-                    <div className="cv184-card bg-gray-50/80 p-6">
+                    <div className="cv184-card bg-gray-50/80 p-6 rounded-3xl">
                       <img
                         src={cv184MediaMap['tpu-acceleration']?.src}
                         alt={cv184MediaMap['tpu-acceleration']?.alt}
@@ -415,7 +428,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                   <div className="lg:col-span-7 order-2 lg:order-1">
-                    <div className="cv184-card bg-gray-50/80 p-6">
+                    <div className="cv184-card bg-gray-50/80 p-6 rounded-3xl">
                       <img
                         src={cv184MediaMap['isp-v4']?.src}
                         alt={cv184MediaMap['isp-v4']?.alt}
@@ -425,7 +438,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                     </div>
                   </div>
                   <div className="lg:col-span-5 order-1 lg:order-2">
-                    <div className="cv184-kicker mb-3">{cv184IspSection.title}</div>
+                    <div className="cv184-kicker mb-3">IMAGING LAYER</div>
                     <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">
                       {cv184IspSection.title}
                     </h3>
@@ -459,7 +472,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                   <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">{cv184CoreSection.title}</div>
+                    <div className="cv184-kicker mb-3">SYSTEM ARCHITECTURE</div>
                     <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">
                       {cv184CoreSection.title}
                     </h3>
@@ -478,7 +491,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-10 cv184-card bg-gray-50/80 p-6">
+                <div className="mt-10 cv184-card bg-gray-50/80 p-6 rounded-3xl">
                   <img src="/CV/CV184-ARCH.svg" alt="CV184x architecture diagram" className="w-full h-auto" loading="lazy" />
                 </div>
               </div>
@@ -490,7 +503,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                   <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">{cv184OpenclipSection.title}</div>
+                    <div className="cv184-kicker mb-3">MULTIMODAL STACK</div>
                     <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184OpenclipSection.title}</h3>
                     {cv184OpenclipSection.description && (
                       <p className="text-gray-600 leading-relaxed">{cv184OpenclipSection.description}</p>
@@ -517,7 +530,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                   <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">{cv184EncodingSection.title}</div>
+                    <div className="cv184-kicker mb-3">VIDEO PIPELINE</div>
                     <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184EncodingSection.title}</h3>
                     {cv184EncodingSection.description && (
                       <p className="text-gray-600 leading-relaxed">{cv184EncodingSection.description}</p>
@@ -555,7 +568,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                   <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">{cv184IoSection.title}</div>
+                    <div className="cv184-kicker mb-3">I/O ECOSYSTEM</div>
                     <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184IoSection.title}</h3>
                     {cv184IoSection.description && (
                       <p className="text-gray-600 leading-relaxed">{cv184IoSection.description}</p>
@@ -603,6 +616,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
             <section className="py-20 bg-white cv184-shell">
               <div className="container mx-auto px-6">
                 <div className="space-y-6">
+                  <div className="cv184-kicker">LINEUP MATRIX</div>
                   <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184VariantSection.title}</h3>
                   {cv184VariantSection.description && (
                     <p className="text-gray-600 leading-relaxed max-w-3xl">{cv184VariantSection.description}</p>
@@ -643,6 +657,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
             <section className="py-20 bg-white cv184-shell">
               <div className="container mx-auto px-6">
                 <div className="space-y-6">
+                  <div className="cv184-kicker">SDK + COMPATIBILITY</div>
                   <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184SdkSection.title}</h3>
                   {cv184SdkSection.bullets && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
