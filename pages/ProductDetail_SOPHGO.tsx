@@ -130,6 +130,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
   const cv184EncodingSpecs = isCv184 ? localizedProduct.specs.slice(3, 5) : [];
   const cv184HeroStats = cv184CoreSection?.stats ? cv184CoreSection.stats.slice(0, 3) : [];
   const cv184SecondaryStats = cv184CoreSection?.stats ? cv184CoreSection.stats.slice(3) : [];
+  const cv184IntroText = isCv184 ? (localizedProduct.longDescription || []).slice(0, 2) : [];
+  const cv184ExtraText = isCv184 ? (localizedProduct.longDescription || []).slice(2) : [];
+  const cv184FeatureCards = isCv184 ? (localizedProduct.detailedFeatures || []) : [];
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
@@ -245,14 +248,8 @@ const ProductDetail_SOPHGO: React.FC = () => {
             flex-shrink: 0;
           }
 
-          .cv184-shell p,
-          .cv184-shell li {
-            text-align: justify;
-            text-justify: inter-word;
-          }
-
           .cv184-shell .cv184-card {
-            border: 1px solid #eef0f5;
+            border: 1px solid #e6e8f0;
             transition: all 0.3s ease;
           }
 
@@ -264,9 +261,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
       )}
 
       {isCv184 && cv184MediaMap['tpu-acceleration'] && (
-        <section className="py-14 bg-white cv184-shell relative">
-          <div className="container mx-auto px-6 relative">
-            <div className="rounded-3xl bg-slate-50/80 p-6">
+        <section className="py-16 bg-white cv184-shell">
+          <div className="container mx-auto px-6">
+            <div className="cv184-card rounded-sm bg-gray-50/70 overflow-hidden">
               <img
                 src={cv184MediaMap['tpu-acceleration'].src}
                 alt={cv184MediaMap['tpu-acceleration'].alt}
@@ -287,65 +284,24 @@ const ProductDetail_SOPHGO: React.FC = () => {
         <>
           <section className="py-24 bg-white cv184-shell">
             <div className="container mx-auto px-6">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div className="lg:col-span-5">
-                  <div className="cv184-kicker mb-3">SOPHGO {displayName}</div>
-                  <h3 className="cv184-display text-4xl md:text-5xl font-black uppercase text-gray-900 leading-tight">
-                    {localizedProduct.tagline}
-                  </h3>
-                  <div className="mt-6 text-xs uppercase tracking-[0.35em] text-gray-400">
-                    {t('products.common.series', { series: localizedProduct.series })}
-                  </div>
-                </div>
-                <div className="lg:col-span-7 space-y-6 text-gray-600 text-lg leading-relaxed">
-                  {localizedProduct.longDescription && localizedProduct.longDescription.length > 0 ? (
-                    localizedProduct.longDescription.map((para, idx) => (
-                      <p key={idx}>{para}</p>
-                    ))
-                  ) : (
-                    <p>{localizedProduct.description}</p>
-                  )}
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="cv184-kicker mb-4">{t('products.common.productOverview')}</div>
+                <h3 className="cv184-display text-4xl md:text-5xl font-black uppercase text-gray-900 leading-tight">
+                  {localizedProduct.tagline}
+                </h3>
+                <div className="mt-6 space-y-5 text-gray-600 text-lg leading-relaxed">
+                  {cv184IntroText.map((para, idx) => (
+                    <p key={idx}>{para}</p>
+                  ))}
                 </div>
               </div>
 
               {cv184HeroStats.length > 0 && (
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
                   {cv184HeroStats.map((stat, statIdx) => (
-                    <div key={statIdx} className="cv184-card bg-white p-6">
-                      <div className="text-xs uppercase tracking-[0.35em] text-gray-400">{stat.label}</div>
-                      <div className="mt-3 text-3xl font-black text-gray-900">{stat.value}</div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              <div className="mt-12">
-                <div className="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold mb-5">
-                  {t('products.common.keyHighlights')}
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {localizedProduct.highlights.map((highlight, idx) => {
-                    const Icon = highlightIcons[idx % highlightIcons.length];
-                    return (
-                      <div key={idx} className="cv184-card bg-white p-6 flex items-start gap-4">
-                        <div className="w-10 h-10 bg-gray-50 flex items-center justify-center">
-                          <Icon size={20} className="text-[#4f4398]" />
-                        </div>
-                        <div className="text-sm font-semibold text-gray-800 leading-relaxed text-left">
-                          {highlight}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {cv184SecondaryStats.length > 0 && (
-                <div className="mt-14 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
-                  {cv184SecondaryStats.map((stat, statIdx) => (
-                    <div key={statIdx} className="cv184-card bg-white p-4">
-                      <div className="text-xs uppercase tracking-widest text-gray-500">{stat.label}</div>
-                      <div className="mt-2 text-xl font-black text-gray-900">{stat.value}</div>
+                    <div key={statIdx} className="cv184-card rounded-sm bg-white px-6 py-8 text-center">
+                      <div className="text-[10px] uppercase tracking-[0.35em] text-gray-400 mb-3">{stat.label}</div>
+                      <div className="text-3xl md:text-4xl font-black text-gray-900">{stat.value}</div>
                     </div>
                   ))}
                 </div>
@@ -353,70 +309,68 @@ const ProductDetail_SOPHGO: React.FC = () => {
             </div>
           </section>
 
-          {localizedProduct.detailedFeatures && localizedProduct.detailedFeatures.length > 0 && (
-            <section className="py-20 bg-white cv184-shell">
-              <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-                  {localizedProduct.detailedFeatures.map((feat, idx) => {
+          <section className="py-24 bg-white cv184-shell">
+            <div className="container mx-auto px-6">
+              {cv184ExtraText.length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-600 text-base leading-relaxed">
+                  {cv184ExtraText.map((para, idx) => (
+                    <p key={idx}>{para}</p>
+                  ))}
+                </div>
+              )}
+
+              {cv184FeatureCards.length > 0 && (
+                <div className={`${cv184ExtraText.length > 0 ? 'mt-16' : 'mt-6'} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14`}>
+                  {cv184FeatureCards.map((feat, idx) => {
                     const Icon = highlightIcons[idx % highlightIcons.length];
-                    const isWide = idx === 0 || idx === 3;
-                    const colSpan = isWide ? 'lg:col-span-4' : 'lg:col-span-2';
                     return (
-                      <div key={idx} className={`cv184-card bg-white p-6 ${colSpan}`}>
-                        <div className="w-12 h-12 bg-gray-50 flex items-center justify-center mb-5">
-                          <Icon size={22} className="text-[#4f4398]" />
+                      <div key={idx}>
+                        <div className="w-10 h-10 mb-5 flex items-center justify-center border border-gray-100 text-[#4f4398]">
+                          <Icon size={18} />
                         </div>
-                        <h4 className="font-bold text-gray-900 uppercase mb-3 text-sm">{feat.title}</h4>
-                        <p className="text-gray-600 text-xs leading-relaxed">{feat.description}</p>
+                        <h4 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-900">{feat.title}</h4>
+                        {feat.description && (
+                          <p className="text-sm text-gray-500 leading-relaxed">{feat.description}</p>
+                        )}
                       </div>
                     );
                   })}
                 </div>
-              </div>
-            </section>
-          )}
+              )}
+            </div>
+          </section>
 
           {cv184TpuSection && (
-            <section className="py-20 bg-white cv184-shell">
+            <section className="py-24 bg-white cv184-shell">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                   <div className="lg:col-span-5">
-                    <div className="cv184-kicker mb-3">INTELLIGENCE LAYER</div>
-                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">
-                      {cv184TpuSection.title}
-                    </h3>
+                    <div className="cv184-kicker mb-4">{cv184TpuSection.title}</div>
+                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184TpuSection.title}</h3>
                     {cv184TpuSection.description && (
-                      <p className="text-gray-600 leading-relaxed">{cv184TpuSection.description}</p>
+                      <p className="mt-6 text-gray-500 text-lg leading-relaxed">{cv184TpuSection.description}</p>
                     )}
+                  </div>
+                  <div className="lg:col-span-7">
                     {cv184TpuSection.stats && (
-                      <div className="mt-6 space-y-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {cv184TpuSection.stats.map((stat, statIdx) => (
-                          <div key={statIdx} className="flex items-center justify-between border-b border-slate-100 pb-2 text-sm text-gray-600">
-                            <span className="text-xs uppercase tracking-widest text-gray-400">{stat.label}</span>
-                            <span className="text-gray-900 font-semibold">{stat.value}</span>
+                          <div key={statIdx} className="cv184-card rounded-sm bg-white p-5">
+                            <div className="text-[10px] uppercase tracking-[0.35em] text-gray-400 mb-2">{stat.label}</div>
+                            <div className="text-lg font-black text-gray-900">{stat.value}</div>
                           </div>
                         ))}
                       </div>
                     )}
                     {cv184TpuSection.bullets && (
-                      <ul className="mt-6 space-y-3">
+                      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {cv184TpuSection.bullets.map((bullet, bulletIdx) => (
-                          <li key={bulletIdx} className="cv184-bullet text-sm text-gray-700 leading-relaxed">
-                            <span>{bullet}</span>
-                          </li>
+                          <div key={bulletIdx} className="cv184-card rounded-sm bg-white p-5">
+                            <div className="text-sm text-gray-700 leading-relaxed">{bullet}</div>
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     )}
-                  </div>
-                  <div className="lg:col-span-7">
-                    <div className="cv184-card bg-gray-50/80 p-6 rounded-3xl">
-                      <img
-                        src={cv184MediaMap['tpu-acceleration']?.src}
-                        alt={cv184MediaMap['tpu-acceleration']?.alt}
-                        className="w-full h-auto object-cover"
-                        loading="lazy"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
@@ -424,11 +378,11 @@ const ProductDetail_SOPHGO: React.FC = () => {
           )}
 
           {cv184IspSection && (
-            <section className="py-20 bg-white cv184-shell">
+            <section className="py-24 bg-white cv184-shell">
               <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                  <div className="lg:col-span-7 order-2 lg:order-1">
-                    <div className="cv184-card bg-gray-50/80 p-6 rounded-3xl">
+                  <div className="lg:col-span-5">
+                    <div className="cv184-card rounded-sm bg-gray-50 p-4">
                       <img
                         src={cv184MediaMap['isp-v4']?.src}
                         alt={cv184MediaMap['isp-v4']?.alt}
@@ -437,25 +391,27 @@ const ProductDetail_SOPHGO: React.FC = () => {
                       />
                     </div>
                   </div>
-                  <div className="lg:col-span-5 order-1 lg:order-2">
-                    <div className="cv184-kicker mb-3">IMAGING LAYER</div>
-                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">
-                      {cv184IspSection.title}
-                    </h3>
+                  <div className="lg:col-span-7">
+                    <div className="cv184-kicker mb-4">{cv184IspSection.title}</div>
+                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184IspSection.title}</h3>
                     {cv184IspSection.description && (
-                      <p className="text-gray-600 leading-relaxed">{cv184IspSection.description}</p>
+                      <p className="mt-6 text-gray-500 text-lg leading-relaxed">{cv184IspSection.description}</p>
                     )}
                     {cv184IspSection.stats && (
-                      <div className="mt-5 flex flex-wrap gap-4 text-xs uppercase tracking-widest text-gray-500">
+                      <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
                         {cv184IspSection.stats.map((stat, statIdx) => (
-                          <span key={statIdx} className="border-b border-slate-100 pb-1">{stat.label}: {stat.value}</span>
+                          <div key={statIdx} className="cv184-card rounded-sm bg-white p-4">
+                            <div className="text-[10px] uppercase tracking-[0.35em] text-gray-400 mb-2">{stat.label}</div>
+                            <div className="text-sm font-black text-gray-900">{stat.value}</div>
+                          </div>
                         ))}
                       </div>
                     )}
                     {cv184IspSection.bullets && (
-                      <ul className="mt-6 space-y-3">
+                      <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
                         {cv184IspSection.bullets.map((bullet, bulletIdx) => (
-                          <li key={bulletIdx} className="cv184-bullet text-sm text-gray-700 leading-relaxed">
+                          <li key={bulletIdx} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4f4398] flex-shrink-0" />
                             <span>{bullet}</span>
                           </li>
                         ))}
@@ -468,183 +424,91 @@ const ProductDetail_SOPHGO: React.FC = () => {
           )}
 
           {cv184CoreSection && (
-            <section className="py-20 bg-white cv184-shell">
+            <section className="py-24 bg-white cv184-shell">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                  <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">SYSTEM ARCHITECTURE</div>
-                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">
-                      {cv184CoreSection.title}
-                    </h3>
-                    {cv184CoreSection.description && (
-                      <p className="text-gray-600 leading-relaxed">{cv184CoreSection.description}</p>
-                    )}
-                  </div>
-                  <div className="lg:col-span-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      {cv184CoreSection.stats?.map((stat, statIdx) => (
-                        <div key={statIdx} className="cv184-card bg-white p-4">
-                          <div className="text-xs uppercase tracking-widest text-gray-500">{stat.label}</div>
-                          <div className="mt-2 text-xl font-black text-gray-900">{stat.value}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                <div className="max-w-3xl mx-auto text-center mb-12">
+                  <div className="cv184-kicker mb-4">{cv184CoreSection.title}</div>
+                  <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184CoreSection.title}</h3>
+                  {cv184CoreSection.description && (
+                    <p className="mt-6 text-gray-500 text-lg leading-relaxed">{cv184CoreSection.description}</p>
+                  )}
                 </div>
-                <div className="mt-10 cv184-card bg-gray-50/80 p-6 rounded-3xl">
+                <div className="cv184-card rounded-sm bg-gray-50 p-6">
                   <img src="/CV/CV184-ARCH.svg" alt="CV184x architecture diagram" className="w-full h-auto" loading="lazy" />
                 </div>
-              </div>
-            </section>
-          )}
-
-          {cv184OpenclipSection && (
-            <section className="py-20 bg-white cv184-shell">
-              <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                  <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">MULTIMODAL STACK</div>
-                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184OpenclipSection.title}</h3>
-                    {cv184OpenclipSection.description && (
-                      <p className="text-gray-600 leading-relaxed">{cv184OpenclipSection.description}</p>
-                    )}
-                  </div>
-                  <div className="lg:col-span-8">
-                    {cv184OpenclipSection.bullets && (
-                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {cv184OpenclipSection.bullets.map((bullet, bulletIdx) => (
-                          <li key={bulletIdx} className="cv184-bullet text-sm text-gray-700 leading-relaxed">
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-
-          {cv184EncodingSection && (
-            <section className="py-20 bg-white cv184-shell">
-              <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                  <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">VIDEO PIPELINE</div>
-                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184EncodingSection.title}</h3>
-                    {cv184EncodingSection.description && (
-                      <p className="text-gray-600 leading-relaxed">{cv184EncodingSection.description}</p>
-                    )}
-                  </div>
-                  <div className="lg:col-span-8 space-y-6">
-                    {cv184EncodingSpecs.length > 0 && (
-                      <div className="divide-y divide-slate-100">
-                        {cv184EncodingSpecs.map((spec, idx) => (
-                          <div key={idx} className="py-4">
-                            <div className="text-xs uppercase tracking-widest text-gray-500">{spec.category}</div>
-                            <div className="text-sm font-semibold text-gray-900 mt-2">{spec.key}</div>
-                            <div className="text-xs text-gray-600 mt-2">{spec.value}</div>
-                          </div>
-                        ))}
+                {cv184SecondaryStats.length > 0 && (
+                  <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
+                    {cv184SecondaryStats.map((stat, statIdx) => (
+                      <div key={statIdx} className="cv184-card rounded-sm bg-white p-4">
+                        <div className="text-[10px] uppercase tracking-[0.35em] text-gray-400">{stat.label}</div>
+                        <div className="mt-2 text-lg font-black text-gray-900">{stat.value}</div>
                       </div>
-                    )}
-                    {cv184EncodingSection.bullets && (
-                      <ul className="space-y-4">
-                        {cv184EncodingSection.bullets.map((bullet, bulletIdx) => (
-                          <li key={bulletIdx} className="cv184-bullet text-sm text-gray-700 leading-relaxed">
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    ))}
                   </div>
-                </div>
+                )}
               </div>
             </section>
           )}
 
-          {cv184IoSection && (
-            <section className="py-20 bg-white cv184-shell">
+          {(cv184OpenclipSection || cv184EncodingSection || cv184IoSection) && (
+            <section className="py-24 bg-white cv184-shell">
               <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                  <div className="lg:col-span-4">
-                    <div className="cv184-kicker mb-3">I/O ECOSYSTEM</div>
-                    <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900 mb-4">{cv184IoSection.title}</h3>
-                    {cv184IoSection.description && (
-                      <p className="text-gray-600 leading-relaxed">{cv184IoSection.description}</p>
-                    )}
-                  </div>
-                  <div className="lg:col-span-8 space-y-6">
-                    {cv184IoSection.bullets && (
-                      <ul className="space-y-4">
-                        {cv184IoSection.bullets.map((bullet, bulletIdx) => (
-                          <li key={bulletIdx} className="cv184-bullet text-sm text-gray-700 leading-relaxed">
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {cv184IoSpecs.length > 0 && (
-                      <div className="overflow-x-auto">
-                        <table className="w-full text-left border-collapse">
-                          <thead>
-                            <tr className="border-b border-slate-100">
-                              <th className="py-3 text-xs font-bold uppercase tracking-wider text-gray-500">{t('products.common.specCategory')}</th>
-                              <th className="py-3 text-xs font-bold uppercase tracking-wider text-gray-500">{t('products.common.specParameter')}</th>
-                              <th className="py-3 text-xs font-bold uppercase tracking-wider text-gray-500">{t('products.common.specValue')}</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-slate-100">
-                            {cv184IoSpecs.map((spec, idx) => (
-                              <tr key={idx} className="hover:bg-slate-50/60 transition-colors">
-                                <td className="py-3 text-xs font-bold text-[#4f4398] uppercase">{spec.category}</td>
-                                <td className="py-3 text-sm font-medium text-gray-900">{spec.key}</td>
-                                <td className="py-3 text-sm text-gray-600">{spec.value}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    )}
-                  </div>
+                <div className="max-w-3xl mx-auto text-center mb-16">
+                  <div className="cv184-kicker mb-4">{t('products.common.technicalSpecs')}</div>
+                  <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">
+                    {t('products.common.technicalSpecs')}
+                  </h3>
                 </div>
-              </div>
-            </section>
-          )}
-
-          {cv184VariantSection && (
-            <section className="py-20 bg-white cv184-shell">
-              <div className="container mx-auto px-6">
-                <div className="space-y-6">
-                  <div className="cv184-kicker">LINEUP MATRIX</div>
-                  <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184VariantSection.title}</h3>
-                  {cv184VariantSection.description && (
-                    <p className="text-gray-600 leading-relaxed max-w-3xl">{cv184VariantSection.description}</p>
-                  )}
-                  {cv184VariantSection.table && (
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left border-collapse">
-                        <thead>
-                          <tr className="border-b border-slate-100">
-                            {cv184VariantSection.table.headers.map((header, headerIdx) => (
-                              <th key={headerIdx} className="py-3 text-xs font-bold uppercase tracking-wider text-gray-500">
-                                {header}
-                              </th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100">
-                          {cv184VariantSection.table.rows.map((row, rowIdx) => (
-                            <tr key={rowIdx} className="hover:bg-slate-50/60 transition-colors">
-                              {row.map((cell, cellIdx) => (
-                                <td key={cellIdx} className="py-3 text-sm text-gray-700">{cell}</td>
-                              ))}
-                            </tr>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {cv184OpenclipSection && (
+                    <div className="cv184-card rounded-sm bg-white p-8 flex flex-col gap-6">
+                      <div className="cv184-kicker">{cv184OpenclipSection.title}</div>
+                      <h4 className="text-xl font-black uppercase text-gray-900">{cv184OpenclipSection.title}</h4>
+                      {cv184OpenclipSection.description && (
+                        <p className="text-sm text-gray-600 leading-relaxed">{cv184OpenclipSection.description}</p>
+                      )}
+                      {cv184OpenclipSection.bullets && (
+                        <ul className="space-y-3">
+                          {cv184OpenclipSection.bullets.map((bullet, idx) => (
+                            <li key={idx} className="cv184-bullet text-sm text-gray-700 leading-relaxed"><span>{bullet}</span></li>
                           ))}
-                        </tbody>
-                      </table>
-                      {cv184VariantSection.table.note && (
-                        <p className="text-xs text-gray-500 mt-3">{cv184VariantSection.table.note}</p>
+                        </ul>
+                      )}
+                    </div>
+                  )}
+                  {cv184EncodingSection && (
+                    <div className="cv184-card rounded-sm bg-white p-8 flex flex-col gap-6">
+                      <div className="cv184-kicker">{cv184EncodingSection.title}</div>
+                      <h4 className="text-xl font-black uppercase text-gray-900">{cv184EncodingSection.title}</h4>
+                      {cv184EncodingSection.description && (
+                        <p className="text-sm text-gray-600 leading-relaxed">{cv184EncodingSection.description}</p>
+                      )}
+                      {cv184EncodingSpecs.length > 0 && (
+                        <div className="space-y-4 text-sm text-gray-600">
+                          {cv184EncodingSpecs.map((spec, idx) => (
+                            <div key={idx} className="border-t border-gray-100 pt-4 first:border-t-0 first:pt-0">
+                              <div className="text-[10px] uppercase tracking-[0.35em] text-gray-400">{spec.category}</div>
+                              <div className="text-sm font-semibold text-gray-900">{spec.key}</div>
+                              <div className="text-xs text-gray-500">{spec.value}</div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {cv184IoSection && (
+                    <div className="cv184-card rounded-sm bg-white p-8 flex flex-col gap-6">
+                      <div className="cv184-kicker">{cv184IoSection.title}</div>
+                      <h4 className="text-xl font-black uppercase text-gray-900">{cv184IoSection.title}</h4>
+                      {cv184IoSection.description && (
+                        <p className="text-sm text-gray-600 leading-relaxed">{cv184IoSection.description}</p>
+                      )}
+                      {cv184IoSection.bullets && (
+                        <ul className="space-y-3">
+                          {cv184IoSection.bullets.map((bullet, idx) => (
+                            <li key={idx} className="cv184-bullet text-sm text-gray-700 leading-relaxed"><span>{bullet}</span></li>
+                          ))}
+                        </ul>
                       )}
                     </div>
                   )}
@@ -653,22 +517,62 @@ const ProductDetail_SOPHGO: React.FC = () => {
             </section>
           )}
 
-          {cv184SdkSection && (
-            <section className="py-20 bg-white cv184-shell">
+          {cv184VariantSection && (
+            <section className="py-24 bg-white cv184-shell">
               <div className="container mx-auto px-6">
-                <div className="space-y-6">
-                  <div className="cv184-kicker">SDK + COMPATIBILITY</div>
-                  <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184SdkSection.title}</h3>
-                  {cv184SdkSection.bullets && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {cv184SdkSection.bullets.map((bullet, bulletIdx) => (
-                        <div key={bulletIdx} className="cv184-bullet text-sm text-gray-700 leading-relaxed">
-                          <span>{bullet}</span>
-                        </div>
-                      ))}
-                    </div>
+                <div className="max-w-3xl mx-auto text-center mb-16">
+                  <div className="cv184-kicker mb-4">{cv184VariantSection.title}</div>
+                  <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184VariantSection.title}</h3>
+                  {cv184VariantSection.description && (
+                    <p className="mt-6 text-gray-500 text-lg leading-relaxed">{cv184VariantSection.description}</p>
                   )}
                 </div>
+                {cv184VariantSection.table && (
+                  <div className="overflow-x-auto -mx-6 px-6">
+                    <table className="w-full border-separate border-spacing-0 tabular-nums">
+                      <thead>
+                        <tr className="bg-gray-50">
+                          {cv184VariantSection.table.headers.map((header, headerIdx) => (
+                            <th key={headerIdx} className="py-4 px-6 text-[11px] font-bold uppercase tracking-widest text-gray-500 border-b border-gray-200">{header}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {cv184VariantSection.table.rows.map((row, rowIdx) => (
+                          <tr key={rowIdx} className="hover:bg-gray-50/60 transition-colors">
+                            {row.map((cell, cellIdx) => (
+                              <td key={cellIdx} className="py-4 px-6 text-sm text-gray-700">{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                    {cv184VariantSection.table.note && (
+                      <p className="text-xs text-gray-500 mt-3">{cv184VariantSection.table.note}</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {cv184SdkSection && (
+            <section className="py-24 bg-white cv184-shell">
+              <div className="container mx-auto px-6">
+                <div className="max-w-3xl mx-auto text-center mb-16">
+                  <div className="cv184-kicker mb-4">{cv184SdkSection.title}</div>
+                  <h3 className="cv184-display text-3xl md:text-4xl font-black uppercase text-gray-900">{cv184SdkSection.title}</h3>
+                </div>
+                {cv184SdkSection.bullets && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {cv184SdkSection.bullets.map((bullet, bulletIdx) => (
+                      <div key={bulletIdx} className="cv184-card rounded-sm bg-white p-6 flex items-start gap-3">
+                        <CheckCircle size={18} className="text-[#4f4398] mt-1" />
+                        <div className="text-sm text-gray-700 leading-relaxed">{bullet}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </section>
           )}
@@ -721,7 +625,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
           </div>
         </section>
       )}
-
 
       {/* 3. SPECIFICATIONS TABLE */}
       <section className={`py-20 bg-white ${isCv184 ? 'cv184-shell relative' : ''}`}>
