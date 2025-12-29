@@ -138,67 +138,68 @@ const ProductDetail_SOPHGO: React.FC = () => {
         `}</style>
       )}
 
-      {isCv184 ? (
-        <div className="sophgo-detail bg-white text-gray-900">
+      <div className="sophgo-detail bg-white text-gray-900">
+        
+        {/* 1. GLOBAL SOPHGO HERO SECTION */}
+        <section className="relative min-h-[75vh] flex items-center pt-24 overflow-hidden bg-white">
+          {/* Hero Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/CV/cvitek-banner.webp" 
+              className="w-full h-full object-cover grayscale opacity-60 mix-blend-multiply"
+              alt="Sophgo banner"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+          </div>
           
-          {/* 1. GLOBAL SOPHGO HERO SECTION */}
-          <section className="relative min-h-[70vh] flex items-center pt-20 overflow-hidden">
-            {/* Hero Background Image */}
-            <div className="absolute inset-0 z-0">
-              <img 
-                src="/CV/cvitek.webp" 
-                className="w-full h-full object-cover grayscale opacity-20"
-                alt="Sophgo background"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
-            </div>
-            
-            <div className="container mx-auto px-6 relative z-10">
-              <div className="max-w-4xl">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="bg-[#4f4398] text-white px-3 py-1 text-xs font-black uppercase tracking-widest">SOPHGO</div>
-                  <div className="text-gray-400 font-bold uppercase text-xs tracking-widest">Vision Computing</div>
-                </div>
-                <h1 className="text-6xl md:text-8xl font-black uppercase mb-6 tracking-tighter text-gray-900">
-                  {displayName}
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#4f4398] mb-8 leading-tight">
-                  {localizedProduct.tagline}
-                </h2>
-                <p className="text-lg text-gray-600 mb-10 max-w-2xl leading-relaxed">
-                  {localizedProduct.description}
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Link to={withLang(lang, RoutePath.CONTACT)} className="bg-[#4f4398] text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-[#3e3479] transition-all flex items-center gap-2">
-                    Request Quote <ArrowRight size={18} />
-                  </Link>
-                </div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="bg-[#4f4398] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em]">SOPHGO</div>
+                <div className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.2em]">{localizedProduct.series} Computing</div>
+              </div>
+              <h1 className="text-7xl md:text-9xl font-black uppercase mb-8 tracking-tighter text-gray-900 leading-[0.85]">
+                {displayName}
+              </h1>
+              <h2 className="text-2xl md:text-4xl font-bold text-[#4f4398] mb-10 leading-tight tracking-tight">
+                {localizedProduct.tagline}
+              </h2>
+              <p className="text-xl text-gray-600 mb-12 max-w-2xl leading-relaxed font-medium">
+                {localizedProduct.description}
+              </p>
+              <div className="flex flex-wrap gap-6">
+                <Link to={withLang(lang, RoutePath.CONTACT)} className="bg-[#4f4398] text-white px-12 py-5 font-black uppercase tracking-widest hover:bg-[#3e3479] transition-all flex items-center gap-3 shadow-xl shadow-purple-900/10">
+                  Get a Quote <ArrowRight size={20} />
+                </Link>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* 2. VERBATIM PRODUCT OVERVIEW */}
-          <section className="py-24 bg-white">
+        {isCv184 ? (
+          <>
+            {/* 2. VERBATIM PRODUCT OVERVIEW */}
+            <section className="py-32 bg-white border-b border-gray-100">
             <div className="container mx-auto px-6">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
                 <div className="lg:col-span-5">
-                  <h3 className="text-3xl font-black uppercase mb-8 tracking-tight border-b-4 border-[#4f4398] inline-block pb-2">
-                    Product Overview
+                  <h3 className="text-sm font-black uppercase tracking-[0.3em] text-[#4f4398] mb-10 flex items-center gap-4">
+                    <span className="w-12 h-px bg-[#4f4398]"></span> Product Overview
                   </h3>
-                  <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+                  <div className="space-y-8 text-gray-600 text-xl leading-relaxed">
                     {localizedProduct.longDescription.map((para, idx) => (
-                      <p key={idx}>{para}</p>
+                      <p key={idx} className="first-letter:text-4xl first-letter:font-black first-letter:text-[#4f4398] first-letter:mr-1">{para}</p>
                     ))}
                   </div>
                 </div>
                 <div className="lg:col-span-7">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 shadow-2xl">
                     {localizedProduct.detailedFeatures.map((feat, idx) => (
-                      <div key={idx} className="bg-gray-50 p-8 border border-gray-100 hover:border-[#4f4398] transition-colors h-full">
-                        <div className="text-[#4f4398] mb-4">
-                          <CheckCircle size={24} />
+                      <div key={idx} className="bg-white p-10 hover:bg-gray-50 transition-colors h-full">
+                        <div className="text-[#4f4398] mb-6">
+                          <CheckCircle size={28} strokeWidth={1.5} />
                         </div>
-                        <h4 className="font-black uppercase text-sm mb-3 tracking-wider">{feat.title}</h4>
+                        <h4 className="font-black uppercase text-base mb-4 tracking-tight text-gray-900">{feat.title}</h4>
                         <p className="text-sm text-gray-500 leading-relaxed">{feat.description}</p>
                       </div>
                     ))}
@@ -209,26 +210,28 @@ const ProductDetail_SOPHGO: React.FC = () => {
           </section>
 
           {/* 3. CORE ARCHITECTURE & DIAGRAM */}
-          <section className="py-24 bg-gray-50 border-y border-gray-100">
+          <section className="py-32 bg-gray-50 border-y border-gray-100">
             <div className="container mx-auto px-6">
-              <div className="text-center max-w-3xl mx-auto mb-16">
-                <h3 className="text-4xl font-black uppercase mb-6 tracking-tight">Core Architecture</h3>
-                <p className="text-gray-500 text-lg">Integrated Dual-Core ARM + RISC-V with proprietary AI acceleration and imaging engines.</p>
+              <div className="text-center max-w-4xl mx-auto mb-20">
+                <h3 className="text-5xl font-black uppercase mb-8 tracking-tighter text-gray-900">System Architecture</h3>
+                <p className="text-gray-500 text-xl font-medium leading-relaxed">Integrated Dual-Core ARM + RISC-V with proprietary AI acceleration and 4K imaging engines.</p>
               </div>
               
-              <div className="arch-diagram-container p-8 md:p-16 mb-16 rounded-sm shadow-sm flex justify-center bg-white">
+              <div className="arch-diagram-container p-12 md:p-20 mb-20 rounded-sm shadow-2xl flex justify-center bg-white border-0 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-20"></div>
                 <img 
                   src="/CV/CV184-ARCH.svg" 
                   alt="CV184x Architecture Diagram" 
-                  className="max-w-full h-auto"
+                  className="max-w-full h-auto relative z-10 scale-110"
                 />
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              {/* Redesigned Features under Diagram */}
+              <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 max-w-6xl mx-auto border-t border-gray-200 pt-16">
                 {localizedProduct.highlights.map((item, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="tech-mono text-[10px] font-bold text-gray-400 uppercase mb-2">Feature 0{idx+1}</div>
-                    <div className="font-bold text-xs uppercase tracking-wider text-gray-900 leading-tight">{item}</div>
+                  <div key={idx} className="flex items-center gap-4 group">
+                    <div className="w-2 h-2 bg-[#4f4398] rounded-full group-hover:scale-150 transition-transform"></div>
+                    <div className="font-black text-sm uppercase tracking-tight text-gray-900 border-b-2 border-transparent group-hover:border-[#4f4398] transition-all pb-1">{item}</div>
                   </div>
                 ))}
               </div>
@@ -402,46 +405,67 @@ const ProductDetail_SOPHGO: React.FC = () => {
             </div>
           </section>
 
-          {/* 9. TECHNICAL SPECIFICATIONS (Verbatim) */}
-          <section className="py-24 bg-white border-b border-gray-100">
+          {/* 9. TECHNICAL SPECIFICATIONS (Category-based Table) */}
+          <section className="py-32 bg-white border-b border-gray-100">
             <div className="container mx-auto px-6">
-              <div className="flex items-center gap-6 mb-16">
-                <h3 className="text-4xl font-black uppercase tracking-tight">Full Specifications</h3>
-                <div className="h-1 flex-grow bg-gray-100"></div>
+              <div className="flex flex-col md:flex-row items-baseline justify-between gap-6 mb-20">
+                <h3 className="text-6xl font-black uppercase tracking-tighter text-gray-900">Datasheet</h3>
+                <p className="text-gray-400 font-bold uppercase tracking-[0.3em] text-xs">Complete Technical Parameters</p>
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-2">
-                {localizedProduct.specs.map((spec, idx) => (
-                  <div key={idx} className="flex justify-between items-center py-4 border-b border-gray-50 px-4 group hover:bg-gray-50 transition-colors">
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-black text-[#4f4398] uppercase opacity-50 mb-1">{spec.category}</span>
-                      <span className="text-sm font-black uppercase tracking-tight text-gray-900">{spec.key}</span>
-                    </div>
-                    <span className="text-sm font-bold text-gray-500 text-right uppercase tracking-tighter">{spec.value}</span>
-                  </div>
-                ))}
+
+              <div className="border border-gray-200 shadow-sm overflow-hidden">
+                <table className="w-full text-left border-collapse">
+                  <tbody>
+                    {/* Iterate through categories */}
+                    {Array.from(new Set(localizedProduct.specs.map(s => s.category))).map((cat, catIdx) => (
+                      <React.Fragment key={catIdx}>
+                        <tr className="bg-gray-50 border-b border-gray-200">
+                          <td colSpan={2} className="py-6 px-8 text-xs font-black uppercase tracking-[0.4em] text-[#4f4398] bg-gray-50/50">
+                            {cat}
+                          </td>
+                        </tr>
+                        {localizedProduct.specs.filter(s => s.category === cat).map((spec, specIdx) => (
+                          <tr key={specIdx} className="border-b border-gray-100 last:border-b-0 hover:bg-slate-50 transition-colors">
+                            <td className="py-5 px-8 text-sm font-bold uppercase tracking-tight text-gray-400 w-1/3 border-r border-gray-100">
+                              {spec.key}
+                            </td>
+                            <td className="py-5 px-8 text-sm font-black text-gray-900 tracking-tight uppercase">
+                              {spec.value}
+                            </td>
+                          </tr>
+                        ))}
+                      </React.Fragment>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              
+              <div className="mt-12 flex justify-end">
+                 <p className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">
+                    © 2025 AIMORELOGY · SOPHGO CV184X SERIES · CONFIDENTIAL
+                 </p>
               </div>
             </div>
           </section>
 
           {/* 10. CTA */}
           <section className="py-32 bg-[#0a0a0a] text-center relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <img src="/CV/cvitek.webp" className="w-full h-full object-cover" alt="CTA bg" />
+            <div className="absolute inset-0 opacity-20">
+              <img src="/CV/cvitek-banner.webp" className="w-full h-full object-cover" alt="CTA bg" />
             </div>
             <div className="container mx-auto px-6 relative z-10">
               <h2 className="text-5xl md:text-7xl font-black text-white mb-12 uppercase tracking-tighter leading-none">
-                Start Building with <span className="text-[#4f4398]">CV184x</span>
+                Start Building with <span className="text-[#4f4398]">{displayName}</span>
               </h2>
               <Link
                 to={withLang(lang, RoutePath.CONTACT)}
-                className="inline-block bg-white text-gray-900 px-16 py-5 font-black uppercase tracking-[0.2em] hover:bg-[#4f4398] hover:text-white transition-all text-sm"
+                className="inline-block bg-white text-gray-900 px-16 py-5 font-black uppercase tracking-[0.2em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-2xl"
               >
                 Contact Sales
               </Link>
             </div>
           </section>
-
-        </div>
+        </>
       ) : (
         /* --- LEGACY LAYOUT FOR OTHER PRODUCTS --- */
         <section className="py-20 bg-white">
@@ -522,6 +546,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
           </div>
         </section>
       )}
+      </div>
     </div>
   );
 };
