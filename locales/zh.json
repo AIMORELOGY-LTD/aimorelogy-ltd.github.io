@@ -730,313 +730,249 @@
         "metaDescription": "SOPHGO CV186AH 提供 7.2 TOPS 视觉处理能力，支持 4K 多路分析、深度计算与 FPV/无人机 障碍物感知。"
       },
       "cv184": {
-        "metaTitle": "SOPHGO CV184x 边缘视觉 SoC | AIMORELOGY",
-        "metaDescription": "SOPHGO CV184x 双核视觉处理器，集成 ISP V4.0、自研 TPU 与 Intra4 编码，适用于 FPV/无人机 视觉、安防与多场景智能感知。",
-        "tagline": "CV184x 边缘视觉 SoC，ISP V4.0 + Intra4 编码",
-        "description": "双核 ARM + RISC-V 视觉 SoC，集成 ISP V4.0、自研 TPU 与 H.265/H.264/MJPEG 编码引擎。",
+        "metaTitle": "SOPHGO CV184x 边缘视觉 SoC - ISP V4.0、Intra4、TPU | AIMORELOGY",
+        "metaDescription": "SOPHGO CV184x 采用双核（A53+C906）、1.0~1.5 TOPS TPU、ISP V4.0（3DNR/DRC/PFR）与 Intra4 编码，并与 CV181 引脚兼容。",
+        "tagline": "双核视觉 SoC，集成 ISP V4.0 与 Intra4 编码",
+        "description": "新一代边缘视觉 SoC，集成 ISP V4.0、Intra4 编码与 OpenCLIP 支持。",
         "longDescription": [
-          "CV184x 系列面向民用消费、运营商与专业安防市场，双核 ARM Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz，CV1841C 为 1.0GHz/600MHz），自研 TPU 1.0~1.5 TOPS @ INT8，支持 BF16 混合精度。集成 DDR3 SiP（512Mb/1Gb/2Gb/4Gb），并具备快速启动与低功耗特性，适合紧凑型边缘设备。",
-          "自研 4K ISP V4.0 带来星光级降噪、低拖影、数字宽动态（DRC/HDR）、去雾与镜头畸变校正。MCTF 3DNR、锐化增强（EE）与消紫边（PFR）在低照与逆光下保持更清晰的细节与色彩。",
-          "适配 OpenCLIP 多模态大模型，支持万物检测、图文匹配（检索）、zero-shot 推理与场景微调。内置模型库覆盖人脸/人形/安全帽检测、手势识别、猫狗识别、车牌识别等场景，降低误报。",
-          "自研编码引擎支持 H.265/H.264/MJPEG，并提供 Intra4 小块编码与智能编码，在低码率下保留细节。最高支持 8MP@30FPS + 720P@30FPS（4:3/16:9），2 路 MIPI CSI 输入、1 路 MIPI DSI 输出，并提供 BT656/BT601/BT1120/8080 与 RGB/LVDS 等显示接口（因型号而异）。",
-          "CV184x 家族包含 CV1841C / CV1842C-P / CV1842H-P / CV1843H-P，QFN/BGA 封装，I/O 随型号不同。与 CV181 系列 PIN-TO-PIN 兼容，共享 SDK、ISP 设置与 TPU 开发环境与参考方案，迁移成本低。"
+          "CV184x 系列是面向消费、运营商与专业安防市场的高性能视觉处理器。它采用双核架构（ARM Cortex-A53 @ 1.1GHz + RISC-V C906 @ 800MHz），并配备自研 TPU，最高可达 1.5 TOPS（INT8），支持 BF16 混合精度。",
+          "CV184x 引入全新的 ISP V4.0 引擎，提供星光级 3DNR、数字宽动态（DRC）、去雾与消紫边（PFR）等全面画质增强。改进的 MCTF 算法显著降低运动拖影与空间噪声。",
+          "为提升存储与传输效率，芯片支持自研智能编码引擎，兼容 H.265/H.264/MJPEG。独有的 Intra4 模式在复杂运动场景下比标准编码拥有更高压缩率与更好的纹理保留。",
+          "CV184x 完全兼容 OpenCLIP 多模态模型，可实现通用目标检测、图文检索与 zero-shot 推理，并提供丰富的 turnkey 算法库，包括人脸检测、行人/车辆跟踪与安全帽检测等。",
+          "为无缝迁移而设计，CV184x 系列与 CV181 系列引脚兼容，共享 SDK、ISP 调参工具与深度学习环境。"
         ],
         "highlights": [
-          "双核 CPU：Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz）",
-          "自研 TPU：1.0~1.5 TOPS @ INT8，支持 BF16 混合精度",
-          "4K ISP V4.0：MCTF 3DNR、DRC/HDR、消紫边（PFR）、锐化增强（EE）、3A、去雾、畸变校正",
-          "自研编码 + Intra4：H.265/H.264/MJPEG，8MP@30FPS + 720P@30FPS",
-          "OpenCLIP 多模态：万物检测、图文检索、zero-shot 推理",
-          "集成 DDR3 SiP：512Mb / 1Gb / 2Gb / 4Gb 选项",
-          "2 路 MIPI CSI + 1 路 MIPI DSI；显示接口因型号而异",
-          "丰富外设：USB2.0、SD3.0、UART、PWM、GPIO、I2C、SPI、RTC",
-          "快速启动、低功耗与安全启动"
+          "双核：ARM A53（1.1GHz）+ RISC-V C906（800MHz）",
+          "TPU：1.0~1.5 TOPS @ INT8 / BF16 混合精度",
+          "ISP V4.0：3DNR、DRC、PFR、去雾、畸变校正",
+          "Intra4 编码：更高压缩率，更好的纹理保留",
+          "OpenCLIP 支持：zero-shot、图文检索",
+          "与 CV181 系列引脚兼容"
         ],
         "specs": [
           {
             "category": "处理器",
             "key": "CPU",
-            "value": "双核 ARM Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz；CV1841C 为 1.0GHz/600MHz）"
+            "value": "双核 ARM Cortex-A53 + RISC-V C906"
           },
           {
-            "category": "TPU",
-            "key": "性能",
-            "value": "1.0~1.5 TOPS @ INT8，支持 BF16 混合精度"
+            "category": "处理器",
+            "key": "频率",
+            "value": "最高 1.1GHz（A53）/ 800MHz（C906）"
           },
           {
-            "category": "ISP",
-            "key": "能力",
-            "value": "4K ISP V4.0：3DNR(MCTF)、DRC/HDR、PFR、EE、3A、去雾、畸变校正"
-          },
-          {
-            "category": "编码",
-            "key": "格式",
-            "value": "H.265/H.264/MJPEG，支持 Intra4 与智能编码"
-          },
-          {
-            "category": "编码",
-            "key": "规格",
-            "value": "最高 8MP@30FPS + 720P@30FPS（4:3/16:9）"
-          },
-          {
-            "category": "视频输入",
-            "key": "MIPI CSI",
-            "value": "2 路 MIPI CSI（lane 配置随型号不同）"
-          },
-          {
-            "category": "视频输出",
-            "key": "显示接口",
-            "value": "MIPI DSI（2L/4L）、BT656/BT601/BT1120/8080、RGB666/RGB888、LVDS（型号相关）"
+            "category": "AI",
+            "key": "TPU",
+            "value": "1.0 ~ 1.5 TOPS @ INT8 / BF16"
           },
           {
             "category": "内存",
-            "key": "DDR3 SiP",
-            "value": "512Mb / 1Gb / 2Gb / 4Gb（随型号）"
+            "key": "集成",
+            "value": "DDR3 512Mb / 1Gb / 2Gb / 4Gb"
+          },
+          {
+            "category": "视频",
+            "key": "ISP",
+            "value": "ISP V4.0（4K、3DNR、DRC、PFR）"
+          },
+          {
+            "category": "视频",
+            "key": "编码",
+            "value": "H.265/H.264/MJPEG + Intra4"
+          },
+          {
+            "category": "视频",
+            "key": "分辨率",
+            "value": "最高 8MP@30fps + 720P@30fps"
+          },
+          {
+            "category": "接口",
+            "key": "摄像头",
+            "value": "2x MIPI CSI（2L/4L/DVP）"
+          },
+          {
+            "category": "接口",
+            "key": "显示",
+            "value": "1x MIPI DSI（2L/4L），LVDS、RGB、BT.656/1120"
           },
           {
             "category": "外设",
-            "key": "接口",
-            "value": "USB2.0、SD3.0、UART、PWM、GPIO、I2C、SPI、RTC"
+            "key": "连接",
+            "value": "USB 2.0、SD 3.0、以太网（MAC PHY/RMII）"
           },
           {
-            "category": "以太网",
-            "key": "MAC/PHY",
-            "value": "10/100 MAC PHY；部分型号支持 RMII"
+            "category": "外设",
+            "key": "低速",
+            "value": "UART、PWM、GPIO、I2C、SPI、RTC"
           },
           {
-            "category": "音频",
-            "key": "I/O",
-            "value": "ADC / DAC / I2S"
-          },
-          {
-            "category": "安全",
-            "key": "启动",
-            "value": "安全启动"
+            "category": "系统",
+            "key": "特性",
+            "value": "快速启动、安全启动、低功耗"
           }
         ],
         "detailedFeatures": [
           {
-            "title": "4K ISP V4.0 影像引擎",
-            "description": "MCTF 3DNR、DRC/HDR、PFR、EE、3A、去雾与畸变校正，低照与逆光细节更清晰。"
+            "title": "ISP V4.0 引擎",
+            "description": "MCTF 3DNR、数字宽动态（DRC）与消紫边（PFR），低照与逆光成像更优秀。"
           },
           {
-            "title": "Intra4 智能编码",
-            "description": "小块编码在低码率下保留细节与纹理，减少预测误差。"
+            "title": "Intra4 编码",
+            "description": "优化的小块编码在复杂纹理中保留更多细节，并降低码率以提升存储效率。"
           },
           {
-            "title": "OpenCLIP 多模态 + 模型库",
-            "description": "支持图文检索、zero-shot 推理与场景微调，覆盖人脸/人形/安全帽/手势/猫狗/车牌识别。"
+            "title": "OpenCLIP 多模态",
+            "description": "支持图文匹配、zero-shot 推理与场景微调，适配多样 AI 应用。"
           },
           {
-            "title": "自研 TPU",
-            "description": "1.0~1.5 TOPS INT8 + BF16 混合精度，适配更复杂模型。"
+            "title": "高性能 TPU",
+            "description": "INT8 最高 1.5 TOPS，支持 BF16；在 ResNet50 与 YOLOv5s 基准上优于上一代。"
           },
           {
-            "title": "CV181 兼容",
-            "description": "PIN-TO-PIN 硬件兼容，共享 SDK/ISP/TPU 开发环境与参考方案。"
+            "title": "丰富算法库",
+            "description": "包含人脸/人形/车辆检测、安全帽识别、手势识别、婴儿哭声检测与语义分割。"
           },
           {
-            "title": "CV184x 变体",
-            "description": "QFN/BGA 与 512Mb/1Gb/2Gb/4Gb SiP 选择，I/O 随型号不同。"
+            "title": "平滑迁移",
+            "description": "硬件与 CV181 引脚兼容，共享 SDK 与工具链，降低升级成本。"
           }
         ],
         "detailSections": [
           {
-            "id": "core-architecture",
-            "title": "核心架构",
-            "description": "双核 ARM Cortex-A53 + RISC-V C906，自研 TPU 与 4K ISP V4.0，适配快速启动与低功耗边缘视觉。",
-            "stats": [
-              {
-                "label": "CPU",
-                "value": "双核 ARM Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz）"
-              },
-              {
-                "label": "TPU",
-                "value": "1.0~1.5 TOPS @ INT8，BF16 混合精度"
-              },
-              {
-                "label": "ISP",
-                "value": "自研 4K ISP V4.0"
-              },
-              {
-                "label": "编码",
-                "value": "H.265/H.264/MJPEG + Intra4"
-              },
-              {
-                "label": "最大视频",
-                "value": "8MP@30FPS + 720P@30FPS（4:3/16:9）"
-              },
-              {
-                "label": "内存",
-                "value": "DDR3 SiP 512Mb/1Gb/2Gb/4Gb"
-              }
-            ]
-          },
-          {
             "id": "tpu-acceleration",
-            "title": "TPU 边缘 AI 引擎",
-            "description": "自研 TPU 在 INT8 吞吐与 BF16 混合精度之间取得平衡，适配低功耗边缘模型。",
+            "title": "TPU 性能与基准",
+            "description": "自研 TPU 相比上一代带来显著提升，可支持 ResNet、YOLO、MobileNet 等复杂模型。",
             "stats": [
               {
-                "label": "性能",
-                "value": "1.0~1.5 TOPS @ INT8"
+                "label": "ResNet50 v2",
+                "value": "38.5 FPS"
               },
               {
-                "label": "精度",
-                "value": "BF16 混合精度"
+                "label": "YOLO v5s",
+                "value": "28.3 FPS"
               },
               {
-                "label": "模型",
-                "value": "OpenCLIP + 模型库"
+                "label": "MobileNet v2",
+                "value": "261.9 FPS"
               },
               {
-                "label": "场景",
-                "value": "检测、检索、zero-shot"
+                "label": "OpenCLIP",
+                "value": "4.07 FPS"
               }
             ],
             "bullets": [
-              "OpenCLIP 支持图文匹配、目标检测与场景微调。",
-              "内置模型覆盖人脸/人形/安全帽/手势/猫狗/车牌。",
-              "针对边缘部署优化，快速启动、低功耗。"
+              "基于 CV1842C-P（1.5 TOPS）测试。",
+              "ResNet50 v2：相比 CV181 提升 40%。",
+              "YOLO v5s：相比 CV181 提升 81%。",
+              "MobileNet v2：相比 CV181 提升 51%。",
+              "支持 BF16 混合精度，准确率更高。"
             ]
           },
           {
             "id": "isp-v4",
             "title": "ISP V4.0 影像管线",
-            "description": "自研 4K ISP V4.0 强化低照与宽动态表现，成像更清晰。",
-            "stats": [
-              {
-                "label": "管线",
-                "value": "4K ISP V4.0"
-              },
-              {
-                "label": "降噪",
-                "value": "MCTF 3DNR"
-              },
-              {
-                "label": "动态范围",
-                "value": "DRC/HDR"
-              },
-              {
-                "label": "清晰度",
-                "value": "PFR + EE"
-              }
-            ],
+            "description": "全新升级的成像引擎，强调降噪、动态范围与色彩准确性。",
             "bullets": [
-              "MCTF 3DNR 降低时域与空域噪声，拖影更少。",
-              "色噪消除减少低频色噪，边缘无溢色。",
-              "DRC/HDR 提升暗区亮度并避免高光过曝。",
-              "锐化增强扩展侦测频带，细节/大边缘可独立调优。",
-              "PFR 消紫边，尽量保留色彩与饱和度。",
-              "3A、去雾与畸变校正提升整体稳定性。"
+              "3DNR（MCTF）：降低运动拖影与时间噪声，0.1lux 低照表现更佳。",
+              "DRC（动态范围压缩）：提升暗部亮度且不过曝高光，逆光场景优于同类方案。",
+              "PFR（消紫边）：无色偏地去除边缘紫边。",
+              "边缘增强：基于频域的锐化区分细纹理与强边缘。",
+              "色噪抑制：抑制低频色噪与边缘溢色。"
             ]
           },
           {
-            "id": "intra4-encoding",
-            "title": "Intra4 智能编码",
-            "description": "自研编码引擎支持 H.265/H.264/MJPEG 与智能编码。",
+            "id": "algorithms",
+            "title": "智能 AI 算法",
+            "description": "面向消费与安防场景的 turnkey 方案。",
             "bullets": [
-              "Intra4 小块编码在低码率下保留纹理与细节。",
-              "复杂运动场景细节更清晰。",
-              "小块编码减少局部预测误差。",
-              "支持 8MP@30FPS + 720P@30FPS 输出。"
-            ]
-          },
-          {
-            "id": "openclip-ai",
-            "title": "OpenCLIP 多模态 AI",
-            "description": "兼容 OpenCLIP 多模态模型与内置模型库，便于落地。",
-            "bullets": [
-              "万物检测与图文匹配（检索）。",
-              "Zero-shot 推理与场景微调。",
-              "人脸/人形/安全帽检测、手势识别、猫狗识别、车牌识别。"
-            ]
-          },
-          {
-            "id": "io-peripherals",
-            "title": "I/O 与外设",
-            "description": "灵活的视频输入输出与丰富的外设接口，适合相机与边缘设备。",
-            "bullets": [
-              "2 路 MIPI CSI 输入、1 路 MIPI DSI 输出。",
-              "视频输入选项包括 MIPI 2L+1L 或 4L，以及 MIPI 2L+2L + DVP（随型号而异）。",
-              "显示输出：BT656/BT601/BT1120/8080、RGB666/RGB888、LVDS（随型号而异）。",
-              "USB2.0、SD3.0、UART、PWM、GPIO、I2C、SPI、RTC。",
-              "音频：ADC/DAC/I2S；以太网：10/100 MAC PHY，部分型号支持 RMII。",
-              "快速启动、低功耗与安全启动。"
+              "人脸：检测、识别、抓拍、关键点（5 点）。",
+              "人体/人形：行人检测、头部检测、骨骼关键点。",
+              "车辆：机动车/非机动车检测、车牌识别。",
+              "行为：手势识别、跌倒检测、客流统计。",
+              "安防：安全帽检测、入侵检测（Tripwire）。",
+              "音频：婴儿哭声检测、语音指令识别（如“Call”“Screen On”）。",
+              "其他：猫狗识别、语义分割。"
             ]
           },
           {
             "id": "variant-comparison",
             "title": "CV184x 变体对比",
-            "description": "不同型号提供 DDR3 SiP 与封装选项。",
+            "description": "根据应用需求选择合适型号。",
             "table": {
               "headers": [
-                "型号",
-                "CPU",
-                "DDR3 SiP",
-                "TPU",
-                "封装"
+                "特性",
+                "CV1841C",
+                "CV1842C-P",
+                "CV1842H-P",
+                "CV1843H-P"
               ],
               "rows": [
                 [
-                  "CV1841C",
+                  "处理器",
                   "CA53 1.0GHz + C906 600MHz",
+                  "CA53 1.1GHz + C906 800MHz",
+                  "CA53 1.1GHz + C906 800MHz",
+                  "CA53 1.1GHz + C906 800MHz"
+                ],
+                [
+                  "DDR3 SiP",
                   "1Gb",
-                  "INT8 ~1.0 TOPS",
-                  "QFN-88 9x9"
-                ],
-                [
-                  "CV1842C-P",
-                  "CA53 1.1GHz + C906 800MHz",
                   "2Gb",
-                  "INT8 ~1.5 TOPS",
-                  "BGA 10x10"
-                ],
-                [
-                  "CV1842H-P",
-                  "CA53 1.1GHz + C906 800MHz",
                   "2Gb",
-                  "INT8 ~1.5 TOPS",
+                  "4Gb"
+                ],
+                [
+                  "TPU（INT8）",
+                  "~1.0 TOPS",
+                  "~1.5 TOPS",
+                  "~1.5 TOPS",
+                  "~1.5 TOPS"
+                ],
+                [
+                  "封装",
+                  "QFN-88 9x9",
+                  "BGA 10x10",
+                  "BGA 10x10",
                   "BGA 10x10"
                 ],
                 [
-                  "CV1843H-P",
-                  "CA53 1.1GHz + C906 800MHz",
-                  "4Gb",
-                  "INT8 ~1.5 TOPS",
-                  "BGA 10x10"
+                  "视频输入",
+                  "MIPI 2L+1L 或 4L",
+                  "MIPI 2L+2L+DVP 或 4L",
+                  "MIPI 2L+2L+DVP 或 4L",
+                  "MIPI 2L+2L+DVP 或 4L"
+                ],
+                [
+                  "视频输出",
+                  "MIPI DSI(2L)/BT/RGB",
+                  "MIPI DSI(4L)/BT/LVDS/RGB",
+                  "MIPI DSI(4L)/BT/LVDS/RGB",
+                  "MIPI DSI(4L)/BT/LVDS/RGB"
+                ],
+                [
+                  "以太网",
+                  "10/100 MAC PHY",
+                  "10/100 RMII + MAC PHY",
+                  "10/100 RMII + MAC PHY",
+                  "10/100 RMII + MAC PHY"
                 ]
               ],
-              "note": "视频输入/输出随型号不同。典型输入包括 MIPI 2L+1L 或 4L、MIPI 2L+2L + DVP；输出包括 MIPI DSI（2L/4L）、BT656/BT601/BT1120/8080、RGB666/RGB888 与 LVDS。"
+              "note": "所有型号共享 SDK、ISP 调参与 TPU 工具，同封装内引脚兼容。"
             }
-          },
-          {
-            "id": "sdk-compatibility",
-            "title": "SDK 与兼容性",
-            "bullets": [
-              "与 CV181 系列 PIN-TO-PIN 兼容，便于迁移。",
-              "共享 SDK、ISP 设置、TPU 开发工具与参考方案。",
-              "支持主流智能框架，工具链便于快速商用落地。",
-              "部分场景提供 Turnkey 方案。"
-            ]
           }
         ],
         "faqs": [
           {
-            "question": "CV184x 的 AI 性能是多少？",
-            "answer": "自研 TPU 提供 1.0~1.5 TOPS @ INT8，并支持 BF16 混合精度。"
+            "question": "Intra4 编码的优势是什么？",
+            "answer": "Intra4 通过更小块编码，在复杂运动场景中保留更多细节与纹理，低码率下更清晰。"
           },
           {
-            "question": "是否支持 OpenCLIP 多模态？",
-            "answer": "支持。可用于万物检测、图文检索、zero-shot 推理与场景微调。"
+            "question": "CV184x 是否兼容 CV181？",
+            "answer": "是。CV184x 与 CV181 系列引脚兼容，并共享 SDK、ISP 调参工具与 AI 开发环境。"
           },
           {
-            "question": "视频编码规格如何？",
-            "answer": "支持 H.265/H.264/MJPEG 与 Intra4，最高 8MP@30FPS + 720P@30FPS。"
-          },
-          {
-            "question": "与 CV181 兼容吗？",
-            "answer": "兼容。CV184x 与 CV181 PIN-TO-PIN 兼容，并共享 SDK 与工具链。"
+            "question": "TPU 支持哪些模型？",
+            "answer": "支持主流框架（Caffe/TensorFlow/Pytorch/ONNX），并重点优化 ResNet、YOLO、MobileNet 与 OpenCLIP。"
           }
         ],
         "ui": {
