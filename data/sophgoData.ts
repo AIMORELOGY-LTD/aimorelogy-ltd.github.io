@@ -253,7 +253,9 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { title: 'Smart Cameras', image: '/Smart Cameras.webp' },
         { title: 'Access Control', image: '/Access Control.webp' },
         { title: 'Robotics', image: '/Robotics.webp' },
-        { title: 'Smart Home', image: '/Smart Home.webp' }
+        { title: '4K IPC', image: '/4K IPC.webp' },
+        { title: 'Drones', image: '/Drones.webp' },
+        { title: 'Dash Cam', image: '/Dash Cam.webp' }
       ],
       faqs: [
         { question: "What is the advantage of Intra4 encoding?", answer: "Intra4 uses smaller block encoding to better handle details and textures in complex motion scenes, offering higher compression and clarity at low bitrates." },

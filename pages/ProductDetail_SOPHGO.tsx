@@ -375,22 +375,20 @@ const ProductDetail_SOPHGO: React.FC = () => {
             )}
 
             {/* 8. APPLICATION GRID (No hover/click) */}
-            <section className="py-32 bg-gray-50 border-y border-gray-100">
+            <section className="py-32 bg-white border-b border-gray-100">
               <div className="container mx-auto px-6">
-                <h3 className="text-center text-xs font-black uppercase tracking-[0.5em] text-gray-400 mb-20">Commercial Deployment Scenarios</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-200 border border-gray-200">
+                <h3 className="text-center text-xs font-black uppercase tracking-[0.5em] text-[#4f4398] mb-20">Commercial Deployment Scenarios</h3>
+                <div className="grid grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-12">
                   {localizedProduct.applications.map((app, idx) => (
-                    <div key={idx} className="bg-white">
-                      <div className="aspect-[4/5] overflow-hidden">
+                    <div key={idx} className="flex flex-col">
+                      <div className="aspect-[4/5] overflow-hidden mb-6">
                         <img 
                           src={app.image} 
                           alt={app.title} 
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="p-6 text-center">
-                        <h4 className="font-black text-[10px] uppercase tracking-[0.2em] text-gray-900">{app.title}</h4>
-                      </div>
+                      <h4 className="font-black text-[10px] uppercase tracking-widest text-gray-900 leading-tight">{app.title}</h4>
                     </div>
                   ))}
                 </div>
