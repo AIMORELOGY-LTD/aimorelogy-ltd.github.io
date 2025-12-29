@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
@@ -12,10 +13,14 @@ import {
   Maximize2,
   Box,
   Settings,
-  BarChart2,
+  BarChart3,
   Aperture,
-  Grid,
-  List
+  Code,
+  Globe,
+  Database,
+  Smartphone,
+  Check,
+  HelpCircle
 } from 'lucide-react';
 import { SOPHGO_CHIPS, ChipData, ChipDetailSection } from '../data/sophgoData';
 import { RoutePath } from '../types';
@@ -85,19 +90,11 @@ const ProductDetail_SOPHGO: React.FC = () => {
   const isCv184 = localizedProduct?.id === 'cv184';
   const displayName = isCv184 ? 'CV184x' : localizedProduct?.name || '';
   
-  // Extract specific sections for CV184 layout
   const cv184DetailSections = localizedProduct?.detailSections || [];
   const cv184SectionMap = cv184DetailSections.reduce((acc, section) => {
-    if (section.id) {
-      acc[section.id] = section;
-    }
+    if (section.id) acc[section.id] = section;
     return acc;
   }, {} as Record<string, ChipDetailSection>);
-
-  const cv184TpuSection = cv184SectionMap['tpu-acceleration'];
-  const cv184IspSection = cv184SectionMap['isp-v4'];
-  const cv184AlgorithmSection = cv184SectionMap['algorithms'];
-  const cv184VariantSection = cv184SectionMap['variant-comparison'];
 
   if (!localizedProduct) {
     return (
@@ -122,324 +119,423 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
       {isCv184 && (
         <style>{`
-          .tech-minimal {
-            --tech-black: #0a0a0a;
-            --tech-gray: #888888;
-            --tech-line: #e5e5e5;
-            --tech-accent: #4f4398;
+          .cv184-rich {
+            --brand: #4f4398;
+            --dark: #0a0a0a;
+            --gray-text: #64748b;
+            --gray-bg: #f8fafc;
+            --line: #e2e8f0;
           }
+          .tech-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+          .display-tight { letter-spacing: -0.04em; line-height: 0.9; }
+          .section-divider { width: 40px; height: 2px; background: var(--brand); margin-bottom: 1.5rem; }
+          .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid var(--line); }
           
-          .tech-minimal ::selection {
-             background: var(--tech-accent);
-             color: white;
+          @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
           }
-
-          .tech-font-display {
-            letter-spacing: -0.03em;
-            line-height: 0.95;
-          }
-          
-          .tech-font-mono {
-            font-family: 'JetBrains Mono', 'Fira Code', monospace;
-            letter-spacing: -0.02em;
-          }
-
-          /* Tech Grid Layout */
-          .tech-grid-border {
-             border-top: 1px solid var(--tech-line);
-             border-left: 1px solid var(--tech-line);
-          }
-          .tech-grid-item {
-             border-right: 1px solid var(--tech-line);
-             border-bottom: 1px solid var(--tech-line);
-          }
-
-          /* Visual Bar Animation */
-          @keyframes growBar {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
-          }
-          .tech-bar-fill {
-            transform-origin: left;
-            animation: growBar 1s ease-out forwards;
-          }
+          .animate-slide { animation: slideIn 0.6s ease-out forwards; }
         `}</style>
       )}
 
       {isCv184 ? (
-        <div className="tech-minimal bg-white text-[#0a0a0a] font-sans">
+        <div className="cv184-rich">
           
-          {/* 1. HERO: Stark, Minimal, Bold */}
-          <section className="relative min-h-[85vh] flex flex-col pt-32 pb-20 border-b border-gray-100 overflow-hidden">
-            <div className="absolute top-0 right-0 w-2/3 h-full bg-gray-50 -skew-x-12 translate-x-1/4 -z-10"></div>
-            
-            <div className="container mx-auto px-6 flex-grow flex flex-col justify-center relative">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-                <div className="lg:w-3/5 z-10">
-                   <div className="flex items-center gap-4 mb-8">
-                      <span className="w-12 h-[2px] bg-[#4f4398]"></span>
-                      <span className="tech-font-mono text-xs font-bold uppercase tracking-widest text-gray-500">SOPHGO Vision Series</span>
-                   </div>
-                   <h1 className="tech-font-display text-7xl lg:text-[7rem] font-black uppercase text-[#0a0a0a] mb-8">
-                     CV184<span className="text-[#4f4398]">x</span>
-                   </h1>
-                   <h2 className="text-2xl lg:text-3xl font-light tracking-tight text-gray-600 mb-10 max-w-2xl leading-tight">
-                     {localizedProduct.tagline}
-                   </h2>
-                   <div className="flex gap-6">
-                      <Link to={withLang(lang, RoutePath.CONTACT)} className="bg-[#0a0a0a] text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#4f4398] transition-colors">
-                        {t('products.common.requestQuote')}
-                      </Link>
-                      <button className="border border-gray-200 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:border-black transition-colors">
-                        Datasheet
-                      </button>
-                   </div>
+          {/* 1. HERO SECTION */}
+          <section className="relative pt-32 pb-20 border-b border-gray-100 overflow-hidden bg-white">
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50 -skew-x-12 translate-x-1/4 -z-10"></div>
+            <div className="container mx-auto px-6">
+              <div className="flex flex-col lg:flex-row items-center gap-16">
+                <div className="lg:w-3/5">
+                  <div className="tech-mono text-xs font-bold uppercase tracking-[0.3em] text-[#4f4398] mb-6">SOPHGO Vision Series</div>
+                  <h1 className="display-tight text-7xl lg:text-[9rem] font-black text-[#0a0a0a] mb-8">
+                    CV184<span className="text-[#4f4398]">x</span>
+                  </h1>
+                  <h2 className="text-3xl lg:text-4xl font-light text-slate-500 mb-8 max-w-2xl leading-tight">
+                    {localizedProduct.tagline}
+                  </h2>
+                  <p className="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
+                    {localizedProduct.description}
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link to={withLang(lang, RoutePath.CONTACT)} className="bg-[#0a0a0a] text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-[#4f4398] transition-all">
+                      Request Quote
+                    </Link>
+                    <button className="border border-slate-200 px-10 py-4 font-bold uppercase tracking-widest hover:border-black transition-all">
+                      Datasheet (PDF)
+                    </button>
+                  </div>
                 </div>
-
-                {/* Floating Chip Visual */}
-                <div className="lg:w-2/5 flex justify-center relative">
-                   <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                      <div className="absolute inset-0 border-[1px] border-gray-200 rounded-full animate-[spin_30s_linear_infinite]"></div>
-                      <div className="absolute inset-8 border-[1px] border-dashed border-gray-300 rounded-full animate-[spin_20s_linear_infinite_reverse]"></div>
+                <div className="lg:w-2/5 relative">
+                   <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
+                      <div className="absolute inset-0 border border-slate-100 rounded-full animate-[spin_40s_linear_infinite]"></div>
+                      <div className="absolute inset-8 border border-dashed border-slate-200 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
                       <div className="absolute inset-0 flex items-center justify-center">
-                         <div className="w-48 h-48 md:w-64 md:h-64 bg-[#111] shadow-2xl flex items-center justify-center relative z-10 rounded-[2px] border-b-4 border-[#4f4398]">
-                            <div className="absolute top-4 left-4 w-2 h-2 rounded-full bg-[#d4af37]"></div>
-                            <div className="text-center">
-                                <div className="text-gray-500 text-xs font-mono mb-1">SOPHGO</div>
-                                <div className="text-white text-3xl font-bold tracking-widest">CV184x</div>
+                         <div className="w-56 h-56 md:w-72 md:h-72 bg-[#111] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center rounded-sm relative group overflow-hidden border-b-4 border-[#4f4398]">
+                            <div className="absolute inset-4 border border-white/5 pointer-events-none"></div>
+                            <div className="text-white/20 tech-mono text-[8px] absolute top-4 left-4">V1.2.10</div>
+                            <div className="text-center z-10">
+                               <div className="text-slate-500 tech-mono text-xs mb-2">SOPHGO</div>
+                               <div className="text-white text-4xl font-bold tracking-widest">CV184x</div>
                             </div>
+                            <div className="absolute bottom-4 right-4 w-3 h-3 bg-[#4f4398] opacity-50"></div>
                          </div>
                       </div>
                    </div>
                 </div>
               </div>
             </div>
-            
-            <div className="absolute bottom-10 left-6 flex flex-col gap-2">
-               <span className="tech-font-mono text-[10px] uppercase tracking-widest text-gray-400">Scroll for details</span>
-               <div className="w-[1px] h-12 bg-gray-300"></div>
-            </div>
           </section>
 
-          {/* 2. OVERVIEW & FEATURES GRID */}
+          {/* 2. PRODUCT OVERVIEW (5 Verbatim Paragraphs) */}
           <section className="py-24 bg-white border-b border-gray-100">
             <div className="container mx-auto px-6">
-               <div className="flex flex-col lg:flex-row gap-16 mb-20">
-                  <div className="lg:w-1/3">
-                    <h3 className="tech-font-mono text-xs font-bold uppercase tracking-widest text-[#4f4398] mb-4">Product Overview</h3>
-                    <p className="text-4xl font-bold leading-tight tracking-tight text-[#0a0a0a]">
-                      The Next Standard for Edge AI Vision.
-                    </p>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div className="lg:col-span-4">
+                  <div className="section-divider"></div>
+                  <h3 className="text-sm font-black uppercase tracking-widest text-[#0a0a0a] mb-4">Visionary Performance</h3>
+                  <p className="text-4xl font-bold tracking-tight leading-[1.1] text-slate-900">
+                    Engineered for the demands of modern Edge AI.
+                  </p>
+                </div>
+                <div className="lg:col-span-8">
+                  <div className="space-y-8 text-lg text-slate-600 leading-relaxed max-w-3xl">
+                    {localizedProduct.longDescription.map((para, idx) => (
+                      <p key={idx}>{para}</p>
+                    ))}
                   </div>
-                  <div className="lg:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed">
-                     {localizedProduct.longDescription?.map((para, idx) => <p key={idx}>{para}</p>)}
-                  </div>
-               </div>
-
-               {/* Detailed Features Grid */}
-               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200">
-                  {localizedProduct.detailedFeatures?.map((feat, idx) => (
-                    <div key={idx} className="bg-white p-10 hover:bg-gray-50 transition-colors h-full">
-                       <div className="w-10 h-10 mb-6 text-[#4f4398]">
-                          {idx === 0 ? <Aperture size={32} strokeWidth={1.5} /> : 
-                           idx === 1 ? <Box size={32} strokeWidth={1.5} /> : 
-                           idx === 2 ? <Layers size={32} strokeWidth={1.5} /> : 
-                           idx === 3 ? <Zap size={32} strokeWidth={1.5} /> : 
-                           <Grid size={32} strokeWidth={1.5} />}
-                       </div>
-                       <h4 className="font-bold text-lg mb-3">{feat.title}</h4>
-                       <p className="text-sm text-gray-500 leading-relaxed">{feat.description}</p>
-                    </div>
-                  ))}
-               </div>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* 3. PERFORMANCE & TPU SECTION */}
-          {cv184TpuSection && (
-            <section className="py-24 bg-[#0a0a0a] text-white overflow-hidden relative">
-               <div className="absolute top-0 right-0 w-1/3 h-full bg-[#111] -skew-x-12 translate-x-1/2"></div>
-               
-               <div className="container mx-auto px-6 relative z-10">
-                  <div className="flex flex-col lg:flex-row gap-16">
-                     <div className="lg:w-1/3">
-                        <div className="tech-font-mono text-xs font-bold uppercase tracking-widest text-[#4f4398] mb-4">AI Engine</div>
-                        <h2 className="tech-font-display text-5xl font-bold mb-6">TPU Acceleration</h2>
-                        <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                           {cv184TpuSection.description}
-                        </p>
-                        <div className="space-y-4">
-                           {cv184TpuSection.bullets?.map((bullet, idx) => (
-                              <div key={idx} className="flex items-start gap-3 text-sm text-gray-300">
-                                 <CheckCircle size={16} className="text-[#4f4398] mt-1 shrink-0" />
-                                 <span>{bullet}</span>
+          {/* 3. CORE HIGHLIGHTS GRID */}
+          <section className="py-24 bg-slate-50">
+            <div className="container mx-auto px-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {localizedProduct.highlights.map((item, idx) => (
+                  <div key={idx} className="bg-white p-8 border border-slate-200 rounded-sm hover:border-[#4f4398] transition-colors group">
+                    <div className="w-10 h-10 mb-6 flex items-center justify-center bg-slate-50 text-[#4f4398] group-hover:bg-[#4f4398] group-hover:text-white transition-all">
+                      <Check size={20} />
+                    </div>
+                    <div className="text-lg font-bold text-slate-900">{item}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4. DETAILED FEATURES (6 Cards) */}
+          <section className="py-24 bg-white border-b border-gray-100">
+            <div className="container mx-auto px-6">
+              <h3 className="tech-mono text-xs font-bold uppercase tracking-[0.3em] text-center text-slate-400 mb-16">Key Innovation Pillars</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200">
+                {localizedProduct.detailedFeatures.map((feat, idx) => {
+                  const icons = [Aperture, Code, Cpu, BarChart3, Database, Globe];
+                  const Icon = icons[idx] || Zap;
+                  return (
+                    <div key={idx} className="bg-white p-12 hover:bg-slate-50 transition-colors h-full">
+                      <Icon className="text-[#4f4398] mb-8" size={32} strokeWidth={1.5} />
+                      <h4 className="text-xl font-bold text-slate-900 mb-4 uppercase tracking-tight">{feat.title}</h4>
+                      <p className="text-slate-500 leading-relaxed text-sm">{feat.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* 5. TPU PERFORMANCE & BENCHMARKS */}
+          {cv184SectionMap['tpu-acceleration'] && (
+            <section className="py-32 bg-[#0a0a0a] text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-1/2 h-full bg-[#111] -skew-x-12 translate-x-1/2 opacity-50"></div>
+              <div className="container mx-auto px-6 relative z-10">
+                <div className="flex flex-col lg:flex-row gap-20">
+                  <div className="lg:w-2/5">
+                    <div className="section-divider"></div>
+                    <h2 className="display-tight text-5xl font-black mb-8 uppercase">TPU Acceleration</h2>
+                    <p className="text-slate-400 text-lg mb-10 leading-relaxed">
+                      {cv184SectionMap['tpu-acceleration'].description}
+                    </p>
+                    <div className="space-y-6">
+                      {cv184SectionMap['tpu-acceleration'].bullets?.map((bullet, idx) => (
+                        <div key={idx} className="flex items-start gap-4 text-sm text-slate-300 border-l border-slate-800 pl-6 py-1">
+                          <span>{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="lg:w-3/5">
+                    <div className="bg-[#111] border border-slate-800 p-10 rounded-sm">
+                      <h3 className="tech-mono text-xs font-bold uppercase tracking-widest text-slate-500 mb-12">Efficiency Benchmarks (FPS @ INT8)</h3>
+                      <div className="space-y-10">
+                        {cv184SectionMap['tpu-acceleration'].stats?.map((stat, idx) => {
+                          const val = parseFloat(stat.value);
+                          // Scale visualization: MobileNet is base 100%, others are small
+                          let width = "10%";
+                          if (stat.label.includes('MobileNet')) width = "100%";
+                          else if (stat.label.includes('ResNet')) width = "15%";
+                          else if (stat.label.includes('YOLO')) width = "12%";
+                          else if (stat.label.includes('OpenCLIP')) width = "5%";
+
+                          return (
+                            <div key={idx} className="relative">
+                              <div className="flex justify-between items-end mb-3">
+                                <span className="text-sm font-bold tracking-tight uppercase">{stat.label}</span>
+                                <span className="text-2xl font-black tech-mono text-[#4f4398]">{stat.value}</span>
                               </div>
-                           ))}
-                        </div>
-                     </div>
-                     
-                     <div className="lg:w-2/3 bg-[#111] p-10 border border-gray-800 rounded-sm">
-                        <div className="flex justify-between items-center mb-10">
-                           <h3 className="text-xl font-bold">Performance Benchmarks</h3>
-                           <span className="tech-font-mono text-xs text-gray-500">FPS @ INT8</span>
-                        </div>
-                        <div className="space-y-8">
-                           {cv184TpuSection.stats?.map((stat, idx) => {
-                              const val = parseFloat(stat.value);
-                              // Normalize visuals loosely based on max value (MobileNet is huge, others are smaller)
-                              // Just visual approximation
-                              let percentage = 0;
-                              if (stat.label.includes('MobileNet')) percentage = 100; // ~260
-                              else if (stat.label.includes('ResNet')) percentage = 20; // ~38
-                              else if (stat.label.includes('YOLO')) percentage = 15; // ~28
-                              else percentage = 5; // OpenCLIP small
-                              
-                              return (
-                                 <div key={idx}>
-                                    <div className="flex justify-between text-sm mb-2 tech-font-mono">
-                                       <span className="text-gray-400">{stat.label}</span>
-                                       <span className="text-[#4f4398] font-bold">{stat.value}</span>
-                                    </div>
-                                    <div className="h-2 w-full bg-gray-800 rounded-full overflow-hidden">
-                                       <div 
-                                          className="h-full bg-[#4f4398] tech-bar-fill" 
-                                          style={{ width: `${Math.max(percentage, 5)}%`, animationDelay: `${idx * 0.15}s` }}
-                                       ></div>
-                                    </div>
-                                 </div>
-                              );
-                           })}
-                        </div>
-                        <div className="mt-8 pt-8 border-t border-gray-800 text-xs text-gray-500 text-center">
-                           * Benchmarks based on CV1842C-P (1.5 TOPS). Performance varies by model quantization.
-                        </div>
-                     </div>
+                              <div className="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                                <div 
+                                  className="h-full bg-[#4f4398] relative" 
+                                  style={{ width, transition: 'width 1.5s cubic-bezier(0.16, 1, 0.3, 1)' }}
+                                >
+                                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/20 animate-pulse"></div>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <div className="mt-12 text-[10px] tech-mono text-slate-600 text-center uppercase tracking-widest">
+                        Test Condition: 8 Bank, 512KB LMEM · Based on CV1842C-P
+                      </div>
+                    </div>
                   </div>
-               </div>
+                </div>
+              </div>
             </section>
           )}
 
-          {/* 4. ISP V4.0 DEEP DIVE */}
-          {cv184IspSection && (
-            <section className="py-24 bg-gray-50 border-b border-gray-100">
-               <div className="container mx-auto px-6">
-                  <div className="text-center max-w-3xl mx-auto mb-16">
-                     <div className="tech-font-mono text-xs font-bold uppercase tracking-widest text-[#4f4398] mb-4">Imaging Pipeline</div>
-                     <h2 className="tech-font-display text-5xl font-bold text-[#0a0a0a] mb-6">ISP V4.0 Architecture</h2>
-                     <p className="text-gray-600 text-lg">{cv184IspSection.description}</p>
-                  </div>
+          {/* 6. ISP V4.0 DEEP DIVE */}
+          {cv184SectionMap['isp-v4'] && (
+            <section className="py-24 bg-white border-b border-gray-100">
+              <div className="container mx-auto px-6">
+                <div className="max-w-3xl mb-20">
+                  <div className="section-divider"></div>
+                  <h2 className="display-tight text-5xl font-black text-slate-900 mb-6 uppercase">ISP V4.0 Imaging Pipeline</h2>
+                  <p className="text-xl text-slate-500 leading-relaxed">
+                    {cv184SectionMap['isp-v4'].description}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {cv184SectionMap['isp-v4'].bullets?.map((bullet, idx) => {
+                    const [title, ...rest] = bullet.split(':');
+                    const desc = rest.join(':');
+                    return (
+                      <div key={idx} className="flex gap-6 p-8 border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-transparent transition-all duration-500 group">
+                        <div className="tech-mono text-[10px] font-black text-slate-300 group-hover:text-[#4f4398] transition-colors">0{idx+1}</div>
+                        <div>
+                          <h4 className="font-black text-lg text-slate-900 uppercase tracking-tight mb-2">{title}</h4>
+                          <p className="text-sm text-slate-500 leading-relaxed">{desc}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
+          )}
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                     {cv184IspSection.bullets?.map((bullet, idx) => {
-                        const title = bullet.split(':')[0];
-                        const desc = bullet.split(':')[1] || bullet;
+          {/* 7. SMART ALGORITHM LIBRARY */}
+          {cv184SectionMap['smart-algorithms'] && (
+            <section className="py-24 bg-slate-50 border-b border-gray-100 overflow-hidden">
+              <div className="container mx-auto px-6">
+                <div className="flex flex-col lg:flex-row gap-20">
+                  <div className="lg:w-1/3">
+                    <div className="section-divider"></div>
+                    <h2 className="display-tight text-5xl font-black text-slate-900 mb-8 uppercase">Turnkey Algorithms</h2>
+                    <p className="text-slate-500 mb-10 leading-relaxed">
+                      {cv184SectionMap['smart-algorithms'].description}
+                    </p>
+                    <div className="p-6 bg-white border border-slate-200">
+                       <h5 className="tech-mono text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Capabilities</h5>
+                       <ul className="space-y-3">
+                          {['Generic Detection', 'Multimodal LLM', 'Feature Retrieval', 'Secure Boot'].map((cap, i) => (
+                             <li key={i} className="flex items-center gap-3 text-xs font-bold text-slate-700 uppercase">
+                                <div className="w-1 h-1 bg-[#4f4398]"></div> {cap}
+                             </li>
+                          ))}
+                       </ul>
+                    </div>
+                  </div>
+                  <div className="lg:w-2/3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {cv184SectionMap['smart-algorithms'].bullets?.map((algo, idx) => {
+                        const [name, desc] = algo.split(':');
                         return (
-                           <div key={idx} className="bg-white p-8 border border-gray-200 hover:border-[#4f4398] transition-colors group">
-                              <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 group-hover:text-[#4f4398]">Feature 0{idx+1}</div>
-                              <h3 className="text-xl font-bold mb-3 text-[#0a0a0a]">{title}</h3>
-                              <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
-                           </div>
+                          <div key={idx} className="bg-white p-6 border border-slate-200 group hover:border-[#4f4398] transition-all">
+                            <h4 className="font-bold text-sm text-slate-900 mb-1 group-hover:text-[#4f4398] transition-colors">{name}</h4>
+                            <p className="text-[11px] text-slate-400 uppercase tracking-tight leading-relaxed">{desc}</p>
+                          </div>
                         );
-                     })}
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* 8. INTRA4 & SMART ENCODING */}
+          {cv184SectionMap['intra4-encoding'] && (
+            <section className="py-24 bg-white border-b border-gray-100">
+               <div className="container mx-auto px-6">
+                  <div className="flex flex-col lg:flex-row items-center gap-16">
+                     <div className="lg:w-1/2">
+                        <div className="section-divider"></div>
+                        <h2 className="display-tight text-5xl font-black text-slate-900 mb-8 uppercase">Intra4 Encoding</h2>
+                        <p className="text-xl text-slate-500 mb-8 leading-relaxed">
+                           {cv184SectionMap['intra4-encoding'].description}
+                        </p>
+                        <ul className="space-y-4">
+                           {cv184SectionMap['intra4-encoding'].bullets?.map((bullet, idx) => (
+                              <li key={idx} className="flex items-start gap-4 text-slate-600">
+                                 <div className="w-5 h-5 flex items-center justify-center border border-slate-200 rounded-full mt-1 shrink-0">
+                                    <Check size={12} />
+                                 </div>
+                                 <span className="text-sm font-medium">{bullet}</span>
+                              </li>
+                           ))}
+                        </ul>
+                     </div>
+                     <div className="lg:w-1/2">
+                        <div className="aspect-video bg-slate-900 flex items-center justify-center p-12 relative group">
+                           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')] bg-cover opacity-20 grayscale group-hover:opacity-40 transition-opacity"></div>
+                           <div className="relative z-10 text-center">
+                              <div className="tech-mono text-[10px] text-[#4f4398] mb-4 uppercase tracking-[0.5em]">Bitrate Optimization</div>
+                              <div className="flex items-center gap-8">
+                                 <div className="text-center">
+                                    <div className="text-slate-500 text-[10px] uppercase mb-2">Standard</div>
+                                    <div className="w-24 h-24 border border-slate-700 flex items-center justify-center text-slate-700 text-xs">OFF</div>
+                                 </div>
+                                 <div className="w-12 h-[1px] bg-slate-700"></div>
+                                 <div className="text-center">
+                                    <div className="text-[#4f4398] text-[10px] uppercase mb-2">Intra4</div>
+                                    <div className="w-24 h-24 border border-[#4f4398] flex items-center justify-center text-[#4f4398] text-xs font-black shadow-[0_0_30px_rgba(79,67,152,0.3)]">ON</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </section>
           )}
 
-          {/* 5. SMART ALGORITHMS */}
-          {cv184AlgorithmSection && (
-             <section className="py-24 bg-white border-b border-gray-100">
-                <div className="container mx-auto px-6">
-                   <div className="flex flex-col lg:flex-row gap-16 items-center">
-                      <div className="lg:w-1/3">
-                         <div className="tech-font-mono text-xs font-bold uppercase tracking-widest text-[#4f4398] mb-4">Ready-to-Deploy</div>
-                         <h2 className="tech-font-display text-4xl font-bold text-[#0a0a0a] mb-6">Smart Algorithms</h2>
-                         <p className="text-gray-600 leading-relaxed">
-                            Accelerate your time-to-market with our comprehensive library of pre-trained models and turnkey solutions for common edge AI scenarios.
-                         </p>
-                      </div>
-                      <div className="lg:w-2/3">
-                         <div className="flex flex-wrap gap-3">
-                            {cv184AlgorithmSection.bullets?.map((algo, idx) => (
-                               <span key={idx} className="px-4 py-2 bg-gray-50 border border-gray-200 text-sm font-medium text-gray-700 rounded-sm hover:bg-[#4f4398] hover:text-white hover:border-[#4f4398] transition-colors cursor-default">
-                                  {algo}
-                                </span>
-                            ))}
-                         </div>
-                      </div>
-                   </div>
+          {/* 9. VARIANT COMPARISON TABLE (Verbatim) */}
+          {cv184SectionMap['variant-comparison'] && (
+            <section className="py-24 bg-white border-b border-gray-100">
+              <div className="container mx-auto px-6">
+                <div className="mb-16">
+                  <div className="section-divider"></div>
+                  <h2 className="display-tight text-5xl font-black text-slate-900 mb-4 uppercase">Variant Comparison</h2>
+                  <p className="text-slate-500">{cv184SectionMap['variant-comparison'].description}</p>
                 </div>
-             </section>
+                <div className="overflow-x-auto border border-slate-200">
+                  <table className="w-full text-left border-collapse min-w-[800px]">
+                    <thead>
+                      <tr className="bg-slate-50 text-[10px] tech-mono font-bold uppercase tracking-widest text-slate-400">
+                        {cv184SectionMap['variant-comparison'].table?.headers.map((h, i) => (
+                          <th key={i} className="p-6 border-b border-slate-200">{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm">
+                      {cv184SectionMap['variant-comparison'].table?.rows.map((row, rIdx) => (
+                        <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors border-b border-slate-100 last:border-0">
+                          {row.map((cell, cIdx) => (
+                            <td key={cIdx} className={`p-6 ${cIdx === 0 ? 'font-black text-slate-900 uppercase' : 'text-slate-600 tech-mono'}`}>
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {cv184SectionMap['variant-comparison'].table?.note && (
+                  <p className="mt-6 text-xs text-slate-400 italic text-center max-w-2xl mx-auto leading-relaxed">
+                    {cv184SectionMap['variant-comparison'].table.note}
+                  </p>
+                )}
+              </div>
+            </section>
           )}
 
-          {/* 6. VARIANT COMPARISON TABLE */}
-          {cv184VariantSection?.table && (
-             <section className="py-24 bg-white">
-                <div className="container mx-auto px-6">
-                   <div className="mb-12">
-                      <h2 className="tech-font-display text-4xl font-bold text-[#0a0a0a] mb-2">Variant Comparison</h2>
-                      <p className="text-gray-500">Select the precise specification for your deployment.</p>
-                   </div>
-                   
-                   <div className="overflow-x-auto border border-gray-200">
-                      <table className="w-full text-left border-collapse">
-                         <thead>
-                            <tr className="bg-gray-50 text-xs font-bold uppercase tracking-widest text-gray-500">
-                               {cv184VariantSection.table.headers.map((h, i) => (
-                                  <th key={i} className="p-6 border-b border-gray-200 whitespace-nowrap">{h}</th>
-                               ))}
-                            </tr>
-                         </thead>
-                         <tbody className="text-sm">
-                            {cv184VariantSection.table.rows.map((row, rIdx) => (
-                               <tr key={rIdx} className="hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0">
-                                  {row.map((cell, cIdx) => (
-                                     <td key={cIdx} className={`p-6 ${cIdx === 0 ? 'font-bold text-[#0a0a0a]' : 'text-gray-600 font-mono'}`}>
-                                        {cell}
-                                     </td>
-                                  ))}
-                               </tr>
-                            ))}
-                         </tbody>
-                      </table>
-                   </div>
-                   {cv184VariantSection.table.note && (
-                      <div className="mt-4 text-xs text-gray-400 italic">
-                         {cv184VariantSection.table.note}
-                      </div>
-                   )}
-                </div>
-             </section>
-          )}
+          {/* 10. DEPLOYMENT SCENARIOS (Applications) */}
+          <section className="py-24 bg-slate-50 border-b border-gray-100">
+            <div className="container mx-auto px-6">
+              <h3 className="tech-mono text-[10px] font-black uppercase tracking-[0.5em] text-center text-slate-400 mb-16">Target Markets & Scenarios</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {localizedProduct.applications.map((app, idx) => (
+                  <div key={idx} className="relative aspect-[4/5] group overflow-hidden bg-white border border-slate-200">
+                    <img 
+                      src={app.image} 
+                      alt={app.title} 
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                    />
+                    <div className="absolute inset-0 bg-[#0a0a0a]/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                       <div className="w-8 h-[1px] bg-[#4f4398] mb-4"></div>
+                       <h4 className="text-white font-black uppercase tracking-widest text-sm leading-tight">{app.title}</h4>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-          {/* 7. APPLICATIONS */}
-          <section className="py-24 bg-gray-50">
+          {/* 11. TECHNICAL SPECIFICATIONS (Verbatim) */}
+          <section className="py-24 bg-white border-b border-gray-100">
+            <div className="container mx-auto px-6">
+              <div className="flex items-center gap-6 mb-16">
+                 <h2 className="display-tight text-5xl font-black text-slate-900 uppercase">Specifications</h2>
+                 <div className="h-[1px] flex-grow bg-slate-100"></div>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-2">
+                {localizedProduct.specs.map((spec, idx) => (
+                  <div key={idx} className="flex justify-between items-center py-4 border-b border-slate-50 group hover:bg-slate-50 transition-colors px-4">
+                    <div className="flex flex-col">
+                       <span className="text-[10px] tech-mono font-bold text-[#4f4398] uppercase opacity-50">{spec.category}</span>
+                       <span className="text-sm font-bold text-slate-900 uppercase tracking-tight">{spec.key}</span>
+                    </div>
+                    <span className="text-sm text-slate-500 text-right tech-mono">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 12. FAQ */}
+          <section className="py-24 bg-slate-50">
              <div className="container mx-auto px-6">
-                <h3 className="tech-font-mono text-xs font-bold uppercase tracking-widest text-[#4f4398] mb-12 text-center">Deployment Scenarios</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {localizedProduct.applications.map((app, idx) => (
-                      <div key={idx} className="relative aspect-square group overflow-hidden bg-white cursor-pointer">
-                          <img 
-                            src={app.image} 
-                            alt={app.title} 
-                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                          />
-                          <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                              <span className="text-white text-sm font-bold uppercase tracking-widest text-center">{app.title}</span>
-                          </div>
-                      </div>
-                  ))}
+                <div className="max-w-3xl mx-auto">
+                   <div className="text-center mb-16">
+                      <HelpCircle className="mx-auto text-[#4f4398] mb-4" size={32} />
+                      <h2 className="display-tight text-4xl font-black text-slate-900 uppercase">Technical FAQ</h2>
+                   </div>
+                   <div className="space-y-6">
+                      {localizedProduct.faqs.map((faq, idx) => (
+                         <div key={idx} className="bg-white p-8 border border-slate-200">
+                            <h4 className="font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-3">
+                               <div className="w-1.5 h-1.5 bg-[#4f4398]"></div> {faq.question}
+                            </h4>
+                            <p className="text-slate-500 text-sm leading-relaxed">{faq.answer}</p>
+                         </div>
+                      ))}
+                   </div>
                 </div>
              </div>
           </section>
 
-          {/* 8. CTA */}
-          <section className="py-32 bg-[#0a0a0a] text-center">
-             <div className="container mx-auto px-6">
-               <h2 className="text-4xl text-white font-bold mb-8">Ready to integrate CV184x?</h2>
-               <Link
+          {/* 13. CTA */}
+          <section className="py-32 bg-[#0a0a0a] text-center relative overflow-hidden">
+             <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #4f4398 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
+             <div className="container mx-auto px-6 relative z-10">
+                <h2 className="display-tight text-5xl lg:text-7xl font-black text-white mb-12 uppercase">Scale your Vision.</h2>
+                <Link
                   to={withLang(lang, RoutePath.CONTACT)}
-                  className="inline-block bg-white text-[#0a0a0a] px-12 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#4f4398] hover:text-white transition-colors"
+                  className="inline-block bg-white text-[#0a0a0a] px-16 py-5 font-black uppercase tracking-[0.2em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                 >
                   {t('products.common.ctaButton')}
                 </Link>
@@ -448,7 +544,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
         </div>
       ) : (
-        /* --- LEGACY LAYOUT FOR OTHER PRODUCTS --- */
+        /* --- LEGACY LAYOUT FOR OTHER PRODUCTS (KEEP INTACT) --- */
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
@@ -497,7 +593,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
         </section>
       )}
 
-      {/* Legacy Specs Table for Non-CV184 or generic fallback */}
+      {/* Generic Specs Table fallback for non-CV184 or generic detail */}
       {!isCv184 && (
         <section className="py-20 bg-white border-t border-gray-100">
           <div className="container mx-auto px-6">
