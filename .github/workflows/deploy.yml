@@ -24,10 +24,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
       - name: Install deps
-        run: npm install
+        run: npm ci
       - name: Build
         run: npm run build
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: Prerender
+        env:
+          CHROME_BIN: ${{ env.CHROME_BIN }}
+        run: npm run prerender
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
