@@ -154,7 +154,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#111111] text-gray-400">
+    <footer id="footer" className="bg-[#111111] text-gray-400">
       
       {/* 1. PRE-FOOTER: CONTACT & INQUIRY SECTION */}
       <div className="border-t border-gray-900 bg-[#161616]">

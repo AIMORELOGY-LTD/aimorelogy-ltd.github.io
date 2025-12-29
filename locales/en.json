@@ -741,6 +741,42 @@
       "tagline": "Redefining the future of UAV brains.",
       "returnHome": "Return to Home",
       "contactSales": "Contact Sales for Specs"
+    },
+    "sophgo": {
+      "cv184": {
+        "ui": {
+          "hero": {
+            "seriesLabel": "{{series}} Computing Architecture"
+          },
+          "productBrief": "Product Brief",
+          "systemArchitecture": "System Architecture",
+          "keyInnovation": "Key Innovation {{index}}",
+          "tpuEyebrow": "In-House TPU 1.5T",
+          "tpuTitle": "TPU Performance",
+          "tpuBenchmarks": "Benchmarks (FPS @ INT8)",
+          "ispEyebrow": "Self-Developed ISP V4.0",
+          "ispTitle": "Imaging Pipeline",
+          "ispEngineLabel": "ENGINE-{{index}}",
+          "aiLibraryTitle": "AI Model Library",
+          "aiCategories": [
+            "Face",
+            "Human",
+            "Vehicle",
+            "Behavior"
+          ],
+          "variantComparison": "Variant Comparison",
+          "deploymentScenarios": "Commercial Deployment Scenarios",
+          "datasheetTitle": "Datasheet",
+          "datasheetVersion": "V1.2.10 Technical Reference",
+          "ctaTitle": "Build with <0>{{name}}</0>",
+          "ctaButton": "Get Technical Docs",
+          "alt": {
+            "hero": "Sophgo banner",
+            "architecture": "CV184x Architecture Diagram",
+            "cta": "CTA background"
+          }
+        }
+      }
     }
   },
   "legal": {

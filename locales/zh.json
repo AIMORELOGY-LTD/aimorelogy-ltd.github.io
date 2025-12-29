@@ -730,7 +730,7 @@
         "metaDescription": "SOPHGO CV186AH 提供 7.2 TOPS 视觉处理能力，支持 4K 多路分析、深度计算与 FPV/无人机 障碍物感知。"
       },
       "cv184": {
-        "metaTitle": "SOPHGO CV184 边缘视觉 SoC | AIMORELOGY",
+        "metaTitle": "SOPHGO CV184x 边缘视觉 SoC | AIMORELOGY",
         "metaDescription": "SOPHGO CV184x 双核视觉处理器，集成 ISP V4.0、自研 TPU 与 Intra4 编码，适用于 FPV/无人机 视觉、安防与多场景智能感知。",
         "tagline": "CV184x 边缘视觉 SoC，ISP V4.0 + Intra4 编码",
         "description": "双核 ARM + RISC-V 视觉 SoC，集成 ISP V4.0、自研 TPU 与 H.265/H.264/MJPEG 编码引擎。",
@@ -753,26 +753,92 @@
           "快速启动、低功耗与安全启动"
         ],
         "specs": [
-          { "category": "处理器", "key": "CPU", "value": "双核 ARM Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz；CV1841C 为 1.0GHz/600MHz）" },
-          { "category": "TPU", "key": "性能", "value": "1.0~1.5 TOPS @ INT8，支持 BF16 混合精度" },
-          { "category": "ISP", "key": "能力", "value": "4K ISP V4.0：3DNR(MCTF)、DRC/HDR、PFR、EE、3A、去雾、畸变校正" },
-          { "category": "编码", "key": "格式", "value": "H.265/H.264/MJPEG，支持 Intra4 与智能编码" },
-          { "category": "编码", "key": "规格", "value": "最高 8MP@30FPS + 720P@30FPS（4:3/16:9）" },
-          { "category": "视频输入", "key": "MIPI CSI", "value": "2 路 MIPI CSI（lane 配置随型号不同）" },
-          { "category": "视频输出", "key": "显示接口", "value": "MIPI DSI（2L/4L）、BT656/BT601/BT1120/8080、RGB666/RGB888、LVDS（型号相关）" },
-          { "category": "内存", "key": "DDR3 SiP", "value": "512Mb / 1Gb / 2Gb / 4Gb（随型号）" },
-          { "category": "外设", "key": "接口", "value": "USB2.0、SD3.0、UART、PWM、GPIO、I2C、SPI、RTC" },
-          { "category": "以太网", "key": "MAC/PHY", "value": "10/100 MAC PHY；部分型号支持 RMII" },
-          { "category": "音频", "key": "I/O", "value": "ADC / DAC / I2S" },
-          { "category": "安全", "key": "启动", "value": "安全启动" }
+          {
+            "category": "处理器",
+            "key": "CPU",
+            "value": "双核 ARM Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz；CV1841C 为 1.0GHz/600MHz）"
+          },
+          {
+            "category": "TPU",
+            "key": "性能",
+            "value": "1.0~1.5 TOPS @ INT8，支持 BF16 混合精度"
+          },
+          {
+            "category": "ISP",
+            "key": "能力",
+            "value": "4K ISP V4.0：3DNR(MCTF)、DRC/HDR、PFR、EE、3A、去雾、畸变校正"
+          },
+          {
+            "category": "编码",
+            "key": "格式",
+            "value": "H.265/H.264/MJPEG，支持 Intra4 与智能编码"
+          },
+          {
+            "category": "编码",
+            "key": "规格",
+            "value": "最高 8MP@30FPS + 720P@30FPS（4:3/16:9）"
+          },
+          {
+            "category": "视频输入",
+            "key": "MIPI CSI",
+            "value": "2 路 MIPI CSI（lane 配置随型号不同）"
+          },
+          {
+            "category": "视频输出",
+            "key": "显示接口",
+            "value": "MIPI DSI（2L/4L）、BT656/BT601/BT1120/8080、RGB666/RGB888、LVDS（型号相关）"
+          },
+          {
+            "category": "内存",
+            "key": "DDR3 SiP",
+            "value": "512Mb / 1Gb / 2Gb / 4Gb（随型号）"
+          },
+          {
+            "category": "外设",
+            "key": "接口",
+            "value": "USB2.0、SD3.0、UART、PWM、GPIO、I2C、SPI、RTC"
+          },
+          {
+            "category": "以太网",
+            "key": "MAC/PHY",
+            "value": "10/100 MAC PHY；部分型号支持 RMII"
+          },
+          {
+            "category": "音频",
+            "key": "I/O",
+            "value": "ADC / DAC / I2S"
+          },
+          {
+            "category": "安全",
+            "key": "启动",
+            "value": "安全启动"
+          }
         ],
         "detailedFeatures": [
-          { "title": "4K ISP V4.0 影像引擎", "description": "MCTF 3DNR、DRC/HDR、PFR、EE、3A、去雾与畸变校正，低照与逆光细节更清晰。" },
-          { "title": "Intra4 智能编码", "description": "小块编码在低码率下保留细节与纹理，减少预测误差。" },
-          { "title": "OpenCLIP 多模态 + 模型库", "description": "支持图文检索、zero-shot 推理与场景微调，覆盖人脸/人形/安全帽/手势/猫狗/车牌识别。" },
-          { "title": "自研 TPU", "description": "1.0~1.5 TOPS INT8 + BF16 混合精度，适配更复杂模型。" },
-          { "title": "CV181 兼容", "description": "PIN-TO-PIN 硬件兼容，共享 SDK/ISP/TPU 开发环境与参考方案。" },
-          { "title": "CV184x 变体", "description": "QFN/BGA 与 512Mb/1Gb/2Gb/4Gb SiP 选择，I/O 随型号不同。" }
+          {
+            "title": "4K ISP V4.0 影像引擎",
+            "description": "MCTF 3DNR、DRC/HDR、PFR、EE、3A、去雾与畸变校正，低照与逆光细节更清晰。"
+          },
+          {
+            "title": "Intra4 智能编码",
+            "description": "小块编码在低码率下保留细节与纹理，减少预测误差。"
+          },
+          {
+            "title": "OpenCLIP 多模态 + 模型库",
+            "description": "支持图文检索、zero-shot 推理与场景微调，覆盖人脸/人形/安全帽/手势/猫狗/车牌识别。"
+          },
+          {
+            "title": "自研 TPU",
+            "description": "1.0~1.5 TOPS INT8 + BF16 混合精度，适配更复杂模型。"
+          },
+          {
+            "title": "CV181 兼容",
+            "description": "PIN-TO-PIN 硬件兼容，共享 SDK/ISP/TPU 开发环境与参考方案。"
+          },
+          {
+            "title": "CV184x 变体",
+            "description": "QFN/BGA 与 512Mb/1Gb/2Gb/4Gb SiP 选择，I/O 随型号不同。"
+          }
         ],
         "detailSections": [
           {
@@ -780,12 +846,30 @@
             "title": "核心架构",
             "description": "双核 ARM Cortex-A53 + RISC-V C906，自研 TPU 与 4K ISP V4.0，适配快速启动与低功耗边缘视觉。",
             "stats": [
-              { "label": "CPU", "value": "双核 ARM Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz）" },
-              { "label": "TPU", "value": "1.0~1.5 TOPS @ INT8，BF16 混合精度" },
-              { "label": "ISP", "value": "自研 4K ISP V4.0" },
-              { "label": "编码", "value": "H.265/H.264/MJPEG + Intra4" },
-              { "label": "最大视频", "value": "8MP@30FPS + 720P@30FPS（4:3/16:9）" },
-              { "label": "内存", "value": "DDR3 SiP 512Mb/1Gb/2Gb/4Gb" }
+              {
+                "label": "CPU",
+                "value": "双核 ARM Cortex-A53 + RISC-V C906（最高 1.1GHz/800MHz）"
+              },
+              {
+                "label": "TPU",
+                "value": "1.0~1.5 TOPS @ INT8，BF16 混合精度"
+              },
+              {
+                "label": "ISP",
+                "value": "自研 4K ISP V4.0"
+              },
+              {
+                "label": "编码",
+                "value": "H.265/H.264/MJPEG + Intra4"
+              },
+              {
+                "label": "最大视频",
+                "value": "8MP@30FPS + 720P@30FPS（4:3/16:9）"
+              },
+              {
+                "label": "内存",
+                "value": "DDR3 SiP 512Mb/1Gb/2Gb/4Gb"
+              }
             ]
           },
           {
@@ -793,10 +877,22 @@
             "title": "TPU 边缘 AI 引擎",
             "description": "自研 TPU 在 INT8 吞吐与 BF16 混合精度之间取得平衡，适配低功耗边缘模型。",
             "stats": [
-              { "label": "性能", "value": "1.0~1.5 TOPS @ INT8" },
-              { "label": "精度", "value": "BF16 混合精度" },
-              { "label": "模型", "value": "OpenCLIP + 模型库" },
-              { "label": "场景", "value": "检测、检索、zero-shot" }
+              {
+                "label": "性能",
+                "value": "1.0~1.5 TOPS @ INT8"
+              },
+              {
+                "label": "精度",
+                "value": "BF16 混合精度"
+              },
+              {
+                "label": "模型",
+                "value": "OpenCLIP + 模型库"
+              },
+              {
+                "label": "场景",
+                "value": "检测、检索、zero-shot"
+              }
             ],
             "bullets": [
               "OpenCLIP 支持图文匹配、目标检测与场景微调。",
@@ -809,10 +905,22 @@
             "title": "ISP V4.0 影像管线",
             "description": "自研 4K ISP V4.0 强化低照与宽动态表现，成像更清晰。",
             "stats": [
-              { "label": "管线", "value": "4K ISP V4.0" },
-              { "label": "降噪", "value": "MCTF 3DNR" },
-              { "label": "动态范围", "value": "DRC/HDR" },
-              { "label": "清晰度", "value": "PFR + EE" }
+              {
+                "label": "管线",
+                "value": "4K ISP V4.0"
+              },
+              {
+                "label": "降噪",
+                "value": "MCTF 3DNR"
+              },
+              {
+                "label": "动态范围",
+                "value": "DRC/HDR"
+              },
+              {
+                "label": "清晰度",
+                "value": "PFR + EE"
+              }
             ],
             "bullets": [
               "MCTF 3DNR 降低时域与空域噪声，拖影更少。",
@@ -862,12 +970,42 @@
             "title": "CV184x 变体对比",
             "description": "不同型号提供 DDR3 SiP 与封装选项。",
             "table": {
-              "headers": ["型号", "CPU", "DDR3 SiP", "TPU", "封装"],
+              "headers": [
+                "型号",
+                "CPU",
+                "DDR3 SiP",
+                "TPU",
+                "封装"
+              ],
               "rows": [
-                ["CV1841C", "CA53 1.0GHz + C906 600MHz", "1Gb", "INT8 ~1.0 TOPS", "QFN-88 9x9"],
-                ["CV1842C-P", "CA53 1.1GHz + C906 800MHz", "2Gb", "INT8 ~1.5 TOPS", "BGA 10x10"],
-                ["CV1842H-P", "CA53 1.1GHz + C906 800MHz", "2Gb", "INT8 ~1.5 TOPS", "BGA 10x10"],
-                ["CV1843H-P", "CA53 1.1GHz + C906 800MHz", "4Gb", "INT8 ~1.5 TOPS", "BGA 10x10"]
+                [
+                  "CV1841C",
+                  "CA53 1.0GHz + C906 600MHz",
+                  "1Gb",
+                  "INT8 ~1.0 TOPS",
+                  "QFN-88 9x9"
+                ],
+                [
+                  "CV1842C-P",
+                  "CA53 1.1GHz + C906 800MHz",
+                  "2Gb",
+                  "INT8 ~1.5 TOPS",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1842H-P",
+                  "CA53 1.1GHz + C906 800MHz",
+                  "2Gb",
+                  "INT8 ~1.5 TOPS",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1843H-P",
+                  "CA53 1.1GHz + C906 800MHz",
+                  "4Gb",
+                  "INT8 ~1.5 TOPS",
+                  "BGA 10x10"
+                ]
               ],
               "note": "视频输入/输出随型号不同。典型输入包括 MIPI 2L+1L 或 4L、MIPI 2L+2L + DVP；输出包括 MIPI DSI（2L/4L）、BT656/BT601/BT1120/8080、RGB666/RGB888 与 LVDS。"
             }
@@ -884,10 +1022,80 @@
           }
         ],
         "faqs": [
-          { "question": "CV184x 的 AI 性能是多少？", "answer": "自研 TPU 提供 1.0~1.5 TOPS @ INT8，并支持 BF16 混合精度。" },
-          { "question": "是否支持 OpenCLIP 多模态？", "answer": "支持。可用于万物检测、图文检索、zero-shot 推理与场景微调。" },
-          { "question": "视频编码规格如何？", "answer": "支持 H.265/H.264/MJPEG 与 Intra4，最高 8MP@30FPS + 720P@30FPS。" },
-          { "question": "与 CV181 兼容吗？", "answer": "兼容。CV184x 与 CV181 PIN-TO-PIN 兼容，并共享 SDK 与工具链。" }
+          {
+            "question": "CV184x 的 AI 性能是多少？",
+            "answer": "自研 TPU 提供 1.0~1.5 TOPS @ INT8，并支持 BF16 混合精度。"
+          },
+          {
+            "question": "是否支持 OpenCLIP 多模态？",
+            "answer": "支持。可用于万物检测、图文检索、zero-shot 推理与场景微调。"
+          },
+          {
+            "question": "视频编码规格如何？",
+            "answer": "支持 H.265/H.264/MJPEG 与 Intra4，最高 8MP@30FPS + 720P@30FPS。"
+          },
+          {
+            "question": "与 CV181 兼容吗？",
+            "answer": "兼容。CV184x 与 CV181 PIN-TO-PIN 兼容，并共享 SDK 与工具链。"
+          }
+        ],
+        "ui": {
+          "hero": {
+            "seriesLabel": "{{series}} 计算架构"
+          },
+          "productBrief": "产品概述",
+          "systemArchitecture": "系统架构",
+          "keyInnovation": "关键创新 {{index}}",
+          "tpuEyebrow": "自研 TPU 1.5T",
+          "tpuTitle": "TPU 性能",
+          "tpuBenchmarks": "基准测试 (FPS @ INT8)",
+          "ispEyebrow": "自研 ISP V4.0",
+          "ispTitle": "影像管线",
+          "ispEngineLabel": "ENGINE-{{index}}",
+          "aiLibraryTitle": "AI 模型库",
+          "aiCategories": [
+            "人脸",
+            "人体",
+            "车辆",
+            "行为"
+          ],
+          "variantComparison": "变体对比",
+          "deploymentScenarios": "商业部署场景",
+          "datasheetTitle": "规格书",
+          "datasheetVersion": "V1.2.10 技术参考",
+          "ctaTitle": "使用 <0>{{name}}</0> 构建",
+          "ctaButton": "获取技术资料",
+          "alt": {
+            "hero": "SOPHGO 背景图",
+            "architecture": "CV184x 架构图",
+            "cta": "CTA 背景图"
+          }
+        },
+        "applications": [
+          {
+            "title": "智能相机",
+            "image": "/Smart Cameras.webp"
+          },
+          {
+            "title": "门禁系统",
+            "image": "/Access Control.webp"
+          },
+          {
+            "title": "机器人",
+            "image": "/Robotics.webp"
+          },
+          {
+            "title": "4K IPC",
+            "image": "/4K IPC.webp"
+          },
+          {
+            "title": "无人机",
+            "image": "/Drones.webp"
+          },
+          {
+            "title": "行车记录仪",
+            "image": "/Dash Cam.webp"
+          }
         ]
       },
       "cv181": {
