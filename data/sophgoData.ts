@@ -63,82 +63,184 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       id: 'bm1688',
       name: 'BM1688',
       series: 'TPU',
-      tagline: 'Edge AI SoC for FPV/UAV Vision & Gimbal Tracking',
-      metaTitle: 'SOPHGO BM1688 TPU Edge AI SoC for FPV/UAV Vision & Gimbal Tracking | AIMORELOGY',
-      metaDescription: 'SOPHGO BM1688 integrates an 8-core ARM CPU and 16 TOPS TPU for FPV/UAV vision, panoramic stitching, gimbal tracking, and edge AI inference.',
-      description: 'A high-integration SoC featuring an 8-core ARM architecture combined with a powerful TPU.',
+      tagline: 'Intelligent Edge 16T Compute Platform',
+      metaTitle: 'SOPHGO BM1688 TPU Edge AI SoC - 16 TOPS, 8-Core, 8K Vision | AIMORELOGY',
+      metaDescription: 'SOPHGO BM1688 integrates an 8-core ARM CPU and 16 TOPS TPU for micro-servers, smart NVRs, and advanced robotics with 8K vision support.',
+      description: 'High-integration edge TPU processor featuring 16 TOPS INT8 compute and octa-core architecture.',
       longDescription: [
-          "The BM1688 is a highly integrated System-on-Chip (SoC) designed to bring server-class AI performance to compact edge devices. Integrating an 8-core ARM Cortex-A53 CPU running at 1.6GHz with a 16 TOPS (INT8) TPU, it offers an exceptional balance of general computing and AI acceleration.",
-          "A standout feature of the BM1688 is its comprehensive vision processing capabilities. It includes a hardwired engine for Dewarp and Stitching, making it the perfect choice for panoramic cameras, drones, and surround-view systems. The chip supports efficient processing of Large Language Models (LLMs) and Vision-Language Models (VLMs) like ChatGLM2 and Llama2 at the edge.",
-          "With support for dual screens, multiple sensor inputs, and a rich set of interfaces including CAN BUS and USB3, the BM1688 is versatile enough for robotics, smart NVRs, and advanced industrial tablets."
+          "The BM1688 is a high-integration edge TPU processor designed to serve as a powerful 16T to 8T intelligent compute platform. It features an octa-core ARM Cortex-A53 architecture running at 1.6GHz, providing server-class compute power for edge applications.",
+          "Equipped with a self-developed TPU delivering up to 16 TOPS @ INT8 (and 32 TOPS @ INT4), it supports a wide range of frameworks including PyTorch, TensorFlow, and ONNX. It is specifically optimized for Large Language Models (LLM) and Vision-Language Models (VLM) at the edge.",
+          "The imaging system is highly advanced, capable of dual 8MP@30 HDR inputs or even 8K@15 SDR. It features hardware-level 360-degree stitching and fisheye dewarping, making it the perfect core for panoramic cameras and high-end security systems.",
+          "Connectivity is a major strength, with support for PCIe 3.0, SATA Gen3, USB 3.0, and dual Gigabit Ethernet. This allows for massive data throughput and storage expansion, ideal for smart micro-servers, AI NAS, and intelligent NVRs.",
+          "Built for reliability, the BM1688 supports a wide operating temperature range (-20°C to 60°C), enabling its deployment in various industrial and vehicle-based platforms, from autonomous robots to smart shipping systems."
       ],
       highlights: [
-        '16 TOPS INT8 Computing Power',
-        '8-Core ARM CA53 @ 1.6GHz',
-        'Hardwired Dewarp + Stitch Engine for panoramic views',
-        'Supports LLM & VLM (e.g., ChatGLM2, Llama2)'
+        'TPU: 16 TOPS INT8 / 32 TOPS INT4 / 4T FP16',
+        'CPU: 8-Core ARM Cortex-A53 @ 1.6GHz',
+        'Vision: 8K@15 / Dual 8MP@30 HDR Support',
+        'Engine: 360° Stitching & Fisheye Dewarping',
+        'I/O: PCIe 3.0, SATA Gen3, Dual Gigabit Ethernet',
+        'Temp: Industrial-grade -20°C to 60°C Operating'
       ],
       detailedFeatures: [
-          { title: "Hardwired Vision Engine", description: "Dedicated hardware blocks for Dewarping (fisheye correction) and Stitching (panoramic view), reducing CPU/TPU load." },
-          { title: "Generative AI Support", description: "Optimized for running quantized versions of popular LLMs and Generative AI models locally." },
-          { title: "High-Bandwidth Memory", description: "Supports LPDDR4/4x with high bandwidth utilization, ensuring data flows smoothly to the NPU." }
+          { title: "Server-Class Edge AI", description: "Delivers up to 16 TOPS INT8 compute power, enabling complex AI inference like LLM and multi-object tracking locally." },
+          { title: "Octa-Core Compute", description: "Eight Cortex-A53 cores provide robust multitasking capabilities for edge servers and robotics control." },
+          { title: "Hardwired Panoramic Engine", description: "Dedicated hardware blocks for 360° stitching and fisheye dewarping (Ceiling/Wall/Ground) reduce CPU load." },
+          { title: "High-Speed Data Fabric", description: "Flexible high-speed interfaces including PCIe 3.0 and SATA Gen3 for high-performance storage and expansion." },
+          { title: "Advanced ISP Pipeline", description: "Supports multi-sensor inputs (up to 6 channels) with 2f-HDR, 3DNR, and LDC for superior imaging clarity." },
+          { title: "Global Framework Support", description: "Seamlessly compatible with Caffe, PyTorch, TensorFlow, ONNX, and MXNet for rapid deployment." }
+      ],
+      detailSections: [
+        {
+          id: "tpu-acceleration",
+          title: "TPU Performance",
+          description: "High-performance TPU architecture with mixed-precision support for high-throughput AI workloads.",
+          stats: [
+            { label: "INT4 Peak", value: "32 TOPS" },
+            { label: "INT8 Peak", value: "16 TOPS" },
+            { label: "FP16 / BF16", value: "4.0 TFLOPS" },
+            { label: "FP32", value: "0.5 TFLOPS" }
+          ],
+          bullets: [
+            "Optimized for Generative AI and Multimodal models.",
+            "Supports server-grade neural network architectures.",
+            "Low-latency inference for real-time edge responses."
+          ]
+        },
+        {
+          id: "vision-isp",
+          title: "Vision & Imaging",
+          description: "Sophisticated ISP and Video processing units for high-resolution, multi-channel capture.",
+          bullets: [
+            "Max Resolution: Up to 8192 x 3840 (8K Support).",
+            "Video Input: Time-division multiplexing for up to 6 sensors.",
+            "Video Output: HDMI 2.0 (4K@60), MIPI DSI (1440P@60), LVDS.",
+            "Codec: H.264/H.265 Decode (16x 2MP30) / Encode (10x 2MP30)."
+          ]
+        },
+        {
+          id: "connectivity",
+          title: "High-Speed Connectivity",
+          description: "Versatile I/O interfaces for seamless system integration and storage expansion.",
+          bullets: [
+            "PCIe/SATA: 2x PCIe 3.0 / SATA Gen3 (Flexible Modes).",
+            "Ethernet: 2x Gigabit Ethernet (GMAC).",
+            "USB: 2x USB 3.0 / 2.0 Host/Device.",
+            "Wireless: WiFi/BT/5G expansion via SDIO and USB."
+          ]
+        }
       ],
       specs: [
-        { category: 'Processor', key: 'CPU', value: '8x ARM Cortex-A53 @ 1.6GHz' },
-        { category: 'TPU', key: 'Performance', value: '16 TOPS INT8' },
-        { category: 'Memory', key: 'Support', value: 'LPDDR4/4x 2x32bit' },
-        { category: 'ISP', key: 'Resolution', value: '2x 8Mp30 / 16x 2Mp30 Decode' },
-        { category: 'Connectivity', key: 'I/O', value: 'USB3.0, PCIe, SATA, CAN FD' }
+        { category: 'Processor', key: 'CPU', value: '8-Core ARM Cortex-A53 @ 1.6GHz' },
+        { category: 'AI', key: 'TPU', value: '16 TOPS INT8 / 32 TOPS INT4' },
+        { category: 'Memory', key: 'LPDDR4/4X', value: '2x32-bit (Up to 16GB Support)' },
+        { category: 'Video', key: 'ISP', value: '8K SDR / Dual 8MP HDR / 360° Stitching' },
+        { category: 'Video', key: 'Codec', value: 'H.264/H.265 (Decode 16x2MP, Encode 10x2MP)' },
+        { category: 'Interface', key: 'High Speed', value: 'PCIe 3.0, SATA Gen3, USB 3.0' },
+        { category: 'Interface', key: 'Network', value: '2x Gigabit Ethernet' },
+        { category: 'Interface', key: 'Video In', value: '6-Channel MIPI CSI / subLVDS / HiSPI' },
+        { category: 'Interface', key: 'Video Out', value: 'HDMI 2.0, MIPI DSI, LVDS, BT.1120' },
+        { category: 'Audio', key: 'Codec', value: 'Integrated 16-bit (ADC/DAC/I2S)' },
+        { category: 'Peripherals', key: 'Control', value: 'CAN 2.0, UART x8, I2C x10, SPI x4, PWM x19' },
+        { category: 'System', key: 'Environment', value: '-20°C to 60°C Operating Temp' }
       ],
       applications: [
-        { title: 'Smart Cameras', image: '/Smart Cameras.webp' },
-        { title: 'Robotics', image: '/Robotics.webp' },
-        { title: 'Edge Computing Boxes', image: '/Edge Computing Boxes.webp' },
-        { title: 'Drones', image: '/Drones.webp' }
+        { title: 'Smart Micro-Server', image: '/Edge Computing Boxes.webp' },
+        { title: 'Smart NVR', image: '/Edge Computing Boxes.webp' },
+        { title: 'AI NAS', image: '/Edge Computing Boxes.webp' },
+        { title: 'Smart Lawn Mower', image: '/Robotics.webp' },
+        { title: 'Robotics Platform', image: '/Robot Platform.webp' },
+        { title: 'Vehicle/Ship Platform', image: '/Robotics.webp' }
       ],
       faqs: [
-          { question: "Can BM1688 run Llama 2?", answer: "Yes, BM1688 supports running quantized versions (INT4/INT8) of Llama 2 and other similar sized LLMs efficiently." },
-          { question: "Does it support multiple camera inputs?", answer: "Yes, it supports extensive MIPI inputs and has a dedicated ISP capable of handling multiple streams for surround view applications." }
+        { question: "Can BM1688 run LLM models?", answer: "Yes, BM1688 is optimized for edge deployment of quantized LLMs and VLMs, leveraging its high INT8 and INT4 compute power." },
+        { question: "How many camera inputs does it support?", answer: "It supports up to 6 sensors simultaneously through time-division multiplexing ISP processing." }
       ]
     },
   
-    // --- Vision Series (CV) ---
-    'cv186ah': {
-      id: 'cv186ah',
-      name: 'CV186AH',
+    'cv186': {
+      id: 'cv186',
+      name: 'CV186',
       series: 'VISION',
-      tagline: 'Vision AI SoC for FPV/UAV & Gimbal Applications',
-      metaTitle: 'SOPHGO CV186AH Vision AI SoC for FPV/UAV & Gimbal Applications | AIMORELOGY',
-      metaDescription: 'SOPHGO CV186AH delivers 7.2 TOPS vision processing for multi-stream 4K analytics, depth computing, and obstacle avoidance in FPV/UAV platforms and gimbals.',
-      description: 'Top-tier SoC for professional security and smart edge applications.',
+      tagline: '7.2T Terminal AI Vision Processor',
+      metaTitle: 'SOPHGO CV186x AI Vision SoC - 7.2 TOPS, 6-Core, Binocular Depth | AIMORELOGY',
+      metaDescription: 'SOPHGO CV186x features a 6-core ARM CPU, 7.2 TOPS AI算力, and binocular depth sensing (DPU) for high-end IPC and robotics applications.',
+      description: 'High-performance vision processor with 7.2 TOPS AI算力 and integrated binocular depth engine.',
       longDescription: [
-          "The CV186AH is the flagship of the Vision Series, designed for high-end intelligent video applications. It packs a powerful 6-core ARM Cortex-A53 CPU and a 7.2 TOPS TPU, providing ample performance for complex multi-stream video analytics, such as facial recognition in crowded scenes or trajectory tracking in traffic management.",
-          "Supporting up to 4K resolution processing and advanced ISP features like 360-degree panoramic stitching and dewarping, the CV186AH is tailored for next-generation smart cameras and robotics. Its dual-eye depth computing capability makes it an excellent choice for obstacle avoidance systems in autonomous machines.",
-          "With hardware-level security and industrial-grade reliability, the CV186AH ensures secure and stable operation in critical deployments."
+          "The CV186x series (CV186AH) is a high-performance visual processor designed for the intelligent terminal market. It features a hexa-core ARM Cortex-A53 architecture, providing efficient multi-tasking capabilities for complex edge computing workloads.",
+          "At its core is a self-developed TPU delivering 7.2 TOPS @ INT8, optimized for advanced video analytics and high-precision AI inference. It supports modern AI frameworks and is designed for rapid commercial deployment in smart terminals.",
+          "A standout feature is the integrated DPU (Binocular Depth Engine), which enables high-accuracy depth sensing for robotics and obstacle avoidance. Combined with hardware support for 360° panoramic stitching and fisheye dewarping, it offers unmatched visual versatility.",
+          "The imaging pipeline is powered by a professional-grade ISP supporting 3DNR, HDR, LDC, and 3A algorithms. For video output, it supports dual displays through MIPI DSI, LVDS, and digital RGB interfaces, making it ideal for interactive terminal applications.",
+          "The CV186x provides an expansive interface set, including PCIe, SATA, USB 3.0, and Gigabit Ethernet, ensuring it can scale from high-end multi-lens IPCs to advanced robotics and drone platforms."
       ],
       highlights: [
-        '7.2 TOPS @ INT8 / 4T (Depth Learning)',
-        '6-Core ARM Cortex-A53 @ 1.6GHz',
-        'Supports 360° Panoramic Stitching & Dewarping',
-        'Dual Eye Depth Computing'
+        'TPU: 7.2 TOPS @ INT8 AI Acceleration',
+        'CPU: 6-Core ARM Cortex-A53 Architecture',
+        'Depth: Integrated Binocular Depth Engine (DPU)',
+        'Video: 8MP@75fps Ultra-HD Hardware Encoding',
+        'Vision: Hardware Stitching & 360° Fisheye Dewarp',
+        'I/O: PCIe, SATA, USB 3.0, GMAC Support'
       ],
       detailedFeatures: [
-          { title: "High-Performance Compute", description: "6-core architecture plus 7.2 TOPS AI ensures smooth handling of 4K streams and heavy AI models." },
-          { title: "Advanced Vision", description: "Integrated depth computing engine and stitching hardware for immersive visual applications." }
+          { title: "Hexa-Core Performance", description: "Six Cortex-A53 cores ensure smooth handling of concurrent AI tasks and high-resolution video streams." },
+          { title: "7.2 TOPS AI算力", description: "High-throughput TPU designed for real-time video analytics and high-accuracy object recognition." },
+          { title: "Binocular Depth Sensing", description: "Hardware DPU engine for high-precision depth map generation, ideal for robotic navigation." },
+          { title: "Ultra-HD 8MP Encoding", description: "Advanced video hardware encoding supporting up to 8MP@75fps for ultra-clear video evidence." },
+          { title: "Panoramic Visuals", description: "Integrated hardware for seamless 360-degree image stitching and fisheye distortion correction." },
+          { title: "Industrial Scalability", description: "Comprehensive high-speed interfaces for high-end security, drones, and gimbal applications." }
+      ],
+      detailSections: [
+        {
+          id: "tpu-acceleration",
+          title: "AI & TPU Performance",
+          description: "Efficient 7.2 TOPS AI acceleration for high-end intelligent terminal analysis.",
+          stats: [
+            { label: "INT8 Peak", value: "7.2 TOPS" },
+            { label: "Architecture", value: "Hexa-Core A53" },
+            { label: "Precision", value: "INT8 / BF16" }
+          ],
+          bullets: [
+            "Optimized for multi-stream high-resolution analytics.",
+            "Compatible with mainstream deep learning frameworks.",
+            "Integrated IVE/VPSS hardware accelerators."
+          ]
+        },
+        {
+          id: "vision-isp",
+          title: "Vision & Imaging Pipeline",
+          description: "Professional-grade imaging and computer vision hardware modules.",
+          bullets: [
+            "ISP Features: 3DNR, HDR, LDC, 3A, Dehaze.",
+            "Depth Sensing: Dedicated DPU for Binocular Depth.",
+            "Panoramic: Hardware Stitch + 360° Dewarp Engine.",
+            "Video Encoding: Up to 8MP@75fps hardware acceleration."
+          ]
+        }
       ],
       specs: [
-        { category: 'TPU', key: 'Power', value: '7.2 TOPS' },
-        { category: 'CPU', key: 'Cores', value: '6x A53 @ 1.6GHz' },
-        { category: 'ISP', key: 'Max', value: '4K Resolution' },
-        { category: 'Process', key: 'Package', value: 'BGA' }
+        { category: 'Processor', key: 'CPU', value: '6-Core ARM Cortex-A53' },
+        { category: 'AI', key: 'TPU', value: '7.2 TOPS @ INT8' },
+        { category: 'Memory', key: 'LPDDR4/4X', value: '2x32-bit Interface' },
+        { category: 'Video', key: 'Encoding', value: '8MP@75fps H.264/H.265' },
+        { category: 'Video', key: 'Vision', value: 'DPU (Depth), Stitching, Dewarp' },
+        { category: 'Video', key: 'ISP', value: '3DNR, HDR, LDC, 3A, Dehaze' },
+        { category: 'Interface', key: 'High Speed', value: 'PCIe, SATA, USB 3.0, GMAC' },
+        { category: 'Interface', key: 'Video In', value: 'Multi-Sensor MIPI CSI Input' },
+        { category: 'Interface', key: 'Video Out', value: 'Dual Display (MIPI/LVDS/Digital)' },
+        { category: 'Peripherals', key: 'I/O', value: 'PWM, UART, SPI, SD, I2C, GPIO' }
       ],
       applications: [
         { title: 'High-end Multi-lens IPC', image: '/High-end Multi-lens IPC.webp' },
         { title: 'Robot Platform', image: '/Robot Platform.webp' },
         { title: 'Binocular Depth Camera', image: '/Binocular Depth Camera.webp' },
-        { title: 'Drone & Gimbal Applications', image: '/Drone & Gimbal Applications.webp' }
+        { title: 'Drones', image: '/Drones.webp' },
+        { title: 'Vehicle Computing', image: '/Robotics.webp' },
+        { title: 'Gimbal Applications', image: '/Drone & Gimbal Applications.webp' }
       ],
-      faqs: []
+      faqs: [
+        { question: "What is the DPU engine used for?", answer: "The DPU is a hardware-accelerated Binocular Depth Engine used for calculating high-precision depth maps, which is essential for robotic navigation and obstacle avoidance." },
+        { question: "How many cores does the CV186x have?", answer: "The CV186x (CV186AH) features a 6-core ARM Cortex-A53 architecture for powerful multitasking." }
+      ]
     },
     'cv184': {
       id: 'cv184',

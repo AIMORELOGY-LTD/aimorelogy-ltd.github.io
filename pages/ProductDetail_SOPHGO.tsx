@@ -27,17 +27,19 @@ import { useTranslation } from 'react-i18next';
 import Seo from '../components/Seo';
 
 const MODEL_ALIASES: Record<string, string> = {
-  cv186x: 'cv186ah',
+  cv186x: 'cv186',
   cv184x: 'cv184',
   cv181x: 'cv181',
-  cv180x: 'cv180'
+  cv180x: 'cv180',
+  bm1688: 'bm1688'
 };
 
 const DISPLAY_NAME_MAP: Record<string, string> = {
-  cv186ah: 'CV186x',
+  cv186: 'CV186x',
   cv184: 'CV184x',
   cv181: 'CV181x',
-  cv180: 'CV180x'
+  cv180: 'CV180x',
+  bm1688: 'BM1688'
 };
 
 const getDisplayName = (chip?: ChipData | null) => {
@@ -98,6 +100,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
       || t('products.common.metaTitle', { name: displayName, tagline: localizedProduct.tagline });
     const metaTitle = metaTitleRaw
       .replace(/CV186AH\b/g, 'CV186x')
+      .replace(/CV186\b/g, 'CV186x')
       .replace(/CV184\b/g, 'CV184x')
       .replace(/CV181\b/g, 'CV181x')
       .replace(/CV180\b/g, 'CV180x');
@@ -118,7 +121,9 @@ const ProductDetail_SOPHGO: React.FC = () => {
   const isCv184 = localizedProduct?.id === 'cv184';
   const isCv181 = localizedProduct?.id === 'cv181';
   const isCv180 = localizedProduct?.id === 'cv180';
-  const isRichLayout = isCv184 || isCv181 || isCv180;
+  const isBm1688 = localizedProduct?.id === 'bm1688';
+  const isCv186 = localizedProduct?.id === 'cv186';
+  const isRichLayout = isCv184 || isCv181 || isCv180 || isBm1688 || isCv186;
 
   const displayName = getDisplayName(localizedProduct);
   
@@ -286,7 +291,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                 <div className="container mx-auto px-6">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                     <div>
-                      <div className="text-[#4f4398] tech-mono text-xs font-black uppercase tracking-[0.4em] mb-6">High Efficiency TPU</div>
+                      <div className="text-[#4f4398] tech-mono text-xs font-black uppercase tracking-[0.4em] mb-6">High Performance Compute</div>
                       <h2 className="text-6xl font-black uppercase mb-8 tracking-tighter">AI Performance</h2>
                       <p className="text-gray-400 text-lg mb-12 leading-relaxed">
                         {cvRichSectionMap['tpu-acceleration'].description}
@@ -312,7 +317,11 @@ const ProductDetail_SOPHGO: React.FC = () => {
                             <div className="h-1 w-full bg-white/10">
                               <div 
                                 className="h-full bg-[#4f4398]" 
-                                style={{ width: stat.value.includes('1.5') || stat.value.includes('1.0') || stat.value.includes('FPS') ? '100%' : '50%' }}
+                                style={{ 
+                                  width: stat.value.includes('32') || stat.value.includes('16') ? '100%' : 
+                                         stat.value.includes('7.2') ? '70%' : 
+                                         stat.value.includes('1.5') || stat.value.includes('1.0') ? '30%' : '15%' 
+                                }}
                               ></div>
                             </div>
                           </div>
