@@ -97,6 +97,7 @@ const Seo: React.FC<SeoProps> = ({
     const imageUrl = normalizeImageUrl(image);
     const alternates = buildAlternateLinks(location.pathname);
     const locale = LOCALE_MAP[lang] || 'en_US';
+    const siteName = lang === 'zh' ? 'AIMORELOGY 爱谋科技' : 'AIMORELOGY';
 
     document.title = title;
 
@@ -104,7 +105,7 @@ const Seo: React.FC<SeoProps> = ({
     ensureMeta('name', 'robots', noindex ? 'noindex,nofollow' : 'index,follow');
 
     ensureMeta('property', 'og:type', type);
-    ensureMeta('property', 'og:site_name', 'AIMORELOGY');
+    ensureMeta('property', 'og:site_name', siteName);
     ensureMeta('property', 'og:title', title);
     ensureMeta('property', 'og:description', description);
     ensureMeta('property', 'og:url', canonical);
@@ -126,14 +127,14 @@ const Seo: React.FC<SeoProps> = ({
       {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'AIMORELOGY',
+        name: siteName,
         url: BASE_URL,
         logo: DEFAULT_IMAGE
       },
       {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'AIMORELOGY',
+        name: siteName,
         url: BASE_URL,
         inLanguage: lang
       }
