@@ -26,6 +26,25 @@ import { useLang, withLang } from '../i18n-routing';
 import { useTranslation } from 'react-i18next';
 import Seo from '../components/Seo';
 
+const MODEL_ALIASES: Record<string, string> = {
+  cv186x: 'cv186ah',
+  cv184x: 'cv184',
+  cv181x: 'cv181',
+  cv180x: 'cv180'
+};
+
+const DISPLAY_NAME_MAP: Record<string, string> = {
+  cv186ah: 'CV186x',
+  cv184: 'CV184x',
+  cv181: 'CV181x',
+  cv180: 'CV180x'
+};
+
+const getDisplayName = (chip?: ChipData | null) => {
+  if (!chip) return '';
+  return DISPLAY_NAME_MAP[chip.id] || chip.name;
+};
+
 const ProductDetail_SOPHGO: React.FC = () => {
   const lang = useLang();
   const { t } = useTranslation();
@@ -40,8 +59,10 @@ const ProductDetail_SOPHGO: React.FC = () => {
   };
 
   useEffect(() => {
-    if (modelId && SOPHGO_CHIPS[modelId.toLowerCase()]) {
-      const data = SOPHGO_CHIPS[modelId.toLowerCase()];
+    const normalizedModelId = modelId?.toLowerCase();
+    const resolvedModelId = normalizedModelId ? (MODEL_ALIASES[normalizedModelId] || normalizedModelId) : undefined;
+    if (resolvedModelId && SOPHGO_CHIPS[resolvedModelId]) {
+      const data = SOPHGO_CHIPS[resolvedModelId];
       setProduct(data);
     } else {
       setProduct(null);
@@ -72,12 +93,14 @@ const ProductDetail_SOPHGO: React.FC = () => {
 
   const seo = React.useMemo(() => {
     if (!localizedProduct) return null;
-    const displayName = localizedProduct.id === 'cv184' ? 'CV184x' : localizedProduct.name;
+    const displayName = getDisplayName(localizedProduct);
     const metaTitleRaw = localizedProduct.metaTitle
       || t('products.common.metaTitle', { name: displayName, tagline: localizedProduct.tagline });
-    const metaTitle = localizedProduct.id === 'cv184'
-      ? metaTitleRaw.replace(/CV184\b/g, 'CV184x')
-      : metaTitleRaw;
+    const metaTitle = metaTitleRaw
+      .replace(/CV186AH\b/g, 'CV186x')
+      .replace(/CV184\b/g, 'CV184x')
+      .replace(/CV181\b/g, 'CV181x')
+      .replace(/CV180\b/g, 'CV180x');
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
     const jsonLd = {
@@ -97,7 +120,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
   const isCv180 = localizedProduct?.id === 'cv180';
   const isRichLayout = isCv184 || isCv181 || isCv180;
 
-  const displayName = isRichLayout ? `${localizedProduct?.name}x` : localizedProduct?.name || '';
+  const displayName = getDisplayName(localizedProduct);
   
   // Extract specific sections for rich layout
   const cvRichDetailSections = localizedProduct?.detailSections || [];

@@ -129,17 +129,22 @@ const Header: React.FC = () => {
                 { 
                   model: 'CV186x', 
                   description: t('header.menu.sophgo.cv186ah'), 
-                  to: withLang(lang, '/products/sophgo/cv186ah') 
+                  to: withLang(lang, '/products/sophgo/cv186x') 
                 },
                 { 
                   model: 'CV184x', 
                   description: t('header.menu.sophgo.cv184'), 
-                  to: withLang(lang, '/products/sophgo/cv184') 
+                  to: withLang(lang, '/products/sophgo/cv184x') 
                 },
                 { 
-                  model: 'CV181x / CV180x', 
+                  model: 'CV181x', 
                   description: t('header.menu.sophgo.cv181'), 
-                  to: withLang(lang, '/products/sophgo/cv181') 
+                  to: withLang(lang, '/products/sophgo/cv181x') 
+                },
+                { 
+                  model: 'CV180x', 
+                  description: t('header.menu.sophgo.cv180'), 
+                  to: withLang(lang, '/products/sophgo/cv180x') 
                 }
               ]
             }

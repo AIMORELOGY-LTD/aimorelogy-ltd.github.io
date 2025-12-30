@@ -24,7 +24,8 @@
         "bm1688": "16T Edge AI, 8-Core ARM, Highly Integrated SoC.",
         "cv186ah": "7.2T High-End Vision Processor (4K/8MP).",
         "cv184": "1.5T Dual-Core Vision SoC with ISP 4.0.",
-        "cv181": "Consumer RISC-V AIoT SoC (0.2T - 1.0T)."
+        "cv181": "Consumer RISC-V AIoT SoC (0.2T - 1.0T).",
+        "cv180": "Entry RISC-V Vision SoC (0.2T)."
       },
       "espressif": {
         "esp32": "Dual-core Xtensa 32-bit LX7, 240MHz."

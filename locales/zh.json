@@ -24,7 +24,8 @@
         "bm1688": "16T Edge AI、8-Core ARM，高度集成的 SoC。",
         "cv186ah": "7.2T 高端视觉处理器 (4K/8MP)。",
         "cv184": "1.5T 双核视觉 SoC，集成 ISP 4.0。",
-        "cv181": "消费者 RISC-V AIoT SoC (0.2T - 1.0T)。"
+        "cv181": "消费者 RISC-V AIoT SoC (0.2T - 1.0T)。",
+        "cv180": "入门级 RISC-V 视觉 SoC（0.2T）。"
       },
       "espressif": {
         "esp32": "双核 Xtensa 32- 位 LX7，240MHz。"
