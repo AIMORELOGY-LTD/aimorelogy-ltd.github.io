@@ -239,13 +239,15 @@ const Home: React.FC = () => {
       
       {/* Hero Carousel Section - Full Screen (h-screen) */}
       <section className="relative h-screen overflow-hidden bg-gray-900">
-        {slides.map((slide, index) => (
-          <div 
-            key={slide.id} 
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-            }`}
-          >
+        {slides.map((slide, index) => {
+          const HeadingTag = index === 0 ? 'h1' : 'h2';
+          return (
+            <div 
+              key={slide.id} 
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
+            >
             {/* Background Image */}
             <div 
               className="absolute inset-0 bg-cover bg-center"
@@ -258,9 +260,9 @@ const Home: React.FC = () => {
             <div className="container mx-auto px-6 relative h-full flex flex-col justify-center">
               <div className="max-w-3xl animate-fadeIn pb-24">
                 <span className="font-bold text-[#a094e3] mb-3 block uppercase text-sm tracking-widest">{slide.category}</span>
-                <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight shadow-black drop-shadow-lg">
+                <HeadingTag className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight shadow-black drop-shadow-lg">
                   {slide.title}
-                </h1>
+                </HeadingTag>
                 <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed drop-shadow-md">
                   {slide.description}
                 </p>
@@ -282,8 +284,9 @@ const Home: React.FC = () => {
                 )}
               </div>
             </div>
-          </div>
-        ))}
+            </div>
+          );
+        })}
 
         {/* Navigation Strip - Included WITHIN the Full Screen Hero */}
         <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/80 to-transparent pt-12">
