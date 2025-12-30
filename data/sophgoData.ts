@@ -267,74 +267,223 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       id: 'cv181',
       name: 'CV181',
       series: 'VISION',
-      tagline: 'RISC-V Vision SoC for Lightweight FPV/UAV Sensors',
-      metaTitle: 'SOPHGO CV181 RISC-V Vision SoC for Lightweight FPV/UAV Sensors | AIMORELOGY',
-      metaDescription: 'SOPHGO CV181 offers 0.5-1.0 TOPS AI at low power for lightweight FPV/UAV sensors, smart home vision, and access control.',
-      description: 'Cost-effective solution for massive consumer AIoT deployments.',
+      tagline: 'RISC-V Vision SoC for Lightweight Intelligent Scenarios',
+      metaTitle: 'SOPHGO CV181 RISC-V Vision SoC - 1.0 TOPS, 2f-HDR, 5MP | AIMORELOGY',
+      metaDescription: 'SOPHGO CV181 features Dual RISC-V C906 (or ARM A53), up to 1.0 TOPS TPU, 2f-HDR, and 5MP video encoding. Ideal for Smart Home and Access Control.',
+      description: 'High-performance RISC-V SoC with integrated screen display support and up to 1.0 TOPS AI算力.',
       longDescription: [
-          "The CV181 is a highly efficient SoC tailored for the mass consumer AIoT market. Leveraging a dual-core design (ARM A53 + RISC-V C906), it provides 0.5 to 1.0 TOPS of AI performance, which is perfect for endpoint intelligence such as face detection in smart locks or object recognition in home cameras.",
-          "With support for 5MP ISP and extremely low power consumption, the CV181 enables battery-operated devices to run longer while maintaining smart features. Its cost-effective packaging and high integration level make it a go-to choice for high-volume manufacturing."
+          "The CV181 series is a high-performance visual processor tailored for the lightweight intelligent (consumer-grade) market. It leverages a Dual RISC-V C906 architecture (1.0GHz + 0.7GHz) or an ARM A53 + RISC-V combination in the 'A' series, providing an optimal balance of compute power and energy efficiency.",
+          "Featuring an integrated TPU delivering 0.5 to 1.0 TOPS @ INT8, the CV181 supports advanced AI tasks with BF16 mixed precision. It is optimized for fast boot scenarios and low power operation, making it ideal for battery-powered devices like smart doorbells and cat-eye locks.",
+          "The imaging pipeline is powered by a self-developed ISP supporting 3D noise reduction, two-frame wide dynamic range (2f-HDR), and lens distortion correction (LDC). It can handle up to two MIPI/DVP camera inputs and provide output via MIPI DSI, LVDS, or RGB interfaces.",
+          "Video processing capabilities include hardware H.265/H.264/MJPEG encoding at resolutions up to 5MP (2880x1620) @ 30FPS. The chip also integrates a 16-bit audio codec and a dedicated MCU subsystem for low-level control and peripheral management.",
+          "The CV181 series is designed for seamless integration, offering Pin-to-Pin compatibility within its package types (BGA 10x10 or QFN-88 9x9) and sharing a common SDK and TPU development environment with the CV180 series."
       ],
       highlights: [
-        '0.5 ~ 1.0 TOPS @ INT8',
-        'Dual Core (A53 + C906)',
-        'Support 5M Pixel ISP',
-        'Low Power Consumption'
+        'Dual Cores: C906 (1.0GHz+0.7GHz) or ARM A53 (1.2GHz)+C906',
+        'TPU: 0.5 ~ 1.0 TOPS @ INT8 / BF16 Supported',
+        'ISP: 3DNR, 2f-HDR, LDC, 3A, Dehaze',
+        'Video: 5MP@30fps H.265/H.264/MJPEG',
+        'Display: MIPI DSI (4L/2L), LVDS, RGB, BT.656/1120',
+        'Fast Boot & Low Power Architecture'
       ],
       detailedFeatures: [
-          { title: "Battery Friendly", description: "Architecture optimization for low power consumption, ideal for wireless cameras and doorbells." },
-          { title: "Cost Effective", description: "High integration reduces BOM cost for mass-market consumer electronics." }
+          { title: "Dual Core Compute", description: "Flexible architecture with pure RISC-V or ARM+RISC-V options to suit different performance and OS requirements." },
+          { title: "2f-HDR Imaging", description: "Advanced two-frame wide dynamic range technology ensures clear visibility in challenging backlit or high-contrast environments." },
+          { title: "Integrated SiP Memory", description: "Available with 512Mb DDR2 to 4Gb DDR3 integrated SiP, reducing PCB footprint and BOM complexity." },
+          { title: "Multi-Sensor Input", description: "Supports up to 2 camera inputs with flexible interfaces including MIPI CSI, Sub-LVDS, and HiSPi." },
+          { title: "Rich Audio/Visual I/O", description: "Integrated 16-bit audio codec and comprehensive display outputs for interactive smart devices." },
+          { title: "Eco-System Synergy", description: "Shares SDK, ISP settings, and AI reference designs with the CV180 series for low-cost portfolio development." }
+      ],
+      detailSections: [
+        {
+          id: "architecture",
+          title: "Core Architecture",
+          description: "A versatile compute platform featuring Dual C906 or ARM+RISC-V cores with an integrated MCU subsystem for robust edge control.",
+          stats: [
+            { label: "CPU (C-Series)", value: "2x C906 (1.0GHz/0.7GHz)" },
+            { label: "CPU (A-Series)", value: "A53 (1.2GHz) + C906" },
+            { label: "MCU", value: "Dedicated MCU RAM/IO" },
+            { label: "Security", value: "Secure Boot / EFuse" }
+          ]
+        },
+        {
+          id: "tpu-acceleration",
+          title: "AI Performance",
+          description: "The integrated TPU provides specialized acceleration for lightweight neural networks, optimized for common consumer AI tasks.",
+          stats: [
+            { label: "Peak Compute", value: "1.0 TOPS @ INT8" },
+            { label: "Mixed Precision", value: "BF16 / INT8" },
+            { label: "SDK", value: "Shared TPU Toolchain" }
+          ],
+          bullets: [
+            "Optimized for person detection and gesture recognition.",
+            "Supports Caffe, TensorFlow, Pytorch, and ONNX frameworks.",
+            "High efficiency inference for real-time edge responses."
+          ]
+        },
+        {
+          id: "isp-v4",
+          title: "Imaging Pipeline",
+          description: "Self-developed ISP engine focused on clarity and dynamic range for high-definition consumer vision.",
+          bullets: [
+            "3DNR: Advanced noise reduction for low-light scenes.",
+            "2f-HDR: Superior contrast handling in complex lighting.",
+            "LDC: Lens distortion correction for wide-angle sensors.",
+            "Display Engine: Multi-interface output support (MIPI/LVDS/RGB)."
+          ]
+        },
+        {
+          id: "variant-comparison",
+          title: "CV181 Series Comparison",
+          description: "Explore the variants across the CV181 and CV181-A product lines.",
+          table: {
+            headers: ["Model", "CPU", "TPU", "DDR SiP", "Package"],
+            rows: [
+              ["CV1813H", "Dual C906", "1.0 TOPS", "4Gb DDR3", "BGA 10x10"],
+              ["CV1812H", "Dual C906", "1.0 TOPS", "2Gb DDR3", "BGA 10x10"],
+              ["CV1811H", "Dual C906", "1.0 TOPS", "1Gb DDR3", "BGA 10x10"],
+              ["CV1812C-P", "Dual C906", "1.0 TOPS", "2Gb DDR3", "QFN-88 9x9"],
+              ["CV1811C", "Dual C906", "0.5 TOPS", "1Gb DDR3", "QFN-88 9x9"],
+              ["CV1810C", "Dual C906", "0.5 TOPS", "512Mb DDR2", "QFN-88 9x9"],
+              ["CV1813H-A", "A53+C906", "1.0 TOPS", "4Gb DDR3", "BGA 10x10"],
+              ["CV1811C-A", "A53+C906", "1.0 TOPS", "1Gb DDR3", "QFN-88 9x9"]
+            ],
+            note: "All variants are Pin-to-Pin compatible within their respective package types."
+          }
+        }
       ],
       specs: [
-        { category: 'TPU', key: 'AI', value: '0.5 - 1.0 TOPS' },
-        { category: 'ISP', key: 'Res', value: '5MP @ 30fps' },
-        { category: 'Package', key: 'Type', value: 'QFN / BGA' }
-      ],
-      applications: [
-        { title: 'Smart Home', image: '/Smart Home.webp' },
-        { title: 'Access Control', image: '/Access Control.webp' },
-        { title: 'Scanning Pen', image: '/Scanning Pen.webp' },
-        { title: 'Streaming Rearview Mirror', image: '/Streaming Rearview Mirror.webp' },
-        { title: 'Campus Camera', image: '/Campus Camera.webp' },
-        { title: 'HD Night Vision', image: '/HD Night Vision.webp' }
-      ],
-      faqs: []
-    },
-    'cv180': {
-      id: 'cv180',
-      name: 'CV180',
-      series: 'VISION',
-      tagline: 'Entry RISC-V Vision SoC for Micro FPV/UAV Imaging',
-      metaTitle: 'SOPHGO CV180 Entry RISC-V Vision SoC for Micro FPV/UAV Imaging | AIMORELOGY',
-      metaDescription: 'SOPHGO CV180 is a 0.2 TOPS RISC-V vision SoC for micro FPV/UAV imaging, battery devices, and cost-sensitive AIoT.',
-      description: 'The most accessible smart vision chip, perfect for battery-powered devices and basic AIoT nodes.',
-      longDescription: [
-          "The CV180 is the entry-level champion of the Vision Series, built on a pure RISC-V C906 core. It is designed for applications where power efficiency and cost are paramount. With 0.2 TOPS of AI performance, it handles basic visual tasks like motion detection and simple classification with ease.",
-          "Available in a cost-optimized QFN package, the CV180 allows for ultra-compact PCB designs. It is the engine behind millions of battery-powered cameras, smart toys, and basic biometric devices, democratizing access to visual intelligence."
-      ],
-      highlights: [
-        '0.2 TOPS @ INT8',
-        'Single Core RISC-V C906 @ 1.0GHz',
-        'Ultra Low Power',
-        'QFN Package (Cost optimized)'
-      ],
-      detailedFeatures: [
-          { title: "Pure RISC-V", description: "Efficient single-core C906 implementation for streamlined embedded development." },
-          { title: "Ultra Compact", description: "Small footprint QFN package enables tiny device form factors." }
-      ],
-      specs: [
-        { category: 'TPU', key: 'AI', value: '0.2 TOPS' },
-        { category: 'CPU', key: 'Core', value: 'RISC-V C906' },
-        { category: 'Video', key: 'Enc', value: '5MP / 4MP' }
+        { category: 'Processor', key: 'CPU', value: 'Dual C906 1.0GHz + 0.7GHz (or ARM A53+C906)' },
+        { category: 'AI', key: 'TPU', value: '0.5 ~ 1.0 TOPS @ INT8 / BF16' },
+        { category: 'Video', key: 'Encoding', value: 'H.265/H.264/MJPEG (Max 5MP@30)' },
+        { category: 'Video', key: 'ISP', value: '3DNR, 2f-HDR, LDC, Dehaze' },
+        { category: 'Interface', key: 'Video In', value: '2x (MIPI 2L+2L+DVP or 4L)' },
+        { category: 'Interface', key: 'Video Out', value: 'MIPI DSI (4L/2L), LVDS, RGB, BT.656/1120' },
+        { category: 'Memory', key: 'SiP DDR', value: '512Mb DDR2 / 1Gb / 2Gb / 4Gb DDR3' },
+        { category: 'Storage', key: 'Interface', value: 'eMMC, SPI NOR/NAND, SDIO 3.0 x2' },
+        { category: 'Ethernet', key: 'MAC/PHY', value: '10/100 MAC PHY (RMII Supported)' },
+        { category: 'Peripherals', key: 'I/O', value: 'USB 2.0, I2C x5, SPI x3, UART x4, PWM x15' },
+        { category: 'Audio', key: 'Codec', value: '16-bit Codec (ADC/DAC/I2S)' },
+        { category: 'System', key: 'Boot', value: 'Fast Boot / Secure Boot' }
       ],
       applications: [
         { title: 'Home IPC', image: '/Home IPC.webp' },
         { title: 'Smart Doorbell', image: '/Smart Doorbell.webp' },
         { title: 'Cat-eye Door Lock', image: '/Cat-eye Door Lock.webp' },
-        { title: 'Dash Cam', image: '/Dash Cam.webp' },
-        { title: 'Baby Monitor', image: '/Baby Monitor.webp' },
-        { title: 'Kids Camera', image: '/Kids Camera.webp' }
+        { title: 'Streaming Rearview Mirror', image: '/Streaming Rearview Mirror.webp' },
+        { title: 'Access Control', image: '/Access Control.webp' },
+        { title: 'Dash Cam', image: '/Dash Cam.webp' }
       ],
-      faqs: []
-    }
+      faqs: [
+        { question: "What is the difference between CV181 and CV181-A?", answer: "The CV181 series uses a Dual RISC-V C906 architecture, while the CV181-A series features an ARM Cortex-A53 + RISC-V C906 combination for broader software compatibility." },
+        { question: "Does CV181 support battery-powered operation?", answer: "Yes, it is designed with a low-power architecture and fast boot capabilities (under 500ms), making it ideal for battery-operated smart doorbells and locks." }
+      ]
+    },
+    'cv180': {
+      id: 'cv180',
+      name: 'CV180',
+      series: 'VISION',
+      tagline: 'Consumer-Grade Lite Intelligent Vision SoC',
+      metaTitle: 'SOPHGO CV180 RISC-V Vision SoC - 0.2 TOPS, 5MP, Low Power | AIMORELOGY',
+      metaDescription: 'SOPHGO CV180 features Dual RISC-V C906, 0.2 TOPS AI, and 5MP encoding. Highly cost-effective for lightweight consumer AIoT devices.',
+      description: 'Cost-effective RISC-V vision chip for consumer IoT and lightweight intelligent applications.',
+      longDescription: [
+          "The CV180 series is a highly cost-effective visual processor designed for the entry-level consumer and lightweight intelligent market. Built on a Dual RISC-V C906 architecture (1.0GHz + 0.7GHz), it democratizes access to smart vision for mass-market devices.",
+          "Equipped with a self-developed TPU delivering 0.2 TOPS @ INT8, the CV180 provides essential AI capabilities such as human detection and motion tracking. Its ultra-low power consumption and fast-boot features are specifically tuned for battery-operated and energy-sensitive applications.",
+          "Despite its entry-level positioning, the CV180 includes a robust ISP supporting 3D noise reduction, digital wide dynamic range (DWDR), lens distortion correction (LDC), and purple fringe removal. It can encode H.265/H.264/MJPEG video at resolutions up to 5MP (2880x1620) @ 20FPS.",
+          "The series comes in an ultra-compact QFN-68 7x7 package with integrated DDR2 or DDR3 SiP, significantly reducing BOM costs and simplifying high-volume manufacturing. It is pin-to-pin compatible across its variant line.",
+          "The CV180 shares a unified SDK and intelligent reference designs with the CV181 series, ensuring a smooth development path and fast commercialization for lightweight consumer products."
+      ],
+      highlights: [
+        'Dual RISC-V: C906 (1.0GHz + 0.7GHz)',
+        'TPU: 0.2 TOPS @ INT8 / Human Detection Ready',
+        'ISP: 3DNR, DWDR, LDC, 3A, Dehaze',
+        'Video: 5MP@20fps / 4MP@25fps H.265/H.264',
+        'Package: Ultra-compact QFN-68 7x7 (Pin to Pin)',
+        'Low Power & Fast Boot Optimization'
+      ],
+      detailedFeatures: [
+          { title: "RISC-V Efficiency", description: "Leverages the open RISC-V architecture for efficient processing and lower licensing costs, passed on to the mass market." },
+          { title: "Essential AI", description: "Built-in humanoid detection and motion sensing algorithms provide 'Lite' intelligence for entry-level security." },
+          { title: "Compact SiP Integration", description: "Integrated 512Mb DDR2 or 1Gb DDR3 memory reduces the overall device footprint to an absolute minimum." },
+          { title: "Optimized Encoding", description: "Supports H.265 hardware encoding for superior video storage efficiency at 5MP resolutions." },
+          { title: "Starlight Imaging", description: "Advanced 3DNR and ISP features ensure reliable performance in low-light consumer scenarios." },
+          { title: "Pin-to-Pin Compatibility", description: "The CV1801B and CV180ZB variants share the same hardware footprint for flexible supply chain management." }
+      ],
+      detailSections: [
+        {
+          id: "architecture",
+          title: "Core Architecture",
+          description: "Dual C906 cores with integrated L1 cache and a specialized MCU subsystem for entry-level intelligent control.",
+          stats: [
+            { label: "CPU", value: "2x C906 (1.0GHz/0.7GHz)" },
+            { label: "Cache", value: "L1 64KB D / 32KB I" },
+            { label: "MCU", value: "Dedicated MCU RAM" }
+          ]
+        },
+        {
+          id: "tpu-acceleration",
+          title: "AI & TPU",
+          description: "0.2 TOPS performance tuned for humanoid detection, intrusion alerts, and basic scene analysis.",
+          stats: [
+            { label: "Performance", value: "0.2 TOPS @ INT8" },
+            { label: "Algorithms", value: "Human / Motion Detect" }
+          ],
+          bullets: [
+            "Shared SDK with CV181 series.",
+            "Ideal for low-complexity visual AI tasks.",
+            "Significant power efficiency for constant edge monitoring."
+          ]
+        },
+        {
+          id: "isp-v4",
+          title: "Imaging & Video",
+          description: "Comprehensive imaging engine supporting essential clarity features for consumer-grade IPCs.",
+          bullets: [
+            "ISP Features: 3DNR, DWDR, LDC, 3A, Dehaze.",
+            "Video Output: Support for MIPI 4L / BT.656.",
+            "Encoding: H.265/H.264/JPEG hardware acceleration."
+          ]
+        },
+        {
+          id: "variant-comparison",
+          title: "CV180 Series Models",
+          description: "Entry-level variants optimized for specific cost and performance targets.",
+          table: {
+            headers: ["Model", "CPU", "DDR SiP", "TPU", "VI Interface"],
+            rows: [
+              ["CV1801B", "Dual C906", "1Gb DDR3", "0.2 TOPS", "MIPI 4L / BT.656"],
+              ["CV180ZB", "Dual C906", "512Mb DDR2", "0.2 TOPS", "MIPI 4L / BT.656"]
+            ],
+            note: "Competitive replacement targets: HI3516EV300, SSC337DE, T31 X/ZX/A, FH8856V210, etc."
+          }
+        }
+      ],
+      specs: [
+        { category: 'Processor', key: 'CPU', value: 'Dual C906 (1.0GHz + 0.7GHz)' },
+        { category: 'AI', key: 'TPU', value: '0.2 TOPS @ INT8' },
+        { category: 'Video', key: 'Encoding', value: 'H.265/H.264/MJPEG (Max 5MP@20)' },
+        { category: 'Video', key: 'ISP', value: '3DNR, DWDR, LDC, 3A, Dehaze' },
+        { category: 'Interface', key: 'Video In', value: '1x (MIPI 4L / BT.656 / CSI)' },
+        { category: 'Memory', key: 'SiP DDR', value: '512Mb DDR2 / 1Gb DDR3' },
+        { category: 'Storage', key: 'Interface', value: 'SPI NOR/NAND, SDIO 3.0 x2' },
+        { category: 'Ethernet', key: 'MAC/PHY', value: '10/100 MAC PHY' },
+        { category: 'Peripherals', key: 'I/O', value: 'USB 2.0, I2C x4, SPI x3, UART x5, PWM x13' },
+        { category: 'Audio', key: 'Codec', value: '16-bit Codec (ADC/DAC/I2S)' },
+        { category: 'System', key: 'Boot', value: 'Fast Boot / Secure Boot' },
+        { category: 'Package', key: 'Type', value: 'QFN-68 7x7 (Pin-to-Pin)' }
+      ],
+      applications: [
+        { title: 'Baby Monitor', image: '/Baby Monitor.webp' },
+        { title: 'Kids Camera', image: '/Kids Camera.webp' },
+        { title: 'Scanning Pen', image: '/Scanning Pen.webp' },
+        { title: 'Dash Cam', image: '/Dash Cam.webp' },
+        { title: 'Access Control', image: '/Access Control.webp' },
+        { title: 'Smart Doorbell', image: '/Smart Doorbell.webp' }
+      ],
+      faqs: [
+        { question: "Is CV180 software compatible with CV181?", answer: "Yes, both series share the same SDK, ISP settings, and intelligent reference solutions, allowing for easy product tiering." },
+        { question: "Which competing chips can CV180 replace?", answer: "It is designed to compete with and replace chips such as HI3516EV300, SSC337DE, T31 X/ZX/A, and FH8856V210." }
+      ]
+    },
 };
