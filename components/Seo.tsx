@@ -61,10 +61,17 @@ const ensureJsonLd = (id: string, data: JsonLd) => {
   }
 };
 
+const normalizePathname = (pathname: string) => {
+  if (!pathname || pathname === '/') {
+    return '/';
+  }
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+};
+
 const buildAlternateLinks = (pathname: string) => {
   const parts = pathname.split('/').filter(Boolean);
   const rest = parts.slice(1).join('/');
-  const suffix = rest ? `/${rest}` : '';
+  const suffix = rest ? `/${rest}/` : '/';
 
   return {
     en: `${BASE_URL}/en${suffix}`,
@@ -93,9 +100,10 @@ const Seo: React.FC<SeoProps> = ({
   const lang = useLang();
 
   useEffect(() => {
-    const canonical = `${BASE_URL}${location.pathname === '/' ? '' : location.pathname}`;
+    const normalizedPath = normalizePathname(location.pathname);
+    const canonical = `${BASE_URL}${normalizedPath}`;
     const imageUrl = normalizeImageUrl(image);
-    const alternates = buildAlternateLinks(location.pathname);
+    const alternates = buildAlternateLinks(normalizedPath);
     const locale = LOCALE_MAP[lang] || 'en_US';
     const siteName = lang === 'zh' ? 'AIMORELOGY 爱谋科技' : 'AIMORELOGY';
 
