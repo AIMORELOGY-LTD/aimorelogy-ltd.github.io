@@ -1,1220 +1,2094 @@
-{
-  "common": {
-    "home": "主页",
-    "technology": "技术",
-    "comingSoon": "即将推出",
-    "contactSales": "联系销售人员",
-    "solutions": "解决方案"
-  },
-  "header": {
-    "menu": {
-      "productsTitle": "产品",
-      "products": {
-        "flightController": "飞行控制器",
-        "allInOne": "多合一 FC",
-        "afcDesc": "下一代 FPV 飞控的最终答案。"
-      },
-      "solutions": "解决方案",
-      "cloudAiCamera": "云AI相机",
-      "autonomousInspection": "自主检验",
-      "coreComponents": "核心组件",
-      "intelligentVision": "深度学习视觉处理器",
-      "xtensa": "Xtensa处理器",
-      "sophgo": {
-        "bm1688": "16T Edge AI、8-Core ARM，高度集成的 SoC。",
-        "cv186ah": "7.2T 高端视觉处理器 (4K/8MP)。",
-        "cv184": "1.5T 双核视觉 SoC，集成 ISP 4.0。",
-        "cv181": "消费者 RISC-V AIoT SoC (0.2T - 1.0T)。",
-        "cv180": "入门级 RISC-V 视觉 SoC（0.2T）。"
-      },
-      "espressif": {
-        "esp32": "双核 Xtensa 32- 位 LX7，240MHz。"
-      },
-      "support": "技术支持",
-      "contactUs": "联系我们",
-      "documents": "文件"
-    },
-    "search": "搜索",
-    "language": "语言",
-    "lang": {
-      "en": "英语",
-      "zh": "简体中文",
-      "ru": "Русский"
-    },
-    "promo": "需要集成或技术规格方面的帮助吗？",
-    "contactSupport": "我们的工程团队随时准备提供帮助。",
-    "comingSoon": "即将推出"
-  },
-  "footer": {
-    "getInTouch": "联系我们",
-    "getInTouchDesc": "与我们的工程团队讨论解决方案需求。我们为无人机与边缘 AI 提供交付服务。",
-    "salesSupport": "销售与支持",
-    "shenzhen": "深圳总部",
-    "address": "深圳市宝安区西乡街道朗骏广场T2-A 603-12",
-    "form": {
-      "fullName": "姓名",
-      "email": "电子邮件",
-      "message": "我们能为您提供什么帮助？",
-      "send": "发送消息"
-    },
-    "links": {
-      "company": "公司概况",
-      "contact": "联系方式 AIMORELOGY",
-      "careers": "职业机会"
-    },
-    "legal": {
-      "copyright": "深圳市爱谋科技有限公司",
-      "terms": "网站条款",
-      "cookies": "Cookies",
-      "privacy": "关于隐私"
-    },
-    "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务。// 没有任何产品或组件是绝对安全的。// 成本与结果可能因人而异。// 性能取决于使用方式、配置和其他因素。// 请参阅完整的法律声明与免责声明。// AIMORELOGY 致力于尊重人权，避免造成或促成不利影响。"
-  },
-  "home": {
-    "metaTitle": "爱谋科技 AIMORELOGY | FPV/无人机 飞行控制与边缘视觉",
-    "metaDescription": "爱谋科技 AIMORELOGY 提供 FPV/无人机 飞控、边缘 AI 视觉芯片、AI 跟踪与自适应 DShot 控制框架，面向无人机与云台系统。同时提供定制化SOLUTION服务与系统集成。爱谋科技（AIMORELOGY）是算能（SOPHGO）、RT-Thread、RISC-V 的合作伙伴。",
-    "hero": {
-      "slides": {
-        "0": {
-          "category": "新发布",
-          "title": "AFC-V1 即将推出",
-          "description": "集视觉、视频链接、控制于一体的终极一体化飞行控制器。",
-          "navTitle": "AFC-V1",
-          "navDesc": "重新定义无人机的未来。",
-          "buttonText": "即将推出"
-        },
-        "1": {
-          "category": "算法",
-          "title": "自主开发AI追踪",
-          "description": "专有的视觉跟踪算法可提供 <5 毫秒的延迟，在复杂环境中实现强大的目标跟踪。",
-          "navTitle": "AI 追踪",
-          "navDesc": "高性能视觉算法。",
-          "buttonText": "技术预览"
-        },
-        "2": {
-          "category": "框架",
-          "title": "通用自适应 DShot",
-          "description": "DMA-Free、双向 DShot 300/150，适配任意芯片平台，动态误差消除，稳定可靠。",
-          "navTitle": "自适应动态拍摄",
-          "navDesc": "通用控制框架。",
-          "buttonText": "查看规格"
-        }
-      }
-    },
-    "afc": {
-      "kicker": "一体化AI飞行控制器",
-      "tagline": "“视觉 + 图传 + 飞控。”",
-      "subtagline": "下一代 FPV 飞控的最终答案。",
-      "features": {
-        "0": {
-          "title": "1.5 TOPS 边缘 AI",
-          "desc": "以零延迟本地执行复杂的检测模型。"
-        },
-        "1": {
-          "title": "10KM 视频链接",
-          "desc": "HD 传输与高功率 Wi-Fi 模块优化。"
-        },
-        "2": {
-          "title": "8MP 超 HD ISP",
-          "desc": "最多 8M@30FPS 处理。"
-        },
-        "3": {
-          "title": "对星光和全局快门传感器的本机支持。",
-          "desc": "重新定义尺寸和功率。"
-        }
-      }
-    },
-    "tracking": {
-      "kicker": "高度集成的工业设计。",
-      "title": "AI 追踪",
-      "tagline": "“超低延迟。无与伦比的稳健性。”",
-      "status": {
-        "tracking": "状态：追踪",
-        "stable": "状态：稳定",
-        "locked": "状态：已锁定"
-      },
-      "steps": {
-        "0": {
-          "title": "1. 精密锁紧",
-          "desc": "即时目标获取靠近建筑特征。"
-        },
-        "1": {
-          "title": "2. 杂波抑制",
-          "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
-        },
-        "2": {
-          "title": "3. 远距离稳定性",
-          "desc": "对低像素密度的远距离目标进行一致锁定。"
-        }
-      },
-      "cta": "探索算法"
-    },
-    "dshot": {
-      "kicker": "通用框架",
-      "title": "自适应动态拍摄",
-      "subtitle": "DMA-Free。双向。自适应。为任意 MCU 提供专业级 DShot 300/150 支持。",
-      "features": {
-        "0": {
-          "title": "任何芯片平台",
-          "desc": "不需要 DMA 或特定硬件定时器。"
-        },
-        "1": {
-          "title": "自适应协调",
-          "desc": "动态误差消除可校准输出频率以实现完美的稳定性。"
-        },
-        "2": {
-          "title": "主流支持",
-          "desc": "完美兼容BLHeli_32、BLHeli_S、AM32电调。"
-        }
-      },
-      "cta": "查看规格"
-    },
-    "industryNews": "行业新闻",
-    "partners": "战略合作伙伴"
-  },
-  "blog": {
-    "metaTitle": "博客 | AIMORELOGY",
-    "metaDescription": "AIMORELOGY 关于 FPV/无人机 飞控、边缘 AI 视觉与自主系统的洞察。",
-    "kicker": "Nexus Blog",
-    "titleLine1": "Technology",
-    "titleLine2": "Insights",
-    "subtitle": "Deep dives into AI, graphics, and the future of computing.",
-    "loadMore": "Load More Stories",
-    "readStory": "Read Story"
-  },
-  "careers": {
-    "metaTitle": "加入我们 | AIMORELOGY",
-    "metaDescription": "加入 AIMORELOGY，共同打造 FPV/无人机 飞控、边缘 AI 视觉与自主飞行技术。",
-    "hero": {
-      "kicker": "加入我们的团队",
-      "titleLine1": "职业机会",
-      "titleLine2": "AIMORELOGY",
-      "subtitle": "与我们一起构建自主飞行和边缘智能的未来。"
-    },
-    "openPositions": "开放职位",
-    "locations": {
-      "shenzhen": "深圳",
-      "shenzhenTag": "全球总部",
-      "hongkong": "香港",
-      "hongkongTag": "海外事业部"
-    },
-    "none": "没有可用的空缺职位。",
-    "shenzhenNote": "稍后回来查看研发机会。",
-    "hongkongNote": "稍后回来查看运营机会。",
-    "ctaText": "没有看到合适的角色？",
-    "ctaLink": "我们一直在寻找人才。"
-  },
-  "contact": {
-    "metaTitle": "联系我们 | AIMORELOGY",
-    "metaDescription": "联系 AIMORELOGY 获取 FPV/无人机 飞控、边缘 AI 视觉与系统集成服务。",
-    "title": "深圳市爱谋科技有限公司",
-    "subtitle": "关于企业方案有疑问？欢迎通过电话、微信、WhatsApp 或邮件与我们联系。",
-    "salesSupport": "销售与支持",
-    "channels": "手机/微信/WhatsApp",
-    "corporateEmail": "企业邮箱",
-    "locations": {
-      "shenzhen": {
-        "title": "HQ（深圳）",
-        "company": "深圳市爱谋科技有限公司",
-        "address": "深圳市宝安区西乡街道朗骏广场T2栋A区603-12室"
-      },
-      "hk": {
-        "title": "香港",
-        "company": "AIMORELOGY LIMITED",
-        "addressLine1": "世纪工业中心H2 4/F室",
-        "addressLine2": "33-35 坳背湾街火炭",
-        "addressLine3": "香港沙田"
-      }
-    },
-    "form": {
-      "title": "给我们留言",
-      "firstName": "名",
-      "lastName": "姓",
-      "email": "电子邮件",
-      "phone": "电话（可选）",
-      "message": "信息",
-      "send": "发送消息"
-    }
-  },
-  "about": {
-    "metaTitle": "关于 | AIMORELOGY",
-    "metaDescription": "AIMORELOGY 专注 FPV/无人机 飞控、边缘 AI 视觉芯片与跟踪算法，服务无人机与云台系统。",
-    "hero": {
-      "kicker": "深圳市爱谋科技有限公司",
-      "titleLine1": "关于",
-      "titleLine2": "AIMORELOGY",
-      "subtitle": "开创工业界下一代智能飞行控制系统和 AI- 驱动的自主解决方案。"
-    },
-    "mission": {
-      "title": "我们的使命",
-      "p1": "AIMORELOGY是一家致力于革新无人机和机器人行业的科技领先企业。我们专注于先进的边缘人工智能计算、高清视频传输和自主飞行控制算法。",
-      "p2": "我通过将视觉、控制和通信集成到像 CV184XH 系列这样功能强大、结构紧凑的单元中，我们能够帮助工业合作伙伴构建更智能、更安全、更高效的自主系统。"
-    },
-    "partners": {
-      "title": "合作伙伴"
-    },
-    "leadership": {
-      "title": "领导",
-      "name": "柯一冉",
-      "role": "创始人 & CEO",
-      "tags": [
-        "// 系统架构",
-        "// 开源倡导",
-        "// 产品战略"
-      ],
-      "bio": {
-        "intro": "柯一冉是AIMORELOGY的创始人和CEO，带来了从底层硬件到智能系统算法的丰富跨领域经验。",
-        "backgroundTitle": "背景",
-        "background": "在创立公司之前，他深度参与开源硬件和RISC-V生态系统，被公认为国内RISC-V社区的早期建设者之一。",
-        "trackTitle": "业绩记录",
-        "track": "主导了Milk-V Duo、Mars、Pioneer系列的设计、产品化和全球推广，在海外众筹取得了显著成功。",
-        "p1": "其在芯片与底层系统方面的经验，塑造了深厚的技术思考与产品落地能力，并与开发者文化高度契合。他认为技术的价值不只是指标，更在于让更多人真正使用、触达并改变世界。",
-        "p2": "2025 年后，他将重心转向智能无人机与 AI 系统，创立 AIMORELOGY，专注飞控、视觉感知、边缘 AI 推理与智能任务系统。",
-        "footer": "柯一冉本质上仍然是一名工程师：亲自审查系统架构，参与飞控链路设计，并优先考虑底层可靠性和实际用户场景。"
-      },
-      "philosophy": {
-        "title": "理念",
-        "items": [
-          {
-            "title": "现实第一",
-            "desc": "技术必须在现实中可用，而不仅仅是在演示中。"
-          },
-          {
-            "title": "以人为本",
-            "desc": "创新应该改善人与技术之间的关系。"
-          },
-          {
-            "title": "简单",
-            "desc": "复杂的系统必须提供简单、可靠的体验。"
-          },
-          {
-            "title": "相信",
-            "desc": "每一个产品都必须具备“值得信赖”的稳定性和安全性。"
-          }
-        ]
-      }
-    },
-    "locations": {
-      "title": "全球影响力",
-      "companyName": "公司名称",
-      "address": "地址",
-      "contacts": "主要联系人",
-      "shenzhen": {
-        "title": "深圳",
-        "tag": "全球总部",
-        "company": "深圳市爱谋科技有限公司",
-        "addressLine1": "朗骏广场T2号楼A区603-12室",
-        "addressLine2": "深圳市宝安区西乡街道铁仔路",
-        "contactName": "柯一冉"
-      },
-      "hk": {
-        "title": "香港",
-        "tag": "海外事业部",
-        "company": "AIMORELOGY LIMITED",
-        "addressLine1": "世纪工业中心H2 4/F室",
-        "addressLine2": "33-35 坳背湾街火炭",
-        "addressLine3": "香港沙田",
-        "contactName": "谢旭涵"
-      }
-    },
-    "cta": {
-      "title": "准备好创新了吗？",
-      "subtitle": "请立即联系我们的销售团队，讨论我们的 AI 解决方案如何加速您的业务发展。",
-      "email": "立即给我们发电子邮件"
-    }
-  },
-  "aiTracking": {
-    "metaTitle": "自研 AI 跟踪 | AIMORELOGY",
-    "metaDescription": "面向 FPV/无人机 的低时延视觉跟踪与云台稳定，支持复杂场景目标锁定。",
-    "breadcrumb": "AI 追踪算法",
-    "hero": {
-      "kicker": "核心技术",
-      "badge": "自研算法",
-      "titleLine1": "超快",
-      "titleLine2": "视觉追踪",
-      "subtitle": "鲁棒的单目标跟踪 (SOT) 具有适用于复杂环境的 Re-ID 功能。",
-      "desc": "针对低功耗边缘检测平台进行了优化。",
-      "cta": "在标准嵌入式 SDK 硬件上实现 2ms-5ms 推理延迟，同时在遮挡期间保持锁定鲁棒性。",
-      "imageAlt": "AI 跟踪横幅"
-    },
-    "performance": {
-      "title": "性能数据",
-      "desc": "算法针对 RISC-V 与 ARM 平台的 INT8 量化高度优化，即便入门芯片也能达到工业级实时表现。",
-      "testTitle": "测试条件",
-      "test": {
-        "input": "输入尺寸",
-        "quant": "量化",
-        "batch": "批量大小"
-      },
-      "table": {
-        "platform": "平台（算力）",
-        "latency": "推理速度（延迟）",
-        "ultraFast": "超快"
-      }
-    },
-    "capabilities": {
-      "title": "强大的现实世界跟踪",
-      "subtitle": "我们的专有算法从初始采集到远程跟踪保持一致的锁定，实时滤除复杂的背景杂波和静态障碍物。",
-      "steps": {
-        "0": {
-          "alt": "追踪活动",
-          "status": "状态：跟踪",
-          "title": "1. 精密锁紧",
-          "desc": "即时目标获取靠近建筑特征。"
-        },
-        "1": {
-          "alt": "复杂场景",
-          "status": "状态：稳定",
-          "title": "2. 杂波抑制",
-          "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
-        },
-        "2": {
-          "alt": "远程",
-          "status": "状态：锁定",
-          "title": "3. 远距离稳定性",
-          "desc": "对低像素密度的远距离目标进行一致锁定。"
-        }
-      }
-    },
-    "features": {
-      "0": {
-        "title": "超低延迟",
-        "desc": "<5ms 处理时间确保无人机直接闭环控制，无抖动或振荡。"
-      },
-      "1": {
-        "title": "轻量级型号",
-        "desc": "高度优化的 INT8 量化允许部署在 CV181x 等经济高效的芯片上。"
-      },
-      "2": {
-        "title": "鲁棒Re-ID",
-        "desc": "即使在完全遮挡后也能保持目标身份，防止“目标漂移”到背景物体。"
-      },
-      "3": {
-        "title": "多尺度输入",
-        "desc": "支持速度128x128，精度256x256，适应不同传感器分辨率。"
-      }
-    },
-    "cta": {
-      "title": "立即集成 AI 跟踪",
-      "subtitle": "作为 CV18xx 系列芯片的软件 SDK 提供，或预闪存在我们的 AFC-V1 飞行控制器上。",
-      "primary": "请求评估",
-      "secondary": "查看硬件"
-    }
-  },
-  "dshot": {
-    "metaTitle": "自适应 DShot 控制协议 | AIMORELOGY",
-    "metaDescription": "面向 FPV/无人机 ESC 的自适应 DShot 控制协议，双向通信、稳定输出、无需 DMA。",
-    "breadcrumb": "自适应动态拍摄",
-    "hero": {
-      "badge": "自适应动态拍摄",
-      "titleLine1": "普遍的",
-      "titleLine2": "拍摄控制",
-      "subtitle": "DMA-免费，双向DShot 300/150，适应任何MCU，定时稳定，抖动低。",
-      "stats": {
-        "0": "需要零 DMA",
-        "1": {
-          "value": "300/150",
-          "unit": "k",
-          "label": "双向模式"
-        }
-      },
-      "imageAlt": "自适应 Dshot 信号图"
-    },
-    "core": {
-      "title": "核心创新",
-      "subtitle": "AIMORELOGY Adaptive DShot 为任何芯片平台带来专业级 ESC 控制，无需特殊硬件。",
-      "cards": {
-        "0": {
-          "title": "通用便携性",
-          "desc": "在 RISC-V、ARM 和 Xtensa 上运行，无需 DMA 或硬件定时器。"
-        },
-        "1": {
-          "title": "自适应定时",
-          "desc": "自动校准输出频率以消除时序漂移和错误。"
-        },
-        "2": {
-          "title": "双向遥测",
-          "desc": "针对 RPM、温度和故障状态提供可靠的 ESC 反馈。"
-        },
-        "3": {
-          "title": "生产就绪",
-          "desc": "已在 BLHeli_32、BLHeli_S 和 AM32 上进行验证。"
-        }
-      }
-    },
-    "comparison": {
-      "title": "协议比较",
-      "headers": {
-        "feature": "特征",
-        "pwm": "PWM",
-        "hardware": "硬件数码相机",
-        "adaptive": "自适应动态拍摄"
-      },
-      "rows": {
-        "0": {
-          "feature": "硬件要求",
-          "pwm": "定时器 PWM",
-          "hardware": "DMA + 定时器",
-          "adaptive": "纯软件"
-        },
-        "1": {
-          "feature": "双向",
-          "pwm": "不",
-          "hardware": "有限的",
-          "adaptive": "全面遥测"
-        },
-        "2": {
-          "feature": "抗噪性",
-          "pwm": "低的",
-          "hardware": "中等的",
-          "adaptive": "高的"
-        },
-        "3": {
-          "feature": "可移植性",
-          "pwm": "低的",
-          "hardware": "中等的",
-          "adaptive": "任意 MCU"
-        }
-      }
-    },
-    "deepDive": {
-      "steps": {
-        "0": {
-          "title": "信号编码",
-          "desc": "带有 CRC 保护的 24- 位数据包可确保命令完整性。"
-        },
-        "1": {
-          "title": "自适应采样",
-          "desc": "动态边缘检测与 ESC 时序对齐，无需 DMA。"
-        },
-        "2": {
-          "title": "纠错",
-          "desc": "自调谐可补偿时钟漂移和电缆噪声。"
-        }
-      },
-      "title": "为什么自适应 DShot 很重要",
-      "p1": "传统的 DShot 依赖于严格的计时和 DMA 访问。",
-      "p2": "在许多 MCU 上，这要么花费宝贵的硬件定时器，要么使双向遥测变得不可靠。",
-      "bullets": {
-        "0": "无需特殊外围设备",
-        "1": "在长电线和嘈杂的 ESC 中实现稳定控制",
-        "2": "从业余爱好级无人机到工业级无人机"
-      }
-    },
-    "cta": {
-      "title": "准备好集成 Adaptive DShot 了吗？",
-      "subtitle": "请联系我们获取参考固件、SDK 访问权限和集成支持。",
-      "primary": "联系销售人员"
-    }
-  },
-  "solution": {
-    "requestDemo": "请求演示",
-    "overview": "概述",
-    "capabilities": "能力",
-    "applications": "应用领域",
-    "discuss": "讨论你的项目",
-    "download": "下载手册"
-  },
-  "solutionDemo": {
-    "metaTitle": "自主巡检 | AIMORELOGY",
-    "metaDescription": "面向 FPV/无人机 的自主巡检方案，覆盖能源与工业场景。",
-    "title": "自主检验",
-    "subtitle": "AI- 驱动 UAV/FPV 进行能源和工业巡检。",
-    "overview": {
-      "title": "自动化现场操作",
-      "content": "规划路线、捕获 4K 图像并实时检测异常情况。"
-    },
-    "stats": {
-      "0": "我们的检查堆栈将边缘推理与云分析结合起来，以缩短维护周期并降低风险。",
-      "1": "误报",
-      "2": "最大分辨率",
-      "3": "正常运行时间"
-    },
-    "features": {
-      "0": {
-        "title": "多光谱扫描",
-        "desc": "RGB 和热管道揭示了肉眼看不见的缺陷。"
-      },
-      "1": {
-        "title": "即时警报",
-        "desc": "设备上的推理会触发实时通知和证据剪辑。"
-      },
-      "2": {
-        "title": "合规就绪报告",
-        "desc": "自动生成的 PDF 包含缺陷图、时间戳和元数据。"
-      },
-      "3": {
-        "title": "自主任务",
-        "desc": "基于航点的巡逻具有动态避障功能。"
-      },
-      "4": {
-        "title": "云分析",
-        "desc": "用于趋势分析和资产健康评分的车队仪表板。"
-      },
-      "5": {
-        "title": "远程链接",
-        "desc": "跨大型检查区域稳定的 HD 视频和遥测。"
-      }
-    },
-    "apps": {
-      "0": "太阳能发电场",
-      "1": "风力涡轮机",
-      "2": "工业用地"
-    },
-    "cta": {
-      "title": "大规模部署检查",
-      "text": "与我们的团队讨论定制工作流程、集成传感器并安全地部署任务。"
-    }
-  },
-  "aiCamera": {
-    "metaTitle": "云端 AI 摄像机方案 | AIMORELOGY",
-    "metaDescription": "云端 AI 摄像机方案，结合边缘 AI 与云平台，实现远程监控与规模化部署。",
-    "breadcrumb": "云AI相机",
-    "hero": {
-      "kicker": "解决方案",
-      "badge": "边缘 + 云端",
-      "titleLine1": "云 AI",
-      "titleLine2": "相机平台",
-      "desc": "端到端智能相机堆栈将边缘推理与云编排相结合，以实现实时监控和可扩展部署。",
-      "cta": "请求演示",
-      "ready": "SDK 已准备好用于 CV18xx 平台。",
-      "uiVersion": "UI 版本 1.0",
-      "imageAlt": "云AI相机接口",
-      "overlay": "活体检测",
-      "chipLabel": "参考芯片"
-    },
-    "value": {
-      "0": {
-        "title": "云端管理",
-        "desc": "集中设备配置、模型部署和车队监控。"
-      },
-      "1": {
-        "title": "可扩展的机队",
-        "desc": "使用统一的策略和 OTA 更新来操作数百个摄像机。"
-      },
-      "2": {
-        "title": "视觉优先硬件",
-        "desc": "优化的 SoC 和 ISP 管道可实现始终在线的智能。"
-      }
-    },
-    "specs": {
-      "title": "硬件规格",
-      "subtitle": "针对始终在线视觉进行优化的集成 SoC 平台。",
-      "items": {
-        "0": {
-          "label": "芯片"
-        },
-        "1": {
-          "label": "AI 性能",
-          "value": "1.5 TOPS INT8"
-        },
-        "2": {
-          "label": "ISP",
-          "value": "8MP @ 30FPS"
-        },
-        "3": {
-          "label": "视频",
-          "value": "H.265/H.264"
-        },
-        "4": {
-          "label": "连接性",
-          "value": "Wi-Fi / 以太网 / LTE"
-        }
-      },
-      "diagram": "系统框图",
-      "sip": "系统级封装",
-      "blocks": {
-        "0": {
-          "title": "传感器",
-          "bus": "MIPI"
-        },
-        "1": {
-          "title": "贮存",
-          "bus": "SDIO"
-        },
-        "2": {
-          "title": "无线的"
-        },
-        "3": {
-          "title": "以太网"
-        },
-        "4": {
-          "title": "USB",
-          "bus": "USB2.0"
-        },
-        "5": {
-          "title": "力量",
-          "bus": "PMIC"
-        }
-      }
-    },
-    "software": {
-      "title": "软件和云堆栈",
-      "cloudTitle": "云平台",
-      "cloudItems": [
-        "车队管理",
-        "模型部署",
-        "分析仪表板",
-        "OTA 更新"
-      ],
-      "deviceTitle": "边缘设备",
-      "appTitle": "应用领域",
-      "appTags": [
-        "检测",
-        "追踪",
-        "计数",
-        "警报"
-      ],
-      "hal": "HAL / 驱动程序",
-      "os": "Linux 系统"
-    },
-    "capabilities": {
-      "title": "核心能力",
-      "items": {
-        "0": {
-          "title": "事件消息传递",
-          "desc": "MQTT/WebSocket 警报具有可配置的阈值。"
-        },
-        "1": {
-          "title": "图像智能",
-          "desc": "实时检测、跟踪和重新ID管道。"
-        },
-        "2": {
-          "title": "全球访问",
-          "desc": "通过基于角色的访问确保远程查看的安全。"
-        },
-        "3": {
-          "title": "多流视频",
-          "desc": "RTSP/HTTP 用于监控和存储的流式传输。"
-        },
-        "4": {
-          "title": "低延迟",
-          "desc": "边缘推断时间低于 30 毫秒，可实现响应式控制。"
-        },
-        "5": {
-          "title": "安全",
-          "desc": "安全启动、签名固件和加密传输。"
-        }
-      }
-    },
-    "cta": {
-      "title": "使用云 AI 相机构建",
-      "subtitle": "获取完整的参考设计、SDK 和云集成套件。",
-      "secondary": "查看CV184平台"
-    }
-  },
-  "products": {
-    "common": {
-      "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
-      "notFound": "404",
-      "returnHome": "返回主页",
-      "requestQuote": "请求报价",
-      "productOverview": "产品概述",
-      "keyHighlights": "主要亮点",
-      "technicalSpecs": "技术规格",
-      "specCategory": "类别",
-      "specParameter": "范围",
-      "specValue": "价值",
-      "applications": "应用领域",
-      "ctaTitle": "使用 {{name}} 开发您的解决方案",
-      "ctaText": "We offer professional system integration and turnkey solutions based on the {{name}} platform. Accelerate your product launch with our engineering expertise.",
-      "ctaButton": "获取解决方案建议",
-      "series": "{{series}}系列"
-    },
-    "sophgo": {
-      "bm1688": {
-        "metaTitle": "SOPHGO BM1688 TPU 边缘AI SoC | AIMORELOGY",
-        "metaDescription": "SOPHGO BM1688 集成 8 核 ARM 与 16 TOPS TPU，支持全景拼接、FPV/无人机 视觉与云台跟踪的边缘 AI 推理。"
-      },
-      "cv186ah": {
-        "metaTitle": "SOPHGO CV186AH 视觉AI SoC | AIMORELOGY",
-        "metaDescription": "SOPHGO CV186AH 提供 7.2 TOPS 视觉处理能力，支持 4K 多路分析、深度计算与 FPV/无人机 障碍物感知。"
-      },
-      "cv184": {
-        "metaTitle": "SOPHGO CV184x 边缘视觉 SoC - ISP V4.0、Intra4、TPU | AIMORELOGY",
-        "metaDescription": "SOPHGO CV184x 采用双核（A53+C906）、1.0~1.5 TOPS TPU、ISP V4.0（3DNR/DRC/PFR）与 Intra4 编码，并与 CV181 引脚兼容。",
-        "tagline": "双核视觉 SoC，集成 ISP V4.0 与 Intra4 编码",
-        "description": "新一代边缘视觉 SoC，集成 ISP V4.0、Intra4 编码与 OpenCLIP 支持。",
-        "longDescription": [
-          "CV184x 系列是面向消费、运营商与专业安防市场的高性能视觉处理器。它采用双核架构（ARM Cortex-A53 @ 1.1GHz + RISC-V C906 @ 800MHz），并配备自研 TPU，最高可达 1.5 TOPS（INT8），支持 BF16 混合精度。",
-          "CV184x 引入全新的 ISP V4.0 引擎，提供星光级 3DNR、数字宽动态（DRC）、去雾与消紫边（PFR）等全面画质增强。改进的 MCTF 算法显著降低运动拖影与空间噪声。",
-          "为提升存储与传输效率，芯片支持自研智能编码引擎，兼容 H.265/H.264/MJPEG。独有的 Intra4 模式在复杂运动场景下比标准编码拥有更高压缩率与更好的纹理保留。",
-          "CV184x 完全兼容 OpenCLIP 多模态模型，可实现通用目标检测、图文检索与 zero-shot 推理，并提供丰富的 turnkey 算法库，包括人脸检测、行人/车辆跟踪与安全帽检测等。",
-          "为无缝迁移而设计，CV184x 系列与 CV181 系列引脚兼容，共享 SDK、ISP 调参工具与深度学习环境。"
-        ],
-        "highlights": [
-          "双核：ARM A53（1.1GHz）+ RISC-V C906（800MHz）",
-          "TPU：1.0~1.5 TOPS @ INT8 / BF16 混合精度",
-          "ISP V4.0：3DNR、DRC、PFR、去雾、畸变校正",
-          "Intra4 编码：更高压缩率，更好的纹理保留",
-          "OpenCLIP 支持：zero-shot、图文检索",
-          "与 CV181 系列引脚兼容"
-        ],
-        "specs": [
-          {
-            "category": "处理器",
-            "key": "CPU",
-            "value": "双核 ARM Cortex-A53 + RISC-V C906"
-          },
-          {
-            "category": "处理器",
-            "key": "频率",
-            "value": "最高 1.1GHz（A53）/ 800MHz（C906）"
-          },
-          {
-            "category": "AI",
-            "key": "TPU",
-            "value": "1.0 ~ 1.5 TOPS @ INT8 / BF16"
-          },
-          {
-            "category": "内存",
-            "key": "集成",
-            "value": "DDR3 512Mb / 1Gb / 2Gb / 4Gb"
-          },
-          {
-            "category": "视频",
-            "key": "ISP",
-            "value": "ISP V4.0（4K、3DNR、DRC、PFR）"
-          },
-          {
-            "category": "视频",
-            "key": "编码",
-            "value": "H.265/H.264/MJPEG + Intra4"
-          },
-          {
-            "category": "视频",
-            "key": "分辨率",
-            "value": "最高 8MP@30fps + 720P@30fps"
-          },
-          {
-            "category": "接口",
-            "key": "摄像头",
-            "value": "2x MIPI CSI（2L/4L/DVP）"
-          },
-          {
-            "category": "接口",
-            "key": "显示",
-            "value": "1x MIPI DSI（2L/4L），LVDS、RGB、BT.656/1120"
-          },
-          {
-            "category": "外设",
-            "key": "连接",
-            "value": "USB 2.0、SD 3.0、以太网（MAC PHY/RMII）"
-          },
-          {
-            "category": "外设",
-            "key": "低速",
-            "value": "UART、PWM、GPIO、I2C、SPI、RTC"
-          },
-          {
-            "category": "系统",
-            "key": "特性",
-            "value": "快速启动、安全启动、低功耗"
-          }
-        ],
-        "detailedFeatures": [
-          {
-            "title": "ISP V4.0 引擎",
-            "description": "MCTF 3DNR、数字宽动态（DRC）与消紫边（PFR），低照与逆光成像更优秀。"
-          },
-          {
-            "title": "Intra4 编码",
-            "description": "优化的小块编码在复杂纹理中保留更多细节，并降低码率以提升存储效率。"
-          },
-          {
-            "title": "OpenCLIP 多模态",
-            "description": "支持图文匹配、zero-shot 推理与场景微调，适配多样 AI 应用。"
-          },
-          {
-            "title": "高性能 TPU",
-            "description": "INT8 最高 1.5 TOPS，支持 BF16；在 ResNet50 与 YOLOv5s 基准上优于上一代。"
-          },
-          {
-            "title": "丰富算法库",
-            "description": "包含人脸/人形/车辆检测、安全帽识别、手势识别、婴儿哭声检测与语义分割。"
-          },
-          {
-            "title": "平滑迁移",
-            "description": "硬件与 CV181 引脚兼容，共享 SDK 与工具链，降低升级成本。"
-          }
-        ],
-        "detailSections": [
-          {
-            "id": "tpu-acceleration",
-            "title": "TPU 性能与基准",
-            "description": "自研 TPU 相比上一代带来显著提升，可支持 ResNet、YOLO、MobileNet 等复杂模型。",
-            "stats": [
-              {
-                "label": "ResNet50 v2",
-                "value": "38.5 FPS"
-              },
-              {
-                "label": "YOLO v5s",
-                "value": "28.3 FPS"
-              },
-              {
-                "label": "MobileNet v2",
-                "value": "261.9 FPS"
-              },
-              {
-                "label": "OpenCLIP",
-                "value": "4.07 FPS"
-              }
-            ],
-            "bullets": [
-              "基于 CV1842C-P（1.5 TOPS）测试。",
-              "ResNet50 v2：相比 CV181 提升 40%。",
-              "YOLO v5s：相比 CV181 提升 81%。",
-              "MobileNet v2：相比 CV181 提升 51%。",
-              "支持 BF16 混合精度，准确率更高。"
-            ]
-          },
-          {
-            "id": "isp-v4",
-            "title": "ISP V4.0 影像管线",
-            "description": "全新升级的成像引擎，强调降噪、动态范围与色彩准确性。",
-            "bullets": [
-              "3DNR（MCTF）：降低运动拖影与时间噪声，0.1lux 低照表现更佳。",
-              "DRC（动态范围压缩）：提升暗部亮度且不过曝高光，逆光场景优于同类方案。",
-              "PFR（消紫边）：无色偏地去除边缘紫边。",
-              "边缘增强：基于频域的锐化区分细纹理与强边缘。",
-              "色噪抑制：抑制低频色噪与边缘溢色。"
-            ]
-          },
-          {
-            "id": "algorithms",
-            "title": "智能 AI 算法",
-            "description": "面向消费与安防场景的 turnkey 方案。",
-            "bullets": [
-              "人脸：检测、识别、抓拍、关键点（5 点）。",
-              "人体/人形：行人检测、头部检测、骨骼关键点。",
-              "车辆：机动车/非机动车检测、车牌识别。",
-              "行为：手势识别、跌倒检测、客流统计。",
-              "安防：安全帽检测、入侵检测（Tripwire）。",
-              "音频：婴儿哭声检测、语音指令识别（如“Call”“Screen On”）。",
-              "其他：猫狗识别、语义分割。"
-            ]
-          },
-          {
-            "id": "variant-comparison",
-            "title": "CV184x 变体对比",
-            "description": "根据应用需求选择合适型号。",
-            "table": {
-              "headers": [
-                "特性",
-                "CV1841C",
-                "CV1842C-P",
-                "CV1842H-P",
-                "CV1843H-P"
-              ],
-              "rows": [
-                [
-                  "处理器",
-                  "CA53 1.0GHz + C906 600MHz",
-                  "CA53 1.1GHz + C906 800MHz",
-                  "CA53 1.1GHz + C906 800MHz",
-                  "CA53 1.1GHz + C906 800MHz"
-                ],
-                [
-                  "DDR3 SiP",
-                  "1Gb",
-                  "2Gb",
-                  "2Gb",
-                  "4Gb"
-                ],
-                [
-                  "TPU（INT8）",
-                  "~1.0 TOPS",
-                  "~1.5 TOPS",
-                  "~1.5 TOPS",
-                  "~1.5 TOPS"
-                ],
-                [
-                  "封装",
-                  "QFN-88 9x9",
-                  "BGA 10x10",
-                  "BGA 10x10",
-                  "BGA 10x10"
-                ],
-                [
-                  "视频输入",
-                  "MIPI 2L+1L 或 4L",
-                  "MIPI 2L+2L+DVP 或 4L",
-                  "MIPI 2L+2L+DVP 或 4L",
-                  "MIPI 2L+2L+DVP 或 4L"
-                ],
-                [
-                  "视频输出",
-                  "MIPI DSI(2L)/BT/RGB",
-                  "MIPI DSI(4L)/BT/LVDS/RGB",
-                  "MIPI DSI(4L)/BT/LVDS/RGB",
-                  "MIPI DSI(4L)/BT/LVDS/RGB"
-                ],
-                [
-                  "以太网",
-                  "10/100 MAC PHY",
-                  "10/100 RMII + MAC PHY",
-                  "10/100 RMII + MAC PHY",
-                  "10/100 RMII + MAC PHY"
-                ]
-              ],
-              "note": "所有型号共享 SDK、ISP 调参与 TPU 工具，同封装内引脚兼容。"
-            }
-          }
-        ],
-        "faqs": [
-          {
-            "question": "Intra4 编码的优势是什么？",
-            "answer": "Intra4 通过更小块编码，在复杂运动场景中保留更多细节与纹理，低码率下更清晰。"
-          },
-          {
-            "question": "CV184x 是否兼容 CV181？",
-            "answer": "是。CV184x 与 CV181 系列引脚兼容，并共享 SDK、ISP 调参工具与 AI 开发环境。"
-          },
-          {
-            "question": "TPU 支持哪些模型？",
-            "answer": "支持主流框架（Caffe/TensorFlow/Pytorch/ONNX），并重点优化 ResNet、YOLO、MobileNet 与 OpenCLIP。"
-          }
-        ],
-        "ui": {
-          "hero": {
-            "seriesLabel": "{{series}} 计算架构"
-          },
-          "productBrief": "产品概述",
-          "systemArchitecture": "系统架构",
-          "keyInnovation": "关键创新 {{index}}",
-          "tpuEyebrow": "自研 TPU 1.5T",
-          "tpuTitle": "TPU 性能",
-          "tpuBenchmarks": "基准测试 (FPS @ INT8)",
-          "ispEyebrow": "自研 ISP V4.0",
-          "ispTitle": "影像管线",
-          "ispEngineLabel": "ENGINE-{{index}}",
-          "aiLibraryTitle": "AI 模型库",
-          "aiCategories": [
-            "人脸",
-            "人体",
-            "车辆",
-            "行为"
-          ],
-          "variantComparison": "变体对比",
-          "deploymentScenarios": "商业部署场景",
-          "datasheetTitle": "规格书",
-          "datasheetVersion": "V1.2.10 技术参考",
-          "ctaTitle": "使用 <0>{{name}}</0> 构建",
-          "ctaButton": "获取技术资料",
-          "alt": {
-            "hero": "SOPHGO 背景图",
-            "architecture": "CV184x 架构图",
-            "cta": "CTA 背景图"
-          }
-        },
-        "applications": [
-          {
-            "title": "智能相机",
-            "image": "/Smart Cameras.webp"
-          },
-          {
-            "title": "门禁系统",
-            "image": "/Access Control.webp"
-          },
-          {
-            "title": "机器人",
-            "image": "/Robotics.webp"
-          },
-          {
-            "title": "4K IPC",
-            "image": "/4K IPC.webp"
-          },
-          {
-            "title": "无人机",
-            "image": "/Drones.webp"
-          },
-          {
-            "title": "行车记录仪",
-            "image": "/Dash Cam.webp"
-          }
-        ]
-      },
-      "cv181": {
-        "metaTitle": "SOPHGO CV181 RISC-V 视觉 SoC | AIMORELOGY",
-        "metaDescription": "SOPHGO CV181 0.5-1.0 TOPS 低功耗 AI，适合轻量级 FPV/无人机 传感、智能家居与门禁视觉。"
-      },
-      "cv180": {
-        "metaTitle": "SOPHGO CV180 入门级 RISC-V 视觉 SoC | AIMORELOGY",
-        "metaDescription": "SOPHGO CV180 0.2 TOPS RISC-V 视觉 SoC，适用于微型 FPV/无人机 成像与电池设备。"
-      }
-    },
-    "espressif": {
-      "esp32s3": {
-        "metaTitle": "Espressif ESP32-S3-WROOM-1 Wi-Fi/蓝牙 模组 | AIMORELOGY",
-        "metaDescription": "ESP32-S3-WROOM-1 双核 Wi-Fi + Bluetooth LE 模组，支持 AI 加速，适用于智能家居、语音与边缘 AI 设备。"
-      }
-    },
-    "afcComingSoon": {
-      "metaTitle": "即将推出 | AIMORELOGY",
-      "metaDescription": "AIMORELOGY AFC-V1 一体化 FPV/无人机 飞行控制器，融合视觉、图传与控制。",
-      "badge": "深圳市爱谋科技有限公司",
-      "title": "即将推出",
-      "subtitle": "AFC-V1",
-      "desc": "集视觉、视频链路和控制于一体的终极一体化飞行控制器即将面世。",
-      "tagline": "重新定义 FPV 飞控的未来。",
-      "returnHome": "返回首页",
-      "contactSales": "联系销售人员了解规格"
-    }
-  },
-  "legal": {
-    "lastUpdated": "最后更新：{{date}}"
-  },
-  "privacy": {
-    "metaTitle": "隐私政策 | AIMORELOGY",
-    "metaDescription": "了解 AIMORELOGY 如何收集、使用并保护您的信息。",
-    "title": "隐私政策 | AIMORELOGY",
-    "intro": {
-      "p1": "AIMORELOGY LIMITED 及其附属公司（“AIMORELOGY”、“我们”、“我们”或“我们的”）致力于保护您的隐私。",
-      "p2": "本隐私政策解释了当您访问我们的网站或使用我们的产品和服务时，我们如何收集、使用、披露和保护您的信息。"
-    },
-    "sections": {
-      "collection": {
-        "title": "1. 收集您的信息",
-        "p1": "我们可能会通过多种方式收集有关您的信息。",
-        "items": {
-          "0": {
-            "title": "我们可能在网站上收集的信息包括：",
-            "desc": "您在本网站注册或选择参加与本网站相关的各种活动时自愿向我们提供的个人身份信息，例如您的姓名、送货地址、电子邮件地址和电话号码。"
-          },
-          "1": {
-            "title": "衍生数据",
-            "desc": "当您访问本网站时，我们的服务器自动收集的信息，例如您的 IP 地址、您的浏览器类型、您的操作系统、您的访问时间以及您在访问本网站之前和之后直接查看的页面。"
-          }
-        }
-      },
-      "use": {
-        "title": "2. 您的信息的使用",
-        "p1": "准确的信息可以帮助我们为您提供顺畅、高效、个性化的体验。具体而言，我们可能使用通过网站收集的信息用于：",
-        "items": {
-          "0": "创建并管理您的帐户。",
-          "1": "处理您的订单并交付产品（例如 CV184XH 飞行控制器）。",
-          "2": "向您发送有关您的帐户或订单的电子邮件。",
-          "3": "响应产品和客户服务请求。",
-          "4": "编制匿名统计数据和分析以供内部使用。",
-          "5": "向您发送新闻通讯（如果您选择加入）。"
-        }
-      },
-      "disclosure": {
-        "title": "3. 披露您的信息",
-        "p1": "我们可能在以下情况下共享您的信息，包括：",
-        "items": {
-          "0": {
-            "title": "依据法律或保护权利",
-            "desc": "如果我们认为为了响应法律程序、调查或纠正潜在的违反我们政策的行为或保护他人的权利、财产和安全，有必要发布有关您的信息。"
-          },
-          "1": {
-            "title": "第三方服务提供商",
-            "desc": "我们可能会与为我们或代表我们提供服务的第三方共享您的信息，包括支付处理、数据分析、电子邮件发送、托管服务、客户服务和营销协助。"
-          }
-        }
-      },
-      "security": {
-        "title": "4. 您的信息安全",
-        "p1": "我们使用管理、技术和物理安全措施来帮助保护您的个人信息。"
-      },
-      "contact": {
-        "title": "虽然我们已采取合理措施来保护您提供给我们的个人信息，但请注意，尽管我们付出了努力，但没有任何安全措施是完美或坚不可摧的，也无法保证任何数据传输方法不会被拦截或其他类型的滥用。",
-        "p1": "如果您对本隐私政策有疑问或意见，请通过以下方式联系我们："
-      }
-    },
-    "contact": {
-      "company": "AIMORELOGY LIMITED",
-      "addressLine1": "世纪工业中心H2 4/F室",
-      "addressLine2": "33-35 香港沙田火炭坳背湾街",
-      "emailLabel": "电子邮件",
-      "email": "info@aimorelogy.com"
-    }
-  },
-  "terms": {
-    "metaTitle": "服务条款 | AIMORELOGY",
-    "metaDescription": "查看 AIMORELOGY 网站与产品的使用条款。",
-    "title": "服务条款 | AIMORELOGY",
-    "intro": "本服务条款（“条款”）调整您对 AIMORELOGY LIMITED（“公司”，“我们”）网站及产品与服务的使用。访问或使用本网站即表示您同意受本条款约束。",
-    "sections": {
-      "license": {
-        "title": "1. 使用许可",
-        "p1": "允许您暂时下载并使用 AIMORELOGY 网站上的材料（信息或软件），仅限于个人、非商业、暂时浏览。这是一个许可，而非所有权转让，在该许可下，您不得：",
-        "items": {
-          "0": "修改或者复制材料；",
-          "1": "将这些材料用于任何商业目的或任何公开展示（商业或非商业）；",
-          "2": "尝试对 AIMORELOGY 网站上包含的任何软件进行反编译或逆向工程；",
-          "3": "删除材料中的任何版权或其他专有符号；",
-          "4": "或者"
-        }
-      },
-      "disclaimer": {
-        "title": "2. 免责声明",
-        "p1": "AIMORELOGY 网站上的材料按“现状”提供。AIMORELOGY 不作任何明示或默示保证，并特此声明不承担任何保证，包括（但不限于）适销性、适用于特定用途或不侵犯等默示保证或条件。"
-      },
-      "limitations": {
-        "title": "3. 局限性",
-        "p1": "在任何情况下，AIMORELOGY 或其供应商均不对因使用或无法使用 AIMORELOGY 网站上的材料而造成的任何损害（包括但不限于数据或利润损失或由于业务中断而造成的损害）承担责任，即使 AIMORELOGY 或授权代表已被口头或书面通知发生此类损害的可能性。"
-      },
-      "usage": {
-        "title": "4. 产品使用与安全",
-        "p1": "我们的产品，包括飞行控制器和 Edge AI 模块，专为工业和专业用途而设计。",
-        "items": {
-          "0": "您同意按照所有适用的当地法律和航空法规使用我们的产品。",
-          "1": "AIMORELOGY 对因误用、不正确安装或修改我们的硬件或软件而造成的任何损害、伤害或法律责任不承担任何责任。",
-          "2": "用户有责任确保使用我们技术部署的任何自主系统都能安全运行。"
-        }
-      },
-      "law": {
-        "title": "5. 适用法律",
-        "p1": "这些条款和条件受香港 SAR 法律管辖并按其解释，并且您不可撤销地服从该地区法院的专属管辖权。"
-      },
-      "changes": {
-        "title": "6. 条款变更",
-        "p1": "我们保留随时修改本条款的权利。修订生效后，继续使用本服务即表示您接受修订后的条款。"
-      }
-    }
-  },
-  "cookies": {
-    "metaTitle": "Cookie 政策 | AIMORELOGY",
-    "metaDescription": "了解 AIMORELOGY 如何使用 Cookie 以及如何管理偏好。",
-    "title": "Cookie 政策 | AIMORELOGY",
-    "intro": "本 Cookie 政策解释了什么是 Cookie、AIMORELOGY 如何在我们的网站上使用 Cookie，以及您对 Cookie 的选择。",
-    "sections": {
-      "what": {
-        "title": "1. 什么是 Cookie？",
-        "p1": "Cookie 是由您访问的网站发送到您浏览器的小型文本文件。Cookie 文件会存储在您的浏览器中，使服务或第三方能够识别您以便优化后续访问。"
-      },
-      "use": {
-        "title": "2. 我们如何使用 Cookie",
-        "p1": "我们可能在您使用本服务时在您的浏览器中存放若干 Cookie，目的如下：",
-        "items": {
-          "0": {
-            "title": "基本饼干",
-            "desc": "启用服务的某些功能，例如身份验证和安全性。"
-          },
-          "1": {
-            "title": "分析 Cookie",
-            "desc": "提供分析并了解我们网站的使用方式（例如 Google Analytics）。"
-          },
-          "2": {
-            "title": "偏好 Cookie",
-            "desc": "存储您的首选项，例如语言设置。"
-          }
-        }
-      },
-      "third": {
-        "title": "3. 第三方 Cookie",
-        "p1": "除了我们自己的 cookie 之外，我们还可能使用各种第三方 cookie 来报告服务的使用统计数据、在服务上或通过服务投放广告等。"
-      },
-      "choices": {
-        "title": "4. 你的选择",
-        "p1": "如果您想删除 cookie 或指示您的网络浏览器删除或拒绝 cookie，请访问您的网络浏览器的帮助页面。",
-        "p2": "但请注意，如果您删除 Cookie 或拒绝接受它们，您可能无法使用我们提供的所有功能，您可能无法存储您的首选项，并且我们的某些页面可能无法正常显示。"
-      }
-    },
-    "help": {
-      "title": "浏览器帮助页面："
-    }
-  }
-}
+{
+  "common": {
+    "home": "主页",
+    "technology": "技术",
+    "comingSoon": "即将推出",
+    "contactSales": "联系销售人员",
+    "solutions": "解决方案"
+  },
+  "header": {
+    "menu": {
+      "productsTitle": "产品",
+      "products": {
+        "flightController": "飞行控制器",
+        "allInOne": "多合一 FC",
+        "afcDesc": "下一代 FPV 飞控的最终答案。"
+      },
+      "solutions": "解决方案",
+      "cloudAiCamera": "云AI相机",
+      "autonomousInspection": "自主检验",
+      "coreComponents": "核心组件",
+      "intelligentVision": "深度学习视觉处理器",
+      "xtensa": "Xtensa处理器",
+      "sophgo": {
+        "bm1688": "16T 边缘 AI、8 核 ARM、高度集成 SoC",
+        "cv186ah": "7.2T 高端视觉处理器（4K/8MP）",
+        "cv184": "1.5T 双核视觉 SoC，集成 ISP 4.0",
+        "cv181": "消费级 RISC-V AIoT SoC（0.2T - 1.0T）",
+        "cv180": "入门级 RISC-V 视觉 SoC（0.2T）"
+      },
+      "espressif": {
+        "esp32": "双核 Xtensa 32- 位 LX7，240MHz。"
+      },
+      "support": "技术支持",
+      "contactUs": "联系我们",
+      "documents": "文件"
+    },
+    "search": "搜索",
+    "language": "语言",
+    "lang": {
+      "en": "英文",
+      "zh": "简体中文",
+      "ru": "俄语"
+    },
+    "promo": "需要集成或技术规格方面的帮助吗？",
+    "contactSupport": "我们的工程团队随时准备提供帮助。",
+    "comingSoon": "即将推出"
+  },
+  "footer": {
+    "getInTouch": "联系我们",
+    "getInTouchDesc": "与我们的工程团队讨论解决方案需求。我们为无人机与边缘 AI 提供交付服务。",
+    "salesSupport": "销售与支持",
+    "shenzhen": "深圳总部",
+    "address": "深圳市宝安区西乡街道朗骏广场T2-A 603-12",
+    "form": {
+      "fullName": "姓名",
+      "email": "电子邮件",
+      "message": "我们能为您提供什么帮助？",
+      "send": "发送消息"
+    },
+    "links": {
+      "company": "公司概况",
+      "contact": "联系方式 AIMORELOGY",
+      "careers": "职业机会"
+    },
+    "legal": {
+      "copyright": "深圳市爱谋科技有限公司",
+      "terms": "网站条款",
+      "cookies": "Cookies",
+      "privacy": "关于隐私"
+    },
+    "disclaimer": "AIMORELOGY 技术可能需要启用硬件、软件或服务。// 没有任何产品或组件是绝对安全的。// 成本与结果可能因人而异。// 性能取决于使用方式、配置和其他因素。// 请参阅完整的法律声明与免责声明。// AIMORELOGY 致力于尊重人权，避免造成或促成不利影响。"
+  },
+  "home": {
+    "metaTitle": "爱谋科技 AIMORELOGY | FPV/无人机 飞行控制与边缘视觉",
+    "metaDescription": "爱谋科技 AIMORELOGY 提供 FPV/无人机 飞控、边缘 AI 视觉芯片、AI 跟踪与自适应 DShot 控制框架，面向无人机与云台系统。同时提供定制化SOLUTION服务与系统集成。爱谋科技（AIMORELOGY）是算能（SOPHGO）、RT-Thread、RISC-V 的合作伙伴。",
+    "hero": {
+      "slides": {
+        "0": {
+          "category": "新发布",
+          "title": "AFC-V1 即将推出",
+          "description": "集视觉、视频链接、控制于一体的终极一体化飞行控制器。",
+          "navTitle": "AFC-V1",
+          "navDesc": "重新定义无人机的未来。",
+          "buttonText": "即将推出"
+        },
+        "1": {
+          "category": "算法",
+          "title": "自主开发AI追踪",
+          "description": "专有的视觉跟踪算法可提供 <5 毫秒的延迟，在复杂环境中实现强大的目标跟踪。",
+          "navTitle": "AI 追踪",
+          "navDesc": "高性能视觉算法。",
+          "buttonText": "技术预览"
+        },
+        "2": {
+          "category": "框架",
+          "title": "通用自适应 DShot",
+          "description": "DMA-Free、双向 DShot 300/150，适配任意芯片平台，动态误差消除，稳定可靠。",
+          "navTitle": "自适应动态拍摄",
+          "navDesc": "通用控制框架。",
+          "buttonText": "查看规格"
+        }
+      }
+    },
+    "afc": {
+      "kicker": "一体化AI飞行控制器",
+      "tagline": "“视觉 + 图传 + 飞控。”",
+      "subtagline": "下一代 FPV 飞控的最终答案。",
+      "features": {
+        "0": {
+          "title": "1.5 TOPS 边缘 AI",
+          "desc": "以零延迟本地执行复杂的检测模型。"
+        },
+        "1": {
+          "title": "10KM 视频链接",
+          "desc": "HD 传输与高功率 Wi-Fi 模块优化。"
+        },
+        "2": {
+          "title": "8MP 超 HD ISP",
+          "desc": "最多 8M@30FPS 处理。"
+        },
+        "3": {
+          "title": "对星光和全局快门传感器的本机支持。",
+          "desc": "重新定义尺寸和功率。"
+        }
+      }
+    },
+    "tracking": {
+      "kicker": "高度集成的工业设计。",
+      "title": "AI 追踪",
+      "tagline": "“超低延迟。无与伦比的稳健性。”",
+      "status": {
+        "tracking": "状态：追踪",
+        "stable": "状态：稳定",
+        "locked": "状态：已锁定"
+      },
+      "steps": {
+        "0": {
+          "title": "1. 精密锁紧",
+          "desc": "即时目标获取靠近建筑特征。"
+        },
+        "1": {
+          "title": "2. 杂波抑制",
+          "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
+        },
+        "2": {
+          "title": "3. 远距离稳定性",
+          "desc": "对低像素密度的远距离目标进行一致锁定。"
+        }
+      },
+      "cta": "探索算法"
+    },
+    "dshot": {
+      "kicker": "通用框架",
+      "title": "自适应动态拍摄",
+      "subtitle": "DMA-Free。双向。自适应。为任意 MCU 提供专业级 DShot 300/150 支持。",
+      "features": {
+        "0": {
+          "title": "任何芯片平台",
+          "desc": "不需要 DMA 或特定硬件定时器。"
+        },
+        "1": {
+          "title": "自适应协调",
+          "desc": "动态误差消除可校准输出频率以实现完美的稳定性。"
+        },
+        "2": {
+          "title": "主流支持",
+          "desc": "完美兼容BLHeli_32、BLHeli_S、AM32电调。"
+        }
+      },
+      "cta": "查看规格"
+    },
+    "industryNews": "行业新闻",
+    "partners": "战略合作伙伴"
+  },
+  "blog": {
+    "metaTitle": "博客 | AIMORELOGY",
+    "metaDescription": "AIMORELOGY 关于 FPV/无人机 飞控、边缘 AI 视觉与自主系统的洞察。",
+    "kicker": "Nexus Blog",
+    "titleLine1": "Technology",
+    "titleLine2": "Insights",
+    "subtitle": "Deep dives into AI, graphics, and the future of computing.",
+    "loadMore": "Load More Stories",
+    "readStory": "Read Story"
+  },
+  "careers": {
+    "metaTitle": "加入我们 | AIMORELOGY",
+    "metaDescription": "加入 AIMORELOGY，共同打造 FPV/无人机 飞控、边缘 AI 视觉与自主飞行技术。",
+    "hero": {
+      "kicker": "加入我们的团队",
+      "titleLine1": "职业机会",
+      "titleLine2": "AIMORELOGY",
+      "subtitle": "与我们一起构建自主飞行和边缘智能的未来。"
+    },
+    "openPositions": "开放职位",
+    "locations": {
+      "shenzhen": "深圳",
+      "shenzhenTag": "全球总部",
+      "hongkong": "香港",
+      "hongkongTag": "海外事业部"
+    },
+    "none": "没有可用的空缺职位。",
+    "shenzhenNote": "稍后回来查看研发机会。",
+    "hongkongNote": "稍后回来查看运营机会。",
+    "ctaText": "没有看到合适的角色？",
+    "ctaLink": "我们一直在寻找人才。"
+  },
+  "contact": {
+    "metaTitle": "联系我们 | AIMORELOGY",
+    "metaDescription": "联系 AIMORELOGY 获取 FPV/无人机 飞控、边缘 AI 视觉与系统集成服务。",
+    "title": "深圳市爱谋科技有限公司",
+    "subtitle": "关于企业方案有疑问？欢迎通过电话、微信、WhatsApp 或邮件与我们联系。",
+    "salesSupport": "销售与支持",
+    "channels": "手机/微信/WhatsApp",
+    "corporateEmail": "企业邮箱",
+    "locations": {
+      "shenzhen": {
+        "title": "HQ（深圳）",
+        "company": "深圳市爱谋科技有限公司",
+        "address": "深圳市宝安区西乡街道朗骏广场T2栋A区603-12室"
+      },
+      "hk": {
+        "title": "香港",
+        "company": "AIMORELOGY LIMITED",
+        "addressLine1": "世纪工业中心H2 4/F室",
+        "addressLine2": "33-35 坳背湾街火炭",
+        "addressLine3": "香港沙田"
+      }
+    },
+    "form": {
+      "title": "给我们留言",
+      "firstName": "名",
+      "lastName": "姓",
+      "email": "电子邮件",
+      "phone": "电话（可选）",
+      "message": "信息",
+      "send": "发送消息"
+    }
+  },
+  "about": {
+    "metaTitle": "关于 | AIMORELOGY",
+    "metaDescription": "AIMORELOGY 专注 FPV/无人机 飞控、边缘 AI 视觉芯片与跟踪算法，服务无人机与云台系统。",
+    "hero": {
+      "kicker": "深圳市爱谋科技有限公司",
+      "titleLine1": "关于",
+      "titleLine2": "AIMORELOGY",
+      "subtitle": "开创工业界下一代智能飞行控制系统和 AI- 驱动的自主解决方案。"
+    },
+    "mission": {
+      "title": "我们的使命",
+      "p1": "AIMORELOGY是一家致力于革新无人机和机器人行业的科技领先企业。我们专注于先进的边缘人工智能计算、高清视频传输和自主飞行控制算法。",
+      "p2": "我通过将视觉、控制和通信集成到像 CV184XH 系列这样功能强大、结构紧凑的单元中，我们能够帮助工业合作伙伴构建更智能、更安全、更高效的自主系统。"
+    },
+    "partners": {
+      "title": "合作伙伴"
+    },
+    "leadership": {
+      "title": "领导",
+      "name": "柯一冉",
+      "role": "创始人 & CEO",
+      "tags": [
+        "// 系统架构",
+        "// 开源倡导",
+        "// 产品战略"
+      ],
+      "bio": {
+        "intro": "柯一冉是AIMORELOGY的创始人和CEO，带来了从底层硬件到智能系统算法的丰富跨领域经验。",
+        "backgroundTitle": "背景",
+        "background": "在创立公司之前，他深度参与开源硬件和RISC-V生态系统，被公认为国内RISC-V社区的早期建设者之一。",
+        "trackTitle": "业绩记录",
+        "track": "主导了Milk-V Duo、Mars、Pioneer系列的设计、产品化和全球推广，在海外众筹取得了显著成功。",
+        "p1": "其在芯片与底层系统方面的经验，塑造了深厚的技术思考与产品落地能力，并与开发者文化高度契合。他认为技术的价值不只是指标，更在于让更多人真正使用、触达并改变世界。",
+        "p2": "2025 年后，他将重心转向智能无人机与 AI 系统，创立 AIMORELOGY，专注飞控、视觉感知、边缘 AI 推理与智能任务系统。",
+        "footer": "柯一冉本质上仍然是一名工程师：亲自审查系统架构，参与飞控链路设计，并优先考虑底层可靠性和实际用户场景。"
+      },
+      "philosophy": {
+        "title": "理念",
+        "items": [
+          {
+            "title": "现实第一",
+            "desc": "技术必须在现实中可用，而不仅仅是在演示中。"
+          },
+          {
+            "title": "以人为本",
+            "desc": "创新应该改善人与技术之间的关系。"
+          },
+          {
+            "title": "简单",
+            "desc": "复杂的系统必须提供简单、可靠的体验。"
+          },
+          {
+            "title": "相信",
+            "desc": "每一个产品都必须具备“值得信赖”的稳定性和安全性。"
+          }
+        ]
+      }
+    },
+    "locations": {
+      "title": "全球影响力",
+      "companyName": "公司名称",
+      "address": "地址",
+      "contacts": "主要联系人",
+      "shenzhen": {
+        "title": "深圳",
+        "tag": "全球总部",
+        "company": "深圳市爱谋科技有限公司",
+        "addressLine1": "朗骏广场T2号楼A区603-12室",
+        "addressLine2": "深圳市宝安区西乡街道铁仔路",
+        "contactName": "柯一冉"
+      },
+      "hk": {
+        "title": "香港",
+        "tag": "海外事业部",
+        "company": "AIMORELOGY LIMITED",
+        "addressLine1": "世纪工业中心H2 4/F室",
+        "addressLine2": "33-35 坳背湾街火炭",
+        "addressLine3": "香港沙田",
+        "contactName": "谢旭涵"
+      }
+    },
+    "cta": {
+      "title": "准备好创新了吗？",
+      "subtitle": "请立即联系我们的销售团队，讨论我们的 AI 解决方案如何加速您的业务发展。",
+      "email": "立即给我们发电子邮件"
+    }
+  },
+  "aiTracking": {
+    "metaTitle": "自研 AI 跟踪 | AIMORELOGY",
+    "metaDescription": "面向 FPV/无人机 的低时延视觉跟踪与云台稳定，支持复杂场景目标锁定。",
+    "breadcrumb": "AI 追踪算法",
+    "hero": {
+      "kicker": "核心技术",
+      "badge": "自研算法",
+      "titleLine1": "超快",
+      "titleLine2": "视觉追踪",
+      "subtitle": "鲁棒的单目标跟踪 (SOT) 具有适用于复杂环境的 Re-ID 功能。",
+      "desc": "针对低功耗边缘检测平台进行了优化。",
+      "cta": "在标准嵌入式 SDK 硬件上实现 2ms-5ms 推理延迟，同时在遮挡期间保持锁定鲁棒性。",
+      "imageAlt": "AI 跟踪横幅"
+    },
+    "performance": {
+      "title": "性能数据",
+      "desc": "算法针对 RISC-V 与 ARM 平台的 INT8 量化高度优化，即便入门芯片也能达到工业级实时表现。",
+      "testTitle": "测试条件",
+      "test": {
+        "input": "输入尺寸",
+        "quant": "量化",
+        "batch": "批量大小"
+      },
+      "table": {
+        "platform": "平台（算力）",
+        "latency": "推理速度（延迟）",
+        "ultraFast": "超快"
+      }
+    },
+    "capabilities": {
+      "title": "强大的现实世界跟踪",
+      "subtitle": "我们的专有算法从初始采集到远程跟踪保持一致的锁定，实时滤除复杂的背景杂波和静态障碍物。",
+      "steps": {
+        "0": {
+          "alt": "追踪活动",
+          "status": "状态：跟踪",
+          "title": "1. 精密锁紧",
+          "desc": "即时目标获取靠近建筑特征。"
+        },
+        "1": {
+          "alt": "复杂场景",
+          "status": "状态：稳定",
+          "title": "2. 杂波抑制",
+          "desc": "在复杂的环境和停放的车辆中进行稳健的跟踪。"
+        },
+        "2": {
+          "alt": "远程",
+          "status": "状态：锁定",
+          "title": "3. 远距离稳定性",
+          "desc": "对低像素密度的远距离目标进行一致锁定。"
+        }
+      }
+    },
+    "features": {
+      "0": {
+        "title": "超低延迟",
+        "desc": "<5ms 处理时间确保无人机直接闭环控制，无抖动或振荡。"
+      },
+      "1": {
+        "title": "轻量级型号",
+        "desc": "高度优化的 INT8 量化允许部署在 CV181x 等经济高效的芯片上。"
+      },
+      "2": {
+        "title": "鲁棒Re-ID",
+        "desc": "即使在完全遮挡后也能保持目标身份，防止“目标漂移”到背景物体。"
+      },
+      "3": {
+        "title": "多尺度输入",
+        "desc": "支持速度128x128，精度256x256，适应不同传感器分辨率。"
+      }
+    },
+    "cta": {
+      "title": "立即集成 AI 跟踪",
+      "subtitle": "作为 CV18xx 系列芯片的软件 SDK 提供，或预闪存在我们的 AFC-V1 飞行控制器上。",
+      "primary": "请求评估",
+      "secondary": "查看硬件"
+    }
+  },
+  "dshot": {
+    "metaTitle": "自适应 DShot 控制协议 | AIMORELOGY",
+    "metaDescription": "面向 FPV/无人机 ESC 的自适应 DShot 控制协议，双向通信、稳定输出、无需 DMA。",
+    "breadcrumb": "自适应动态拍摄",
+    "hero": {
+      "badge": "自适应动态拍摄",
+      "titleLine1": "普遍的",
+      "titleLine2": "拍摄控制",
+      "subtitle": "DMA-免费，双向DShot 300/150，适应任何MCU，定时稳定，抖动低。",
+      "stats": {
+        "0": "需要零 DMA",
+        "1": {
+          "value": "300/150",
+          "unit": "k",
+          "label": "双向模式"
+        }
+      },
+      "imageAlt": "自适应 Dshot 信号图"
+    },
+    "core": {
+      "title": "核心创新",
+      "subtitle": "AIMORELOGY Adaptive DShot 为任何芯片平台带来专业级 ESC 控制，无需特殊硬件。",
+      "cards": {
+        "0": {
+          "title": "通用便携性",
+          "desc": "在 RISC-V、ARM 和 Xtensa 上运行，无需 DMA 或硬件定时器。"
+        },
+        "1": {
+          "title": "自适应定时",
+          "desc": "自动校准输出频率以消除时序漂移和错误。"
+        },
+        "2": {
+          "title": "双向遥测",
+          "desc": "针对 RPM、温度和故障状态提供可靠的 ESC 反馈。"
+        },
+        "3": {
+          "title": "生产就绪",
+          "desc": "已在 BLHeli_32、BLHeli_S 和 AM32 上进行验证。"
+        }
+      }
+    },
+    "comparison": {
+      "title": "协议比较",
+      "headers": {
+        "feature": "特征",
+        "pwm": "PWM",
+        "hardware": "硬件数码相机",
+        "adaptive": "自适应动态拍摄"
+      },
+      "rows": {
+        "0": {
+          "feature": "硬件要求",
+          "pwm": "定时器 PWM",
+          "hardware": "DMA + 定时器",
+          "adaptive": "纯软件"
+        },
+        "1": {
+          "feature": "双向",
+          "pwm": "不",
+          "hardware": "有限的",
+          "adaptive": "全面遥测"
+        },
+        "2": {
+          "feature": "抗噪性",
+          "pwm": "低的",
+          "hardware": "中等的",
+          "adaptive": "高的"
+        },
+        "3": {
+          "feature": "可移植性",
+          "pwm": "低的",
+          "hardware": "中等的",
+          "adaptive": "任意 MCU"
+        }
+      }
+    },
+    "deepDive": {
+      "steps": {
+        "0": {
+          "title": "信号编码",
+          "desc": "带有 CRC 保护的 24- 位数据包可确保命令完整性。"
+        },
+        "1": {
+          "title": "自适应采样",
+          "desc": "动态边缘检测与 ESC 时序对齐，无需 DMA。"
+        },
+        "2": {
+          "title": "纠错",
+          "desc": "自调谐可补偿时钟漂移和电缆噪声。"
+        }
+      },
+      "title": "为什么自适应 DShot 很重要",
+      "p1": "传统的 DShot 依赖于严格的计时和 DMA 访问。",
+      "p2": "在许多 MCU 上，这要么花费宝贵的硬件定时器，要么使双向遥测变得不可靠。",
+      "bullets": {
+        "0": "无需特殊外围设备",
+        "1": "在长电线和嘈杂的 ESC 中实现稳定控制",
+        "2": "从业余爱好级无人机到工业级无人机"
+      }
+    },
+    "cta": {
+      "title": "准备好集成 Adaptive DShot 了吗？",
+      "subtitle": "请联系我们获取参考固件、SDK 访问权限和集成支持。",
+      "primary": "联系销售人员"
+    }
+  },
+  "solution": {
+    "requestDemo": "请求演示",
+    "overview": "概述",
+    "capabilities": "能力",
+    "applications": "应用领域",
+    "discuss": "讨论你的项目",
+    "download": "下载手册"
+  },
+  "solutionDemo": {
+    "metaTitle": "自主巡检 | AIMORELOGY",
+    "metaDescription": "面向 FPV/无人机 的自主巡检方案，覆盖能源与工业场景。",
+    "title": "自主检验",
+    "subtitle": "AI- 驱动 UAV/FPV 进行能源和工业巡检。",
+    "overview": {
+      "title": "自动化现场操作",
+      "content": "规划路线、捕获 4K 图像并实时检测异常情况。"
+    },
+    "stats": {
+      "0": "我们的检查堆栈将边缘推理与云分析结合起来，以缩短维护周期并降低风险。",
+      "1": "误报",
+      "2": "最大分辨率",
+      "3": "正常运行时间"
+    },
+    "features": {
+      "0": {
+        "title": "多光谱扫描",
+        "desc": "RGB 和热管道揭示了肉眼看不见的缺陷。"
+      },
+      "1": {
+        "title": "即时警报",
+        "desc": "设备上的推理会触发实时通知和证据剪辑。"
+      },
+      "2": {
+        "title": "合规就绪报告",
+        "desc": "自动生成的 PDF 包含缺陷图、时间戳和元数据。"
+      },
+      "3": {
+        "title": "自主任务",
+        "desc": "基于航点的巡逻具有动态避障功能。"
+      },
+      "4": {
+        "title": "云分析",
+        "desc": "用于趋势分析和资产健康评分的车队仪表板。"
+      },
+      "5": {
+        "title": "远程链接",
+        "desc": "跨大型检查区域稳定的 HD 视频和遥测。"
+      }
+    },
+    "apps": {
+      "0": "太阳能发电场",
+      "1": "风力涡轮机",
+      "2": "工业用地"
+    },
+    "cta": {
+      "title": "大规模部署检查",
+      "text": "与我们的团队讨论定制工作流程、集成传感器并安全地部署任务。"
+    }
+  },
+  "aiCamera": {
+    "metaTitle": "云端 AI 摄像机方案 | AIMORELOGY",
+    "metaDescription": "云端 AI 摄像机方案，结合边缘 AI 与云平台，实现远程监控与规模化部署。",
+    "breadcrumb": "云AI相机",
+    "hero": {
+      "kicker": "解决方案",
+      "badge": "边缘 + 云端",
+      "titleLine1": "云 AI",
+      "titleLine2": "相机平台",
+      "desc": "端到端智能相机堆栈将边缘推理与云编排相结合，以实现实时监控和可扩展部署。",
+      "cta": "请求演示",
+      "ready": "SDK 已准备好用于 CV18xx 平台。",
+      "uiVersion": "UI 版本 1.0",
+      "imageAlt": "云AI相机接口",
+      "overlay": "活体检测",
+      "chipLabel": "参考芯片"
+    },
+    "value": {
+      "0": {
+        "title": "云端管理",
+        "desc": "集中设备配置、模型部署和车队监控。"
+      },
+      "1": {
+        "title": "可扩展的机队",
+        "desc": "使用统一的策略和 OTA 更新来操作数百个摄像机。"
+      },
+      "2": {
+        "title": "视觉优先硬件",
+        "desc": "优化的 SoC 和 ISP 管道可实现始终在线的智能。"
+      }
+    },
+    "specs": {
+      "title": "硬件规格",
+      "subtitle": "针对始终在线视觉进行优化的集成 SoC 平台。",
+      "items": {
+        "0": {
+          "label": "芯片"
+        },
+        "1": {
+          "label": "AI 性能",
+          "value": "1.5 TOPS INT8"
+        },
+        "2": {
+          "label": "ISP",
+          "value": "8MP @ 30FPS"
+        },
+        "3": {
+          "label": "视频",
+          "value": "H.265/H.264"
+        },
+        "4": {
+          "label": "连接性",
+          "value": "Wi-Fi / 以太网 / LTE"
+        }
+      },
+      "diagram": "系统框图",
+      "sip": "系统级封装",
+      "blocks": {
+        "0": {
+          "title": "传感器",
+          "bus": "MIPI"
+        },
+        "1": {
+          "title": "贮存",
+          "bus": "SDIO"
+        },
+        "2": {
+          "title": "无线的"
+        },
+        "3": {
+          "title": "以太网"
+        },
+        "4": {
+          "title": "USB",
+          "bus": "USB2.0"
+        },
+        "5": {
+          "title": "力量",
+          "bus": "PMIC"
+        }
+      }
+    },
+    "software": {
+      "title": "软件和云堆栈",
+      "cloudTitle": "云平台",
+      "cloudItems": [
+        "车队管理",
+        "模型部署",
+        "分析仪表板",
+        "OTA 更新"
+      ],
+      "deviceTitle": "边缘设备",
+      "appTitle": "应用领域",
+      "appTags": [
+        "检测",
+        "追踪",
+        "计数",
+        "警报"
+      ],
+      "hal": "HAL / 驱动程序",
+      "os": "Linux 系统"
+    },
+    "capabilities": {
+      "title": "核心能力",
+      "items": {
+        "0": {
+          "title": "事件消息传递",
+          "desc": "MQTT/WebSocket 警报具有可配置的阈值。"
+        },
+        "1": {
+          "title": "图像智能",
+          "desc": "实时检测、跟踪和重新ID管道。"
+        },
+        "2": {
+          "title": "全球访问",
+          "desc": "通过基于角色的访问确保远程查看的安全。"
+        },
+        "3": {
+          "title": "多流视频",
+          "desc": "RTSP/HTTP 用于监控和存储的流式传输。"
+        },
+        "4": {
+          "title": "低延迟",
+          "desc": "边缘推断时间低于 30 毫秒，可实现响应式控制。"
+        },
+        "5": {
+          "title": "安全",
+          "desc": "安全启动、签名固件和加密传输。"
+        }
+      }
+    },
+    "cta": {
+      "title": "使用云 AI 相机构建",
+      "subtitle": "获取完整的参考设计、SDK 和云集成套件。",
+      "secondary": "查看CV184平台"
+    }
+  },
+  "products": {
+    "common": {
+      "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
+      "notFound": "404",
+      "returnHome": "返回主页",
+      "requestQuote": "请求报价",
+      "productOverview": "产品概述",
+      "keyHighlights": "主要亮点",
+      "technicalSpecs": "技术规格",
+      "specCategory": "类别",
+      "specParameter": "范围",
+      "specValue": "价值",
+      "applications": "应用领域",
+      "ctaTitle": "使用 {{name}} 开发您的解决方案",
+      "ctaText": "We offer professional system integration and turnkey solutions based on the {{name}} platform. Accelerate your product launch with our engineering expertise.",
+      "ctaButton": "获取解决方案建议",
+      "series": "{{series}}系列"
+    },
+    "sophgo": {
+      "ui": {
+        "seriesLabel": "{{series}} 计算架构",
+        "getDocs": "获取技术资料",
+        "productBrief": "产品简介",
+        "systemArchitecture": "系统架构",
+        "architecturePlaceholder": "{{name}} 架构图即将发布",
+        "keyInnovation": "关键创新 {{index}}",
+        "computeEyebrow": "高性能计算",
+        "aiPerformanceTitle": "AI 性能",
+        "benchmarksTitle": "基准与指标",
+        "ispEyebrow": "先进 ISP 管线",
+        "imagingTitle": "成像链路",
+        "moduleLabel": "模块-{{index}}",
+        "aiLibraryTitle": "AI 模型库",
+        "aiLibraryCategories": [
+          "人脸",
+          "人体",
+          "车辆",
+          "行为"
+        ],
+        "variantComparisonTitle": "型号对比",
+        "deploymentTitle": "商业应用场景",
+        "datasheetTitle": "规格参数",
+        "datasheetSubtitle": "技术参考",
+        "ctaTitle": "开始使用",
+        "ctaButton": "获取技术资料"
+      },
+      "bm1688": {
+        "metaTitle": "SOPHGO BM1688 边缘 TPU SoC（无人机/FPV 视觉）- 16 TOPS、8 核、8K | AIMORELOGY",
+        "metaDescription": "SOPHGO BM1688 边缘 TPU SoC 采用 8 核 ARM 与 16 TOPS（INT8/32 TOPS INT4）算力，支持 8K 成像与多路 ISP，适用于无人机/FPV 视觉、吊舱跟踪、AI NVR、机器人与边缘服务器。",
+        "tagline": "智能边缘 16T 计算平台",
+        "description": "高集成度边缘 TPU 处理器，提供 16 TOPS INT8 算力与八核架构。",
+        "longDescription": [
+          "BM1688 是一款高集成度的边缘 TPU 处理器，定位为强大的 16T~8T 智能计算平台。采用 1.6GHz 的八核 ARM Cortex-A53 架构，为边缘应用提供类服务器级算力。",
+          "内置自研 TPU，INT8 峰值 16 TOPS、INT4 峰值 32 TOPS，兼容 PyTorch、TensorFlow、ONNX 等主流框架，并针对边缘端 LLM 与 VLM 进行了优化。",
+          "成像系统支持双路 8MP@30 HDR 或 8K@15 SDR，具备硬件级 360° 拼接与鱼眼去畸变，适合作为全景相机与高端安防核心。",
+          "接口支持 PCIe 3.0、SATA Gen3、USB 3.0 与双千兆以太网，提供大吞吐与存储扩展，适用于智能微型服务器、AI NAS 与智能 NVR。",
+          "支持 -20°C~60°C 工业级工作温度，可部署于工业与车载平台，从自主机器人到智慧物流/船运系统。"
+        ],
+        "highlights": [
+          "TPU：16 TOPS INT8 / 32 TOPS INT4 / 4T FP16",
+          "CPU：8 核 ARM Cortex-A53 @ 1.6GHz",
+          "视觉：8K@15 / 双路 8MP@30 HDR",
+          "引擎：360° 拼接与鱼眼去畸变",
+          "I/O：PCIe 3.0、SATA Gen3、双千兆以太网",
+          "温度：工业级 -20°C~60°C"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "服务器级边缘 AI",
+            "description": "最高 16 TOPS INT8 算力，可在本地完成 LLM 推理与多目标跟踪等复杂任务。"
+          },
+          {
+            "title": "八核计算",
+            "description": "8 核 Cortex-A53 提供强大的多任务能力，适用于边缘服务器与机器人控制。"
+          },
+          {
+            "title": "硬件全景引擎",
+            "description": "硬件级 360° 拼接与鱼眼去畸变（顶装/墙装/地装），显著降低 CPU 负载。"
+          },
+          {
+            "title": "高速数据互联",
+            "description": "PCIe 3.0 与 SATA Gen3 等高速接口，支持高性能存储与扩展。"
+          },
+          {
+            "title": "先进 ISP 管线",
+            "description": "支持最多 6 路传感器输入，具备 2f-HDR、3DNR、LDC 等成像增强。"
+          },
+          {
+            "title": "主流框架支持",
+            "description": "兼容 Caffe、PyTorch、TensorFlow、ONNX、MXNet，便于快速部署。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "tpu-acceleration",
+            "title": "TPU 性能",
+            "description": "高性能 TPU 架构支持混合精度，为高吞吐 AI 负载提供加速。",
+            "stats": [
+              {
+                "label": "INT4 峰值",
+                "value": "32 TOPS"
+              },
+              {
+                "label": "INT8 峰值",
+                "value": "16 TOPS"
+              },
+              {
+                "label": "FP16 / BF16",
+                "value": "4.0 TFLOPS"
+              },
+              {
+                "label": "FP32",
+                "value": "0.5 TFLOPS"
+              }
+            ],
+            "bullets": [
+              "针对生成式 AI 与多模态模型优化。",
+              "支持服务器级神经网络架构。",
+              "低时延推理，满足实时边缘响应。"
+            ]
+          },
+          {
+            "id": "vision-isp",
+            "title": "视觉与成像",
+            "description": "先进 ISP 与视频处理单元，支持高分辨率、多通道采集。",
+            "bullets": [
+              "最大分辨率：8192 x 3840（支持 8K）。",
+              "视频输入：时分复用最多 6 路传感器。",
+              "视频输出：HDMI 2.0（4K@60）、MIPI DSI（1440P@60）、LVDS。",
+              "编解码：H.264/H.265 解码（16×2MP30）/ 编码（10×2MP30）。"
+            ]
+          },
+          {
+            "id": "connectivity",
+            "title": "高速连接",
+            "description": "丰富 I/O 接口，便于系统集成与存储扩展。",
+            "bullets": [
+              "PCIe/SATA：2× PCIe 3.0 / SATA Gen3（可灵活复用）。",
+              "以太网：2× 千兆以太网（GMAC）。",
+              "USB：2× USB 3.0 / 2.0 Host/Device。",
+              "无线扩展：SDIO 与 USB 支持 Wi-Fi/BT/5G。"
+            ]
+          }
+        ],
+        "specs": [
+          {
+            "category": "处理器",
+            "key": "CPU",
+            "value": "8 核 ARM Cortex-A53 @ 1.6GHz"
+          },
+          {
+            "category": "AI",
+            "key": "TPU",
+            "value": "16 TOPS INT8 / 32 TOPS INT4"
+          },
+          {
+            "category": "内存",
+            "key": "LPDDR4/4X",
+            "value": "2x32-bit（最高支持 16GB）"
+          },
+          {
+            "category": "视频",
+            "key": "ISP",
+            "value": "8K SDR / 双路 8MP HDR / 360° 拼接"
+          },
+          {
+            "category": "视频",
+            "key": "编解码",
+            "value": "H.264/H.265（解码 16x2MP，编码 10x2MP）"
+          },
+          {
+            "category": "接口",
+            "key": "高速",
+            "value": "PCIe 3.0、SATA Gen3、USB 3.0"
+          },
+          {
+            "category": "接口",
+            "key": "网络",
+            "value": "2× 千兆以太网"
+          },
+          {
+            "category": "接口",
+            "key": "视频输入",
+            "value": "6 路 MIPI CSI / subLVDS / HiSPI"
+          },
+          {
+            "category": "接口",
+            "key": "视频输出",
+            "value": "HDMI 2.0、MIPI DSI、LVDS、BT.1120"
+          },
+          {
+            "category": "音频",
+            "key": "Codec",
+            "value": "集成 16-bit（ADC/DAC/I2S）"
+          },
+          {
+            "category": "外设",
+            "key": "控制",
+            "value": "CAN 2.0、UART x8、I2C x10、SPI x4、PWM x19"
+          },
+          {
+            "category": "系统",
+            "key": "环境",
+            "value": "工作温度 -20°C~60°C"
+          }
+        ],
+        "applications": [
+          {
+            "title": "智能微型服务器",
+            "image": "/Edge Computing Boxes.webp"
+          },
+          {
+            "title": "智能 NVR",
+            "image": "/Edge Computing Boxes.webp"
+          },
+          {
+            "title": "AI NAS",
+            "image": "/Edge Computing Boxes.webp"
+          },
+          {
+            "title": "智能割草机",
+            "image": "/Robotics.webp"
+          },
+          {
+            "title": "机器人平台",
+            "image": "/Robot Platform.webp"
+          },
+          {
+            "title": "车载/船载平台",
+            "image": "/Robotics.webp"
+          }
+        ],
+        "faqs": [
+          {
+            "question": "BM1688 是否可以运行 LLM 模型？",
+            "answer": "可以。BM1688 针对边缘端量化 LLM/VLM 进行了优化，利用 INT8/INT4 算力实现本地推理。"
+          },
+          {
+            "question": "支持多少路摄像头输入？",
+            "answer": "通过时分复用 ISP 最多支持 6 路传感器同时接入。"
+          }
+        ]
+      },
+      "cv186": {
+        "metaTitle": "SOPHGO CV186x（CV186AH）视觉 AI SoC（无人机/FPV/吊舱）- 7.2 TOPS、DPU、8MP | AIMORELOGY",
+        "metaDescription": "SOPHGO CV186x/CV186AH 提供 7.2 TOPS AI 算力、双目深度 DPU 与 8MP@75fps 编码，适用于多镜头 IPC、无人机/FPV、吊舱视觉与机器人平台。",
+        "tagline": "7.2T 终端级视觉 AI 处理器",
+        "description": "具备 7.2 TOPS AI 算力和双目深度引擎的高性能视觉处理器。",
+        "longDescription": [
+          "CV186x 系列（CV186AH）面向智能终端市场的高性能视觉处理器，采用六核 ARM Cortex-A53 架构，支持复杂边缘计算的高效多任务。",
+          "内置自研 TPU，INT8 峰值 7.2 TOPS，面向高精度视频分析与实时推理，兼容主流 AI 框架，便于快速商用落地。",
+          "集成 DPU（双目深度引擎），提供高精度深度感知，适用于机器人导航与避障；同时支持硬件级 360° 全景拼接与鱼眼去畸变。",
+          "专业级 ISP 支持 3DNR、HDR、LDC、3A 等算法；视频输出支持 MIPI DSI、LVDS 与数字 RGB 双屏，适合交互终端。",
+          "接口包含 PCIe、SATA、USB 3.0 与千兆以太网，可覆盖高端多镜头 IPC、机器人与无人机平台。"
+        ],
+        "highlights": [
+          "TPU：7.2 TOPS @ INT8 AI 加速",
+          "CPU：6 核 ARM Cortex-A53 架构",
+          "深度：集成双目深度引擎（DPU）",
+          "视频：8MP@75fps 超高清硬件编码",
+          "视觉：硬件拼接与 360° 鱼眼去畸变",
+          "I/O：PCIe、SATA、USB 3.0、GMAC"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "六核性能",
+            "description": "六核 Cortex-A53 让多任务 AI 与高分辨率视频流处理更加顺畅。"
+          },
+          {
+            "title": "7.2 TOPS AI 算力",
+            "description": "高吞吐 TPU 支持实时视频分析与高精度目标识别。"
+          },
+          {
+            "title": "双目深度感知",
+            "description": "硬件 DPU 引擎生成高精度深度图，适用于机器人导航。"
+          },
+          {
+            "title": "8MP@75fps 编码",
+            "description": "支持最高 8MP@75fps 硬件编码，保障超清证据视频。"
+          },
+          {
+            "title": "全景视觉",
+            "description": "硬件级 360° 拼接与鱼眼矫正提供全景视野。"
+          },
+          {
+            "title": "工业级扩展",
+            "description": "丰富高速接口满足高端安防、无人机与吊舱平台扩展。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "tpu-acceleration",
+            "title": "AI 与 TPU 性能",
+            "description": "高效 7.2 TOPS AI 加速，面向高端智能终端分析。",
+            "stats": [
+              {
+                "label": "INT8 峰值",
+                "value": "7.2 TOPS"
+              },
+              {
+                "label": "架构",
+                "value": "六核 A53"
+              },
+              {
+                "label": "精度",
+                "value": "INT8 / BF16"
+              }
+            ],
+            "bullets": [
+              "针对多路高分辨率分析优化。",
+              "兼容主流深度学习框架。",
+              "集成 IVE/VPSS 硬件加速。"
+            ]
+          },
+          {
+            "id": "vision-isp",
+            "title": "视觉与成像管线",
+            "description": "专业级成像与计算机视觉硬件模块。",
+            "bullets": [
+              "ISP 特性：3DNR、HDR、LDC、3A、去雾。",
+              "深度感知：内置双目深度 DPU。",
+              "全景能力：硬件拼接与 360° 去畸变引擎。",
+              "视频编码：最高 8MP@75fps 硬件加速。"
+            ]
+          }
+        ],
+        "specs": [
+          {
+            "category": "处理器",
+            "key": "CPU",
+            "value": "6 核 ARM Cortex-A53"
+          },
+          {
+            "category": "AI",
+            "key": "TPU",
+            "value": "7.2 TOPS @ INT8"
+          },
+          {
+            "category": "内存",
+            "key": "LPDDR4/4X",
+            "value": "2x32-bit 接口"
+          },
+          {
+            "category": "视频",
+            "key": "编码",
+            "value": "8MP@75fps H.264/H.265"
+          },
+          {
+            "category": "视频",
+            "key": "视觉",
+            "value": "DPU（深度）、拼接、去畸变"
+          },
+          {
+            "category": "视频",
+            "key": "ISP",
+            "value": "3DNR、HDR、LDC、3A、去雾"
+          },
+          {
+            "category": "接口",
+            "key": "高速",
+            "value": "PCIe、SATA、USB 3.0、GMAC"
+          },
+          {
+            "category": "接口",
+            "key": "视频输入",
+            "value": "多路 MIPI CSI 输入"
+          },
+          {
+            "category": "接口",
+            "key": "视频输出",
+            "value": "双屏显示（MIPI/LVDS/数字）"
+          },
+          {
+            "category": "外设",
+            "key": "I/O",
+            "value": "PWM、UART、SPI、SD、I2C、GPIO"
+          }
+        ],
+        "applications": [
+          {
+            "title": "高端多镜头 IPC",
+            "image": "/High-end Multi-lens IPC.webp"
+          },
+          {
+            "title": "机器人平台",
+            "image": "/Robot Platform.webp"
+          },
+          {
+            "title": "双目深度相机",
+            "image": "/Binocular Depth Camera.webp"
+          },
+          {
+            "title": "无人机",
+            "image": "/Drones.webp"
+          },
+          {
+            "title": "车载计算",
+            "image": "/Robotics.webp"
+          },
+          {
+            "title": "吊舱应用",
+            "image": "/Drone & Gimbal Applications.webp"
+          }
+        ],
+        "faqs": [
+          {
+            "question": "DPU 引擎用于什么？",
+            "answer": "DPU 是硬件加速的双目深度引擎，用于生成高精度深度图，是机器人导航与避障的关键。"
+          },
+          {
+            "question": "CV186x 有多少个 CPU 核心？",
+            "answer": "CV186x（CV186AH）采用 6 核 ARM Cortex-A53 架构。"
+          }
+        ]
+      },
+      "cv184": {
+        "metaTitle": "SOPHGO CV184x 视觉 SoC（FPV/UAV）（CV1841C/CV1842C-P/CV1842H-P/CV1843H-P）- ISP V4.0、Intra4 | AIMORELOGY",
+        "metaDescription": "SOPHGO CV184x 系列（CV1841C、CV1842C-P、CV1842H-P/CV1842HP、CV1843H-P）提供 1.0~1.5 TOPS TPU、ISP V4.0 与 Intra4 编码，面向 FPV/UAV 视觉、吊舱跟踪、智能摄像机与门禁。",
+        "tagline": "搭载 ISP V4.0 与 Intra4 编码的双核视觉 SoC",
+        "description": "新一代边缘视觉 SoC，具备 ISP V4.0、Intra4 编码与 OpenCLIP 支持。",
+        "longDescription": [
+          "CV184x 系列面向消费、运营商与专业安防市场，采用双核架构（ARM Cortex-A53 @ 1.1GHz + RISC-V C906 @ 800MHz），自研 TPU 最高 1.5 TOPS（INT8），支持 BF16 混合精度。",
+          "引入全新 ISP V4.0 引擎，包含星光级 3DNR、数字宽动态 DRC、去雾与紫边消除（PFR）。改进的 MCTF 算法显著降低运动拖影与时域噪声。",
+          "支持自研 Smart Encoding 编码引擎，兼容 H.265/H.264/MJPEG。独有 Intra4 模式在复杂运动场景下提升压缩率并保留纹理细节。",
+          "全面兼容 OpenCLIP 多模态模型，支持通用目标检测、图文检索与零样本推理，并内置人脸检测、行人/车辆追踪、头盔检测等算法库。",
+          "系列与 CV181 引脚兼容，复用 SDK、ISP 调校工具与深度学习环境，实现低成本升级。"
+        ],
+        "highlights": [
+          "双核：ARM A53（1.1GHz）+ RISC-V C906（800MHz）",
+          "TPU：1.0~1.5 TOPS @ INT8 / BF16 混合精度",
+          "ISP V4.0：3DNR、DRC、PFR、去雾、畸变校正",
+          "Intra4 编码：更高压缩率、纹理保留更好",
+          "OpenCLIP 支持：零样本与图文检索",
+          "与 CV181 系列引脚兼容"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "ISP V4.0 引擎",
+            "description": "基于 MCTF 的 3DNR、数字宽动态（DRC）与紫边消除（PFR），带来优异低照成像。"
+          },
+          {
+            "title": "Intra4 编码",
+            "description": "小块内编码保留复杂纹理细节，降低码率与存储成本。"
+          },
+          {
+            "title": "OpenCLIP 多模态",
+            "description": "支持图文匹配、零样本推理与场景化微调。"
+          },
+          {
+            "title": "高性能 TPU",
+            "description": "INT8 最高 1.5 TOPS，支持 BF16。ResNet50/YOLOv5s 等基准性能显著提升。"
+          },
+          {
+            "title": "丰富算法库",
+            "description": "内置人脸/人体/车辆检测、头盔检测、手势识别、宝宝哭声检测、语义分割等。"
+          },
+          {
+            "title": "平滑迁移",
+            "description": "与 CV181 引脚兼容，共享 SDK 与工具链，升级成本低。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "tpu-acceleration",
+            "title": "TPU 性能与基准",
+            "description": "自研 TPU 相比上一代显著提升，支持 ResNet、YOLO、MobileNet 等复杂模型。",
+            "stats": [
+              {
+                "label": "ResNet50 v2",
+                "value": "38.5 FPS"
+              },
+              {
+                "label": "YOLO v5s",
+                "value": "28.3 FPS"
+              },
+              {
+                "label": "MobileNet v2",
+                "value": "261.9 FPS"
+              },
+              {
+                "label": "OpenCLIP",
+                "value": "4.07 FPS"
+              }
+            ],
+            "bullets": [
+              "基准数据基于 CV1842C-P（1.5 TOPS）。",
+              "ResNet50 v2：较 CV181 提升 40%。",
+              "YOLO v5s：较 CV181 提升 81%。",
+              "MobileNet v2：较 CV181 提升 51%。",
+              "支持 BF16 混合精度以提升精度。"
+            ]
+          },
+          {
+            "id": "isp-v4",
+            "title": "ISP V4.0 成像管线",
+            "description": "全面升级的成像引擎，聚焦降噪、动态范围与色彩准确度。",
+            "bullets": [
+              "3DNR（MCTF）：减少运动拖影与时域噪声，低照性能更强（0.1lux）。",
+              "DRC（动态范围压缩）：提升阴影细节，避免高光过曝。",
+              "PFR（紫边消除）：去除物体边缘紫边且不损失色彩。",
+              "边缘增强：基于频域锐化，区分纹理与强边缘。",
+              "色彩降噪：抑制低频彩噪与边缘溢色。"
+            ]
+          },
+          {
+            "id": "algorithms",
+            "title": "智能 AI 算法",
+            "description": "面向消费与安防场景的即用型算法库。",
+            "bullets": [
+              "人脸：检测、识别、抓拍、关键点（5 点）。",
+              "人体：行人检测、头部检测、骨骼关键点。",
+              "车辆：机动车/非机动车检测、车牌识别。",
+              "行为：手势识别、跌倒检测、客流统计。",
+              "安防：头盔检测、入侵检测（绊线）。",
+              "音频：宝宝哭声检测、语音指令识别（如“呼叫”“亮屏”）。",
+              "其他：猫狗检测、语义分割。"
+            ]
+          },
+          {
+            "id": "variant-comparison",
+            "title": "CV184x 型号对比",
+            "description": "根据应用需求选择合适型号。",
+            "table": {
+              "headers": [
+                "特性",
+                "CV1841C",
+                "CV1842C-P",
+                "CV1842H-P",
+                "CV1843H-P"
+              ],
+              "rows": [
+                [
+                  "处理器",
+                  "CA53 1.0GHz + C906 600MHz",
+                  "CA53 1.1GHz + C906 800MHz",
+                  "CA53 1.1GHz + C906 800MHz",
+                  "CA53 1.1GHz + C906 800MHz"
+                ],
+                [
+                  "DDR3 SiP",
+                  "1Gb",
+                  "2Gb",
+                  "2Gb",
+                  "4Gb"
+                ],
+                [
+                  "TPU（INT8）",
+                  "~1.0 TOPS",
+                  "~1.5 TOPS",
+                  "~1.5 TOPS",
+                  "~1.5 TOPS"
+                ],
+                [
+                  "封装",
+                  "QFN-88 9x9",
+                  "BGA 10x10",
+                  "BGA 10x10",
+                  "BGA 10x10"
+                ],
+                [
+                  "视频输入",
+                  "MIPI 2L+1L 或 4L",
+                  "MIPI 2L+2L+DVP 或 4L",
+                  "MIPI 2L+2L+DVP 或 4L",
+                  "MIPI 2L+2L+DVP 或 4L"
+                ],
+                [
+                  "视频输出",
+                  "MIPI DSI(2L)/BT/RGB",
+                  "MIPI DSI(4L)/BT/LVDS/RGB",
+                  "MIPI DSI(4L)/BT/LVDS/RGB",
+                  "MIPI DSI(4L)/BT/LVDS/RGB"
+                ],
+                [
+                  "以太网",
+                  "10/100 MAC PHY",
+                  "10/100 RMII + MAC PHY",
+                  "10/100 RMII + MAC PHY",
+                  "10/100 RMII + MAC PHY"
+                ]
+              ],
+              "note": "所有型号共用 SDK、ISP 调校与 TPU 工具，封装内引脚兼容。"
+            }
+          }
+        ],
+        "specs": [
+          {
+            "category": "处理器",
+            "key": "CPU",
+            "value": "双核 ARM Cortex-A53 + RISC-V C906"
+          },
+          {
+            "category": "处理器",
+            "key": "频率",
+            "value": "最高 1.1GHz（A53）/ 800MHz（C906）"
+          },
+          {
+            "category": "AI",
+            "key": "TPU",
+            "value": "1.0~1.5 TOPS @ INT8 / BF16"
+          },
+          {
+            "category": "内存",
+            "key": "集成",
+            "value": "DDR3 512Mb / 1Gb / 2Gb / 4Gb"
+          },
+          {
+            "category": "视频",
+            "key": "ISP",
+            "value": "ISP V4.0（4K、3DNR、DRC、PFR）"
+          },
+          {
+            "category": "视频",
+            "key": "编码",
+            "value": "H.265/H.264/MJPEG + Intra4"
+          },
+          {
+            "category": "视频",
+            "key": "分辨率",
+            "value": "最高 8MP@30fps + 720P@30fps"
+          },
+          {
+            "category": "接口",
+            "key": "摄像头",
+            "value": "2x MIPI CSI（2L/4L/DVP）"
+          },
+          {
+            "category": "接口",
+            "key": "显示",
+            "value": "1x MIPI DSI（2L/4L）、LVDS、RGB、BT.656/1120"
+          },
+          {
+            "category": "外设",
+            "key": "连接",
+            "value": "USB 2.0、SD 3.0、以太网（MAC PHY/RMII）"
+          },
+          {
+            "category": "外设",
+            "key": "低速",
+            "value": "UART、PWM、GPIO、I2C、SPI、RTC"
+          },
+          {
+            "category": "系统",
+            "key": "特性",
+            "value": "快启动、安全启动、低功耗"
+          }
+        ],
+        "applications": [
+          {
+            "title": "智能摄像机",
+            "image": "/Smart Cameras.webp"
+          },
+          {
+            "title": "门禁",
+            "image": "/Access Control.webp"
+          },
+          {
+            "title": "机器人",
+            "image": "/Robotics.webp"
+          },
+          {
+            "title": "4K IPC",
+            "image": "/4K IPC.webp"
+          },
+          {
+            "title": "无人机",
+            "image": "/Drones.webp"
+          },
+          {
+            "title": "行车记录仪",
+            "image": "/Dash Cam.webp"
+          }
+        ],
+        "faqs": [
+          {
+            "question": "Intra4 编码的优势是什么？",
+            "answer": "Intra4 采用更小的块内编码，更好保留复杂纹理细节，在低码率下提供更高压缩率与清晰度。"
+          },
+          {
+            "question": "CV184 与 CV181 是否兼容？",
+            "answer": "是。CV184 与 CV181 系列引脚兼容，并共享 SDK、ISP 调校工具与 AI 开发环境。"
+          },
+          {
+            "question": "TPU 支持哪些模型？",
+            "answer": "支持 Caffe/TensorFlow/PyTorch/ONNX 等主流框架，并针对 ResNet、YOLO、MobileNet 与 OpenCLIP 优化。"
+          }
+        ]
+      },
+      "cv181": {
+        "metaTitle": "SOPHGO CV181x RISC-V 视觉 SoC（FPV/UAV）（CV1813H/CV1812H/CV1811H/CV1812C-P/CV1811C/CV1810C/CV1813H-A/CV1812H-A/CV1811H-A/CV1812C-PA/CV1811C-A）| AIMORELOGY",
+        "metaDescription": "SOPHGO CV181x 系列（CV1813H、CV1812H、CV1811H、CV1812C-P、CV1811C、CV1810C、CV1813H-A、CV1812H-A、CV1811H-A、CV1812C-PA、CV1811C-A）提供 0.5~1.0 TOPS AI，适用于智能门铃、门禁、轻量 FPV/UAV 摄像头与低功耗 AIoT 设备。",
+        "tagline": "面向轻量智能场景的 RISC-V 视觉 SoC",
+        "description": "支持显示输出的高性能 RISC-V SoC，AI 算力最高 1.0 TOPS。",
+        "longDescription": [
+          "CV181 系列面向轻量级智能（消费级）市场，采用双核 RISC-V C906（1.0GHz + 0.7GHz）或 A 系列的 ARM A53 + RISC-V 组合，兼顾算力与能效。",
+          "内置 0.5~1.0 TOPS INT8 TPU，支持 BF16 混合精度；针对快启动与低功耗场景优化，适用于电池设备，如智能门铃与猫眼锁。",
+          "自研 ISP 支持 3DNR、2 帧 HDR 与 LDC，可接入两路 MIPI/DVP 相机，输出支持 MIPI DSI、LVDS 或 RGB。",
+          "视频处理支持 H.265/H.264/MJPEG 编码，最高 5MP（2880x1620）@30FPS；集成 16-bit 音频 Codec 与 MCU 子系统。",
+          "系列在 BGA 10x10 与 QFN-88 9x9 封装内引脚兼容，并与 CV180 共用 SDK 与 TPU 工具链，便于产品线扩展。"
+        ],
+        "highlights": [
+          "双核：C906（1.0GHz+0.7GHz）或 ARM A53（1.2GHz）+ C906",
+          "TPU：0.5~1.0 TOPS @ INT8 / 支持 BF16",
+          "ISP：3DNR、2f-HDR、LDC、3A、去雾",
+          "视频：5MP@30fps H.265/H.264/MJPEG",
+          "显示：MIPI DSI（4L/2L）、LVDS、RGB、BT.656/1120",
+          "快启动与低功耗架构"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "双核算力",
+            "description": "可选纯 RISC-V 或 ARM+RISC-V 架构，满足不同性能与系统需求。"
+          },
+          {
+            "title": "2f-HDR 成像",
+            "description": "双帧宽动态技术在强逆光环境下保持细节清晰。"
+          },
+          {
+            "title": "SiP 内存集成",
+            "description": "提供 512Mb DDR2 至 4Gb DDR3 SiP，降低 PCB 体积与 BOM 成本。"
+          },
+          {
+            "title": "多传感器输入",
+            "description": "支持最多 2 路摄像头输入，接口包括 MIPI CSI、Sub-LVDS、HiSPi。"
+          },
+          {
+            "title": "丰富音视频 I/O",
+            "description": "集成 16-bit 音频 Codec 与完整显示输出，适合交互设备。"
+          },
+          {
+            "title": "生态协同",
+            "description": "与 CV180 共用 SDK、ISP 与 AI 参考设计，便于产品梯度开发。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "architecture",
+            "title": "核心架构",
+            "description": "灵活的计算平台，双 C906 或 ARM + RISC-V，并集成 MCU 子系统。",
+            "stats": [
+              {
+                "label": "CPU（C 系列）",
+                "value": "2x C906（1.0GHz/0.7GHz）"
+              },
+              {
+                "label": "CPU（A 系列）",
+                "value": "A53（1.2GHz）+ C906"
+              },
+              {
+                "label": "MCU",
+                "value": "独立 MCU RAM/IO"
+              },
+              {
+                "label": "安全",
+                "value": "安全启动 / EFuse"
+              }
+            ]
+          },
+          {
+            "id": "tpu-acceleration",
+            "title": "AI 性能",
+            "description": "集成 TPU 为轻量神经网络提供加速，适合常见消费级 AI 任务。",
+            "stats": [
+              {
+                "label": "峰值算力",
+                "value": "1.0 TOPS @ INT8"
+              },
+              {
+                "label": "混合精度",
+                "value": "BF16 / INT8"
+              },
+              {
+                "label": "SDK",
+                "value": "共享 TPU 工具链"
+              }
+            ],
+            "bullets": [
+              "针对行人检测与手势识别优化。",
+              "支持 Caffe、TensorFlow、PyTorch 与 ONNX 框架。",
+              "高效推理满足实时边缘响应。"
+            ]
+          },
+          {
+            "id": "isp-v4",
+            "title": "成像管线",
+            "description": "自研 ISP 引擎提升清晰度与动态范围。",
+            "bullets": [
+              "3DNR：低照场景降噪。",
+              "2f-HDR：复杂光照下的动态范围提升。",
+              "LDC：广角镜头畸变校正。",
+              "显示引擎：支持 MIPI/LVDS/RGB 多接口输出。"
+            ]
+          },
+          {
+            "id": "variant-comparison",
+            "title": "CV181 系列对比",
+            "description": "覆盖 CV181 与 CV181-A 系列的型号对比。",
+            "table": {
+              "headers": [
+                "型号",
+                "CPU",
+                "TPU",
+                "DDR SiP",
+                "封装"
+              ],
+              "rows": [
+                [
+                  "CV1813H",
+                  "双 C906",
+                  "1.0 TOPS",
+                  "4Gb DDR3",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1812H",
+                  "双 C906",
+                  "1.0 TOPS",
+                  "2Gb DDR3",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1811H",
+                  "双 C906",
+                  "1.0 TOPS",
+                  "1Gb DDR3",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1812C-P",
+                  "双 C906",
+                  "1.0 TOPS",
+                  "2Gb DDR3",
+                  "QFN-88 9x9"
+                ],
+                [
+                  "CV1811C",
+                  "双 C906",
+                  "0.5 TOPS",
+                  "1Gb DDR3",
+                  "QFN-88 9x9"
+                ],
+                [
+                  "CV1810C",
+                  "双 C906",
+                  "0.5 TOPS",
+                  "512Mb DDR2",
+                  "QFN-88 9x9"
+                ],
+                [
+                  "CV1813H-A",
+                  "A53+C906",
+                  "1.0 TOPS",
+                  "4Gb DDR3",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1812H-A",
+                  "A53+C906",
+                  "1.0 TOPS",
+                  "2Gb DDR3",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1811H-A",
+                  "A53+C906",
+                  "1.0 TOPS",
+                  "1Gb DDR3",
+                  "BGA 10x10"
+                ],
+                [
+                  "CV1812C-PA",
+                  "A53+C906",
+                  "1.0 TOPS",
+                  "2Gb DDR3",
+                  "QFN-88 9x9"
+                ],
+                [
+                  "CV1811C-A",
+                  "A53+C906",
+                  "1.0 TOPS",
+                  "1Gb DDR3",
+                  "QFN-88 9x9"
+                ]
+              ],
+              "note": "同封装内型号引脚兼容，便于快速选型与替换。"
+            }
+          }
+        ],
+        "specs": [
+          {
+            "category": "处理器",
+            "key": "CPU",
+            "value": "双 C906 1.0GHz + 0.7GHz（或 ARM A53+C906）"
+          },
+          {
+            "category": "AI",
+            "key": "TPU",
+            "value": "0.5~1.0 TOPS @ INT8 / BF16"
+          },
+          {
+            "category": "视频",
+            "key": "编码",
+            "value": "H.265/H.264/MJPEG（最高 5MP@30）"
+          },
+          {
+            "category": "视频",
+            "key": "ISP",
+            "value": "3DNR、2f-HDR、LDC、去雾"
+          },
+          {
+            "category": "接口",
+            "key": "视频输入",
+            "value": "2x（MIPI 2L+2L+DVP 或 4L）"
+          },
+          {
+            "category": "接口",
+            "key": "视频输出",
+            "value": "MIPI DSI（4L/2L）、LVDS、RGB、BT.656/1120"
+          },
+          {
+            "category": "内存",
+            "key": "SiP DDR",
+            "value": "512Mb DDR2 / 1Gb / 2Gb / 4Gb DDR3"
+          },
+          {
+            "category": "存储",
+            "key": "接口",
+            "value": "eMMC、SPI NOR/NAND、SDIO 3.0 x2"
+          },
+          {
+            "category": "以太网",
+            "key": "MAC/PHY",
+            "value": "10/100 MAC PHY（支持 RMII）"
+          },
+          {
+            "category": "外设",
+            "key": "I/O",
+            "value": "USB 2.0、I2C x5、SPI x3、UART x4、PWM x15"
+          },
+          {
+            "category": "音频",
+            "key": "Codec",
+            "value": "16-bit Codec（ADC/DAC/I2S）"
+          },
+          {
+            "category": "系统",
+            "key": "启动",
+            "value": "快启动 / 安全启动"
+          }
+        ],
+        "applications": [
+          {
+            "title": "家用 IPC",
+            "image": "/Home IPC.webp"
+          },
+          {
+            "title": "智能门铃",
+            "image": "/Smart Doorbell.webp"
+          },
+          {
+            "title": "猫眼门锁",
+            "image": "/Cat-eye Door Lock.webp"
+          },
+          {
+            "title": "流媒体后视镜",
+            "image": "/Streaming Rearview Mirror.webp"
+          },
+          {
+            "title": "门禁",
+            "image": "/Access Control.webp"
+          },
+          {
+            "title": "行车记录仪",
+            "image": "/Dash Cam.webp"
+          }
+        ],
+        "faqs": [
+          {
+            "question": "CV181 与 CV181-A 有什么区别？",
+            "answer": "CV181 采用双 RISC-V C906 架构，CV181-A 采用 ARM Cortex-A53 + RISC-V C906 组合，软件兼容性更广。"
+          },
+          {
+            "question": "CV181 是否适合电池设备？",
+            "answer": "是。其低功耗与快启动设计（小于 500ms）非常适合电池供电的智能门铃与门锁。"
+          }
+        ]
+      },
+      "cv180": {
+        "metaTitle": "SOPHGO CV180x RISC-V 视觉 SoC（入门 FPV/UAV）（CV1801B/CV180ZB）- 0.2 TOPS | AIMORELOGY",
+        "metaDescription": "SOPHGO CV180x 系列（CV1801B、CV180ZB）是入门级 0.2 TOPS RISC-V 视觉 SoC，面向 FPV/UAV 入门相机、轻量 AIoT 与电池设备。",
+        "tagline": "消费级轻量智能视觉 SoC",
+        "description": "面向消费 IoT 与轻量智能应用的高性价比 RISC-V 视觉芯片。",
+        "longDescription": [
+          "CV180 系列是面向入门级消费与轻量智能市场的高性价比视觉处理器。双核 RISC-V C906（1.0GHz + 0.7GHz）架构，为大众化智能视觉提供基础算力。",
+          "自研 TPU 提供 0.2 TOPS INT8，支持人形检测与运动检测；超低功耗与快启动适合电池设备。",
+          "虽然定位入门，但 ISP 具备 3DNR、DWDR、LDC、紫边消除等能力，支持 5MP（2880x1620）@20FPS 视频编码。",
+          "QFN-68 7x7 超小封装集成 DDR2/DDR3 SiP，降低 BOM 并简化制造；系列内引脚兼容。",
+          "与 CV181 共用 SDK 与参考设计，便于产品梯度开发与快速量产。"
+        ],
+        "highlights": [
+          "双核 RISC-V：C906（1.0GHz + 0.7GHz）",
+          "TPU：0.2 TOPS @ INT8 / 支持人形检测",
+          "ISP：3DNR、DWDR、LDC、3A、去雾",
+          "视频：5MP@20fps / 4MP@25fps H.265/H.264",
+          "封装：超小 QFN-68 7x7（Pin-to-Pin）",
+          "低功耗与快启动优化"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "RISC-V 高效架构",
+            "description": "基于开放 RISC-V 架构，提升能效并降低授权成本。"
+          },
+          {
+            "title": "基础 AI 能力",
+            "description": "内置人形检测与运动感知算法，为入门安防提供轻量智能。"
+          },
+          {
+            "title": "紧凑 SiP 集成",
+            "description": "集成 512Mb DDR2 或 1Gb DDR3，进一步缩小整机尺寸。"
+          },
+          {
+            "title": "高效编码",
+            "description": "支持 H.265 硬件编码，在 5MP 分辨率下提升存储效率。"
+          },
+          {
+            "title": "星光级成像",
+            "description": "3DNR 与 ISP 增强在低照场景保持清晰画质。"
+          },
+          {
+            "title": "Pin-to-Pin 兼容",
+            "description": "CV1801B 与 CV180ZB 在封装内引脚兼容，便于供应链管理。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "architecture",
+            "title": "核心架构",
+            "description": "双 C906 内核与 MCU 子系统，满足入门级智能控制。",
+            "stats": [
+              {
+                "label": "CPU",
+                "value": "2x C906（1.0GHz/0.7GHz）"
+              },
+              {
+                "label": "缓存",
+                "value": "L1 64KB D / 32KB I"
+              },
+              {
+                "label": "MCU",
+                "value": "独立 MCU RAM"
+              }
+            ]
+          },
+          {
+            "id": "tpu-acceleration",
+            "title": "AI 与 TPU",
+            "description": "0.2 TOPS 性能面向人形检测、入侵报警与基础场景分析。",
+            "stats": [
+              {
+                "label": "性能",
+                "value": "0.2 TOPS @ INT8"
+              },
+              {
+                "label": "算法",
+                "value": "人形 / 运动检测"
+              }
+            ],
+            "bullets": [
+              "与 CV181 共用 SDK。",
+              "适用于低复杂度视觉 AI 任务。",
+              "功耗效率高，适合持续监控。"
+            ]
+          },
+          {
+            "id": "isp-v4",
+            "title": "成像与视频",
+            "description": "消费级 IPC 的完整成像与视频处理能力。",
+            "bullets": [
+              "ISP 特性：3DNR、DWDR、LDC、3A、去雾。",
+              "视频输出：支持 MIPI 4L / BT.656。",
+              "编码：H.265/H.264/JPEG 硬件加速。"
+            ]
+          },
+          {
+            "id": "variant-comparison",
+            "title": "CV180 系列型号",
+            "description": "针对成本与性能的入门级型号对比。",
+            "table": {
+              "headers": [
+                "型号",
+                "CPU",
+                "DDR SiP",
+                "TPU",
+                "VI 接口"
+              ],
+              "rows": [
+                [
+                  "CV1801B",
+                  "双 C906",
+                  "1Gb DDR3",
+                  "0.2 TOPS",
+                  "MIPI 4L / BT.656"
+                ],
+                [
+                  "CV180ZB",
+                  "双 C906",
+                  "512Mb DDR2",
+                  "0.2 TOPS",
+                  "MIPI 4L / BT.656"
+                ]
+              ],
+              "note": "竞品替代参考：HI3516EV300、SSC337DE、T31 X/ZX/A、FH8856V210 等。"
+            }
+          }
+        ],
+        "specs": [
+          {
+            "category": "处理器",
+            "key": "CPU",
+            "value": "双 C906（1.0GHz + 0.7GHz）"
+          },
+          {
+            "category": "AI",
+            "key": "TPU",
+            "value": "0.2 TOPS @ INT8"
+          },
+          {
+            "category": "视频",
+            "key": "编码",
+            "value": "H.265/H.264/MJPEG（最高 5MP@20）"
+          },
+          {
+            "category": "视频",
+            "key": "ISP",
+            "value": "3DNR、DWDR、LDC、3A、去雾"
+          },
+          {
+            "category": "接口",
+            "key": "视频输入",
+            "value": "1x（MIPI 4L / BT.656 / CSI）"
+          },
+          {
+            "category": "内存",
+            "key": "SiP DDR",
+            "value": "512Mb DDR2 / 1Gb DDR3"
+          },
+          {
+            "category": "存储",
+            "key": "接口",
+            "value": "SPI NOR/NAND、SDIO 3.0 x2"
+          },
+          {
+            "category": "以太网",
+            "key": "MAC/PHY",
+            "value": "10/100 MAC PHY"
+          },
+          {
+            "category": "外设",
+            "key": "I/O",
+            "value": "USB 2.0、I2C x4、SPI x3、UART x5、PWM x13"
+          },
+          {
+            "category": "音频",
+            "key": "Codec",
+            "value": "16-bit Codec（ADC/DAC/I2S）"
+          },
+          {
+            "category": "系统",
+            "key": "启动",
+            "value": "快启动 / 安全启动"
+          },
+          {
+            "category": "封装",
+            "key": "类型",
+            "value": "QFN-68 7x7（Pin-to-Pin）"
+          }
+        ],
+        "applications": [
+          {
+            "title": "婴儿看护",
+            "image": "/Baby Monitor.webp"
+          },
+          {
+            "title": "儿童相机",
+            "image": "/Kids Camera.webp"
+          },
+          {
+            "title": "扫描笔",
+            "image": "/Scanning Pen.webp"
+          },
+          {
+            "title": "行车记录仪",
+            "image": "/Dash Cam.webp"
+          },
+          {
+            "title": "门禁",
+            "image": "/Access Control.webp"
+          },
+          {
+            "title": "智能门铃",
+            "image": "/Smart Doorbell.webp"
+          }
+        ],
+        "faqs": [
+          {
+            "question": "CV180 与 CV181 的软件是否兼容？",
+            "answer": "是。两者共用 SDK、ISP 设置与智能参考方案，便于产品分级与迭代。"
+          },
+          {
+            "question": "CV180 可替代哪些竞品芯片？",
+            "answer": "定位替代 HI3516EV300、SSC337DE、T31 X/ZX/A、FH8856V210 等。"
+          }
+        ]
+      }
+    },
+    "espressif": {
+      "esp32s3": {
+        "metaTitle": "Espressif ESP32-S3-WROOM-1 Wi-Fi/蓝牙 模组 | AIMORELOGY",
+        "metaDescription": "ESP32-S3-WROOM-1 双核 Wi-Fi + Bluetooth LE 模组，支持 AI 加速，适用于智能家居、语音与边缘 AI 设备。"
+      }
+    },
+    "afcComingSoon": {
+      "metaTitle": "即将推出 | AIMORELOGY",
+      "metaDescription": "AIMORELOGY AFC-V1 一体化 FPV/无人机 飞行控制器，融合视觉、图传与控制。",
+      "badge": "深圳市爱谋科技有限公司",
+      "title": "即将推出",
+      "subtitle": "AFC-V1",
+      "desc": "集视觉、视频链路和控制于一体的终极一体化飞行控制器即将面世。",
+      "tagline": "重新定义 FPV 飞控的未来。",
+      "returnHome": "返回首页",
+      "contactSales": "联系销售人员了解规格"
+    }
+  },
+  "legal": {
+    "lastUpdated": "最后更新：{{date}}"
+  },
+  "privacy": {
+    "metaTitle": "隐私政策 | AIMORELOGY",
+    "metaDescription": "了解 AIMORELOGY 如何收集、使用并保护您的信息。",
+    "title": "隐私政策 | AIMORELOGY",
+    "intro": {
+      "p1": "AIMORELOGY LIMITED 及其附属公司（“AIMORELOGY”、“我们”、“我们”或“我们的”）致力于保护您的隐私。",
+      "p2": "本隐私政策解释了当您访问我们的网站或使用我们的产品和服务时，我们如何收集、使用、披露和保护您的信息。"
+    },
+    "sections": {
+      "collection": {
+        "title": "1. 收集您的信息",
+        "p1": "我们可能会通过多种方式收集有关您的信息。",
+        "items": {
+          "0": {
+            "title": "我们可能在网站上收集的信息包括：",
+            "desc": "您在本网站注册或选择参加与本网站相关的各种活动时自愿向我们提供的个人身份信息，例如您的姓名、送货地址、电子邮件地址和电话号码。"
+          },
+          "1": {
+            "title": "衍生数据",
+            "desc": "当您访问本网站时，我们的服务器自动收集的信息，例如您的 IP 地址、您的浏览器类型、您的操作系统、您的访问时间以及您在访问本网站之前和之后直接查看的页面。"
+          }
+        }
+      },
+      "use": {
+        "title": "2. 您的信息的使用",
+        "p1": "准确的信息可以帮助我们为您提供顺畅、高效、个性化的体验。具体而言，我们可能使用通过网站收集的信息用于：",
+        "items": {
+          "0": "创建并管理您的帐户。",
+          "1": "处理您的订单并交付产品（例如 CV184XH 飞行控制器）。",
+          "2": "向您发送有关您的帐户或订单的电子邮件。",
+          "3": "响应产品和客户服务请求。",
+          "4": "编制匿名统计数据和分析以供内部使用。",
+          "5": "向您发送新闻通讯（如果您选择加入）。"
+        }
+      },
+      "disclosure": {
+        "title": "3. 披露您的信息",
+        "p1": "我们可能在以下情况下共享您的信息，包括：",
+        "items": {
+          "0": {
+            "title": "依据法律或保护权利",
+            "desc": "如果我们认为为了响应法律程序、调查或纠正潜在的违反我们政策的行为或保护他人的权利、财产和安全，有必要发布有关您的信息。"
+          },
+          "1": {
+            "title": "第三方服务提供商",
+            "desc": "我们可能会与为我们或代表我们提供服务的第三方共享您的信息，包括支付处理、数据分析、电子邮件发送、托管服务、客户服务和营销协助。"
+          }
+        }
+      },
+      "security": {
+        "title": "4. 您的信息安全",
+        "p1": "我们使用管理、技术和物理安全措施来帮助保护您的个人信息。"
+      },
+      "contact": {
+        "title": "虽然我们已采取合理措施来保护您提供给我们的个人信息，但请注意，尽管我们付出了努力，但没有任何安全措施是完美或坚不可摧的，也无法保证任何数据传输方法不会被拦截或其他类型的滥用。",
+        "p1": "如果您对本隐私政策有疑问或意见，请通过以下方式联系我们："
+      }
+    },
+    "contact": {
+      "company": "AIMORELOGY LIMITED",
+      "addressLine1": "世纪工业中心H2 4/F室",
+      "addressLine2": "33-35 香港沙田火炭坳背湾街",
+      "emailLabel": "电子邮件",
+      "email": "info@aimorelogy.com"
+    }
+  },
+  "terms": {
+    "metaTitle": "服务条款 | AIMORELOGY",
+    "metaDescription": "查看 AIMORELOGY 网站与产品的使用条款。",
+    "title": "服务条款 | AIMORELOGY",
+    "intro": "本服务条款（“条款”）调整您对 AIMORELOGY LIMITED（“公司”，“我们”）网站及产品与服务的使用。访问或使用本网站即表示您同意受本条款约束。",
+    "sections": {
+      "license": {
+        "title": "1. 使用许可",
+        "p1": "允许您暂时下载并使用 AIMORELOGY 网站上的材料（信息或软件），仅限于个人、非商业、暂时浏览。这是一个许可，而非所有权转让，在该许可下，您不得：",
+        "items": {
+          "0": "修改或者复制材料；",
+          "1": "将这些材料用于任何商业目的或任何公开展示（商业或非商业）；",
+          "2": "尝试对 AIMORELOGY 网站上包含的任何软件进行反编译或逆向工程；",
+          "3": "删除材料中的任何版权或其他专有符号；",
+          "4": "或者"
+        }
+      },
+      "disclaimer": {
+        "title": "2. 免责声明",
+        "p1": "AIMORELOGY 网站上的材料按“现状”提供。AIMORELOGY 不作任何明示或默示保证，并特此声明不承担任何保证，包括（但不限于）适销性、适用于特定用途或不侵犯等默示保证或条件。"
+      },
+      "limitations": {
+        "title": "3. 局限性",
+        "p1": "在任何情况下，AIMORELOGY 或其供应商均不对因使用或无法使用 AIMORELOGY 网站上的材料而造成的任何损害（包括但不限于数据或利润损失或由于业务中断而造成的损害）承担责任，即使 AIMORELOGY 或授权代表已被口头或书面通知发生此类损害的可能性。"
+      },
+      "usage": {
+        "title": "4. 产品使用与安全",
+        "p1": "我们的产品，包括飞行控制器和 Edge AI 模块，专为工业和专业用途而设计。",
+        "items": {
+          "0": "您同意按照所有适用的当地法律和航空法规使用我们的产品。",
+          "1": "AIMORELOGY 对因误用、不正确安装或修改我们的硬件或软件而造成的任何损害、伤害或法律责任不承担任何责任。",
+          "2": "用户有责任确保使用我们技术部署的任何自主系统都能安全运行。"
+        }
+      },
+      "law": {
+        "title": "5. 适用法律",
+        "p1": "这些条款和条件受香港 SAR 法律管辖并按其解释，并且您不可撤销地服从该地区法院的专属管辖权。"
+      },
+      "changes": {
+        "title": "6. 条款变更",
+        "p1": "我们保留随时修改本条款的权利。修订生效后，继续使用本服务即表示您接受修订后的条款。"
+      }
+    }
+  },
+  "cookies": {
+    "metaTitle": "Cookie 政策 | AIMORELOGY",
+    "metaDescription": "了解 AIMORELOGY 如何使用 Cookie 以及如何管理偏好。",
+    "title": "Cookie 政策 | AIMORELOGY",
+    "intro": "本 Cookie 政策解释了什么是 Cookie、AIMORELOGY 如何在我们的网站上使用 Cookie，以及您对 Cookie 的选择。",
+    "sections": {
+      "what": {
+        "title": "1. 什么是 Cookie？",
+        "p1": "Cookie 是由您访问的网站发送到您浏览器的小型文本文件。Cookie 文件会存储在您的浏览器中，使服务或第三方能够识别您以便优化后续访问。"
+      },
+      "use": {
+        "title": "2. 我们如何使用 Cookie",
+        "p1": "我们可能在您使用本服务时在您的浏览器中存放若干 Cookie，目的如下：",
+        "items": {
+          "0": {
+            "title": "基本饼干",
+            "desc": "启用服务的某些功能，例如身份验证和安全性。"
+          },
+          "1": {
+            "title": "分析 Cookie",
+            "desc": "提供分析并了解我们网站的使用方式（例如 Google Analytics）。"
+          },
+          "2": {
+            "title": "偏好 Cookie",
+            "desc": "存储您的首选项，例如语言设置。"
+          }
+        }
+      },
+      "third": {
+        "title": "3. 第三方 Cookie",
+        "p1": "除了我们自己的 cookie 之外，我们还可能使用各种第三方 cookie 来报告服务的使用统计数据、在服务上或通过服务投放广告等。"
+      },
+      "choices": {
+        "title": "4. 你的选择",
+        "p1": "如果您想删除 cookie 或指示您的网络浏览器删除或拒绝 cookie，请访问您的网络浏览器的帮助页面。",
+        "p2": "但请注意，如果您删除 Cookie 或拒绝接受它们，您可能无法使用我们提供的所有功能，您可能无法存储您的首选项，并且我们的某些页面可能无法正常显示。"
+      }
+    },
+    "help": {
+      "title": "浏览器帮助页面："
+    }
+  }
+}
