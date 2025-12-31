@@ -38,8 +38,8 @@
     "language": "Language",
     "lang": {
       "en": "English",
-      "zh": "简体中文",
-      "ru": "Русский"
+      "zh": "简体中文",
+      "ru": "Русский"
     },
     "promo": "Need assistance with integration or technical specifications? Our engineering team is ready to help.",
     "contactSupport": "Contact Support",
@@ -144,8 +144,8 @@
           "desc": "Instant target acquisition near architectural features."
         },
         "1": {
-          "title": "2. Clutter Rejection",
-          "desc": "Robust tracking amidst complex environments and parked vehicles."
+          "title": "Occlusion Recovery",
+          "desc": "Rapid re-lock after brief occlusion to keep continuous target tracking."
         },
         "2": {
           "title": "3. Long Range Stability",
@@ -376,8 +376,8 @@
         "1": {
           "alt": "Complex Scene",
           "status": "STATUS: STABLE",
-          "title": "2. Clutter Rejection",
-          "desc": "Robust tracking amidst complex environments and parked vehicles."
+          "title": "Occlusion Recovery",
+          "desc": "Rapid re-lock after brief occlusion to keep continuous target tracking."
         },
         "2": {
           "alt": "Long Range",
