@@ -157,7 +157,7 @@ const ProductDetail_STM: React.FC = () => {
         <section className="relative min-h-[70vh] flex items-center pt-24 overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/STM/STM32F405-Microcontrollers.jpg" 
+              src="/STM/3.webp" 
               className="w-full h-full object-cover opacity-70"
               alt="STM32 banner"
             />
