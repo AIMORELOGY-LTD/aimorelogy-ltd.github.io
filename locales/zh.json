@@ -1947,6 +1947,412 @@
       "tagline": "重新定义 FPV 飞控的未来。",
       "returnHome": "返回首页",
       "contactSales": "联系销售人员了解规格"
+    },
+    "stm32": {
+      "ui": {
+        "heroLabel": "高性能 ARM Cortex-M",
+        "getDocs": "获取技术文档",
+        "productBrief": "产品简介",
+        "systemArchitecture": "系统架构",
+        "architecturePlaceholder": "{{name}} 架构图即将提供",
+        "architecturePillar": "架构要点 {{index}}",
+        "performanceEyebrow": "{{core}} 核心",
+        "computePowerTitle": "计算性能",
+        "benchmarksTitle": "性能指标",
+        "peripheralsEyebrow": "高精度集成外设",
+        "analogControlTitle": "模拟与控制",
+        "ipBlockLabel": "IP-BLOCK-{{index}}",
+        "variantComparisonTitle": "型号对比",
+        "applicationsTitle": "商业应用",
+        "datasheetTitle": "数据手册",
+        "datasheetSubtitle": "技术参数",
+        "ctaPrefix": "基于"
+      },
+      "stm32f405": {
+        "tagline": "面向高阶边缘控制的高性能基础",
+        "metaTitle": "STM32F405 高性能 Arm Cortex-M4 MCU | AIMORELOGY",
+        "metaDescription": "STM32F405xx Arm Cortex-M4 MCU，集成 FPU、DSP，主频 168 MHz、1 MB Flash，并具备丰富连接能力，适用于实时控制应用。",
+        "description": "高性能 Arm Cortex-M4 微控制器，主频最高 168 MHz，集成 FPU 与 DSP。",
+        "longDescription": [
+          "STM32F405xx 系列基于高性能 Arm Cortex-M4 32 位 RISC 内核，最高频率 168 MHz。Cortex-M4 内核集成单精度浮点单元 (FPU)，支持 Arm 单精度数据处理指令与数据类型，同时内置完整的 DSP 指令集和内存保护单元 (MPU)，提升应用安全性。",
+          "该系列集成高速片上存储器，Flash 最高 1 MB，SRAM 最高 192 KB，其中包含 64 KB CCM (Core Coupled Memory) 数据 RAM，可实现无等待的高速数据处理；另提供 4 KB 备份 SRAM，用于最低功耗模式下的数据保持。",
+          "高性能模拟能力包括三路 12-bit ADC，单通道 2.4 MSPS，三路交错最高 7.2 MSPS；两路 12-bit DAC 以及最多 17 个定时器（含 16-bit 与 32-bit 高级控制定时器用于电机控制），为复杂控制系统提供强大支持。",
+          "丰富的连接接口是 F405 的标志：3x I2C、3x SPI、2x 全双工 I2S，同时提供 4x USART 与 2x UART（最高 10.5 Mbit/s）、双 CAN 2.0B 以及 SDIO。",
+          "STM32F405xx 面向工业、医疗与消费级应用，强调高算力与丰富连接，同时保持高能效。多种低功耗模式与 1.8 V 到 3.6 V 宽电压范围，使其成为新一代智能边缘控制器的理想基础。"
+        ],
+        "highlights": [
+          "内核: Arm Cortex-M4 32-bit，集成 FPU 与 DSP",
+          "性能: 168 MHz / 210 DMIPS 高性能",
+          "存储: 1 MB Flash / 192 KB SRAM + 64 KB CCM",
+          "模拟: 3x 12-bit ADC（交错最高 7.2 MSPS）",
+          "USB: 双 OTG（Full Speed 与 High Speed，支持 ULPI）",
+          "封装: LQFP64 至 LQFP144 与 WLCSP90"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "Arm Cortex-M4 内核",
+            "description": "内置单精度 FPU 与 DSP 指令，适用于高级信号处理与实时控制算法。"
+          },
+          {
+            "title": "ART 加速器",
+            "description": "ST 的 Adaptive Real-Time (ART) 存储加速器可在最高 168 MHz 下实现 Flash 0 等待执行。"
+          },
+          {
+            "title": "交错 ADC",
+            "description": "三路 12-bit ADC 可交错工作，实现 7.2 MSPS 综合采样速率。"
+          },
+          {
+            "title": "高级定时器",
+            "description": "最多 17 个定时器，含 2 个 32-bit 定时器与高级 PWM，用于电机控制与功率转换。"
+          },
+          {
+            "title": "丰富连接",
+            "description": "集成双 CAN 2.0B、SDIO 与双 USB OTG，满足全面系统通信。"
+          },
+          {
+            "title": "灵活存储扩展",
+            "description": "支持外部存储接口 (FSMC)，可扩展 SRAM、PSRAM、NOR、NAND。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "performance",
+            "title": "计算性能",
+            "description": "针对高速执行与确定性实时响应优化。",
+            "stats": [
+              { "label": "主频", "value": "168 MHz" },
+              { "label": "性能", "value": "210 DMIPS" },
+              { "label": "效率", "value": "1.25 DMIPS/MHz" },
+              { "label": "FPU", "value": "Single Precision" }
+            ],
+            "bullets": [
+              "硬件 DSP 指令用于高效信号处理。",
+              "Adaptive Real-Time (ART) 加速器实现 Flash 0 等待执行。",
+              "内存保护单元 (MPU) 提供可靠系统安全。"
+            ]
+          },
+          {
+            "id": "analog-timers",
+            "title": "模拟与控制",
+            "description": "高精度模拟外设与复杂定时单元，适用于高级自动化控制。",
+            "bullets": [
+              "三路 12-bit ADC: 单通道 2.4 MSPS，交错 7.2 MSPS。",
+              "双 12-bit DAC: 独立通道用于信号输出。",
+              "17x 定时器: 含 2x 32-bit 定时器与高级 PWM，用于电机控制。",
+              "LCD 接口: 支持 8080/6800 并行模式。"
+            ]
+          },
+          {
+            "id": "connectivity",
+            "title": "系统连接",
+            "description": "多种数字接口，满足工业与消费标准兼容。",
+            "bullets": [
+              "双 USB OTG: 支持 Full Speed 与 High Speed（ULPI）。",
+              "双 CAN 2.0B: 适用于汽车与工业网络。",
+              "丰富串口: 6x USART/UART（10.5 Mbit/s），3x I2C，3x SPI。",
+              "存储: 专用 SDIO 接口用于高速闪存卡。"
+            ]
+          },
+          {
+            "id": "variant-comparison",
+            "title": "STM32F405 型号选择",
+            "description": "选择适合封装与存储配置的型号。",
+            "table": {
+              "headers": ["型号", "Flash (KB)", "封装", "GPIO", "ADC 通道"],
+              "rows": [
+                ["STM32F405RG", "1024", "LQFP64", "51", "16"],
+                ["STM32F405VG", "512", "LQFP100", "82", "16"],
+                ["STM32F405ZG", "1024", "LQFP144", "114", "24"],
+                ["STM32F405OG", "512", "WLCSP90", "72", "13"],
+                ["STM32F405OE", "512", "WLCSP90", "72", "13"]
+              ],
+              "note": "FSMC 是否可用取决于封装引脚数，高引脚封装提供完整的外部存储支持。"
+            }
+          }
+        ],
+        "specs": [
+          { "category": "内核", "key": "CPU", "value": "Arm Cortex-M4 32-bit，FPU、DSP、MPU" },
+          { "category": "内核", "key": "最高频率", "value": "最高 168 MHz" },
+          { "category": "内核", "key": "性能", "value": "210 DMIPS（1.25 DMIPS/MHz）" },
+          { "category": "存储", "key": "Flash", "value": "512 KB 或 1 MB" },
+          { "category": "存储", "key": "SRAM", "value": "最高 192 KB（112+16+64 KB CCM）" },
+          { "category": "模拟", "key": "ADC", "value": "3x 12-bit，2.4 MSPS（7.2 MSPS 三路交错）" },
+          { "category": "模拟", "key": "DAC", "value": "2x 12-bit" },
+          { "category": "连接", "key": "USB", "value": "OTG FS + OTG HS（ULPI）" },
+          { "category": "连接", "key": "CAN", "value": "2x CAN 2.0B" },
+          { "category": "连接", "key": "串口", "value": "4x USART + 2x UART，3x I2C，3x SPI" },
+          { "category": "接口", "key": "FSMC", "value": "SRAM/PSRAM/NOR/NAND（与封装相关）" },
+          { "category": "电源", "key": "电压", "value": "1.8 V 到 3.6 V" }
+        ],
+        "applications": [
+          { "title": "电机控制", "image": "/Robot Platform.webp" },
+          { "title": "工业自动化", "image": "/Edge Computing Boxes.webp" },
+          { "title": "医疗仪器", "image": "/Smart Cameras.webp" },
+          { "title": "消费电子", "image": "/Smart Home.webp" },
+          { "title": "飞行控制器", "image": "/Drones.webp" },
+          { "title": "机器人", "image": "/Robotics.webp" }
+        ],
+        "faqs": [
+          {
+            "question": "STM32F405 是否支持 Ethernet？",
+            "answer": "不支持，STM32F405 不包含 Ethernet MAC。如需 Ethernet，请参考 STM32F407 或 F417 系列。"
+          },
+          {
+            "question": "ART 加速器的优势是什么？",
+            "answer": "Adaptive Real-Time (ART) 存储加速器允许 CPU 在 Flash 中以 0 等待状态运行至 168 MHz，最大化性能。"
+          },
+          {
+            "question": "F405 适合做飞行控制器吗？",
+            "answer": "适合，其高频率、FPU 与丰富定时器/外设，使其成为飞控系统（如 FPV 无人机）常用选择。"
+          }
+        ]
+      },
+      "stm32f722": {
+        "tagline": "高性能 Cortex-M7，接口丰富",
+        "metaTitle": "STM32F722 高性能 Arm Cortex-M7 MCU | AIMORELOGY",
+        "metaDescription": "STM32F722xx Arm Cortex-M7 MCU，单精度 FPU、DSP，216 MHz，512 KB Flash，双模式 QSPI。",
+        "description": "高性能 Arm Cortex-M7 微控制器，主频最高 216 MHz，内置 L1 Cache。",
+        "longDescription": [
+          "STM32F722xx 系列基于高性能 Arm Cortex-M7 32 位 RISC 内核，最高频率 216 MHz。Cortex-M7 内核集成单精度浮点单元 (SFPU)，支持 Arm 单精度数据处理指令与数据类型，同时内置完整的 DSP 指令集和内存保护单元 (MPU)，提升应用安全性。",
+          "该系列集成高速片上存储器，Flash 最高 512 KB，SRAM 最高 256 KB，其中包含 64 KB DTCM 和 16 KB ITCM 以获得最佳实时性能。架构还集成 8 KB 指令缓存与 8 KB 数据缓存，用于降低访问延迟。",
+          "高性能模拟能力包括三路 12-bit ADC，单通道 2.4 MSPS，三路交错最高 7.2 MSPS。两路 12-bit DAC 以及最多 18 个定时器（含 16-bit 与 32-bit 定时器），支持实时控制应用。",
+          "接口是 F722 的关键优势：双模式 Quad-SPI、五路 SPI（其中三路支持 simplex I2S）、三路 I2C 与两路 SAI。通信还包括 4x USART 与 4x UART（最高 27 Mbit/s），以及双 USB 2.0 OTG（FS/HS）支持。",
+          "STM32F722xx 面向高阶消费与工业应用，强调高算力与丰富连接并兼顾紧凑封装。多种低功耗模式与 1.7 V 到 3.6 V 宽电压范围，为复杂边缘处理提供稳定平台。"
+        ],
+        "highlights": [
+          "内核: Arm Cortex-M7 32-bit，集成 FPU 与 DSP",
+          "性能: 216 MHz / 462 DMIPS 高性能",
+          "缓存: 8 KB I-Cache + 8 KB D-Cache",
+          "存储: 双模式 Quad-SPI 与 512 KB Flash",
+          "USB: 双 OTG（FS 与 HS/FS，带专用 DMA）",
+          "I/O: 最多 140 路 I/O，108 MHz 高速切换"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "Arm Cortex-M7 内核",
+            "description": "216 MHz 可达 462 DMIPS，单精度 FPU 搭配高速 L1 Cache，提供高性能 MCU 级算力。"
+          },
+          {
+            "title": "双模式 Quad-SPI",
+            "description": "支持高速外部串行 Flash，适合存储大型代码或资源。"
+          },
+          {
+            "title": "灵活的存储控制器",
+            "description": "FMC 支持 SDRAM、PSRAM、NAND 等外部存储，32-bit 总线。"
+          },
+          {
+            "title": "高级 DMA",
+            "description": "16 流 DMA 控制器，具备 FIFO 与突发传输，提高外设与内存间效率。"
+          },
+          {
+            "title": "高精度模拟",
+            "description": "三路 12-bit ADC（单通道 2.4 MSPS）与双 12-bit DAC 提供精确信号输出。"
+          },
+          {
+            "title": "多样封装",
+            "description": "封装覆盖 LQFP64、UFBGA176 与 WLCSP100 等多种尺寸。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "performance",
+            "title": "计算性能",
+            "description": "高频 Cortex-M7 + L1 Cache，提供最大确定性吞吐。",
+            "stats": [
+              { "label": "主频", "value": "216 MHz" },
+              { "label": "性能", "value": "462 DMIPS" },
+              { "label": "效率", "value": "2.14 DMIPS/MHz" },
+              { "label": "L1 Cache", "value": "8KB I + 8KB D" }
+            ],
+            "bullets": [
+              "硬件 DSP 指令用于信号处理。",
+              "单精度浮点单元 (FPU)。",
+              "TCM（紧耦合存储）实现零等待执行。"
+            ]
+          },
+          {
+            "id": "storage-io",
+            "title": "存储与接口",
+            "description": "成熟的存储扩展与高速数字通信。",
+            "bullets": [
+              "Quad-SPI: 双模式支持高吞吐外部存储。",
+              "FMC: 支持 SDRAM 与 32-bit 宽总线。",
+              "双 USB: 内置 FS PHY，HS 通过外部 ULPI。",
+              "双 SDMMC: 适合高速存储卡连接。"
+            ]
+          },
+          {
+            "id": "variant-comparison",
+            "title": "STM32F722 型号选择",
+            "description": "选择满足处理性能与 I/O 密度需求的配置。",
+            "table": {
+              "headers": ["型号", "Flash (KB)", "封装", "GPIO", "ADC 通道"],
+              "rows": [
+                ["STM32F722IE", "512", "LQFP176", "140", "24"],
+                ["STM32F722ZE", "512", "LQFP144", "114", "24"],
+                ["STM32F722VE", "512", "LQFP100", "82", "16"],
+                ["STM32F722RE", "512", "LQFP64", "50", "16"]
+              ],
+              "note": "系列内性能特性一致，I/O 数量随封装变化。"
+            }
+          }
+        ],
+        "specs": [
+          { "category": "内核", "key": "CPU", "value": "Arm Cortex-M7（SFPU、DSP、ART）" },
+          { "category": "内核", "key": "主频", "value": "最高 216 MHz" },
+          { "category": "缓存", "key": "L1 Cache", "value": "8 KB 指令 + 8 KB 数据" },
+          { "category": "存储", "key": "Flash", "value": "最高 512 KB" },
+          { "category": "存储", "key": "SRAM", "value": "256 KB（含 64 KB DTCM + 16 KB ITCM）" },
+          { "category": "存储接口", "key": "QSPI", "value": "双模式 Quad-SPI" },
+          { "category": "模拟", "key": "ADC", "value": "3x 12-bit，2.4 MSPS" },
+          { "category": "连接", "key": "USB", "value": "USB 2.0 FS + HS（通过 ULPI）" },
+          { "category": "连接", "key": "串口", "value": "8x UART/USART，3x I2C，5x SPI" },
+          { "category": "连接", "key": "SAI", "value": "2x 串行音频接口 (SAI)" },
+          { "category": "接口", "key": "FMC", "value": "SRAM/SDRAM/NOR/NAND（32-bit）" },
+          { "category": "I/O", "key": "高速 I/O", "value": "最高 108 MHz" }
+        ],
+        "applications": [
+          { "title": "高级电机控制", "image": "/Robot Platform.webp" },
+          { "title": "飞行控制器", "image": "/Drones.webp" },
+          { "title": "音频处理", "image": "/Smart Cameras.webp" },
+          { "title": "家庭自动化", "image": "/Smart Home.webp" },
+          { "title": "IoT 网关", "image": "/Edge Computing Boxes.webp" },
+          { "title": "机器人", "image": "/Robotics.webp" }
+        ],
+        "faqs": [
+          {
+            "question": "F722 与 F723 的主要区别是什么？",
+            "answer": "STM32F722 需要外部 ULPI PHY 才能实现 USB High Speed，而 STM32F723 集成了 High Speed PHY。"
+          },
+          {
+            "question": "TCM 用于什么？",
+            "answer": "TCM（紧耦合存储器）是直接连接 CPU 的专用 SRAM，可实现零等待执行和数据访问，是实时任务关键。"
+          }
+        ]
+      },
+      "stm32f767": {
+        "tagline": "旗舰级 Cortex-M7，增强图形与以太网",
+        "metaTitle": "STM32F767 高端 Arm Cortex-M7 MCU | AIMORELOGY",
+        "metaDescription": "STM32F767xx 高端 Arm Cortex-M7 MCU，双精度 FPU，最高 2 MB Flash，512 KB SRAM，以太网与 Chrom-ART 图形。",
+        "description": "高端 Arm Cortex-M7 微控制器，集成双精度 FPU 与全面连接能力。",
+        "longDescription": [
+          "STM32F767xx 系列是高性能 Arm Cortex-M7 MCU 的旗舰，最高频率 216 MHz。其双精度浮点单元 (DPFPU) 支持 Arm 双精度与单精度数据处理指令，使其适用于复杂数学计算与高保真音视频处理。",
+          "该系列最高提供 2 MB 双 Bank Flash 与 512 KB SRAM，其中包含 128 KB DTCM，用于关键实时数据。扩展的 L1 Cache（16 KB 指令 + 16 KB 数据）在执行大型固件或外部存储代码时保持高吞吐。",
+          "图形性能方面集成 Chrom-ART Accelerator (DMA2D)、硬件 JPEG 编解码以及 LCD-TFT 控制器，支持最高 XGA 分辨率，为高端 UI 提供流畅图形渲染能力。",
+          "连接能力包括 10/100 Ethernet MAC（支持 IEEE 1588）、8-bit 至 14-bit DCMI 相机接口、双 USB 2.0 OTG (FS/HS)，以及多达 28 组通信接口，包括 4x I2C、6x SPI（其中 3 路支持 simplex I2S）和 3x CAN。",
+          "STM32F767xx 面向高要求工业、消费与网络应用，丰富外设、高算力密度与强模拟模块（含 DFSDM）使其代表通用 MCU 的先进水平。"
+        ],
+        "highlights": [
+          "内核: Arm Cortex-M7，双精度 FPU",
+          "性能: 216 MHz / 462 DMIPS 高性能",
+          "存储: 最高 2 MB Flash 与 512 KB SRAM",
+          "图形: Chrom-ART 加速器与 JPEG 编解码",
+          "以太网: 10/100 MAC，支持 IEEE 1588",
+          "视觉: DCMI 相机接口（最高 14-bit）"
+        ],
+        "detailedFeatures": [
+          {
+            "title": "双精度 FPU",
+            "description": "硬件 64-bit 浮点运算能力，适合复杂控制与科学算法。"
+          },
+          {
+            "title": "图形加速",
+            "description": "Chrom-ART (DMA2D) 与 JPEG 编解码显著提升图像处理与 UI 渲染效率。"
+          },
+          {
+            "title": "以太网连接",
+            "description": "集成 10/100 Ethernet MAC，并支持 IEEE 1588 硬件时间同步。"
+          },
+          {
+            "title": "DCMI 相机接口",
+            "description": "支持最高 14-bit 并行传感器，视觉采集可达 54 Mbytes/s。"
+          },
+          {
+            "title": "大容量 L1 Cache",
+            "description": "16 KB 指令 + 16 KB 数据缓存，提升大型固件吞吐。"
+          },
+          {
+            "title": "高密度 I/O",
+            "description": "提供 LQFP208、TFBGA216 等大封装，最多 168 路 I/O 引脚。"
+          }
+        ],
+        "detailSections": [
+          {
+            "id": "compute-graphics",
+            "title": "计算与图形",
+            "description": "兼顾数值计算与图形表现的强劲平台。",
+            "stats": [
+              { "label": "主频", "value": "216 MHz" },
+              { "label": "DP FPU", "value": "64-bit Precision" },
+              { "label": "L1 Cache", "value": "16KB I + 16KB D" },
+              { "label": "图形", "value": "DMA2D + JPEG" }
+            ],
+            "bullets": [
+              "双精度浮点单元 (DPFPU)。",
+              "Chrom-ART Accelerator 实现流畅 UI 动画。",
+              "硬件 JPEG 编解码用于快速图像解压。"
+            ]
+          },
+          {
+            "id": "connectivity-vision",
+            "title": "网络与视觉",
+            "description": "面向现代互联的高标准连接能力。",
+            "bullets": [
+              "Ethernet MAC: 10/100，硬件时间戳。",
+              "DCMI: 8-bit 至 14-bit 并行相机接口。",
+              "双模式 QSPI: 高速串行存储扩展。",
+              "三路 CAN: 3x CAN 2.0B，满足总线网络。"
+            ]
+          },
+          {
+            "id": "variant-comparison",
+            "title": "STM32F767 型号选择",
+            "description": "面向高要求嵌入式项目的顶级配置。",
+            "table": {
+              "headers": ["型号", "Flash (KB)", "封装", "GPIO", "图形"],
+              "rows": [
+                ["STM32F767ZI", "2048", "LQFP144", "114", "LTDC"],
+                ["STM32F767NI", "2048", "TFBGA216", "168", "LTDC"],
+                ["STM32F767II", "2048", "LQFP176", "140", "LTDC"],
+                ["STM32F767VI", "2048", "LQFP100", "82", "LTDC"]
+              ],
+              "note": "所有 F767 型号均支持完整的 DPFPU 与 Chrom-ART 功能。"
+            }
+          }
+        ],
+        "specs": [
+          { "category": "内核", "key": "CPU", "value": "Arm Cortex-M7（DPFPU、DSP、ART）" },
+          { "category": "内核", "key": "主频", "value": "最高 216 MHz" },
+          { "category": "缓存", "key": "L1 Cache", "value": "16 KB 指令 + 16 KB 数据" },
+          { "category": "存储", "key": "Flash", "value": "最高 2 MB（双 Bank）" },
+          { "category": "存储", "key": "SRAM", "value": "512 KB（含 128 KB DTCM + 16 KB ITCM）" },
+          { "category": "图形", "key": "加速", "value": "Chrom-ART、JPEG 编解码、LTDC" },
+          { "category": "视觉", "key": "相机接口", "value": "8-bit 至 14-bit DCMI 接口" },
+          { "category": "连接", "key": "以太网", "value": "10/100 MAC，支持 IEEE 1588" },
+          { "category": "连接", "key": "USB", "value": "USB 2.0 FS + HS（通过 ULPI）" },
+          { "category": "连接", "key": "CAN", "value": "3x CAN 2.0B" },
+          { "category": "接口", "key": "FMC", "value": "SRAM/SDRAM/NOR/NAND（32-bit）" },
+          { "category": "模拟", "key": "DFSDM", "value": "8 通道 / 4 滤波器" }
+        ],
+        "applications": [
+          { "title": "HMI 与 GUI 平台", "image": "/Robot Platform.webp" },
+          { "title": "视频处理", "image": "/Smart Cameras.webp" },
+          { "title": "工业网络", "image": "/Edge Computing Boxes.webp" },
+          { "title": "自主机器人", "image": "/Robotics.webp" },
+          { "title": "智能家居控制", "image": "/Smart Home.webp" },
+          { "title": "高级无人机", "image": "/Drones.webp" }
+        ],
+        "faqs": [
+          {
+            "question": "双精度 FPU 的优势是什么？",
+            "answer": "DPFPU 可在硬件中处理 64-bit 浮点数，为复杂控制回路与音频处理提供更高精度与速度。"
+          },
+          {
+            "question": "是否支持高分辨率显示？",
+            "answer": "支持，F767 集成 LTDC 与 Chrom-ART，可高效驱动最高 XGA (1024x768) 分辨率显示。"
+          }
+        ]
+      }
     }
   },
   "legal": {

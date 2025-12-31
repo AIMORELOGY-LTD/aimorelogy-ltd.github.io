@@ -818,6 +818,27 @@
           }
         }
       }
+    },
+    "stm32": {
+      "ui": {
+        "heroLabel": "High Performance ARM Cortex-M",
+        "getDocs": "Get Technical Docs",
+        "productBrief": "Product Brief",
+        "systemArchitecture": "System Architecture",
+        "architecturePlaceholder": "{{name}} Architecture Diagram Coming Soon",
+        "architecturePillar": "Architecture Pillar {{index}}",
+        "performanceEyebrow": "{{core}} Core",
+        "computePowerTitle": "Compute Power",
+        "benchmarksTitle": "Benchmarks",
+        "peripheralsEyebrow": "Integrated Precision Peripherals",
+        "analogControlTitle": "Analog & Control",
+        "ipBlockLabel": "IP-BLOCK-{{index}}",
+        "variantComparisonTitle": "Variant Comparison",
+        "applicationsTitle": "Commercial Applications",
+        "datasheetTitle": "Datasheet",
+        "datasheetSubtitle": "Technical Parameters",
+        "ctaPrefix": "Build with"
+      }
     }
   },
   "legal": {
