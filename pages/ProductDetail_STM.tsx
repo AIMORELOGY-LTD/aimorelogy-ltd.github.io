@@ -149,7 +149,7 @@ const ProductDetail_STM: React.FC = () => {
         <section className="relative min-h-[70vh] flex items-center pt-24 overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/STM/STM32F405-Microcontrollers.jpg" 
+              src="/STM/3.webp" 
               className="w-full h-full object-cover opacity-70"
               alt="STM32 banner"
             />
@@ -399,7 +399,7 @@ const ProductDetail_STM: React.FC = () => {
         {/* 9. CTA */}
         <section className="py-40 bg-[#0a0a0a] text-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-            <img src="/STM/STM32F405-Microcontrollers.jpg" className="w-full h-full object-cover" alt="CTA bg" />
+            <img src="/STM/3.webp" className="w-full h-full object-cover" alt="CTA bg" />
           </div>
           <div className="container mx-auto px-6 relative z-10">
             <h2 className="text-6xl md:text-8xl font-black text-white mb-12 uppercase tracking-tighter leading-none">
