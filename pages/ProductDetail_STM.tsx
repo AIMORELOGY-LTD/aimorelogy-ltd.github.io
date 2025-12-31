@@ -93,6 +93,14 @@ const ProductDetail_STM: React.FC = () => {
 
   const displayName = localizedProduct?.name || '';
   
+  const archDiagramMap: Record<string, string> = {
+    'stm32f405': '/STM/en.bd-stm32f405xx.avif',
+    'stm32f722': '/STM/en.bd_stm32f722xe_512k.avif',
+    'stm32f767': '/STM/en.bd_stm32f767xg_1mb.avif'
+  };
+
+  const currentArchDiagram = localizedProduct ? archDiagramMap[localizedProduct.id] : null;
+
   const detailSections = localizedProduct?.detailSections || [];
   const sectionMap = detailSections.reduce((acc, section) => {
     if (section.id) acc[section.id] = section;
@@ -149,7 +157,7 @@ const ProductDetail_STM: React.FC = () => {
         <section className="relative min-h-[70vh] flex items-center pt-24 overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/STM/3.webp" 
+              src="/STM/STM32F405-Microcontrollers.jpg" 
               className="w-full h-full object-cover opacity-70"
               alt="STM32 banner"
             />
@@ -160,7 +168,7 @@ const ProductDetail_STM: React.FC = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-8">
                 <div className="bg-[#4f4398] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em]">STMICROELECTRONICS</div>
-                <div className="text-gray-500 font-bold uppercase text-[10px] tracking-[0.2em]">High Performance ARM Cortex-M4</div>
+                <div className="text-gray-500 font-bold uppercase text-[10px] tracking-[0.2em]">High Performance ARM Cortex-M</div>
               </div>
               <h1 className="text-7xl md:text-9xl font-black uppercase mb-8 tracking-tighter text-gray-900 leading-[0.85]">
                 {displayName}
@@ -185,7 +193,7 @@ const ProductDetail_STM: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               <div className="lg:col-span-5">
-                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#4f4398] mb-8">Product Overview</h3>
+                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#4f4398] mb-8">Product Brief</h3>
                 <div className="space-y-6 text-gray-500 text-base leading-relaxed text-justify">
                   {localizedProduct.longDescription.map((para, idx) => (
                     <p key={idx}>{para}</p>
@@ -216,11 +224,17 @@ const ProductDetail_STM: React.FC = () => {
                   <h3 className="text-5xl font-black uppercase mb-4 tracking-tighter">System Architecture</h3>
                   <div className="w-20 h-2 bg-[#4f4398]"></div>
                 </div>
-                <img 
-                  src="/STM/en.bd-stm32f405xx.avif" 
-                  alt="STM32F405 Architecture Diagram" 
-                  className="w-full h-auto bg-white p-8 rounded-sm shadow-sm"
-                />
+                {currentArchDiagram ? (
+                  <img 
+                    src={currentArchDiagram} 
+                    alt={`${displayName} Architecture Diagram`} 
+                    className="w-full h-auto bg-white p-8 rounded-sm shadow-sm"
+                  />
+                ) : (
+                  <div className="w-full aspect-video bg-white border border-gray-200 flex items-center justify-center text-gray-300 font-black uppercase tracking-[0.2em] text-center px-10">
+                    {displayName} Architecture Diagram Coming Soon
+                  </div>
+                )}
               </div>
               <div className="lg:w-2/5">
                 <div className="space-y-10">
