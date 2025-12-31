@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import ProductDetail_AFC from './pages/ProductDetail_AFC';
 import ProductDetail_SOPHGO from './pages/ProductDetail_SOPHGO'; 
 import ProductDetail_Espressif from './pages/ProductDetail_Espressif'; 
+import ProductDetail_STM from './pages/ProductDetail_STM'; 
 import SolutionDemo from './pages/SolutionDemo';
 import SolutionDetail_AICamera from './pages/SolutionDetail_AICamera'; 
 import Technology_AITracking from './pages/Technology_AITracking'; 
@@ -45,6 +46,7 @@ const LanguageRoutes: React.FC = () => {
         <Route path="products/afc-v1" element={<ProductDetail_AFC />} />
         <Route path="products/sophgo/:modelId" element={<ProductDetail_SOPHGO />} />
         <Route path="products/espressif/:modelId" element={<ProductDetail_Espressif />} />
+        <Route path="products/stm/:modelId" element={<ProductDetail_STM />} />
         <Route path="solutions/demo" element={<SolutionDemo />} />
         <Route path="solutions/ai-camera" element={<SolutionDetail_AICamera />} />
         <Route path="technology/ai-tracking" element={<Technology_AITracking />} />
