@@ -35,11 +35,11 @@
       },
       "stm": {
 
-        "stm32f405": "Микроконтроллер ARM Cortex-M4.",
+        "stm32f405": "Cortex-M4 с FPU, до 168 МГц, для управления в реальном времени.",
 
-        "stm32f722": "Микроконтроллер ARM Cortex-M7.",
+        "stm32f722": "Cortex-M7 с FPU, до 216 МГц, USB FS/HS.",
 
-        "stm32f767": "Микроконтроллер ARM Cortex-M7."
+        "stm32f767": "Высокий класс Cortex-M7, до 2 МБ Flash, графика + Ethernet."
 
       },
 

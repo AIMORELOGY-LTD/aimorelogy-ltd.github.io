@@ -35,11 +35,11 @@
       },
       "stm": {
 
-        "stm32f405": "ARM Cortex-M4 MCU.",
+        "stm32f405": "Cortex-M4 with FPU, up to 168 MHz, real-time control ready.",
 
-        "stm32f722": "ARM Cortex-M7 MCU.",
+        "stm32f722": "Cortex-M7 with FPU, up to 216 MHz, USB FS/HS.",
 
-        "stm32f767": "ARM Cortex-M7 MCU."
+        "stm32f767": "High-end Cortex-M7, up to 2 MB Flash, graphics + Ethernet."
 
       },
 

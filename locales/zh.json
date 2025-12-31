@@ -35,11 +35,11 @@
       },
       "stm": {
 
-        "stm32f405": "ARM Cortex-M4 微控制器。",
+        "stm32f405": "Cortex-M4（带 FPU），最高 168MHz，适合实时控制。",
 
-        "stm32f722": "ARM Cortex-M7 微控制器。",
+        "stm32f722": "Cortex-M7（带 FPU），最高 216MHz，USB FS/HS。",
 
-        "stm32f767": "ARM Cortex-M7 微控制器。"
+        "stm32f767": "高端 Cortex-M7，最高 2MB Flash，图形 + 以太网。"
 
       },
 
