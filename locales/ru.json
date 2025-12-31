@@ -19,8 +19,11 @@
       "autonomousInspection": "Автономная инспекция",
       "coreComponents": "Ключевые компоненты",
       "intelligentVision": "Процессоры компьютерного зрения (Deep Learning)",
-      "xtensa": "Процессор Xtensa",
-      "sophgo": {
+      "xtensa": "Процессор Xtensa",
+
+      "armCortexM": "Процессоры ARM Cortex-M",
+
+      "sophgo": {
         "bm1688": "16T edge AI, 8-ядерный ARM, высокоинтегрированный SoC.",
         "cv186ah": "7,2T высокопроизводительный процессор зрения (4K/8MP).",
         "cv184": "1,5T двухъядерный vision SoC с ISP 4.0.",
@@ -30,7 +33,17 @@
       "espressif": {
         "esp32": "Двухъядерный Xtensa 32-битный LX7, 240 МГц."
       },
-      "support": "Поддержка",
+      "stm": {
+
+        "stm32f405": "Микроконтроллер ARM Cortex-M4.",
+
+        "stm32f722": "Микроконтроллер ARM Cortex-M7.",
+
+        "stm32f767": "Микроконтроллер ARM Cortex-M7."
+
+      },
+
+      "support": "Поддержка",
       "contactUs": "Свяжитесь с нами",
       "documents": "Документы"
     },

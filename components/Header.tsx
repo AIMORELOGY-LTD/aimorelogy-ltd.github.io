@@ -164,6 +164,31 @@ const Header: React.FC = () => {
               ]
             }
           ]
+        },
+        {
+          name: 'STM',
+          categories: [
+            {
+              title: t('header.menu.armCortexM'),
+              items: [
+                {
+                  model: 'STM32F405',
+                  description: t('header.menu.stm.stm32f405'),
+                  to: withLang(lang, '/products/stm/stm32f405')
+                },
+                {
+                  model: 'STM32F722',
+                  description: t('header.menu.stm.stm32f722'),
+                  to: withLang(lang, '/products/stm/stm32f722')
+                },
+                {
+                  model: 'STM32F767',
+                  description: t('header.menu.stm.stm32f767'),
+                  to: withLang(lang, '/products/stm/stm32f767')
+                }
+              ]
+            }
+          ]
         }
       ]
     },

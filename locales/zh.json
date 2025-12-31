@@ -19,8 +19,11 @@
       "autonomousInspection": "自主检验",
       "coreComponents": "核心组件",
       "intelligentVision": "深度学习视觉处理器",
-      "xtensa": "Xtensa处理器",
-      "sophgo": {
+      "xtensa": "Xtensa处理器",
+
+      "armCortexM": "ARM Cortex-M 处理器",
+
+      "sophgo": {
         "bm1688": "16T 边缘 AI、8 核 ARM、高度集成 SoC",
         "cv186ah": "7.2T 高端视觉处理器（4K/8MP）",
         "cv184": "1.5T 双核视觉 SoC，集成 ISP 4.0",
@@ -30,7 +33,17 @@
       "espressif": {
         "esp32": "双核 Xtensa 32- 位 LX7，240MHz。"
       },
-      "support": "技术支持",
+      "stm": {
+
+        "stm32f405": "ARM Cortex-M4 微控制器。",
+
+        "stm32f722": "ARM Cortex-M7 微控制器。",
+
+        "stm32f767": "ARM Cortex-M7 微控制器。"
+
+      },
+
+      "support": "技术支持",
       "contactUs": "联系我们",
       "documents": "文件"
     },

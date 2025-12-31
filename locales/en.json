@@ -19,8 +19,11 @@
       "autonomousInspection": "Autonomous Inspection",
       "coreComponents": "Core Components",
       "intelligentVision": "Deep Learning Vision Processors",
-      "xtensa": "Xtensa Processor",
-      "sophgo": {
+      "xtensa": "Xtensa Processor",
+
+      "armCortexM": "ARM Cortex-M Processors",
+
+      "sophgo": {
         "bm1688": "16T Edge AI, 8-Core ARM, Highly Integrated SoC.",
         "cv186ah": "7.2T High-End Vision Processor (4K/8MP).",
         "cv184": "1.5T Dual-Core Vision SoC with ISP 4.0.",
@@ -30,7 +33,17 @@
       "espressif": {
         "esp32": "Dual-core Xtensa 32-bit LX7, 240MHz."
       },
-      "support": "Support",
+      "stm": {
+
+        "stm32f405": "ARM Cortex-M4 MCU.",
+
+        "stm32f722": "ARM Cortex-M7 MCU.",
+
+        "stm32f767": "ARM Cortex-M7 MCU."
+
+      },
+
+      "support": "Support",
       "contactUs": "Contact Us",
       "documents": "Documents"
     },
