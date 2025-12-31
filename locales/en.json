@@ -140,16 +140,16 @@
       },
       "steps": {
         "0": {
-          "title": "1. Precision Locking",
-          "desc": "Instant target acquisition near architectural features."
+          "title": "1. Initial Lock-On",
+          "desc": "Acquire and lock onto the target before occlusion."
         },
         "1": {
-          "title": "Occlusion Recovery",
-          "desc": "Rapid re-lock after brief occlusion to keep continuous target tracking."
+          "title": "2. Occlusion Handling",
+          "desc": "Maintain target identity through brief occlusion."
         },
         "2": {
-          "title": "3. Long Range Stability",
-          "desc": "Consistent lock-on for distant targets with low pixel density."
+          "title": "3. Rapid Re-Lock",
+          "desc": "Reacquire and lock immediately once the target reappears."
         }
       },
       "cta": "Explore Algorithm"
@@ -370,20 +370,20 @@
         "0": {
           "alt": "Tracking Active",
           "status": "STATUS: TRACKING",
-          "title": "1. Precision Locking",
-          "desc": "Instant target acquisition near architectural features."
+          "title": "1. Initial Lock-On",
+          "desc": "Acquire and lock onto the target before occlusion."
         },
         "1": {
           "alt": "Complex Scene",
           "status": "STATUS: STABLE",
-          "title": "Occlusion Recovery",
-          "desc": "Rapid re-lock after brief occlusion to keep continuous target tracking."
+          "title": "2. Occlusion Handling",
+          "desc": "Maintain target identity through brief occlusion."
         },
         "2": {
           "alt": "Long Range",
           "status": "STATUS: LOCKED",
-          "title": "3. Long Range Stability",
-          "desc": "Consistent lock-on for distant targets with low pixel density."
+          "title": "3. Rapid Re-Lock",
+          "desc": "Reacquire and lock immediately once the target reappears."
         }
       }
     },
