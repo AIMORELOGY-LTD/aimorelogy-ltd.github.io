@@ -188,7 +188,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
   }
 
   return (
-    <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white">
+    <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-[#4f4398] selection:text-white overflow-x-hidden">
       {seo && (
         <Seo
           title={seo.metaTitle}
@@ -243,11 +243,11 @@ const ProductDetail_SOPHGO: React.FC = () => {
           
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl">
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex flex-wrap items-center gap-3 mb-8">
                 <div className="bg-[#4f4398] text-white px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em]">SOPHGO</div>
                 <div className="text-gray-500 font-bold uppercase text-[10px] tracking-[0.2em]">{ui.seriesLabel}</div>
               </div>
-              <h1 className="text-7xl md:text-9xl font-black uppercase mb-8 tracking-tighter text-gray-900 leading-[0.85]">
+              <h1 className="text-7xl md:text-9xl font-black uppercase mb-8 tracking-tighter text-gray-900 leading-[0.85] break-words">
                 {displayName}
               </h1>
               <h2 className="text-2xl md:text-4xl font-bold text-[#4f4398] mb-10 leading-tight tracking-tight max-w-3xl">
@@ -256,7 +256,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="flex flex-wrap gap-6">
                 <button 
                   onClick={scrollToFooter}
-                  className="bg-[#4f4398] text-white px-12 py-5 font-black uppercase tracking-widest hover:bg-[#3e3479] transition-all flex items-center gap-3 shadow-2xl"
+                  className="bg-[#4f4398] text-white px-8 sm:px-12 py-5 font-black uppercase tracking-[0.2em] sm:tracking-widest hover:bg-[#3e3479] transition-all flex items-center gap-3 shadow-2xl"
                 >
                   {ui.getDocs} <ArrowRight size={20} />
                 </button>
@@ -300,7 +300,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                 <div className="flex flex-col lg:flex-row gap-20 items-center">
                   <div className="lg:w-3/5">
                     <div className="mb-12">
-                      <h3 className="text-5xl font-black uppercase mb-4 tracking-tighter">{ui.systemArchitecture}</h3>
+                      <h3 className="text-3xl sm:text-5xl font-black uppercase mb-4 tracking-tighter">{ui.systemArchitecture}</h3>
                       <div className="w-20 h-2 bg-[#4f4398]"></div>
                     </div>
                     {isCv184 ? (
@@ -336,7 +336,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                     <div>
                       <div className="text-[#4f4398] tech-mono text-xs font-black uppercase tracking-[0.4em] mb-6">{ui.computeEyebrow}</div>
-                      <h2 className="text-6xl font-black uppercase mb-8 tracking-tighter">{ui.aiPerformanceTitle}</h2>
+                      <h2 className="text-4xl sm:text-6xl font-black uppercase mb-8 tracking-tighter">{ui.aiPerformanceTitle}</h2>
                       <p className="text-gray-400 text-lg mb-12 leading-relaxed">
                         {cvRichSectionMap['tpu-acceleration'].description}
                       </p>
@@ -382,8 +382,8 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <section className="py-32 bg-white">
                 <div className="container mx-auto px-6">
                   <div className="max-w-4xl mb-24">
-                    <div className="text-[#4f4398] tech-mono text-xs font-black uppercase tracking-[0.4em] mb-6">{ui.ispEyebrow}</div>
-                    <h2 className="text-6xl font-black uppercase mb-8 tracking-tighter">{ui.imagingTitle}</h2>
+                    <div className="text-[#4f4398] tech-mono text-xs font-black uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-6">{ui.ispEyebrow}</div>
+                    <h2 className="text-4xl sm:text-6xl font-black uppercase mb-8 tracking-tighter">{ui.imagingTitle}</h2>
                     <p className="text-gray-500 text-xl leading-relaxed font-medium">
                       {cvRichSectionMap['isp-v4'].description}
                     </p>
@@ -411,7 +411,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
                 <div className="container mx-auto px-6">
                   <div className="flex flex-col lg:flex-row gap-20">
                     <div className="lg:w-1/3">
-                      <h3 className="text-5xl font-black uppercase mb-8 tracking-tighter leading-[0.9]">{ui.aiLibraryTitle}</h3>
+                      <h3 className="text-3xl sm:text-5xl font-black uppercase mb-8 tracking-tighter leading-[0.9]">{ui.aiLibraryTitle}</h3>
                       <p className="text-gray-500 mb-10 text-lg leading-relaxed">
                         {(cvRichSectionMap['algorithms'] || cvRichSectionMap['smart-algorithms'])?.description}
                       </p>
@@ -442,7 +442,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
             {cvRichSectionMap['variant-comparison'] && (
               <section className="py-32 bg-white">
                 <div className="container mx-auto px-6">
-                  <h3 className="text-5xl font-black uppercase mb-16 tracking-tighter text-center">{ui.variantComparisonTitle}</h3>
+                  <h3 className="text-3xl sm:text-5xl font-black uppercase mb-16 tracking-tighter text-center">{ui.variantComparisonTitle}</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse min-w-[900px]">
                       <thead>
@@ -472,8 +472,8 @@ const ProductDetail_SOPHGO: React.FC = () => {
             {/* 8. APPLICATION GRID (No hover/click) */}
             <section className="py-32 bg-white border-b border-gray-100">
               <div className="container mx-auto px-6">
-                <h3 className="text-center text-xs font-black uppercase tracking-[0.5em] text-[#4f4398] mb-20">{ui.deploymentTitle}</h3>
-                <div className="grid grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-12">
+                <h3 className="text-center text-xs font-black uppercase tracking-[0.3em] sm:tracking-[0.5em] text-[#4f4398] mb-20">{ui.deploymentTitle}</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-12">
                   {localizedProduct.applications.map((app, idx) => (
                     <div key={idx} className="flex flex-col">
                       <div className="aspect-[4/5] overflow-hidden mb-6">
@@ -493,8 +493,8 @@ const ProductDetail_SOPHGO: React.FC = () => {
             {/* 9. TECHNICAL SPECIFICATIONS (Category-based Table) */}
             <section className="py-32 bg-white border-b border-gray-100">
             <div className="container mx-auto px-6">
-              <div className="flex items-baseline justify-between mb-20 border-b-4 border-gray-900 pb-8">
-                <h3 className="text-7xl font-black uppercase tracking-tighter">{ui.datasheetTitle}</h3>
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-baseline sm:justify-between mb-20 border-b-4 border-gray-900 pb-8">
+                <h3 className="text-4xl sm:text-7xl font-black uppercase tracking-tighter">{ui.datasheetTitle}</h3>
                 <div className="text-gray-400 font-bold uppercase tracking-widest text-xs">{ui.datasheetSubtitle}</div>
               </div>
 
@@ -533,12 +533,12 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <img src="/CV/cvitek-banner.webp" className="w-full h-full object-cover" alt="CTA bg" />
             </div>
             <div className="container mx-auto px-6 relative z-10">
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-12 uppercase tracking-tighter leading-none">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-12 uppercase tracking-tighter leading-none">
                 {ui.ctaTitle} <span className="text-[#4f4398]">{displayName}</span>
               </h2>
               <button
                 onClick={scrollToFooter}
-                className="inline-block bg-white text-gray-900 px-16 py-5 font-black uppercase tracking-[0.2em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-2xl"
+                className="inline-block bg-white text-gray-900 px-8 sm:px-16 py-5 font-black uppercase tracking-[0.2em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-2xl"
               >
                 {ui.ctaButton}
               </button>
