@@ -52,6 +52,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
   const { t } = useTranslation();
   const { modelId } = useParams<{ modelId: string }>();
   const [product, setProduct] = useState<ChipData | null>(null);
+  const isRu = lang === 'ru';
 
   const scrollToFooter = () => {
     const footer = document.getElementById('footer');
@@ -225,10 +226,24 @@ const ProductDetail_SOPHGO: React.FC = () => {
           .sophgo-detail img {
             filter: none !important;
           }
+          .lang-ru h1,
+          .lang-ru h2,
+          .lang-ru h3,
+          .lang-ru h4,
+          .lang-ru p,
+          .lang-ru span,
+          .lang-ru button,
+          .lang-ru td,
+          .lang-ru th,
+          .lang-ru div {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            hyphens: auto;
+          }
         `}</style>
       )}
 
-      <div className="sophgo-detail bg-white text-gray-900">
+      <div className={`sophgo-detail bg-white text-gray-900 ${isRu ? 'lang-ru' : ''}`} lang={lang}>
         
         {/* 1. GLOBAL SOPHGO HERO SECTION - High Visibility */}
         <section className="relative min-h-[70vh] flex items-center pt-24 overflow-hidden bg-white">
@@ -256,7 +271,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               <div className="flex flex-wrap gap-6">
                 <button 
                   onClick={scrollToFooter}
-                  className="bg-[#4f4398] text-white px-8 sm:px-12 py-5 font-black uppercase tracking-[0.2em] sm:tracking-widest hover:bg-[#3e3479] transition-all flex items-center gap-3 shadow-2xl"
+                  className="bg-[#4f4398] text-white px-8 sm:px-12 py-5 font-black uppercase tracking-[0.15em] sm:tracking-widest hover:bg-[#3e3479] transition-all flex flex-wrap items-center gap-3 shadow-2xl text-center"
                 >
                   {ui.getDocs} <ArrowRight size={20} />
                 </button>
@@ -538,7 +553,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
               </h2>
               <button
                 onClick={scrollToFooter}
-                className="inline-block bg-white text-gray-900 px-8 sm:px-16 py-5 font-black uppercase tracking-[0.2em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-2xl"
+                className="inline-block bg-white text-gray-900 px-8 sm:px-16 py-5 font-black uppercase tracking-[0.15em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-2xl text-center"
               >
                 {ui.ctaButton}
               </button>

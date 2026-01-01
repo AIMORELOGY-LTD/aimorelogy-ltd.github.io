@@ -33,6 +33,7 @@ const ProductDetail_STM: React.FC = () => {
   const { t } = useTranslation();
   const { modelId } = useParams<{ modelId: string }>();
   const [product, setProduct] = useState<ChipData | null>(null);
+  const isRu = lang === 'ru';
 
   const scrollToFooter = () => {
     const footer = document.getElementById('footer');
@@ -155,9 +156,23 @@ const ProductDetail_STM: React.FC = () => {
           width: 1px;
           background: var(--brand-purple);
         }
+        .lang-ru h1,
+        .lang-ru h2,
+        .lang-ru h3,
+        .lang-ru h4,
+        .lang-ru p,
+        .lang-ru span,
+        .lang-ru button,
+        .lang-ru td,
+        .lang-ru th,
+        .lang-ru div {
+          overflow-wrap: anywhere;
+          word-break: break-word;
+          hyphens: auto;
+        }
       `}</style>
 
-      <div className="stm-detail bg-white text-gray-900">
+      <div className={`stm-detail bg-white text-gray-900 ${isRu ? 'lang-ru' : ''}`} lang={lang}>
         
         {/* 1. HERO SECTION */}
         <section className="relative min-h-[70vh] flex items-center pt-24 overflow-hidden bg-white">
@@ -187,7 +202,7 @@ const ProductDetail_STM: React.FC = () => {
               <div className="flex flex-wrap gap-6">
                 <button 
                   onClick={scrollToFooter}
-                  className="bg-[#4f4398] text-white px-8 sm:px-12 py-5 font-black uppercase tracking-[0.2em] sm:tracking-widest hover:bg-[#3e3479] transition-all flex items-center gap-3 shadow-2xl"
+                  className="bg-[#4f4398] text-white px-8 sm:px-12 py-5 font-black uppercase tracking-[0.15em] sm:tracking-widest hover:bg-[#3e3479] transition-all flex flex-wrap items-center gap-3 shadow-2xl text-center"
                 >
                   {t('products.stm32.ui.getDocs', { defaultValue: 'Get Technical Docs' })} <ArrowRight size={20} />
                 </button>
@@ -469,7 +484,7 @@ const ProductDetail_STM: React.FC = () => {
             </h2>
             <button
               onClick={scrollToFooter}
-              className="inline-block bg-white text-gray-900 px-8 sm:px-16 py-6 font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-2xl"
+              className="inline-block bg-white text-gray-900 px-8 sm:px-16 py-6 font-black uppercase tracking-[0.15em] sm:tracking-[0.3em] hover:bg-[#4f4398] hover:text-white transition-all text-sm shadow-2xl text-center"
             >
               {t('products.stm32.ui.getDocs', { defaultValue: 'Get Technical Docs' })}
             </button>
