@@ -13,7 +13,6 @@ export enum RoutePath {
   HOME = '/',
   // PRODUCTS was here, but removed as the page is abandoned
   PRODUCT_AFC = '/products/afc-v1',
-  SOLUTION_DEMO = '/solutions/demo',
   SOLUTION_AI_CAMERA = '/solutions/ai-camera',
   TECHNOLOGY_AI_TRACKING = '/technology/ai-tracking',
   TECHNOLOGY_DSHOT = '/technology/control-protocol', // New Route

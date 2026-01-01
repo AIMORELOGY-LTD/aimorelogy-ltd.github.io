@@ -31,11 +31,16 @@
       },
 
       "solutions": "Решения",
-
+      "solutionsFpvUav": "FPV/UAV",
+      "solutionsFpvUavCategory": "Решения для FPV/UAV",
+      "solutionsConsumer": "Потребительские",
+      "solutionsConsumerCategory": "Потребительские решения",
+      "solutionsAiTracking": "AI Tracking",
+      "solutionsAiTrackingDesc": "Низколатентное визуальное отслеживание для миссий FPV/UAV и систем подвеса.",
+      "solutionsDshot": "Adaptive DShot",
+      "solutionsDshotDesc": "Двунаправленный протокол DShot для стабильного управления моторами FPV/UAV.",
       "cloudAiCamera": "Облако AI Камера",
-
-      "autonomousInspection": "Автономная инспекция",
-
+      "solutionsCloudAiCameraDesc": "Облачная + edge платформа умных камер для масштабируемых потребительских внедрений.",
       "coreComponents": "Ключевые компоненты",
 
       "intelligentVision": "Процессоры компьютерного зрения (Deep Learning)",

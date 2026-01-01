@@ -99,15 +99,42 @@ const Header: React.FC = () => {
     },
     {
       title: t('header.menu.solutions'),
-      type: 'simple',
-      simpleItems: [
-        { 
-          label: t('header.menu.cloudAiCamera'), 
-          to: withLang(lang, RoutePath.SOLUTION_AI_CAMERA)
+      type: 'sidebar',
+      brands: [
+        {
+          name: t('header.menu.solutionsFpvUav'),
+          categories: [
+            {
+              title: t('header.menu.solutionsFpvUavCategory'),
+              items: [
+                {
+                  model: t('header.menu.solutionsAiTracking'),
+                  description: t('header.menu.solutionsAiTrackingDesc'),
+                  to: withLang(lang, RoutePath.TECHNOLOGY_AI_TRACKING)
+                },
+                {
+                  model: t('header.menu.solutionsDshot'),
+                  description: t('header.menu.solutionsDshotDesc'),
+                  to: withLang(lang, RoutePath.TECHNOLOGY_DSHOT)
+                }
+              ]
+            }
+          ]
         },
-        { 
-          label: t('header.menu.autonomousInspection'), 
-          to: withLang(lang, RoutePath.SOLUTION_DEMO)
+        {
+          name: t('header.menu.solutionsConsumer'),
+          categories: [
+            {
+              title: t('header.menu.solutionsConsumerCategory'),
+              items: [
+                {
+                  model: t('header.menu.cloudAiCamera'),
+                  description: t('header.menu.solutionsCloudAiCameraDesc'),
+                  to: withLang(lang, RoutePath.SOLUTION_AI_CAMERA)
+                }
+              ]
+            }
+          ]
         }
       ]
     },
