@@ -28,6 +28,32 @@ import { useLang, withLang } from '../i18n-routing';
 import { useTranslation } from 'react-i18next';
 import Seo from '../components/Seo';
 
+const STM_VARIANTS: Record<string, string[]> = {
+  stm32f405: ['STM32F405', 'STM32F405xx'],
+  stm32f722: ['STM32F722', 'STM32F722xx'],
+  stm32f767: ['STM32F767', 'STM32F767xx']
+};
+
+const STM_CORE_LABELS: Record<string, string> = {
+  stm32f405: 'ARM Cortex-M4',
+  stm32f722: 'ARM Cortex-M7',
+  stm32f767: 'ARM Cortex-M7'
+};
+
+const buildMcuKeywords = (displayName: string, variants: string[], core: string) =>
+  [
+    'AIMORELOGY',
+    '爱谋科技',
+    'STMicroelectronics',
+    'STM32',
+    displayName,
+    ...variants,
+    core,
+    'ARM Cortex-M',
+    'MCU',
+    'datasheet'
+  ].join(', ');
+
 const ProductDetail_STM: React.FC = () => {
   const lang = useLang();
   const { t } = useTranslation();
@@ -80,6 +106,12 @@ const ProductDetail_STM: React.FC = () => {
       || t('products.common.metaTitle', { name: displayName, tagline: localizedProduct.tagline });
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
+    const coreKeywords = STM_CORE_LABELS[localizedProduct.id] || 'ARM Cortex-M';
+    const keywords = buildMcuKeywords(
+      displayName,
+      STM_VARIANTS[localizedProduct.id] || [],
+      coreKeywords
+    );
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
@@ -89,16 +121,11 @@ const ProductDetail_STM: React.FC = () => {
       manufacturer: 'STMicroelectronics',
       sku: displayName
     };
-    return { metaTitle, metaDescription, image, jsonLd };
+    return { metaTitle, metaDescription, image, jsonLd, keywords };
   }, [localizedProduct, t]);
 
   const displayName = localizedProduct?.name || '';
-  const coreLabelMap: Record<string, string> = {
-    stm32f405: 'ARM Cortex-M4',
-    stm32f722: 'ARM Cortex-M7',
-    stm32f767: 'ARM Cortex-M7'
-  };
-  const coreLabel = localizedProduct ? (coreLabelMap[localizedProduct.id] || 'ARM Cortex-M') : 'ARM Cortex-M';
+  const coreLabel = localizedProduct ? (STM_CORE_LABELS[localizedProduct.id] || 'ARM Cortex-M') : 'ARM Cortex-M';
   
   const archDiagramMap: Record<string, string> = {
     'stm32f405': '/STM/en.bd-stm32f405xx.avif',
@@ -130,6 +157,7 @@ const ProductDetail_STM: React.FC = () => {
           title={seo.metaTitle}
           description={seo.metaDescription}
           image={seo.image}
+          keywords={seo.keywords}
           type="product"
           jsonLd={seo.jsonLd}
         />

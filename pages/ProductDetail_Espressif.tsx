@@ -17,6 +17,28 @@ import { useLang, withLang } from '../i18n-routing';
 import { useTranslation } from 'react-i18next';
 import Seo from '../components/Seo';
 
+const ESPRESSIF_VARIANTS: string[] = [
+  'ESP32-S3',
+  'ESP32S3',
+  'ESP32-S3-WROOM-1',
+  'ESP32-S3-WROOM-1U'
+];
+
+const buildModuleKeywords = (displayName: string) =>
+  [
+    'AIMORELOGY',
+    '爱谋科技',
+    'Espressif',
+    'ESP32',
+    ...ESPRESSIF_VARIANTS,
+    displayName,
+    'Wi-Fi',
+    'Bluetooth LE',
+    'AI acceleration',
+    'IoT',
+    'datasheet'
+  ].join(', ');
+
 const ProductDetail_Espressif: React.FC = () => {
   const lang = useLang();
   const { t } = useTranslation();
@@ -59,6 +81,7 @@ const ProductDetail_Espressif: React.FC = () => {
       || t('products.common.metaTitle', { name: localizedProduct.name, tagline: localizedProduct.tagline });
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
+    const keywords = buildModuleKeywords(localizedProduct.name);
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
@@ -68,7 +91,7 @@ const ProductDetail_Espressif: React.FC = () => {
       manufacturer: 'Espressif',
       sku: localizedProduct.name
     };
-    return { metaTitle, metaDescription, image, jsonLd };
+    return { metaTitle, metaDescription, image, jsonLd, keywords };
   }, [localizedProduct, t]);
 
   if (!localizedProduct) {
@@ -87,6 +110,7 @@ const ProductDetail_Espressif: React.FC = () => {
           title={seo.metaTitle}
           description={seo.metaDescription}
           image={seo.image}
+          keywords={seo.keywords}
           type="product"
           jsonLd={seo.jsonLd}
         />

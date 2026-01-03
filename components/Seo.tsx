@@ -4,6 +4,26 @@ import { useLang } from '../i18n-routing';
 
 const BASE_URL = 'https://aimorelogy.com';
 const DEFAULT_IMAGE = `${BASE_URL}/icon.webp`;
+const DEFAULT_KEYWORDS = [
+  'AIMORELOGY',
+  '爱谋科技',
+  'FPV',
+  'UAV',
+  'drone',
+  'gimbal',
+  'flight controller',
+  'edge AI',
+  'AI vision',
+  'vision processor',
+  'vision SoC',
+  'SoC',
+  'MCU',
+  'TPU',
+  'RISC-V',
+  'SOPHGO',
+  'STM32',
+  'Espressif'
+].join(', ');
 const LOCALE_MAP: Record<string, string> = {
   en: 'en_US',
   zh: 'zh_CN',
@@ -89,6 +109,24 @@ const normalizeImageUrl = (image?: string) => {
   return `${BASE_URL}/${image}`;
 };
 
+const mergeKeywords = (base: string, extra?: string) => {
+  const collect = (value: string) =>
+    value
+      .split(',')
+      .map((item) => item.trim())
+      .filter(Boolean);
+  const merged = [...collect(base), ...(extra ? collect(extra) : [])];
+  const seen = new Set<string>();
+  const deduped: string[] = [];
+  for (const entry of merged) {
+    const key = entry.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(entry);
+  }
+  return deduped.join(', ');
+};
+
 const Seo: React.FC<SeoProps> = ({
   title,
   description,
@@ -108,12 +146,12 @@ const Seo: React.FC<SeoProps> = ({
     const alternates = buildAlternateLinks(normalizedPath);
     const locale = LOCALE_MAP[lang] || 'en_US';
     const siteName = lang === 'zh' ? 'AIMORELOGY 爱谋科技' : 'AIMORELOGY';
-    const defaultKeywords = 'AIMORELOGY,FPV,UAV,flight controller,edge AI,AI tracking,adaptive DShot,vision processor';
+    const keywordsValue = mergeKeywords(DEFAULT_KEYWORDS, keywords);
 
     document.title = title;
 
     ensureMeta('name', 'description', description);
-    ensureMeta('name', 'keywords', keywords || defaultKeywords);
+    ensureMeta('name', 'keywords', keywordsValue);
     ensureMeta('name', 'robots', noindex ? 'noindex,nofollow' : 'index,follow');
 
     ensureMeta('property', 'og:type', type);

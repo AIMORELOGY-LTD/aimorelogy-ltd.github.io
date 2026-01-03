@@ -42,6 +42,45 @@ const DISPLAY_NAME_MAP: Record<string, string> = {
   bm1688: 'BM1688'
 };
 
+const SOPHGO_VARIANTS: Record<string, string[]> = {
+  bm1688: [],
+  cv186: ['CV186x', 'CV186AH', 'CV186'],
+  cv184: ['CV184x', 'CV1841C', 'CV1842C-P', 'CV1842H-P', 'CV1842HP', 'CV1843H-P'],
+  cv181: [
+    'CV181x',
+    'CV1813H',
+    'CV1812H',
+    'CV1811H',
+    'CV1812C-P',
+    'CV1811C',
+    'CV1810C',
+    'CV1813H-A',
+    'CV1812H-A',
+    'CV1811H-A',
+    'CV1812C-PA',
+    'CV1811C-A'
+  ],
+  cv180: ['CV180x', 'CV1801B', 'CV180ZB']
+};
+
+const buildChipKeywords = (brand: string, displayName: string, variants: string[]) =>
+  [
+    'AIMORELOGY',
+    '爱谋科技',
+    brand,
+    `${brand} ${displayName}`,
+    displayName,
+    ...variants,
+    'AI SoC',
+    'vision SoC',
+    'vision processor',
+    'FPV',
+    'UAV',
+    'drone',
+    'gimbal',
+    'datasheet'
+  ].join(', ');
+
 const getDisplayName = (chip?: ChipData | null) => {
   if (!chip) return '';
   return DISPLAY_NAME_MAP[chip.id] || chip.name;
@@ -106,6 +145,11 @@ const ProductDetail_SOPHGO: React.FC = () => {
       .replace(/CV180\b/g, 'CV180x');
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
+    const keywords = buildChipKeywords(
+      'SOPHGO',
+      displayName,
+      SOPHGO_VARIANTS[localizedProduct.id] || []
+    );
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
@@ -115,7 +159,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
       manufacturer: 'SOPHGO',
       sku: displayName
     };
-    return { metaTitle, metaDescription, image, jsonLd };
+    return { metaTitle, metaDescription, image, jsonLd, keywords };
   }, [localizedProduct, t]);
 
   const isCv184 = localizedProduct?.id === 'cv184';
@@ -194,6 +238,7 @@ const ProductDetail_SOPHGO: React.FC = () => {
           title={seo.metaTitle}
           description={seo.metaDescription}
           image={seo.image}
+          keywords={seo.keywords}
           type="product"
           jsonLd={seo.jsonLd}
         />
