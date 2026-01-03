@@ -14,7 +14,11 @@
         var params = new URLSearchParams(window.location.search);
         var redirect = params.get('p');
         if (redirect) {
+          redirect = redirect.replace(/\/index\.html(?=$|[?#])/, '/');
           window.history.replaceState(null, '', redirect);
+        } else if (window.location.pathname.endsWith('/index.html')) {
+          var cleaned = window.location.pathname.slice(0, -'index.html'.length);
+          window.location.replace(cleaned + window.location.search + window.location.hash);
         }
       })();
     </script>
