@@ -7,6 +7,7 @@ const TermsOfService: React.FC = () => {
   const { t } = useTranslation();
   const seoTitle = t('terms.metaTitle');
   const seoDescription = t('terms.metaDescription');
+  const seoKeywords = 'AIMORELOGY, terms of service, 服务条款, legal, website terms';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,7 +15,7 @@ const TermsOfService: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen py-20">
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="mb-12 border-b border-gray-100 pb-8">
           <h1 className="text-4xl font-black text-gray-900 uppercase mb-4">{t('terms.title')}</h1>

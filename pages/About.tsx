@@ -29,6 +29,7 @@ const About: React.FC = () => {
   const { t } = useTranslation();
   const seoTitle = t('about.metaTitle');
   const seoDescription = t('about.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, company, partners, SOPHGO, RT-Thread, RISC-V, edge AI, FPV, UAV, drone, Shenzhen, Hong Kong';
 
   const PARTNERS = [
     {
@@ -47,7 +48,7 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen">
-       <Seo title={seoTitle} description={seoDescription} />
+       <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
        {/* Hero Section */}
        <div className="bg-[#111] text-white py-24 relative overflow-hidden">
           {/* Abstract Background */}

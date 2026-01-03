@@ -15,6 +15,7 @@ const Technology_DShot: React.FC = () => {
   }, []);
   const seoTitle = t('dshot.metaTitle');
   const seoDescription = t('dshot.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, Adaptive DShot, DShot protocol, ESC, motor control, bidirectional, DMA-free, FPV, UAV, drone';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
@@ -27,6 +28,7 @@ const Technology_DShot: React.FC = () => {
       <Seo
         title={seoTitle}
         description={seoDescription}
+        keywords={seoKeywords}
         image="/DSHOT-WAVE.webp"
         type="article"
         jsonLd={jsonLd}

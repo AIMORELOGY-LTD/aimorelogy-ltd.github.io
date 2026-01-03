@@ -15,6 +15,7 @@ const ProductDetail_AFC: React.FC = () => {
   }, []);
   const seoTitle = t('products.afcComingSoon.metaTitle');
   const seoDescription = t('products.afcComingSoon.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, AFC-V1, flight controller, all-in-one, FPV, UAV, drone, vision, video link, control, datasheet';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -28,6 +29,7 @@ const ProductDetail_AFC: React.FC = () => {
       <Seo
         title={seoTitle}
         description={seoDescription}
+        keywords={seoKeywords}
         image="/AFC-V1-Temp.webp"
         type="product"
         jsonLd={jsonLd}

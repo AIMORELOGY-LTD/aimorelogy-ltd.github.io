@@ -166,6 +166,7 @@ const Home: React.FC = () => {
   const slideDuration = 5000;
   const seoTitle = t('home.metaTitle');
   const seoDescription = t('home.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, FPV, UAV, drone, gimbal, flight controller, AFC-V1, AI Tracking, Adaptive DShot, Cloud AI Camera, edge AI, AI vision, system integration, SOPHGO, RT-Thread, RISC-V';
   
   // Use BLOG_POSTS directly for the carousel
   const carouselPosts = t('blog.posts', { returnObjects: true, defaultValue: BLOG_POSTS }) as BlogPost[];
@@ -235,7 +236,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       
       {/* Hero Carousel Section - Full Screen (h-screen) */}
       <section className="relative h-screen overflow-hidden bg-gray-900">

@@ -26,6 +26,7 @@ const SolutionDetail_AICamera: React.FC = () => {
   const appTags = t('aiCamera.software.appTags', { returnObjects: true }) as string[];
   const seoTitle = t('aiCamera.metaTitle');
   const seoDescription = t('aiCamera.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, Cloud AI Camera, smart camera, edge AI, cloud orchestration, monitoring, AI camera, vision';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,7 +34,7 @@ const SolutionDetail_AICamera: React.FC = () => {
 
   return (
     <div className="bg-white text-gray-900 min-h-screen font-sans">
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       {/* 1. HERO SECTION */}
       <section className="pt-24 pb-16 bg-gray-50 border-b border-gray-200">
         <div className="container mx-auto px-6">

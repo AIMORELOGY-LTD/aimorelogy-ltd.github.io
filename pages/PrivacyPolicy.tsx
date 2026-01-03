@@ -7,6 +7,7 @@ const PrivacyPolicy: React.FC = () => {
   const { t } = useTranslation();
   const seoTitle = t('privacy.metaTitle');
   const seoDescription = t('privacy.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, privacy policy, 隐私政策, data protection, personal information';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,7 +15,7 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen py-20">
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="mb-12 border-b border-gray-100 pb-8">
           <h1 className="text-4xl font-black text-gray-900 uppercase mb-4">{t('privacy.title')}</h1>

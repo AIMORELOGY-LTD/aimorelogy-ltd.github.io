@@ -10,9 +10,10 @@ const Blog: React.FC = () => {
   const posts = t('blog.posts', { returnObjects: true, defaultValue: BLOG_POSTS }) as BlogPost[];
   const seoTitle = t('blog.metaTitle');
   const seoDescription = t('blog.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, blog, insights, news, FPV, UAV, drone, edge AI';
   return (
     <div className="bg-white min-h-screen py-20">
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       {/* Hero Header for Blog */}
       <div className="container mx-auto px-6 mb-20">
         <div className="bg-gray-100 border border-gray-200 p-12 md:p-20 relative overflow-hidden rounded-sm">

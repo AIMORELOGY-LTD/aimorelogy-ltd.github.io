@@ -12,13 +12,14 @@ const Careers: React.FC = () => {
   const lang = useLang();
   const seoTitle = t('careers.metaTitle');
   const seoDescription = t('careers.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, careers, jobs, hiring, engineer, FPV, UAV, drone, edge AI';
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="bg-white min-h-screen flex flex-col font-sans text-gray-900">
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       {/* Hero Section */}
       <section className="bg-[#111] text-white py-24 relative overflow-hidden">
          <div className="absolute inset-0 bg-gradient-to-r from-black via-[#111] to-transparent z-10"></div>

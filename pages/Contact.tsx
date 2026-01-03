@@ -19,6 +19,7 @@ const Contact: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const seoTitle = t('contact.metaTitle');
   const seoDescription = t('contact.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, contact, sales, support, email, WeChat, WhatsApp, system integration, FPV, UAV, drone';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -72,7 +73,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen py-20">
-      <Seo title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-2xl">
           

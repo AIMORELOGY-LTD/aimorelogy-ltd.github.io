@@ -15,6 +15,7 @@ const Technology_AITracking: React.FC = () => {
   }, []);
   const seoTitle = t('aiTracking.metaTitle');
   const seoDescription = t('aiTracking.metaDescription');
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, AI Tracking, visual tracking, target tracking, Re-ID, gimbal tracking, FPV, UAV, drone, low latency';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
@@ -27,6 +28,7 @@ const Technology_AITracking: React.FC = () => {
       <Seo
         title={seoTitle}
         description={seoDescription}
+        keywords={seoKeywords}
         image="/AI-TRACKING/TRACK-AI.webp"
         type="article"
         jsonLd={jsonLd}
