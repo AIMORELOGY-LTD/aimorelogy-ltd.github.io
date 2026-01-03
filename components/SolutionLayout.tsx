@@ -148,7 +148,7 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <h2 className="text-3xl font-black text-gray-900 uppercase">{t('solution.applications')}</h2>
-            <Link to={withLang(lang, '/contact')} className="hidden md:flex items-center gap-2 text-[#4f4398] font-bold uppercase text-sm hover:gap-3 transition-all">
+            <Link to={withLang(lang, '/contact/')} className="hidden md:flex items-center gap-2 text-[#4f4398] font-bold uppercase text-sm hover:gap-3 transition-all">
               {t('solution.discuss')} <ArrowRight size={16} />
             </Link>
           </div>
@@ -176,7 +176,7 @@ const SolutionLayout: React.FC<SolutionLayoutProps> = ({
            <h2 className="text-3xl md:text-4xl font-black text-white uppercase mb-6">{ctaTitle}</h2>
            <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">{ctaText}</p>
            <div className="flex flex-col md:flex-row gap-4 justify-center">
-             <Link to={withLang(lang, '/contact')} className="bg-[#4f4398] text-white px-10 py-4 font-bold uppercase hover:bg-[#6a5cc2] transition-colors">
+             <Link to={withLang(lang, '/contact/')} className="bg-[#4f4398] text-white px-10 py-4 font-bold uppercase hover:bg-[#6a5cc2] transition-colors">
                {t('common.contactSales')}
              </Link>
              <button className="bg-transparent border border-gray-600 text-white px-10 py-4 font-bold uppercase hover:border-white transition-colors">

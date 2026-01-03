@@ -12,7 +12,7 @@ export const normalizeLang = (lang?: string): Lang => {
 
 export const withLang = (lang: Lang, path: string) => {
   if (path === '/') {
-    return `/${lang}`;
+    return `/${lang}/`;
   }
   return `/${lang}${path}`;
 };

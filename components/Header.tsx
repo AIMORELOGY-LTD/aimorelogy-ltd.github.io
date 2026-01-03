@@ -151,27 +151,27 @@ const Header: React.FC = () => {
                 { 
                   model: 'BM1688', 
                   description: t('header.menu.sophgo.bm1688'), 
-                  to: withLang(lang, '/products/sophgo/bm1688') 
+                  to: withLang(lang, '/products/sophgo/bm1688/') 
                 },
                 { 
                   model: 'CV186x', 
                   description: t('header.menu.sophgo.cv186ah'), 
-                  to: withLang(lang, '/products/sophgo/cv186x') 
+                  to: withLang(lang, '/products/sophgo/cv186x/') 
                 },
                 { 
                   model: 'CV184x', 
                   description: t('header.menu.sophgo.cv184'), 
-                  to: withLang(lang, '/products/sophgo/cv184x') 
+                  to: withLang(lang, '/products/sophgo/cv184x/') 
                 },
                 { 
                   model: 'CV181x', 
                   description: t('header.menu.sophgo.cv181'), 
-                  to: withLang(lang, '/products/sophgo/cv181x') 
+                  to: withLang(lang, '/products/sophgo/cv181x/') 
                 },
                 { 
                   model: 'CV180x', 
                   description: t('header.menu.sophgo.cv180'), 
-                  to: withLang(lang, '/products/sophgo/cv180x') 
+                  to: withLang(lang, '/products/sophgo/cv180x/') 
                 }
               ]
             }
@@ -186,7 +186,7 @@ const Header: React.FC = () => {
                 {
                   model: 'ESP32S3N16R8',
                   description: t('header.menu.espressif.esp32'),
-                  to: withLang(lang, '/products/espressif/esp32s3')
+                  to: withLang(lang, '/products/espressif/esp32s3/')
                 }
               ]
             }
@@ -201,17 +201,17 @@ const Header: React.FC = () => {
                 {
                   model: 'STM32F405',
                   description: t('header.menu.stm.stm32f405'),
-                  to: withLang(lang, '/products/stm/stm32f405')
+                  to: withLang(lang, '/products/stm/stm32f405/')
                 },
                 {
                   model: 'STM32F722',
                   description: t('header.menu.stm.stm32f722'),
-                  to: withLang(lang, '/products/stm/stm32f722')
+                  to: withLang(lang, '/products/stm/stm32f722/')
                 },
                 {
                   model: 'STM32F767',
                   description: t('header.menu.stm.stm32f767'),
-                  to: withLang(lang, '/products/stm/stm32f767')
+                  to: withLang(lang, '/products/stm/stm32f767/')
                 }
               ]
             }
@@ -223,7 +223,7 @@ const Header: React.FC = () => {
       title: t('header.menu.support'),
       type: 'simple',
       simpleItems: [
-        { label: t('header.menu.contactUs'), to: withLang(lang, RoutePath.CONTACT) },
+        { label: t('header.menu.contactUs'), to: withLang(lang, `${RoutePath.CONTACT}/`) },
         { label: t('header.menu.documents'), to: '#' }
       ]
     }

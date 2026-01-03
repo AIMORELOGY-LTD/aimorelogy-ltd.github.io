@@ -15,6 +15,7 @@ type JsonLd = Record<string, unknown> | Array<Record<string, unknown>>;
 export interface SeoProps {
   title: string;
   description: string;
+  keywords?: string;
   image?: string;
   type?: string;
   noindex?: boolean;
@@ -22,7 +23,7 @@ export interface SeoProps {
 }
 
 const ensureMeta = (attr: 'name' | 'property', key: string, content: string) => {
-  if (!content) return;
+  if (!content && content !== '') return;
   const selector = `meta[${attr}="${key}"]`;
   let tag = document.head.querySelector(selector) as HTMLMetaElement | null;
   if (!tag) {
@@ -91,6 +92,7 @@ const normalizeImageUrl = (image?: string) => {
 const Seo: React.FC<SeoProps> = ({
   title,
   description,
+  keywords,
   image,
   type = 'website',
   noindex = false,
@@ -106,10 +108,12 @@ const Seo: React.FC<SeoProps> = ({
     const alternates = buildAlternateLinks(normalizedPath);
     const locale = LOCALE_MAP[lang] || 'en_US';
     const siteName = lang === 'zh' ? 'AIMORELOGY 爱谋科技' : 'AIMORELOGY';
+    const defaultKeywords = 'AIMORELOGY,FPV,UAV,flight controller,edge AI,AI tracking,adaptive DShot,vision processor';
 
     document.title = title;
 
     ensureMeta('name', 'description', description);
+    ensureMeta('name', 'keywords', keywords || defaultKeywords);
     ensureMeta('name', 'robots', noindex ? 'noindex,nofollow' : 'index,follow');
 
     ensureMeta('property', 'og:type', type);
@@ -120,7 +124,7 @@ const Seo: React.FC<SeoProps> = ({
     ensureMeta('property', 'og:image', imageUrl);
     ensureMeta('property', 'og:locale', locale);
 
-    ensureMeta('name', 'twitter:card', 'summary');
+    ensureMeta('name', 'twitter:card', 'summary_large_image');
     ensureMeta('name', 'twitter:title', title);
     ensureMeta('name', 'twitter:description', description);
     ensureMeta('name', 'twitter:image', imageUrl);

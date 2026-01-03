@@ -337,7 +337,7 @@ const SolutionDetail_AICamera: React.FC = () => {
             <Link to={withLang(lang, RoutePath.CONTACT)} className="bg-[#4f4398] text-white px-10 py-4 font-bold uppercase hover:bg-[#5f51b0] transition-colors">
               {t('common.contactSales')}
             </Link>
-            <Link to={withLang(lang, '/products/sophgo/cv184x')} className="border border-gray-300 text-gray-700 px-10 py-4 font-bold uppercase hover:border-gray-900 transition-colors">
+            <Link to={withLang(lang, '/products/sophgo/cv184x/')} className="border border-gray-300 text-gray-700 px-10 py-4 font-bold uppercase hover:border-gray-900 transition-colors">
               {t('aiCamera.cta.secondary')}
             </Link>
           </div>

@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aimorelogy.com/</loc></url>
 
+  <!-- English -->
   <url><loc>https://aimorelogy.com/en/</loc></url>
   <url><loc>https://aimorelogy.com/en/products/afc-v1/</loc></url>
   <url><loc>https://aimorelogy.com/en/products/sophgo/bm1688/</loc></url>
@@ -24,6 +25,7 @@
   <url><loc>https://aimorelogy.com/en/legal/terms-of-service/</loc></url>
   <url><loc>https://aimorelogy.com/en/legal/cookie-preferences/</loc></url>
 
+  <!-- Chinese -->
   <url><loc>https://aimorelogy.com/zh/</loc></url>
   <url><loc>https://aimorelogy.com/zh/products/afc-v1/</loc></url>
   <url><loc>https://aimorelogy.com/zh/products/sophgo/bm1688/</loc></url>
@@ -46,6 +48,7 @@
   <url><loc>https://aimorelogy.com/zh/legal/terms-of-service/</loc></url>
   <url><loc>https://aimorelogy.com/zh/legal/cookie-preferences/</loc></url>
 
+  <!-- Russian -->
   <url><loc>https://aimorelogy.com/ru/</loc></url>
   <url><loc>https://aimorelogy.com/ru/products/afc-v1/</loc></url>
   <url><loc>https://aimorelogy.com/ru/products/sophgo/bm1688/</loc></url>
