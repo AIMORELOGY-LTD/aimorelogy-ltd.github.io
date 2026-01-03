@@ -8,7 +8,7 @@ export const ESPRESSIF_CHIPS: Record<string, ChipData> = {
     series: 'WROOM',
     tagline: '2.4 GHz Wi-Fi & Bluetooth 5 (LE) Module',
     metaTitle: 'Espressif ESP32-S3-WROOM-1 Wi-Fi & Bluetooth Module for AIoT | AIMORELOGY',
-    metaDescription: 'ESP32-S3-WROOM-1 is a dual-core Wi-Fi + Bluetooth LE module with AI acceleration for smart home, voice, and edge AI devices.',
+    metaDescription: 'ESP32-S3-WROOM-1 is a dual-core Wi-Fi + Bluetooth LE module with AI acceleration for smart home, voice, and edge AI devices. Datasheet',
     description: 'A powerful, generic Wi-Fi + Bluetooth LE MCU module built around the ESP32-S3 series of SoCs, featuring AI acceleration and rich peripherals.',
     longDescription: [
       "The ESP32-S3-WROOM-1 and ESP32-S3-WROOM-1U are two powerful, generic Wi-Fi + Bluetooth LE MCU modules that are built around the ESP32-S3 series of SoCs. At the core of the modules is a dual-core 32-bit Xtensa LX7 microprocessor operating at up to 240 MHz.",

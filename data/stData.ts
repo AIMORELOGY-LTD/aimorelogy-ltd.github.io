@@ -8,7 +8,7 @@ export const STM32_CHIPS: Record<string, ChipData> = {
       series: 'VISION', // Reusing series tag for layout, though it's an MCU
       tagline: 'High-Performance Foundation for Advanced Edge Control',
       metaTitle: 'STM32F405 High-Performance Arm Cortex-M4 MCU | AIMORELOGY',
-      metaDescription: 'STM32F405xx Arm Cortex-M4 MCU with FPU, DSP, 168 MHz performance, 1 MB Flash, and rich connectivity for real-time control applications.',
+      metaDescription: 'STM32F405xx Arm Cortex-M4 MCU with FPU, DSP, 168 MHz performance, 1 MB Flash, and rich connectivity for real-time control applications. Datasheet',
       description: 'High-performance Arm Cortex-M4 microcontroller running up to 168 MHz with integrated FPU and DSP.',
       longDescription: [
           "The STM32F405xx family is based on the high-performance Arm® Cortex®-M4 32-bit RISC core operating at a frequency of up to 168 MHz. The Cortex-M4 core features a Floating Point Unit (FPU) single precision which supports all Arm single-precision data-processing instructions and data types. It also implements a full set of DSP instructions and a Memory Protection Unit (MPU) which enhances application security.",
@@ -123,7 +123,7 @@ export const STM32_CHIPS: Record<string, ChipData> = {
       series: 'VISION',
       tagline: 'High-Performance Cortex-M7 with Rich Connectivity',
       metaTitle: 'STM32F722 High-Performance Arm Cortex-M7 MCU | AIMORELOGY',
-      metaDescription: 'STM32F722xx Arm Cortex-M7 MCU with single-precision FPU, DSP, 216 MHz performance, 512 KB Flash, and dual-mode QSPI.',
+      metaDescription: 'STM32F722xx Arm Cortex-M7 MCU with single-precision FPU, DSP, 216 MHz performance, 512 KB Flash, and dual-mode QSPI. Datasheet',
       description: 'High-performance Arm Cortex-M7 microcontroller running up to 216 MHz with integrated L1 cache.',
       longDescription: [
           "The STM32F722xx family is based on the high-performance Arm® Cortex®-M7 32-bit RISC core operating at a frequency of up to 216 MHz. The Cortex-M7 core features a single floating point unit (SFPU) which supports all Arm® single-precision data-processing instructions and data types. It also implements a full set of DSP instructions and a memory protection unit (MPU) which enhances application security.",
@@ -225,7 +225,7 @@ export const STM32_CHIPS: Record<string, ChipData> = {
       series: 'VISION',
       tagline: 'Flagship Cortex-M7 with Advanced Graphics & Ethernet',
       metaTitle: 'STM32F767 High-End Arm Cortex-M7 MCU | AIMORELOGY',
-      metaDescription: 'STM32F767xx High-end Arm Cortex-M7 MCU with double-precision FPU, up to 2 MB Flash, 512 KB SRAM, Ethernet, and Chrom-ART graphics.',
+      metaDescription: 'STM32F767xx High-end Arm Cortex-M7 MCU with double-precision FPU, up to 2 MB Flash, 512 KB SRAM, Ethernet, and Chrom-ART graphics. Datasheet',
       description: 'High-end Arm Cortex-M7 microcontroller with double-precision FPU and comprehensive connectivity.',
       longDescription: [
           "The STM32F767xx family is the pinnacle of the high-performance Arm® Cortex®-M7 based MCUs, operating at frequencies up to 216 MHz. It features a Double-Precision Floating Point Unit (DPFPU) supporting all Arm® double-precision and single-precision data-processing instructions. This makes it ideal for complex mathematical calculations and high-fidelity audio/visual processing.",
@@ -322,4 +322,3 @@ export const STM32_CHIPS: Record<string, ChipData> = {
       ]
     }
 };
-

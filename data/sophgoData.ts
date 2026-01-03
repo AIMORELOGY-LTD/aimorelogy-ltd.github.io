@@ -65,7 +65,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       series: 'TPU',
       tagline: 'Intelligent Edge 16T Compute Platform',
       metaTitle: 'SOPHGO BM1688 Edge TPU SoC for Drone/FPV Vision - 16 TOPS, 8-Core, 8K | AIMORELOGY',
-      metaDescription: 'SOPHGO BM1688 edge TPU SoC combines an 8-core ARM CPU and 16 TOPS (32 TOPS INT4) with 8K imaging and multi-sensor ISP for drone/FPV vision, gimbal tracking, AI NVRs, robotics, and edge servers.',
+      metaDescription: 'SOPHGO BM1688 edge TPU SoC combines an 8-core ARM CPU and 16 TOPS (32 TOPS INT4) with 8K imaging and multi-sensor ISP for drone/FPV vision, gimbal tracking, AI NVRs, robotics, and edge servers. Datasheet',
       description: 'High-integration edge TPU processor featuring 16 TOPS INT8 compute and octa-core architecture.',
       longDescription: [
           "The BM1688 is a high-integration edge TPU processor designed to serve as a powerful 16T to 8T intelligent compute platform. It features an octa-core ARM Cortex-A53 architecture running at 1.6GHz, providing server-class compute power for edge applications.",
@@ -164,7 +164,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       series: 'VISION',
       tagline: '7.2T Terminal AI Vision Processor',
       metaTitle: 'SOPHGO CV186x (CV186AH) AI Vision SoC for Drone/FPV & Gimbal - 7.2 TOPS, DPU, 8MP | AIMORELOGY',
-      metaDescription: 'SOPHGO CV186x/CV186AH delivers 7.2 TOPS AI compute, binocular depth DPU, and 8MP@75fps encoding for multi-lens IPC, drones/FPV, gimbal vision, and robotics platforms.',
+      metaDescription: 'SOPHGO CV186x/CV186AH delivers 7.2 TOPS AI compute, binocular depth DPU, and 8MP@75fps encoding for multi-lens IPC, drones/FPV, gimbal vision, and robotics platforms. Datasheet',
       description: 'High-performance vision processor with 7.2 TOPS AI compute and integrated binocular depth engine.',
       longDescription: [
           "The CV186x series (CV186AH) is a high-performance visual processor designed for the intelligent terminal market. It features a hexa-core ARM Cortex-A53 architecture, providing efficient multi-tasking capabilities for complex edge computing workloads.",
@@ -248,7 +248,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       series: 'VISION',
       tagline: 'Dual-Core Vision SoC with ISP V4.0 & Intra4 Encoding',
       metaTitle: 'SOPHGO CV184x Vision SoC for FPV/UAV (CV1841C/CV1842C-P/CV1842H-P/CV1843H-P) - ISP V4.0, Intra4 | AIMORELOGY',
-      metaDescription: 'SOPHGO CV184x series (CV1841C, CV1842C-P, CV1842H-P/CV1842HP, CV1843H-P) offers 1.0-1.5 TOPS TPU, ISP V4.0, and Intra4 encoding for FPV/UAV vision, gimbal tracking, smart cameras, and access control.',
+      metaDescription: 'SOPHGO CV184x series (CV1841C, CV1842C-P, CV1842H-P/CV1842HP, CV1843H-P) offers 1.0-1.5 TOPS TPU, ISP V4.0, and Intra4 encoding for FPV/UAV vision, gimbal tracking, smart cameras, and access control. Datasheet',
       description: 'Next-gen edge vision SoC featuring ISP V4.0, Intra4 encoding, and OpenCLIP support.',
       longDescription: [
           "The CV184x series is a high-performance visual processor designed for consumer, carrier, and professional security markets. It features a dual-core architecture (ARM Cortex-A53 @ 1.1GHz + RISC-V C906 @ 800MHz) and a self-developed TPU delivering up to 1.5 TOPS (INT8) with BF16 mixed precision support.",
@@ -371,7 +371,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       series: 'VISION',
       tagline: 'RISC-V Vision SoC for Lightweight Intelligent Scenarios',
       metaTitle: 'SOPHGO CV181x RISC-V Vision SoC for FPV/UAV Cameras (CV1813H/CV1812H/CV1811H/CV1812C-P/CV1811C/CV1810C/CV1813H-A/CV1812H-A/CV1811H-A/CV1812C-PA/CV1811C-A) | AIMORELOGY',
-      metaDescription: 'SOPHGO CV181x series (CV1813H, CV1812H, CV1811H, CV1812C-P, CV1811C, CV1810C, CV1813H-A, CV1812H-A, CV1811H-A, CV1812C-PA, CV1811C-A) delivers 0.5-1.0 TOPS AI for smart doorbells, access control, lightweight FPV/UAV cameras, and low-power AIoT.',
+      metaDescription: 'SOPHGO CV181x series (CV1813H, CV1812H, CV1811H, CV1812C-P, CV1811C, CV1810C, CV1813H-A, CV1812H-A, CV1811H-A, CV1812C-PA, CV1811C-A) delivers 0.5-1.0 TOPS AI for smart doorbells, access control, lightweight FPV/UAV cameras, and low-power AIoT. Datasheet',
       description: 'High-performance RISC-V SoC with integrated screen display support and up to 1.0 TOPS AI compute.',
       longDescription: [
           "The CV181 series is a high-performance visual processor tailored for the lightweight intelligent (consumer-grade) market. It leverages a Dual RISC-V C906 architecture (1.0GHz + 0.7GHz) or an ARM A53 + RISC-V combination in the 'A' series, providing an optimal balance of compute power and energy efficiency.",
@@ -490,7 +490,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       series: 'VISION',
       tagline: 'Consumer-Grade Lite Intelligent Vision SoC',
       metaTitle: 'SOPHGO CV180x RISC-V Vision SoC for Entry FPV/UAV (CV1801B/CV180ZB) - 0.2 TOPS | AIMORELOGY',
-      metaDescription: 'SOPHGO CV180x series (CV1801B, CV180ZB) is a cost-effective 0.2 TOPS RISC-V vision SoC for entry FPV/UAV cameras, battery devices, and lightweight AIoT.',
+      metaDescription: 'SOPHGO CV180x series (CV1801B, CV180ZB) is a cost-effective 0.2 TOPS RISC-V vision SoC for entry FPV/UAV cameras, battery devices, and lightweight AIoT. Datasheet',
       description: 'Cost-effective RISC-V vision chip for consumer IoT and lightweight intelligent applications.',
       longDescription: [
           "The CV180 series is a highly cost-effective visual processor designed for the entry-level consumer and lightweight intelligent market. Built on a Dual RISC-V C906 architecture (1.0GHz + 0.7GHz), it democratizes access to smart vision for mass-market devices.",
