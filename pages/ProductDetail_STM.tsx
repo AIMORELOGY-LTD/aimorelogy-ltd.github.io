@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -32,8 +32,14 @@ const ProductDetail_STM: React.FC = () => {
   const lang = useLang();
   const { t } = useTranslation();
   const { modelId } = useParams<{ modelId: string }>();
-  const [product, setProduct] = useState<ChipData | null>(null);
   const isRu = lang === 'ru';
+
+  // Find product data synchronously for better SEO/Prerendering
+  const product = React.useMemo(() => {
+    if (!modelId) return null;
+    const cleanId = modelId.toLowerCase().replace(/\/+$/, '');
+    return STM32_CHIPS[cleanId] || null;
+  }, [modelId]);
 
   const scrollToFooter = () => {
     const footer = document.getElementById('footer');
@@ -43,12 +49,6 @@ const ProductDetail_STM: React.FC = () => {
   };
 
   useEffect(() => {
-    const normalizedModelId = modelId?.toLowerCase();
-    if (normalizedModelId && STM32_CHIPS[normalizedModelId]) {
-      setProduct(STM32_CHIPS[normalizedModelId]);
-    } else {
-      setProduct(null);
-    }
     window.scrollTo(0, 0);
   }, [modelId]);
 

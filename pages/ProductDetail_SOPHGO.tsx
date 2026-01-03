@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -51,8 +51,15 @@ const ProductDetail_SOPHGO: React.FC = () => {
   const lang = useLang();
   const { t } = useTranslation();
   const { modelId } = useParams<{ modelId: string }>();
-  const [product, setProduct] = useState<ChipData | null>(null);
   const isRu = lang === 'ru';
+
+  // Find product data synchronously for better SEO/Prerendering
+  const product = React.useMemo(() => {
+    if (!modelId) return null;
+    const cleanId = modelId.toLowerCase().replace(/\/+$/, '');
+    const resolvedId = MODEL_ALIASES[cleanId] || cleanId;
+    return SOPHGO_CHIPS[resolvedId] || null;
+  }, [modelId]);
 
   const scrollToFooter = () => {
     const footer = document.getElementById('footer');
@@ -62,14 +69,6 @@ const ProductDetail_SOPHGO: React.FC = () => {
   };
 
   useEffect(() => {
-    const normalizedModelId = modelId?.toLowerCase();
-    const resolvedModelId = normalizedModelId ? (MODEL_ALIASES[normalizedModelId] || normalizedModelId) : undefined;
-    if (resolvedModelId && SOPHGO_CHIPS[resolvedModelId]) {
-      const data = SOPHGO_CHIPS[resolvedModelId];
-      setProduct(data);
-    } else {
-      setProduct(null);
-    }
     window.scrollTo(0, 0);
   }, [modelId]);
 

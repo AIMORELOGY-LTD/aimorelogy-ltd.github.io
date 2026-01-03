@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -21,15 +21,15 @@ const ProductDetail_Espressif: React.FC = () => {
   const lang = useLang();
   const { t } = useTranslation();
   const { modelId } = useParams<{ modelId: string }>();
-  const [product, setProduct] = useState<ChipData | null>(null);
+
+  // Find product data synchronously for better SEO/Prerendering
+  const product = React.useMemo(() => {
+    if (!modelId) return null;
+    const cleanId = modelId.toLowerCase().replace(/\/+$/, '');
+    return ESPRESSIF_CHIPS[cleanId] || null;
+  }, [modelId]);
 
   useEffect(() => {
-    if (modelId && ESPRESSIF_CHIPS[modelId.toLowerCase()]) {
-      const data = ESPRESSIF_CHIPS[modelId.toLowerCase()];
-      setProduct(data);
-    } else {
-      setProduct(null);
-    }
     window.scrollTo(0, 0);
   }, [modelId]);
 
