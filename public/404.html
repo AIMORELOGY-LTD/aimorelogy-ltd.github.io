@@ -7,6 +7,7 @@
     <script>
       (function () {
         var path = window.location.pathname + window.location.search + window.location.hash;
+        path = path.replace(/\/index\.html(?=$|[?#])/, '/');
         window.location.replace('/?p=' + encodeURIComponent(path));
       })();
     </script>
