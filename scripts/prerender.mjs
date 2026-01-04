@@ -67,17 +67,18 @@ const parseSitemap = async () => {
     throw new Error('sitemap.xml not found in dist/ or public/.');
   }
   const xml = await fsp.readFile(sitemapPath, 'utf-8');
-  const matches = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
-  if (!matches.length) {
+  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
+  if (!locs.length) {
     throw new Error('No <loc> entries found in sitemap.xml.');
   }
+  const uniqueLocs = Array.from(new Set(locs));
   const paths = new Set(
-    matches.map((loc) => {
+    uniqueLocs.map((loc) => {
       const url = new URL(loc);
       return url.pathname || '/';
     })
   );
-  return Array.from(paths);
+  return { paths: Array.from(paths), locs: uniqueLocs };
 };
 
 const detectLang = (pathname) => {
@@ -96,8 +97,20 @@ const toOutputPath = (pathname) => {
   return path.join(DIST_DIR, normalized, 'index.html');
 };
 
+const writeSitemapWithLastmod = async (locs) => {
+  const lastmod = new Date().toISOString().slice(0, 10);
+  const entries = locs
+    .map((loc) => `  <url><loc>${loc}</loc><lastmod>${lastmod}</lastmod></url>`)
+    .join('\n');
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    `${entries}\n` +
+    `</urlset>\n`;
+  await fsp.writeFile(path.join(DIST_DIR, 'sitemap.xml'), xml, 'utf-8');
+};
+
 const run = async () => {
-  const routes = await parseSitemap();
+  const { paths: routes, locs } = await parseSitemap();
   const orderedRoutes = [
     '/',
     ...routes.filter((route) => route !== '/').sort()
@@ -158,6 +171,7 @@ const run = async () => {
 
   await browser.close();
   stopServer();
+  await writeSitemapWithLastmod(locs);
 };
 
 run().catch((err) => {
