@@ -153,7 +153,7 @@
     },
 
     "quickLinks": {
-      "title": "????",
+      "title": "快速入口",
       "items": {
         "afc": "AFC-V1",
         "bm1688": "BM1688",
@@ -165,9 +165,9 @@
         "stm32f405": "STM32F405",
         "stm32f722": "STM32F722",
         "stm32f767": "STM32F767",
-        "aiTracking": "AI ????",
-        "dshot": "DShot ??????",
-        "aiCamera": "?AI??"
+        "aiTracking": "AI 追踪算法",
+        "dshot": "DShot 数字油门协议",
+        "aiCamera": "云AI相机"
       }
     },
 
