@@ -1,73 +1,508 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aimorelogy.com/</loc></url>
-
-  <!-- English -->
-  <url><loc>https://aimorelogy.com/en/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/afc-v1/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/sophgo/bm1688/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/sophgo/cv186x/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/sophgo/cv184x/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/sophgo/cv181x/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/sophgo/cv180x/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/espressif/esp32s3/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/stm/stm32f405/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/stm/stm32f722/</loc></url>
-  <url><loc>https://aimorelogy.com/en/products/stm/stm32f767/</loc></url>
-  <url><loc>https://aimorelogy.com/en/solutions/ai-camera/</loc></url>
-  <url><loc>https://aimorelogy.com/en/technology/ai-tracking/</loc></url>
-  <url><loc>https://aimorelogy.com/en/technology/control-protocol/</loc></url>
-  <url><loc>https://aimorelogy.com/en/blog/</loc></url>
-  <url><loc>https://aimorelogy.com/en/careers/</loc></url>
-  <url><loc>https://aimorelogy.com/en/contact/</loc></url>
-  <url><loc>https://aimorelogy.com/en/about/</loc></url>
-  <url><loc>https://aimorelogy.com/en/legal/privacy-policy/</loc></url>
-  <url><loc>https://aimorelogy.com/en/legal/terms-of-service/</loc></url>
-  <url><loc>https://aimorelogy.com/en/legal/cookie-preferences/</loc></url>
-
-  <!-- Chinese -->
-  <url><loc>https://aimorelogy.com/zh/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/afc-v1/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/sophgo/bm1688/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/sophgo/cv186x/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/sophgo/cv184x/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/sophgo/cv181x/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/sophgo/cv180x/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/espressif/esp32s3/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/stm/stm32f405/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/stm/stm32f722/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/products/stm/stm32f767/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/solutions/ai-camera/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/technology/ai-tracking/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/technology/control-protocol/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/blog/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/careers/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/contact/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/about/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/legal/privacy-policy/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/legal/terms-of-service/</loc></url>
-  <url><loc>https://aimorelogy.com/zh/legal/cookie-preferences/</loc></url>
-
-  <!-- Russian -->
-  <url><loc>https://aimorelogy.com/ru/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/afc-v1/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/sophgo/bm1688/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/sophgo/cv186x/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/sophgo/cv184x/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/sophgo/cv181x/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/sophgo/cv180x/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/espressif/esp32s3/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/stm/stm32f405/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/stm/stm32f722/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/products/stm/stm32f767/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/solutions/ai-camera/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/technology/ai-tracking/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/technology/control-protocol/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/blog/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/careers/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/contact/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/about/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/legal/privacy-policy/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/legal/terms-of-service/</loc></url>
-  <url><loc>https://aimorelogy.com/ru/legal/cookie-preferences/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aimorelogy.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/about/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/about/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/about/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/blog/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/blog/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/blog/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/careers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/careers/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/careers/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/careers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/careers/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/careers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/careers/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/careers/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/careers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/careers/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/careers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/careers/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/careers/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/careers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/careers/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/contact/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/contact/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/contact/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/legal/cookie-preferences/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/cookie-preferences/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/legal/cookie-preferences/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/cookie-preferences/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/legal/cookie-preferences/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/cookie-preferences/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/cookie-preferences/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/legal/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/privacy-policy/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/legal/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/privacy-policy/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/legal/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/privacy-policy/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/legal/terms-of-service/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/terms-of-service/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/legal/terms-of-service/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/terms-of-service/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/legal/terms-of-service/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/legal/terms-of-service/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/legal/terms-of-service/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/afc-v1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/afc-v1/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/afc-v1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/afc-v1/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/afc-v1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/afc-v1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/afc-v1/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/espressif/esp32s3/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/espressif/esp32s3/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/espressif/esp32s3/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/espressif/esp32s3/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/espressif/esp32s3/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/espressif/esp32s3/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/espressif/esp32s3/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/sophgo/bm1688/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/bm1688/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/sophgo/bm1688/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/bm1688/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/sophgo/bm1688/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/bm1688/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/bm1688/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/sophgo/cv180x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv180x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/sophgo/cv180x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv180x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/sophgo/cv180x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv180x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv180x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/sophgo/cv181x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv181x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/sophgo/cv181x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv181x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/sophgo/cv181x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv181x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv181x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/sophgo/cv184x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv184x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/sophgo/cv184x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv184x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/sophgo/cv184x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv184x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv184x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/sophgo/cv186x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv186x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/sophgo/cv186x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv186x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/sophgo/cv186x/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/sophgo/cv186x/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/sophgo/cv186x/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/stm/stm32f405/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f405/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/stm/stm32f405/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f405/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/stm/stm32f405/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f405/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f405/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/stm/stm32f722/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f722/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/stm/stm32f722/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f722/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/stm/stm32f722/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f722/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f722/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/products/stm/stm32f767/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f767/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/products/stm/stm32f767/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f767/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/products/stm/stm32f767/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/products/stm/stm32f767/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/products/stm/stm32f767/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/solutions/ai-camera/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/solutions/ai-camera/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/solutions/ai-camera/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/solutions/ai-camera/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/solutions/ai-camera/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/solutions/ai-camera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/solutions/ai-camera/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/technology/ai-tracking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/technology/ai-tracking/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/technology/ai-tracking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/technology/ai-tracking/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/technology/ai-tracking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/technology/ai-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/technology/ai-tracking/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/en/technology/control-protocol/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/technology/control-protocol/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/zh/technology/control-protocol/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/technology/control-protocol/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aimorelogy.com/ru/technology/control-protocol/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimorelogy.com/en/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aimorelogy.com/zh/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aimorelogy.com/ru/technology/control-protocol/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimorelogy.com/en/technology/control-protocol/" />
+    <lastmod>2026-01-04</lastmod>
+  </url>
 </urlset>

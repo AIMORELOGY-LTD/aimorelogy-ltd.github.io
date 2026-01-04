@@ -1,4 +1,4 @@
-{
+﻿{
 
   "common": {
 
@@ -150,6 +150,25 @@
 
       "careers": "职业机会"
 
+    },
+
+    "quickLinks": {
+      "title": "????",
+      "items": {
+        "afc": "AFC-V1",
+        "bm1688": "BM1688",
+        "cv186x": "CV186x",
+        "cv184x": "CV184x",
+        "cv181x": "CV181x",
+        "cv180x": "CV180x",
+        "esp32s3": "ESP32-S3",
+        "stm32f405": "STM32F405",
+        "stm32f722": "STM32F722",
+        "stm32f767": "STM32F767",
+        "aiTracking": "AI ????",
+        "dshot": "DShot ??????",
+        "aiCamera": "?AI??"
+      }
     },
 
     "legal": {

@@ -54,6 +54,18 @@ const ensureMeta = (attr: 'name' | 'property', key: string, content: string) => 
   tag.setAttribute('content', content);
 };
 
+const ensureMultiMeta = (attr: 'name' | 'property', key: string, contents: string[]) => {
+  const selector = `meta[${attr}="${key}"]`;
+  document.head.querySelectorAll(selector).forEach((node) => node.remove());
+  for (const content of contents) {
+    if (!content && content !== '') continue;
+    const tag = document.createElement('meta');
+    tag.setAttribute(attr, key);
+    tag.setAttribute('content', content);
+    document.head.appendChild(tag);
+  }
+};
+
 const ensureLink = (rel: string, href: string, hreflang?: string) => {
   const selector = hreflang ? `link[rel="${rel}"][hreflang="${hreflang}"]` : `link[rel="${rel}"]`;
   let link = document.head.querySelector(selector) as HTMLLinkElement | null;
@@ -147,6 +159,7 @@ const Seo: React.FC<SeoProps> = ({
     const locale = LOCALE_MAP[lang] || 'en_US';
     const siteName = lang === 'zh' ? 'AIMORELOGY 爱谋科技' : 'AIMORELOGY';
     const keywordsValue = mergeKeywords(DEFAULT_KEYWORDS, keywords);
+    const alternateLocales = Object.values(LOCALE_MAP).filter((value) => value !== locale);
 
     document.title = title;
 
@@ -161,6 +174,7 @@ const Seo: React.FC<SeoProps> = ({
     ensureMeta('property', 'og:url', canonical);
     ensureMeta('property', 'og:image', imageUrl);
     ensureMeta('property', 'og:locale', locale);
+    ensureMultiMeta('property', 'og:locale:alternate', alternateLocales);
 
     ensureMeta('name', 'twitter:card', 'summary_large_image');
     ensureMeta('name', 'twitter:title', title);

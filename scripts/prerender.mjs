@@ -4,10 +4,9 @@ import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { setTimeout as delay } from 'node:timers/promises';
 import puppeteer from 'puppeteer-core';
+import { buildSitemapXml, getPrerenderPaths } from './sitemap-utils.mjs';
 
 const DIST_DIR = path.resolve('dist');
-const SITEMAP_PATH = path.join(DIST_DIR, 'sitemap.xml');
-const FALLBACK_SITEMAP_PATH = path.resolve('public', 'sitemap.xml');
 
 const ORIGIN = process.env.PRERENDER_ORIGIN || 'http://127.0.0.1:4173';
 const ORIGIN_URL = new URL(ORIGIN);
@@ -61,26 +60,6 @@ const waitForServer = async (origin) => {
   throw new Error('Preview server did not start in time.');
 };
 
-const parseSitemap = async () => {
-  const sitemapPath = fs.existsSync(SITEMAP_PATH) ? SITEMAP_PATH : FALLBACK_SITEMAP_PATH;
-  if (!fs.existsSync(sitemapPath)) {
-    throw new Error('sitemap.xml not found in dist/ or public/.');
-  }
-  const xml = await fsp.readFile(sitemapPath, 'utf-8');
-  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
-  if (!locs.length) {
-    throw new Error('No <loc> entries found in sitemap.xml.');
-  }
-  const uniqueLocs = Array.from(new Set(locs));
-  const paths = new Set(
-    uniqueLocs.map((loc) => {
-      const url = new URL(loc);
-      return url.pathname || '/';
-    })
-  );
-  return { paths: Array.from(paths), locs: uniqueLocs };
-};
-
 const detectLang = (pathname) => {
   const [first] = pathname.split('/').filter(Boolean);
   if (SUPPORTED_LANGS.has(first)) {
@@ -97,24 +76,9 @@ const toOutputPath = (pathname) => {
   return path.join(DIST_DIR, normalized, 'index.html');
 };
 
-const writeSitemapWithLastmod = async (locs) => {
-  const lastmod = new Date().toISOString().slice(0, 10);
-  const entries = locs
-    .map((loc) => `  <url><loc>${loc}</loc><lastmod>${lastmod}</lastmod></url>`)
-    .join('\n');
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    `${entries}\n` +
-    `</urlset>\n`;
-  await fsp.writeFile(path.join(DIST_DIR, 'sitemap.xml'), xml, 'utf-8');
-};
-
 const run = async () => {
-  const { paths: routes, locs } = await parseSitemap();
-  const orderedRoutes = [
-    '/',
-    ...routes.filter((route) => route !== '/').sort()
-  ];
+  const routes = await getPrerenderPaths();
+  const orderedRoutes = ['/', ...routes.filter((route) => route !== '/').sort()];
 
   const viteBin = getViteBin();
   const server = spawn(
@@ -171,7 +135,8 @@ const run = async () => {
 
   await browser.close();
   stopServer();
-  await writeSitemapWithLastmod(locs);
+  const sitemapXml = await buildSitemapXml();
+  await fsp.writeFile(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
 };
 
 run().catch((err) => {

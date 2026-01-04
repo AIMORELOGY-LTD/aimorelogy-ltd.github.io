@@ -105,6 +105,21 @@ const Footer: React.FC = () => {
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const quickLinks = [
+    { key: 'afc', path: RoutePath.PRODUCT_AFC },
+    { key: 'bm1688', path: '/products/sophgo/bm1688/' },
+    { key: 'cv186x', path: '/products/sophgo/cv186x/' },
+    { key: 'cv184x', path: '/products/sophgo/cv184x/' },
+    { key: 'cv181x', path: '/products/sophgo/cv181x/' },
+    { key: 'cv180x', path: '/products/sophgo/cv180x/' },
+    { key: 'esp32s3', path: '/products/espressif/esp32s3/' },
+    { key: 'stm32f405', path: '/products/stm/stm32f405/' },
+    { key: 'stm32f722', path: '/products/stm/stm32f722/' },
+    { key: 'stm32f767', path: '/products/stm/stm32f767/' },
+    { key: 'aiTracking', path: RoutePath.TECHNOLOGY_AI_TRACKING },
+    { key: 'dshot', path: RoutePath.TECHNOLOGY_DSHOT },
+    { key: 'aiCamera', path: RoutePath.SOLUTION_AI_CAMERA }
+  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -251,6 +266,22 @@ const Footer: React.FC = () => {
               <li><Link to={withLang(lang, RoutePath.CONTACT)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.contact')}</Link></li>
               <li><Link to={withLang(lang, RoutePath.CAREERS)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.careers')}</Link></li>
            </ul>
+           <div className="mt-5 text-xs text-gray-500">
+             <p className="text-[11px] font-bold uppercase tracking-wider text-gray-500">
+               {t('footer.quickLinks.title')}
+             </p>
+             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+               {quickLinks.map((link) => (
+                 <Link
+                   key={link.key}
+                   to={withLang(lang, link.path)}
+                   className="hover:text-[#4f4398] transition-colors"
+                 >
+                   {t(`footer.quickLinks.items.${link.key}`)}
+                 </Link>
+               ))}
+             </div>
+           </div>
         </div>
       </div>
 
