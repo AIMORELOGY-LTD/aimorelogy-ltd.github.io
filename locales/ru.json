@@ -5115,19 +5115,19 @@
 
 
 
-                  "1Gb",
+                  "1Gbit",
 
 
 
-                  "2Gb",
+                  "2Gbit",
 
 
 
-                  "2Gb",
+                  "2Gbit",
 
 
 
-                  "4Gb"
+                  "4Gbit"
 
 
 
@@ -5371,7 +5371,7 @@
 
 
 
-            "value": "DDR3 512Mb / 1Gb / 2Gb / 4Gb"
+            "value": "DDR3 512Mb / 1Gbit / 2Gbit / 4Gbit"
 
 
 
@@ -5831,7 +5831,7 @@
 
 
 
-            "description": "512Mb DDR2 до 4Gb DDR3 SiP снижает площадь платы и стоимость."
+            "description": "512Mb DDR2 до 4Gbit DDR3 SiP снижает площадь платы и стоимость."
 
 
 
@@ -6195,7 +6195,7 @@
 
 
 
-                  "4Gb DDR3",
+                  "4Gbit DDR3",
 
 
 
@@ -6223,7 +6223,7 @@
 
 
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
 
 
@@ -6251,7 +6251,7 @@
 
 
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
 
 
@@ -6279,7 +6279,7 @@
 
 
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
 
 
@@ -6307,7 +6307,7 @@
 
 
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
 
 
@@ -6363,7 +6363,7 @@
 
 
 
-                  "4Gb DDR3",
+                  "4Gbit DDR3",
 
 
 
@@ -6391,7 +6391,7 @@
 
 
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
 
 
@@ -6419,7 +6419,7 @@
 
 
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
 
 
@@ -6447,7 +6447,7 @@
 
 
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
 
 
@@ -6475,7 +6475,7 @@
 
 
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
 
 
@@ -6643,7 +6643,7 @@
 
 
 
-            "value": "512Mb DDR2 / 1Gb / 2Gb / 4Gb DDR3"
+            "value": "512Mb DDR2 / 1Gbit / 2Gbit / 4Gbit DDR3"
 
 
 
@@ -7027,7 +7027,7 @@
 
 
 
-            "description": "512Mb DDR2 или 1Gb DDR3 уменьшают размеры платы."
+            "description": "512Mb DDR2 или 1Gbit DDR3 уменьшают размеры платы."
 
 
 
@@ -7351,7 +7351,7 @@
 
 
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
 
 
@@ -7531,7 +7531,7 @@
 
 
 
-            "value": "512Mb DDR2 / 1Gb DDR3"
+            "value": "512Mb DDR2 / 1Gbit DDR3"
 
 
 

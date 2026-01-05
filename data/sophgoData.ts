@@ -326,7 +326,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
             headers: ["Feature", "CV1841C", "CV1842C-P", "CV1842H-P", "CV1843H-P"],
             rows: [
               ["Processor", "CA53 1.0GHz + C906 600MHz", "CA53 1.1GHz + C906 800MHz", "CA53 1.1GHz + C906 800MHz", "CA53 1.1GHz + C906 800MHz"],
-              ["DDR3 SiP", "1Gb", "2Gb", "2Gb", "4Gb"],
+              ["DDR3 SiP", "1Gbit", "2Gbit", "2Gbit", "4Gbit"],
               ["TPU (INT8)", "~1.0 TOPS", "~1.5 TOPS", "~1.5 TOPS", "~1.5 TOPS"],
               ["Package", "QFN-88 9x9", "BGA 10x10", "BGA 10x10", "BGA 10x10"],
               ["Video Input", "MIPI 2L+1L or 4L", "MIPI 2L+2L+DVP or 4L", "MIPI 2L+2L+DVP or 4L", "MIPI 2L+2L+DVP or 4L"],
@@ -341,7 +341,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Processor', key: 'CPU', value: 'Dual-Core ARM Cortex-A53 + RISC-V C906' },
         { category: 'Processor', key: 'Frequency', value: 'Up to 1.1GHz (A53) / 800MHz (C906)' },
         { category: 'AI', key: 'TPU', value: '1.0 ~ 1.5 TOPS @ INT8 / BF16' },
-        { category: 'Memory', key: 'Integrated', value: 'DDR3 512Mb / 1Gb / 2Gb / 4Gb' },
+        { category: 'Memory', key: 'Integrated', value: 'DDR3 512Mb / 1Gbit / 2Gbit / 4Gbit' },
         { category: 'Video', key: 'ISP', value: 'ISP V4.0 (4K, 3DNR, DRC, PFR)' },
         { category: 'Video', key: 'Encoding', value: 'H.265/H.264/MJPEG + Intra4' },
         { category: 'Video', key: 'Resolution', value: 'Max 8MP@30fps + 720P@30fps' },
@@ -391,7 +391,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       detailedFeatures: [
           { title: "Dual Core Compute", description: "Flexible architecture with pure RISC-V or ARM+RISC-V options to suit different performance and OS requirements." },
           { title: "2f-HDR Imaging", description: "Advanced two-frame wide dynamic range technology ensures clear visibility in challenging backlit or high-contrast environments." },
-          { title: "Integrated SiP Memory", description: "Available with 512Mb DDR2 to 4Gb DDR3 integrated SiP, reducing PCB footprint and BOM complexity." },
+          { title: "Integrated SiP Memory", description: "Available with 512Mb DDR2 to 4Gbit DDR3 integrated SiP, reducing PCB footprint and BOM complexity." },
           { title: "Multi-Sensor Input", description: "Supports up to 2 camera inputs with flexible interfaces including MIPI CSI, Sub-LVDS, and HiSPi." },
           { title: "Rich Audio/Visual I/O", description: "Integrated 16-bit audio codec and comprehensive display outputs for interactive smart devices." },
           { title: "Eco-System Synergy", description: "Shares SDK, ISP settings, and AI reference designs with the CV180 series for low-cost portfolio development." }
@@ -441,17 +441,17 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
           table: {
             headers: ["Model", "CPU", "TPU", "DDR SiP", "Package"],
             rows: [
-              ["CV1813H", "Dual C906", "1.0 TOPS", "4Gb DDR3", "BGA 10x10"],
-              ["CV1812H", "Dual C906", "1.0 TOPS", "2Gb DDR3", "BGA 10x10"],
-              ["CV1811H", "Dual C906", "1.0 TOPS", "1Gb DDR3", "BGA 10x10"],
-              ["CV1812C-P", "Dual C906", "1.0 TOPS", "2Gb DDR3", "QFN-88 9x9"],
-              ["CV1811C", "Dual C906", "0.5 TOPS", "1Gb DDR3", "QFN-88 9x9"],
+              ["CV1813H", "Dual C906", "1.0 TOPS", "4Gbit DDR3", "BGA 10x10"],
+              ["CV1812H", "Dual C906", "1.0 TOPS", "2Gbit DDR3", "BGA 10x10"],
+              ["CV1811H", "Dual C906", "1.0 TOPS", "1Gbit DDR3", "BGA 10x10"],
+              ["CV1812C-P", "Dual C906", "1.0 TOPS", "2Gbit DDR3", "QFN-88 9x9"],
+              ["CV1811C", "Dual C906", "0.5 TOPS", "1Gbit DDR3", "QFN-88 9x9"],
               ["CV1810C", "Dual C906", "0.5 TOPS", "512Mb DDR2", "QFN-88 9x9"],
-              ["CV1813H-A", "A53+C906", "1.0 TOPS", "4Gb DDR3", "BGA 10x10"],
-              ["CV1812H-A", "A53+C906", "1.0 TOPS", "2Gb DDR3", "BGA 10x10"],
-              ["CV1811H-A", "A53+C906", "1.0 TOPS", "1Gb DDR3", "BGA 10x10"],
-              ["CV1812C-PA", "A53+C906", "1.0 TOPS", "2Gb DDR3", "QFN-88 9x9"],
-              ["CV1811C-A", "A53+C906", "1.0 TOPS", "1Gb DDR3", "QFN-88 9x9"]
+              ["CV1813H-A", "A53+C906", "1.0 TOPS", "4Gbit DDR3", "BGA 10x10"],
+              ["CV1812H-A", "A53+C906", "1.0 TOPS", "2Gbit DDR3", "BGA 10x10"],
+              ["CV1811H-A", "A53+C906", "1.0 TOPS", "1Gbit DDR3", "BGA 10x10"],
+              ["CV1812C-PA", "A53+C906", "1.0 TOPS", "2Gbit DDR3", "QFN-88 9x9"],
+              ["CV1811C-A", "A53+C906", "1.0 TOPS", "1Gbit DDR3", "QFN-88 9x9"]
             ],
             note: "All variants are Pin-to-Pin compatible within their respective package types."
           }
@@ -464,7 +464,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Video', key: 'ISP', value: '3DNR, 2f-HDR, LDC, Dehaze' },
         { category: 'Interface', key: 'Video In', value: '2x (MIPI 2L+2L+DVP or 4L)' },
         { category: 'Interface', key: 'Video Out', value: 'MIPI DSI (4L/2L), LVDS, RGB, BT.656/1120' },
-        { category: 'Memory', key: 'SiP DDR', value: '512Mb DDR2 / 1Gb / 2Gb / 4Gb DDR3' },
+        { category: 'Memory', key: 'SiP DDR', value: '512Mb DDR2 / 1Gbit / 2Gbit / 4Gbit DDR3' },
         { category: 'Storage', key: 'Interface', value: 'eMMC, SPI NOR/NAND, SDIO 3.0 x2' },
         { category: 'Ethernet', key: 'MAC/PHY', value: '10/100 MAC PHY (RMII Supported)' },
         { category: 'Peripherals', key: 'I/O', value: 'USB 2.0, I2C x5, SPI x3, UART x4, PWM x15' },
@@ -510,7 +510,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       detailedFeatures: [
           { title: "RISC-V Efficiency", description: "Leverages the open RISC-V architecture for efficient processing and lower licensing costs, passed on to the mass market." },
           { title: "Essential AI", description: "Built-in humanoid detection and motion sensing algorithms provide 'Lite' intelligence for entry-level security." },
-          { title: "Compact SiP Integration", description: "Integrated 512Mb DDR2 or 1Gb DDR3 memory reduces the overall device footprint to an absolute minimum." },
+          { title: "Compact SiP Integration", description: "Integrated 512Mb DDR2 or 1Gbit DDR3 memory reduces the overall device footprint to an absolute minimum." },
           { title: "Optimized Encoding", description: "Supports H.265 hardware encoding for superior video storage efficiency at 5MP resolutions." },
           { title: "Starlight Imaging", description: "Advanced 3DNR and ISP features ensure reliable performance in low-light consumer scenarios." },
           { title: "Pin-to-Pin Compatibility", description: "The CV1801B and CV180ZB variants share the same hardware footprint for flexible supply chain management." }
@@ -557,7 +557,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
           table: {
             headers: ["Model", "CPU", "DDR SiP", "TPU", "VI Interface"],
             rows: [
-              ["CV1801B", "Dual C906", "1Gb DDR3", "0.2 TOPS", "MIPI 4L / BT.656"],
+              ["CV1801B", "Dual C906", "1Gbit DDR3", "0.2 TOPS", "MIPI 4L / BT.656"],
               ["CV180ZB", "Dual C906", "512Mb DDR2", "0.2 TOPS", "MIPI 4L / BT.656"]
             ],
             note: "Competitive replacement targets: HI3516EV300, SSC337DE, T31 X/ZX/A, FH8856V210, etc."
@@ -570,7 +570,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
         { category: 'Video', key: 'Encoding', value: 'H.265/H.264/MJPEG (Max 5MP@20)' },
         { category: 'Video', key: 'ISP', value: '3DNR, DWDR, LDC, 3A, Dehaze' },
         { category: 'Interface', key: 'Video In', value: '1x (MIPI 4L / BT.656 / CSI)' },
-        { category: 'Memory', key: 'SiP DDR', value: '512Mb DDR2 / 1Gb DDR3' },
+        { category: 'Memory', key: 'SiP DDR', value: '512Mb DDR2 / 1Gbit DDR3' },
         { category: 'Storage', key: 'Interface', value: 'SPI NOR/NAND, SDIO 3.0 x2' },
         { category: 'Ethernet', key: 'MAC/PHY', value: '10/100 MAC PHY' },
         { category: 'Peripherals', key: 'I/O', value: 'USB 2.0, I2C x4, SPI x3, UART x5, PWM x13' },

@@ -2533,13 +2533,13 @@
 
                   "DDR3 SiP",
 
-                  "1Gb",
+                  "1Gbit",
 
-                  "2Gb",
+                  "2Gbit",
 
-                  "2Gb",
+                  "2Gbit",
 
-                  "4Gb"
+                  "4Gbit"
 
                 ],
 
@@ -2661,7 +2661,7 @@
 
             "key": "集成",
 
-            "value": "DDR3 512Mb / 1Gb / 2Gb / 4Gb"
+            "value": "DDR3 512Mb / 1Gbit / 2Gbit / 4Gbit"
 
           },
 
@@ -2891,7 +2891,7 @@
 
             "title": "SiP 内存集成",
 
-            "description": "提供 512Mb DDR2 至 4Gb DDR3 SiP，降低 PCB 体积与 BOM 成本。"
+            "description": "提供 512Mb DDR2 至 4Gbit DDR3 SiP，降低 PCB 体积与 BOM 成本。"
 
           },
 
@@ -3073,7 +3073,7 @@
 
                   "1.0 TOPS",
 
-                  "4Gb DDR3",
+                  "4Gbit DDR3",
 
                   "BGA 10x10"
 
@@ -3087,7 +3087,7 @@
 
                   "1.0 TOPS",
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
                   "BGA 10x10"
 
@@ -3101,7 +3101,7 @@
 
                   "1.0 TOPS",
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
                   "BGA 10x10"
 
@@ -3115,7 +3115,7 @@
 
                   "1.0 TOPS",
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
                   "QFN-88 9x9"
 
@@ -3129,7 +3129,7 @@
 
                   "0.5 TOPS",
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
                   "QFN-88 9x9"
 
@@ -3157,7 +3157,7 @@
 
                   "1.0 TOPS",
 
-                  "4Gb DDR3",
+                  "4Gbit DDR3",
 
                   "BGA 10x10"
 
@@ -3171,7 +3171,7 @@
 
                   "1.0 TOPS",
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
                   "BGA 10x10"
 
@@ -3185,7 +3185,7 @@
 
                   "1.0 TOPS",
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
                   "BGA 10x10"
 
@@ -3199,7 +3199,7 @@
 
                   "1.0 TOPS",
 
-                  "2Gb DDR3",
+                  "2Gbit DDR3",
 
                   "QFN-88 9x9"
 
@@ -3213,7 +3213,7 @@
 
                   "1.0 TOPS",
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
                   "QFN-88 9x9"
 
@@ -3297,7 +3297,7 @@
 
             "key": "SiP DDR",
 
-            "value": "512Mb DDR2 / 1Gb / 2Gb / 4Gb DDR3"
+            "value": "512Mb DDR2 / 1Gbit / 2Gbit / 4Gbit DDR3"
 
           },
 
@@ -3489,7 +3489,7 @@
 
             "title": "紧凑 SiP 集成",
 
-            "description": "集成 512Mb DDR2 或 1Gb DDR3，进一步缩小整机尺寸。"
+            "description": "集成 512Mb DDR2 或 1Gbit DDR3，进一步缩小整机尺寸。"
 
           },
 
@@ -3651,7 +3651,7 @@
 
                   "双 C906",
 
-                  "1Gb DDR3",
+                  "1Gbit DDR3",
 
                   "0.2 TOPS",
 
@@ -3741,7 +3741,7 @@
 
             "key": "SiP DDR",
 
-            "value": "512Mb DDR2 / 1Gb DDR3"
+            "value": "512Mb DDR2 / 1Gbit DDR3"
 
           },
 
