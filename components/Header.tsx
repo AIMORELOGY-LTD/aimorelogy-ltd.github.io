@@ -268,7 +268,7 @@ const Header: React.FC = () => {
 
   const renderDesktopDropdown = () => {
     const item = MENU_DATA.find(m => m.title === activeDesktopMenu);
-    if (!item) return null;
+    if (!item || item.type === 'link') return null;
 
     return (
       <div 
@@ -453,10 +453,6 @@ const Header: React.FC = () => {
                 key={item.title}
                 className="h-full"
                 onMouseEnter={() => {
-                  if (item.type === 'link') {
-                    setActiveDesktopMenu(null);
-                    return;
-                  }
                   setActiveDesktopMenu(item.title);
                   // Reset sidebar index when opening a sidebar menu
                   if (item.type === 'sidebar') setActiveBrandIndex(0);
@@ -467,7 +463,11 @@ const Header: React.FC = () => {
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className={`h-full px-5 text-sm font-bold border-b-4 transition-colors duration-200 flex items-center uppercase tracking-wide border-transparent ${textColorClass} ${textHoverClass} hover:border-[#4f4398]/20`}
+                    className={`h-full px-5 text-sm font-bold border-b-4 transition-colors duration-200 flex items-center uppercase tracking-wide ${
+                      activeDesktopMenu === item.title
+                        ? 'border-[#4f4398] text-gray-900 bg-white'
+                        : `border-transparent ${textColorClass} ${textHoverClass} hover:border-[#4f4398]/20`
+                    }`}
                   >
                     {item.title}
                   </a>
