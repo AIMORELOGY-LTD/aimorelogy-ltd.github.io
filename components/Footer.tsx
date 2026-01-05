@@ -265,6 +265,16 @@ const Footer: React.FC = () => {
               <li><Link to={withLang(lang, RoutePath.ABOUT)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.company')}</Link></li>
               <li><Link to={withLang(lang, RoutePath.CONTACT)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.contact')}</Link></li>
               <li><Link to={withLang(lang, RoutePath.CAREERS)} className="hover:text-[#4f4398] transition-colors">{t('footer.links.careers')}</Link></li>
+              <li>
+                <a
+                  href="https://forum.aimorelogy.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-[#4f4398] transition-colors"
+                >
+                  {t('footer.links.community')}
+                </a>
+              </li>
            </ul>
            <div className="mt-5 text-xs text-gray-500">
              <p className="text-[11px] font-bold uppercase tracking-wider text-gray-500">

@@ -8,7 +8,7 @@ import { useLang, withLang } from '../i18n-routing';
 
 // --- Data Types ---
 
-type MenuType = 'billboard' | 'sidebar' | 'simple' | 'empty';
+type MenuType = 'billboard' | 'sidebar' | 'simple' | 'empty' | 'link';
 
 interface SimpleLink {
   label: string;
@@ -37,6 +37,7 @@ interface MenuItem {
   title: string;
   type: MenuType;
   path?: string;
+  href?: string;
   // Data for Billboard (Legacy support)
   billboard?: {
     title: string;
@@ -226,6 +227,11 @@ const Header: React.FC = () => {
         { label: t('header.menu.contactUs'), to: withLang(lang, `${RoutePath.CONTACT}/`) },
         { label: t('header.menu.documents'), to: '#' }
       ]
+    },
+    {
+      title: t('header.menu.forum'),
+      type: 'link',
+      href: 'https://forum.aimorelogy.com'
     }
   ];
 
@@ -443,24 +449,39 @@ const Header: React.FC = () => {
         <nav className="hidden lg:flex items-center h-full mr-auto">
           <ul className="flex h-full gap-1">
             {MENU_DATA.map((item) => (
-              <li 
-                key={item.title} 
+              <li
+                key={item.title}
                 className="h-full"
                 onMouseEnter={() => {
-                   setActiveDesktopMenu(item.title);
-                   // Reset sidebar index when opening a sidebar menu
-                   if (item.type === 'sidebar') setActiveBrandIndex(0);
+                  if (item.type === 'link') {
+                    setActiveDesktopMenu(null);
+                    return;
+                  }
+                  setActiveDesktopMenu(item.title);
+                  // Reset sidebar index when opening a sidebar menu
+                  if (item.type === 'sidebar') setActiveBrandIndex(0);
                 }}
               >
-                <button
-                  className={`h-full px-5 text-sm font-bold border-b-4 transition-colors duration-200 flex items-center uppercase tracking-wide ${
-                    activeDesktopMenu === item.title
-                      ? 'border-[#4f4398] text-gray-900 bg-white' // Active state always has white bg context
-                      : `border-transparent ${textColorClass} ${textHoverClass} hover:border-[#4f4398]/20`
-                  }`}
-                >
-                  {item.title}
-                </button>
+                {item.type === 'link' && item.href ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`h-full px-5 text-sm font-bold border-b-4 transition-colors duration-200 flex items-center uppercase tracking-wide border-transparent ${textColorClass} ${textHoverClass} hover:border-[#4f4398]/20`}
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  <button
+                    className={`h-full px-5 text-sm font-bold border-b-4 transition-colors duration-200 flex items-center uppercase tracking-wide ${
+                      activeDesktopMenu === item.title
+                        ? 'border-[#4f4398] text-gray-900 bg-white' // Active state always has white bg context
+                        : `border-transparent ${textColorClass} ${textHoverClass} hover:border-[#4f4398]/20`
+                    }`}
+                  >
+                    {item.title}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
@@ -537,85 +558,101 @@ const Header: React.FC = () => {
             <div className="flex flex-col w-full pb-4">
                 {MENU_DATA.map((item) => (
                   <div key={item.title} className="border-b border-gray-100">
-                    <button 
-                      onClick={() => toggleMobileItem(item.title)}
-                      className="w-full flex justify-between items-center py-5 px-6 text-left"
-                    >
-                      <span className={`text-lg font-bold uppercase ${expandedMobileItems.includes(item.title) ? 'text-[#4f4398]' : 'text-gray-900'}`}>
-                        {item.title}
-                      </span>
-                      {expandedMobileItems.includes(item.title) ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                    </button>
-                    
-                    {/* Accordion Content */}
-                    <div 
-                      className={`bg-gray-50 overflow-hidden transition-all duration-300 ease-in-out ${
-                        expandedMobileItems.includes(item.title) ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                      }`}
-                    >
-                      <div className="px-6 pb-6 pt-2">
-                        {/* Mobile Menu Content */}
-                        {item.type === 'billboard' && item.billboard && (
-                           <Link 
-                             to={item.billboard.to}
-                             onClick={() => setIsMenuOpen(false)}
-                             className="block"
-                           >
-                             <div className="aspect-video bg-gray-200 mb-4 overflow-hidden rounded-sm relative">
-                               <img src={item.billboard.image} alt={item.billboard.title} className="w-full h-full object-cover" />
-                               <span className="absolute top-2 right-2 bg-[#4f4398] text-white text-[10px] px-2 py-1 font-bold uppercase">Featured</span>
-                             </div>
-                             <h3 className="text-xl font-black text-gray-900 uppercase mb-1">{item.billboard.title}</h3>
-                             <p className="text-xs text-gray-600 mb-3">{item.billboard.subtitle}</p>
-                             <span className="text-[#4f4398] font-bold uppercase text-sm flex items-center gap-1">Learn More</span>
-                           </Link>
-                        )}
+                    {item.type === 'link' && item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="w-full flex justify-between items-center py-5 px-6 text-left"
+                      >
+                        <span className="text-lg font-bold uppercase text-gray-900">
+                          {item.title}
+                        </span>
+                      </a>
+                    ) : (
+                      <>
+                        <button 
+                          onClick={() => toggleMobileItem(item.title)}
+                          className="w-full flex justify-between items-center py-5 px-6 text-left"
+                        >
+                          <span className={`text-lg font-bold uppercase ${expandedMobileItems.includes(item.title) ? 'text-[#4f4398]' : 'text-gray-900'}`}>
+                            {item.title}
+                          </span>
+                          {expandedMobileItems.includes(item.title) ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                        </button>
+                        
+                        {/* Accordion Content */}
+                        <div 
+                          className={`bg-gray-50 overflow-hidden transition-all duration-300 ease-in-out ${
+                            expandedMobileItems.includes(item.title) ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="px-6 pb-6 pt-2">
+                            {/* Mobile Menu Content */}
+                            {item.type === 'billboard' && item.billboard && (
+                               <Link 
+                                 to={item.billboard.to}
+                                 onClick={() => setIsMenuOpen(false)}
+                                 className="block"
+                               >
+                                 <div className="aspect-video bg-gray-200 mb-4 overflow-hidden rounded-sm relative">
+                                   <img src={item.billboard.image} alt={item.billboard.title} className="w-full h-full object-cover" />
+                                   <span className="absolute top-2 right-2 bg-[#4f4398] text-white text-[10px] px-2 py-1 font-bold uppercase">Featured</span>
+                                 </div>
+                                 <h3 className="text-xl font-black text-gray-900 uppercase mb-1">{item.billboard.title}</h3>
+                                 <p className="text-xs text-gray-600 mb-3">{item.billboard.subtitle}</p>
+                                 <span className="text-[#4f4398] font-bold uppercase text-sm flex items-center gap-1">Learn More</span>
+                               </Link>
+                            )}
 
-                        {item.type === 'sidebar' && item.brands && (
-                          <div className="space-y-6">
-                            {item.brands.map((brand, bIdx) => (
-                               <div key={bIdx} className="border-l-2 border-gray-200 pl-4 ml-1">
-                                  <h4 className="font-bold text-gray-900 text-sm flex items-center gap-2 mb-4 uppercase">
-                                    {brand.name}
-                                  </h4>
-                                  <div className="space-y-6">
-                                    {brand.categories.map((cat, idx) => (
-                                      <div key={idx}>
-                                         <h5 className="text-[#4f4398] font-bold text-xs uppercase mb-2">{cat.title}</h5>
-                                         <ul className="space-y-3">
-                                           {cat.items.map((sub, sIdx) => (
-                                             <li key={sIdx}>
-                                                <Link to={sub.to} onClick={() => setIsMenuOpen(false)} className="block">
-                                                  <span className="font-bold text-gray-800 text-sm block">{sub.model}</span>
-                                                </Link>
-                                             </li>
-                                           ))}
-                                         </ul>
+                            {item.type === 'sidebar' && item.brands && (
+                              <div className="space-y-6">
+                                {item.brands.map((brand, bIdx) => (
+                                   <div key={bIdx} className="border-l-2 border-gray-200 pl-4 ml-1">
+                                      <h4 className="font-bold text-gray-900 text-sm flex items-center gap-2 mb-4 uppercase">
+                                        {brand.name}
+                                      </h4>
+                                      <div className="space-y-6">
+                                        {brand.categories.map((cat, idx) => (
+                                          <div key={idx}>
+                                             <h5 className="text-[#4f4398] font-bold text-xs uppercase mb-2">{cat.title}</h5>
+                                             <ul className="space-y-3">
+                                               {cat.items.map((sub, sIdx) => (
+                                                 <li key={sIdx}>
+                                                    <Link to={sub.to} onClick={() => setIsMenuOpen(false)} className="block">
+                                                      <span className="font-bold text-gray-800 text-sm block">{sub.model}</span>
+                                                    </Link>
+                                                 </li>
+                                               ))}
+                                             </ul>
+                                          </div>
+                                        ))}
                                       </div>
-                                    ))}
-                                  </div>
-                               </div>
-                            ))}
-                          </div>
-                        )}
+                                   </div>
+                                ))}
+                              </div>
+                            )}
 
-                        {item.type === 'simple' && item.simpleItems && (
-                           <ul className="space-y-3">
-                             {item.simpleItems.map((sItem, idx) => (
-                               <li key={idx}>
-                                 <Link 
-                                   to={sItem.to} 
-                                   onClick={() => setIsMenuOpen(false)}
-                                   className="flex items-center gap-3 text-gray-700 font-bold text-sm"
-                                 >
-                                   {sItem.label}
-                                 </Link>
-                               </li>
-                             ))}
-                           </ul>
-                        )}
-                      </div>
-                    </div>
+                            {item.type === 'simple' && item.simpleItems && (
+                               <ul className="space-y-3">
+                                 {item.simpleItems.map((sItem, idx) => (
+                                   <li key={idx}>
+                                     <Link 
+                                       to={sItem.to} 
+                                       onClick={() => setIsMenuOpen(false)}
+                                       className="flex items-center gap-3 text-gray-700 font-bold text-sm"
+                                     >
+                                       {sItem.label}
+                                     </Link>
+                                   </li>
+                                 ))}
+                               </ul>
+                            )}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 ))}
             </div>
