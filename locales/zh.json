@@ -2285,7 +2285,7 @@
 
       "cv184": {
 
-        "metaTitle": "SOPHGO CV184x 视觉 SoC（FPV/UAV）（CV1841C/CV1842C-P/CV1842H-P/CV1843H-P）- ISP V4.0、Intra4 | AIMORELOGY",
+        "metaTitle": "SOPHGO CV184x 视觉 SoC（FPV/UAV）（CV1841C/CV1842C-P/CV1842H-P/CV1842HP/CV1843H-P）- ISP V4.0、Intra4 | AIMORELOGY",
 
         "metaDescription": "SOPHGO CV184x 系列（CV1841C、CV1842C-P、CV1842H-P/CV1842HP、CV1843H-P）提供 1.0~1.5 TOPS TPU、ISP V4.0 与 Intra4 编码，面向 FPV/UAV 视觉、吊舱跟踪、智能摄像机与门禁。 Datasheet",
 
@@ -2507,7 +2507,7 @@
 
                 "CV1842C-P",
 
-                "CV1842H-P",
+                "CV1842H-P/CV1842HP",
 
                 "CV1843H-P"
 

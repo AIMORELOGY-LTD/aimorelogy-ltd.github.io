@@ -247,7 +247,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
       name: 'CV184',
       series: 'VISION',
       tagline: 'Dual-Core Vision SoC with ISP V4.0 & Intra4 Encoding',
-      metaTitle: 'SOPHGO CV184x Vision SoC for FPV/UAV (CV1841C/CV1842C-P/CV1842H-P/CV1843H-P) - ISP V4.0, Intra4 | AIMORELOGY',
+      metaTitle: 'SOPHGO CV184x Vision SoC for FPV/UAV (CV1841C/CV1842C-P/CV1842H-P/CV1842HP/CV1843H-P) - ISP V4.0, Intra4 | AIMORELOGY',
       metaDescription: 'SOPHGO CV184x series (CV1841C, CV1842C-P, CV1842H-P/CV1842HP, CV1843H-P) offers 1.0-1.5 TOPS TPU, ISP V4.0, and Intra4 encoding for FPV/UAV vision, gimbal tracking, smart cameras, and access control. Datasheet',
       description: 'Next-gen edge vision SoC featuring ISP V4.0, Intra4 encoding, and OpenCLIP support.',
       longDescription: [
@@ -323,7 +323,7 @@ export const SOPHGO_CHIPS: Record<string, ChipData> = {
           title: "CV184x Variant Comparison",
           description: "Choose the right model for your application requirements.",
           table: {
-            headers: ["Feature", "CV1841C", "CV1842C-P", "CV1842H-P", "CV1843H-P"],
+            headers: ["Feature", "CV1841C", "CV1842C-P", "CV1842H-P/CV1842HP", "CV1843H-P"],
             rows: [
               ["Processor", "CA53 1.0GHz + C906 600MHz", "CA53 1.1GHz + C906 800MHz", "CA53 1.1GHz + C906 800MHz", "CA53 1.1GHz + C906 800MHz"],
               ["DDR3 SiP", "1Gbit", "2Gbit", "2Gbit", "4Gbit"],
