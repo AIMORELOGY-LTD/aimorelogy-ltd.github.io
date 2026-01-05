@@ -63,14 +63,26 @@ const SOPHGO_VARIANTS: Record<string, string[]> = {
   cv180: ['CV180x', 'CV1801B', 'CV180ZB']
 };
 
-const buildChipKeywords = (brand: string, displayName: string, variants: string[]) =>
-  [
+const expandHyphenVariants = (variants: string[]) => {
+  const entries = new Set<string>();
+  for (const variant of variants) {
+    if (!variant) continue;
+    entries.add(variant);
+    const compact = variant.replace(/-/g, '');
+    if (compact !== variant) entries.add(compact);
+  }
+  return Array.from(entries);
+};
+
+const buildChipKeywords = (brand: string, displayName: string, variants: string[]) => {
+  const expandedVariants = expandHyphenVariants(variants);
+  return [
     'AIMORELOGY',
     '爱谋科技',
     brand,
     `${brand} ${displayName}`,
     displayName,
-    ...variants,
+    ...expandedVariants,
     'AI SoC',
     'vision SoC',
     'vision processor',
@@ -80,6 +92,7 @@ const buildChipKeywords = (brand: string, displayName: string, variants: string[
     'gimbal',
     'datasheet'
   ].join(', ');
+};
 
 const getDisplayName = (chip?: ChipData | null) => {
   if (!chip) return '';
@@ -145,16 +158,15 @@ const ProductDetail_SOPHGO: React.FC = () => {
       .replace(/CV180\b/g, 'CV180x');
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
-    const keywords = buildChipKeywords(
-      'SOPHGO',
-      displayName,
-      SOPHGO_VARIANTS[localizedProduct.id] || []
-    );
+    const variants = SOPHGO_VARIANTS[localizedProduct.id] || [];
+    const expandedVariants = expandHyphenVariants(variants);
+    const keywords = buildChipKeywords('SOPHGO', displayName, variants);
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: `SOPHGO ${displayName}`,
       description: metaDescription,
+      alternateName: Array.from(new Set([displayName, ...expandedVariants])),
       brand: { '@type': 'Brand', name: 'SOPHGO' },
       manufacturer: 'SOPHGO',
       sku: displayName

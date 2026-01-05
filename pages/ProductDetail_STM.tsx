@@ -40,19 +40,32 @@ const STM_CORE_LABELS: Record<string, string> = {
   stm32f767: 'ARM Cortex-M7'
 };
 
-const buildMcuKeywords = (displayName: string, variants: string[], core: string) =>
-  [
+const expandHyphenVariants = (variants: string[]) => {
+  const entries = new Set<string>();
+  for (const variant of variants) {
+    if (!variant) continue;
+    entries.add(variant);
+    const compact = variant.replace(/-/g, '');
+    if (compact !== variant) entries.add(compact);
+  }
+  return Array.from(entries);
+};
+
+const buildMcuKeywords = (displayName: string, variants: string[], core: string) => {
+  const expandedVariants = expandHyphenVariants(variants);
+  return [
     'AIMORELOGY',
     '爱谋科技',
     'STMicroelectronics',
     'STM32',
     displayName,
-    ...variants,
+    ...expandedVariants,
     core,
     'ARM Cortex-M',
     'MCU',
     'datasheet'
   ].join(', ');
+};
 
 const ProductDetail_STM: React.FC = () => {
   const lang = useLang();
@@ -107,16 +120,15 @@ const ProductDetail_STM: React.FC = () => {
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
     const coreKeywords = STM_CORE_LABELS[localizedProduct.id] || 'ARM Cortex-M';
-    const keywords = buildMcuKeywords(
-      displayName,
-      STM_VARIANTS[localizedProduct.id] || [],
-      coreKeywords
-    );
+    const variants = STM_VARIANTS[localizedProduct.id] || [];
+    const expandedVariants = expandHyphenVariants(variants);
+    const keywords = buildMcuKeywords(displayName, variants, coreKeywords);
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: `STM32 ${displayName}`,
       description: metaDescription,
+      alternateName: Array.from(new Set([displayName, ...expandedVariants])),
       brand: { '@type': 'Brand', name: 'STMicroelectronics' },
       manufacturer: 'STMicroelectronics',
       sku: displayName

@@ -24,13 +24,25 @@ const ESPRESSIF_VARIANTS: string[] = [
   'ESP32-S3-WROOM-1U'
 ];
 
-const buildModuleKeywords = (displayName: string) =>
-  [
+const expandHyphenVariants = (variants: string[]) => {
+  const entries = new Set<string>();
+  for (const variant of variants) {
+    if (!variant) continue;
+    entries.add(variant);
+    const compact = variant.replace(/-/g, '');
+    if (compact !== variant) entries.add(compact);
+  }
+  return Array.from(entries);
+};
+
+const buildModuleKeywords = (displayName: string) => {
+  const expandedVariants = expandHyphenVariants(ESPRESSIF_VARIANTS);
+  return [
     'AIMORELOGY',
     '爱谋科技',
     'Espressif',
     'ESP32',
-    ...ESPRESSIF_VARIANTS,
+    ...expandedVariants,
     displayName,
     'Wi-Fi',
     'Bluetooth LE',
@@ -38,6 +50,7 @@ const buildModuleKeywords = (displayName: string) =>
     'IoT',
     'datasheet'
   ].join(', ');
+};
 
 const ProductDetail_Espressif: React.FC = () => {
   const lang = useLang();
@@ -81,12 +94,14 @@ const ProductDetail_Espressif: React.FC = () => {
       || t('products.common.metaTitle', { name: localizedProduct.name, tagline: localizedProduct.tagline });
     const metaDescription = localizedProduct.metaDescription || localizedProduct.description;
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
+    const expandedVariants = expandHyphenVariants(ESPRESSIF_VARIANTS);
     const keywords = buildModuleKeywords(localizedProduct.name);
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: `Espressif ${localizedProduct.name}`,
       description: metaDescription,
+      alternateName: Array.from(new Set([localizedProduct.name, ...expandedVariants])),
       brand: { '@type': 'Brand', name: 'Espressif' },
       manufacturer: 'Espressif',
       sku: localizedProduct.name
