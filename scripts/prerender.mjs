@@ -7,6 +7,7 @@ import puppeteer from 'puppeteer-core';
 import { buildSitemapXml, getPrerenderPaths } from './sitemap-utils.mjs';
 
 const DIST_DIR = path.resolve('dist');
+const PUBLIC_DIR = path.resolve('public');
 
 const ORIGIN = process.env.PRERENDER_ORIGIN || 'http://127.0.0.1:4173';
 const ORIGIN_URL = new URL(ORIGIN);
@@ -76,6 +77,29 @@ const toOutputPath = (pathname) => {
   return path.join(DIST_DIR, normalized, 'index.html');
 };
 
+const copyIfExists = async (src, dest) => {
+  try {
+    await fsp.access(src);
+    await fsp.mkdir(path.dirname(dest), { recursive: true });
+    await fsp.copyFile(src, dest);
+  } catch (err) {
+    if (err && err.code !== 'ENOENT') {
+      throw err;
+    }
+  }
+};
+
+const copyDirIfExists = async (src, dest) => {
+  try {
+    await fsp.access(src);
+    await fsp.cp(src, dest, { recursive: true });
+  } catch (err) {
+    if (err && err.code !== 'ENOENT') {
+      throw err;
+    }
+  }
+};
+
 const run = async () => {
   const routes = await getPrerenderPaths();
   const orderedRoutes = ['/', ...routes.filter((route) => route !== '/').sort()];
@@ -137,6 +161,9 @@ const run = async () => {
   stopServer();
   const sitemapXml = await buildSitemapXml();
   await fsp.writeFile(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
+
+  await copyIfExists(path.join(PUBLIC_DIR, 'llms.txt'), path.join(DIST_DIR, 'llms.txt'));
+  await copyDirIfExists(path.join(PUBLIC_DIR, 'llms'), path.join(DIST_DIR, 'llms'));
 };
 
 run().catch((err) => {
