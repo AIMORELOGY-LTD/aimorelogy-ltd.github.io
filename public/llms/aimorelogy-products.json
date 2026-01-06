@@ -1,0 +1,1412 @@
+{
+  "brand": {
+    "en": "AIMORELOGY",
+    "zh": "爱谋科技AIMORELOGY",
+    "ru": "AIMORELOGY"
+  },
+  "site": "https://aimorelogy.com",
+  "languages": [
+    "en",
+    "zh",
+    "ru"
+  ],
+  "partners": {
+    "en": [
+      "SOPHGO",
+      "RT-Thread",
+      "RISC-V"
+    ],
+    "zh": [
+      "?? (SOPHGO)",
+      "RT-Thread",
+      "RISC-V"
+    ],
+    "ru": [
+      "SOPHGO",
+      "RT-Thread",
+      "RISC-V"
+    ]
+  },
+  "products": {
+    "sophgo": {
+      "en": [
+        {
+          "id": "bm1688",
+          "name": "BM1688",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/en/products/sophgo/bm1688/",
+          "tagline": "Intelligent Edge 16T Compute Platform",
+          "description": "High-integration edge TPU processor featuring 16 TOPS INT8 compute and octa-core architecture.",
+          "metaDescription": "SOPHGO BM1688 edge TPU SoC combines an 8-core ARM CPU and 16 TOPS (32 TOPS INT4) with 8K imaging and multi-sensor ISP for drone/FPV vision, gimbal tracking, AI NVRs, robotics, and edge servers. Datasheet",
+          "highlights": [
+            "TPU: 16 TOPS INT8 / 32 TOPS INT4 / 4T FP16",
+            "CPU: 8-Core ARM Cortex-A53 @ 1.6GHz",
+            "Vision: 8K@15 / Dual 8MP@30 HDR Support",
+            "Engine: 360° Stitching & Fisheye Dewarping",
+            "I/O: PCIe 3.0, SATA Gen3, Dual Gigabit Ethernet",
+            "Temp: Industrial-grade -20°C to 60°C Operating"
+          ],
+          "applications": [
+            {
+              "title": "Smart Micro-Server",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Smart NVR",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "AI NAS",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Smart Lawn Mower",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "Robotics Platform",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Vehicle/Ship Platform",
+              "image": "/Robotics.webp"
+            }
+          ],
+          "aliases": [
+            "BM1688"
+          ]
+        },
+        {
+          "id": "cv186",
+          "name": "CV186x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/en/products/sophgo/cv186x/",
+          "tagline": "7.2T Terminal AI Vision Processor",
+          "description": "High-performance vision processor with 7.2 TOPS AI compute and integrated binocular depth engine.",
+          "metaDescription": "SOPHGO CV186x/CV186AH delivers 7.2 TOPS AI compute, binocular depth DPU, and 8MP@75fps encoding for multi-lens IPC, drones/FPV, gimbal vision, and robotics platforms. Datasheet",
+          "highlights": [
+            "TPU: 7.2 TOPS @ INT8 AI Acceleration",
+            "CPU: 6-Core ARM Cortex-A53 Architecture",
+            "Depth: Integrated Binocular Depth Engine (DPU)",
+            "Video: 8MP@75fps Ultra-HD Hardware Encoding",
+            "Vision: Hardware Stitching & 360° Fisheye Dewarp",
+            "I/O: PCIe, SATA, USB 3.0, GMAC Support"
+          ],
+          "applications": [
+            {
+              "title": "High-end Multi-lens IPC",
+              "image": "/High-end Multi-lens IPC.webp"
+            },
+            {
+              "title": "Robot Platform",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Binocular Depth Camera",
+              "image": "/Binocular Depth Camera.webp"
+            },
+            {
+              "title": "Drones",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Vehicle Computing",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "Gimbal Applications",
+              "image": "/Drone & Gimbal Applications.webp"
+            }
+          ],
+          "aliases": [
+            "CV186x",
+            "CV186AH",
+            "CV186"
+          ]
+        },
+        {
+          "id": "cv184",
+          "name": "CV184x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/en/products/sophgo/cv184x/",
+          "tagline": "Dual-Core Vision SoC with ISP V4.0 & Intra4 Encoding",
+          "description": "Next-gen edge vision SoC featuring ISP V4.0, Intra4 encoding, and OpenCLIP support.",
+          "metaDescription": "SOPHGO CV184x series (CV1841C, CV1842C-P, CV1842H-P/CV1842HP, CV1843H-P) offers 1.0-1.5 TOPS TPU, ISP V4.0, and Intra4 encoding for FPV/UAV vision, gimbal tracking, smart cameras, and access control. Datasheet",
+          "highlights": [
+            "Dual-Core: ARM A53 (1.1GHz) + RISC-V C906 (800MHz)",
+            "TPU: 1.0~1.5 TOPS @ INT8 / BF16 Mixed Precision",
+            "ISP V4.0: 3DNR, DRC, PFR, Dehaze, Distortion Correction",
+            "Intra4 Encoding: Higher compression, better texture retention",
+            "OpenCLIP Support: Zero-shot, Image-Text Retrieval",
+            "Pin-to-Pin Compatible with CV181 Series"
+          ],
+          "applications": [
+            {
+              "title": "Smart Cameras",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Access Control",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "Robotics",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "4K IPC",
+              "image": "/4K IPC.webp"
+            },
+            {
+              "title": "Drones",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Dash Cam",
+              "image": "/Dash Cam.webp"
+            }
+          ],
+          "aliases": [
+            "CV184x",
+            "CV1841C",
+            "CV1842C-P",
+            "CV1842CP",
+            "CV1842H-P",
+            "CV1842HP",
+            "CV1843H-P",
+            "CV1843HP"
+          ]
+        },
+        {
+          "id": "cv181",
+          "name": "CV181x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/en/products/sophgo/cv181x/",
+          "tagline": "RISC-V Vision SoC for Lightweight Intelligent Scenarios",
+          "description": "High-performance RISC-V SoC with integrated screen display support and up to 1.0 TOPS AI compute.",
+          "metaDescription": "SOPHGO CV181x series (CV1813H, CV1812H, CV1811H, CV1812C-P, CV1811C, CV1810C, CV1813H-A, CV1812H-A, CV1811H-A, CV1812C-PA, CV1811C-A) delivers 0.5-1.0 TOPS AI for smart doorbells, access control, lightweight FPV/UAV cameras, and low-power AIoT. Datasheet",
+          "highlights": [
+            "Dual Cores: C906 (1.0GHz+0.7GHz) or ARM A53 (1.2GHz)+C906",
+            "TPU: 0.5 ~ 1.0 TOPS @ INT8 / BF16 Supported",
+            "ISP: 3DNR, 2f-HDR, LDC, 3A, Dehaze",
+            "Video: 5MP@30fps H.265/H.264/MJPEG",
+            "Display: MIPI DSI (4L/2L), LVDS, RGB, BT.656/1120",
+            "Fast Boot & Low Power Architecture"
+          ],
+          "applications": [
+            {
+              "title": "Home IPC",
+              "image": "/Home IPC.webp"
+            },
+            {
+              "title": "Smart Doorbell",
+              "image": "/Smart Doorbell.webp"
+            },
+            {
+              "title": "Cat-eye Door Lock",
+              "image": "/Cat-eye Door Lock.webp"
+            },
+            {
+              "title": "Streaming Rearview Mirror",
+              "image": "/Streaming Rearview Mirror.webp"
+            },
+            {
+              "title": "Access Control",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "Dash Cam",
+              "image": "/Dash Cam.webp"
+            }
+          ],
+          "aliases": [
+            "CV181x",
+            "CV1813H",
+            "CV1812H",
+            "CV1811H",
+            "CV1812C-P",
+            "CV1812CP",
+            "CV1811C",
+            "CV1810C",
+            "CV1813H-A",
+            "CV1813HA",
+            "CV1812H-A",
+            "CV1812HA",
+            "CV1811H-A",
+            "CV1811HA",
+            "CV1812C-PA",
+            "CV1812CPA",
+            "CV1811C-A",
+            "CV1811CA"
+          ]
+        },
+        {
+          "id": "cv180",
+          "name": "CV180x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/en/products/sophgo/cv180x/",
+          "tagline": "Consumer-Grade Lite Intelligent Vision SoC",
+          "description": "Cost-effective RISC-V vision chip for consumer IoT and lightweight intelligent applications.",
+          "metaDescription": "SOPHGO CV180x series (CV1801B, CV180ZB) is a cost-effective 0.2 TOPS RISC-V vision SoC for entry FPV/UAV cameras, battery devices, and lightweight AIoT. Datasheet",
+          "highlights": [
+            "Dual RISC-V: C906 (1.0GHz + 0.7GHz)",
+            "TPU: 0.2 TOPS @ INT8 / Human Detection Ready",
+            "ISP: 3DNR, DWDR, LDC, 3A, Dehaze",
+            "Video: 5MP@20fps / 4MP@25fps H.265/H.264",
+            "Package: Ultra-compact QFN-68 7x7 (Pin to Pin)",
+            "Low Power & Fast Boot Optimization"
+          ],
+          "applications": [
+            {
+              "title": "Baby Monitor",
+              "image": "/Baby Monitor.webp"
+            },
+            {
+              "title": "Kids Camera",
+              "image": "/Kids Camera.webp"
+            },
+            {
+              "title": "Scanning Pen",
+              "image": "/Scanning Pen.webp"
+            },
+            {
+              "title": "Dash Cam",
+              "image": "/Dash Cam.webp"
+            },
+            {
+              "title": "Access Control",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "Smart Doorbell",
+              "image": "/Smart Doorbell.webp"
+            }
+          ],
+          "aliases": [
+            "CV180x",
+            "CV1801B",
+            "CV180ZB"
+          ]
+        }
+      ],
+      "zh": [
+        {
+          "id": "bm1688",
+          "name": "BM1688",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/zh/products/sophgo/bm1688/",
+          "tagline": "智能边缘 16T 计算平台",
+          "description": "高集成度边缘 TPU 处理器，提供 16 TOPS INT8 算力与八核架构。",
+          "metaDescription": "SOPHGO BM1688 边缘 TPU SoC 采用 8 核 ARM 与 16 TOPS（INT8/32 TOPS INT4）算力，支持 8K 成像与多路 ISP，适用于无人机/FPV 视觉、吊舱跟踪、AI NVR、机器人与边缘服务器。 Datasheet",
+          "highlights": [
+            "TPU：16 TOPS INT8 / 32 TOPS INT4 / 4T FP16",
+            "CPU：8 核 ARM Cortex-A53 @ 1.6GHz",
+            "视觉：8K@15 / 双路 8MP@30 HDR",
+            "引擎：360° 拼接与鱼眼去畸变",
+            "I/O：PCIe 3.0、SATA Gen3、双千兆以太网",
+            "温度：工业级 -20°C~60°C"
+          ],
+          "applications": [
+            {
+              "title": "智能微型服务器",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "智能 NVR",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "AI NAS",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "智能割草机",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "机器人平台",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "车载/船载平台",
+              "image": "/Robotics.webp"
+            }
+          ],
+          "aliases": [
+            "BM1688"
+          ]
+        },
+        {
+          "id": "cv186",
+          "name": "CV186x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/zh/products/sophgo/cv186x/",
+          "tagline": "7.2T 终端级视觉 AI 处理器",
+          "description": "具备 7.2 TOPS AI 算力和双目深度引擎的高性能视觉处理器。",
+          "metaDescription": "SOPHGO CV186x/CV186AH 提供 7.2 TOPS AI 算力、双目深度 DPU 与 8MP@75fps 编码，适用于多镜头 IPC、无人机/FPV、吊舱视觉与机器人平台。 Datasheet",
+          "highlights": [
+            "TPU：7.2 TOPS @ INT8 AI 加速",
+            "CPU：6 核 ARM Cortex-A53 架构",
+            "深度：集成双目深度引擎（DPU）",
+            "视频：8MP@75fps 超高清硬件编码",
+            "视觉：硬件拼接与 360° 鱼眼去畸变",
+            "I/O：PCIe、SATA、USB 3.0、GMAC"
+          ],
+          "applications": [
+            {
+              "title": "高端多镜头 IPC",
+              "image": "/High-end Multi-lens IPC.webp"
+            },
+            {
+              "title": "机器人平台",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "双目深度相机",
+              "image": "/Binocular Depth Camera.webp"
+            },
+            {
+              "title": "无人机",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "车载计算",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "吊舱应用",
+              "image": "/Drone & Gimbal Applications.webp"
+            }
+          ],
+          "aliases": [
+            "CV186x",
+            "CV186AH",
+            "CV186"
+          ]
+        },
+        {
+          "id": "cv184",
+          "name": "CV184x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/zh/products/sophgo/cv184x/",
+          "tagline": "搭载 ISP V4.0 与 Intra4 编码的双核视觉 SoC",
+          "description": "新一代边缘视觉 SoC，具备 ISP V4.0、Intra4 编码与 OpenCLIP 支持。",
+          "metaDescription": "SOPHGO CV184x 系列（CV1841C、CV1842C-P、CV1842H-P/CV1842HP、CV1843H-P）提供 1.0~1.5 TOPS TPU、ISP V4.0 与 Intra4 编码，面向 FPV/UAV 视觉、吊舱跟踪、智能摄像机与门禁。 Datasheet",
+          "highlights": [
+            "双核：ARM A53（1.1GHz）+ RISC-V C906（800MHz）",
+            "TPU：1.0~1.5 TOPS @ INT8 / BF16 混合精度",
+            "ISP V4.0：3DNR、DRC、PFR、去雾、畸变校正",
+            "Intra4 编码：更高压缩率、纹理保留更好",
+            "OpenCLIP 支持：零样本与图文检索",
+            "与 CV181 系列引脚兼容"
+          ],
+          "applications": [
+            {
+              "title": "智能摄像机",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "门禁",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "机器人",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "4K IPC",
+              "image": "/4K IPC.webp"
+            },
+            {
+              "title": "无人机",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "行车记录仪",
+              "image": "/Dash Cam.webp"
+            }
+          ],
+          "aliases": [
+            "CV184x",
+            "CV1841C",
+            "CV1842C-P",
+            "CV1842CP",
+            "CV1842H-P",
+            "CV1842HP",
+            "CV1843H-P",
+            "CV1843HP"
+          ]
+        },
+        {
+          "id": "cv181",
+          "name": "CV181x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/zh/products/sophgo/cv181x/",
+          "tagline": "面向轻量智能场景的 RISC-V 视觉 SoC",
+          "description": "支持显示输出的高性能 RISC-V SoC，AI 算力最高 1.0 TOPS。",
+          "metaDescription": "SOPHGO CV181x 系列（CV1813H、CV1812H、CV1811H、CV1812C-P、CV1811C、CV1810C、CV1813H-A、CV1812H-A、CV1811H-A、CV1812C-PA、CV1811C-A）提供 0.5~1.0 TOPS AI，适用于智能门铃、门禁、轻量 FPV/UAV 摄像头与低功耗 AIoT 设备。 Datasheet",
+          "highlights": [
+            "双核：C906（1.0GHz+0.7GHz）或 ARM A53（1.2GHz）+ C906",
+            "TPU：0.5~1.0 TOPS @ INT8 / 支持 BF16",
+            "ISP：3DNR、2f-HDR、LDC、3A、去雾",
+            "视频：5MP@30fps H.265/H.264/MJPEG",
+            "显示：MIPI DSI（4L/2L）、LVDS、RGB、BT.656/1120",
+            "快启动与低功耗架构"
+          ],
+          "applications": [
+            {
+              "title": "家用 IPC",
+              "image": "/Home IPC.webp"
+            },
+            {
+              "title": "智能门铃",
+              "image": "/Smart Doorbell.webp"
+            },
+            {
+              "title": "猫眼门锁",
+              "image": "/Cat-eye Door Lock.webp"
+            },
+            {
+              "title": "流媒体后视镜",
+              "image": "/Streaming Rearview Mirror.webp"
+            },
+            {
+              "title": "门禁",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "行车记录仪",
+              "image": "/Dash Cam.webp"
+            }
+          ],
+          "aliases": [
+            "CV181x",
+            "CV1813H",
+            "CV1812H",
+            "CV1811H",
+            "CV1812C-P",
+            "CV1812CP",
+            "CV1811C",
+            "CV1810C",
+            "CV1813H-A",
+            "CV1813HA",
+            "CV1812H-A",
+            "CV1812HA",
+            "CV1811H-A",
+            "CV1811HA",
+            "CV1812C-PA",
+            "CV1812CPA",
+            "CV1811C-A",
+            "CV1811CA"
+          ]
+        },
+        {
+          "id": "cv180",
+          "name": "CV180x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/zh/products/sophgo/cv180x/",
+          "tagline": "消费级轻量智能视觉 SoC",
+          "description": "面向消费 IoT 与轻量智能应用的高性价比 RISC-V 视觉芯片。",
+          "metaDescription": "SOPHGO CV180x 系列（CV1801B、CV180ZB）是入门级 0.2 TOPS RISC-V 视觉 SoC，面向 FPV/UAV 入门相机、轻量 AIoT 与电池设备。 Datasheet",
+          "highlights": [
+            "双核 RISC-V：C906（1.0GHz + 0.7GHz）",
+            "TPU：0.2 TOPS @ INT8 / 支持人形检测",
+            "ISP：3DNR、DWDR、LDC、3A、去雾",
+            "视频：5MP@20fps / 4MP@25fps H.265/H.264",
+            "封装：超小 QFN-68 7x7（Pin-to-Pin）",
+            "低功耗与快启动优化"
+          ],
+          "applications": [
+            {
+              "title": "婴儿看护",
+              "image": "/Baby Monitor.webp"
+            },
+            {
+              "title": "儿童相机",
+              "image": "/Kids Camera.webp"
+            },
+            {
+              "title": "扫描笔",
+              "image": "/Scanning Pen.webp"
+            },
+            {
+              "title": "行车记录仪",
+              "image": "/Dash Cam.webp"
+            },
+            {
+              "title": "门禁",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "智能门铃",
+              "image": "/Smart Doorbell.webp"
+            }
+          ],
+          "aliases": [
+            "CV180x",
+            "CV1801B",
+            "CV180ZB"
+          ]
+        }
+      ],
+      "ru": [
+        {
+          "id": "bm1688",
+          "name": "BM1688",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/ru/products/sophgo/bm1688/",
+          "tagline": "Интеллектуальная edge-платформа 16T",
+          "description": "Высокоинтегрированный edge TPU-процессор с 16 TOPS INT8 и восьмиядерной архитектурой.",
+          "metaDescription": "SOPHGO BM1688 объединяет 8-ядерный ARM и 16 TOPS (32 TOPS INT4) с 8K-ISP и многосенсорной обработкой для дронов/FPV, подвесов, AI NVR, робототехники и edge-серверов. Datasheet",
+          "highlights": [
+            "TPU: 16 TOPS INT8 / 32 TOPS INT4 / 4T FP16",
+            "CPU: 8-ядерный ARM Cortex-A53 @ 1.6GHz",
+            "Vision: 8K@15 / Dual 8MP@30 HDR",
+            "Engine: 360° Stitching & Fisheye Dewarping",
+            "I/O: PCIe 3.0, SATA Gen3, двойной Gigabit Ethernet",
+            "Температура: промышленный диапазон -20°C…60°C"
+          ],
+          "applications": [
+            {
+              "title": "Интеллектуальный микросервер",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Интеллектуальный NVR",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "AI NAS",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Умная газонокосилка",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "Робототехническая платформа",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Транспортные/морские платформы",
+              "image": "/Robotics.webp"
+            }
+          ],
+          "aliases": [
+            "BM1688"
+          ]
+        },
+        {
+          "id": "cv186",
+          "name": "CV186x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/ru/products/sophgo/cv186x/",
+          "tagline": "7.2T процессор визуального ИИ для терминалов",
+          "description": "Высокопроизводительный процессор зрения 7.2 TOPS со встроенным DPU стереоглубины.",
+          "metaDescription": "SOPHGO CV186x/CV186AH обеспечивает 7.2 TOPS AI, стерео-DPU глубины и кодирование 8MP@75fps для многолинзовых IPC, дронов/FPV, подвесов и робототехники. Datasheet",
+          "highlights": [
+            "TPU: 7.2 TOPS @ INT8 AI ускорение",
+            "CPU: 6-ядерный ARM Cortex-A53",
+            "Глубина: встроенный движок стереоглубины (DPU)",
+            "Видео: 8MP@75fps аппаратное кодирование",
+            "Vision: 360° stitching и fisheye dewarp",
+            "I/O: PCIe, SATA, USB 3.0, GMAC"
+          ],
+          "applications": [
+            {
+              "title": "Многолинзовый IPC высокого класса",
+              "image": "/High-end Multi-lens IPC.webp"
+            },
+            {
+              "title": "Робототехническая платформа",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Стереокамера глубины",
+              "image": "/Binocular Depth Camera.webp"
+            },
+            {
+              "title": "Дроны",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Транспортные вычисления",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "Приложения для подвесов",
+              "image": "/Drone & Gimbal Applications.webp"
+            }
+          ],
+          "aliases": [
+            "CV186x",
+            "CV186AH",
+            "CV186"
+          ]
+        },
+        {
+          "id": "cv184",
+          "name": "CV184x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/ru/products/sophgo/cv184x/",
+          "tagline": "Двухъядерный vision SoC с ISP V4.0 и Intra4",
+          "description": "Новое edge-vision SoC с ISP V4.0, Intra4 и поддержкой OpenCLIP.",
+          "metaDescription": "Серия SOPHGO CV184x (CV1841C, CV1842C-P, CV1842H-P/CV1842HP, CV1843H-P) дает 1.0-1.5 TOPS TPU, ISP V4.0 и Intra4 для FPV/UAV, подвесов, камер и контроля доступа. Datasheet",
+          "highlights": [
+            "Два ядра: ARM A53 (1.1 ГГц) + RISC-V C906 (800 МГц)",
+            "TPU: 1.0–1.5 TOPS @ INT8 / смешанная точность BF16",
+            "ISP V4.0: 3DNR, DRC, PFR, dehaze, коррекция дисторсии",
+            "Intra4: выше компрессия, лучше сохранение текстур",
+            "OpenCLIP: zero-shot, поиск изображение-текст",
+            "Pin-to-pin совместимость с серией CV181"
+          ],
+          "applications": [
+            {
+              "title": "Умные камеры",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Контроль доступа",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "Робототехника",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "4K IPC",
+              "image": "/4K IPC.webp"
+            },
+            {
+              "title": "Дроны",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Видеорегистраторы",
+              "image": "/Dash Cam.webp"
+            }
+          ],
+          "aliases": [
+            "CV184x",
+            "CV1841C",
+            "CV1842C-P",
+            "CV1842CP",
+            "CV1842H-P",
+            "CV1842HP",
+            "CV1843H-P",
+            "CV1843HP"
+          ]
+        },
+        {
+          "id": "cv181",
+          "name": "CV181x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/ru/products/sophgo/cv181x/",
+          "tagline": "RISC-V vision SoC для лёгких интеллектуальных сценариев",
+          "description": "Высокопроизводительный RISC-V SoC с поддержкой дисплея и до 1.0 TOPS AI.",
+          "metaDescription": "Серия SOPHGO CV181x (CV1813H, CV1812H, CV1811H, CV1812C-P, CV1811C, CV1810C, CV1813H-A, CV1812H-A, CV1811H-A, CV1812C-PA, CV1811C-A) обеспечивает 0.5-1.0 TOPS AI для умных дверных звонков, контроля доступа, легких камер FPV/UAV и энергоэффективного AIoT. Datasheet",
+          "highlights": [
+            "Два ядра: C906 (1.0GHz+0.7GHz) или ARM A53 (1.2GHz)+C906",
+            "TPU: 0.5–1.0 TOPS @ INT8 / поддержка BF16",
+            "ISP: 3DNR, 2f-HDR, LDC, 3A, dehaze",
+            "Видео: 5MP@30fps H.265/H.264/MJPEG",
+            "Дисплей: MIPI DSI (4L/2L), LVDS, RGB, BT.656/1120",
+            "Быстрый запуск и низкое энергопотребление"
+          ],
+          "applications": [
+            {
+              "title": "Домашние IPC",
+              "image": "/Home IPC.webp"
+            },
+            {
+              "title": "Умный дверной звонок",
+              "image": "/Smart Doorbell.webp"
+            },
+            {
+              "title": "Умный замок-глазок",
+              "image": "/Cat-eye Door Lock.webp"
+            },
+            {
+              "title": "Потоковое зеркало заднего вида",
+              "image": "/Streaming Rearview Mirror.webp"
+            },
+            {
+              "title": "Контроль доступа",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "Видеорегистраторы",
+              "image": "/Dash Cam.webp"
+            }
+          ],
+          "aliases": [
+            "CV181x",
+            "CV1813H",
+            "CV1812H",
+            "CV1811H",
+            "CV1812C-P",
+            "CV1812CP",
+            "CV1811C",
+            "CV1810C",
+            "CV1813H-A",
+            "CV1813HA",
+            "CV1812H-A",
+            "CV1812HA",
+            "CV1811H-A",
+            "CV1811HA",
+            "CV1812C-PA",
+            "CV1812CPA",
+            "CV1811C-A",
+            "CV1811CA"
+          ]
+        },
+        {
+          "id": "cv180",
+          "name": "CV180x",
+          "brand": "SOPHGO",
+          "url": "https://aimorelogy.com/ru/products/sophgo/cv180x/",
+          "tagline": "Потребительский облегчённый vision SoC",
+          "description": "Экономичный RISC-V vision SoC для потребительских IoT и лёгких интеллектуальных устройств.",
+          "metaDescription": "SOPHGO CV180x (CV1801B, CV180ZB) — доступный 0.2 TOPS RISC-V vision SoC для стартовых FPV/UAV камер, устройств на батарее и легкого AIoT. Datasheet",
+          "highlights": [
+            "Dual RISC-V: C906 (1.0GHz + 0.7GHz)",
+            "TPU: 0.2 TOPS @ INT8 / готово для детекции человека",
+            "ISP: 3DNR, DWDR, LDC, 3A, dehaze",
+            "Видео: 5MP@20fps / 4MP@25fps H.265/H.264",
+            "Корпус: ультракомпактный QFN-68 7x7 (pin-to-pin)",
+            "Низкое потребление и быстрый старт"
+          ],
+          "applications": [
+            {
+              "title": "Видеоняня",
+              "image": "/Baby Monitor.webp"
+            },
+            {
+              "title": "Детская камера",
+              "image": "/Kids Camera.webp"
+            },
+            {
+              "title": "Сканирующая ручка",
+              "image": "/Scanning Pen.webp"
+            },
+            {
+              "title": "Видеорегистратор",
+              "image": "/Dash Cam.webp"
+            },
+            {
+              "title": "Контроль доступа",
+              "image": "/Access Control.webp"
+            },
+            {
+              "title": "Умный дверной звонок",
+              "image": "/Smart Doorbell.webp"
+            }
+          ],
+          "aliases": [
+            "CV180x",
+            "CV1801B",
+            "CV180ZB"
+          ]
+        }
+      ]
+    },
+    "stm32": {
+      "en": [
+        {
+          "id": "stm32f405",
+          "name": "STM32F405",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/en/products/stm32/stm32f405/",
+          "tagline": "High-Performance Foundation for Advanced Edge Control",
+          "description": "High-performance Arm Cortex-M4 microcontroller running up to 168 MHz with integrated FPU and DSP.",
+          "metaDescription": "STM32F405xx Arm Cortex-M4 MCU with FPU, DSP, 168 MHz performance, 1 MB Flash, and rich connectivity for real-time control applications. Datasheet",
+          "highlights": [
+            "Core: Arm Cortex-M4 32-bit with FPU & DSP",
+            "Speed: 168 MHz / 210 DMIPS High Performance",
+            "Memory: 1 MB Flash / 192 KB SRAM + 64 KB CCM",
+            "Analog: 3x 12-bit ADC (Up to 7.2 MSPS Interleaved)",
+            "USB: Dual OTG (Full Speed & High Speed with ULPI)",
+            "Package: Compact LQFP64 to LQFP144 & WLCSP90"
+          ],
+          "applications": [
+            {
+              "title": "Motor Control",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Industrial Automation",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Medical Instrumentation",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Consumer Electronics",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "Flight Controllers",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Robotics",
+              "image": "/Robotics.webp"
+            }
+          ]
+        },
+        {
+          "id": "stm32f722",
+          "name": "STM32F722",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/en/products/stm32/stm32f722/",
+          "tagline": "High-Performance Cortex-M7 with Rich Connectivity",
+          "description": "High-performance Arm Cortex-M7 microcontroller running up to 216 MHz with integrated L1 cache.",
+          "metaDescription": "STM32F722xx Arm Cortex-M7 MCU with single-precision FPU, DSP, 216 MHz performance, 512 KB Flash, and dual-mode QSPI. Datasheet",
+          "highlights": [
+            "Core: Arm Cortex-M7 32-bit with FPU & DSP",
+            "Speed: 216 MHz / 462 DMIPS High Performance",
+            "Cache: 8 KB I-Cache + 8 KB D-Cache",
+            "Storage: Dual-mode Quad-SPI & 512 KB Flash",
+            "USB: Dual OTG (FS & HS/FS with dedicated DMA)",
+            "I/O: Up to 140 I/Os with fast 108 MHz switching"
+          ],
+          "applications": [
+            {
+              "title": "Advanced Motor Control",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Flight Controllers",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Audio Processing",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Home Automation",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "IoT Gateways",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Robotics",
+              "image": "/Robotics.webp"
+            }
+          ]
+        },
+        {
+          "id": "stm32f767",
+          "name": "STM32F767",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/en/products/stm32/stm32f767/",
+          "tagline": "Flagship Cortex-M7 with Advanced Graphics & Ethernet",
+          "description": "High-end Arm Cortex-M7 microcontroller with double-precision FPU and comprehensive connectivity.",
+          "metaDescription": "STM32F767xx High-end Arm Cortex-M7 MCU with double-precision FPU, up to 2 MB Flash, 512 KB SRAM, Ethernet, and Chrom-ART graphics. Datasheet",
+          "highlights": [
+            "Core: Arm Cortex-M7 with Double-Precision FPU",
+            "Speed: 216 MHz / 462 DMIPS High Performance",
+            "Memory: Up to 2 MB Flash & 512 KB SRAM",
+            "Graphics: Chrom-ART Accelerator & JPEG Codec",
+            "Ethernet: 10/100 MAC with IEEE 1588 support",
+            "Vision: DCMI Camera Interface (Up to 14-bit)"
+          ],
+          "applications": [
+            {
+              "title": "HMI & GUI Platforms",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Video Processing",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Industrial Networking",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Autonomous Robots",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "Smart Home Control",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "Advanced UAVs",
+              "image": "/Drones.webp"
+            }
+          ]
+        }
+      ],
+      "zh": [
+        {
+          "id": "stm32f405",
+          "name": "STM32F405",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/zh/products/stm32/stm32f405/",
+          "tagline": "面向高阶边缘控制的高性能基础",
+          "description": "高性能 Arm Cortex-M4 微控制器，主频最高 168 MHz，集成 FPU 与 DSP。",
+          "metaDescription": "STM32F405xx Arm Cortex-M4 MCU，集成 FPU、DSP，主频 168 MHz、1 MB Flash，并具备丰富连接能力，适用于实时控制应用。 Datasheet",
+          "highlights": [
+            "内核: Arm Cortex-M4 32-bit，集成 FPU 与 DSP",
+            "性能: 168 MHz / 210 DMIPS 高性能",
+            "存储: 1 MB Flash / 192 KB SRAM + 64 KB CCM",
+            "模拟: 3x 12-bit ADC（交错最高 7.2 MSPS）",
+            "USB: 双 OTG（Full Speed 与 High Speed，支持 ULPI）",
+            "封装: LQFP64 至 LQFP144 与 WLCSP90"
+          ],
+          "applications": [
+            {
+              "title": "电机控制",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "工业自动化",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "医疗仪器",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "消费电子",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "飞行控制器",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "机器人",
+              "image": "/Robotics.webp"
+            }
+          ]
+        },
+        {
+          "id": "stm32f722",
+          "name": "STM32F722",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/zh/products/stm32/stm32f722/",
+          "tagline": "高性能 Cortex-M7，接口丰富",
+          "description": "高性能 Arm Cortex-M7 微控制器，主频最高 216 MHz，内置 L1 Cache。",
+          "metaDescription": "STM32F722xx Arm Cortex-M7 MCU，单精度 FPU、DSP，216 MHz，512 KB Flash，双模式 QSPI。 Datasheet",
+          "highlights": [
+            "内核: Arm Cortex-M7 32-bit，集成 FPU 与 DSP",
+            "性能: 216 MHz / 462 DMIPS 高性能",
+            "缓存: 8 KB I-Cache + 8 KB D-Cache",
+            "存储: 双模式 Quad-SPI 与 512 KB Flash",
+            "USB: 双 OTG（FS 与 HS/FS，带专用 DMA）",
+            "I/O: 最多 140 路 I/O，108 MHz 高速切换"
+          ],
+          "applications": [
+            {
+              "title": "高级电机控制",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "飞行控制器",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "音频处理",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "家庭自动化",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "IoT 网关",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "机器人",
+              "image": "/Robotics.webp"
+            }
+          ]
+        },
+        {
+          "id": "stm32f767",
+          "name": "STM32F767",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/zh/products/stm32/stm32f767/",
+          "tagline": "旗舰级 Cortex-M7，增强图形与以太网",
+          "description": "高端 Arm Cortex-M7 微控制器，集成双精度 FPU 与全面连接能力。",
+          "metaDescription": "STM32F767xx 高端 Arm Cortex-M7 MCU，双精度 FPU，最高 2 MB Flash，512 KB SRAM，以太网与 Chrom-ART 图形。 Datasheet",
+          "highlights": [
+            "内核: Arm Cortex-M7，双精度 FPU",
+            "性能: 216 MHz / 462 DMIPS 高性能",
+            "存储: 最高 2 MB Flash 与 512 KB SRAM",
+            "图形: Chrom-ART 加速器与 JPEG 编解码",
+            "以太网: 10/100 MAC，支持 IEEE 1588",
+            "视觉: DCMI 相机接口（最高 14-bit）"
+          ],
+          "applications": [
+            {
+              "title": "HMI 与 GUI 平台",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "视频处理",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "工业网络",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "自主机器人",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "智能家居控制",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "高级无人机",
+              "image": "/Drones.webp"
+            }
+          ]
+        }
+      ],
+      "ru": [
+        {
+          "id": "stm32f405",
+          "name": "STM32F405",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/ru/products/stm32/stm32f405/",
+          "tagline": "Высокопроизводительная основа для продвинутого периферийного управления",
+          "description": "Высокопроизводительный микроконтроллер Arm Cortex-M4 до 168 MHz со встроенными FPU и DSP.",
+          "metaDescription": "STM32F405xx MCU Arm Cortex-M4 с FPU, DSP, частотой 168 MHz, 1 MB Flash и богатыми интерфейсами для приложений реального времени. Datasheet",
+          "highlights": [
+            "Ядро: Arm Cortex-M4 32-bit с FPU и DSP",
+            "Скорость: 168 MHz / 210 DMIPS",
+            "Память: 1 MB Flash / 192 KB SRAM + 64 KB CCM",
+            "Аналог: 3x 12-bit ADC (до 7.2 MSPS, interleaved)",
+            "USB: двойной OTG (Full Speed и High Speed с ULPI)",
+            "Корпус: LQFP64 до LQFP144 и WLCSP90"
+          ],
+          "applications": [
+            {
+              "title": "Управление двигателями",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Промышленная автоматизация",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Медицинская аппаратура",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Потребительская электроника",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "Контроллеры полета",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Робототехника",
+              "image": "/Robotics.webp"
+            }
+          ]
+        },
+        {
+          "id": "stm32f722",
+          "name": "STM32F722",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/ru/products/stm32/stm32f722/",
+          "tagline": "Высокопроизводительный Cortex-M7 с богатыми интерфейсами",
+          "description": "Высокопроизводительный микроконтроллер Arm Cortex-M7 до 216 MHz со встроенным L1 cache.",
+          "metaDescription": "STM32F722xx MCU Arm Cortex-M7 с SFPU, DSP, 216 MHz, 512 KB Flash и dual-mode QSPI. Datasheet",
+          "highlights": [
+            "Ядро: Arm Cortex-M7 32-bit с FPU и DSP",
+            "Скорость: 216 MHz / 462 DMIPS",
+            "Кэш: 8 KB I-Cache + 8 KB D-Cache",
+            "Хранение: dual-mode Quad-SPI и 512 KB Flash",
+            "USB: двойной OTG (FS и HS/FS с выделенным DMA)",
+            "I/O: до 140 линий, переключение до 108 MHz"
+          ],
+          "applications": [
+            {
+              "title": "Продвинутое управление двигателями",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Контроллеры полета",
+              "image": "/Drones.webp"
+            },
+            {
+              "title": "Обработка аудио",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Домашняя автоматизация",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "IoT-шлюзы",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Робототехника",
+              "image": "/Robotics.webp"
+            }
+          ]
+        },
+        {
+          "id": "stm32f767",
+          "name": "STM32F767",
+          "brand": "STMicroelectronics",
+          "url": "https://aimorelogy.com/ru/products/stm32/stm32f767/",
+          "tagline": "Флагманский Cortex-M7 с продвинутой графикой и Ethernet",
+          "description": "Высококлассный микроконтроллер Arm Cortex-M7 с DPFPU и расширенной связностью.",
+          "metaDescription": "STM32F767xx высококлассный MCU Arm Cortex-M7 с DPFPU, до 2 MB Flash, 512 KB SRAM, Ethernet и графикой Chrom-ART. Datasheet",
+          "highlights": [
+            "Ядро: Arm Cortex-M7 с FPU двойной точности",
+            "Скорость: 216 MHz / 462 DMIPS",
+            "Память: до 2 MB Flash и 512 KB SRAM",
+            "Графика: Chrom-ART Accelerator и JPEG Codec",
+            "Ethernet: 10/100 MAC с поддержкой IEEE 1588",
+            "Vision: DCMI интерфейс камеры (до 14-bit)"
+          ],
+          "applications": [
+            {
+              "title": "Платформы HMI и GUI",
+              "image": "/Robot Platform.webp"
+            },
+            {
+              "title": "Обработка видео",
+              "image": "/Smart Cameras.webp"
+            },
+            {
+              "title": "Промышленные сети",
+              "image": "/Edge Computing Boxes.webp"
+            },
+            {
+              "title": "Автономные роботы",
+              "image": "/Robotics.webp"
+            },
+            {
+              "title": "Управление умным домом",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "Продвинутые UAV",
+              "image": "/Drones.webp"
+            }
+          ]
+        }
+      ]
+    },
+    "espressif": {
+      "en": [
+        {
+          "id": "esp32s3",
+          "name": "ESP32-S3-WROOM-1",
+          "brand": "Espressif",
+          "url": "https://aimorelogy.com/en/products/espressif/esp32s3/",
+          "tagline": "2.4 GHz Wi-Fi & Bluetooth 5 (LE) Module",
+          "description": "A powerful, generic Wi-Fi + Bluetooth LE MCU module built around the ESP32-S3 series of SoCs, featuring AI acceleration and rich peripherals.",
+          "metaDescription": "ESP32-S3-WROOM-1 is a dual-core Wi-Fi + Bluetooth LE module with AI acceleration for smart home, voice, and edge AI devices. Datasheet",
+          "highlights": [
+            "Xtensa Dual-Core 32-bit LX7 @ 240 MHz",
+            "AI Acceleration for Neural Networks",
+            "2.4 GHz Wi-Fi (802.11b/g/n) & Bluetooth 5 (LE)",
+            "Rich Peripherals: 36 GPIOs, SPI, LCD, Camera, USB-OTG"
+          ],
+          "applications": [
+            {
+              "title": "Smart Home",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "Industrial Automation",
+              "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+              "title": "Health Care",
+              "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+              "title": "Speech Recognition",
+              "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=400"
+            }
+          ]
+        }
+      ],
+      "zh": [
+        {
+          "id": "esp32s3",
+          "name": "ESP32-S3-WROOM-1",
+          "brand": "Espressif",
+          "url": "https://aimorelogy.com/zh/products/espressif/esp32s3/",
+          "tagline": "2.4 GHz Wi-Fi & Bluetooth 5 (LE) Module",
+          "description": "A powerful, generic Wi-Fi + Bluetooth LE MCU module built around the ESP32-S3 series of SoCs, featuring AI acceleration and rich peripherals.",
+          "metaDescription": "ESP32-S3-WROOM-1 双核 Wi-Fi + Bluetooth LE 模组，支持 AI 加速，适用于智能家居、语音与边缘 AI 设备。 Datasheet",
+          "highlights": [
+            "Xtensa Dual-Core 32-bit LX7 @ 240 MHz",
+            "AI Acceleration for Neural Networks",
+            "2.4 GHz Wi-Fi (802.11b/g/n) & Bluetooth 5 (LE)",
+            "Rich Peripherals: 36 GPIOs, SPI, LCD, Camera, USB-OTG"
+          ],
+          "applications": [
+            {
+              "title": "Smart Home",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "Industrial Automation",
+              "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+              "title": "Health Care",
+              "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+              "title": "Speech Recognition",
+              "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=400"
+            }
+          ]
+        }
+      ],
+      "ru": [
+        {
+          "id": "esp32s3",
+          "name": "ESP32-S3-WROOM-1",
+          "brand": "Espressif",
+          "url": "https://aimorelogy.com/ru/products/espressif/esp32s3/",
+          "tagline": "2.4 GHz Wi-Fi & Bluetooth 5 (LE) Module",
+          "description": "A powerful, generic Wi-Fi + Bluetooth LE MCU module built around the ESP32-S3 series of SoCs, featuring AI acceleration and rich peripherals.",
+          "metaDescription": "ESP32-S3-WROOM-1 — это двухъядерный модуль Wi-Fi + Bluetooth LE с ускорением AI для умного дома, голосовых и периферийных AI устройств. Datasheet",
+          "highlights": [
+            "Xtensa Dual-Core 32-bit LX7 @ 240 MHz",
+            "AI Acceleration for Neural Networks",
+            "2.4 GHz Wi-Fi (802.11b/g/n) & Bluetooth 5 (LE)",
+            "Rich Peripherals: 36 GPIOs, SPI, LCD, Camera, USB-OTG"
+          ],
+          "applications": [
+            {
+              "title": "Smart Home",
+              "image": "/Smart Home.webp"
+            },
+            {
+              "title": "Industrial Automation",
+              "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+              "title": "Health Care",
+              "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+              "title": "Speech Recognition",
+              "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=400"
+            }
+          ]
+        }
+      ]
+    },
+    "flightControllers": {
+      "en": [
+        {
+          "id": "afc-v1",
+          "name": "AFC-V1",
+          "brand": "AIMORELOGY",
+          "url": "https://aimorelogy.com/en/products/afc-v1/",
+          "tagline": "",
+          "description": "",
+          "metaDescription": "",
+          "highlights": [],
+          "applications": []
+        }
+      ],
+      "zh": [
+        {
+          "id": "afc-v1",
+          "name": "AFC-V1",
+          "brand": "AIMORELOGY",
+          "url": "https://aimorelogy.com/zh/products/afc-v1/",
+          "tagline": "重新定义 FPV 飞控的未来。",
+          "description": "",
+          "metaDescription": "AIMORELOGY AFC-V1 一体化 FPV/无人机 飞行控制器，融合视觉、图传与控制。",
+          "highlights": [],
+          "applications": []
+        }
+      ],
+      "ru": [
+        {
+          "id": "afc-v1",
+          "name": "AFC-V1",
+          "brand": "AIMORELOGY",
+          "url": "https://aimorelogy.com/ru/products/afc-v1/",
+          "tagline": "Переосмысление будущего мозга.",
+          "description": "",
+          "metaDescription": "AIMORELOGY AFC-V1 — это универсальный FPV/UAV контроллер полета, объединяющий зрение, видеосвязь и управление.",
+          "highlights": [],
+          "applications": []
+        }
+      ]
+    }
+  },
+  "technologies": {
+    "aiTracking": {
+      "en": {
+        "title": "Self-Developed AI Tracking | AIMORELOGY",
+        "description": "Low-latency visual tracking for FPV/UAV missions, gimbal stabilization, and autonomous target following.",
+        "url": "https://aimorelogy.com/en/technology/ai-tracking/"
+      },
+      "zh": {
+        "title": "自研 AI 跟踪 | AIMORELOGY",
+        "description": "面向 FPV/无人机 的低时延视觉跟踪与云台稳定，支持复杂场景目标锁定。",
+        "url": "https://aimorelogy.com/zh/technology/ai-tracking/"
+      },
+      "ru": {
+        "title": "Самостоятельная разработка AI Отслеживание | AIMORELOGY",
+        "description": "Визуальное отслеживание с малой задержкой для миссий FPV/UAV, стабилизация подвеса и автономное отслеживание цели.",
+        "url": "https://aimorelogy.com/ru/technology/ai-tracking/"
+      }
+    },
+    "dshot": {
+      "en": {
+        "title": "Adaptive DShot Control Protocol | AIMORELOGY",
+        "description": "Adaptive DShot control protocol for FPV/UAV ESCs with stable bidirectional motor control and DMA-free implementation.",
+        "url": "https://aimorelogy.com/en/technology/control-protocol/"
+      },
+      "zh": {
+        "title": "自适应 DShot 控制协议 | AIMORELOGY",
+        "description": "面向 FPV/无人机 ESC 的自适应 DShot 控制协议，双向通信、稳定输出、无需 DMA。",
+        "url": "https://aimorelogy.com/zh/technology/control-protocol/"
+      },
+      "ru": {
+        "title": "Adaptive DShot Протокол управления | AIMORELOGY",
+        "description": "Adaptive DShot протокол управления для FPV/UAV ESC со стабильным двунаправленным управлением двигателем и реализацией без DMA.",
+        "url": "https://aimorelogy.com/ru/technology/control-protocol/"
+      }
+    }
+  },
+  "solutions": {
+    "aiCamera": {
+      "en": {
+        "title": "Cloud AI Camera Solution | AIMORELOGY",
+        "description": "Cloud AI camera stack combining edge AI vision with scalable cloud orchestration and monitoring.",
+        "url": "https://aimorelogy.com/en/solutions/ai-camera/"
+      },
+      "zh": {
+        "title": "云端 AI 摄像机方案 | AIMORELOGY",
+        "description": "云端 AI 摄像机方案，结合边缘 AI 与云平台，实现远程监控与规模化部署。",
+        "url": "https://aimorelogy.com/zh/solutions/ai-camera/"
+      },
+      "ru": {
+        "title": "Облачное решение для камер | AIMORELOGY",
+        "description": "Стек облачных камер, сочетающий периферийное зрение с масштабируемой облачной оркестрацией и мониторингом.",
+        "url": "https://aimorelogy.com/ru/solutions/ai-camera/"
+      }
+    }
+  }
+}

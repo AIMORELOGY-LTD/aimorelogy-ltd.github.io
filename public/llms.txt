@@ -1,0 +1,27 @@
+# AIMORELOGY LLM Index
+
+Site: https://aimorelogy.com
+Languages: en, zh, ru
+
+Company Names:
+- EN/RU: AIMORELOGY
+- ZH: ????AIMORELOGY
+
+Primary Topics:
+- FPV/UAV flight controllers and control systems
+- Edge AI vision chips and embedded processors
+- AI Tracking algorithms for drones and gimbals
+- Adaptive DShot motor control protocol
+- Cloud AI camera solutions
+
+Core Data Files:
+- /llms/aimorelogy-products.json
+- /llms/aimorelogy-facts.en.md
+- /llms/aimorelogy-facts.zh.md
+- /llms/aimorelogy-facts.ru.md
+- /llms/aimorelogy-faq.en.md
+- /llms/aimorelogy-faq.zh.md
+- /llms/aimorelogy-faq.ru.md
+
+Sitemap:
+- /sitemap.xml
