@@ -157,7 +157,8 @@ const Seo: React.FC<SeoProps> = ({
     const imageUrl = normalizeImageUrl(image);
     const alternates = buildAlternateLinks(normalizedPath);
     const locale = LOCALE_MAP[lang] || 'en_US';
-    const siteName = lang === 'zh' ? 'AIMORELOGY 爱谋科技' : 'AIMORELOGY';
+    const siteName = lang === 'zh' ? '爱谋科技AIMORELOGY' : 'AIMORELOGY';
+    const siteAlternateName = lang === 'zh' ? 'AIMORELOGY' : '爱谋科技AIMORELOGY';
     const keywordsValue = mergeKeywords(DEFAULT_KEYWORDS, keywords);
     const alternateLocales = Object.values(LOCALE_MAP).filter((value) => value !== locale);
 
@@ -166,6 +167,8 @@ const Seo: React.FC<SeoProps> = ({
     ensureMeta('name', 'description', description);
     ensureMeta('name', 'keywords', keywordsValue);
     ensureMeta('name', 'robots', noindex ? 'noindex,nofollow' : 'index,follow');
+    ensureMeta('name', 'application-name', siteName);
+    ensureMeta('name', 'apple-mobile-web-app-title', siteName);
 
     ensureMeta('property', 'og:type', type);
     ensureMeta('property', 'og:site_name', siteName);
@@ -191,16 +194,21 @@ const Seo: React.FC<SeoProps> = ({
       {
         '@context': 'https://schema.org',
         '@type': 'Organization',
+        '@id': `${BASE_URL}/#organization`,
         name: siteName,
+        alternateName: siteAlternateName,
         url: BASE_URL,
         logo: DEFAULT_IMAGE
       },
       {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
+        '@id': `${BASE_URL}/#website`,
         name: siteName,
+        alternateName: siteAlternateName,
         url: BASE_URL,
-        inLanguage: lang
+        inLanguage: lang,
+        publisher: { '@id': `${BASE_URL}/#organization` }
       }
     ];
 
