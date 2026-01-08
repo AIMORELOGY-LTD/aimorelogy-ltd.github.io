@@ -52,7 +52,7 @@ const Careers: React.FC = () => {
       {/* Main Content */}
       <section className="py-20 flex-grow">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="mx-auto">
              <div className="mb-16 text-center">
                <h2 className="text-3xl font-bold uppercase mb-4">{t('careers.openPositions')}</h2>
                <div className="w-20 h-1 bg-[#4f4398] mx-auto"></div>
@@ -71,39 +71,38 @@ const Careers: React.FC = () => {
                     
                     <div className="bg-white p-6 border border-gray-100 inline-block w-full mt-auto text-left">
                       {positions.length > 0 ? (
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                           {positions.map((position) => (
-                            <div key={position.title} className="border border-gray-200 p-5">
-                              <div className="flex flex-wrap items-start justify-between gap-3">
-                                <div>
-                                  <h4 className="text-lg font-bold uppercase text-gray-900">{position.title}</h4>
-                                  <p className="text-sm text-gray-500 mt-1">{position.location}</p>
+                            <details key={position.title} className="border border-gray-200">
+                              <summary className="px-4 py-4 cursor-pointer">
+                                <h4 className="text-lg font-bold uppercase text-gray-900">{position.title}</h4>
+                              </summary>
+                              <div className="px-4 pb-4">
+                                <p className="text-sm text-gray-500">{position.location}</p>
+                                <div className="mt-4">
+                                  <p className="text-xs font-bold uppercase text-gray-500">{t('careers.labels.responsibilities')}</p>
+                                  <ul className="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                    {position.responsibilities.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
                                 </div>
-                                <Briefcase className="text-gray-300" size={22} />
+                                <div className="mt-4">
+                                  <p className="text-xs font-bold uppercase text-gray-500">{t('careers.labels.requirements')}</p>
+                                  <ul className="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                    {position.requirements.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                                <div className="mt-4 border-t border-gray-100 pt-4 text-sm text-gray-600">
+                                  <span className="font-semibold text-gray-900">{t('careers.labels.apply')}</span>{' '}
+                                  <a href={`mailto:${applyEmail}`} className="text-[#4f4398] font-semibold hover:underline">
+                                    {applyEmail}
+                                  </a>
+                                </div>
                               </div>
-                              <div className="mt-4">
-                                <p className="text-xs font-bold uppercase text-gray-500">{t('careers.labels.responsibilities')}</p>
-                                <ul className="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                  {position.responsibilities.map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div className="mt-4">
-                                <p className="text-xs font-bold uppercase text-gray-500">{t('careers.labels.requirements')}</p>
-                                <ul className="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                  {position.requirements.map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div className="mt-4 border-t border-gray-100 pt-4 text-sm text-gray-600">
-                                <span className="font-semibold text-gray-900">{t('careers.labels.apply')}</span>{' '}
-                                <a href={`mailto:${applyEmail}`} className="text-[#4f4398] font-semibold hover:underline">
-                                  {applyEmail}
-                                </a>
-                              </div>
-                            </div>
+                            </details>
                           ))}
                         </div>
                       ) : (
