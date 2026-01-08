@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { MapPin, Briefcase, Frown } from 'lucide-react';
+import { MapPin, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { RoutePath } from '../types';
 import { useTranslation } from 'react-i18next';
@@ -13,6 +13,13 @@ const Careers: React.FC = () => {
   const seoTitle = t('careers.metaTitle');
   const seoDescription = t('careers.metaDescription');
   const seoKeywords = 'AIMORELOGY, 爱谋科技, careers, jobs, hiring, engineer, FPV, UAV, drone, edge AI';
+  const positions = t('careers.positions', { returnObjects: true, defaultValue: [] }) as Array<{
+    title: string;
+    location: string;
+    responsibilities: string[];
+    requirements: string[];
+  }>;
+  const applyEmail = t('careers.applyEmail', { defaultValue: 'careers@aimorelogy.com' });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -62,10 +69,50 @@ const Careers: React.FC = () => {
                     <h3 className="text-2xl font-bold uppercase mb-2">{t('careers.locations.shenzhen')}</h3>
                     <p className="text-gray-500 text-sm font-bold uppercase tracking-widest mb-8">{t('careers.locations.shenzhenTag')}</p>
                     
-                    <div className="bg-white p-6 border border-gray-100 inline-block w-full mt-auto">
-                       <Briefcase className="mx-auto text-gray-400 mb-3" size={24} />
-                       <p className="text-gray-600 font-medium">{t('careers.none')}</p>
-                       <p className="text-xs text-gray-400 mt-2">{t('careers.shenzhenNote')}</p>
+                    <div className="bg-white p-6 border border-gray-100 inline-block w-full mt-auto text-left">
+                      {positions.length > 0 ? (
+                        <div className="space-y-6">
+                          {positions.map((position) => (
+                            <div key={position.title} className="border border-gray-200 p-5">
+                              <div className="flex flex-wrap items-start justify-between gap-3">
+                                <div>
+                                  <h4 className="text-lg font-bold uppercase text-gray-900">{position.title}</h4>
+                                  <p className="text-sm text-gray-500 mt-1">{position.location}</p>
+                                </div>
+                                <Briefcase className="text-gray-300" size={22} />
+                              </div>
+                              <div className="mt-4">
+                                <p className="text-xs font-bold uppercase text-gray-500">{t('careers.labels.responsibilities')}</p>
+                                <ul className="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                  {position.responsibilities.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div className="mt-4">
+                                <p className="text-xs font-bold uppercase text-gray-500">{t('careers.labels.requirements')}</p>
+                                <ul className="mt-2 list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                  {position.requirements.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div className="mt-4 border-t border-gray-100 pt-4 text-sm text-gray-600">
+                                <span className="font-semibold text-gray-900">{t('careers.labels.apply')}</span>{' '}
+                                <a href={`mailto:${applyEmail}`} className="text-[#4f4398] font-semibold hover:underline">
+                                  {applyEmail}
+                                </a>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="text-center">
+                          <Briefcase className="mx-auto text-gray-400 mb-3" size={24} />
+                          <p className="text-gray-600 font-medium">{t('careers.none')}</p>
+                          <p className="text-xs text-gray-400 mt-2">{t('careers.shenzhenNote')}</p>
+                        </div>
+                      )}
                     </div>
                 </div>
 

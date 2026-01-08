@@ -455,6 +455,132 @@
 
     },
 
+    "applyEmail": "careers@aimorelogy.com",
+
+    "labels": {
+
+      "responsibilities": "Responsibilities",
+
+      "requirements": "Requirements",
+
+      "apply": "Apply via"
+
+    },
+
+    "positions": [
+
+      {
+
+        "title": "Embedded Software Engineer",
+
+        "location": "Shenzhen, China",
+
+        "responsibilities": [
+
+          "Lead overall UAV product architecture design, including software layering and hardware modularization.",
+
+          "Define UAV product platform strategy and technology roadmap.",
+
+          "Develop platform software architecture and mid-to-long-term planning.",
+
+          "Participate in technical reviews of key systems to ensure solution effectiveness and soundness.",
+
+          "Drive resolution of complex technical issues."
+
+        ],
+
+        "requirements": [
+
+          "Strong in hardware and embedded software development; familiar with structures, optics, networking, algorithms, and systems, and able to apply them in practice.",
+
+          "Proficient in C/C++ and other design languages; experienced with multithreading and network communication development.",
+
+          "Proficient in embedded software development and debugging for UAV products; familiar with embedded Linux driver and application development.",
+
+          "Familiar with hardware platforms and interfaces; experience with MIPI, LVDS, sensor integration, and image processing preferred; kernel-level experience such as WiFi, switch, and network protocol stack optimization is a plus.",
+
+          "Software architecture capability; able to design low-coupling, high-reuse software systems."
+
+        ]
+
+      },
+
+      {
+
+        "title": "Hardware Engineer",
+
+        "location": "Shenzhen, China",
+
+        "responsibilities": [
+
+          "Define hardware solutions, complete schematic design, and coordinate PCB layout.",
+
+          "Design and debug embedded hardware low-level circuitry.",
+
+          "Select and integrate avionics equipment.",
+
+          "Participate in full system integration and debugging."
+
+        ],
+
+        "requirements": [
+
+          "Major in electronics or a related field; master's degree or above with a solid foundation in digital and analog circuits.",
+
+          "2+ years of experience in UAV or similar system electronics equipment and hardware development.",
+
+          "Familiar with common UAV cables and connector specifications/models.",
+
+          "Familiar with system development on ARM or DSP platforms; board-level OS experience such as Linux.",
+
+          "Experience with open-source Pixhawk or other UAV embedded solutions is a plus.",
+
+          "RC aviation hobbyist with flight operation experience is a plus."
+
+        ]
+
+      },
+
+      {
+
+        "title": "Algorithm Engineer",
+
+        "location": "Shenzhen, China",
+
+        "responsibilities": [
+
+          "Work on AI, wireless signal, and image classification/recognition related tasks.",
+
+          "Design AI learning algorithm platform, build frameworks, implement algorithms, and optimize/debug.",
+
+          "Write technical documents and reports; regularly report project progress and results.",
+
+          "Track latest AI and UAV technology trends; continuously improve system performance and features.",
+
+          "Support AI research for company products."
+
+        ],
+
+        "requirements": [
+
+          "Bachelor's degree or above in Computer Science, Electronic Engineering, Automation or related fields; master's or Ph.D. preferred with 3+ years of algorithm experience.",
+
+          "Proficient in AI algorithms, especially deep learning and machine learning for image, wireless signal, and audio recognition.",
+
+          "Familiar with mainstream deep learning frameworks (TensorFlow, PyTorch) and have practical project experience.",
+
+          "Embedded experience preferred; model pruning and optimization experience preferred.",
+
+          "Experience with UAV recognition algorithm projects preferred.",
+
+          "Familiar with wireless communication principles and signal processing; able to design and implement signal recognition algorithms independently."
+
+        ]
+
+      }
+
+    ],
+
     "none": "No open positions available.",
 
     "shenzhenNote": "Check back later for R&D opportunities.",
