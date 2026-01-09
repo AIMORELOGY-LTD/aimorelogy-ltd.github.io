@@ -4,6 +4,7 @@ import { useLang } from '../i18n-routing';
 
 const BASE_URL = 'https://aimorelogy.com';
 const DEFAULT_IMAGE = `${BASE_URL}/icon.webp`;
+const LEGAL_NAME = '深圳市爱谋科技有限公司';
 const DEFAULT_KEYWORDS = [
   'AIMORELOGY',
   '爱谋科技',
@@ -197,6 +198,7 @@ const Seo: React.FC<SeoProps> = ({
         '@id': `${BASE_URL}/#organization`,
         name: siteName,
         alternateName: siteAlternateName,
+        legalName: LEGAL_NAME,
         url: BASE_URL,
         logo: DEFAULT_IMAGE
       },
