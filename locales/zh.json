@@ -2413,23 +2413,23 @@
 
       "cv184": {
 
-        "metaTitle": "SOPHGO CV184x 视觉 SoC（FPV/UAV）（CV1841C/CV1842C-P/CV1842H-P/CV1842HP/CV1843H-P）- ISP V4.0、Intra4 | AIMORELOGY",
+        "metaTitle": "SOPHGO CV184x 视觉 SoC（FPV/UAV）（CV1841C-P/CV1842C-P/CV1842H-P/CV1842HP/CV1843H-P）- ISP V4.0、智能编码 | AIMORELOGY",
 
-        "metaDescription": "SOPHGO CV184x 系列（CV1841C、CV1842C-P、CV1842H-P/CV1842HP、CV1843H-P）提供 1.0~1.5 TOPS TPU、ISP V4.0 与 Intra4 编码，面向 FPV/UAV 视觉、吊舱跟踪、智能摄像机与门禁。 Datasheet",
+        "metaDescription": "SOPHGO CV184x 系列（CV1841C-P、CV1842C-P、CV1842H-P/CV1842HP、CV1843H-P）提供 1.5 TOPS TPU、ISP V4.0 与智能编码（H.265/H.264/MJPEG），面向 FPV/UAV 视觉、吊舱跟踪、智能摄像机与门禁。 Datasheet",
 
-        "tagline": "搭载 ISP V4.0 与 Intra4 编码的双核视觉 SoC",
+        "tagline": "1.5T 双核视觉 SoC，搭载 ISP V4.0 与智能编码",
 
-        "description": "新一代边缘视觉 SoC，具备 ISP V4.0、Intra4 编码与 OpenCLIP 支持。",
+        "description": "新一代边缘视觉 SoC，具备 ISP V4.0、智能编码与大模型 SDK 支持。",
 
         "longDescription": [
 
-          "CV184x 系列面向消费、运营商与专业安防市场，采用双核架构（ARM Cortex-A53 @ 1.1GHz + RISC-V C906 @ 800MHz），自研 TPU 最高 1.5 TOPS（INT8），支持 BF16 混合精度。",
+          "CV184x 系列面向消费、运营商与专业安防市场，采用双核架构（ARM Cortex-A53 @ 1.1GHz + RISC-V C906 @ 800MHz），自研 TPU 1.5 TOPS（INT8），支持 BF16 混合精度。",
 
           "引入全新 ISP V4.0 引擎，包含星光级 3DNR、数字宽动态 DRC、去雾与紫边消除（PFR）。改进的 MCTF 算法显著降低运动拖影与时域噪声。",
 
           "支持自研 Smart Encoding 编码引擎，兼容 H.265/H.264/MJPEG。独有 Intra4 模式在复杂运动场景下提升压缩率并保留纹理细节。",
 
-          "全面兼容 OpenCLIP 多模态模型，支持通用目标检测、图文检索与零样本推理，并内置人脸检测、行人/车辆追踪、头盔检测等算法库。",
+          "提供 SDK 大模型能力，并兼容 OpenCLIP 多模态模型，支持通用目标检测、图文检索与零样本推理，并内置人脸检测、行人/车辆追踪、头盔检测等算法库。",
 
           "系列与 CV181 引脚兼容，复用 SDK、ISP 调校工具与深度学习环境，实现低成本升级。"
 
@@ -2439,13 +2439,13 @@
 
           "双核：ARM A53（1.1GHz）+ RISC-V C906（800MHz）",
 
-          "TPU：1.0~1.5 TOPS @ INT8 / BF16 混合精度",
+          "TPU：1.5 TOPS @ INT8 / BF16 混合精度",
 
           "ISP V4.0：3DNR、DRC、PFR、去雾、畸变校正",
 
-          "Intra4 编码：更高压缩率、纹理保留更好",
+          "智能编码 + Intra4：更高压缩率、纹理保留更好",
 
-          "OpenCLIP 支持：零样本与图文检索",
+          "OpenCLIP + 大模型 SDK：零样本与图文检索",
 
           "与 CV181 系列引脚兼容"
 
@@ -2463,17 +2463,17 @@
 
           {
 
-            "title": "Intra4 编码",
+            "title": "智能编码 + Intra4",
 
-            "description": "小块内编码保留复杂纹理细节，降低码率与存储成本。"
+            "description": "智能编码引擎配合 Intra4，保留复杂纹理细节并降低码率与存储成本。"
 
           },
 
           {
 
-            "title": "OpenCLIP 多模态",
+            "title": "OpenCLIP / 大模型 SDK",
 
-            "description": "支持图文匹配、零样本推理与场景化微调。"
+            "description": "支持图文匹配、零样本推理与端侧大模型 SDK 方案。"
 
           },
 
@@ -2481,7 +2481,7 @@
 
             "title": "高性能 TPU",
 
-            "description": "INT8 最高 1.5 TOPS，支持 BF16。ResNet50/YOLOv5s 等基准性能显著提升。"
+            "description": "INT8 1.5 TOPS，支持 BF16。ResNet50/YOLOv5s 等基准性能显著提升。"
 
           },
 
@@ -2631,7 +2631,7 @@
 
                 "特性",
 
-                "CV1841C",
+                "CV1841C-P",
 
                 "CV1842C-P",
 
@@ -2647,7 +2647,7 @@
 
                   "处理器",
 
-                  "CA53 1.0GHz + C906 600MHz",
+                  "CA53 1.1GHz + C906 800MHz",
 
                   "CA53 1.1GHz + C906 800MHz",
 
@@ -2675,7 +2675,7 @@
 
                   "TPU（INT8）",
 
-                  "~1.0 TOPS",
+                  "~1.5 TOPS",
 
                   "~1.5 TOPS",
 
@@ -2779,7 +2779,7 @@
 
             "key": "TPU",
 
-            "value": "1.0~1.5 TOPS @ INT8 / BF16"
+            "value": "1.5 TOPS @ INT8 / BF16"
 
           },
 
@@ -2789,7 +2789,7 @@
 
             "key": "集成",
 
-            "value": "DDR3 512Mb / 1Gbit / 2Gbit / 4Gbit"
+            "value": "DDR3 512Mb / 1Gb / 2Gb / 4Gb"
 
           },
 
@@ -2809,7 +2809,7 @@
 
             "key": "编码",
 
-            "value": "H.265/H.264/MJPEG + Intra4"
+            "value": "H.265/H.264/MJPEG 智能编码 + Intra4"
 
           },
 
@@ -2819,7 +2819,7 @@
 
             "key": "分辨率",
 
-            "value": "最高 8MP@30fps + 720P@30fps"
+            "value": "最高 8M@25fps + 2x 720P@25fps"
 
           },
 

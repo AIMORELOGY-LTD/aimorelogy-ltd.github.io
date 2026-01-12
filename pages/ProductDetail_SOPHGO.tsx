@@ -45,7 +45,7 @@ const DISPLAY_NAME_MAP: Record<string, string> = {
 const SOPHGO_VARIANTS: Record<string, string[]> = {
   bm1688: [],
   cv186: ['CV186x', 'CV186AH', 'CV186'],
-  cv184: ['CV184x', 'CV1841C', 'CV1842C-P', 'CV1842H-P', 'CV1842HP', 'CV1843H-P'],
+  cv184: ['CV184x', 'CV1841C-P', 'CV1842C-P', 'CV1842H-P', 'CV1843H-P'],
   cv181: [
     'CV181x',
     'CV1813H',
