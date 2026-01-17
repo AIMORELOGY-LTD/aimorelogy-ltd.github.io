@@ -33,6 +33,12 @@ const InstagramIcon = () => (
   </svg>
 );
 
+const TikTokIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+    <path d="M16 3a6.3 6.3 0 004.5 2V9a9.5 9.5 0 01-4.5-1.3v7a6.2 6.2 0 11-6.2-6.2c.4 0 .9.1 1.3.2v3.9a2.3 2.3 0 10-2.3 2.3A2.3 2.3 0 0012 12.6V3h4z"/>
+  </svg>
+);
+
 // --- Social Link Component with Hover QR ---
 interface SocialLinkProps {
   icon: React.ReactNode;
@@ -340,6 +346,12 @@ const Footer: React.FC = () => {
                    label="Instagram"
                    href="https://www.instagram.com/aimorelogy/"
                    hoverColor="#E1306C"
+                 />
+                 <SocialLink
+                   icon={<TikTokIcon />}
+                   label="TikTok"
+                   href="https://www.tiktok.com/@aimorelogy"
+                   hoverColor="#69C9D0"
                  />
                  <SocialLink 
                    icon={<WeComIcon />} 
