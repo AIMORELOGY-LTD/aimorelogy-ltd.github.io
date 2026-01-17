@@ -27,6 +27,12 @@ const WeComIcon = () => (
   </svg>
 );
 
+const InstagramIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+    <path d="M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4zm0 2a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H7zm5 2.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM17.5 6a1 1 0 110 2 1 1 0 010-2z"/>
+  </svg>
+);
+
 // --- Social Link Component with Hover QR ---
 interface SocialLinkProps {
   icon: React.ReactNode;
@@ -328,6 +334,12 @@ const Footer: React.FC = () => {
                    href="https://wa.me/8618933063380"
                    hoverColor="#25D366"
                    enableHoverColor={false}
+                 />
+                 <SocialLink
+                   icon={<InstagramIcon />}
+                   label="Instagram"
+                   href="https://www.instagram.com/aimorelogy/"
+                   hoverColor="#E1306C"
                  />
                  <SocialLink 
                    icon={<WeComIcon />} 
