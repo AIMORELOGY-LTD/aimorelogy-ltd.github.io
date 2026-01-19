@@ -1,5 +1,3 @@
 User-agent: *
-Allow: /
-
-Host: aimorelogy.com
+Disallow:
 Sitemap: https://aimorelogy.com/sitemap.xml
