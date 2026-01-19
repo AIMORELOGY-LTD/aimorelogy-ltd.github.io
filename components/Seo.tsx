@@ -200,7 +200,29 @@ const Seo: React.FC<SeoProps> = ({
         alternateName: siteAlternateName,
         legalName: LEGAL_NAME,
         url: BASE_URL,
-        logo: DEFAULT_IMAGE
+        logo: DEFAULT_IMAGE,
+        sameAs: [
+          'https://www.instagram.com/aimorelogy/',
+          'https://www.tiktok.com/@aimorelogy'
+        ],
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'sales',
+            email: 'sales@aimorelogy.com'
+          },
+          {
+            '@type': 'ContactPoint',
+            contactType: 'support',
+            email: 'supports@aimorelogy.com'
+          }
+        ],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: "T2-A 603-12, Langjun Square, Bao'an",
+          addressLocality: 'Shenzhen',
+          addressCountry: 'CN'
+        }
       },
       {
         '@context': 'https://schema.org',
