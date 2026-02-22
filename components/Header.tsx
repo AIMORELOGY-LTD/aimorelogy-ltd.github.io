@@ -93,9 +93,14 @@ const Header: React.FC = () => {
                   to: withLang(lang, RoutePath.PRODUCT_AFC)
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          name: t('header.menu.products.computingModule'),
+          categories: [
             {
-              title: t('header.menu.products.computingModule'),
+              title: 'Module',
               items: [
                 {
                   model: 'SM9',
