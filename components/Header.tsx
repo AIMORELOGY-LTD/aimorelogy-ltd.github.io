@@ -90,7 +90,17 @@ const Header: React.FC = () => {
                 {
                   model: 'AFC-V1',
                   description: t('header.menu.products.afcDesc'),
-                  to: '#'
+                  to: withLang(lang, RoutePath.PRODUCT_AFC)
+                }
+              ]
+            },
+            {
+              title: t('header.menu.products.computingModule'),
+              items: [
+                {
+                  model: 'SM9',
+                  description: '16T AI, 8-Core ARM, Jetson Pin-Compatible.',
+                  to: withLang(lang, RoutePath.PRODUCT_SM9)
                 }
               ]
             }

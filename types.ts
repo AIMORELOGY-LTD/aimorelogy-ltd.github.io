@@ -19,6 +19,7 @@ export enum RoutePath {
   CAREERS = '/careers/',
   CONTACT = '/contact/',
   ABOUT = '/about/',
+  PRODUCT_SM9 = '/products/computing-module/sm9/',
   PRIVACY = '/legal/privacy-policy/',
   TERMS = '/legal/terms-of-service/',
   COOKIES = '/legal/cookie-preferences/',
