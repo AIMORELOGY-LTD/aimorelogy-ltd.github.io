@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { 
   CheckCircle, 
@@ -73,9 +72,10 @@ const ProductDetail_SM9: React.FC = () => {
           <img 
             src="/products/SM9/banner-sm.webp" 
             alt="SM9 Computing Module Cover"
-            className="w-full h-full object-cover opacity-85 scale-100"
+            className="w-full h-full object-cover opacity-100 scale-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/15 to-transparent" />
+          {/* Transparent Gradient Overlay - Adjusted to be more clear (20% opacity) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/20 to-transparent" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10 pt-20">
@@ -84,14 +84,14 @@ const ProductDetail_SM9: React.FC = () => {
               <div className="w-12 h-[2px] bg-[#76b900]" />
               <span className="text-xs font-black uppercase tracking-[0.3em] text-[#76b900]">Industrial AI Module</span>
             </div>
-            <h1 className="text-7xl md:text-9xl font-black mb-8 uppercase leading-[0.85] tracking-tighter">
+            <h1 className="text-7xl md:text-9xl font-black mb-8 uppercase leading-[0.85] tracking-tighter drop-shadow-2xl">
               SM9 <br/><span className="text-[#4f4398]">SERIES</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 font-light leading-snug mb-12 max-w-2xl">
+            <p className="text-2xl md:text-3xl text-gray-100 font-light leading-snug mb-12 max-w-2xl drop-shadow-lg">
               {chip.tagline}
             </p>
             <div className="flex gap-6">
-               <button className="px-10 py-5 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-sm flex items-center group">
+               <button className="px-10 py-5 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-sm flex items-center group shadow-2xl">
                   Contact Support
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                </button>
@@ -124,22 +124,23 @@ const ProductDetail_SM9: React.FC = () => {
         </div>
       </section>
 
-      {/* Product Overview */}
+      {/* Product Overview Section */}
       <section className="py-32 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            {/* Overview Image - SM9-1.webp as requested */}
             <div className="order-2 lg:order-1">
               <div className="relative group">
                 <div className="absolute -inset-10 bg-[#4f4398]/10 blur-[120px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
                 <img 
                   src="/products/SM9/SM9-1.webp" 
-                  alt="SM9 Product"
+                  alt="SM9 Product Overview"
                   className="w-full h-auto relative z-10 shadow-2xl rounded-sm"
                 />
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-5xl font-black mb-10 uppercase tracking-tighter">Enterprise <br/>Computing Performance</h2>
+              <h2 className="text-5xl font-black mb-10 uppercase tracking-tighter underline decoration-[#76b900] decoration-8 underline-offset-8">Enterprise <br/>Computing Performance</h2>
               <div className="space-y-8">
                 {chip.longDescription.map((p, i) => (
                   <p key={i} className="text-gray-400 text-xl leading-relaxed font-light">

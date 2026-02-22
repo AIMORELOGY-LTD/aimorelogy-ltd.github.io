@@ -303,7 +303,7 @@ const Home: React.FC = () => {
         {/* Navigation Strip - Included WITHIN the Full Screen Hero */}
         <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/80 to-transparent pt-12">
             <div className="container mx-auto px-6">
-                <div className="flex flex-row gap-1 md:gap-0 md:grid md:grid-cols-3 py-0">
+                <div className="flex flex-row gap-1 md:gap-0 md:grid md:grid-cols-4 py-0">
                     {slides.map((slide, index) => (
                     <div 
                         key={slide.id} 
