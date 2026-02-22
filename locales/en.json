@@ -254,6 +254,22 @@
 
           "buttonText": "View Specs"
 
+        },
+
+        "3": {
+
+          "category": "High Performance",
+
+          "title": "SM9 Computing Module",
+
+          "description": "Powerful 16T AI performance, 8-core ARM architecture, pin-to-pin compatible with NVIDIA Jetson.",
+
+          "navTitle": "SM9 Module",
+
+          "navDesc": "16T AI Computing Power.",
+
+          "buttonText": "Explore SM9"
+
         }
 
       }

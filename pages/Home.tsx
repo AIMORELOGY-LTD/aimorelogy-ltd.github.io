@@ -200,6 +200,17 @@ const Home: React.FC = () => {
       bgImage: 'https://images.unsplash.com/photo-1608543884814-c78274191026?q=80&w=2000&auto=format&fit=crop'
     },
     {
+      id: 3,
+      category: t('home.hero.slides.3.category'),
+      title: t('home.hero.slides.3.title'),
+      description: t('home.hero.slides.3.description'),
+      navTitle: t('home.hero.slides.3.navTitle'),
+      navDesc: t('home.hero.slides.3.navDesc'),
+      buttonText: t('home.hero.slides.3.buttonText'),
+      link: withLang(lang, RoutePath.PRODUCT_SM9),
+      bgImage: '/products/SM9/banner-sm.webp'
+    },
+    {
       id: 1,
       category: t('home.hero.slides.1.category'),
       title: t('home.hero.slides.1.title'),

@@ -71,11 +71,11 @@ const ProductDetail_SM9: React.FC = () => {
       <section className="relative h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/products/SM9/SM9-cover.jpg" 
+            src="/products/SM9/banner-sm.webp" 
             alt="SM9 Computing Module Cover"
-            className="w-full h-full object-cover opacity-50 scale-100"
+            className="w-full h-full object-cover opacity-85 scale-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/15 to-transparent" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10 pt-20">
@@ -132,7 +132,7 @@ const ProductDetail_SM9: React.FC = () => {
               <div className="relative group">
                 <div className="absolute -inset-10 bg-[#4f4398]/10 blur-[120px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
                 <img 
-                  src="/products/SM9/SM9-product.jpg" 
+                  src="/products/SM9/SM9-1.webp" 
                   alt="SM9 Product"
                   className="w-full h-auto relative z-10 shadow-2xl rounded-sm"
                 />

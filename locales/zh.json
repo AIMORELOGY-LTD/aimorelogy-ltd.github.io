@@ -244,6 +244,22 @@
 
           "buttonText": "查看规格"
 
+        },
+
+        "3": {
+
+          "category": "高性能",
+
+          "title": "SM9 计算模块",
+
+          "description": "强大的 16T AI 性能，8 核 ARM 架构，与 NVIDIA Jetson 引脚兼容。",
+
+          "navTitle": "SM9 模块",
+
+          "navDesc": "16T AI 计算能力。",
+
+          "buttonText": "探索 SM9"
+
         }
 
       }
