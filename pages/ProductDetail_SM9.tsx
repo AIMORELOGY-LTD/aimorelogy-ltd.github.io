@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { 
   CheckCircle, 
@@ -17,7 +16,11 @@ import {
   Check,
   ChevronRight,
   ArrowRight,
-  Monitor
+  Monitor,
+  Layers,
+  Wind,
+  HardDrive,
+  Share2
 } from 'lucide-react';
 import { MODULE_DATA } from '../data/moduleData';
 import { RoutePath } from '../types';
@@ -34,190 +37,193 @@ const ProductDetail_SM9: React.FC = () => {
 
   if (!chip) return null;
 
+  const fullSpecs = [
+    { label: "Processor", val28: "8-core ARM CA53", valA8: "8-core ARM CA53" },
+    { label: "Performance", val28: "16-channel HD video intelligent analysis", valA8: "16-channel HD video intelligent analysis" },
+    { label: "Memory", val28: "16GB LPDDR4 64bits 4266Mbps", valA8: "8GB LPDDR4 64bits 4266Mbps" },
+    { label: "Storage", val28: "64GB eMMC 5.1", valA8: "32GB eMMC 5.1" },
+    { label: "Video Decoding", val28: "H.264 & H.265: 16x 1080P@30fps; supports 8192×8192 / 8K / 4K / 1080P / 720P / D1 / CIF", valA8: "H.264 & H.265: 16x 1080P@30fps; supports 8192×8192 / 8K / 4K / 1080P / 720P / D1 / CIF" },
+    { label: "Video Encoding", val28: "H.264 & H.265: 10x 1080P@30fps; supports 8K / 4K / 1080P / 720P / D1 / CIF", valA8: "H.264 & H.265: 10x 1080P@30fps; supports 8K / 4K / 1080P / 720P / D1 / CIF" },
+    { label: "Image Codec", val28: "JPEG: 1080P@480fps; max 32768×32768", valA8: "JPEG: 1080P@480fps; max 32768×32768" },
+    { label: "Audio/Video Input", val28: "6× VI; 2× I2S; 2× stereo input & output (optional)", valA8: "6× VI; 2× I2S; 2× stereo input & output (optional)" },
+    { label: "ISP", val28: "2× 8MP@30; 2f-HDR; 3DNR / LDC / 3A / Dehaze", valA8: "2× 8MP@30; 2f-HDR; 3DNR / LDC / 3A / Dehaze" },
+    { label: "CV Acceleration", val28: "IVE/VPSS + DPU (stereo depth) + Stitch (image stitching) + Dewarp (fisheye unwrapping)", valA8: "IVE/VPSS + DPU (stereo depth) + Stitch (image stitching) + Dewarp (fisheye unwrapping)" },
+    { label: "PCIe", val28: "PCIe Gen3: 1×2 + 1×2; RC & EP", valA8: "PCIe Gen3: 1×2 + 1×2; RC & EP" },
+    { label: "USB", val28: "2× USB 3.0; 2× USB 2.0", valA8: "2× USB 3.0; 2× USB 2.0" },
+    { label: "Network", val28: "2× GbE", valA8: "2× GbE" },
+    { label: "Display", val28: "1× HDMI 2.0", valA8: "1× HDMI 2.0" },
+    { label: "Other Interfaces", val28: "2× SATA 3.0; 1× CAN; 1× SD/SDIO; 4× UART; 4× I2C; 6× PWM; 2× SPI; ADC; GPIOs", valA8: "2× SATA 3.0; 1× CAN; 1× SD/SDIO; 4× UART; 4× I2C; 6× PWM; 2× SPI; ADC; GPIOs" },
+    { label: "Power Supply", val28: "DC 5V", valA8: "DC 5V" },
+    { label: "Operating Temp", val28: "-20°C to +70°C", valA8: "Standard: -20°C to +70°C / Industrial: -40°C to +85°C" },
+    { label: "Dimensions", val28: "69.6mm × 45mm × 5mm", valA8: "69.6mm × 45mm × 5mm" },
+    { label: "Connector", val28: "260-Pin SO-DIMM", valA8: "260-Pin SO-DIMM" }
+  ];
+
   return (
-    <div className="bg-[#111111] text-white min-h-screen">
+    <div className="bg-[#111111] text-white min-h-screen font-sans">
       <Seo 
         title={chip.metaTitle}
         description={chip.metaDescription}
       />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center overflow-hidden">
+      <section className="relative h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/products/SM9/SM9-cover.jpg" 
+            src="/products/SM9/banner-sm.webp" 
             alt="SM9 Computing Module Cover"
-            className="w-full h-full object-cover opacity-60 scale-105"
+            className="w-full h-full object-cover opacity-100 scale-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#111111] via-[#111111]/80 to-transparent" />
+          {/* Transparent Gradient Overlay - Adjusted to be MORE clear (15% opacity) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/15 to-transparent" />
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl">
-            <div className="flex items-center space-x-2 mb-6">
-              <span className="px-3 py-1 bg-[#4f4398] text-xs font-bold uppercase tracking-widest">Computing Module</span>
-              <span className="px-3 py-1 bg-white/10 text-xs font-bold uppercase tracking-widest text-gray-300">New Release</span>
+        <div className="container mx-auto px-6 relative z-10 pt-20">
+          <div className="max-w-4xl">
+            <div className="flex items-center space-x-3 mb-8">
+              <div className="w-12 h-[2px] bg-[#76b900]" />
+              <span className="text-xs font-black uppercase tracking-[0.3em] text-[#76b900]">Industrial AI Module</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black mb-6 uppercase leading-none tracking-tight">
-              {chip.name}
+            <h1 className="text-7xl md:text-9xl font-black mb-8 uppercase leading-[0.85] tracking-tighter drop-shadow-2xl">
+              SM9 <br/><span className="text-[#4f4398]">SERIES</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed mb-10 max-w-2xl border-l-4 border-[#76b900] pl-6">
+            <p className="text-2xl md:text-3xl text-gray-100 font-light leading-snug mb-12 max-w-2xl drop-shadow-lg">
               {chip.tagline}
             </p>
+            <div className="flex gap-6">
+               <button className="px-10 py-5 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-sm flex items-center group shadow-2xl">
+                  Contact Support
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+               </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Product Overview */}
-      <section className="py-24 border-b border-white/5">
+      {/* Key Stats Bar */}
+      <section className="bg-[#1a1a1a] py-12 border-y border-white/5">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-8 uppercase tracking-tight">{t('common.overview', 'Overview')}</h2>
-              {chip.longDescription.map((p, i) => (
-                <p key={i} className="text-gray-400 text-lg leading-relaxed mb-6 font-light">
-                  {p}
-                </p>
-              ))}
-              <div className="flex flex-wrap gap-4 mt-10">
-                <button className="px-8 py-4 bg-[#4f4398] hover:bg-[#5f52b3] transition-colors font-bold uppercase tracking-widest flex items-center group">
-                  {t('common.contactSales', 'Contact Sales')}
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
+              <div className="text-4xl font-black text-white uppercase leading-none">16T</div>
+              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">AI Analysis</div>
+            </div>
+            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
+              <div className="text-4xl font-black text-white uppercase leading-none">8-Core</div>
+              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">ARM Architecture</div>
+            </div>
+            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
+              <div className="text-4xl font-black text-white uppercase leading-none">8K/4K</div>
+              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Video Codec</div>
+            </div>
+            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
+              <div className="text-4xl font-black text-white uppercase leading-none">Jetson</div>
+              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Pin-Compatible</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Overview Section */}
+      <section className="py-32 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            {/* Overview Image - SM9-1.webp as requested */}
+            <div className="order-2 lg:order-1">
+              <div className="relative group">
+                <div className="absolute -inset-10 bg-[#4f4398]/10 blur-[120px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
+                <img 
+                  src="/products/SM9/SM9-1.webp" 
+                  alt="SM9 Product Overview"
+                  className="w-full h-auto relative z-10 shadow-2xl rounded-sm"
+                />
               </div>
             </div>
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-[#4f4398]/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-              <img 
-                src="/products/SM9/SM9-product.jpg" 
-                alt="SM9 Product Shot"
-                className="w-full h-auto relative z-10 shadow-2xl grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
-              />
+            <div className="order-1 lg:order-2">
+              <h2 className="text-5xl font-black mb-10 uppercase tracking-tighter underline decoration-[#76b900] decoration-8 underline-offset-8">Enterprise <br/>Computing Performance</h2>
+              <div className="space-y-8">
+                {chip.longDescription.map((p, i) => (
+                  <p key={i} className="text-gray-400 text-xl leading-relaxed font-light">
+                    {p}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Highlights Grid */}
-      <section className="py-24 bg-black/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black uppercase mb-4 tracking-tighter">Core Technologies</h2>
-            <div className="w-24 h-1 bg-[#76b900] mx-auto" />
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {chip.detailedFeatures.map((feature, index) => (
-              <div key={index} className="bg-[#1a1a1a] p-10 border-t-2 border-transparent hover:border-[#4f4398] transition-all duration-300 group">
-                <div className="bg-[#222222] w-14 h-14 flex items-center justify-center mb-8 group-hover:bg-[#4f4398] transition-colors">
-                  {index === 0 && <Cpu className="w-7 h-7" />}
-                  {index === 1 && <Monitor className="w-7 h-7" />}
-                  {index === 2 && <Aperture className="w-7 h-7" />}
-                  {index === 3 && <Zap className="w-7 h-7" />}
-                  {index === 4 && <Box className="w-7 h-7" />}
-                  {index === 5 && <ShieldCheck className="w-7 h-7" />}
+      {/* Feature Grid */}
+      <section className="py-32 bg-black/50">
+        <div className="container mx-auto px-6 text-center">
+           <h2 className="text-4xl md:text-6xl font-black uppercase mb-24 tracking-tighter">Architectural Superiority</h2>
+           
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
+              {chip.detailedFeatures.map((feature, index) => (
+                <div key={index} className="bg-[#111111] p-16 text-left hover:bg-[#151515] transition-colors group">
+                  <div className="mb-10 text-[#4f4398] group-hover:text-[#76b900] transition-colors">
+                    {index === 0 && <Cpu size={48} strokeWidth={1} />}
+                    {index === 1 && <Monitor size={48} strokeWidth={1} />}
+                    {index === 2 && <Aperture size={48} strokeWidth={1} />}
+                    {index === 3 && <HardDrive size={48} strokeWidth={1} />}
+                    {index === 4 && <Share2 size={48} strokeWidth={1} />}
+                    {index === 5 && <ShieldCheck size={48} strokeWidth={1} />}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-6 uppercase tracking-tight">{feature.title}</h3>
+                  <p className="text-gray-500 font-light leading-relaxed text-lg italic">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">{feature.title}</h3>
-                <p className="text-gray-500 font-light leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+           </div>
         </div>
       </section>
 
-      {/* Comparison Table Section */}
-      <section className="py-24 border-t border-white/5">
+      {/* Detailed Full Specification Table */}
+      <section className="py-32">
         <div className="container mx-auto px-6">
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold uppercase tracking-tight mb-4">Product Specifications</h2>
-            <p className="text-gray-500 font-light">Detailed technical parameters for different configurations.</p>
+          <div className="mb-20 text-center lg:text-left">
+            <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Complete Technical Specifications</h2>
+            <p className="text-gray-500 font-light max-w-xl">Comprehensive parameter comparison for the SM9 series computing modules.</p>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto border border-white/10 rounded-sm">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-[#1a1a1a] text-left">
-                  <th className="p-6 uppercase text-sm font-bold border border-white/10 tracking-widest text-[#76b900]">Parameter</th>
-                  <th className="p-6 uppercase text-sm font-bold border border-white/10 tracking-widest">SM9 16-ENC-28</th>
-                  <th className="p-6 uppercase text-sm font-bold border border-white/10 tracking-widest">SM9 16-ENC-A8</th>
+                  <th className="p-8 uppercase text-xs font-black border-b border-white/10 tracking-[0.3em] text-[#76b900] w-1/4">Specification Item</th>
+                  <th className="p-8 uppercase text-xs font-black border-b border-white/10 tracking-[0.3em] w-1/3">SM9 16-ENC-28 (High End)</th>
+                  <th className="p-8 uppercase text-xs font-black border-b border-white/10 tracking-[0.3em] w-1/3 text-gray-400">SM9 16-ENC-A8</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-300 font-light">
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Processor</td>
-                  <td className="p-6 border border-white/10">8-core ARM CA53</td>
-                  <td className="p-6 border border-white/10">8-core ARM CA53</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Performance</td>
-                  <td className="p-6 border border-white/10">16-channel HD Analysis</td>
-                  <td className="p-6 border border-white/10">16-channel HD Analysis</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Memory</td>
-                  <td className="p-6 border border-white/10 text-white font-medium">16GB LPDDR4 4266Mbps</td>
-                  <td className="p-6 border border-white/10 text-white font-medium">8GB LPDDR4 4266Mbps</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Storage</td>
-                  <td className="p-6 border border-white/10">64GB eMMC 5.1</td>
-                  <td className="p-6 border border-white/10">32GB eMMC 5.1</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Video Decoding</td>
-                  <td className="p-6 border border-white/10">16x 1080P@30fps (H.264/H.265)</td>
-                  <td className="p-6 border border-white/10">16x 1080P@30fps (H.264/H.265)</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Video Encoding</td>
-                  <td className="p-6 border border-white/10">10x 1080P@30fps (H.264/H.265)</td>
-                  <td className="p-6 border border-white/10">10x 1080P@30fps (H.264/H.265)</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Audio/Video Input</td>
-                  <td className="p-6 border border-white/10">6x VI; 2x I2S; stereo output</td>
-                  <td className="p-6 border border-white/10">6x VI; 2x I2S; stereo output</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">PCIe / USB</td>
-                  <td className="p-6 border border-white/10">PCIe Gen3 (1x2 + 1x2); 2x USB 3.0</td>
-                  <td className="p-6 border border-white/10">PCIe Gen3 (1x2 + 1x2); 2x USB 3.0</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Operating Temperature</td>
-                  <td className="p-6 border border-white/10">-20°C to +70°C</td>
-                  <td className="p-6 border border-white/10">Standard: -20°C to +70°C <br/> Industrial: -40°C to +85°C</td>
-                </tr>
-                <tr>
-                  <td className="p-6 border border-white/10 bg-[#151515] font-bold">Dimensions / Connector</td>
-                  <td colSpan={2} className="p-6 border border-white/10 text-center uppercase tracking-widest text-xs">
-                    69.6mm x 45mm x 5mm | 260-Pin SO-DIMM
-                  </td>
-                </tr>
+              <tbody className="text-gray-400 font-light">
+                {fullSpecs.map((spec, i) => (
+                  <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                    <td className="p-8 text-white font-bold text-sm bg-white/[0.01] uppercase tracking-wider">{spec.label}</td>
+                    <td className="p-8 text-sm leading-relaxed text-gray-200">{spec.val28}</td>
+                    <td className="p-8 text-sm leading-relaxed">{spec.valA8}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="py-24 bg-[#4f4398]">
+      {/* Call to Action */}
+      <section className="py-40 bg-[#111111] relative border-t border-white/5">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-black uppercase mb-8 leading-tight">
-            Ready to Upgrade Your AI Edge?
-          </h2>
-          <p className="text-xl mb-12 text-white/80 font-light max-w-2xl mx-auto">
-            Pin-to-pin compatible with NVIDIA Jetson. Seamless migration, massive cost-performance boost.
-          </p>
-          <div className="flex flex-col md:flex-row justify-center gap-6">
-            <button className="px-10 py-5 bg-black text-white font-bold uppercase tracking-widest hover:bg-black/80 transition-all flex items-center justify-center group">
-              Get Quote
-              <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold uppercase tracking-widest hover:bg-white/10 transition-all">
-              Download Datasheet
-            </button>
-          </div>
+           <div className="max-w-4xl mx-auto">
+              <h2 className="text-6xl md:text-8xl font-black uppercase mb-12 tracking-tighter leading-none">
+                Design Your <br/>Next <span className="text-[#4f4398]">Edge Solution</span>
+              </h2>
+              <div className="flex flex-col md:flex-row justify-center gap-8 mt-16">
+                 <button className="px-12 py-6 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-sm flex items-center justify-center">
+                    Request Evaluation Unit
+                 </button>
+                 <button className="px-12 py-6 bg-transparent border-2 border-white/20 hover:border-white transition-all font-black uppercase tracking-widest text-sm flex items-center justify-center">
+                    Download SDK & Docs
+                 </button>
+              </div>
+           </div>
         </div>
       </section>
     </div>
