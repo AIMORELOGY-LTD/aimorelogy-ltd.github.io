@@ -27,7 +27,9 @@
                         "computingModule": "计算模块",
                         "cameraModule": "相机模块",
                         "module": "模块",
-                        "afcDesc": "下一代 FPV 飞控的最终答案。"
+                        "afcDesc": "下一代 FPV 飞控的最终答案。",
+                        "sm9Desc": "16T AI、8核 ARM CA53，兼容 NVIDIA Jetson 引脚定义。",
+                        "cameraModuleDesc": "面向视觉系统的工业级边缘 AI 相机模组。"
       },
 
       "solutions": "解决方案",
@@ -4058,6 +4060,344 @@
       "returnHome": "返回首页",
 
       "contactSales": "联系销售人员了解规格"
+
+    },
+
+    "sm9": {
+
+      "metaTitle": "SM9 计算模组 | 16路高清视频智能分析 | NVIDIA Jetson 引脚兼容 | AIMORELOGY",
+
+      "metaDescription": "SM9 计算模组采用 8 核 ARM CA53 架构，支持 16 路高清视频智能分析，并与 NVIDIA Jetson 模组引脚兼容。",
+
+      "categoryLabel": "工业级 AI 计算模组",
+
+      "heroTitleMain": "SM9",
+
+      "heroTitleAccent": "系列",
+
+      "tagline": "与 NVIDIA Jetson 模组引脚兼容，面向高密度边缘 AI 部署。",
+
+      "primaryCta": "联系技术支持",
+
+      "overviewTitle": "企业级边缘计算性能",
+
+      "longDescription": [
+
+        "SM9 是面向边缘侧 16 路高清视频智能分析场景打造的高能效 8 核 ARM CA53 计算模组。",
+
+        "该模组支持混合精度推理、先进 ISP 图像处理，以及拼接、深度估计和去畸变等硬件加速能力。",
+
+        "凭借 Jetson 引脚兼容性与工业级接口密度，SM9 可帮助 AI 相机、机器人和 NVR 平台快速迁移并优化总体成本。"
+
+      ],
+
+      "featuresTitle": "架构优势",
+
+      "detailedFeatures": [
+
+        {
+
+          "title": "高能效计算架构",
+
+          "description": "8 核 ARM CA53 架构支持 INT4/INT8/FP16/BF16/FP32，适配多种边缘 AI 推理负载。"
+
+        },
+
+        {
+
+          "title": "多路多媒体处理",
+
+          "description": "硬件支持 16 路解码与 10 路编码，可覆盖 8K/4K/1080p 视频处理需求。"
+
+        },
+
+        {
+
+          "title": "集成视觉计算引擎",
+
+          "description": "内置 DPU、图像拼接与鱼眼去畸变硬件加速，适用于实时视觉处理流水线。"
+
+        },
+
+        {
+
+          "title": "高带宽存储配置",
+
+          "description": "最高支持 16 GB LPDDR4 与 64 GB eMMC 5.1，满足高吞吐边缘推理场景。"
+
+        },
+
+        {
+
+          "title": "高速接口扩展能力",
+
+          "description": "提供双 PCIe Gen3、双 USB 3.0、双千兆网口、SATA 3.0 与 CAN，便于整机集成。"
+
+        },
+
+        {
+
+          "title": "工业级可靠设计",
+
+          "description": "采用紧凑 260-pin SO-DIMM 形态，并提供最低 -40 C 的工业级温度版本。"
+
+        }
+
+      ],
+
+      "stats": [
+
+        {
+
+          "value": "16T",
+
+          "label": "AI 吞吐"
+
+        },
+
+        {
+
+          "value": "8-Core",
+
+          "label": "ARM CA53 架构"
+
+        },
+
+        {
+
+          "value": "8K/4K",
+
+          "label": "视频编解码"
+
+        },
+
+        {
+
+          "value": "Jetson",
+
+          "label": "引脚兼容"
+
+        }
+
+      ],
+
+      "specsTitle": "技术规格",
+
+      "specsSubtitle": "SM9 系列模组参数对比。",
+
+      "specsTableItem": "规格项",
+
+      "specsTableModel28": "SM9 16-ENC-28",
+
+      "specsTableModelA8": "SM9 16-ENC-A8",
+
+      "fullSpecs": [
+
+        {
+
+          "label": "处理器",
+
+          "val28": "8核 ARM CA53",
+
+          "valA8": "8核 ARM CA53"
+
+        },
+
+        {
+
+          "label": "性能",
+
+          "val28": "16路高清视频智能分析",
+
+          "valA8": "16路高清视频智能分析"
+
+        },
+
+        {
+
+          "label": "内存",
+
+          "val28": "16GB LPDDR4 64-bit 4266Mbps",
+
+          "valA8": "8GB LPDDR4 64-bit 4266Mbps"
+
+        },
+
+        {
+
+          "label": "存储",
+
+          "val28": "64GB eMMC 5.1",
+
+          "valA8": "32GB eMMC 5.1"
+
+        },
+
+        {
+
+          "label": "视频解码",
+
+          "val28": "H.264/H.265: 16x 1080p@30fps，最高 8192x8192",
+
+          "valA8": "H.264/H.265: 16x 1080p@30fps，最高 8192x8192"
+
+        },
+
+        {
+
+          "label": "视频编码",
+
+          "val28": "H.264/H.265: 10x 1080p@30fps，最高 8K",
+
+          "valA8": "H.264/H.265: 10x 1080p@30fps，最高 8K"
+
+        },
+
+        {
+
+          "label": "图像编解码",
+
+          "val28": "JPEG: 1080p@480fps，最高 32768x32768",
+
+          "valA8": "JPEG: 1080p@480fps，最高 32768x32768"
+
+        },
+
+        {
+
+          "label": "音视频输入",
+
+          "val28": "6x VI，2x I2S，立体声输入/输出（可选）",
+
+          "valA8": "6x VI，2x I2S，立体声输入/输出（可选）"
+
+        },
+
+        {
+
+          "label": "ISP",
+
+          "val28": "2x 8MP@30，2f-HDR，3DNR，LDC，3A，Dehaze",
+
+          "valA8": "2x 8MP@30，2f-HDR，3DNR，LDC，3A，Dehaze"
+
+        },
+
+        {
+
+          "label": "视觉加速",
+
+          "val28": "IVE/VPSS + DPU + Stitch + Dewarp",
+
+          "valA8": "IVE/VPSS + DPU + Stitch + Dewarp"
+
+        },
+
+        {
+
+          "label": "PCIe",
+
+          "val28": "PCIe Gen3: 1x2 + 1x2，支持 RC/EP",
+
+          "valA8": "PCIe Gen3: 1x2 + 1x2，支持 RC/EP"
+
+        },
+
+        {
+
+          "label": "USB",
+
+          "val28": "2x USB 3.0，2x USB 2.0",
+
+          "valA8": "2x USB 3.0，2x USB 2.0"
+
+        },
+
+        {
+
+          "label": "网络",
+
+          "val28": "2x 千兆以太网",
+
+          "valA8": "2x 千兆以太网"
+
+        },
+
+        {
+
+          "label": "显示",
+
+          "val28": "1x HDMI 2.0",
+
+          "valA8": "1x HDMI 2.0"
+
+        },
+
+        {
+
+          "label": "其他接口",
+
+          "val28": "2x SATA 3.0，1x CAN，1x SD/SDIO，4x UART，4x I2C，6x PWM，2x SPI，ADC，GPIO",
+
+          "valA8": "2x SATA 3.0，1x CAN，1x SD/SDIO，4x UART，4x I2C，6x PWM，2x SPI，ADC，GPIO"
+
+        },
+
+        {
+
+          "label": "供电",
+
+          "val28": "DC 5V",
+
+          "valA8": "DC 5V"
+
+        },
+
+        {
+
+          "label": "工作温度",
+
+          "val28": "-20 C 到 +70 C",
+
+          "valA8": "标准版：-20 C 到 +70 C；工业版：-40 C 到 +85 C"
+
+        },
+
+        {
+
+          "label": "尺寸",
+
+          "val28": "69.6mm x 45mm x 5mm",
+
+          "valA8": "69.6mm x 45mm x 5mm"
+
+        },
+
+        {
+
+          "label": "连接器",
+
+          "val28": "260-pin SO-DIMM",
+
+          "valA8": "260-pin SO-DIMM"
+
+        }
+
+      ],
+
+      "mobileScrollHint": "横向滚动查看更多",
+
+      "ctaTitlePrefix": "为下一代",
+
+      "ctaTitleAccent": "边缘方案而设计",
+
+      "ctaPrimary": "申请评估",
+
+      "ctaSecondary": "下载文档",
+
+      "heroImageAlt": "SM9 计算模组主视觉图",
+
+      "overviewImageAlt": "SM9 产品概览图"
 
     },
 

@@ -27,7 +27,9 @@
                         "computingModule": "Computing Module",
                         "cameraModule": "Camera Module",
                         "module": "Module",
-                        "afcDesc": "The ultimate answer for the next generation of UAV brains."
+                        "afcDesc": "The ultimate answer for the next generation of UAV brains.",
+                        "sm9Desc": "16T AI, 8-core ARM CA53, pin-compatible with NVIDIA Jetson modules.",
+                        "cameraModuleDesc": "Industrial-grade edge AI camera modules for vision-first systems."
       },
 
       "solutions": "Solutions",
@@ -1800,6 +1802,344 @@
         }
 
       }
+
+    },
+
+    "sm9": {
+
+      "metaTitle": "SM9 Computing Module | 16-CH HD AI Analysis | NVIDIA Jetson Pin-Compatible | AIMORELOGY",
+
+      "metaDescription": "SM9 computing module with 8-core ARM CA53 architecture, 16-channel HD intelligent video analysis, and pin compatibility with NVIDIA Jetson.",
+
+      "categoryLabel": "Industrial AI Module",
+
+      "heroTitleMain": "SM9",
+
+      "heroTitleAccent": "SERIES",
+
+      "tagline": "Pin-to-pin compatible with NVIDIA Jetson modules, designed for high-density edge AI deployment.",
+
+      "primaryCta": "Contact Support",
+
+      "overviewTitle": "Enterprise Computing Performance",
+
+      "longDescription": [
+
+        "SM9 is a high-efficiency 8-core ARM CA53 computing module tailored for 16-channel HD intelligent video analytics at the edge.",
+
+        "The module supports mixed-precision inference, advanced ISP processing, and hardware acceleration for stitching, depth estimation, and dewarp pipelines.",
+
+        "With Jetson pin compatibility and industrial interface density, SM9 enables rapid migration and cost-optimized deployment for AI cameras, robotics, and NVR platforms."
+
+      ],
+
+      "featuresTitle": "Architectural Superiority",
+
+      "detailedFeatures": [
+
+        {
+
+          "title": "High Energy Efficiency",
+
+          "description": "8-core ARM CA53 architecture with INT4/INT8/FP16/BF16/FP32 support for diverse edge AI workloads."
+
+        },
+
+        {
+
+          "title": "Multichannel Multimedia",
+
+          "description": "Hardware acceleration for 16-channel decode and 10-channel encode, supporting 8K/4K/1080p processing."
+
+        },
+
+        {
+
+          "title": "Integrated CV Engine",
+
+          "description": "Built-in DPU, stitching, and fisheye dewarp acceleration for real-time computer vision pipelines."
+
+        },
+
+        {
+
+          "title": "Rich Storage and Memory",
+
+          "description": "Configurations up to 16 GB LPDDR4 and 64 GB eMMC 5.1 for high-throughput, persistent edge inference."
+
+        },
+
+        {
+
+          "title": "High-Speed I/O Expansion",
+
+          "description": "Dual PCIe Gen3 lanes, dual USB 3.0, dual Gigabit Ethernet, SATA 3.0, and CAN for platform integration."
+
+        },
+
+        {
+
+          "title": "Industrial Reliability",
+
+          "description": "Compact 260-pin SO-DIMM form factor with optional industrial temperature support down to -40 C."
+
+        }
+
+      ],
+
+      "stats": [
+
+        {
+
+          "value": "16T",
+
+          "label": "AI Throughput"
+
+        },
+
+        {
+
+          "value": "8-Core",
+
+          "label": "ARM CA53 CPU"
+
+        },
+
+        {
+
+          "value": "8K/4K",
+
+          "label": "Video Codec"
+
+        },
+
+        {
+
+          "value": "Jetson",
+
+          "label": "Pin-Compatible"
+
+        }
+
+      ],
+
+      "specsTitle": "Technical Specifications",
+
+      "specsSubtitle": "Comprehensive parameter comparison for SM9 series modules.",
+
+      "specsTableItem": "Specification",
+
+      "specsTableModel28": "SM9 16-ENC-28",
+
+      "specsTableModelA8": "SM9 16-ENC-A8",
+
+      "fullSpecs": [
+
+        {
+
+          "label": "Processor",
+
+          "val28": "8-core ARM CA53",
+
+          "valA8": "8-core ARM CA53"
+
+        },
+
+        {
+
+          "label": "Performance",
+
+          "val28": "16-channel HD video intelligent analysis",
+
+          "valA8": "16-channel HD video intelligent analysis"
+
+        },
+
+        {
+
+          "label": "Memory",
+
+          "val28": "16GB LPDDR4 64-bit 4266Mbps",
+
+          "valA8": "8GB LPDDR4 64-bit 4266Mbps"
+
+        },
+
+        {
+
+          "label": "Storage",
+
+          "val28": "64GB eMMC 5.1",
+
+          "valA8": "32GB eMMC 5.1"
+
+        },
+
+        {
+
+          "label": "Video Decoding",
+
+          "val28": "H.264/H.265: 16x 1080p@30fps, up to 8192x8192",
+
+          "valA8": "H.264/H.265: 16x 1080p@30fps, up to 8192x8192"
+
+        },
+
+        {
+
+          "label": "Video Encoding",
+
+          "val28": "H.264/H.265: 10x 1080p@30fps, up to 8K",
+
+          "valA8": "H.264/H.265: 10x 1080p@30fps, up to 8K"
+
+        },
+
+        {
+
+          "label": "Image Codec",
+
+          "val28": "JPEG: 1080p@480fps, up to 32768x32768",
+
+          "valA8": "JPEG: 1080p@480fps, up to 32768x32768"
+
+        },
+
+        {
+
+          "label": "Audio/Video Input",
+
+          "val28": "6x VI, 2x I2S, stereo input/output (optional)",
+
+          "valA8": "6x VI, 2x I2S, stereo input/output (optional)"
+
+        },
+
+        {
+
+          "label": "ISP",
+
+          "val28": "2x 8MP@30, 2f-HDR, 3DNR, LDC, 3A, Dehaze",
+
+          "valA8": "2x 8MP@30, 2f-HDR, 3DNR, LDC, 3A, Dehaze"
+
+        },
+
+        {
+
+          "label": "CV Acceleration",
+
+          "val28": "IVE/VPSS + DPU + Stitch + Dewarp",
+
+          "valA8": "IVE/VPSS + DPU + Stitch + Dewarp"
+
+        },
+
+        {
+
+          "label": "PCIe",
+
+          "val28": "PCIe Gen3: 1x2 + 1x2, RC & EP",
+
+          "valA8": "PCIe Gen3: 1x2 + 1x2, RC & EP"
+
+        },
+
+        {
+
+          "label": "USB",
+
+          "val28": "2x USB 3.0, 2x USB 2.0",
+
+          "valA8": "2x USB 3.0, 2x USB 2.0"
+
+        },
+
+        {
+
+          "label": "Network",
+
+          "val28": "2x Gigabit Ethernet",
+
+          "valA8": "2x Gigabit Ethernet"
+
+        },
+
+        {
+
+          "label": "Display",
+
+          "val28": "1x HDMI 2.0",
+
+          "valA8": "1x HDMI 2.0"
+
+        },
+
+        {
+
+          "label": "Other Interfaces",
+
+          "val28": "2x SATA 3.0, 1x CAN, 1x SD/SDIO, 4x UART, 4x I2C, 6x PWM, 2x SPI, ADC, GPIO",
+
+          "valA8": "2x SATA 3.0, 1x CAN, 1x SD/SDIO, 4x UART, 4x I2C, 6x PWM, 2x SPI, ADC, GPIO"
+
+        },
+
+        {
+
+          "label": "Power Supply",
+
+          "val28": "DC 5V",
+
+          "valA8": "DC 5V"
+
+        },
+
+        {
+
+          "label": "Operating Temperature",
+
+          "val28": "-20 C to +70 C",
+
+          "valA8": "Standard: -20 C to +70 C; Industrial: -40 C to +85 C"
+
+        },
+
+        {
+
+          "label": "Dimensions",
+
+          "val28": "69.6mm x 45mm x 5mm",
+
+          "valA8": "69.6mm x 45mm x 5mm"
+
+        },
+
+        {
+
+          "label": "Connector",
+
+          "val28": "260-pin SO-DIMM",
+
+          "valA8": "260-pin SO-DIMM"
+
+        }
+
+      ],
+
+      "mobileScrollHint": "Scroll to view more",
+
+      "ctaTitlePrefix": "Design Your Next",
+
+      "ctaTitleAccent": "Edge Solution",
+
+      "ctaPrimary": "Request Evaluation",
+
+      "ctaSecondary": "Download Docs",
+
+      "heroImageAlt": "SM9 computing module hero image",
+
+      "overviewImageAlt": "SM9 product overview image"
 
     },
 
