@@ -22,11 +22,12 @@
 
       "products": {
 
-                "flightController": "飞行控制器",
-                "allInOne": "多合一 FC",
-                "computingModule": "计算模块",
-                "afcDesc": "下一代 FPV 飞控的最终答案。"
-
+                        "flightController": "飞行控制器",
+                        "allInOne": "多合一 FC",
+                        "computingModule": "计算模块",
+                        "cameraModule": "相机模块",
+                        "module": "模块",
+                        "afcDesc": "下一代 FPV 飞控的最终答案。"
       },
 
       "solutions": "解决方案",

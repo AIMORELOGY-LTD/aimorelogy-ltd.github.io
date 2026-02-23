@@ -97,15 +97,25 @@ const Header: React.FC = () => {
           ]
         },
         {
-          name: t('header.menu.products.computingModule'),
+          name: t('header.menu.products.module'),
           categories: [
             {
-              title: 'Module',
+              title: t('header.menu.products.computingModule'),
               items: [
                 {
                   model: 'SM9',
                   description: '16T AI, 8-Core ARM, Jetson Pin-Compatible.',
                   to: withLang(lang, RoutePath.PRODUCT_SM9)
+                }
+              ]
+            },
+            {
+              title: t('header.menu.products.cameraModule'),
+              items: [
+                {
+                  model: t('header.comingSoon'),
+                  description: 'Industrial Grade Edge AI Cameras.',
+                  to: '#'
                 }
               ]
             }

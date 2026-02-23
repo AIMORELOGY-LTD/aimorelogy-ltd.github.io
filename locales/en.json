@@ -22,11 +22,12 @@
 
       "products": {
 
-                "flightController": "Flight Controller",
-                "allInOne": "All-In-One FC",
-                "computingModule": "Computing Module",
-                "afcDesc": "The ultimate answer for the next generation of UAV brains."
-
+                        "flightController": "Flight Controller",
+                        "allInOne": "All-In-One FC",
+                        "computingModule": "Computing Module",
+                        "cameraModule": "Camera Module",
+                        "module": "Module",
+                        "afcDesc": "The ultimate answer for the next generation of UAV brains."
       },
 
       "solutions": "Solutions",
