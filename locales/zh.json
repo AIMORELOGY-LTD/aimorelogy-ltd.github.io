@@ -4397,6 +4397,14 @@
 
       "heroImageAlt": "SM9 计算模组主视觉图",
 
+      "bm1688BridgeBadge": "SM9 + BM1688 协同架构",
+
+      "bm1688BridgeTitle": "从端侧 SM9 到 BM1688 边缘节点的统一扩展",
+
+      "bm1688BridgeDescription": "在端侧以 SM9 承载高密度多路视觉推理，在边缘网关或边缘服务器侧由 BM1688 执行更高算力的聚合分析与模型统一调度。该拓扑可在摄像头模组到边缘节点之间保持一致的软件栈与部署路径。",
+
+      "bm1688BridgeButton": "查看 BM1688",
+
       "overviewImageAlt": "SM9 产品概览图"
 
     },

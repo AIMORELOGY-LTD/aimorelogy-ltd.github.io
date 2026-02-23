@@ -13,6 +13,7 @@ const DATA_FILES = {
 const STATIC_BASE_PATHS = [
   '/',
   '/products/afc-v1',
+  '/products/computing-module/sm9',
   '/solutions/ai-camera',
   '/technology/ai-tracking',
   '/technology/control-protocol',

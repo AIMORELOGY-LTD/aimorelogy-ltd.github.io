@@ -160,8 +160,16 @@ const ProductDetail_SOPHGO: React.FC = () => {
     const image = localizedProduct.applications?.[0]?.image || '/icon.webp';
     const variants = SOPHGO_VARIANTS[localizedProduct.id] || [];
     const expandedVariants = expandHyphenVariants(variants);
-    const keywords = buildChipKeywords('SOPHGO', displayName, variants);
-    const jsonLd = {
+    const sm9RelatedKeywords =
+      localizedProduct.id === 'bm1688'
+        ? lang === 'zh'
+          ? ['SM9 计算模组', 'BM1688 与 SM9 协同架构', '端边协同 AI 计算']
+          : lang === 'ru'
+          ? ['вычислительный модуль SM9', 'архитектура BM1688 и SM9', 'распределенные edge AI вычисления']
+          : ['SM9 computing module', 'BM1688 and SM9 architecture', 'distributed edge AI compute']
+        : [];
+    const keywords = [buildChipKeywords('SOPHGO', displayName, variants), ...sm9RelatedKeywords].join(', ');
+    const jsonLd: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: `SOPHGO ${displayName}`,
@@ -171,8 +179,15 @@ const ProductDetail_SOPHGO: React.FC = () => {
       manufacturer: 'SOPHGO',
       sku: displayName
     };
+    if (localizedProduct.id === 'bm1688') {
+      jsonLd.isRelatedTo = {
+        '@type': 'Product',
+        name: 'SM9',
+        url: `https://aimorelogy.com${withLang(lang, '/products/computing-module/sm9/')}`
+      };
+    }
     return { metaTitle, metaDescription, image, jsonLd, keywords };
-  }, [localizedProduct, t]);
+  }, [lang, localizedProduct, t]);
 
   const isCv184 = localizedProduct?.id === 'cv184';
   const isCv181 = localizedProduct?.id === 'cv181';

@@ -1,4 +1,5 @@
 ﻿import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Cpu,
   ShieldCheck,
@@ -10,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Seo from '../components/Seo';
+import { useLang, withLang } from '../i18n-routing';
 
 interface FeatureItem {
   title: string;
@@ -83,7 +85,49 @@ const FALLBACK_SPECS: SpecItem[] = [
   { label: 'Connector', val28: '260-pin SO-DIMM', valA8: '260-pin SO-DIMM' }
 ];
 
+const SITE_ORIGIN = 'https://aimorelogy.com';
+
+const SM9_SEO_KEYWORDS: Record<string, string[]> = {
+  en: [
+    'SM9',
+    'SM9 computing module',
+    'SM9 16-ENC-28',
+    'SM9 16-ENC-A8',
+    'AIMORELOGY SM9',
+    '16-channel HD video analytics',
+    'Jetson pin-compatible module',
+    'edge AI computing module',
+    'BM1688',
+    'BM1688 SM9 architecture'
+  ],
+  zh: [
+    'SM9',
+    'SM9 计算模组',
+    'SM9 16-ENC-28',
+    'SM9 16-ENC-A8',
+    'AIMORELOGY SM9',
+    '16路高清视频智能分析',
+    'Jetson 引脚兼容模组',
+    '边缘AI计算模组',
+    'BM1688',
+    'BM1688 与 SM9 协同架构'
+  ],
+  ru: [
+    'SM9',
+    'вычислительный модуль SM9',
+    'SM9 16-ENC-28',
+    'SM9 16-ENC-A8',
+    'AIMORELOGY SM9',
+    '16-канальный HD видеоанализ',
+    'pin-compatible с Jetson',
+    'edge AI модуль',
+    'BM1688',
+    'архитектура BM1688 и SM9'
+  ]
+};
+
 const ProductDetail_SM9: React.FC = () => {
+  const lang = useLang();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -133,14 +177,69 @@ const ProductDetail_SM9: React.FC = () => {
       ctaTitleAccent: t('products.sm9.ctaTitleAccent', { defaultValue: 'Edge Solution' }),
       ctaPrimary: t('products.sm9.ctaPrimary', { defaultValue: 'Request Evaluation' }),
       ctaSecondary: t('products.sm9.ctaSecondary', { defaultValue: 'Download Docs' }),
+      bm1688BridgeBadge: t('products.sm9.bm1688BridgeBadge', {
+        defaultValue: 'SM9 + BM1688 Architecture'
+      }),
+      bm1688BridgeTitle: t('products.sm9.bm1688BridgeTitle', {
+        defaultValue: 'Scale from Endpoint Modules to BM1688 Edge Nodes'
+      }),
+      bm1688BridgeDescription: t('products.sm9.bm1688BridgeDescription', {
+        defaultValue:
+          'Use SM9 for high-density multi-channel vision inference at the endpoint, then pair with BM1688 for higher-compute aggregation, model consolidation, and cross-device orchestration. This topology keeps deployment paths consistent from camera-side modules to edge servers.'
+      }),
+      bm1688BridgeButton: t('products.sm9.bm1688BridgeButton', { defaultValue: 'Explore BM1688' }),
       heroImageAlt: t('products.sm9.heroImageAlt', { defaultValue: 'SM9 computing module hero image' }),
       overviewImageAlt: t('products.sm9.overviewImageAlt', { defaultValue: 'SM9 product overview image' })
     };
   }, [getArray, t]);
 
+  const bm1688Path = React.useMemo(() => withLang(lang, '/products/sophgo/bm1688/'), [lang]);
+
+  const seo = React.useMemo(() => {
+    const keywords = (SM9_SEO_KEYWORDS[lang] || SM9_SEO_KEYWORDS.en).join(', ');
+    const sm9Url = `${SITE_ORIGIN}${withLang(lang, '/products/computing-module/sm9/')}`;
+    const bm1688Url = `${SITE_ORIGIN}${bm1688Path}`;
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'SM9',
+      brand: { '@type': 'Brand', name: 'AIMORELOGY' },
+      manufacturer: { '@type': 'Organization', name: 'AIMORELOGY' },
+      description: content.metaDescription,
+      sku: 'SM9',
+      model: 'SM9 16-ENC-28 / SM9 16-ENC-A8',
+      category:
+        lang === 'zh'
+          ? '边缘AI计算模组'
+          : lang === 'ru'
+          ? 'Вычислительный edge AI модуль'
+          : 'Edge AI computing module',
+      url: sm9Url,
+      additionalProperty: [
+        { '@type': 'PropertyValue', name: 'AI Throughput', value: '16T' },
+        { '@type': 'PropertyValue', name: 'CPU', value: '8-core ARM CA53' },
+        { '@type': 'PropertyValue', name: 'Video Analytics', value: '16-channel HD intelligent analysis' },
+        { '@type': 'PropertyValue', name: 'Form Factor', value: '260-pin SO-DIMM' }
+      ],
+      isRelatedTo: {
+        '@type': 'Product',
+        name: 'SOPHGO BM1688',
+        url: bm1688Url
+      }
+    };
+    return { keywords, jsonLd };
+  }, [bm1688Path, content.metaDescription, lang]);
+
   return (
     <div className="bg-[#111111] text-white min-h-screen font-sans overflow-x-hidden">
-      <Seo title={content.metaTitle} description={content.metaDescription} />
+      <Seo
+        title={content.metaTitle}
+        description={content.metaDescription}
+        image="/products/SM9/banner-sm.webp"
+        keywords={seo.keywords}
+        type="product"
+        jsonLd={seo.jsonLd}
+      />
 
       <section className="relative h-[70vh] md:h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -214,6 +313,33 @@ const ProductDetail_SM9: React.FC = () => {
                   </p>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-[#161616] border-y border-white/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
+            <div>
+              <div className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-[#76b900] font-black mb-4">
+                {content.bm1688BridgeBadge}
+              </div>
+              <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4">
+                {content.bm1688BridgeTitle}
+              </h2>
+              <p className="text-gray-400 text-sm md:text-lg leading-relaxed max-w-3xl">
+                {content.bm1688BridgeDescription}
+              </p>
+            </div>
+            <div className="flex lg:justify-end">
+              <Link
+                to={bm1688Path}
+                className="inline-flex items-center justify-center px-8 py-4 border border-[#4f4398] text-white hover:bg-[#4f4398] transition-all font-black uppercase tracking-[0.15em] text-xs md:text-sm whitespace-nowrap"
+              >
+                {content.bm1688BridgeButton}
+                <ArrowRight className="ml-3 w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>

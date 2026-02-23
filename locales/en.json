@@ -2139,6 +2139,14 @@
 
       "heroImageAlt": "SM9 computing module hero image",
 
+      "bm1688BridgeBadge": "SM9 + BM1688 Architecture",
+
+      "bm1688BridgeTitle": "Scale from Endpoint Modules to BM1688 Edge Nodes",
+
+      "bm1688BridgeDescription": "Use SM9 for high-density multi-channel vision inference at the endpoint, then pair with BM1688 for higher-compute aggregation, model consolidation, and cross-device orchestration. This topology keeps deployment paths consistent from camera-side modules to edge servers.",
+
+      "bm1688BridgeButton": "Explore BM1688",
+
       "overviewImageAlt": "SM9 product overview image"
 
     },
