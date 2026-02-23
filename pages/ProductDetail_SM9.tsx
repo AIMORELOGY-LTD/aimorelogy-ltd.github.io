@@ -229,6 +229,7 @@ const ProductDetail_SM9: React.FC = () => {
     };
     return { keywords, jsonLd };
   }, [bm1688Path, content.metaDescription, lang]);
+  const datasheetHref = `${import.meta.env.BASE_URL}docs/sm9/AM_SM9_Brief.pdf`;
 
   return (
     <div className="bg-[#111111] text-white min-h-screen font-sans overflow-x-hidden">
@@ -417,9 +418,15 @@ const ProductDetail_SM9: React.FC = () => {
               <button className="px-8 md:px-12 py-4 md:py-6 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center">
                 {content.ctaPrimary}
               </button>
-              <button className="px-8 md:px-12 py-4 md:py-6 bg-transparent border-2 border-white/20 hover:border-white transition-all font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center">
+              <a
+                href={datasheetHref}
+                download="AM_SM9_Brief.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 md:px-12 py-4 md:py-6 bg-transparent border-2 border-white/20 hover:border-white transition-all font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center"
+              >
                 {content.ctaSecondary}
-              </button>
+              </a>
             </div>
           </div>
         </div>
