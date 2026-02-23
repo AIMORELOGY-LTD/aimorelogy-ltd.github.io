@@ -1,29 +1,18 @@
+
 import React, { useEffect } from 'react';
 import { 
-  CheckCircle, 
   Cpu, 
   Zap,
-  Activity,
   ShieldCheck,
-  Maximize2,
   Box,
-  Settings,
-  BarChart3,
   Aperture,
-  Code,
-  Database,
-  Smartphone,
-  Check,
   ChevronRight,
   ArrowRight,
   Monitor,
-  Layers,
-  Wind,
   HardDrive,
   Share2
 } from 'lucide-react';
 import { MODULE_DATA } from '../data/moduleData';
-import { RoutePath } from '../types';
 import { useTranslation } from 'react-i18next';
 import Seo from '../components/Seo';
 
@@ -60,40 +49,39 @@ const ProductDetail_SM9: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#111111] text-white min-h-screen font-sans">
+    <div className="bg-[#111111] text-white min-h-screen font-sans overflow-x-hidden">
       <Seo 
         title={chip.metaTitle}
         description={chip.metaDescription}
       />
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center overflow-hidden">
+      <section className="relative h-[70vh] md:h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="/products/SM9/banner-sm.webp" 
             alt="SM9 Computing Module Cover"
-            className="w-full h-full object-cover opacity-100 scale-100"
+            className="w-full h-full object-cover opacity-100 scale-105"
           />
-          {/* Transparent Gradient Overlay - Adjusted to be MORE clear (15% opacity) */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/15 to-transparent" />
         </div>
         
-        <div className="container mx-auto px-6 relative z-10 pt-20">
+        <div className="container mx-auto px-6 relative z-10 pt-24 md:pt-20">
           <div className="max-w-4xl">
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="w-12 h-[2px] bg-[#76b900]" />
-              <span className="text-xs font-black uppercase tracking-[0.3em] text-[#76b900]">Industrial AI Module</span>
+            <div className="flex items-center space-x-3 mb-6 md:mb-8">
+              <div className="w-8 md:w-12 h-[2px] bg-[#76b900]" />
+              <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-[#76b900]">Industrial AI Module</span>
             </div>
-            <h1 className="text-7xl md:text-9xl font-black mb-8 uppercase leading-[0.85] tracking-tighter drop-shadow-2xl">
-              SM9 <br/><span className="text-[#4f4398]">SERIES</span>
+            <h1 className="text-5xl md:text-9xl font-black mb-6 md:mb-8 uppercase leading-[0.9] md:leading-[0.85] tracking-tighter drop-shadow-2xl">
+              SM9 <br className="hidden md:block"/><span className="text-[#4f4398]">SERIES</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-100 font-light leading-snug mb-12 max-w-2xl drop-shadow-lg">
+            <p className="text-lg md:text-3xl text-gray-100 font-light leading-snug mb-8 md:mb-12 max-w-2xl drop-shadow-lg">
               {chip.tagline}
             </p>
-            <div className="flex gap-6">
-               <button className="px-10 py-5 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-sm flex items-center group shadow-2xl">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+               <button className="px-8 md:px-10 py-4 md:py-5 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center group shadow-2xl">
                   Contact Support
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="ml-3 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-2 transition-transform" />
                </button>
             </div>
           </div>
@@ -101,37 +89,36 @@ const ProductDetail_SM9: React.FC = () => {
       </section>
 
       {/* Key Stats Bar */}
-      <section className="bg-[#1a1a1a] py-12 border-y border-white/5">
+      <section className="bg-[#1a1a1a] py-8 md:py-12 border-y border-white/5">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
-            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
-              <div className="text-4xl font-black text-white uppercase leading-none">16T</div>
-              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">AI Analysis</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-left">
+            <div className="space-y-1 md:space-y-2 border-l-2 border-[#4f4398] pl-4 md:pl-6">
+              <div className="text-2xl md:text-4xl font-black text-white uppercase leading-none">16T</div>
+              <div className="text-[8px] md:text-[10px] font-bold text-gray-500 uppercase tracking-widest">AI Analysis</div>
             </div>
-            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
-              <div className="text-4xl font-black text-white uppercase leading-none">8-Core</div>
-              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">ARM Architecture</div>
+            <div className="space-y-1 md:space-y-2 border-l-2 border-[#4f4398] pl-4 md:pl-6">
+              <div className="text-2xl md:text-4xl font-black text-white uppercase leading-none">8-Core</div>
+              <div className="text-[8px] md:text-[10px] font-bold text-gray-500 uppercase tracking-widest">ARM Arch</div>
             </div>
-            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
-              <div className="text-4xl font-black text-white uppercase leading-none">8K/4K</div>
-              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Video Codec</div>
+            <div className="space-y-1 md:space-y-2 border-l-2 border-[#4f4398] pl-4 md:pl-6">
+              <div className="text-2xl md:text-4xl font-black text-white uppercase leading-none">8K/4K</div>
+              <div className="text-[8px] md:text-[10px] font-bold text-gray-500 uppercase tracking-widest">Video Codec</div>
             </div>
-            <div className="space-y-2 border-l-2 border-[#4f4398] pl-6">
-              <div className="text-4xl font-black text-white uppercase leading-none">Jetson</div>
-              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Pin-Compatible</div>
+            <div className="space-y-1 md:space-y-2 border-l-2 border-[#4f4398] pl-4 md:pl-6">
+              <div className="text-2xl md:text-4xl font-black text-white uppercase leading-none">Jetson</div>
+              <div className="text-[8px] md:text-[10px] font-bold text-gray-500 uppercase tracking-widest">Compatible</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Product Overview Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-16 md:py-32 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            {/* Overview Image - SM9-1.webp as requested */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative group">
-                <div className="absolute -inset-10 bg-[#4f4398]/10 blur-[120px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute -inset-6 md:-inset-10 bg-[#4f4398]/10 blur-[60px] md:blur-[120px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
                 <img 
                   src="/products/SM9/SM9-1.webp" 
                   alt="SM9 Product Overview"
@@ -140,10 +127,10 @@ const ProductDetail_SM9: React.FC = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-5xl font-black mb-10 uppercase tracking-tighter underline decoration-[#76b900] decoration-8 underline-offset-8">Enterprise <br/>Computing Performance</h2>
-              <div className="space-y-8">
+              <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-10 uppercase tracking-tighter underline decoration-[#76b900] decoration-4 md:decoration-8 underline-offset-4 md:underline-offset-8">Enterprise <br/>Computing Performance</h2>
+              <div className="space-y-4 md:space-y-8">
                 {chip.longDescription.map((p, i) => (
-                  <p key={i} className="text-gray-400 text-xl leading-relaxed font-light">
+                  <p key={i} className="text-gray-400 text-base md:text-xl leading-relaxed font-light">
                     {p}
                   </p>
                 ))}
@@ -154,23 +141,23 @@ const ProductDetail_SM9: React.FC = () => {
       </section>
 
       {/* Feature Grid */}
-      <section className="py-32 bg-black/50">
+      <section className="py-16 md:py-32 bg-black/50">
         <div className="container mx-auto px-6 text-center">
-           <h2 className="text-4xl md:text-6xl font-black uppercase mb-24 tracking-tighter">Architectural Superiority</h2>
+           <h2 className="text-3xl md:text-6xl font-black uppercase mb-12 md:mb-24 tracking-tighter">Architectural Superiority</h2>
            
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
               {chip.detailedFeatures.map((feature, index) => (
-                <div key={index} className="bg-[#111111] p-16 text-left hover:bg-[#151515] transition-colors group">
-                  <div className="mb-10 text-[#4f4398] group-hover:text-[#76b900] transition-colors">
-                    {index === 0 && <Cpu size={48} strokeWidth={1} />}
-                    {index === 1 && <Monitor size={48} strokeWidth={1} />}
-                    {index === 2 && <Aperture size={48} strokeWidth={1} />}
-                    {index === 3 && <HardDrive size={48} strokeWidth={1} />}
-                    {index === 4 && <Share2 size={48} strokeWidth={1} />}
-                    {index === 5 && <ShieldCheck size={48} strokeWidth={1} />}
+                <div key={index} className="bg-[#111111] p-8 md:p-16 text-left hover:bg-[#151515] transition-colors group">
+                  <div className="mb-6 md:mb-10 text-[#4f4398] group-hover:text-[#76b900] transition-colors">
+                    {index === 0 && <Cpu size={32} md:size={48} strokeWidth={1} />}
+                    {index === 1 && <Monitor size={32} md:size={48} strokeWidth={1} />}
+                    {index === 2 && <Aperture size={32} md:size={48} strokeWidth={1} />}
+                    {index === 3 && <HardDrive size={32} md:size={48} strokeWidth={1} />}
+                    {index === 4 && <Share2 size={32} md:size={48} strokeWidth={1} />}
+                    {index === 5 && <ShieldCheck size={32} md:size={48} strokeWidth={1} />}
                   </div>
-                  <h3 className="text-2xl font-bold mb-6 uppercase tracking-tight">{feature.title}</h3>
-                  <p className="text-gray-500 font-light leading-relaxed text-lg italic">{feature.description}</p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 uppercase tracking-tight">{feature.title}</h3>
+                  <p className="text-gray-500 font-light leading-relaxed text-sm md:text-lg italic">{feature.description}</p>
                 </div>
               ))}
            </div>
@@ -178,49 +165,52 @@ const ProductDetail_SM9: React.FC = () => {
       </section>
 
       {/* Detailed Full Specification Table */}
-      <section className="py-32">
+      <section className="py-16 md:py-32 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="mb-20 text-center lg:text-left">
-            <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Complete Technical Specifications</h2>
-            <p className="text-gray-500 font-light max-w-xl">Comprehensive parameter comparison for the SM9 series computing modules.</p>
+          <div className="mb-12 md:mb-20 text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">Technical Specs</h2>
+            <p className="text-gray-500 font-light max-w-xl text-sm md:text-base">Comprehensive parameter comparison for the SM9 series modules.</p>
           </div>
 
-          <div className="overflow-x-auto border border-white/10 rounded-sm">
-            <table className="w-full border-collapse">
+          <div className="overflow-x-auto border border-white/10 rounded-sm scrollbar-thin scrollbar-thumb-gray-700">
+            <table className="w-full border-collapse min-w-[700px]">
               <thead>
                 <tr className="bg-[#1a1a1a] text-left">
-                  <th className="p-8 uppercase text-xs font-black border-b border-white/10 tracking-[0.3em] text-[#76b900] w-1/4">Specification Item</th>
-                  <th className="p-8 uppercase text-xs font-black border-b border-white/10 tracking-[0.3em] w-1/3">SM9 16-ENC-28 (High End)</th>
-                  <th className="p-8 uppercase text-xs font-black border-b border-white/10 tracking-[0.3em] w-1/3 text-gray-400">SM9 16-ENC-A8</th>
+                  <th className="p-4 md:p-8 uppercase text-[10px] md:text-xs font-black border-b border-white/10 tracking-widest text-[#76b900] w-1/4">Spec Item</th>
+                  <th className="p-4 md:p-8 uppercase text-[10px] md:text-xs font-black border-b border-white/10 tracking-widest w-1/3">SM9 16-ENC-28</th>
+                  <th className="p-4 md:p-8 uppercase text-[10px] md:text-xs font-black border-b border-white/10 tracking-widest w-1/3 text-gray-400">SM9 16-ENC-A8</th>
                 </tr>
               </thead>
               <tbody className="text-gray-400 font-light">
                 {fullSpecs.map((spec, i) => (
-                  <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
-                    <td className="p-8 text-white font-bold text-sm bg-white/[0.01] uppercase tracking-wider">{spec.label}</td>
-                    <td className="p-8 text-sm leading-relaxed text-gray-200">{spec.val28}</td>
-                    <td className="p-8 text-sm leading-relaxed">{spec.valA8}</td>
+                  <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors text-xs md:text-sm">
+                    <td className="p-4 md:p-8 text-white font-bold bg-white/[0.01] uppercase tracking-wider">{spec.label}</td>
+                    <td className="p-4 md:p-8 leading-relaxed text-gray-200">{spec.val28}</td>
+                    <td className="p-4 md:p-8 leading-relaxed">{spec.valA8}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <div className="mt-4 flex items-center justify-center lg:hidden text-[10px] text-gray-500 uppercase tracking-widest animate-pulse">
+             <ArrowRight size={12} className="mr-2" /> Scroll to view more <ArrowRight size={12} className="ml-2" />
+          </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-40 bg-[#111111] relative border-t border-white/5">
+      <section className="py-24 md:py-40 bg-[#111111] relative border-t border-white/5">
         <div className="container mx-auto px-6 text-center">
            <div className="max-w-4xl mx-auto">
-              <h2 className="text-6xl md:text-8xl font-black uppercase mb-12 tracking-tighter leading-none">
-                Design Your <br/>Next <span className="text-[#4f4398]">Edge Solution</span>
+              <h2 className="text-4xl md:text-8xl font-black uppercase mb-8 md:mb-12 tracking-tighter leading-tight md:leading-none">
+                Design Your <br className="md:hidden"/>Next <span className="text-[#4f4398]">Edge Solution</span>
               </h2>
-              <div className="flex flex-col md:flex-row justify-center gap-8 mt-16">
-                 <button className="px-12 py-6 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-sm flex items-center justify-center">
-                    Request Evaluation Unit
+              <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-8 mt-10 md:mt-16">
+                 <button className="px-8 md:px-12 py-4 md:py-6 bg-[#4f4398] hover:bg-[#5f52b3] transition-all font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center">
+                    Request Evaluation
                  </button>
-                 <button className="px-12 py-6 bg-transparent border-2 border-white/20 hover:border-white transition-all font-black uppercase tracking-widest text-sm flex items-center justify-center">
-                    Download SDK & Docs
+                 <button className="px-8 md:px-12 py-4 md:py-6 bg-transparent border-2 border-white/20 hover:border-white transition-all font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center">
+                    Download Docs
                  </button>
               </div>
            </div>
