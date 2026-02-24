@@ -3,6 +3,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
 import { useLang } from '../i18n-routing';
 import { RoutePath } from '../types';
 
@@ -18,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className={`flex flex-col min-h-screen bg-white text-gray-900 font-sans ${isRu ? 'lang-ru' : ''}`} lang={lang}>
+      <ScrollToTop />
       {isRu && (
         <style>{`
           .lang-ru {
