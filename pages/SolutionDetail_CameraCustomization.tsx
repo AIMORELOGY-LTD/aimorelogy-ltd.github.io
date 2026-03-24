@@ -60,18 +60,18 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-fadeIn">
-            <span className="text-[#a094e3] font-bold uppercase tracking-widest text-sm mb-4 block">
+            <span className="text-[#a094e3] font-bold uppercase tracking-widest text-xs md:text-sm mb-4 block">
               {t('solution.cameraCustomization.heroCategory')}
             </span>
-            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight uppercase">
+            <h1 className="text-2xl md:text-6xl font-black text-white mb-6 leading-tight uppercase">
               {t('solution.cameraCustomization.title')}
             </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl font-light">
+            <p className="text-base md:text-xl text-gray-200 mb-8 max-w-2xl font-light">
               {t('solution.cameraCustomization.subtitle')}
             </p>
             <Link 
               to={withLang(lang, RoutePath.CONTACT)}
-              className="inline-block bg-[#4f4398] text-white hover:bg-[#3e3479] px-8 py-4 font-bold text-sm uppercase tracking-wide transition-colors"
+              className="inline-block bg-[#4f4398] text-white hover:bg-[#3e3479] px-6 py-3 md:px-8 md:py-4 font-bold text-xs md:text-sm uppercase tracking-wide transition-colors"
             >
               {t('common.contactSales')}
             </Link>
@@ -80,23 +80,23 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       </section>
 
       {/* Introduction Philosophy */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-8 md:gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6 uppercase">
+              <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-6 uppercase">
                 {t('solution.cameraCustomization.intro.title')}
               </h2>
               <div className="h-1 w-20 bg-[#4f4398] mb-8"></div>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
                 {t('solution.cameraCustomization.intro.desc1')}
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {t('solution.cameraCustomization.intro.desc2')}
               </p>
             </div>
-            <div className="lg:w-1/2">
-               <div className="grid grid-cols-2 gap-4">
+            <div className="lg:w-1/2 w-full">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                  <div className="bg-gray-50 p-6 border border-gray-100 h-full">
                     <DollarSign className="text-[#4f4398] mb-4" size={32} />
                     <h3 className="text-lg font-bold text-gray-900 uppercase mb-2">{t('solution.cameraCustomization.spectrum.budget.title')}</h3>
@@ -114,26 +114,26 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       </section>
 
       {/* Visual Showcase & Capabilities */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6">
-           <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl font-black text-gray-900 uppercase mb-4">{t('solution.cameraCustomization.capabilities.title')}</h2>
-              <p className="text-gray-600">{t('solution.cameraCustomization.capabilities.subtitle')}</p>
+           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+              <h2 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mb-4">{t('solution.cameraCustomization.capabilities.title')}</h2>
+              <p className="text-sm md:text-base text-gray-600">{t('solution.cameraCustomization.capabilities.subtitle')}</p>
            </div>
 
            {/* Capability 1: High Performance */}
-           <div className="flex flex-col md:flex-row gap-12 items-center mb-24">
-              <div className="md:w-1/2 order-2 md:order-1">
+           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center mb-12 md:mb-24">
+              <div className="md:w-1/2 order-2 md:order-1 w-full">
                  <div>
                     <img src="/Cam/Cam_01.jpeg" alt="High Performance Camera Module" className="w-full h-auto" />
                  </div>
               </div>
-              <div className="md:w-1/2 order-1 md:order-2">
-                 <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3">
+              <div className="md:w-1/2 order-1 md:order-2 w-full">
+                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3">
                     <Aperture className="text-[#4f4398]" />
                     {t('solution.cameraCustomization.capabilities.cap1.title')}
                  </h3>
-                 <p className="text-gray-600 leading-relaxed mb-6">
+                 <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
                     {t('solution.cameraCustomization.capabilities.cap1.desc')}
                  </p>
                  <ul className="space-y-2">
@@ -152,13 +152,13 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
            </div>
 
            {/* Capability 2: Integration & Durability */}
-           <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2">
-                 <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3">
+           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+              <div className="md:w-1/2 w-full">
+                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3">
                     <Cpu className="text-[#4f4398]" />
                     {t('solution.cameraCustomization.capabilities.cap2.title')}
                  </h3>
-                 <p className="text-gray-600 leading-relaxed mb-6">
+                 <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
                     {t('solution.cameraCustomization.capabilities.cap2.desc')}
                  </p>
                  <ul className="space-y-2">
@@ -174,7 +174,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
                     ))}
                  </ul>
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 w-full">
                  <div>
                     <img src="/Cam/Cam_02.jpeg" alt="Compact Integration" className="w-full h-auto" />
                  </div>
@@ -184,11 +184,11 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       </section>
 
       {/* UAV/FPV Specific Features */}
-      <section className="py-24 bg-[#1a1a1a] text-white">
+      <section className="py-12 md:py-24 bg-[#1a1a1a] text-white">
         <div className="container mx-auto px-6">
-           <div className="text-center mb-16">
-             <h2 className="text-3xl font-black text-white uppercase">{t('solution.cameraCustomization.features.title')}</h2>
-             <p className="text-gray-400 mt-4 max-w-2xl mx-auto">{t('solution.cameraCustomization.features.subtitle')}</p>
+           <div className="text-center mb-12 md:mb-16">
+             <h2 className="text-2xl md:text-3xl font-black text-white uppercase">{t('solution.cameraCustomization.features.title')}</h2>
+             <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm md:text-base">{t('solution.cameraCustomization.features.subtitle')}</p>
            </div>
            
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -204,17 +204,17 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       </section>
 
       {/* Workflow */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="container mx-auto px-6">
-           <h2 className="text-3xl font-black text-gray-900 uppercase text-center mb-16">{t('solution.cameraCustomization.workflow.title')}</h2>
-           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+           <h2 className="text-2xl md:text-3xl font-black text-gray-900 uppercase text-center mb-12 md:mb-16">{t('solution.cameraCustomization.workflow.title')}</h2>
+           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-12">
               {workflowSteps.map((step, idx) => (
                 <div key={idx} className="relative">
-                   <div className="text-6xl font-black text-gray-100 absolute -top-8 -left-4 z-0 select-none">
+                   <div className="text-4xl md:text-6xl font-black text-gray-100 absolute -top-6 md:-top-8 -left-2 md:-left-4 z-0 select-none">
                      {step.num}
                    </div>
-                   <div className="relative z-10 pt-4">
-                      <h3 className="text-xl font-bold text-[#4f4398] uppercase mb-3">{step.title}</h3>
+                   <div className="relative z-10 pt-4 pl-4 md:pl-0">
+                      <h3 className="text-lg md:text-xl font-bold text-[#4f4398] uppercase mb-3">{step.title}</h3>
                       <p className="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
                    </div>
                    {/* Connector Line (Desktop Only) */}
@@ -228,17 +228,17 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#4f4398]">
+      <section className="py-12 md:py-24 bg-[#4f4398]">
         <div className="container mx-auto px-6 text-center">
-           <h2 className="text-3xl md:text-4xl font-black text-white uppercase mb-6">
+           <h2 className="text-2xl md:text-4xl font-black text-white uppercase mb-6">
              {t('solution.cameraCustomization.cta.title')}
            </h2>
-           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+           <p className="text-base md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
              {t('solution.cameraCustomization.cta.subtitle')}
            </p>
            <Link 
              to={withLang(lang, RoutePath.CONTACT)}
-             className="inline-block bg-white text-[#4f4398] px-10 py-4 font-bold text-sm uppercase hover:bg-gray-100 transition-colors shadow-lg"
+             className="inline-block bg-white text-[#4f4398] px-8 py-3 md:px-10 md:py-4 font-bold text-xs md:text-sm uppercase hover:bg-gray-100 transition-colors shadow-lg"
            >
              {t('solution.cameraCustomization.cta.button')}
            </Link>
