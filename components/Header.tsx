@@ -171,7 +171,7 @@ const Header: React.FC = () => {
                 {
                   model: t('header.menu.solutionsCameraModuleItem'),
                   description: t('header.menu.solutionsCameraModuleDesc'),
-                  to: withLang(lang, RoutePath.SOLUTION_AI_CAMERA)
+                  to: withLang(lang, RoutePath.SOLUTION_CAMERA_CUSTOMIZATION)
                 }
               ]
             }

@@ -1265,8 +1265,83 @@
 
     "discuss": "Discuss Your Project",
 
-    "download": "Download Brochure"
-
+    "download": "Download Brochure",
+    "cameraCustomization": {
+      "metaTitle": "Camera Module Customization | AIMORELOGY",
+      "metaDescription": "Professional camera module customization for UAVs, FPVs, and Robotics. From strict budget solutions to high-end global shutter sensors.",
+      "heroCategory": "Custom Solutions",
+      "title": "Camera Module Customization",
+      "subtitle": "From strict budget constraints to high-end professional customization, we tailor vision systems to your mission requirements.",
+      "intro": {
+        "title": "Tailored Vision for Every Mission",
+        "desc1": "In the world of FPV, UAV, and Robotics, standard off-the-shelf cameras often force compromises. At AIMORELOGY, we believe the sensor should fit the application, not the other way around.",
+        "desc2": "Whether you need a cost-effective sensor for mass-market consumer drones or a specialized global shutter module for industrial inspection, our engineering team delivers precision-tuned optics and sensors."
+      },
+      "spectrum": {
+        "budget": {
+          "title": "Budget-Friendly Solutions",
+          "desc": "Optimized for cost-sensitive projects without sacrificing reliability. Standard MIPI/DVP interfaces, proven sensors, and efficient mass production."
+        },
+        "highEnd": {
+          "title": "High-End Customization",
+          "desc": "For demanding applications. 4K/8K resolution, Global Shutter, Starlight Night Vision, and custom PCB form factors."
+        }
+      },
+      "capabilities": {
+        "title": "Engineering Capabilities",
+        "subtitle": "Bridging the gap between sensor technology and application needs.",
+        "cap1": {
+          "tag": "Performance",
+          "title": "High-Performance Imaging",
+          "desc": "We integrate top-tier sensors from Sony, OmniVision, and GalaxyCore to deliver exceptional image quality.",
+          "point1": "4K/8K High Resolution Support",
+          "point2": "Global Shutter for High-Speed Motion",
+          "point3": "Starlight Low-Light Performance"
+        },
+        "cap2": {
+          "tag": "Integration",
+          "title": "Seamless Integration",
+          "desc": "Designed to fit tight spaces and withstand harsh environments typical of UAV and FPV applications.",
+          "point1": "Ultra-Compact PCB Design",
+          "point2": "Lightweight & Vibration Resistant",
+          "point3": "Custom FPC/Connector Interfaces"
+        }
+      },
+      "features": {
+        "title": "Optimized for Flight",
+        "subtitle": "Key characteristics that make our modules ideal for aerial and robotic platforms.",
+        "latency": {
+          "title": "Ultra-Low Latency",
+          "desc": "Critical for FPV and real-time control, minimizing glass-to-glass delay."
+        },
+        "durability": {
+          "title": "Rugged Durability",
+          "desc": "Engineered to withstand shock, vibration, and temperature fluctuations."
+        },
+        "wdr": {
+          "title": "Wide Dynamic Range",
+          "desc": "Clear imaging in challenging lighting, from bright skies to dark shadows."
+        },
+        "lightweight": {
+          "title": "Lightweight Design",
+          "desc": "Every gram counts. We optimize materials and layout to maximize flight time."
+        }
+      },
+      "workflow": {
+        "title": "Customization Workflow",
+        "steps": [
+          { "title": "Requirement Analysis", "desc": "We define specs based on your budget, environment, and performance needs." },
+          { "title": "Design & Selection", "desc": "Sensor selection, lens matching, and PCB layout design." },
+          { "title": "Prototyping", "desc": "Rapid sample production and rigorous testing in real-world conditions." },
+          { "title": "Mass Production", "desc": "Scalable manufacturing with strict quality control." }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Build Your Vision?",
+        "subtitle": "Contact our engineering team to discuss your specific requirements.",
+        "button": "Get a Quote"
+      }
+    }
   },
 
   "solutionDemo": {

@@ -10,6 +10,7 @@ const ProductDetail_Espressif = lazy(() => import('./pages/ProductDetail_Espress
 const ProductDetail_STM = lazy(() => import('./pages/ProductDetail_STM'));
 const ProductDetail_SM9 = lazy(() => import('./pages/ProductDetail_SM9'));
 const SolutionDetail_AICamera = lazy(() => import('./pages/SolutionDetail_AICamera'));
+const SolutionDetail_CameraCustomization = lazy(() => import('./pages/SolutionDetail_CameraCustomization'));
 const Technology_AITracking = lazy(() => import('./pages/Technology_AITracking'));
 const Technology_DShot = lazy(() => import('./pages/Technology_DShot'));
 const Blog = lazy(() => import('./pages/Blog'));
@@ -57,6 +58,7 @@ const LanguageRoutes: React.FC = () => {
           <Route path="products/stm/:modelId" element={<ProductDetail_STM />} />
           <Route path="products/computing-module/sm9" element={<ProductDetail_SM9 />} />
           <Route path="solutions/ai-camera" element={<SolutionDetail_AICamera />} />
+          <Route path="solutions/camera-customization" element={<SolutionDetail_CameraCustomization />} />
           <Route path="technology/ai-tracking" element={<Technology_AITracking />} />
           <Route path="technology/control-protocol" element={<Technology_DShot />} />
           <Route path="blog" element={<Blog />} />
