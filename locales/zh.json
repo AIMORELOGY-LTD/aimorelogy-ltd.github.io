@@ -42,6 +42,12 @@
 
       "solutionsConsumerCategory": "消费级解决方案",
 
+      "solutionsCameraModule": "相机模组",
+
+      "solutionsCameraModuleCategory": "相机模组解决方案",
+
+      "solutionsCameraModuleItem": "相机模组定制",
+
       "solutionsAiTracking": "AI 跟踪",
 
       "solutionsAiTrackingDesc": "面向 FPV/UAV 任务与吊舱的低延迟视觉跟踪算法。",
@@ -53,6 +59,8 @@
       "cloudAiCamera": "云AI相机",
 
       "solutionsCloudAiCameraDesc": "云端 + 边缘一体的智能相机方案，适用于消费级视觉部署。",
+
+      "solutionsCameraModuleDesc": "面向从成本敏感项目到高端产品落地的专业相机模组定制方案。",
 
       "coreComponents": "核心组件",
 

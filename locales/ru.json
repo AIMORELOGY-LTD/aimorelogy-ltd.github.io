@@ -75,6 +75,12 @@
 
       "solutionsConsumerCategory": "Потребительские решения",
 
+      "solutionsCameraModule": "Модуль камеры",
+
+      "solutionsCameraModuleCategory": "Решения для модулей камеры",
+
+      "solutionsCameraModuleItem": "Кастомизация модулей камеры",
+
       "solutionsAiTracking": "AI Tracking",
 
       "solutionsAiTrackingDesc": "Низколатентное визуальное отслеживание для миссий FPV/UAV и систем подвеса.",
@@ -86,6 +92,8 @@
       "cloudAiCamera": "Облако AI Камера",
 
       "solutionsCloudAiCameraDesc": "Облачная + edge платформа умных камер для масштабируемых потребительских внедрений.",
+
+      "solutionsCameraModuleDesc": "Профессиональная кастомизация модулей камеры для vision-продуктов от бюджетных проектов до high-end внедрений.",
 
       "coreComponents": "Ключевые компоненты",
 

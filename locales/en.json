@@ -42,6 +42,12 @@
 
       "solutionsConsumerCategory": "Consumer Solutions",
 
+      "solutionsCameraModule": "Camera Module",
+
+      "solutionsCameraModuleCategory": "Camera Module Solutions",
+
+      "solutionsCameraModuleItem": "Camera Module Customization",
+
       "solutionsAiTracking": "AI Tracking",
 
       "solutionsAiTrackingDesc": "Low-latency visual tracking for FPV/UAV missions and gimbal systems.",
@@ -53,6 +59,8 @@
       "cloudAiCamera": "Cloud AI Camera",
 
       "solutionsCloudAiCameraDesc": "Cloud + edge camera stack for scalable consumer vision deployments.",
+
+      "solutionsCameraModuleDesc": "Professional camera module customization for vision products, from cost-sensitive builds to high-end deployments.",
 
       "coreComponents": "Core Components",
 
