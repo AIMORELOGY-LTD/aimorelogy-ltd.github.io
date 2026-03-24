@@ -273,6 +273,22 @@
 
           "buttonText": "Explore SM9"
 
+        },
+
+        "4": {
+
+          "category": "Customization",
+
+          "title": "Camera Module Customization",
+
+          "description": "Strict budget or high-end customization, we provide professional camera module solutions tailored to your needs.",
+
+          "navTitle": "Camera Module",
+
+          "navDesc": "Custom Solutions",
+
+          "buttonText": "Contact Sales"
+
         }
 
       }
