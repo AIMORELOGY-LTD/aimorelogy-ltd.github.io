@@ -1291,12 +1291,12 @@
         "title": "Engineering Capabilities",
         "subtitle": "Bridging the gap between sensor technology and application needs.",
         "cap1": {
-          "tag": "Performance",
-          "title": "High-Performance Imaging",
-          "desc": "We integrate top-tier sensors from Sony, OmniVision, and GalaxyCore to deliver exceptional image quality.",
-          "point1": "4K/8K High Resolution Support",
-          "point2": "Global Shutter for High-Speed Motion",
-          "point3": "Starlight Low-Light Performance"
+          "tag": "Supply Chain",
+          "title": "Strategic Supply Chain & Expertise",
+          "desc": "Leveraging robust partnerships with global sensor manufacturers, we offer unbiased selection tailored to your project's specific balance of cost and performance.",
+          "point1": "Flexible Sourcing (Sony, OV, GC, etc.) for Any Budget",
+          "point2": "10+ Years of Optical & Sensor Tuning Experience",
+          "point3": "Rapid Prototyping from Entry-Level to Flagship"
         },
         "cap2": {
           "tag": "Integration",
