@@ -189,6 +189,17 @@ const Home: React.FC = () => {
 
   const slides: SlideData[] = [
     {
+      id: 4,
+      category: t('home.hero.slides.4.category'),
+      title: t('home.hero.slides.4.title'),
+      description: t('home.hero.slides.4.description'),
+      navTitle: t('home.hero.slides.4.navTitle'),
+      navDesc: t('home.hero.slides.4.navDesc'),
+      buttonText: t('home.hero.slides.4.buttonText'),
+      link: '#', 
+      bgImage: '/Cam/Cam_post.jpeg'
+    },
+    {
       id: 0,
       category: t('home.hero.slides.0.category'),
       title: t('home.hero.slides.0.title'),
@@ -231,17 +242,6 @@ const Home: React.FC = () => {
       buttonText: t('home.hero.slides.2.buttonText'),
       link: withLang(lang, RoutePath.TECHNOLOGY_DSHOT),
       bgImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop'
-    },
-    {
-      id: 4,
-      category: t('home.hero.slides.4.category'),
-      title: t('home.hero.slides.4.title'),
-      description: t('home.hero.slides.4.description'),
-      navTitle: t('home.hero.slides.4.navTitle'),
-      navDesc: t('home.hero.slides.4.navDesc'),
-      buttonText: t('home.hero.slides.4.buttonText'),
-      link: '#', 
-      bgImage: '/Cam/Cam_post.jpeg'
     }
   ];
 
