@@ -124,11 +124,8 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
            {/* Capability 1: High Performance */}
            <div className="flex flex-col md:flex-row gap-12 items-center mb-24">
               <div className="md:w-1/2 order-2 md:order-1">
-                 <div className="relative aspect-video bg-white shadow-lg overflow-hidden border border-gray-200 group">
-                    <img src="/Cam/Cam_01.jpeg" alt="High Performance Camera Module" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                       <span className="text-white font-bold uppercase tracking-widest text-sm">{t('solution.cameraCustomization.capabilities.cap1.tag')}</span>
-                    </div>
+                 <div>
+                    <img src="/Cam/Cam_01.jpeg" alt="High Performance Camera Module" className="w-full h-auto" />
                  </div>
               </div>
               <div className="md:w-1/2 order-1 md:order-2">
@@ -178,11 +175,8 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
                  </ul>
               </div>
               <div className="md:w-1/2">
-                 <div className="relative aspect-video bg-white shadow-lg overflow-hidden border border-gray-200 group">
-                    <img src="/Cam/Cam_02.jpeg" alt="Compact Integration" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                       <span className="text-white font-bold uppercase tracking-widest text-sm">{t('solution.cameraCustomization.capabilities.cap2.tag')}</span>
-                    </div>
+                 <div>
+                    <img src="/Cam/Cam_02.jpeg" alt="Compact Integration" className="w-full h-auto" />
                  </div>
               </div>
            </div>
