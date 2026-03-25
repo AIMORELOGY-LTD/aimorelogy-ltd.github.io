@@ -1,4 +1,3 @@
-
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useParams } from 'react-router-dom';
 import Layout from './components/Layout';
@@ -9,6 +8,7 @@ const ProductDetail_SOPHGO = lazy(() => import('./pages/ProductDetail_SOPHGO'));
 const ProductDetail_Espressif = lazy(() => import('./pages/ProductDetail_Espressif'));
 const ProductDetail_STM = lazy(() => import('./pages/ProductDetail_STM'));
 const ProductDetail_SM9 = lazy(() => import('./pages/ProductDetail_SM9'));
+const ProductDetail_AC001_OS04A10 = lazy(() => import('./pages/ProductDetail_AC001_OS04A10'));
 const SolutionDetail_AICamera = lazy(() => import('./pages/SolutionDetail_AICamera'));
 const SolutionDetail_CameraCustomization = lazy(() => import('./pages/SolutionDetail_CameraCustomization'));
 const Technology_AITracking = lazy(() => import('./pages/Technology_AITracking'));
@@ -57,6 +57,7 @@ const LanguageRoutes: React.FC = () => {
           <Route path="products/espressif/:modelId" element={<ProductDetail_Espressif />} />
           <Route path="products/stm/:modelId" element={<ProductDetail_STM />} />
           <Route path="products/computing-module/sm9" element={<ProductDetail_SM9 />} />
+          <Route path="products/camera-module/ac-001-os04a10" element={<ProductDetail_AC001_OS04A10 />} />
           <Route path="solutions/ai-camera" element={<SolutionDetail_AICamera />} />
           <Route path="solutions/camera-customization" element={<SolutionDetail_CameraCustomization />} />
           <Route path="technology/ai-tracking" element={<Technology_AITracking />} />

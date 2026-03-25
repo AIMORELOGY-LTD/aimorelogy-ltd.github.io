@@ -21,6 +21,7 @@ export enum RoutePath {
   CONTACT = '/contact/',
   ABOUT = '/about/',
   PRODUCT_SM9 = '/products/computing-module/sm9/',
+  PRODUCT_AC001_OS04A10 = '/products/camera-module/ac-001-os04a10/',
   PRIVACY = '/legal/privacy-policy/',
   TERMS = '/legal/terms-of-service/',
   COOKIES = '/legal/cookie-preferences/',

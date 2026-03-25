@@ -1721,7 +1721,85 @@
   },
 
   "products": {
-
+    "ac001": {
+      "metaTitle": "AC-001-OS04A10 | Starlight Camera Module | AIMORELOGY",
+      "metaDescription": "High-end 4MP Starlight Camera Module with OS04A10 sensor, 1/1.8-inch optical format, and F1.0 large aperture lens for superior low-light performance.",
+      "hero": {
+        "category": "High-End Camera Module",
+        "title": "AC-001-OS04A10",
+        "subtitle": "A High-End Camera Module Built for Starlight and Night-Oriented Imaging",
+        "description": "Built around the OS04A10 image sensor, AC-001-OS04A10 combines a 1/1.8-inch class optical format with F1.0 optics to deliver a stronger imaging foundation for low-light, night-time, and challenging lighting conditions.",
+        "cta": "Contact Sales"
+      },
+      "highlights": {
+        "format": {
+          "title": "1/1.8\" Class",
+          "desc": "A larger optical format provides a stronger foundation for light capture, retaining more usable image information in dim environments."
+        },
+        "pixel": {
+          "title": "3.0 µm Pixels",
+          "desc": "With 3.0 µm pixels, the module is positioned for better sensitivity and improved low-light imaging performance."
+        },
+        "lens": {
+          "title": "F1.0 Optics",
+          "desc": "The F1.0 lens design supports higher light intake, making the module better suited to night vision and starlight-level imaging scenarios."
+        },
+        "res": {
+          "title": "4MP Clarity",
+          "desc": "Combines 2688 × 1520 resolution with a wide field of view, balancing image detail and scene coverage for demanding vision applications."
+        }
+      },
+      "advantages": {
+        "title": "Core Imaging Advantages",
+        "starlight": {
+          "title": "Starlight Imaging",
+          "desc": "Optimized for extreme low-light conditions where standard sensors fail."
+        },
+        "format": {
+          "title": "Large Format",
+          "desc": "1/1.8-inch sensor size captures significantly more light than standard 1/3-inch sensors."
+        },
+        "optics": {
+          "title": "Night-Oriented",
+          "desc": "F1.0 aperture ensures maximum photon collection for noise-free night vision."
+        },
+        "clarity": {
+          "title": "High Definition",
+          "desc": "4MP resolution delivers sharp details even in challenging lighting."
+        }
+      },
+      "pairing": {
+        "title": "Sensor + Lens Pairing",
+        "sensor": {
+          "title": "The Sensor",
+          "desc": "OmniVision OS04A10 High-Performance Image Sensor"
+        },
+        "lens": {
+          "title": "The Lens",
+          "desc": "Custom F1.0 High-Aperture Optics"
+        }
+      },
+      "applications": {
+        "title": "Application Scenarios",
+        "uav": "UAV Payload Imaging",
+        "edge": "Low-Light Edge Vision",
+        "robotics": "Autonomous Robotics",
+        "action": "Action Cameras"
+      },
+      "specs": {
+        "title": "Technical Specifications",
+        "sensor": {
+          "title": "Sensor Specifications"
+        },
+        "optical": {
+          "title": "Optical Specifications"
+        }
+      },
+      "cta": {
+        "title": "Ready to Integrate?",
+        "subtitle": "Get the full datasheet and reference design for your next project."
+      }
+    },
     "common": {
 
       "metaTitle": "{{name}} {{tagline}} | AIMORELOGY",
