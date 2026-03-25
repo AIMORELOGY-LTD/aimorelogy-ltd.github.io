@@ -113,9 +113,9 @@ const Header: React.FC = () => {
               title: t('header.menu.products.cameraModule'),
               items: [
                 {
-                  model: t('header.comingSoon'),
+                  model: 'AC-001-OS04A10',
                   description: t('header.menu.products.cameraModuleDesc'),
-                  to: '#'
+                  to: withLang(lang, RoutePath.PRODUCT_AC001_OS04A10)
                 }
               ]
             }

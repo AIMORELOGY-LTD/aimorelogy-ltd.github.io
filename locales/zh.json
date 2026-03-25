@@ -29,7 +29,7 @@
                         "module": "模块",
                         "afcDesc": "下一代 FPV 飞控的最终答案。",
                         "sm9Desc": "16T AI、8核 ARM CA53，兼容 NVIDIA Jetson 引脚定义。",
-                        "cameraModuleDesc": "面向视觉系统的工业级边缘 AI 相机模组。"
+                        "cameraModuleDesc": "面向星光级与夜视场景的 4MP 相机模组，采用 1/1.8 英寸级靶面与 F1.0 镜头。"
       },
 
       "solutions": "解决方案",
