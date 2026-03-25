@@ -12,7 +12,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
 
   return (
     <div className="bg-white animate-fadeIn">
-      <Seo 
+      <Seo
         title={t('products.ac001.metaTitle')}
         description={t('products.ac001.metaDescription')}
         keywords="AC-001-OS04A10, OS04A10 Camera Module, F1.0 Lens, Starlight Camera, Night Vision Module, 1/1.8 inch Sensor"
@@ -20,13 +20,13 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/Cam/AC-001-OS04A10/AC-001-OS04A10-BANNER.jpg)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl">
             <span className="inline-block py-1 px-3 border border-[#a094e3] text-[#a094e3] font-bold uppercase tracking-widest text-xs mb-6">
@@ -42,7 +42,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
               {t('products.ac001.hero.description')}
             </p>
             <div className="flex gap-4">
-              <Link 
+              <Link
                 to={withLang(lang, RoutePath.CONTACT)}
                 className="inline-block bg-[#4f4398] text-white hover:bg-[#3e3479] px-10 py-4 font-bold text-sm uppercase tracking-wide transition-colors"
               >
@@ -58,22 +58,22 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
             {[
-              { 
+              {
                 icon: <Maximize strokeWidth={1.5} size={40} className="text-[#4f4398]" />,
                 title: t('products.ac001.highlights.format.title'),
                 desc: t('products.ac001.highlights.format.desc')
               },
-              { 
+              {
                 icon: <Zap strokeWidth={1.5} size={40} className="text-[#4f4398]" />,
                 title: t('products.ac001.highlights.pixel.title'),
                 desc: t('products.ac001.highlights.pixel.desc')
               },
-              { 
+              {
                 icon: <Aperture strokeWidth={1.5} size={40} className="text-[#4f4398]" />,
                 title: t('products.ac001.highlights.lens.title'),
                 desc: t('products.ac001.highlights.lens.desc')
               },
-              { 
+              {
                 icon: <Eye strokeWidth={1.5} size={40} className="text-[#4f4398]" />,
                 title: t('products.ac001.highlights.res.title'),
                 desc: t('products.ac001.highlights.res.desc')
@@ -84,9 +84,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 uppercase mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-sm">
-                  {item.desc}
-                </p>
+                <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -96,9 +94,13 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       {/* Product Showcase Image 1 */}
       <section className="bg-[#f8f9fa] py-24">
         <div className="container mx-auto px-6 text-center">
-           <div className="max-w-5xl mx-auto">
-              <img src="/Cam/AC-001-OS04A10/AC-001-OS04A10-01.jpg" alt="AC-001-OS04A10 Front View" className="w-full h-auto mx-auto" />
-           </div>
+          <div className="max-w-5xl mx-auto">
+            <img
+              src="/Cam/AC-001-OS04A10/AC-001-OS04A10-01.jpg"
+              alt="AC-001-OS04A10 Front View"
+              className="w-full h-auto mx-auto"
+            />
+          </div>
         </div>
       </section>
 
@@ -113,44 +115,44 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
               // IMAGING ARCHITECTURE
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-800 border border-gray-800">
-             <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
-                <div className="text-[#76b900] mb-6"><CheckCircle2 size={32} /></div>
-                <h3 className="text-2xl font-bold uppercase mb-4 text-white">
-                  {t('products.ac001.advantages.starlight.title')}
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  {t('products.ac001.advantages.starlight.desc')}
-                </p>
-             </div>
-             <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
-                <div className="text-[#a094e3] mb-6"><Maximize size={32} /></div>
-                <h3 className="text-2xl font-bold uppercase mb-4 text-white">
-                  {t('products.ac001.advantages.format.title')}
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  {t('products.ac001.advantages.format.desc')}
-                </p>
-             </div>
-             <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
-                <div className="text-[#a094e3] mb-6"><Aperture size={32} /></div>
-                <h3 className="text-2xl font-bold uppercase mb-4 text-white">
-                  {t('products.ac001.advantages.optics.title')}
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  {t('products.ac001.advantages.optics.desc')}
-                </p>
-             </div>
-             <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
-                <div className="text-[#76b900] mb-6"><Scan size={32} /></div>
-                <h3 className="text-2xl font-bold uppercase mb-4 text-white">
-                  {t('products.ac001.advantages.clarity.title')}
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  {t('products.ac001.advantages.clarity.desc')}
-                </p>
-             </div>
+            <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
+              <div className="text-[#76b900] mb-6"><CheckCircle2 size={32} /></div>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">
+                {t('products.ac001.advantages.starlight.title')}
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-lg">
+                {t('products.ac001.advantages.starlight.desc')}
+              </p>
+            </div>
+            <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
+              <div className="text-[#a094e3] mb-6"><Maximize size={32} /></div>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">
+                {t('products.ac001.advantages.format.title')}
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-lg">
+                {t('products.ac001.advantages.format.desc')}
+              </p>
+            </div>
+            <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
+              <div className="text-[#a094e3] mb-6"><Aperture size={32} /></div>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">
+                {t('products.ac001.advantages.optics.title')}
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-lg">
+                {t('products.ac001.advantages.optics.desc')}
+              </p>
+            </div>
+            <div className="bg-[#1a1a1a] p-12 hover:bg-[#222] transition-colors">
+              <div className="text-[#76b900] mb-6"><Scan size={32} /></div>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">
+                {t('products.ac001.advantages.clarity.title')}
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-lg">
+                {t('products.ac001.advantages.clarity.desc')}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -158,70 +160,70 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       {/* Sensor + Lens Pairing */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start lg:items-stretch">
             <div className="order-2 lg:order-1">
-               <div className="sticky top-24">
-                 <h2 className="text-4xl font-black text-gray-900 uppercase mb-12">
-                   {t('products.ac001.pairing.title')}
-                 </h2>
-                 
-                 <div className="space-y-12">
-                   <div className="group">
-                     <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
-                       <Cpu className="text-[#4f4398]" size={28} />
-                       {t('products.ac001.pairing.sensor.title')}
-                     </h3>
-                     <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.sensor.desc')}</p>
-                     <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
-                       {[
-                         '4MP / 2688 x 1520',
-                         '30 fps Max Frame Rate',
-                         '3.0 µm Pixel Size',
-                         '1/1.8-inch Class Format',
-                         'High Sensitivity'
-                       ].map((item, i) => (
-                         <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                           <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
-                           {item}
-                         </li>
-                       ))}
-                     </ul>
-                   </div>
-                   
-                   <div className="w-full h-px bg-gray-100"></div>
+              <div className="lg:h-full flex flex-col">
+                <h2 className="text-4xl font-black text-gray-900 uppercase mb-12">
+                  {t('products.ac001.pairing.title')}
+                </h2>
 
-                   <div className="group">
-                     <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
-                       <Aperture className="text-[#4f4398]" size={28} />
-                       {t('products.ac001.pairing.lens.title')}
-                     </h3>
-                     <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.lens.desc')}</p>
-                     <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
-                       {[
-                         'F1.0 Large Aperture',
-                         '4.37 mm Focal Length',
-                         'H 109.0° / V 57.5° / D 131.6°',
-                         'M16 Mount',
-                         'Manual Focus / Fixed Iris'
-                       ].map((item, i) => (
-                         <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                           <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
-                           {item}
-                         </li>
-                       ))}
-                     </ul>
-                   </div>
-                 </div>
-               </div>
+                <div className="flex flex-col gap-12 lg:flex-1 lg:justify-between">
+                  <div className="group">
+                    <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
+                      <Cpu className="text-[#4f4398]" size={28} />
+                      {t('products.ac001.pairing.sensor.title')}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.sensor.desc')}</p>
+                    <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
+                      {[
+                        '4MP / 2688 x 1520',
+                        '30 fps Max Frame Rate',
+                        '3.0 μm Pixel Size',
+                        '1/1.8-inch Class Format',
+                        'High Sensitivity'
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                          <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="hidden lg:block w-full h-px bg-gray-100"></div>
+
+                  <div className="group">
+                    <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
+                      <Aperture className="text-[#4f4398]" size={28} />
+                      {t('products.ac001.pairing.lens.title')}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.lens.desc')}</p>
+                    <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
+                      {[
+                        'F1.0 Large Aperture',
+                        '4.37 mm Focal Length',
+                        'H 109.0° / V 57.5° / D 131.6°',
+                        'M16 Mount',
+                        'Manual Focus / Fixed Iris'
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                          <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            
+
             <div className="order-1 lg:order-2 flex flex-col gap-8">
-               <div className="bg-gray-50 p-8 flex items-center justify-center">
-                  <img src="/Cam/Cam_01.jpeg" alt="Sensor Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
-               </div>
-               <div className="bg-gray-50 p-8 flex items-center justify-center">
-                  <img src="/Cam/Cam_02.jpeg" alt="Lens Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
-               </div>
+              <div className="bg-gray-50 p-8 flex items-center justify-center">
+                <img src="/Cam/Cam_01.jpeg" alt="Sensor Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
+              </div>
+              <div className="bg-gray-50 p-8 flex items-center justify-center">
+                <img src="/Cam/Cam_02.jpeg" alt="Lens Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
+              </div>
             </div>
           </div>
         </div>
@@ -234,18 +236,18 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
             {t('products.ac001.applications.title')}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-             {[
-               t('products.ac001.applications.uav'),
-               t('products.ac001.applications.edge'),
-               t('products.ac001.applications.robotics'),
-               t('products.ac001.applications.action')
-             ].map((app, i) => (
-               <div key={i} className="bg-transparent border border-gray-700 p-8 text-center hover:border-[#4f4398] transition-colors group">
-                 <div className="text-gray-400 font-bold uppercase tracking-widest text-sm group-hover:text-white transition-colors">
-                   {app}
-                 </div>
-               </div>
-             ))}
+            {[
+              t('products.ac001.applications.uav'),
+              t('products.ac001.applications.edge'),
+              t('products.ac001.applications.robotics'),
+              t('products.ac001.applications.action')
+            ].map((app, i) => (
+              <div key={i} className="bg-transparent border border-gray-700 p-8 text-center hover:border-[#4f4398] transition-colors group">
+                <div className="text-gray-400 font-bold uppercase tracking-widest text-sm group-hover:text-white transition-colors">
+                  {app}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -259,9 +261,8 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
             </h2>
             <div className="w-24 h-1 bg-[#4f4398] mx-auto mt-6"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
-            {/* Sensor Specs */}
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <Scan size={24} className="text-[#4f4398]" />
@@ -276,7 +277,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
                       { l: 'Sensor', v: 'OS04A10' },
                       { l: 'Resolution', v: '2688 x 1520' },
                       { l: 'Optical Format', v: '1/1.8-inch class' },
-                      { l: 'Pixel Size', v: '3.0 µm' },
+                      { l: 'Pixel Size', v: '3.0 μm' },
                       { l: 'Max Frame Rate', v: '30 fps' },
                       { l: 'Scan Type', v: 'Progressive Scan' },
                       { l: 'Shutter Type', v: 'Rolling Shutter' },
@@ -292,7 +293,6 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
               </div>
             </div>
 
-            {/* Optical Specs */}
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <Eye size={24} className="text-[#4f4398]" />
@@ -337,7 +337,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
             {t('products.ac001.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
+            <Link
               to={withLang(lang, RoutePath.CONTACT)}
               className="inline-block bg-white text-[#4f4398] px-12 py-5 font-bold text-sm uppercase hover:bg-gray-100 transition-all transform hover:-translate-y-1 shadow-2xl"
             >
@@ -346,7 +346,6 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };
