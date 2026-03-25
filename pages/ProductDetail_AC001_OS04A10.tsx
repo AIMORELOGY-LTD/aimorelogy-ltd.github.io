@@ -160,70 +160,61 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       {/* Sensor + Lens Pairing */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start lg:items-stretch">
-            <div className="order-2 lg:order-1">
-              <div className="lg:h-full flex flex-col">
-                <h2 className="text-4xl font-black text-gray-900 uppercase mb-12">
-                  {t('products.ac001.pairing.title')}
-                </h2>
+          <h2 className="text-4xl font-black text-gray-900 uppercase mb-12">
+            {t('products.ac001.pairing.title')}
+          </h2>
 
-                <div className="flex flex-col gap-12 lg:flex-1 lg:justify-between">
-                  <div className="group">
-                    <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
-                      <Cpu className="text-[#4f4398]" size={28} />
-                      {t('products.ac001.pairing.sensor.title')}
-                    </h3>
-                    <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.sensor.desc')}</p>
-                    <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
-                      {[
-                        '4MP / 2688 x 1520',
-                        '30 fps Max Frame Rate',
-                        '3.0 μm Pixel Size',
-                        '1/1.8-inch Class Format',
-                        'High Sensitivity'
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                          <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="hidden lg:block w-full h-px bg-gray-100"></div>
-
-                  <div className="group">
-                    <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
-                      <Aperture className="text-[#4f4398]" size={28} />
-                      {t('products.ac001.pairing.lens.title')}
-                    </h3>
-                    <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.lens.desc')}</p>
-                    <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
-                      {[
-                        'F1.0 Large Aperture',
-                        '4.37 mm Focal Length',
-                        'H 109.0° / V 57.5° / D 131.6°',
-                        'M16 Mount',
-                        'Manual Focus / Fixed Iris'
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                          <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_520px] gap-8 lg:gap-12">
+            <div className="group flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
+                <Cpu className="text-[#4f4398]" size={28} />
+                {t('products.ac001.pairing.sensor.title')}
+              </h3>
+              <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.sensor.desc')}</p>
+              <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
+                {[
+                  '4MP / 2688 x 1520',
+                  '30 fps Max Frame Rate',
+                  '3.0 μm Pixel Size',
+                  '1/1.8-inch Class Format',
+                  'High Sensitivity'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                    <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="order-1 lg:order-2 flex flex-col gap-8">
-              <div className="bg-gray-50 p-8 flex items-center justify-center">
-                <img src="/Cam/Cam_01.jpeg" alt="Sensor Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
-              </div>
-              <div className="bg-gray-50 p-8 flex items-center justify-center">
-                <img src="/Cam/Cam_02.jpeg" alt="Lens Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
-              </div>
+            <div className="bg-gray-50 p-8 flex items-center justify-center min-h-[340px]">
+              <img src="/Cam/Cam_01.jpeg" alt="Sensor Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
+            </div>
+
+            <div className="group flex flex-col justify-center border-t border-gray-100 pt-8 lg:border-t-0 lg:pt-0">
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
+                <Aperture className="text-[#4f4398]" size={28} />
+                {t('products.ac001.pairing.lens.title')}
+              </h3>
+              <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.lens.desc')}</p>
+              <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
+                {[
+                  'F1.0 Large Aperture',
+                  '4.37 mm Focal Length',
+                  'H 109.0° / V 57.5° / D 131.6°',
+                  'M16 Mount',
+                  'Manual Focus / Fixed Iris'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                    <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 p-8 flex items-center justify-center min-h-[340px]">
+              <img src="/Cam/Cam_02.jpeg" alt="Lens Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
             </div>
           </div>
         </div>
