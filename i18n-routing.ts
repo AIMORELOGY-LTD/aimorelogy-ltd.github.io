@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
 
-export const supportedLangs = ['en', 'zh', 'ru'] as const;
+export const supportedLangs = ['en', 'zh', 'ru', 'ar'] as const;
 export type Lang = typeof supportedLangs[number];
 
 export const normalizeLang = (lang?: string): Lang => {
-  if (lang === 'en' || lang === 'zh' || lang === 'ru') {
+  if (lang === 'en' || lang === 'zh' || lang === 'ru' || lang === 'ar') {
     return lang;
   }
   return 'en';

@@ -16,11 +16,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const lang = useLang();
   const isHome = location.pathname === `/${lang}` || location.pathname === `/${lang}/`;
   const isRu = lang === 'ru';
+  const isAr = lang === 'ar';
 
   return (
-    <div className={`flex flex-col min-h-screen bg-white text-gray-900 font-sans ${isRu ? 'lang-ru' : ''}`} lang={lang}>
+    <div
+      className={`flex flex-col min-h-screen bg-white text-gray-900 font-sans ${isRu ? 'lang-ru' : ''} ${isAr ? 'lang-ar' : ''}`}
+      lang={lang}
+      dir={isAr ? 'rtl' : 'ltr'}
+    >
       <ScrollToTop />
-      {isRu && (
+      {(isRu || isAr) && (
         <style>{`
           .lang-ru {
             overflow-x: hidden;
@@ -30,6 +35,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             word-break: break-word;
             hyphens: auto;
           }
+          .lang-ar {
+            overflow-x: hidden;
+          }
+          .lang-ar main,
+          .lang-ar footer {
+            text-align: right;
+          }
+          .lang-ar :where(h1, h2, h3, h4, p, span, button, a, li, td, th, div, input, textarea, label) {
+            overflow-wrap: anywhere;
+          }
         `}</style>
       )}
       <Header />
@@ -37,7 +52,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         If it's Home, no padding (content goes behind transparent header).
         Otherwise, add pt-[72px] to push content below fixed header.
       */}
-      <main className={`flex-grow ${isHome ? '' : 'pt-[72px]'} ${isRu ? 'overflow-x-hidden' : ''}`}>
+      <main className={`flex-grow ${isHome ? '' : 'pt-[72px]'} ${(isRu || isAr) ? 'overflow-x-hidden' : ''}`}>
         {children}
       </main>
       <Footer />

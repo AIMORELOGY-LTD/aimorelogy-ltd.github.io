@@ -58,6 +58,7 @@ interface MenuItem {
 const Header: React.FC = () => {
   const { t } = useTranslation();
   const lang = useLang();
+  const isAr = lang === 'ar';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
@@ -548,27 +549,34 @@ const Header: React.FC = () => {
              
              {/* Dropdown */}
              {langMenuOpen && (
-               <div className="absolute top-full right-0 mt-6 w-32 bg-white shadow-xl border border-gray-100 py-2 rounded-sm z-50">
+               <div className={`absolute top-full ${isAr ? 'left-0' : 'right-0'} mt-6 w-32 bg-white shadow-xl border border-gray-100 py-2 rounded-sm z-50`}>
                  <Link
                    to={buildLangPath('en')}
                    onClick={() => setLangMenuOpen(false)}
-                   className={`block w-full text-left px-4 py-2 text-sm ${lang === 'en' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
+                   className={`block w-full ${isAr ? 'text-right' : 'text-left'} px-4 py-2 text-sm ${lang === 'en' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
                  >
                    {t('header.lang.en')}
                  </Link>
                  <Link
                    to={buildLangPath('zh')}
                    onClick={() => setLangMenuOpen(false)}
-                   className={`block w-full text-left px-4 py-2 text-sm ${lang === 'zh' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
+                   className={`block w-full ${isAr ? 'text-right' : 'text-left'} px-4 py-2 text-sm ${lang === 'zh' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
                  >
                    {t('header.lang.zh')}
                  </Link>
                  <Link
                    to={buildLangPath('ru')}
                    onClick={() => setLangMenuOpen(false)}
-                   className={`block w-full text-left px-4 py-2 text-sm ${lang === 'ru' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
+                   className={`block w-full ${isAr ? 'text-right' : 'text-left'} px-4 py-2 text-sm ${lang === 'ru' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
                  >
                    {t('header.lang.ru')}
+                 </Link>
+                 <Link
+                   to={buildLangPath('ar')}
+                   onClick={() => setLangMenuOpen(false)}
+                   className={`block w-full ${isAr ? 'text-right' : 'text-left'} px-4 py-2 text-sm ${lang === 'ar' ? 'text-[#4f4398] font-bold bg-gray-50' : 'text-gray-600 hover:bg-gray-50 hover:text-[#4f4398]'}`}
+                 >
+                   {t('header.lang.ar')}
                  </Link>
                </div>
              )}
@@ -722,6 +730,13 @@ const Header: React.FC = () => {
                  className={`block px-4 py-2 text-sm ${lang === 'ru' ? 'text-[#4f4398] font-bold bg-white' : 'text-gray-600 hover:text-[#4f4398]'}`}
                >
                  {t('header.lang.ru')}
+               </Link>
+               <Link
+                 to={buildLangPath('ar')}
+                 onClick={() => setLangMenuOpen(false)}
+                 className={`block px-4 py-2 text-sm ${lang === 'ar' ? 'text-[#4f4398] font-bold bg-white' : 'text-gray-600 hover:text-[#4f4398]'}`}
+               >
+                 {t('header.lang.ar')}
                </Link>
              </div>
            )}

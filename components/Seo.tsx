@@ -4,10 +4,10 @@ import { useLang } from '../i18n-routing';
 
 const BASE_URL = 'https://aimorelogy.com';
 const DEFAULT_IMAGE = `${BASE_URL}/icon.webp`;
-const LEGAL_NAME = '深圳市爱谋科技有限公司';
+const LEGAL_NAME = 'AIMORELOGY Technology Co., Ltd.';
 const DEFAULT_KEYWORDS = [
   'AIMORELOGY',
-  '爱谋科技',
+  'AIMORELOGY Technology',
   'FPV',
   'UAV',
   'drone',
@@ -25,10 +25,12 @@ const DEFAULT_KEYWORDS = [
   'STM32',
   'Espressif'
 ].join(', ');
+
 const LOCALE_MAP: Record<string, string> = {
   en: 'en_US',
   zh: 'zh_CN',
-  ru: 'ru_RU'
+  ru: 'ru_RU',
+  ar: 'ar_AR'
 };
 
 type JsonLd = Record<string, unknown> | Array<Record<string, unknown>>;
@@ -111,6 +113,7 @@ const buildAlternateLinks = (pathname: string) => {
     en: `${BASE_URL}/en${suffix}`,
     zh: `${BASE_URL}/zh${suffix}`,
     ru: `${BASE_URL}/ru${suffix}`,
+    ar: `${BASE_URL}/ar${suffix}`,
     'x-default': `${BASE_URL}/en${suffix}`
   };
 };
@@ -158,8 +161,16 @@ const Seo: React.FC<SeoProps> = ({
     const imageUrl = normalizeImageUrl(image);
     const alternates = buildAlternateLinks(normalizedPath);
     const locale = LOCALE_MAP[lang] || 'en_US';
-    const siteName = lang === 'zh' ? '爱谋科技AIMORELOGY' : 'AIMORELOGY';
-    const siteAlternateName = lang === 'zh' ? 'AIMORELOGY' : '爱谋科技AIMORELOGY';
+    const siteName = lang === 'zh'
+      ? '爱谋科技 AIMORELOGY'
+      : lang === 'ar'
+        ? 'AIMORELOGY الشرق الأوسط'
+        : 'AIMORELOGY';
+    const siteAlternateName = lang === 'zh'
+      ? 'AIMORELOGY'
+      : lang === 'ar'
+        ? 'AIMORELOGY'
+        : '爱谋科技 AIMORELOGY';
     const keywordsValue = mergeKeywords(DEFAULT_KEYWORDS, keywords);
     const alternateLocales = Object.values(LOCALE_MAP).filter((value) => value !== locale);
 
@@ -189,6 +200,7 @@ const Seo: React.FC<SeoProps> = ({
     ensureLink('alternate', alternates.en, 'en');
     ensureLink('alternate', alternates.zh, 'zh');
     ensureLink('alternate', alternates.ru, 'ru');
+    ensureLink('alternate', alternates.ar, 'ar');
     ensureLink('alternate', alternates['x-default'], 'x-default');
 
     const baseJsonLd: JsonLd = [

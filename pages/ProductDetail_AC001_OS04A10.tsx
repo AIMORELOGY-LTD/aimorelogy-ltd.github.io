@@ -15,7 +15,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       <Seo
         title={t('products.ac001.metaTitle')}
         description={t('products.ac001.metaDescription')}
-        keywords="AC-001-OS04A10, OS04A10 Camera Module, F1.0 Lens, Starlight Camera, Night Vision Module, 1/1.8 inch Sensor"
+        keywords={t('products.ac001.seoKeywords')}
       />
 
       {/* Hero Section */}

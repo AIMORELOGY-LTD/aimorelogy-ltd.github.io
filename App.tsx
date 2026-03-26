@@ -38,6 +38,7 @@ const LanguageRoutes: React.FC = () => {
       i18n.changeLanguage(normalized);
     }
     document.documentElement.lang = normalized;
+    document.documentElement.dir = normalized === 'ar' ? 'rtl' : 'ltr';
     saveLang(normalized);
   }, [lang, navigate]);
 

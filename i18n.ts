@@ -3,11 +3,13 @@ import { initReactI18next } from 'react-i18next';
 import en from './locales/en.json';
 import zh from './locales/zh.json';
 import ru from './locales/ru.json';
+import ar from './locales/ar.json';
 
 const resources = {
   en: { translation: en },
   zh: { translation: zh },
   ru: { translation: ru },
+  ar: { translation: ar },
 };
 
 const getInitialLang = () => {
@@ -15,7 +17,7 @@ const getInitialLang = () => {
     return 'en';
   }
   const stored = window.localStorage.getItem('lang');
-  if (stored === 'en' || stored === 'zh' || stored === 'ru') {
+  if (stored === 'en' || stored === 'zh' || stored === 'ru' || stored === 'ar') {
     return stored;
   }
   return 'en';

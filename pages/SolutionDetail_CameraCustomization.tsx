@@ -46,7 +46,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       <Seo 
         title={t('solution.cameraCustomization.metaTitle')}
         description={t('solution.cameraCustomization.metaDescription')}
-        keywords="Camera Module, Customization, UAV Camera, FPV Camera, Global Shutter, 4K Camera Module, MIPI, DVP, Industrial Camera"
+        keywords={t('solution.cameraCustomization.seoKeywords')}
       />
 
       {/* Hero Section */}
