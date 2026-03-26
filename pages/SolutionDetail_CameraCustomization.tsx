@@ -53,7 +53,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/Cam/Cam_post.jpeg)' }}
+          style={{ backgroundImage: 'url(/Cam/Cam_post.webp)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
         </div>
@@ -125,7 +125,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center mb-12 md:mb-24">
               <div className="md:w-1/2 order-2 md:order-1 w-full">
                  <div>
-                    <img src="/Cam/Cam_01.jpeg" alt="High Performance Camera Module" className="w-full h-auto" />
+                    <img src="/Cam/Cam_01.webp" alt="High Performance Camera Module" className="w-full h-auto" />
                  </div>
               </div>
               <div className="md:w-1/2 order-1 md:order-2 w-full">
@@ -176,7 +176,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
               </div>
               <div className="md:w-1/2 w-full">
                  <div>
-                    <img src="/Cam/Cam_02.jpeg" alt="Compact Integration" className="w-full h-auto" />
+                    <img src="/Cam/Cam_02.webp" alt="Compact Integration" className="w-full h-auto" />
                  </div>
               </div>
            </div>

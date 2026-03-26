@@ -197,7 +197,7 @@ const Home: React.FC = () => {
       navDesc: t('home.hero.slides.4.navDesc'),
       buttonText: t('home.hero.slides.4.buttonText'),
       link: '#', 
-      bgImage: '/Cam/Cam_post.jpeg'
+      bgImage: '/Cam/Cam_post.webp'
     },
     {
       id: 0,

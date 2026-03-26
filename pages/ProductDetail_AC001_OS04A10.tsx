@@ -22,7 +22,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/Cam/AC-001-OS04A10/AC-001-OS04A10-BANNER.jpg)' }}
+          style={{ backgroundImage: 'url(/Cam/AC-001-OS04A10/AC-001-OS04A10-BANNER.webp)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
         </div>
@@ -96,7 +96,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-5xl mx-auto">
             <img
-              src="/Cam/AC-001-OS04A10/AC-001-OS04A10-01.jpg"
+              src="/Cam/AC-001-OS04A10/AC-001-OS04A10-01.webp"
               alt="AC-001-OS04A10 Front View"
               className="w-full h-auto mx-auto"
             />
@@ -188,7 +188,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
             </div>
 
             <div className="bg-gray-50 p-8 flex items-center justify-center min-h-[340px]">
-              <img src="/Cam/Cam_01.jpeg" alt="Sensor Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
+              <img src="/Cam/Cam_01.webp" alt="Sensor Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
             </div>
 
             <div className="group flex flex-col justify-center border-t border-gray-100 pt-8 lg:border-t-0 lg:pt-0">
@@ -214,7 +214,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
             </div>
 
             <div className="bg-gray-50 p-8 flex items-center justify-center min-h-[340px]">
-              <img src="/Cam/Cam_02.jpeg" alt="Lens Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
+              <img src="/Cam/Cam_02.webp" alt="Lens Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
             </div>
           </div>
         </div>
