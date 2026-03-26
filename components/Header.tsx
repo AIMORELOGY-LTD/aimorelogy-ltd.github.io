@@ -476,9 +476,12 @@ const Header: React.FC = () => {
       onMouseLeave={() => setActiveDesktopMenu(null)}
     >
       {/* Full Width Container */}
-      <div className={`w-full px-6 md:px-8 h-[72px] flex items-center ${isAr ? 'flex-row-reverse' : ''}`}>
+      <div className="w-full px-6 md:px-8 h-[72px] flex items-center">
         {/* Logo Area - Left */}
-        <Link to={withLang(lang, RoutePath.HOME)} className={`flex items-center gap-2 z-50 shrink-0 ${isAr ? 'ml-12' : 'mr-12'}`}>
+        <Link
+          to={withLang(lang, RoutePath.HOME)}
+          className={`flex items-center gap-2 z-50 shrink-0 hidden lg:flex ${isAr ? 'order-3' : 'order-1'}`}
+        >
             <img
               src="/aimorelogy-logo-small.svg"
               alt="AIMORELOGY"
@@ -487,7 +490,7 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation - Immediate Left Next to Logo */}
-        <nav className={`hidden lg:flex items-center h-full ${isAr ? 'ml-0' : 'mr-auto'}`}>
+        <nav className="hidden lg:flex items-center h-full flex-1 justify-center order-2">
           <ul className={`flex h-full gap-1 ${isAr ? 'flex-row-reverse' : ''}`}>
             {MENU_DATA.map((item) => (
               <li
@@ -529,7 +532,9 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Icons & Actions Area - Far Right */}
-        <div className={`hidden lg:flex items-center gap-6 h-8 ${isAr ? 'mr-auto pr-6 border-r' : 'ml-auto pl-6 border-l'} ${isTransparent ? 'border-white/20' : 'border-gray-100'}`}>
+        <div
+          className={`hidden lg:flex items-center gap-6 h-8 shrink-0 ${isAr ? 'order-1 pr-6 border-r' : 'order-3 pl-6 border-l'} ${isTransparent ? 'border-white/20' : 'border-gray-100'}`}
+        >
            {/* Search Icon */}
            <button className={`${iconColorClass} hover:text-[#4f4398] transition-colors`} aria-label={t('header.search')}>
              <Search size={20} />
@@ -584,6 +589,17 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button - Right */}
+        <Link
+          to={withLang(lang, RoutePath.HOME)}
+          className={`lg:hidden flex items-center gap-2 z-50 shrink-0 ${isAr ? 'ml-4' : 'mr-4'}`}
+        >
+          <img
+            src="/aimorelogy-logo-small.svg"
+            alt="AIMORELOGY"
+            className={`h-8 w-auto ${isTransparent ? 'filter brightness-0 invert' : ''}`}
+          />
+        </Link>
+
         <button
           className={`lg:hidden z-50 hover:text-[#4f4398] ${isAr ? 'mr-auto' : 'ml-auto'} ${isTransparent ? 'text-white' : 'text-gray-900'}`}
           onClick={toggleMenu}
