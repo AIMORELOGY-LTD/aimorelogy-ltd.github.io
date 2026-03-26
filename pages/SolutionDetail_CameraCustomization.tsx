@@ -9,6 +9,7 @@ import { CheckCircle, Zap, Shield, Eye, Layers, DollarSign, Settings, Aperture, 
 const SolutionDetail_CameraCustomization: React.FC = () => {
   const { t } = useTranslation();
   const lang = useLang();
+  const isAr = lang === 'ar';
 
   // Feature list data
   const features = [
@@ -59,7 +60,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl animate-fadeIn">
+          <div className={`max-w-3xl animate-fadeIn ${isAr ? 'text-right ml-auto' : ''}`}>
             <span className="text-[#a094e3] font-bold uppercase tracking-widest text-xs md:text-sm mb-4 block">
               {t('solution.cameraCustomization.heroCategory')}
             </span>
@@ -82,12 +83,12 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       {/* Introduction Philosophy */}
       <section className="py-12 md:py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-8 md:gap-16 items-center">
-            <div className="lg:w-1/2">
+          <div className={`flex flex-col lg:flex-row gap-8 md:gap-16 items-center ${isAr ? 'lg:flex-row-reverse' : ''}`}>
+            <div className={`lg:w-1/2 ${isAr ? 'text-right' : ''}`}>
               <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-6 uppercase">
                 {t('solution.cameraCustomization.intro.title')}
               </h2>
-              <div className="h-1 w-20 bg-[#4f4398] mb-8"></div>
+              <div className={`h-1 w-20 bg-[#4f4398] mb-8 ${isAr ? 'mr-0 ml-auto' : ''}`}></div>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
                 {t('solution.cameraCustomization.intro.desc1')}
               </p>
@@ -116,19 +117,19 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       {/* Visual Showcase & Capabilities */}
       <section className="py-12 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6">
-           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+           <div className={`max-w-3xl mx-auto mb-12 md:mb-16 ${isAr ? 'text-right' : 'text-center'}`}>
               <h2 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mb-4">{t('solution.cameraCustomization.capabilities.title')}</h2>
               <p className="text-sm md:text-base text-gray-600">{t('solution.cameraCustomization.capabilities.subtitle')}</p>
            </div>
 
            {/* Capability 1: High Performance */}
-           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center mb-12 md:mb-24">
+           <div className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center mb-12 md:mb-24 ${isAr ? 'md:flex-row-reverse' : ''}`}>
               <div className="md:w-1/2 order-2 md:order-1 w-full">
                  <div>
                     <img src="/Cam/Cam_01.webp" alt="High Performance Camera Module" className="w-full h-auto" />
                  </div>
               </div>
-              <div className="md:w-1/2 order-1 md:order-2 w-full">
+              <div className={`md:w-1/2 order-1 md:order-2 w-full ${isAr ? 'text-right' : ''}`}>
                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3">
                     <Aperture className="text-[#4f4398]" />
                     {t('solution.cameraCustomization.capabilities.cap1.title')}
@@ -142,7 +143,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
                       t('solution.cameraCustomization.capabilities.cap1.point2'),
                       t('solution.cameraCustomization.capabilities.cap1.point3')
                     ].map((point, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                    <li key={idx} className={`flex items-start gap-2 text-sm text-gray-700 ${isAr ? 'flex-row-reverse text-right' : ''}`}>
                         <CheckCircle size={16} className="text-[#76b900] mt-1 shrink-0" />
                         {point}
                       </li>
@@ -152,8 +153,8 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
            </div>
 
            {/* Capability 2: Integration & Durability */}
-           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-              <div className="md:w-1/2 w-full">
+           <div className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center ${isAr ? 'md:flex-row-reverse' : ''}`}>
+              <div className={`md:w-1/2 w-full ${isAr ? 'text-right' : ''}`}>
                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3">
                     <Cpu className="text-[#4f4398]" />
                     {t('solution.cameraCustomization.capabilities.cap2.title')}
@@ -167,7 +168,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
                       t('solution.cameraCustomization.capabilities.cap2.point2'),
                       t('solution.cameraCustomization.capabilities.cap2.point3')
                     ].map((point, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                    <li key={idx} className={`flex items-start gap-2 text-sm text-gray-700 ${isAr ? 'flex-row-reverse text-right' : ''}`}>
                         <CheckCircle size={16} className="text-[#76b900] mt-1 shrink-0" />
                         {point}
                       </li>
@@ -186,7 +187,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       {/* UAV/FPV Specific Features */}
       <section className="py-12 md:py-24 bg-[#1a1a1a] text-white">
         <div className="container mx-auto px-6">
-           <div className="text-center mb-12 md:mb-16">
+           <div className={`mb-12 md:mb-16 ${isAr ? 'text-right' : 'text-center'}`}>
              <h2 className="text-2xl md:text-3xl font-black text-white uppercase">{t('solution.cameraCustomization.features.title')}</h2>
              <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm md:text-base">{t('solution.cameraCustomization.features.subtitle')}</p>
            </div>
@@ -206,7 +207,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
       {/* Workflow */}
       <section className="py-12 md:py-24 bg-white">
         <div className="container mx-auto px-6">
-           <h2 className="text-2xl md:text-3xl font-black text-gray-900 uppercase text-center mb-12 md:mb-16">{t('solution.cameraCustomization.workflow.title')}</h2>
+           <h2 className={`text-2xl md:text-3xl font-black text-gray-900 uppercase mb-12 md:mb-16 ${isAr ? 'text-right' : 'text-center'}`}>{t('solution.cameraCustomization.workflow.title')}</h2>
            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-12">
               {workflowSteps.map((step, idx) => (
                 <div key={idx} className="relative">
@@ -214,7 +215,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
                      {step.num}
                    </div>
                    <div className="relative z-10 pt-4 pl-4 md:pl-0">
-                      <h3 className="text-lg md:text-xl font-bold text-[#4f4398] uppercase mb-3">{step.title}</h3>
+                      <h3 className={`text-lg md:text-xl font-bold text-[#4f4398] uppercase mb-3 ${isAr ? 'text-right' : ''}`}>{step.title}</h3>
                       <p className="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
                    </div>
                    {/* Connector Line (Desktop Only) */}
@@ -229,7 +230,7 @@ const SolutionDetail_CameraCustomization: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-12 md:py-24 bg-[#4f4398]">
-        <div className="container mx-auto px-6 text-center">
+        <div className={`container mx-auto px-6 ${isAr ? 'text-right' : 'text-center'}`}>
            <h2 className="text-2xl md:text-4xl font-black text-white uppercase mb-6">
              {t('solution.cameraCustomization.cta.title')}
            </h2>

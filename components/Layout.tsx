@@ -42,6 +42,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           .lang-ar footer {
             text-align: right;
           }
+          .lang-ar input,
+          .lang-ar textarea {
+            text-align: right;
+          }
           .lang-ar :where(h1, h2, h3, h4, p, span, button, a, li, td, th, div, input, textarea, label) {
             overflow-wrap: anywhere;
           }

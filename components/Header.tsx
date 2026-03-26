@@ -73,7 +73,7 @@ const Header: React.FC = () => {
 
   const location = useLocation();
   const isHome = location.pathname === `/${lang}` || location.pathname === `/${lang}/`;
-  const basePath = location.pathname.replace(/^\/(en|zh|ru)/, '') || '/';
+  const basePath = location.pathname.replace(/^\/(en|zh|ru|ar)/, '') || '/';
   const buildLangPath = (targetLang: typeof lang) => withLang(targetLang, basePath);
 
   const MENU_DATA: MenuItem[] = [
@@ -351,15 +351,15 @@ const Header: React.FC = () => {
 
           {/* 2. SIDEBAR LAYOUT (Products & Core Components) */}
           {item.type === 'sidebar' && item.brands && (
-            <div className="flex gap-20">
+            <div className={`flex gap-20 ${isAr ? 'flex-row-reverse' : ''}`}>
               {/* Left Sidebar: Navigation List */}
-              <div className="w-64 shrink-0 border-r border-gray-100 pr-8">
+              <div className={`w-64 shrink-0 ${isAr ? 'border-l border-gray-100 pl-8 text-right' : 'border-r border-gray-100 pr-8'}`}>
                 {/* Removed 'Brands' Header */}
                 <ul className="space-y-4">
                   {item.brands.map((brand, idx) => (
                     <li key={idx}>
                       <button
-                        className={`w-full text-left font-bold text-sm transition-colors uppercase tracking-wide ${
+                        className={`w-full ${isAr ? 'text-right' : 'text-left'} font-bold text-sm transition-colors uppercase tracking-wide ${
                           activeBrandIndex === idx 
                             ? 'text-[#4f4398]' 
                             : 'text-gray-500 hover:text-gray-900'
@@ -380,7 +380,7 @@ const Header: React.FC = () => {
                       <div className="animate-fadeIn">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
                            {item.brands[activeBrandIndex].categories.map((category, catIdx) => (
-                             <div key={catIdx}>
+                             <div key={catIdx} className={isAr ? 'text-right' : ''}>
                                 <h4 className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-6 border-b border-gray-100 pb-2">
                                   {category.title}
                                 </h4>
@@ -657,7 +657,7 @@ const Header: React.FC = () => {
                             {item.type === 'sidebar' && item.brands && (
                               <div className="space-y-6">
                                 {item.brands.map((brand, bIdx) => (
-                                   <div key={bIdx} className="border-l-2 border-gray-200 pl-4 ml-1">
+                                   <div key={bIdx} className={isAr ? 'border-r-2 border-gray-200 pr-4 mr-1 text-right' : 'border-l-2 border-gray-200 pl-4 ml-1'}>
                                       <h4 className="font-bold text-gray-900 text-sm flex items-center gap-2 mb-4 uppercase">
                                         {brand.name}
                                       </h4>

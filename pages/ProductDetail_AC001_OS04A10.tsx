@@ -9,6 +9,7 @@ import { Aperture, Cpu, Eye, Maximize, Zap, Scan, CheckCircle2 } from 'lucide-re
 const ProductDetail_AC001_OS04A10: React.FC = () => {
   const { t } = useTranslation();
   const lang = useLang();
+  const isAr = lang === 'ar';
 
   return (
     <div className="bg-white animate-fadeIn">
@@ -28,7 +29,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl">
+          <div className={`max-w-4xl ${isAr ? 'text-right ml-auto' : ''}`}>
             <span className="inline-block py-1 px-3 border border-[#a094e3] text-[#a094e3] font-bold uppercase tracking-widest text-xs mb-6">
               {t('products.ac001.hero.category')}
             </span>
@@ -41,7 +42,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
             <p className="text-gray-400 mb-12 max-w-xl leading-relaxed text-lg">
               {t('products.ac001.hero.description')}
             </p>
-            <div className="flex gap-4">
+            <div className={`flex gap-4 ${isAr ? 'justify-end' : ''}`}>
               <Link
                 to={withLang(lang, RoutePath.CONTACT)}
                 className="inline-block bg-[#4f4398] text-white hover:bg-[#3e3479] px-10 py-4 font-bold text-sm uppercase tracking-wide transition-colors"
@@ -79,7 +80,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
                 desc: t('products.ac001.highlights.res.desc')
               }
             ].map((item, idx) => (
-              <div key={idx} className="flex flex-col items-start">
+              <div key={idx} className={`flex flex-col ${isAr ? 'items-end text-right' : 'items-start'}`}>
                 <div className="mb-6 p-4 bg-gray-50 rounded-full">{item.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 uppercase mb-3">
                   {item.title}
@@ -107,7 +108,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       {/* Core Imaging Advantages */}
       <section className="py-24 bg-[#111] text-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-gray-800 pb-8">
+          <div className={`flex flex-col md:flex-row justify-between items-end mb-16 border-b border-gray-800 pb-8 ${isAr ? 'md:flex-row-reverse text-right' : ''}`}>
             <h2 className="text-3xl md:text-5xl font-black uppercase">
               {t('products.ac001.advantages.title')}
             </h2>
@@ -165,13 +166,13 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_520px] gap-8 lg:gap-12">
-            <div className="group flex flex-col justify-center">
+            <div className={`group flex flex-col justify-center ${isAr ? 'text-right' : ''}`}>
               <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
                 <Cpu className="text-[#4f4398]" size={28} />
                 {t('products.ac001.pairing.sensor.title')}
               </h3>
               <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.sensor.desc')}</p>
-              <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
+              <ul className={`space-y-3 ${isAr ? 'pr-2 border-r-2' : 'pl-2 border-l-2'} border-gray-100`}>
                 {[
                   '4MP / 2688 x 1520',
                   '30 fps Max Frame Rate',
@@ -179,7 +180,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
                   '1/1.8-inch Class Format',
                   'High Sensitivity'
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                  <li key={i} className={`flex items-center gap-3 text-gray-700 font-medium ${isAr ? 'flex-row-reverse justify-end' : ''}`}>
                     <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
                     {item}
                   </li>
@@ -191,13 +192,13 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
               <img src="/Cam/Cam_01.webp" alt="Sensor Detail" className="w-full h-auto max-w-md mix-blend-multiply" />
             </div>
 
-            <div className="group flex flex-col justify-center border-t border-gray-100 pt-8 lg:border-t-0 lg:pt-0">
+            <div className={`group flex flex-col justify-center border-t border-gray-100 pt-8 lg:border-t-0 lg:pt-0 ${isAr ? 'text-right' : ''}`}>
               <h3 className="text-2xl font-bold text-gray-900 uppercase mb-4 flex items-center gap-3 group-hover:text-[#4f4398] transition-colors">
                 <Aperture className="text-[#4f4398]" size={28} />
                 {t('products.ac001.pairing.lens.title')}
               </h3>
               <p className="text-gray-600 mb-6 text-lg">{t('products.ac001.pairing.lens.desc')}</p>
-              <ul className="space-y-3 pl-2 border-l-2 border-gray-100">
+              <ul className={`space-y-3 ${isAr ? 'pr-2 border-r-2' : 'pl-2 border-l-2'} border-gray-100`}>
                 {[
                   'F1.0 Large Aperture',
                   '4.37 mm Focal Length',
@@ -205,7 +206,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
                   'M16 Mount',
                   'Manual Focus / Fixed Iris'
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                  <li key={i} className={`flex items-center gap-3 text-gray-700 font-medium ${isAr ? 'flex-row-reverse justify-end' : ''}`}>
                     <span className="w-1.5 h-1.5 bg-[#4f4398] rounded-full"></span>
                     {item}
                   </li>
@@ -233,7 +234,7 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
               t('products.ac001.applications.robotics'),
               t('products.ac001.applications.action')
             ].map((app, i) => (
-              <div key={i} className="bg-transparent border border-gray-700 p-8 text-center hover:border-[#4f4398] transition-colors group">
+              <div key={i} className={`bg-transparent border border-gray-700 p-8 ${isAr ? 'text-right' : 'text-center'} hover:border-[#4f4398] transition-colors group`}>
                 <div className="text-gray-400 font-bold uppercase tracking-widest text-sm group-hover:text-white transition-colors">
                   {app}
                 </div>
@@ -246,11 +247,11 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       {/* Technical Specifications */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className={`mb-16 ${isAr ? 'text-right' : 'text-center'}`}>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase">
               {t('products.ac001.specs.title')}
             </h2>
-            <div className="w-24 h-1 bg-[#4f4398] mx-auto mt-6"></div>
+            <div className={`w-24 h-1 bg-[#4f4398] mt-6 ${isAr ? 'mr-0 ml-auto' : 'mx-auto'}`}></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
@@ -320,14 +321,14 @@ const ProductDetail_AC001_OS04A10: React.FC = () => {
       {/* CTA */}
       <section className="py-32 bg-[#4f4398] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div className="container mx-auto px-6 text-center relative z-10">
+        <div className={`container mx-auto px-6 relative z-10 ${isAr ? 'text-right' : 'text-center'}`}>
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase mb-8">
             {t('products.ac001.cta.title')}
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto font-light">
             {t('products.ac001.cta.subtitle')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className={`flex flex-col sm:flex-row gap-6 ${isAr ? 'justify-end' : 'justify-center'}`}>
             <Link
               to={withLang(lang, RoutePath.CONTACT)}
               className="inline-block bg-white text-[#4f4398] px-12 py-5 font-bold text-sm uppercase hover:bg-gray-100 transition-all transform hover:-translate-y-1 shadow-2xl"
