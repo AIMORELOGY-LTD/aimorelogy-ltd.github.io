@@ -476,9 +476,9 @@ const Header: React.FC = () => {
       onMouseLeave={() => setActiveDesktopMenu(null)}
     >
       {/* Full Width Container */}
-      <div className="w-full px-6 md:px-8 h-[72px] flex items-center">
+      <div className={`w-full px-6 md:px-8 h-[72px] flex items-center ${isAr ? 'flex-row-reverse' : ''}`}>
         {/* Logo Area - Left */}
-        <Link to={withLang(lang, RoutePath.HOME)} className="flex items-center gap-2 z-50 mr-12 shrink-0">
+        <Link to={withLang(lang, RoutePath.HOME)} className={`flex items-center gap-2 z-50 shrink-0 ${isAr ? 'ml-12' : 'mr-12'}`}>
             <img
               src="/aimorelogy-logo-small.svg"
               alt="AIMORELOGY"
@@ -487,8 +487,8 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation - Immediate Left Next to Logo */}
-        <nav className="hidden lg:flex items-center h-full mr-auto">
-          <ul className="flex h-full gap-1">
+        <nav className={`hidden lg:flex items-center h-full ${isAr ? 'ml-0' : 'mr-auto'}`}>
+          <ul className={`flex h-full gap-1 ${isAr ? 'flex-row-reverse' : ''}`}>
             {MENU_DATA.map((item) => (
               <li
                 key={item.title}
@@ -529,7 +529,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Icons & Actions Area - Far Right */}
-        <div className={`hidden lg:flex items-center gap-6 ml-auto pl-6 h-8 ${isTransparent ? 'border-l border-white/20' : 'border-l border-gray-100'}`}>
+        <div className={`hidden lg:flex items-center gap-6 h-8 ${isAr ? 'mr-auto pr-6 border-r' : 'ml-auto pl-6 border-l'} ${isTransparent ? 'border-white/20' : 'border-gray-100'}`}>
            {/* Search Icon */}
            <button className={`${iconColorClass} hover:text-[#4f4398] transition-colors`} aria-label={t('header.search')}>
              <Search size={20} />
@@ -585,7 +585,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button - Right */}
         <button
-          className={`lg:hidden z-50 hover:text-[#4f4398] ml-auto ${isTransparent ? 'text-white' : 'text-gray-900'}`}
+          className={`lg:hidden z-50 hover:text-[#4f4398] ${isAr ? 'mr-auto' : 'ml-auto'} ${isTransparent ? 'text-white' : 'text-gray-900'}`}
           onClick={toggleMenu}
         >
           {isMenuOpen ? <X size={28} className="text-gray-900" /> : <Menu size={28} />}
@@ -612,7 +612,7 @@ const Header: React.FC = () => {
                         target="_blank"
                         rel="noreferrer"
                         onClick={() => setIsMenuOpen(false)}
-                        className="w-full flex justify-between items-center py-5 px-6 text-left"
+                        className={`w-full flex justify-between items-center py-5 px-6 ${isAr ? 'text-right' : 'text-left'}`}
                       >
                         <span className="text-lg font-bold uppercase text-gray-900">
                           {item.title}
@@ -622,7 +622,7 @@ const Header: React.FC = () => {
                       <>
                         <button 
                           onClick={() => toggleMobileItem(item.title)}
-                          className="w-full flex justify-between items-center py-5 px-6 text-left"
+                          className={`w-full flex justify-between items-center py-5 px-6 ${isAr ? 'text-right' : 'text-left'}`}
                         >
                           <span className={`text-lg font-bold uppercase ${expandedMobileItems.includes(item.title) ? 'text-[#4f4398]' : 'text-gray-900'}`}>
                             {item.title}
