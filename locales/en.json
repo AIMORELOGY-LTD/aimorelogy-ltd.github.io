@@ -1737,7 +1737,7 @@
           "desc": "A larger optical format provides a stronger foundation for light capture, retaining more usable image information in dim environments."
         },
         "pixel": {
-          "title": "3.0 µm Pixels",
+          "title": "3.0 Micron Pixels",
           "desc": "With 3.0 µm pixels, the module is positioned for better sensitivity and improved low-light imaging performance."
         },
         "lens": {
