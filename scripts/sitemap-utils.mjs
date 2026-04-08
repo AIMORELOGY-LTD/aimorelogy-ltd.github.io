@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const BASE_URL = process.env.SITE_URL || 'https://aimorelogy.com';
-const LANGS = ['en', 'zh', 'ru'];
+const LANGS = ['en', 'zh', 'ru', 'ar'];
 
 const DATA_FILES = {
   sophgo: path.resolve('data', 'sophgoData.ts'),

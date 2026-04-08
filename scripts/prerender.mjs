@@ -14,7 +14,7 @@ const ORIGIN_URL = new URL(ORIGIN);
 const HOST = ORIGIN_URL.hostname;
 const PORT = ORIGIN_URL.port || '4173';
 
-const SUPPORTED_LANGS = new Set(['en', 'zh', 'ru']);
+const SUPPORTED_LANGS = new Set(['en', 'zh', 'ru', 'ar']);
 
 const getViteBin = () => {
   const bin = path.resolve('node_modules', '.bin', process.platform === 'win32' ? 'vite.cmd' : 'vite');

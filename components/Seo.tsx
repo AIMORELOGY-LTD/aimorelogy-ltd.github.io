@@ -143,6 +143,27 @@ const mergeKeywords = (base: string, extra?: string) => {
   return deduped.join(', ');
 };
 
+const getSiteName = (lang: string) => {
+  switch (lang) {
+    case 'zh':
+      return '爱谋科技 AIMORELOGY';
+    case 'ar':
+      return 'AIMORELOGY الشرق الأوسط';
+    default:
+      return 'AIMORELOGY';
+  }
+};
+
+const getSiteAlternateName = (lang: string) => {
+  switch (lang) {
+    case 'zh':
+    case 'ar':
+      return 'AIMORELOGY';
+    default:
+      return '爱谋科技 AIMORELOGY';
+  }
+};
+
 const Seo: React.FC<SeoProps> = ({
   title,
   description,
@@ -161,16 +182,8 @@ const Seo: React.FC<SeoProps> = ({
     const imageUrl = normalizeImageUrl(image);
     const alternates = buildAlternateLinks(normalizedPath);
     const locale = LOCALE_MAP[lang] || 'en_US';
-    const siteName = lang === 'zh'
-      ? '爱谋科技 AIMORELOGY'
-      : lang === 'ar'
-        ? 'AIMORELOGY الشرق الأوسط'
-        : 'AIMORELOGY';
-    const siteAlternateName = lang === 'zh'
-      ? 'AIMORELOGY'
-      : lang === 'ar'
-        ? 'AIMORELOGY'
-        : '爱谋科技 AIMORELOGY';
+    const siteName = getSiteName(lang);
+    const siteAlternateName = getSiteAlternateName(lang);
     const keywordsValue = mergeKeywords(DEFAULT_KEYWORDS, keywords);
     const alternateLocales = Object.values(LOCALE_MAP).filter((value) => value !== locale);
 
