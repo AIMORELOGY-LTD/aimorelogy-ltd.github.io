@@ -928,70 +928,59 @@
   },
   "products": {
     "ac001": {
-      "metaTitle": "AC-001-OS04A10 | Starlight Camera Module | AIMORELOGY",
-      "metaDescription": "High-end 4MP starlight camera module based on OS04A10, with a 1/1.8-inch class optical format and F1.0 optics for stronger low-light imaging.",
-      "seoKeywords": "AC-001-OS04A10, OS04A10 camera module, starlight camera module, low-light camera module, F1.0 lens module, 1/1.8-inch camera module, 4MP vision module",
+      "metaTitle": "AC-001-OS04A10 | 4MP Low-Light Camera Module | AIMORELOGY",
+      "metaDescription": "AC-001-OS04A10 is a 4MP camera module based on the OmniVision OS04A10 image sensor, featuring 2.9 μm pixels, 1/1.79-inch optical format, F1.0 optics, HDR, and enhanced NIR response.",
+      "seoKeywords": "AC-001-OS04A10, OS04A10 camera module, 4MP camera module, low-light camera module, HDR camera module, NIR camera module, MIPI CSI-2 camera module, industrial vision camera module",
       "hero": {
-        "category": "High-End Camera Module",
+        "category": "4MP Low-Light Camera Module",
         "title": "AC-001-OS04A10",
-        "subtitle": "A High-End Camera Module For Starlight And Night-Oriented Imaging",
-        "description": "Built around the OS04A10 image sensor, AC-001-OS04A10 combines a 1/1.8-inch class optical format with F1.0 optics to deliver a stronger imaging foundation for low-light, night-time and challenging lighting conditions.",
+        "subtitle": "A 4MP imaging module built for low-light vision, HDR scenes, and enhanced near-infrared response",
+        "description": "Based on the OmniVision OS04A10 image sensor, AC-001-OS04A10 combines 2688 × 1520 resolution, 2.9 μm × 2.9 μm pixels, a 1/1.79-inch optical format, and F1.0 optics in a compact module designed for AI vision and low-light deployment.",
         "cta": "Contact Sales"
       },
       "highlights": {
-        "format": {
-          "title": "1/1.8\" Class Format",
-          "desc": "A larger optical format creates a stronger light-capture foundation and preserves more usable scene information in dim environments."
-        },
-        "pixel": {
-          "title": "3.0 Micron Pixels",
-          "desc": "With 3.0 μm pixels, the module is positioned for improved sensitivity and stronger low-light image formation."
-        },
-        "lens": {
-          "title": "F1.0 Optics",
-          "desc": "The F1.0 lens design supports higher light intake, making the module better suited to night-oriented imaging."
-        },
-        "res": {
-          "title": "4MP Detail",
-          "desc": "2688 × 1520 output balances scene coverage and image detail for surveillance, robotics and edge vision workloads."
-        }
+        "title": "Key Module Highlights",
+        "subtitle": "Core imaging characteristics defined directly by the released datasheet.",
+        "items": [
+          {
+            "title": "1/1.79\" Optical Format",
+            "desc": "A large optical format and 7.84 mm × 4.45 mm imaging area provide a stronger light-capture foundation for low-light scenes."
+          },
+          {
+            "title": "2.9 μm Pixels",
+            "desc": "The sensor uses 2.9 μm × 2.9 μm pixels to improve sensitivity, control noise, and preserve image detail under dim lighting."
+          },
+          {
+            "title": "F1.0 Lens System",
+            "desc": "The module ships with an F1.0 lens, M16 × P0.5 mount, manual focus, and a 4.37 mm effective focal length."
+          },
+          {
+            "title": "HDR + NIR Ready",
+            "desc": "Supports single-, dual-, and triple-exposure HDR modes, with enhanced NIR QE for low-light and infrared-assisted imaging."
+          }
+        ]
       },
-      "advantages": {
-        "title": "Core Imaging Advantages",
-        "starlight": {
-          "title": "Starlight Imaging",
-          "desc": "Built for scenes where usable image information must be preserved as illumination drops."
-        },
-        "format": {
-          "title": "Large Optical Format",
-          "desc": "A 1/1.8-inch class architecture provides a stronger light-capture base than smaller mainstream sensor formats."
-        },
-        "optics": {
-          "title": "Night-Oriented Optics",
-          "desc": "The F1.0 optical stack helps the module collect more light for low-light and night-time imaging."
-        },
-        "clarity": {
-          "title": "Practical 4MP Output",
-          "desc": "4MP resolution provides a useful balance between scene coverage, image detail and deployment efficiency."
-        }
-      },
-      "pairing": {
-        "title": "Sensor + Lens Pairing",
-        "sensor": {
-          "title": "The Sensor",
-          "desc": "OmniVision OS04A10 high-sensitivity 4MP image sensor"
-        },
-        "lens": {
-          "title": "The Lens",
-          "desc": "4.37 mm F1.0 lens assembly tuned for low-light coverage"
-        }
-      },
-      "applications": {
-        "title": "Application Scenarios",
-        "uav": "UAV Payload Imaging",
-        "edge": "Low-Light Edge Vision",
-        "robotics": "Autonomous Robotics",
-        "action": "Action Cameras"
+      "capabilities": {
+        "title": "Core Imaging Capabilities",
+        "subtitle": "What the module is designed to do according to the current datasheet and sensor capabilities.",
+        "items": [
+          {
+            "title": "Ultra-Low-Light Imaging",
+            "desc": "Built around OS04A10 with Nyxel near-infrared enhancement and large 2.9 μm pixels to maintain usable image output in dim and weak-light environments."
+          },
+          {
+            "title": "HDR Imaging",
+            "desc": "Supports HDR RAW output with single-, dual-, and triple-exposure HDR modes for scenes with strong contrast, backlight, or mixed illumination."
+          },
+          {
+            "title": "Enhanced NIR Response",
+            "desc": "Optimized for near-infrared imaging and suitable for 850 nm or 940 nm IR illumination scenarios where night visibility matters."
+          },
+          {
+            "title": "Compact System Integration",
+            "desc": "Designed with MIPI output, SCCB control, M16 lens interface, manual focus, and compact packaging for practical integration into intelligent systems."
+          }
+        ]
       },
       "specs": {
         "title": "Technical Specifications",
@@ -1000,11 +989,200 @@
         },
         "optical": {
           "title": "Optical Specifications"
-        }
+        },
+        "sensorRows": [
+          {
+            "label": "Sensor",
+            "value": "OmniVision OS04A10"
+          },
+          {
+            "label": "Resolution",
+            "value": "4MP"
+          },
+          {
+            "label": "Effective Pixels",
+            "value": "2688 × 1520"
+          },
+          {
+            "label": "Pixel Size",
+            "value": "2.9 μm × 2.9 μm"
+          },
+          {
+            "label": "Optical Format",
+            "value": "1/1.79\""
+          },
+          {
+            "label": "Imaging Area",
+            "value": "7.84 mm × 4.45 mm"
+          },
+          {
+            "label": "Scan Type",
+            "value": "Progressive Scan"
+          },
+          {
+            "label": "Shutter Type",
+            "value": "Rolling Shutter"
+          },
+          {
+            "label": "Output Format",
+            "value": "12-bit RAW / HDR RAW"
+          },
+          {
+            "label": "HDR Modes",
+            "value": "Single / Dual / Triple Exposure HDR"
+          },
+          {
+            "label": "Max Frame Rate",
+            "value": "30 fps @ 1520p (Triple-Exposure HDR)"
+          },
+          {
+            "label": "Image Interface",
+            "value": "MIPI CSI-2 (up to 4 lanes) / LVDS"
+          },
+          {
+            "label": "Control Interface",
+            "value": "SCCB (I2C-compatible)"
+          },
+          {
+            "label": "Operating Voltage",
+            "value": "Analog 2.8 V / Digital 1.2 V / IO 1.8 V"
+          },
+          {
+            "label": "Power Consumption",
+            "value": "Approx. 300 mW"
+          },
+          {
+            "label": "Operating Temperature",
+            "value": "-30°C to +85°C"
+          },
+          {
+            "label": "CRA",
+            "value": "9°"
+          },
+          {
+            "label": "NIR Performance",
+            "value": "Enhanced NIR QE supported"
+          }
+        ],
+        "opticalRows": [
+          {
+            "label": "Matched Resolution",
+            "value": "2688 × 1520 (4MP)"
+          },
+          {
+            "label": "Matched Format",
+            "value": "1/1.8\""
+          },
+          {
+            "label": "Lens Structure",
+            "value": "1G7P"
+          },
+          {
+            "label": "Focus",
+            "value": "Manual"
+          },
+          {
+            "label": "Minimum Object Distance",
+            "value": "2.0 m"
+          },
+          {
+            "label": "Mount",
+            "value": "M16 × P0.5"
+          },
+          {
+            "label": "Effective Focal Length",
+            "value": "4.37 mm ±5%"
+          },
+          {
+            "label": "F Number",
+            "value": "F1.0 ±10%"
+          },
+          {
+            "label": "TTL",
+            "value": "22.3 mm ±0.2 mm"
+          },
+          {
+            "label": "OBFL",
+            "value": "4.47 mm ±0.2 mm"
+          },
+          {
+            "label": "MBFL",
+            "value": "4.0 mm ±0.2 mm"
+          },
+          {
+            "label": "Image Circle",
+            "value": "Ø9.2 mm (Max)"
+          },
+          {
+            "label": "FOV",
+            "value": "H 109.0° / V 57.5° / D 131.6°"
+          },
+          {
+            "label": "Relative Illumination",
+            "value": "38.30%"
+          },
+          {
+            "label": "Lens CRA",
+            "value": "14.62°"
+          },
+          {
+            "label": "TV Distortion",
+            "value": "-16.70%"
+          },
+          {
+            "label": "Optical Distortion",
+            "value": "-54.70%"
+          }
+        ]
+      },
+      "interface": {
+        "title": "Interface And Integration",
+        "subtitle": "Module-level interface details and integration notes summarized from the datasheet.",
+        "items": [
+          {
+            "title": "Image Data Interface",
+            "desc": "MIPI CSI-2 output with 4 data lanes and 1 clock lane; LVDS support is also available at the sensor level."
+          },
+          {
+            "title": "Control Signals",
+            "desc": "Configuration via I2C/SCCB, with dedicated CAM_RST, POWER_DOWN, and INCK input signals for system control."
+          },
+          {
+            "title": "Power Input",
+            "desc": "Module-side input is VDD_5V0, supplied through multiple parallel power pins, with multiple dedicated ground pins."
+          },
+          {
+            "title": "Hardware Notes",
+            "desc": "Main signal paths reserve 0R series resistors for tuning and impedance adjustment during integration and validation."
+          }
+        ]
+      },
+      "applications": {
+        "title": "Target Applications",
+        "subtitle": "Typical application directions explicitly listed or directly supported by the datasheet positioning.",
+        "items": [
+          "UAV Vision Systems",
+          "Security Monitoring",
+          "AI Recognition Devices",
+          "Robot Vision",
+          "Industrial Inspection",
+          "Intelligent Access Control"
+        ]
+      },
+      "integrationNotes": {
+        "title": "Integration Notes",
+        "subtitle": "Final image performance depends on the complete system stack, not only the sensor itself.",
+        "items": [
+          "Lens aperture, transmittance, and stray-light control all affect the final low-light result.",
+          "IR filter characteristics and day/night switching strategy directly influence NIR performance.",
+          "Main platform ISP tuning for denoise, HDR merge, sharpening, and color processing remains critical.",
+          "IR illuminator wavelength, power, divergence angle, and installation position affect night-time output.",
+          "Exposure, gain, frame rate, and shutter configuration should be validated at system level."
+        ]
       },
       "cta": {
-        "title": "Ready To Evaluate AC-001-OS04A10?",
-        "subtitle": "Contact us for datasheet access, sample evaluation and project integration support."
+        "title": "Need Datasheet-Level Integration Support?",
+        "subtitle": "Contact AIMORELOGY for module evaluation, system integration, and application-specific customization."
       }
     },
     "common": {
