@@ -649,12 +649,12 @@
     "discuss": "Discuss Your Project",
     "download": "Download Brochure",
     "cameraCustomization": {
-      "metaTitle": "Camera Module Customization | AIMORELOGY",
-      "metaDescription": "Custom camera module development for UAV, FPV, robotics and industrial vision programs, from cost-sensitive builds to high-end optical and sensor solutions.",
-      "seoKeywords": "camera module customization, custom camera module, UAV camera module, FPV camera module, robotics vision module, low-light camera module, starlight camera module",
-      "heroCategory": "Custom Camera Module Service",
+      "metaTitle": "Custom Camera Module Development | MIPI CSI-2, Low-Light & Industrial Vision | AIMORELOGY",
+      "metaDescription": "Custom camera module development for UAV, FPV, robotics, security, and industrial vision. MIPI CSI-2 camera modules, FPV camera modules, low-light tuning, HDR support, optics matching, and manufacturable integration.",
+      "seoKeywords": "custom camera module, camera module development, MIPI camera module, MIPI CSI-2 camera module, FPV camera module, low-light FPV camera, drone camera module, low-light camera module, HDR camera module, industrial camera module, robotics camera module, UAV camera module, custom vision module",
+      "heroCategory": "Custom Camera Module Development",
       "title": "Camera Module Customization",
-      "subtitle": "From cost-sensitive programs to high-end optical systems, we tailor camera modules around your real deployment constraints.",
+      "subtitle": "Custom MIPI camera modules for UAV, robotics, security, and industrial vision, from cost-sensitive programs to advanced low-light and HDR imaging systems.",
       "intro": {
         "title": "Tailored Imaging For Real Missions",
         "desc1": "In FPV, UAV and robotics programs, off-the-shelf cameras often force compromises in size, optics, latency or low-light performance. We build around the application instead of forcing the application to fit a fixed module.",
@@ -672,7 +672,7 @@
       },
       "capabilities": {
         "title": "Engineering Capabilities",
-        "subtitle": "Bridging sensor technology, optics and integration constraints with production-ready execution.",
+        "subtitle": "Engineering support for custom camera modules across sensor selection, optics, interfaces, low-light tuning, and production-oriented integration.",
         "cap1": {
           "tag": "Supply Chain",
           "title": "Component Sourcing And Optical Tuning",
@@ -732,8 +732,8 @@
         ]
       },
       "cta": {
-        "title": "Need A Camera Module Built Around Your Product?",
-        "subtitle": "Talk with our engineering team about sensor selection, optics, interfaces and manufacturable module design.",
+        "title": "Need A Custom MIPI Camera Module?",
+        "subtitle": "Talk with our engineering team about low-light imaging, HDR, optics matching, interfaces, and camera-module integration for your product.",
         "button": "Contact Our Team"
       }
     }
@@ -928,14 +928,14 @@
   },
   "products": {
     "ac001": {
-      "metaTitle": "AC-001-OS04A10 | 4MP Low-Light Camera Module | AIMORELOGY",
-      "metaDescription": "AC-001-OS04A10 is a 4MP camera module based on the OmniVision OS04A10 image sensor, featuring 2.9 μm pixels, 1/1.79-inch optical format, F1.0 optics, HDR, and enhanced NIR response.",
-      "seoKeywords": "AC-001-OS04A10, OS04A10 camera module, 4MP camera module, low-light camera module, HDR camera module, NIR camera module, MIPI CSI-2 camera module, industrial vision camera module",
+      "metaTitle": "AC-001-OS04A10 MIPI Camera Module | 4MP Low-Light, HDR & NIR | AIMORELOGY",
+      "metaDescription": "AC-001-OS04A10 is a 4MP MIPI camera module based on OmniVision OS04A10, with 2.9 μm pixels, 1/1.79-inch optical format, F1.0 optics, HDR RAW, and enhanced NIR response for low-light, FPV, UAV, and industrial vision applications.",
+      "seoKeywords": "AC-001-OS04A10, MIPI camera module, 4MP camera module, FPV camera module, low-light FPV camera, drone camera module, low-light camera module, HDR camera module, NIR camera module, industrial camera module, embedded vision camera module, security camera module, robot vision camera module, UAV camera module, OS04A10 camera module",
       "hero": {
-        "category": "4MP Low-Light Camera Module",
+        "category": "4MP MIPI Low-Light Camera Module",
         "title": "AC-001-OS04A10",
-        "subtitle": "A 4MP imaging module built for low-light vision, HDR scenes, and enhanced near-infrared response",
-        "description": "Based on the OmniVision OS04A10 image sensor, AC-001-OS04A10 combines 2688 × 1520 resolution, 2.9 μm × 2.9 μm pixels, a 1/1.79-inch optical format, and F1.0 optics in a compact module designed for AI vision and low-light deployment.",
+        "subtitle": "A 4MP MIPI camera module for low-light imaging, HDR scenes, and enhanced near-infrared response",
+        "description": "Built around the OmniVision OS04A10 image sensor, AC-001-OS04A10 combines 2688 × 1520 output, 2.9 μm × 2.9 μm pixels, 1/1.79-inch optical format, and F1.0 optics in a compact camera module for AI vision, security, robotics, UAV, and industrial inspection.",
         "cta": "Contact Sales"
       },
       "highlights": {
@@ -1136,8 +1136,8 @@
         ]
       },
       "interface": {
-        "title": "Interface And Integration",
-        "subtitle": "Module-level interface details and integration notes summarized from the datasheet.",
+        "title": "MIPI CSI-2 Interface And Integration",
+        "subtitle": "Module-side interface, control signals, and integration points drawn from the released AC-001-OS04A10 datasheet.",
         "items": [
           {
             "title": "Image Data Interface",
@@ -1159,7 +1159,7 @@
       },
       "applications": {
         "title": "Target Applications",
-        "subtitle": "Typical application directions explicitly listed or directly supported by the datasheet positioning.",
+        "subtitle": "Search-relevant deployment scenarios supported by the module positioning and published hardware capabilities.",
         "items": [
           "UAV Vision Systems",
           "Security Monitoring",
@@ -1181,8 +1181,8 @@
         ]
       },
       "cta": {
-        "title": "Need Datasheet-Level Integration Support?",
-        "subtitle": "Contact AIMORELOGY for module evaluation, system integration, and application-specific customization."
+        "title": "Need A 4MP Low-Light MIPI Camera Module?",
+        "subtitle": "Contact AIMORELOGY for datasheet access, evaluation support, and integration guidance for security, robotics, UAV, and industrial vision projects."
       }
     },
     "common": {
