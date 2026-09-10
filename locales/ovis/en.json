@@ -1,0 +1,259 @@
+{
+  "name": "Edge AI Camera Module",
+  "intro": "Image capture, ISP, AI inference, video encoding and connectivity in one modular camera. Operates independently or connects to Raspberry Pi and other single-board computers.",
+  "explore": "Explore OVIS",
+  "specsLink": "Technical specifications",
+  "contact": "Talk to our engineers",
+  "featured": "FEATURED PRODUCT / EDGE AI",
+  "heroAlt": "OVIS camera with people and vehicle detection, drone detection, low-light imaging, web management and tracking demonstrations",
+  "productAlt": "OVIS edge AI camera module",
+  "stackAlt": "OVIS modular stack with sensor, extension and core boards",
+  "highlights": {
+    "compute": "AI acceleration at INT8",
+    "capture": "1080p at 60 FPS capture",
+    "modular": "Modular hardware design",
+    "manager": "Browser-based configuration"
+  },
+  "pageNav": "OVIS page navigation",
+  "nav": {
+    "overview": "Overview",
+    "demos": "Vision demos",
+    "specs": "Specifications",
+    "kits": "Configurations",
+    "resources": "Resources"
+  },
+  "sections": {
+    "modular": {
+      "eyebrow": "MODULAR HARDWARE",
+      "title": "Open-source HDK and modular expansion",
+      "intro": "The OVIS hardware development kit (HDK) is open source. Users can use the published hardware design resources to develop expansion boards for their applications and stack them with the sensor and core boards through board-to-board connectors."
+    },
+    "demos": {
+      "eyebrow": "ON-DEVICE VISION",
+      "title": "Detection and tracking, on the camera.",
+      "intro": "Explore OVIS edge vision through recorded people, vehicle and drone detection and tracking demonstrations. Select a video to play."
+    },
+    "manager": {
+      "eyebrow": "WEB MANAGER",
+      "title": "Configure devices. Deploy models.",
+      "intro": "Discover cameras, adjust video parameters and deploy models through a browser-based management interface."
+    },
+    "specs": {
+      "eyebrow": "TECHNICAL SPECIFICATIONS",
+      "title": "OVIS Technical Specifications",
+      "intro": "Key specifications for OVIS processors, memory, storage, imaging, interfaces and mechanical dimensions."
+    },
+    "interfaces": {
+      "eyebrow": "HARDWARE INTERFACES",
+      "title": "Every board, clearly mapped.",
+      "intro": "Inspect components and connectors on the core, sensor and CVBS output boards. Select an image to enlarge it."
+    },
+    "kits": {
+      "eyebrow": "HARDWARE CONFIGURATIONS",
+      "title": "Two ways to configure OVIS.",
+      "intro": "Start with the sensor and core boards, or add the MS7024 output board for CVBS analog video."
+    },
+    "resources": {
+      "eyebrow": "DEVELOPMENT & SUPPORT",
+      "title": "Start building with OVIS.",
+      "intro": "Find documentation, access the web manager or discuss hardware integration and custom expansion with our engineers."
+    }
+  },
+  "architecture": {
+    "sensor": {
+      "title": "Sensor board",
+      "text": "SC235HAI image sensor with 1080p at 60 FPS capture, paired with a 3.9 mm F1.0 lens."
+    },
+    "core": {
+      "title": "OVIS core board",
+      "text": "CV1842H-P processors and a 1.5 TOPS INT8 AI accelerator in a 20 × 20 × 5.7 mm core board."
+    },
+    "extension": {
+      "title": "User-designed expansion boards",
+      "text": "Users can develop Wi-Fi, IMU or custom I/O expansion boards using the open-source HDK. The MS7024 CVBS output board is an existing expansion example."
+    }
+  },
+  "pipeline": {
+    "capture": "Image capture",
+    "isp": "ISP processing",
+    "inference": "AI inference",
+    "encode": "Video encoding",
+    "transmit": "Connectivity"
+  },
+  "demos": {
+    "people": {
+      "title": "People & vehicles",
+      "text": "Detection with a P2 detection head."
+    },
+    "drone": {
+      "title": "Drone detection",
+      "text": "Recorded low-altitude drone detection."
+    },
+    "street": {
+      "title": "Street tracking",
+      "text": "Vehicle target tracking in a street scene."
+    },
+    "fpv": {
+      "title": "FPV simulation tracking",
+      "text": "Target tracking using simulated FPV footage."
+    }
+  },
+  "reference": "Reference rate",
+  "performanceNote": "Reference performance: 30 FPS for people/vehicle detection with a P2 head; 55 FPS for drone detection and tracking. Results vary by model, input size, quantization, firmware and configuration. Recording frame rate is not inference frame rate.",
+  "lowlightTitle": "Low-light image processing.",
+  "lowlightIntro": "Explore low-light imaging with ISP and AI-BNR processing. The following videos are separate demonstrations.",
+  "videos": {
+    "lowlight": "Low-light ISP demonstration",
+    "ai-isp": "AI-ISP image processing demonstration"
+  },
+  "managerViews": "Manager interface views",
+  "interfacePreview": "Interface preview",
+  "openManager": "Open Web Manager",
+  "manager": {
+    "discovery": {
+      "title": "Discover",
+      "text": "Discover devices and review connection status. Screenshots show demonstration states of the management interface."
+    },
+    "config": {
+      "title": "Configure",
+      "text": "Adjust video and operating parameters from a browser during integration. Device configurations shown are demonstration data."
+    },
+    "models": {
+      "title": "Deploy models",
+      "text": "Browse models, deploy them and configure applications. Available functions depend on firmware and configuration."
+    }
+  },
+  "groups": {
+    "compute": "Compute & system",
+    "imaging": "Imaging & optics",
+    "connection": "Video & connectivity",
+    "physical": "Mechanical & integration"
+  },
+  "labels": {
+    "soc": "SoC",
+    "cpu": "Processors",
+    "tpu": "AI acceleration",
+    "memory": "Memory",
+    "storage": "Storage",
+    "os": "Operating system",
+    "sensor": "Image sensor",
+    "capture": "Image capture",
+    "lens": "Lens model",
+    "optics": "Lens specifications",
+    "fov": "Reference FOV",
+    "processing": "Image processing",
+    "codec": "Video codecs",
+    "encoding": "Max. encoding",
+    "usb": "USB",
+    "ethernet": "Ethernet",
+    "uart": "Serial interfaces",
+    "stream": "Streaming protocol",
+    "moduleSize": "Module dimensions",
+    "coreSize": "Core dimensions",
+    "operation": "Operating mode",
+    "cvbs": "CVBS expansion",
+    "custom": "Custom options"
+  },
+  "precision": "Supports INT8 / BF16. TOPS rating is for INT8.",
+  "focus": "Manual focus, fixed aperture.",
+  "fovNote": "Theoretical reference for a 1/2.9-inch image format; not a measured module FOV.",
+  "encodingNote": "Encoding capability ceiling. Current sensor capture is 1080p at 60 FPS.",
+  "operationValue": "Standalone or connected to Raspberry Pi and other single-board computers.",
+  "cvbsNote": "Requires the expansion board; see the three-board configuration.",
+  "customNote": "Wi-Fi, IMU and custom I/O are customization options, not standard components of the listed kits.",
+  "specNote": "Capture specifications, encoding capability and inference rates are separate metrics. Contact our engineers to confirm configuration, accessories and application compatibility.",
+  "boardViews": "Board views",
+  "boardDetails": "Main components and connectors",
+  "chip": "Main component",
+  "connectors": "Connectors",
+  "boards": {
+    "core": "OVIS core board",
+    "sensor": "Sensor board",
+    "cvbs": "MS7024 CVBS output board"
+  },
+  "kits": {
+    "dual": {
+      "tag": "TWO BOARDS",
+      "title": "Sensor + core",
+      "text": "1 × sensor board and 1 × OVIS core board for vision development and system integration."
+    },
+    "triple": {
+      "tag": "THREE BOARDS / CVBS",
+      "title": "Sensor + CVBS + core",
+      "text": "1 × sensor board, 1 × MS7024 CVBS output board and 1 × OVIS core board."
+    }
+  },
+  "kitComparison": "OVIS configuration comparison",
+  "components": "Board components",
+  "kitNote": "Only confirmed board combinations are listed. Cables, additional accessories and delivered configuration are subject to the final sales list.",
+  "resources": {
+    "sdk": {
+      "title": "SDK & development",
+      "text": "Visit the OVIS SDK repository for development resources.",
+      "action": "View SDK"
+    },
+    "docs": {
+      "title": "Documentation",
+      "text": "Integration guides and hardware development resources.",
+      "action": "Read the docs"
+    },
+    "manager": {
+      "title": "Web Manager",
+      "text": "Access the OVIS browser-based configuration tool.",
+      "action": "Open manager"
+    },
+    "forum": {
+      "title": "Community",
+      "text": "Discuss integration and technical questions.",
+      "action": "Visit the forum"
+    }
+  },
+  "endTitle": "Bring OVIS into your project.",
+  "endText": "Discuss board selection, connectivity and custom expansion with our team.",
+  "civil": "OVIS is intended for civilian applications only.",
+  "enlarge": "Enlarge image",
+  "enlargeHint": "Select the image to inspect the full interface map",
+  "close": "Close image",
+  "videoFallback": "Open demonstration video",
+  "fitImage": "Fit to window",
+  "actualSize": "View image details",
+  "series": "OVIS Series",
+  "homeTitle": "From image capture to edge intelligence.",
+  "homeIntro": "On-camera detection, tracking and image processing, with modular hardware, standard interfaces and browser-based management for embedded vision integration.",
+  "homeMetrics": {
+    "compute": "INT8 AI acceleration",
+    "capture": "Image capture",
+    "lens": "Large-aperture lens",
+    "size": "Module length × width"
+  },
+  "homeFeatures": {
+    "vision": {
+      "title": "Detection & tracking",
+      "text": "Explore people and vehicle detection, low-altitude drone detection, street tracking and FPV simulation through recorded demonstrations."
+    },
+    "imaging": {
+      "title": "Low-light image enhancement",
+      "text": "Explore ISP and AI-BNR image processing in recorded low-light and AI-ISP demonstrations."
+    },
+    "modular": {
+      "title": "Modular hardware stack",
+      "text": "The HDK is open source. Design application-specific expansion boards and stack them with the sensor and core boards."
+    },
+    "manager": {
+      "title": "Configure & deploy in a browser",
+      "text": "Discover devices, adjust video parameters and deploy models through Web Manager."
+    },
+    "connection": {
+      "title": "Video, network & control",
+      "text": "USB UVC / NCM · 100 Mbps Ethernet · UART · RTSP"
+    },
+    "platform": {
+      "title": "Standalone or Raspberry Pi connected",
+      "text": "Integrate with single-board computers and access the SDK, documentation and development tools."
+    }
+  },
+  "kickstarter": {
+    "available": "Now available on Kickstarter",
+    "action": "View on Kickstarter"
+  }
+}

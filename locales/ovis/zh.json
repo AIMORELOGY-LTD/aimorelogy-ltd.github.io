@@ -1,0 +1,259 @@
+{
+  "name": "边缘 AI 相机模组",
+  "intro": "集成图像采集、ISP 处理、AI 推理、视频编码与网络传输。模块化设计，支持独立运行及树莓派等单板计算机接入。",
+  "explore": "了解 OVIS",
+  "specsLink": "查看技术规格",
+  "contact": "联系工程团队",
+  "featured": "产品推荐 / EDGE AI",
+  "heroAlt": "OVIS 相机模组及人车检测、无人机检测、低照度图像处理、网页管理和目标跟踪演示",
+  "productAlt": "OVIS 边缘 AI 相机模组",
+  "stackAlt": "OVIS Sensor 板、扩展板与核心板的模块化堆叠结构",
+  "highlights": {
+    "compute": "1.5 TOPS @ INT8 算力",
+    "capture": "1080p @ 60 FPS 图像采集",
+    "modular": "模块化硬件设计",
+    "manager": "网页端配置与模型管理"
+  },
+  "pageNav": "OVIS 页面导航",
+  "nav": {
+    "overview": "产品概览",
+    "demos": "视觉演示",
+    "specs": "技术规格",
+    "kits": "套装配置",
+    "resources": "开发资源"
+  },
+  "sections": {
+    "modular": {
+      "eyebrow": "模块化硬件",
+      "title": "开源 HDK 与模块化扩展",
+      "intro": "OVIS 已开源硬件开发套件（HDK）。用户可基于开放的硬件设计资料，根据应用需求自行设计扩展板，并通过板间连接器与 Sensor 板、核心板堆叠集成。"
+    },
+    "demos": {
+      "eyebrow": "端侧视觉",
+      "title": "检测与跟踪，在相机端完成",
+      "intro": "从人车检测到目标跟踪，使用实际视频素材展示 OVIS 的端侧视觉能力。点击视频查看演示。"
+    },
+    "manager": {
+      "eyebrow": "WEB MANAGER",
+      "title": "设备配置与模型部署",
+      "intro": "通过浏览器完成设备发现、视频参数配置和模型部署，集中管理相机的运行设置。"
+    },
+    "specs": {
+      "eyebrow": "技术规格",
+      "title": "OVIS 技术规格",
+      "intro": "OVIS 的处理器、存储、成像、接口及结构尺寸等主要技术参数如下。"
+    },
+    "interfaces": {
+      "eyebrow": "硬件接口",
+      "title": "板卡与接口，一览清晰",
+      "intro": "查看核心板、Sensor 板与 CVBS 输出板的器件和连接器标注。点击图片可放大查看。"
+    },
+    "kits": {
+      "eyebrow": "套装配置",
+      "title": "两种板卡组合",
+      "intro": "双板组合提供基础视觉硬件；三板组合增加 MS7024 输出板，支持 CVBS 模拟视频输出。"
+    },
+    "resources": {
+      "eyebrow": "开发与支持",
+      "title": "开始集成 OVIS",
+      "intro": "查阅技术文档、使用网页管理工具，或与工程团队讨论板卡集成与定制扩展需求。"
+    }
+  },
+  "architecture": {
+    "sensor": {
+      "title": "Sensor 板",
+      "text": "SC235HAI 传感器支持 1080p @ 60 FPS 图像采集，搭配 3.9 mm F1.0 镜头。"
+    },
+    "core": {
+      "title": "OVIS 核心板",
+      "text": "CV1842H-P 集成处理器与 1.5 TOPS @ INT8 AI 加速单元，核心板尺寸为 20 × 20 × 5.7 mm。"
+    },
+    "extension": {
+      "title": "用户自定义扩展板",
+      "text": "用户可基于开源 HDK 开发 Wi-Fi、IMU 或自定义 I/O 等扩展板。MS7024 CVBS 输出板为现有扩展实例。"
+    }
+  },
+  "pipeline": {
+    "capture": "图像采集",
+    "isp": "ISP 处理",
+    "inference": "AI 推理",
+    "encode": "视频编码",
+    "transmit": "网络传输"
+  },
+  "demos": {
+    "people": {
+      "title": "人车检测",
+      "text": "带 P2 检测头的人车检测演示。"
+    },
+    "drone": {
+      "title": "无人机检测",
+      "text": "低空无人机检测视频素材。"
+    },
+    "street": {
+      "title": "街道车辆跟踪",
+      "text": "街道场景中的车辆目标跟踪。"
+    },
+    "fpv": {
+      "title": "FPV 模拟跟踪",
+      "text": "基于 FPV 模拟画面的目标跟踪演示。"
+    }
+  },
+  "reference": "参考帧率",
+  "performanceNote": "参考性能：人车检测带 P2 检测头 30 FPS，无人机检测及目标跟踪 55 FPS。结果随模型、输入尺寸、量化方式、固件和配置变化；视频录制帧率不等于算法帧率。",
+  "lowlightTitle": "低照度图像处理",
+  "lowlightIntro": "结合 ISP 与 AI-BNR 图像处理能力，展示低照度场景的成像效果。以下为两段独立演示素材。",
+  "videos": {
+    "lowlight": "低照度 ISP 演示",
+    "ai-isp": "AI-ISP 图像处理演示"
+  },
+  "managerViews": "管理界面视图",
+  "interfacePreview": "界面预览",
+  "openManager": "打开 Web Manager",
+  "manager": {
+    "discovery": {
+      "title": "设备发现",
+      "text": "发现设备并查看连接状态。截图展示管理界面的演示状态。"
+    },
+    "config": {
+      "title": "参数配置",
+      "text": "在网页端调整视频及运行参数，便于集成调试。截图中的设备配置为演示数据。"
+    },
+    "models": {
+      "title": "模型管理",
+      "text": "查看模型列表、部署模型并配置应用。具体模型功能以所用固件与配置为准。"
+    }
+  },
+  "groups": {
+    "compute": "运算与系统",
+    "imaging": "成像与光学",
+    "connection": "视频与连接",
+    "physical": "结构与集成"
+  },
+  "labels": {
+    "soc": "主控芯片",
+    "cpu": "处理器",
+    "tpu": "AI 算力",
+    "memory": "内存",
+    "storage": "存储",
+    "os": "操作系统",
+    "sensor": "图像传感器",
+    "capture": "图像采集",
+    "lens": "镜头型号",
+    "optics": "镜头规格",
+    "fov": "参考视场角",
+    "processing": "图像处理",
+    "codec": "编码格式",
+    "encoding": "最高编码能力",
+    "usb": "USB",
+    "ethernet": "以太网",
+    "uart": "串口",
+    "stream": "视频流协议",
+    "moduleSize": "模组尺寸",
+    "coreSize": "核心板尺寸",
+    "operation": "运行方式",
+    "cvbs": "CVBS 扩展",
+    "custom": "定制方向"
+  },
+  "precision": "支持 INT8 / BF16；TOPS 数值对应 INT8。",
+  "focus": "手动对焦，固定光圈。",
+  "fovNote": "1/2.9 英寸像面理论参考值，非整机实测。",
+  "encodingNote": "编码能力上限；当前传感器采集规格为 1080p @ 60 FPS。",
+  "operationValue": "独立运行，或接入树莓派等单板计算机。",
+  "cvbsNote": "通过扩展板提供，见三板组合。",
+  "customNote": "Wi-Fi、IMU 与自定义 I/O 为定制扩展方向，不属于所列套装的默认配置。",
+  "specNote": "采集规格、编码能力与算法帧率为不同指标。具体配置、附件与项目适配请联系工程团队确认。",
+  "boardViews": "板卡视图",
+  "boardDetails": "板卡主要器件与连接器",
+  "chip": "主要器件",
+  "connectors": "连接器",
+  "boards": {
+    "core": "OVIS 核心板",
+    "sensor": "Sensor 板",
+    "cvbs": "MS7024 CVBS 输出板"
+  },
+  "kits": {
+    "dual": {
+      "tag": "双板组合",
+      "title": "Sensor + 核心板",
+      "text": "Sensor 板 × 1，OVIS 核心板 × 1。适合基础视觉开发与系统集成。"
+    },
+    "triple": {
+      "tag": "三板组合 / CVBS",
+      "title": "Sensor + CVBS + 核心板",
+      "text": "Sensor 板 × 1，MS7024 CVBS 输出板 × 1，OVIS 核心板 × 1。"
+    }
+  },
+  "kitComparison": "OVIS 套装组成对比",
+  "components": "板卡组成",
+  "kitNote": "表中仅列已确认的板卡组合。线材、其他附件及交付配置以最终销售清单为准。",
+  "resources": {
+    "sdk": {
+      "title": "SDK / 开发资源",
+      "text": "访问 OVIS SDK 仓库，查看开发资料。",
+      "action": "访问 SDK"
+    },
+    "docs": {
+      "title": "技术文档",
+      "text": "查阅集成说明与硬件开发资料。",
+      "action": "查阅文档"
+    },
+    "manager": {
+      "title": "Web Manager",
+      "text": "进入 OVIS 网页端配置工具。",
+      "action": "打开工具"
+    },
+    "forum": {
+      "title": "技术社区",
+      "text": "交流集成经验与技术问题。",
+      "action": "访问论坛"
+    }
+  },
+  "endTitle": "将 OVIS 集成到你的项目",
+  "endText": "讨论板卡选型、系统连接与定制扩展需求。",
+  "civil": "OVIS 仅限民用应用。",
+  "enlarge": "放大查看",
+  "enlargeHint": "点击图片查看完整接口标注",
+  "close": "关闭图片",
+  "videoFallback": "打开演示视频",
+  "fitImage": "适应窗口",
+  "actualSize": "查看原图细节",
+  "series": "OVIS 系列",
+  "homeTitle": "从图像采集到端侧智能",
+  "homeIntro": "在相机端完成检测、跟踪与图像处理，结合模块化硬件、标准接口和网页端管理，方便嵌入式视觉系统集成。",
+  "homeMetrics": {
+    "compute": "INT8 AI 算力",
+    "capture": "图像采集",
+    "lens": "大光圈镜头",
+    "size": "模组长 × 宽"
+  },
+  "homeFeatures": {
+    "vision": {
+      "title": "人车检测与目标跟踪",
+      "text": "覆盖人车检测、低空无人机检测、街道车辆跟踪与 FPV 模拟跟踪，查看对应视频演示与参考性能。"
+    },
+    "imaging": {
+      "title": "低照度图像增强",
+      "text": "结合 ISP 与 AI-BNR 图像处理能力，查看低照度场景和 AI-ISP 的实际演示。"
+    },
+    "modular": {
+      "title": "模块化堆叠设计",
+      "text": "HDK 已开源，用户可按需求自行设计扩展板，并与 Sensor 板、核心板堆叠集成。"
+    },
+    "manager": {
+      "title": "网页端配置与模型管理",
+      "text": "通过浏览器发现设备、调整视频参数和部署模型，集中管理相机运行设置。"
+    },
+    "connection": {
+      "title": "视频、网络与控制接口",
+      "text": "USB UVC / NCM · 100 Mbps Ethernet · UART · RTSP"
+    },
+    "platform": {
+      "title": "独立运行与树莓派接入",
+      "text": "支持单板计算机集成，提供 SDK、技术文档与开发工具入口。"
+    }
+  },
+  "kickstarter": {
+    "available": "Now available on Kickstarter",
+    "action": "前往 Kickstarter"
+  }
+}

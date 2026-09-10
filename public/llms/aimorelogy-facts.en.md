@@ -9,8 +9,9 @@
 - Adaptive DShot control protocol for FPV/UAV ESCs with stable bidirectional motor control and DMA-free implementation.
 - Cloud AI camera stack combining edge AI vision with scalable cloud orchestration and monitoring.
 
-## Flight Controllers
-- AIMORELOGY AFC-V1 is an all-in-one FPV/UAV flight controller integrating vision, video link, and control.
+## OVIS
+- OVIS: Image capture, ISP, AI inference, video encoding and connectivity in one modular camera. Operates independently or connects to Raspberry Pi and other single-board computers.
+- https://aimorelogy.com/en/products/ovis/ovis-camera-module/
 
 ## Chips & Core Components
 - SOPHGO Vision/TPU

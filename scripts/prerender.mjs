@@ -17,7 +17,7 @@ const PORT = ORIGIN_URL.port || '4173';
 const SUPPORTED_LANGS = new Set(['en', 'zh', 'ru', 'ar']);
 
 const getViteBin = () => {
-  const bin = path.resolve('node_modules', '.bin', process.platform === 'win32' ? 'vite.cmd' : 'vite');
+  const bin = path.resolve('node_modules', 'vite', 'bin', 'vite.js');
   if (!fs.existsSync(bin)) {
     throw new Error('vite binary not found. Run npm install first.');
   }
@@ -106,8 +106,8 @@ const run = async () => {
 
   const viteBin = getViteBin();
   const server = spawn(
-    viteBin,
-    ['preview', '--host', HOST, '--port', PORT, '--strictPort'],
+    process.execPath,
+    [viteBin, 'preview', '--host', HOST, '--port', PORT, '--strictPort'],
     { stdio: 'inherit' }
   );
 
@@ -164,6 +164,20 @@ const run = async () => {
 
   await copyIfExists(path.join(PUBLIC_DIR, 'llms.txt'), path.join(DIST_DIR, 'llms.txt'));
   await copyDirIfExists(path.join(PUBLIC_DIR, 'llms'), path.join(DIST_DIR, 'llms'));
+
+  // GitHub Pages has no server redirect rules. Keep retired URLs out of the
+  // sitemap while emitting small, noindex compatibility pages for old links.
+  for (const lang of SUPPORTED_LANGS) {
+    const destination = `/${lang}/#ovis`;
+    const target = toOutputPath(`/${lang}/products/afc-v1/`);
+    await fsp.mkdir(path.dirname(target), { recursive: true });
+    await fsp.writeFile(target, `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="https://aimorelogy.com/${lang}/"><title>AIMORELOGY</title></head><body><a href="${destination}">AIMORELOGY — OVIS</a></body></html>`, 'utf-8');
+
+    const ovisDestination = `/${lang}/products/ovis/ovis-camera-module/`;
+    const legacyOvisPath = toOutputPath(`/${lang}/products/camera-module/ovis/`);
+    await fsp.mkdir(path.dirname(legacyOvisPath), { recursive: true });
+    await fsp.writeFile(legacyOvisPath, `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><script>window.location.replace(${JSON.stringify(ovisDestination)} + window.location.search + window.location.hash);</script><meta http-equiv="refresh" content="0;url=${ovisDestination}"><link rel="canonical" href="https://aimorelogy.com${ovisDestination}"><title>OVIS | AIMORELOGY</title></head><body><a href="${ovisDestination}">OVIS</a></body></html>`, 'utf-8');
+  }
 };
 
 run().catch((err) => {

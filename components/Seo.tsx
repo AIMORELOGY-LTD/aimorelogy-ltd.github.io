@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, type FC } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLang } from '../i18n-routing';
 
@@ -164,7 +164,7 @@ const getSiteAlternateName = (lang: string) => {
   }
 };
 
-const Seo: React.FC<SeoProps> = ({
+const Seo: FC<SeoProps> = ({
   title,
   description,
   keywords,

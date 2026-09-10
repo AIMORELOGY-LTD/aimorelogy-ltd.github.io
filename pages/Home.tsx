@@ -4,6 +4,7 @@ import { ChevronRight, ChevronLeft, Cpu, Wifi, Activity, Eye, Zap, Sliders, Chec
 import { Link } from 'react-router-dom';
 import BlogCard from '../components/BlogCard';
 import Seo from '../components/Seo';
+import { OvisHero, OvisSpotlight } from '../components/OvisHero';
 import { RoutePath, BlogPost } from '../types';
 import { BLOG_POSTS } from '../constants';
 import { useTranslation } from 'react-i18next';
@@ -163,10 +164,11 @@ const Home: React.FC = () => {
   const { t } = useTranslation();
   const lang = useLang();
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideDuration = 5000;
+  const slideDuration = 8000;
+  const [carouselPaused, setCarouselPaused] = useState(false);
   const seoTitle = t('home.metaTitle');
   const seoDescription = t('home.metaDescription');
-  const seoKeywords = 'AIMORELOGY, 爱谋科技, FPV, UAV, drone, gimbal, flight controller, AFC-V1, AI Tracking, Adaptive DShot, Cloud AI Camera, edge AI, AI vision, system integration, SOPHGO, RT-Thread, RISC-V';
+  const seoKeywords = 'AIMORELOGY, 爱谋科技, FPV, UAV, drone, gimbal, flight controller, OVIS, AI Tracking, Adaptive DShot, Cloud AI Camera, edge AI, AI vision, system integration, SOPHGO, RT-Thread, RISC-V';
   
   // Use BLOG_POSTS directly for the carousel
   const carouselPosts = t('blog.posts', { returnObjects: true, defaultValue: BLOG_POSTS }) as BlogPost[];
@@ -189,6 +191,17 @@ const Home: React.FC = () => {
 
   const slides: SlideData[] = [
     {
+      id: 0,
+      category: t('home.hero.slides.0.category'),
+      title: t('home.hero.slides.0.title'),
+      description: t('home.hero.slides.0.description'),
+      navTitle: t('home.hero.slides.0.navTitle'),
+      navDesc: t('home.hero.slides.0.navDesc'),
+      buttonText: t('home.hero.slides.0.buttonText'),
+      link: withLang(lang, RoutePath.PRODUCT_OVIS),
+      bgImage: '/products/ovis/banner.webp'
+    },
+    {
       id: 4,
       category: t('home.hero.slides.4.category'),
       title: t('home.hero.slides.4.title'),
@@ -198,17 +211,6 @@ const Home: React.FC = () => {
       buttonText: t('home.hero.slides.4.buttonText'),
       link: '#', 
       bgImage: '/Cam/Cam_post.webp'
-    },
-    {
-      id: 0,
-      category: t('home.hero.slides.0.category'),
-      title: t('home.hero.slides.0.title'),
-      description: t('home.hero.slides.0.description'),
-      navTitle: t('home.hero.slides.0.navTitle'),
-      navDesc: t('home.hero.slides.0.navDesc'),
-      buttonText: t('home.hero.slides.0.buttonText'),
-      link: '#', 
-      bgImage: 'https://images.unsplash.com/photo-1608543884814-c78274191026?q=80&w=2000&auto=format&fit=crop'
     },
     {
       id: 3,
@@ -246,10 +248,17 @@ const Home: React.FC = () => {
   ];
 
   useEffect(() => {
+    if (carouselPaused || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, slideDuration);
     return () => clearInterval(timer);
+  }, [carouselPaused]);
+
+  useEffect(() => {
+    if (window.location.hash === '#ovis') {
+      document.getElementById('ovis')?.scrollIntoView();
+    }
   }, []);
 
   const handleManualSelect = (index: number) => {
@@ -261,16 +270,21 @@ const Home: React.FC = () => {
       <Seo title={seoTitle} description={seoDescription} keywords={seoKeywords} />
       
       {/* Hero Carousel Section - Full Screen (h-screen) */}
-      <section className="relative h-screen overflow-hidden bg-gray-900">
+      <section className="relative h-[100svh] min-h-[740px] overflow-hidden bg-gray-900" aria-label={t('ovis.featured')}
+        onMouseEnter={() => setCarouselPaused(true)} onMouseLeave={() => setCarouselPaused(false)}
+        onFocusCapture={() => setCarouselPaused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setCarouselPaused(false); }}>
         {slides.map((slide, index) => {
           const HeadingTag = index === 0 ? 'h1' : 'h2';
           return (
             <div 
-              key={slide.id} 
+              key={slide.id}
+              aria-hidden={index !== currentSlide}
+              inert={index !== currentSlide}
               className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
                 index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
             >
+            {slide.id === 0 ? <OvisHero home /> : <>
             {/* Background Image */}
             <div 
               className="absolute inset-0 bg-cover bg-center"
@@ -307,19 +321,23 @@ const Home: React.FC = () => {
                 )}
               </div>
             </div>
+            </>}
             </div>
           );
         })}
 
         {/* Navigation Strip - Included WITHIN the Full Screen Hero */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/80 to-transparent pt-12">
-            <div className="container mx-auto px-6">
+        <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/80 to-transparent pt-12 pointer-events-none">
+            <div className="container mx-auto px-6 pointer-events-auto">
                 <div className="flex flex-row gap-1 md:gap-0 md:grid md:grid-cols-5 py-0">
                     {slides.map((slide, index) => (
-                    <div 
+                    <button
+                        type="button"
+                        aria-label={slide.navTitle}
+                        aria-pressed={index === currentSlide}
                         key={slide.id} 
                         onClick={() => handleManualSelect(index)}
-                        className="flex-1 md:flex-none relative group cursor-pointer h-1 md:h-auto md:pt-4 md:pb-6 md:pr-4"
+                        className="flex-1 md:flex-none relative group cursor-pointer min-h-6 md:min-h-0 md:pt-4 md:pb-6 md:pr-4 text-start"
                     >
                         {/* Progress Line Base */}
                         <div className="absolute top-0 left-0 w-full h-full md:h-1 bg-white/20 group-hover:bg-white/40 transition-colors"></div>
@@ -347,86 +365,14 @@ const Home: React.FC = () => {
                                 {slide.navDesc}
                             </p>
                         </div>
-                    </div>
+                    </button>
                     ))}
                 </div>
             </div>
         </div>
       </section>
 
-      {/* Product Spotlight: AFC-V1 */}
-      <section className="bg-white text-gray-900 py-24 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-             <div className="lg:w-1/2 relative">
-               {/* Fixed Image Container: Larger mobile height, no hover scale, no shadow */}
-               <div className="relative w-full h-64 md:h-auto md:aspect-video bg-gray-50 rounded-sm border border-gray-200 flex items-center justify-center overflow-hidden">
-                 <img 
-                    src="/AFC-V1-Temp.webp" 
-                    alt="AFC-V1 Flight Controller" 
-                    className="w-full h-full object-cover" 
-                 />
-                 <div className="absolute top-4 right-4 bg-[#4f4398] text-white text-xs font-bold px-3 py-1 uppercase shadow-md z-20">
-                   {t('common.comingSoon')}
-                 </div>
-               </div>
-             </div>
-             <div className="lg:w-1/2">
-                <h4 className="text-[#4f4398] font-bold uppercase tracking-widest mb-2">{t('home.afc.kicker')}</h4>
-                <h2 className="text-5xl font-black text-gray-900 mb-6 uppercase leading-none">AFC-V1</h2>
-                <p className="text-xl text-gray-600 mb-8 font-light border-l-4 border-[#4f4398] pl-6">
-                  {t('home.afc.tagline')}
-                  <br/>
-                  <span className="text-sm mt-2 block text-gray-500">{t('home.afc.subtagline')}</span>
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                   <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Cpu className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.0.title')}</h5>
-                      </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.0.desc')}</p>
-                   </div>
-                   <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Wifi className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.1.title')}</h5>
-                      </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.1.desc')}</p>
-                   </div>
-                   <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Eye className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.2.title')}</h5>
-                      </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.2.desc')}</p>
-                   </div>
-                   <div className="bg-gray-50 p-4 border border-gray-200 hover:border-[#4f4398] transition-colors">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Activity className="text-[#4f4398]" size={20} />
-                        <h5 className="font-bold text-gray-900 uppercase text-sm">{t('home.afc.features.3.title')}</h5>
-                      </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">{t('home.afc.features.3.desc')}</p>
-                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <button 
-                    disabled
-                    className="bg-gray-400 text-white px-8 py-3 font-bold text-sm uppercase cursor-not-allowed flex items-center justify-center border border-transparent"
-                  >
-                    {t('common.comingSoon')}
-                  </button>
-                  <Link 
-                    to={withLang(lang, RoutePath.CONTACT)} 
-                    className="bg-transparent border border-gray-300 text-gray-900 px-8 py-3 font-bold text-sm uppercase hover:border-gray-900 transition-colors flex items-center justify-center text-center"
-                  >
-                    {t('common.contactSales')}
-                  </Link>
-                </div>
-             </div>
-          </div>
-        </div>
-      </section>
+      <OvisSpotlight />
 
       {/* Technology Spotlight: AI Tracking (3 Step Visual) */}
       <section className="bg-white text-gray-900 py-24">

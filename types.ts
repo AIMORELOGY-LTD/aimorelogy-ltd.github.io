@@ -11,7 +11,7 @@ export interface BlogPost {
 
 export enum RoutePath {
   HOME = '/',
-  PRODUCT_AFC = '/products/afc-v1/',
+  PRODUCT_OVIS = '/products/ovis/ovis-camera-module/',
   SOLUTION_AI_CAMERA = '/solutions/ai-camera/',
   SOLUTION_CAMERA_CUSTOMIZATION = '/solutions/camera-customization/',
   TECHNOLOGY_AI_TRACKING = '/technology/ai-tracking/',

@@ -1312,46 +1312,63 @@
         }
       ]
     },
-    "flightControllers": {
-      "en": [
-        {
-          "id": "afc-v1",
-          "name": "AFC-V1",
-          "brand": "AIMORELOGY",
-          "url": "https://aimorelogy.com/en/products/afc-v1/",
-          "tagline": "",
-          "description": "",
-          "metaDescription": "",
-          "highlights": [],
-          "applications": []
+    "ovis": {
+      "en": {
+        "id": "ovis",
+        "name": "OVIS",
+        "brand": "AIMORELOGY",
+        "url": "https://aimorelogy.com/en/products/ovis/ovis-camera-module/",
+        "description": "Image capture, ISP, AI inference, video encoding and connectivity in one modular camera. Operates independently or connects to Raspberry Pi and other single-board computers.",
+        "specifications": {
+          "soc": "CV1842H-P",
+          "ai": "1.5 TOPS @ INT8",
+          "capture": "1080p @ 60 FPS",
+          "memory": "2Gb DDR3 (256MB)",
+          "storage": "256MB NAND Flash"
         }
-      ],
-      "zh": [
-        {
-          "id": "afc-v1",
-          "name": "AFC-V1",
-          "brand": "AIMORELOGY",
-          "url": "https://aimorelogy.com/zh/products/afc-v1/",
-          "tagline": "重新定义 FPV 飞控的未来。",
-          "description": "",
-          "metaDescription": "AIMORELOGY AFC-V1 一体化 FPV/无人机 飞行控制器，融合视觉、图传与控制。",
-          "highlights": [],
-          "applications": []
+      },
+      "zh": {
+        "id": "ovis",
+        "name": "OVIS",
+        "brand": "AIMORELOGY",
+        "url": "https://aimorelogy.com/zh/products/ovis/ovis-camera-module/",
+        "description": "集成图像采集、ISP 处理、AI 推理、视频编码与网络传输。模块化设计，支持独立运行及树莓派等单板计算机接入。",
+        "specifications": {
+          "soc": "CV1842H-P",
+          "ai": "1.5 TOPS @ INT8",
+          "capture": "1080p @ 60 FPS",
+          "memory": "2Gb DDR3 (256MB)",
+          "storage": "256MB NAND Flash"
         }
-      ],
-      "ru": [
-        {
-          "id": "afc-v1",
-          "name": "AFC-V1",
-          "brand": "AIMORELOGY",
-          "url": "https://aimorelogy.com/ru/products/afc-v1/",
-          "tagline": "Переосмысление будущего мозга.",
-          "description": "",
-          "metaDescription": "AIMORELOGY AFC-V1 — это универсальный FPV/UAV контроллер полета, объединяющий зрение, видеосвязь и управление.",
-          "highlights": [],
-          "applications": []
+      },
+      "ru": {
+        "id": "ovis",
+        "name": "OVIS",
+        "brand": "AIMORELOGY",
+        "url": "https://aimorelogy.com/ru/products/ovis/ovis-camera-module/",
+        "description": "Захват изображения, ISP, ИИ-вычисления, кодирование видео и передача данных в одной модульной камере. Работает автономно или с Raspberry Pi и другими одноплатными компьютерами.",
+        "specifications": {
+          "soc": "CV1842H-P",
+          "ai": "1.5 TOPS @ INT8",
+          "capture": "1080p @ 60 FPS",
+          "memory": "2Gb DDR3 (256MB)",
+          "storage": "256MB NAND Flash"
         }
-      ]
+      },
+      "ar": {
+        "id": "ovis",
+        "name": "OVIS",
+        "brand": "AIMORELOGY",
+        "url": "https://aimorelogy.com/ar/products/ovis/ovis-camera-module/",
+        "description": "التقاط الصور ومعالجة ISP والاستدلال بالذكاء الاصطناعي وترميز الفيديو والاتصال في كاميرا معيارية واحدة. تعمل مستقلة أو متصلة بـ Raspberry Pi وحواسيب اللوحة الواحدة الأخرى.",
+        "specifications": {
+          "soc": "CV1842H-P",
+          "ai": "1.5 TOPS @ INT8",
+          "capture": "1080p @ 60 FPS",
+          "memory": "2Gb DDR3 (256MB)",
+          "storage": "256MB NAND Flash"
+        }
+      }
     }
   },
   "technologies": {

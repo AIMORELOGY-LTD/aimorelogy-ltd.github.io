@@ -10,12 +10,9 @@
     "menu": {
       "productsTitle": "Products",
       "products": {
-        "flightController": "Flight Controller",
-        "allInOne": "All-In-One FC",
         "computingModule": "Computing Module",
         "cameraModule": "Camera Module",
         "module": "Module",
-        "afcDesc": "The ultimate answer for the next generation of UAV brains.",
         "sm9Desc": "16T AI, 8-core ARM CA53, pin-compatible with NVIDIA Jetson modules.",
         "cameraModuleDesc": "Starlight-focused 4MP camera module with 1/1.8-inch class sensor and F1.0 optics."
       },
@@ -96,7 +93,6 @@
     "quickLinks": {
       "title": "Explore",
       "items": {
-        "afc": "AFC-V1",
         "bm1688": "BM1688",
         "cv186x": "CV186x",
         "cv184x": "CV184x",
@@ -108,7 +104,8 @@
         "stm32f767": "STM32F767",
         "aiTracking": "AI Tracking",
         "dshot": "DShot Protocol",
-        "aiCamera": "Cloud AI Camera"
+        "aiCamera": "Cloud AI Camera",
+        "ovis": "OVIS"
       }
     },
     "legal": {
@@ -125,12 +122,12 @@
     "hero": {
       "slides": {
         "0": {
-          "category": "New Release",
-          "title": "AFC-V1 Launching Soon",
-          "description": "The ultimate all-in-one flight controller integrating vision, video link, and control. Redefining the future of UAVs.",
-          "navTitle": "AFC-V1",
-          "navDesc": "Next Gen Flight Controller.",
-          "buttonText": "Coming Soon"
+          "category": "FEATURED PRODUCT / EDGE AI",
+          "title": "OVIS Edge AI Camera Module",
+          "description": "Image capture, ISP, AI inference, video encoding and connectivity in one modular camera. Operates independently or connects to Raspberry Pi and other single-board computers.",
+          "navTitle": "OVIS",
+          "navDesc": "Edge AI Camera Module",
+          "buttonText": "Explore OVIS"
         },
         "1": {
           "category": "Algorithms",
@@ -163,29 +160,6 @@
           "navTitle": "Camera Module",
           "navDesc": "Custom Solutions",
           "buttonText": "Contact Sales"
-        }
-      }
-    },
-    "afc": {
-      "kicker": "All-in-One AI Flight Controller",
-      "tagline": "\"Vision. Video Link. Control.\"",
-      "subtagline": "The ultimate answer for the next generation of UAV brains.",
-      "features": {
-        "0": {
-          "title": "1.5 TOPS Edge AI",
-          "desc": "Local execution of complex detection models with zero latency."
-        },
-        "1": {
-          "title": "10KM Video Link",
-          "desc": "HD transmission with high-power Wi-Fi module optimizations."
-        },
-        "2": {
-          "title": "8MP Ultra-HD ISP",
-          "desc": "Up to 8M@30FPS processing. Native support for Starlight and Global Shutter sensors."
-        },
-        "3": {
-          "title": "45% Smaller",
-          "desc": "Redefining size and power. Highly integrated industrial design."
         }
       }
     },
@@ -530,9 +504,9 @@
     },
     "cta": {
       "title": "Integrate AI Tracking Today",
-      "subtitle": "Available as a software SDK for CV18xx series chips or pre-flashed on our AFC-V1 Flight Controller.",
+      "subtitle": "Discuss AI tracking integration on CV18xx series chips with our engineers, or explore detection and tracking demonstrations on the OVIS camera.",
       "primary": "Request Evaluation",
-      "secondary": "View Hardware"
+      "secondary": "Explore OVIS"
     }
   },
   "dshot": {
@@ -1201,17 +1175,6 @@
       "ctaText": "We offer professional system integration and turnkey solutions based on the {{name}} platform. Accelerate your product launch with our engineering expertise.",
       "ctaButton": "Get Solution Proposal",
       "series": "{{series}} Series"
-    },
-    "afcComingSoon": {
-      "metaTitle": "Coming Soon | AFC-V1",
-      "metaDescription": "AIMORELOGY AFC-V1 is an all-in-one FPV/UAV flight controller integrating vision, video link, and control.",
-      "badge": "Development in Progress",
-      "title": "Coming Soon",
-      "subtitle": "AFC-V1",
-      "desc": "The ultimate all-in-one flight controller integrating Vision, Video Link, and Control is on the horizon.",
-      "tagline": "Redefining the future of UAV brains.",
-      "returnHome": "Return to Home",
-      "contactSales": "Contact Sales for Specs"
     },
     "sophgo": {
       "ui": {

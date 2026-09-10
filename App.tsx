@@ -1,9 +1,9 @@
 import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useParams, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
-const ProductDetail_AFC = lazy(() => import('./pages/ProductDetail_AFC'));
+const ProductDetail_OVIS = lazy(() => import('./pages/ProductDetail_OVIS'));
 const ProductDetail_SOPHGO = lazy(() => import('./pages/ProductDetail_SOPHGO'));
 const ProductDetail_Espressif = lazy(() => import('./pages/ProductDetail_Espressif'));
 const ProductDetail_STM = lazy(() => import('./pages/ProductDetail_STM'));
@@ -27,6 +27,7 @@ import { getStoredLang, normalizeLang, saveLang } from './i18n-routing';
 const LanguageRoutes: React.FC = () => {
   const { lang } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const normalized = normalizeLang(lang);
@@ -53,7 +54,9 @@ const LanguageRoutes: React.FC = () => {
       >
         <Routes>
           <Route path="" element={<Home />} />
-          <Route path="products/afc-v1" element={<ProductDetail_AFC />} />
+          <Route path="products/ovis/ovis-camera-module" element={<ProductDetail_OVIS />} />
+          <Route path="products/camera-module/ovis" element={<Navigate to={`/${normalizeLang(lang)}${RoutePath.PRODUCT_OVIS}${location.search}${location.hash}`} replace />} />
+          <Route path="products/afc-v1" element={<Navigate to={`/${normalizeLang(lang)}/#ovis`} replace />} />
           <Route path="products/sophgo/:modelId" element={<ProductDetail_SOPHGO />} />
           <Route path="products/espressif/:modelId" element={<ProductDetail_Espressif />} />
           <Route path="products/stm/:modelId" element={<ProductDetail_STM />} />

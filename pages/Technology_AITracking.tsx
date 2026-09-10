@@ -259,7 +259,7 @@ const Technology_AITracking: React.FC = () => {
                 <Link to={withLang(lang, RoutePath.CONTACT)} className="inline-block bg-[#4f4398] text-white px-10 py-4 font-bold uppercase hover:bg-[#5f51b0] transition-colors">
                     {t('aiTracking.cta.primary')}
                 </Link>
-                <Link to={withLang(lang, RoutePath.PRODUCT_AFC)} className="inline-block border border-gray-600 text-gray-300 px-10 py-4 font-bold uppercase hover:border-white hover:text-white transition-colors">
+                <Link to={withLang(lang, RoutePath.PRODUCT_OVIS)} className="inline-block border border-gray-600 text-gray-300 px-10 py-4 font-bold uppercase hover:border-white hover:text-white transition-colors">
                     {t('aiTracking.cta.secondary')}
                 </Link>
               </div>

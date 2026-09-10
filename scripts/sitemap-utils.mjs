@@ -12,7 +12,7 @@ const DATA_FILES = {
 
 const STATIC_BASE_PATHS = [
   '/',
-  '/products/afc-v1',
+  '/products/ovis/ovis-camera-module',
   '/products/computing-module/sm9',
   '/products/camera-module/ac-001-os04a10',
   '/solutions/ai-camera',

@@ -9,8 +9,9 @@
 - 面向 FPV/无人机 ESC 的自适应 DShot 控制协议，双向通信、稳定输出、无需 DMA。
 - 云端 AI 摄像机方案，结合边缘 AI 与云平台，实现远程监控与规模化部署。
 
-## 飞控产品
-- AIMORELOGY AFC-V1 一体化 FPV/无人机 飞行控制器，融合视觉、图传与控制。
+## OVIS
+- OVIS: 集成图像采集、ISP 处理、AI 推理、视频编码与网络传输。模块化设计，支持独立运行及树莓派等单板计算机接入。
+- https://aimorelogy.com/zh/products/ovis/ovis-camera-module/
 
 ## 芯片与核心组件
 - SOPHGO 视觉/TPU

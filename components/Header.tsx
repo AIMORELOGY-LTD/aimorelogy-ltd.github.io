@@ -83,15 +83,15 @@ const Header: React.FC = () => {
       path: '#',
       brands: [
         {
-          name: t('header.menu.products.flightController'),
+          name: t('ovis.series'),
           categories: [
             {
-              title: t('header.menu.products.allInOne'),
+              title: t('ovis.name'),
               items: [
                 {
-                  model: 'AFC-V1',
-                  description: t('header.menu.products.afcDesc'),
-                  to: withLang(lang, RoutePath.PRODUCT_AFC)
+                  model: 'OVIS',
+                  description: t('ovis.intro'),
+                  to: withLang(lang, RoutePath.PRODUCT_OVIS)
                 }
               ]
             }

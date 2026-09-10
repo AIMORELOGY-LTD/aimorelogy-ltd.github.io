@@ -1,6 +1,10 @@
 import { ChipData } from './sophgoData';
 
-export const MODULE_DATA: Record<string, ChipData> = {
+type ModuleData = Omit<ChipData, 'series' | 'specs' | 'applications' | 'faqs'> & {
+  series: 'COMPUTING MODULE';
+};
+
+export const MODULE_DATA: Record<string, ModuleData> = {
   'sm9': {
     id: 'sm9',
     name: 'SM9 Computing Module',

@@ -10,12 +10,9 @@
     "menu": {
       "productsTitle": "المنتجات",
       "products": {
-        "flightController": "متحكم الطيران",
-        "allInOne": "متحكم متكامل",
         "computingModule": "وحدة الحوسبة",
         "cameraModule": "وحدة الكاميرا",
         "module": "الوحدات",
-        "afcDesc": "منصة متكاملة للجيل التالي من أنظمة UAV الذكية.",
         "sm9Desc": "قدرة ذكاء اصطناعي 16TOPS مع معالج ARM CA53 ثماني النوى وتوافق Pin-to-Pin مع وحدات NVIDIA Jetson.",
         "cameraModuleDesc": "وحدة كاميرا 4MP موجهة للتصوير الليلي والضوء الخافت بمستشعر من فئة 1/1.8 وبصريات F1.0."
       },
@@ -96,7 +93,6 @@
     "quickLinks": {
       "title": "استكشف",
       "items": {
-        "afc": "AFC-V1",
         "bm1688": "BM1688",
         "cv186x": "CV186x",
         "cv184x": "CV184x",
@@ -108,7 +104,8 @@
         "stm32f767": "STM32F767",
         "aiTracking": "AI Tracking",
         "dshot": "DShot Protocol",
-        "aiCamera": "Cloud AI Camera"
+        "aiCamera": "Cloud AI Camera",
+        "ovis": "OVIS"
       }
     },
     "legal": {
@@ -125,12 +122,12 @@
     "hero": {
       "slides": {
         "0": {
-          "category": "إطلاق جديد",
-          "title": "AFC-V1 قريبًا",
-          "description": "متحكم طيران متكامل يجمع بين الرؤية والربط المرئي والتحكم لإعادة تعريف بنية أنظمة UAV.",
-          "navTitle": "AFC-V1",
-          "navDesc": "متحكم طيران للجيل القادم.",
-          "buttonText": "قريبًا"
+          "category": "منتج مميز / EDGE AI",
+          "title": "OVIS وحدة كاميرا بالذكاء الاصطناعي الطرفي",
+          "description": "التقاط الصور ومعالجة ISP والاستدلال بالذكاء الاصطناعي وترميز الفيديو والاتصال في كاميرا معيارية واحدة. تعمل مستقلة أو متصلة بـ Raspberry Pi وحواسيب اللوحة الواحدة الأخرى.",
+          "navTitle": "OVIS",
+          "navDesc": "وحدة كاميرا بالذكاء الاصطناعي الطرفي",
+          "buttonText": "اكتشف OVIS"
         },
         "1": {
           "category": "الخوارزميات",
@@ -163,29 +160,6 @@
           "navTitle": "وحدة الكاميرا",
           "navDesc": "حلول تصوير مخصصة.",
           "buttonText": "تواصل معنا"
-        }
-      }
-    },
-    "afc": {
-      "kicker": "متحكم طيران ذكي متكامل",
-      "tagline": "الرؤية. الربط المرئي. التحكم.",
-      "subtagline": "الإجابة المتكاملة للجيل القادم من منصات UAV الذكية.",
-      "features": {
-        "0": {
-          "title": "قدرة ذكاء طرفي 1.5 TOPS",
-          "desc": "تشغيل نماذج الرؤية محليًا بزمن استجابة منخفض."
-        },
-        "1": {
-          "title": "ربط مرئي حتى 10 كم",
-          "desc": "نقل HD مع تحسينات موجهة للربط اللاسلكي بعيد المدى."
-        },
-        "2": {
-          "title": "معالجة ISP بدقة 8MP",
-          "desc": "دعم تصوير عالي الدقة مع توافق مع مستشعرات Starlight وGlobal Shutter."
-        },
-        "3": {
-          "title": "تصميم أكثر تكاملًا",
-          "desc": "تصميم عالي الدمج لتقليل الحجم والوزن في منصات الطيران."
         }
       }
     },
@@ -530,9 +504,9 @@
     },
     "cta": {
       "title": "Integrate AI Tracking Today",
-      "subtitle": "Available as a software SDK for CV18xx series chips or pre-flashed on our AFC-V1 Flight Controller.",
+      "subtitle": "ناقش تكامل التتبع على شرائح CV18xx مع مهندسينا، أو شاهد عروض الكشف والتتبع على كاميرا OVIS.",
       "primary": "Request Evaluation",
-      "secondary": "View Hardware"
+      "secondary": "اكتشف OVIS"
     }
   },
   "dshot": {
@@ -1201,17 +1175,6 @@
       "ctaText": "We offer professional system integration and turnkey solutions based on the {{name}} platform. Accelerate your product launch with our engineering expertise.",
       "ctaButton": "Get Solution Proposal",
       "series": "{{series}} Series"
-    },
-    "afcComingSoon": {
-      "metaTitle": "Coming Soon | AFC-V1",
-      "metaDescription": "AIMORELOGY AFC-V1 is an all-in-one FPV/UAV flight controller integrating vision, video link, and control.",
-      "badge": "Development in Progress",
-      "title": "Coming Soon",
-      "subtitle": "AFC-V1",
-      "desc": "The ultimate all-in-one flight controller integrating Vision, Video Link, and Control is on the horizon.",
-      "tagline": "Redefining the future of UAV brains.",
-      "returnHome": "Return to Home",
-      "contactSales": "Contact Sales for Specs"
     },
     "sophgo": {
       "ui": {

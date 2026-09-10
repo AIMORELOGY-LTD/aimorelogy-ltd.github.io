@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const quickLinks = [
-    { key: 'afc', path: RoutePath.PRODUCT_AFC },
+    { key: 'ovis', path: RoutePath.PRODUCT_OVIS },
     { key: 'bm1688', path: '/products/sophgo/bm1688/' },
     { key: 'cv186x', path: '/products/sophgo/cv186x/' },
     { key: 'cv184x', path: '/products/sophgo/cv184x/' },
